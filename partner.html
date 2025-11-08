@@ -1,26 +1,212 @@
-<!-- Updated Partner With Us page with Sponsorship link -->
-<section id="partner-with-us" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:40px; max-width:1000px; margin:auto; color:#222;">
-  <h1 style="font-size:2rem; color:#0077cc;">Partner With ShowcasingOz TV</h1>
-  <p style="color:#444; margin-top:8px;">Join us as we travel across Australia, showcasing the best attractions, accommodations, and stories from every corner of the country. Register your interest below to be part of our 2026 launch.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Partner With Us | ShowcasingOz TV</title>
 
-  <div style="background:#f4f8f6; padding:18px; border-radius:8px; margin-top:18px;">
-    <h3 style="margin-top:0; color:#0b5a3a;">Accommodation & Attraction Packages</h3>
-    <p style="color:#444;">We offer professionally filmed promotional videos for accommodations and attractions that will feature both on your own website and on ShowcasingOz TV. Our introductory offers are valid until <strong>30 June 2026</strong>.</p>
-    <ul style="color:#444;">
-      <li><strong>Basic Package</strong> – 30-second video for your website and our platform: $250 (Introductory) / $400 (Standard)</li>
-      <li><strong>Premium Package</strong> – 60-second enhanced video with interview footage: $450 (Introductory) / $650 (Standard)</li>
-      <li><strong>Feature Package</strong> – 2-minute cinematic feature including drone footage: $750 (Introductory) / $1,000 (Standard)</li>
-    </ul>
-    <p style="font-size:0.9rem; color:#777;">*Prices subject to change without notice.</p>
-  </div>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <div style="margin-top:22px;">
-    <a href="/sponsorship.html" style="display:inline-block; background:#0077cc; color:#fff; padding:12px 18px; border-radius:8px; text-decoration:none;">View Sponsorship Opportunities →</a>
-  </div>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      color: #0E3557;
+      background: #fff;
+      text-align: center;
+    }
 
-  <div id="register" style="margin-top:30px; background:#fff8ea; padding:18px; border-radius:8px; border-left:4px solid #f2b66f;">
-    <h3 style="margin-top:0;">Register Your Interest</h3>
-    <p style="color:#444;">To register your interest in partnering with ShowcasingOz TV, please send your details and preferred package to <a href="mailto:info@showcasingoztv.com.au">showcasingoztv@gmail.com</a>.</p>
-    <p style="color:#444;">We'll be in touch within 2–3 business days with next steps and production availability in your area.</p>
-  </div>
-</section>
+    /* HEADER NAVBAR */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #E87722;
+      transition: color 0.3s ease;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .content h1 {
+      text-align: center;
+      color: #0E3557;
+    }
+
+    .content p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .package-section {
+      margin-top: 40px;
+    }
+
+    .highlight {
+      color: #E87722;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      background: #E87722;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #c45e15;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html">
+        <img src="logo.png" alt="ShowcasingOz TV Logo">
+      </a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="mailto:showcasingoztv@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+
+  <!-- PAGE CONTENT -->
+  <section class="content">
+    <h1>Partner With ShowcasingOz TV</h1>
+    <p>
+      Join us in showcasing the best of Australia’s destinations, attractions, and accommodations.
+      As we travel across the country, we’re partnering with tourism operators, local businesses,
+      and community groups to create engaging video content that promotes Australia’s hidden gems.
+    </p>
+    <p>
+      Whether you manage a motel, a caravan park, a national attraction, or a regional experience —
+      we have tailored introductory packages to give your business affordable, high-quality exposure.
+    </p>
+    <p class="highlight">
+      Introductory offers are available until June 30, 2026.
+    </p>
+    <a href="sponsorship.html" class="button">View Sponsorship Opportunities</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="mailto:showcasingoztv@gmail.com">Contact</a>
+    </div>
+    <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
+  </footer>
+
+</body>
+</html>
+
