@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us | ShowcasingOz TV</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      color: #0E3557;
+      background: #fff;
+      text-align: center;
+    }
+
+    /* HEADER NAVBAR */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #E87722;
+      transition: color 0.3s ease;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: left;
+      line-height: 1.7;
+    }
+
+    .content h1 {
+      text-align: center;
+      color: #0E3557;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      color: #E87722;
+      font-weight: bold;
+    }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      flex: 1 1 280px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #eee;
+    }
+
+    .value-card h3 {
+      color: #E87722;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html">
+        <img src="logo.png" alt="ShowcasingOz TV Logo">
+      </a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <h1>About ShowcasingOz TV</h1>
+    <p>
+      <strong>ShowcasingOz TV</strong> is an Australian travel and lifestyle platform dedicated to uncovering the heart and soul of this vast and beautiful country. 
+      We’re storytellers, filmmakers, and explorers — capturing authentic Australian experiences and sharing them with a growing audience across digital and TV platforms.
+    </p>
+
+    <p>
+      Our goal is simple: to <span class="highlight">Discover, Capture, and Share</span> the real Australia — from hidden coastal towns to iconic outback destinations, and everything in between.
+    </p>
+
+    <p>
+      We work closely with regional tourism operators, local councils, and small businesses to shine a spotlight on their stories. 
+      Whether it’s a boutique accommodation, a family-run tour, or a regional event — we bring your story to life through engaging video content and online exposure.
+    </p>
+
+    <h2 style="text-align:center; margin-top:50px; color:#0E3557;">Our Core Values</h2>
+
+    <div class="values">
+      <div class="value-card">
+        <h3>Authenticity</h3>
+        <p>We capture real stories from real people — highlighting the genuine experiences that make Australia unique.</p>
+      </div>
+      <div class="value-card">
+        <h3>Community</h3>
+        <p>We support local businesses and regional communities by helping them reach new audiences and thrive through tourism.</p>
+      </div>
+      <div class="value-card">
+        <h3>Adventure</h3>
+        <p>We live for exploration — from dusty outback tracks to tropical coastlines, always seeking the next great Australian story.</p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:50px;">
+      Interested in collaborating or being featured?  
+      <a href="partner.html" class="highlight">Partner with us</a> or <a href="contact.html" class="highlight">get in touch</a> today!
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
+  </footer>
+
+</body>
+</html>
