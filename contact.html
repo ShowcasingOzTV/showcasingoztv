@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact Us | ShowcasingOz TV</title>
+  <title>Contact | ShowcasingOz TV</title>
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -18,7 +18,7 @@
       text-align: center;
     }
 
-    /* HEADER NAVBAR */
+    /* HEADER */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -86,61 +86,61 @@
       }
     }
 
-    /* MAIN CONTENT */
+    /* CONTENT */
     .content {
-      max-width: 800px;
+      max-width: 700px;
       margin: 40px auto;
       padding: 0 20px;
-      text-align: left;
     }
 
-    .content h1 {
-      text-align: center;
+    h1 {
       color: #0E3557;
     }
 
-    .content p {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-    }
-
     form {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 30px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     input, textarea {
-      width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 1rem;
-      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
-    .button {
-      display: inline-block;
+    button {
       background: #E87722;
       color: #fff;
       padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
       border: none;
+      border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
+      font-size: 1rem;
     }
 
-    .button:hover {
+    button:hover {
       background: #c45e15;
+    }
+
+    .email-link {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    .email-link a {
+      color: #E87722;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .email-link a:hover {
+      text-decoration: underline;
     }
 
     /* FOOTER */
@@ -193,25 +193,24 @@
     menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
   </script>
 
-  <!-- CONTACT FORM -->
+  <!-- CONTENT -->
   <section class="content">
-    <h1>Contact Us</h1>
-    <p>Have a question or partnership enquiry? Send us a message using the form below or email us directly at 
+    <h1>Contact ShowcasingOz TV</h1>
+    <p>We’d love to hear from you! Complete the form below or email us directly at
       <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.
     </p>
 
-    <form action="https://formspree.io/f/xrbrzeaq" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="button">Send Enquiry</button>
+    <form action="https://formspree.io/f/mpwkaqyz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Enquiry</button>
     </form>
+
+    <p class="email-link">
+      Or email us directly at:
+      <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>
+    </p>
   </section>
 
   <!-- FOOTER -->
@@ -227,4 +226,5 @@
 
 </body>
 </html>
+
 
