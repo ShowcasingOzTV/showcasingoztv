@@ -1,0 +1,84 @@
+<!-- Sponsorship section for ShowcasingOz TV
+     Paste this into sponsorship.html or include as part of your site nav.
+     Replace /assets/... PDF link with your hosted PDF path. -->
+<section id="sponsorship" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:40px; max-width:1000px; margin:auto; color:#222;">
+  <div style="display:flex; align-items:center; gap:18px; margin-bottom:18px;">
+    <img src="/assets/logo.png" alt="ShowcasingOz TV" style="width:64px; height:64px; object-fit:contain; border-radius:8px;">
+    <div>
+      <h1 style="margin:0; font-size:1.8rem; color:#0077cc;">Partner With <span style="color:#0b5a3a;">ShowcasingOz TV</span></h1>
+      <p style="margin:4px 0 0; color:#555;">Sponsorship opportunities for 2026 — connect your brand with authentic Australian travel storytelling.</p>
+    </div>
+  </div>
+
+  <div style="background:#f7fbff; padding:18px; border-radius:10px; margin-bottom:22px; box-shadow:0 6px 18px rgba(0,0,0,0.03);">
+    <p style="margin:0;">ShowcasingOz TV produces cinematic travel episodes that highlight regional towns, attractions and accommodations across Australia. We create lasting content for audiences on YouTube, social media and our website. Sponsors benefit from targeted exposure, brand alignment with authentic travel stories, and direct connection to local communities.</p>
+  </div>
+
+  <h2 style="border-bottom:2px solid #0077cc; display:inline-block; padding-bottom:6px;">Sponsorship Packages</h2>
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:16px;">
+    <!-- Platinum -->
+    <article style="background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04);">
+      <h3 style="margin-top:0; color:#c6532a;">Platinum Sponsor</h3>
+      <p style="margin:6px 0 10px; color:#444;"><strong>Investment:</strong> $5,000+</p>
+      <ul style="margin:0 0 8px 18px; color:#444;">
+        <li>Logo on every episode (intro/outro)</li>
+        <li>Vehicle branding & on-camera mentions</li>
+        <li>Homepage feature & dedicated sponsor page</li>
+        <li>Monthly social media promotions</li>
+      </ul>
+      <button onclick="location.href='#contact'" style="background:#c6532a; color:#fff; border:none; padding:10px 12px; border-radius:6px; cursor:pointer;">Enquire</button>
+    </article>
+
+    <!-- Gold -->
+    <article style="background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04);">
+      <h3 style="margin-top:0; color:#0077cc;">Gold Sponsor</h3>
+      <p style="margin:6px 0 10px; color:#444;"><strong>Investment:</strong> $2,000</p>
+      <ul style="margin:0 0 8px 18px; color:#444;">
+        <li>Logo on 50% of state/region episodes</li>
+        <li>Website & social mentions</li>
+        <li>Mid-roll on-screen acknowledgement</li>
+      </ul>
+      <button onclick="location.href='#contact'" style="background:#0077cc; color:#fff; border:none; padding:10px 12px; border-radius:6px; cursor:pointer;">Enquire</button>
+    </article>
+
+    <!-- Silver -->
+    <article style="background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04);">
+      <h3 style="margin-top:0; color:#0b5a3a;">Silver Sponsor</h3>
+      <p style="margin:6px 0 10px; color:#444;"><strong>Investment:</strong> $750</p>
+      <ul style="margin:0 0 8px 18px; color:#444;">
+        <li>Logo on selected episodes & partner page</li>
+        <li>Quarterly social mention</li>
+        <li>Inclusion in regional promo material</li>
+      </ul>
+      <button onclick="location.href='#contact'" style="background:#0b5a3a; color:#fff; border:none; padding:10px 12px; border-radius:6px; cursor:pointer;">Enquire</button>
+    </article>
+  </div>
+
+  <h3 style="margin-top:26px;">Additional Sponsorship Opportunities</h3>
+  <ul style="color:#444; margin-top:8px;">
+    <li><strong>Vehicle / Travel Partner</strong> — exclusive opportunity for an automotive partner to supply or co-brand the official travel vehicle.</li>
+    <li><strong>Tourism Partner</strong> — state or regional tourism boards can sponsor a specific region’s episode series.</li>
+    <li><strong>Accommodation & Attraction Sponsors</strong> — feature-level partnerships for major attractions and resorts.</li>
+    <li><strong>Media & Production Partners</strong> — equipment brands or studios who provide in-kind support or discounts.</li>
+  </ul>
+
+  <div style="background:#fff8ea; padding:16px; border-radius:8px; margin-top:18px; border-left:4px solid #f2b66f;">
+    <h4 style="margin:0 0 8px 0;">Why sponsor ShowcasingOz TV?</h4>
+    <ol style="margin:6px 0 0 18px; color:#444;">
+      <li>Authentic storytelling connects brands with travellers and local communities.</li>
+      <li>Long-form content provides durable brand placement beyond short ad runs.</li>
+      <li>Partnerships support regional tourism and community stories.</li>
+    </ol>
+  </div>
+
+  <h3 style="margin-top:22px;">Download the Sponsor Prospectus</h3>
+  <p style="color:#444; margin-top:6px;">A detailed sponsorship prospectus is available for download. Upload the PDF to <code>/assets/ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf</code> (or update the link below to the hosted file).</p>
+  <p style="text-align:center; margin-top:10px;"><a href="/assets/ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" download style="display:inline-block; background:#0077cc; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none;">Download Prospectus (PDF)</a></p>
+
+  <div id="contact" style="margin-top:30px; padding:18px; background:#f4f8f6; border-radius:8px;">
+    <h3 style="margin-top:0;">Contact & Next Steps</h3>
+    <p style="color:#444;">To discuss tailored sponsorship options, please contact:</p>
+    <p style="margin:6px 0 0;"><strong>David Stidston</strong><br>Email: <a href="mailto:info@showcasingoztv.com.au">info@showcasingoztv.com.au</a><br>Phone: [Add Number]</p>
+    <p style="margin-top:8px;">Or register interest via the <a href="/partner.html">Partner With Us</a> page.</p>
+  </div>
+</section>
