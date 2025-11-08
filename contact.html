@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | ShowcasingOz TV</title>
 
   <link rel="stylesheet"
@@ -86,61 +86,58 @@
       }
     }
 
-    /* CONTENT */
+    /* MAIN CONTENT */
     .content {
       max-width: 700px;
-      margin: 40px auto;
+      margin: 50px auto;
       padding: 0 20px;
+      text-align: center;
     }
 
     h1 {
       color: #0E3557;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
     }
 
     form {
-      margin-top: 30px;
       display: flex;
       flex-direction: column;
       gap: 15px;
+      text-align: left;
     }
 
     input, textarea {
       padding: 12px;
-      border: 1px solid #ccc;
+      border: 2px solid #0E3557;
       border-radius: 8px;
       font-size: 1rem;
       width: 100%;
-      box-sizing: border-box;
     }
 
     button {
       background: #E87722;
-      color: #fff;
-      padding: 12px 25px;
+      color: white;
+      padding: 14px;
       border: none;
       border-radius: 8px;
+      font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
-      font-size: 1rem;
     }
 
     button:hover {
       background: #c45e15;
     }
 
-    .email-link {
+    .success-message {
+      display: none;
       margin-top: 20px;
-      font-size: 1rem;
-    }
-
-    .email-link a {
-      color: #E87722;
+      color: green;
       font-weight: bold;
-      text-decoration: none;
-    }
-
-    .email-link a:hover {
-      text-decoration: underline;
     }
 
     /* FOOTER */
@@ -170,7 +167,6 @@
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="navbar">
     <div class="container">
@@ -195,23 +191,50 @@
 
   <!-- CONTENT -->
   <section class="content">
-    <h1>Contact ShowcasingOz TV</h1>
-    <p>We’d love to hear from you! Complete the form below or email us directly at
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Use the form below or email us directly at 
       <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.
     </p>
 
-    <form action="https://formspree.io/f/mpwkaqyz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <form id="contactForm" action="https://formspree.io/f/mpwkaqyz" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
       <button type="submit">Send Enquiry</button>
     </form>
 
-    <p class="email-link">
-      Or email us directly at:
-      <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>
-    </p>
+    <div class="success-message" id="successMessage">
+      ✅ Thank you for your enquiry! We’ll be in touch shortly.
+    </div>
   </section>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        successMessage.style.display = 'block';
+      } else {
+        alert('There was an error sending your message. Please try again.');
+      }
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer>
@@ -223,8 +246,5 @@
     </div>
     <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
-
 </body>
 </html>
-
-
