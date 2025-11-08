@@ -1,26 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sponsorship Opportunities | ShowcasingOz TV</title>
-  <link rel="icon" type="image/png" href="/logo.png">
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      color: #0E3557;
+      background: #fff;
+      text-align: center;
+    }
+
+    /* HEADER */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #E87722;
+      transition: color 0.3s ease;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .content h1 {
+      color: #0E3557;
+    }
+
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .package {
+      border: 2px solid #0E3557;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      background: #f9f9f9;
+    }
+
+    .package h2 {
+      color: #E87722;
+    }
+
+    .package p {
+      line-height: 1.5;
+      min-height: 60px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0E3557;
+      margin: 10px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: #E87722;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #c45e15;
+    }
+
+    .prospectus-link {
+      margin-top: 40px;
+    }
+
+    .prospectus-link a {
+      display: inline-block;
+      background: #0E3557;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .prospectus-link a:hover {
+      background: #E87722;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+
+<body>
 
   <!-- HEADER -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-      <div class="flex items-center space-x-3">
-        <img src="/logo.png" alt="ShowcasingOz TV Logo" class="h-12 w-12">
-        <h1 class="text-2xl font-bold text-yellow-600">ShowcasingOz TV</h1>
-      </div>
-      <nav class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:text-yellow-600">Home</a>
-        <a href="partner.html" class="hover:text-yellow-600">Partner With Us</a>
-        <a href="sponsorship.html" class="text-yellow-600 font-semibold">Sponsorship</a>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html">
+        <img src="logo.png" alt="ShowcasingOz TV Logo">
+      </a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="mailto:showcasingoztv@gmail.com">Contact</a>
       </nav>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+
+  <!-- CONTENT -->
+  <section class="content">
+    <h1>Sponsorship Opportunities</h1>
+    <p>Partner with ShowcasingOz TV to promote your brand through authentic Australian travel stories.</p>
+
+    <div class="packages">
+      <div class="package">
+        <h2>Bronze Sponsor</h2>
+        <p>Includes logo placement on all videos and mentions in social posts.</p>
+        <div class="price">$500</div>
+        <a href="https://formspree.io/f/movqjgnq" class="button">Send Enquiry</a>
+      </div>
+
+      <div class="package">
+        <h2>Silver Sponsor</h2>
+        <p>Includes Bronze benefits plus short feature inclusion in an episode.</p>
+        <div class="price">$1,000</div>
+        <a href="https://formspree.io/f/movqjgnq" class="button">Send Enquiry</a>
+      </div>
+
+      <div class="package">
+        <h2>Gold Sponsor</h2>
+        <p>Full feature episode highlighting your business and location.</p>
+        <div class="price">$2,500</div>
+        <a href="https://formspree.io/f/movqjgnq" class="button">Send Enquiry</a>
+      </div>
+    </div>
+
+    <div class="prospectus-link">
+      <a href="https://github.com/ShowcasingOzTV/showcasingoztv/raw/main/ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank">
+        Download Sponsorship Prospectus (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="mailto:showcasingoztv@gmail.com">Contact</a>
+    </div>
+    <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
+  </footer>
+
+</body>
+</html>
+
     </div>
   </header>
 
