@@ -18,7 +18,7 @@
       text-align: center;
     }
 
-    /* HEADER */
+    /* HEADER NAVBAR */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -91,11 +91,15 @@
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
-      text-align: center;
     }
 
     .content h1 {
       color: #0E3557;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      line-height: 1.6;
     }
 
     .packages {
@@ -116,11 +120,7 @@
 
     .package h2 {
       color: #E87722;
-    }
-
-    .package p {
-      line-height: 1.5;
-      min-height: 60px;
+      margin-top: 0;
     }
 
     .price {
@@ -186,6 +186,69 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* POPUP ENQUIRY FORM */
+    #enquiry-form {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #enquiry-form.active {
+      display: flex;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .form-container h2 {
+      margin-top: 0;
+      color: #0E3557;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    button[type="submit"] {
+      background: #E87722;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button[type="submit"]:hover {
+      background: #c45e15;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: #0E3557;
+      float: right;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -202,12 +265,13 @@
         <a href="index.html">Home</a>
         <a href="partner.html">Partner With Us</a>
         <a href="sponsorship.html">Sponsorship</a>
-        <a href="mailto:showcasingoztv@gmail.com">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <script>
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
     menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
@@ -223,21 +287,21 @@
         <h2>Bronze Sponsor</h2>
         <p>Logo placement on all videos and mentions in social media posts.</p>
         <div class="price">$500</div>
-        <a href="https://formspree.io/f/movqjgnq" class="button">Send Enquiry</a>
+        <a href="#" class="button" onclick="openForm('Bronze Sponsor')">Send Enquiry</a>
       </div>
 
       <div class="package">
         <h2>Silver Sponsor</h2>
         <p>Bronze benefits plus short feature inclusion in an episode.</p>
         <div class="price">$1,000</div>
-        <a href="https://formspree.io/f/movqjgnq" class="button">Send Enquiry</a>
+        <a href="#" class="button" onclick="openForm('Silver Sponsor')">Send Enquiry</a>
       </div>
 
       <div class="package">
         <h2>Gold Sponsor</h2>
         <p>Full feature episode highlighting your business and location.</p>
         <div class="price">$2,500</div>
-        <a href="https://formspree.io/f/movqjgnq" class="button">Send Enquiry</a>
+        <a href="#" class="button" onclick="openForm('Gold Sponsor')">Send Enquiry</a>
       </div>
     </div>
 
@@ -248,17 +312,45 @@
     </div>
   </section>
 
+  <!-- POPUP ENQUIRY FORM -->
+  <div id="enquiry-form">
+    <div class="form-container">
+      <button class="close-btn" onclick="closeForm()">&times;</button>
+      <h2>Sponsorship Enquiry</h2>
+      <form action="https://formspree.io/f/movqjgnq" method="POST">
+        <input type="hidden" name="Package" id="packageInput" />
+        <label>Your Name:</label>
+        <input type="text" name="Name" required>
+        <label>Email:</label>
+        <input type="email" name="Email" required>
+        <label>Message:</label>
+        <textarea name="Message" rows="4" required></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Popup form logic
+    function openForm(packageName) {
+      document.getElementById('enquiry-form').classList.add('active');
+      document.getElementById('packageInput').value = packageName;
+    }
+    function closeForm() {
+      document.getElementById('enquiry-form').classList.remove('active');
+    }
+  </script>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-links">
       <a href="index.html">Home</a> |
       <a href="partner.html">Partner With Us</a> |
       <a href="sponsorship.html">Sponsorship</a> |
-      <a href="mailto:showcasingoztv@gmail.com">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
     <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
 
 </body>
 </html>
-
