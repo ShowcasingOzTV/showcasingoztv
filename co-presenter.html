@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Co-Presenter — ShowcasingOz TV</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      color: #0E3557;
+      background: linear-gradient(to bottom right, #f7f9fb, #ffffff);
+      text-align: center;
+    }
+
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #E87722;
+      transition: color 0.3s ease;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #E87722;
+      margin-top: 40px;
+    }
+
+    p, li {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 50px 0 40px;
+    }
+
+    .cta a {
+      background: #0E3557;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cta a:hover {
+      background: #E87722;
+      transition: 0.3s;
+    }
+
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html"><img src="logo.png" alt="ShowcasingOz TV Logo"></a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <h1>🎤 Co-Presenter (Expression of Interest)</h1>
+
+    <p><strong>Contract:</strong> June – December 2026 (with view to Full Time from 2027)</p>
+    <p><strong>Start Date:</strong> Filming begins June 2026, with pre-filming collaboration in May</p>
+
+    <h2>About the Role</h2>
+    <p>
+      ShowcasingOz TV is seeking an engaging and confident <strong>Co-Presenter</strong> to join our travel production team
+      as we explore and promote regional Australia. You’ll be front and centre on camera, sharing stories, meeting locals,
+      and helping to showcase the best of our towns, attractions, and experiences to audiences nationwide.
+    </p>
+
+    <h2>Responsibilities</h2>
+    <ul>
+      <li>Co-present travel and tourism stories across regional Australia.</li>
+      <li>Engage naturally with business owners, locals, and guests on camera.</li>
+      <li>Assist with script preparation and production planning.</li>
+      <li>Work collaboratively with the videographer and production lead to capture each location’s unique story.</li>
+      <li>Represent ShowcasingOz TV professionally with enthusiasm and authenticity.</li>
+      <li>Contribute to on-location social media content and behind-the-scenes updates.</li>
+    </ul>
+
+    <h2>Ideal Candidate</h2>
+    <ul>
+      <li>Strong, friendly on-camera presence and clear communication skills.</li>
+      <li>Previous presenting or performing experience (TV, radio, online media, etc.) highly regarded.</li>
+      <li>Comfortable travelling extensively for extended periods.</li>
+      <li>Positive attitude, team player, and passionate about travel and storytelling.</li>
+      <li>Ability to work flexibly, including occasional weekends or evening events.</li>
+    </ul>
+
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Contracted co-presenting role (June–Dec 2026) with potential for a full-time position in 2027.</li>
+      <li>All travel and accommodation expenses covered while on assignment.</li>
+      <li>Daily meal allowance of $85.</li>
+      <li>Work alongside an experienced travel media team, visiting incredible destinations.</li>
+      <li>Opportunity to grow with an expanding national tourism media brand.</li>
+    </ul>
+
+    <div class="cta">
+      <a href="contact.html">Express Your Interest</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <p>
+      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      © 2025 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+  </footer>
+</body>
+</html>
