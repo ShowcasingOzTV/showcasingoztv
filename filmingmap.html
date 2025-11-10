@@ -27,7 +27,7 @@
     #map { height: 60vh; min-height: 480px; }
     .container { padding: 18px; max-width: 1100px; margin: 0 auto; }
     table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
     th { background: #f4f4f4; }
     .note { font-size:0.95rem; color:#444; }
     .popup-content { max-width: 320px; }
@@ -43,7 +43,7 @@
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR (copied exactly from your index.html) -->
+  <!-- HEADER / NAVBAR (exact from index.html) -->
   <header class="navbar">
     <div class="container">
       <a href="index.html">
@@ -62,7 +62,7 @@
   </header>
 
   <script>
-    // Mobile menu toggle (same as index)
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
     if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
@@ -95,7 +95,7 @@
     <h2>Planned Filming Schedule (one entry per town, date order)</h2>
     <table id="itinerary-table" aria-describedby="status">
       <thead>
-        <tr><th>Date Range</th><th>Town</th><th>Attractions / Filming Highlights</th></tr>
+        <tr><th style="width:130px">Date Range</th><th style="width:200px">Town</th><th>Attractions / Filming Highlights</th></tr>
       </thead>
       <tbody></tbody>
     </table>
@@ -103,7 +103,7 @@
     <p class="note" style="margin-top:8px;">Data source: <strong>Itinerary 2026</strong> sheet from your uploaded Excel file.</p>
   </div>
 
-  <!-- FOOTER (copied from your index.html) -->
+  <!-- FOOTER (exact from index.html) -->
   <footer>
     <div class="footer-links">
       <a href="index.html">Home</a> |
@@ -126,12 +126,60 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
   <script>
-  // Utility: escape HTML
-  function escapeHtml(s) { if(!s) return ''; return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'); }
+  // ------ Utility functions ------
 
-  // Initialize map
-  const map = L.map('map').setView([-25.0, 134.0], 4);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap contributors'}).addTo(map);
+  function escapeHtml(s) { if (!s && s !== 0) return ''; return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'); }
+
+  // Parse Excel/JS cell date values into a JS Date (handles Date objects, numbers (Excel serials), and strings)
+  function parseCellToDate(cellValue) {
+    if (cellValue === null || cellValue === undefined || cellValue === '') return null;
+    // Date object
+    if (cellValue instanceof Date) return cellValue;
+    // If it's a number, assume Excel serial (days since 1899-12-30)
+    if (typeof cellValue === 'number' && Number.isFinite(cellValue)) {
+      // Excel serial -> JS Date (UTC)
+      const ms = (cellValue - 25569) * 86400 * 1000; // Excel to Unix epoch conversion
+      const d = new Date(ms);
+      if (!isNaN(d)) return d;
+    }
+    // Try to parse string (try day-first then ISO)
+    const s = String(cellValue).trim();
+    // common formats: DD/MM/YYYY or D/M/YYYY
+    const dm = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})$/);
+    if (dm) {
+      const day = parseInt(dm[1],10), month = parseInt(dm[2],10)-1, year = parseInt(dm[3],10);
+      const Y = (year < 100) ? (2000 + year) : year;
+      const d = new Date(Y, month, day);
+      if (!isNaN(d)) return d;
+    }
+    // fallback to Date parse
+    const d2 = new Date(s);
+    if (!isNaN(d2)) return d2;
+    return null;
+  }
+
+  // Format date as DD/MM/YYYY
+  function formatDateDDMMYYYY(d) {
+    if (!d) return '';
+    const dt = (d instanceof Date) ? d : new Date(d);
+    if (isNaN(dt)) return '';
+    const dd = String(dt.getDate()).padStart(2,'0');
+    const mm = String(dt.getMonth()+1).padStart(2,'0');
+    const yyyy = dt.getFullYear();
+    return dd + '/' + mm + '/' + yyyy;
+  }
+
+  // Manual override map to improve geocoding for ambiguous towns
+  const geocodeOverrides = {
+    "Hopetoun": "Hopetoun, VIC, Australia",
+    "Rabbit Flat": "Rabbit Flat, Northern Territory, Australia",
+    "Laura": "Laura, SA, Australia"
+    // add more overrides here if you find other ambiguous towns
+  };
+
+  // ------ Map + DOM setup ------
+  const map = L.map('map').setView([-25.0,134.0], 4);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
 
   const tableBody = document.querySelector('#itinerary-table tbody');
   const statusEl = document.getElementById('status');
@@ -144,7 +192,7 @@
   let routePolyline = null;
   let bounds = L.latLngBounds();
 
-  // Read file from server (attempt), fallback to user upload
+  // Attempts to fetch the Excel file from same folder on server
   async function tryLoadServerFile() {
     const serverPath = './ShowcasingOz TV Business.xlsx';
     try {
@@ -157,182 +205,179 @@
     }
   }
 
-  // Parse an ArrayBuffer workbook to records (unique towns, date order)
+  // Parse workbook arrayBuffer -> return records sorted by first date
   async function parseWorkbook(arrayBuffer) {
     try {
-      const wb = XLSX.read(arrayBuffer, {type: 'array'});
-      // try to use sheet named "Itinerary 2026" first, otherwise first sheet
+      const wb = XLSX.read(arrayBuffer, {type:'array', cellDates:true, cellNF:true});
       const sheetName = wb.SheetNames.find(n => n.toLowerCase().includes('itiner')) || wb.SheetNames[0];
-      const sheet = wb.Sheets[sheetName];
-      const rows = XLSX.utils.sheet_to_json(sheet, {defval: ''}); // array of objects keyed by header
-      // Expect headers like: Date, Town, Activities & Attractions (case-insensitive)
-      // Normalize keys to find right columns
+      const ws = wb.Sheets[sheetName];
+      const rows = XLSX.utils.sheet_to_json(ws, {defval: ''}); // objects keyed by header
       if (!rows || rows.length === 0) return [];
 
-      // Determine header keys
-      const hdrs = Object.keys(rows[0]).map(h => ({orig:h, key: String(h).trim()}));
-      function findKey(possibles) {
+      // normalize header keys (lowercase trimmed)
+      const firstRow = rows[0];
+      const keys = Object.keys(firstRow);
+      function findKeyBySubstr(possibles) {
         for (const p of possibles) {
-          const found = hdrs.find(h => h.key.toLowerCase().includes(p.toLowerCase()));
-          if (found) return found.orig;
+          for (const k of keys) {
+            if (String(k).trim().toLowerCase().includes(p.toLowerCase())) return k;
+          }
         }
         return null;
       }
-      const dateKey = findKey(['date','day']);
-      const townKey = findKey(['town','city']);
-      const attrKey = findKey(['activity','attraction','itiner','attract','activities']);
+      const dateKey = findKeyBySubstr(['date','day']);
+      const townKey = findKeyBySubstr(['town','city']);
+      const attrKey = findKeyBySubstr(['activity','attraction','itiner','attract','activities','activities & attractions','activities & attractions']);
 
-      // Fallback to positions if not found
-      const sampleRow = rows[0];
-      const keys = Object.keys(sampleRow);
       const dk = dateKey || keys[0];
       const tk = townKey || keys[1] || keys[0];
       const ak = attrKey || keys[2] || keys[keys.length-1];
 
-      // Build intermediate array with DateStr, Town, Attractions
-      const list = rows.map(r => {
-        let dateRaw = r[dk];
-        let dateStr = '';
-        if (dateRaw && typeof dateRaw === 'object' && dateRaw instanceof Date) dateStr = dateRaw.toISOString().split('T')[0];
-        else if (dateRaw) {
-          // try parse
-          const d = new Date(dateRaw);
-          if (!isNaN(d)) dateStr = d.toISOString().split('T')[0];
-          else dateStr = String(dateRaw).trim();
-        }
-        const town = String(r[tk] || '').trim();
-        const attractions = String(r[ak] || '').trim();
-        return {DATE: dateStr, TOWN: town, ATTRACTIONS: attractions};
+      // build intermediate rows with parsed date and values
+      const intermediate = rows.map(r => {
+        const rawDate = r[dk];
+        const dateObj = parseCellToDate(rawDate);
+        const dateStr = dateObj ? formatDateDDMMYYYY(dateObj) : '';
+        const town = (r[tk] !== undefined && r[tk] !== null) ? String(r[tk]).trim() : '';
+        const attractions = (r[ak] !== undefined && r[ak] !== null) ? String(r[ak]).trim() : '';
+        return { DATE_OBJ: dateObj, DATE_STR: dateStr, TOWN: town, ATTRACTIONS: attractions };
       });
 
-      // Filter out empty towns
-      const filtered = list.filter(r => r.TOWN && r.TOWN !== '');
+      // filter out empty town rows & exclude Annual Leave / RDO / Public Holiday
+      const filtered = intermediate.filter(r => r.TOWN && r.TOWN !== '' && !(String(r.ATTRACTIONS || '').toLowerCase().includes('annual leave') || String(r.ATTRACTIONS || '').toLowerCase().includes('rdo') || String(r.ATTRACTIONS || '').toLowerCase().includes('public holiday')));
 
-      // Exclude Annual Leave / RDO / Public Holiday in ATTRACTIONS (case-insensitive)
-      const filtered2 = filtered.filter(r => {
-        const s = (r.ATTRACTIONS || '').toLowerCase();
-        return !(s.includes('annual leave') || s.includes('rdo') || s.includes('public holiday'));
-      });
-
-      // Aggregate unique towns: collect dates, attractions, earliest date
+      // aggregate by unique town: collect dates and attractions, keep earliest date
       const agg = {};
-      for (const row of filtered2) {
+      for (const row of filtered) {
         const town = row.TOWN;
-        const date = row.DATE || '';
-        let attr = row.ATTRACTIONS || '';
-        if (!agg[town]) agg[town] = {dates: new Set(), attractions: new Set()};
-        if (date) agg[town].dates.add(date);
-        if (attr && attr !== 'nan') {
-          // split by lines or slashes/semicolons
-          let parts = attr.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
-          if (parts.length === 1) {
-            parts = attr.split(/\/|;|\|/).map(x => x.trim()).filter(Boolean);
-          }
-          for (const p of parts) if (p) agg[town].attractions.add(p);
+        if (!agg[town]) agg[town] = { dates: new Set(), attractions: new Set(), firstDateObj: null };
+        if (row.DATE_STR) agg[town].dates.add(row.DATE_STR);
+        if (row.DATE_OBJ && (!agg[town].firstDateObj || row.DATE_OBJ < agg[town].firstDateObj)) agg[town].firstDateObj = row.DATE_OBJ;
+        // split attractions into parts
+        if (row.ATTRACTIONS && row.ATTRACTIONS.toString().toLowerCase() !== 'nan') {
+          let parts = row.ATTRACTIONS.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+          if (parts.length === 0) parts = row.ATTRACTIONS.split(/\/|;|\|/).map(x=>x.trim()).filter(Boolean);
+          if (parts.length === 0) parts = [row.ATTRACTIONS.trim()];
+          for (const p of parts) agg[town].attractions.add(p);
         }
       }
 
-      // Build records list and sort by earliest date
+      // build records array
       const recs = [];
       for (const [town, v] of Object.entries(agg)) {
-        const dates = Array.from(v.dates).filter(Boolean).sort();
+        const dates = Array.from(v.dates).filter(Boolean).sort((a,b) => {
+          // parse DD/MM/YYYY
+          try {
+            const da = a.split('/'); const db = b.split('/');
+            const daObj = new Date(+da[2], +da[1]-1, +da[0]);
+            const dbObj = new Date(+db[2], +db[1]-1, +db[0]);
+            return daObj - dbObj;
+          } catch(e) { return 0; }
+        });
         let dateRange = '';
-        let firstDate = '';
-        if (dates.length === 1) { dateRange = dates[0]; firstDate = dates[0]; }
-        else if (dates.length > 1) { dateRange = dates[0] + ' → ' + dates[dates.length-1]; firstDate = dates[0]; }
+        if (dates.length === 1) dateRange = dates[0];
+        else if (dates.length > 1) dateRange = dates[0] + ' → ' + dates[dates.length-1];
+        const firstDate = v.firstDateObj ? formatDateDDMMYYYY(v.firstDateObj) : '';
         const attractions = Array.from(v.attractions).join(' / ');
-        recs.push({DATE_RANGE: dateRange, FIRST_DATE: firstDate, TOWN: town, ATTRACTIONS: attractions});
+        // add geocode query override if exists
+        const override = geocodeOverrides[town];
+        const geocodeQuery = override ? override : (town + ', Australia');
+        recs.push({ DATE_RANGE: dateRange, FIRST_DATE: firstDate, TOWN: town, ATTRACTIONS: attractions, GEOCODE_QUERY: geocodeQuery });
       }
-      // sort by FIRST_DATE (empty dates go last)
+
+      // sort by FIRST_DATE (empty last)
       recs.sort((a,b) => {
         if (!a.FIRST_DATE && !b.FIRST_DATE) return a.TOWN.localeCompare(b.TOWN);
         if (!a.FIRST_DATE) return 1;
         if (!b.FIRST_DATE) return -1;
-        return a.FIRST_DATE.localeCompare(b.FIRST_DATE);
+        const da = a.FIRST_DATE.split('/'); const db = b.FIRST_DATE.split('/');
+        const daObj = new Date(+da[2], +da[1]-1, +da[0]);
+        const dbObj = new Date(+db[2], +db[1]-1, +db[0]);
+        return daObj - dbObj;
       });
 
       return recs;
+
     } catch (err) {
       console.error('parseWorkbook error', err);
       return [];
     }
   }
 
-  // Attempt to auto-load the Excel file from the server root (same folder)
-  async function loadAndRender() {
-    statusEl.textContent = 'Attempting to load server-side Excel...';
-    let recs = await tryLoadServerFile();
-    if (!recs || recs.length === 0) {
-      statusEl.textContent = 'Server file not found — waiting for upload or choose file.';
-      return;
+  // Geocode with Nominatim (uses GEOCODE_QUERY if provided)
+  async function geocodeQuery(query) {
+    if (!query) return null;
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`;
+    try {
+      const resp = await fetch(url, { headers: { 'Accept-Language': 'en' }});
+      const data = await resp.json();
+      if (data && data.length > 0) return { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon) };
+      return null;
+    } catch (e) {
+      console.error('geocode error', e);
+      return null;
     }
-    // If recs exists (from server fetch), but tryLoadServerFile returned parsed workbook object,
-    // our tryLoadServerFile returns parseWorkbook result (array). So use that.
-    await renderFromRecords(recs);
   }
 
-  // Render function: given records array, geocode + place markers + draw route + fill table
+  // Render: place markers, table and route
   async function renderFromRecords(records) {
-    // clear previous
     markersLayer.clearLayers();
     routeLayer.clearLayers();
     tableBody.innerHTML = '';
     bounds = L.latLngBounds();
+    const routeCoords = [];
     let remaining = records.length;
     statusEl.textContent = `Geocoding ${remaining} towns — please wait...`;
-    const routeCoords = [];
 
     for (const r of records) {
-      // append row to table
+      // table row
       const tr = document.createElement('tr');
       tr.innerHTML = `<td>${escapeHtml(r.DATE_RANGE)}</td><td>${escapeHtml(r.TOWN)}</td><td>${escapeHtml(r.ATTRACTIONS)}</td>`;
       tableBody.appendChild(tr);
 
-      // geocode
-      const coords = await geocodeTown(r.TOWN);
+      // geocode using provided GEOCODE_QUERY
+      const q = r.GEOCODE_QUERY || (r.TOWN + ', Australia');
+      const coords = await geocodeQuery(q);
       if (coords) {
         const marker = L.marker([coords.lat, coords.lon]).addTo(markersLayer);
-        marker.bindPopup(`<div class="popup-content"><strong>${escapeHtml(r.TOWN)}</strong><br/><em>${escapeHtml(r.DATE_RANGE)}</em><p>${escapeHtml(r.ATTRACTIONS)}</p></div>`);
+        const popupHtml = `<div class="popup-content"><strong>${escapeHtml(r.TOWN)}</strong><br/><em>${escapeHtml(r.DATE_RANGE)}</em><p>${escapeHtml(r.ATTRACTIONS)}</p></div>`;
+        marker.bindPopup(popupHtml);
         bounds.extend([coords.lat, coords.lon]);
         routeCoords.push([coords.lat, coords.lon]);
       } else {
-        // fallback: grey point at center
-        const fallback = L.circleMarker([-25.0, 134.0], {radius:6, color:'#666'}).addTo(markersLayer);
+        // fallback marker at center (indicates geocode not found)
+        const fallback = L.circleMarker([-25.0, 134.0], { radius:6, color:'#666' }).addTo(markersLayer);
         fallback.bindPopup(`<strong>${escapeHtml(r.TOWN)}</strong><br/><em>Geocoding not found</em><p>${escapeHtml(r.ATTRACTIONS)}</p>`);
         routeCoords.push([-25.0, 134.0]);
       }
 
       remaining -= 1;
       statusEl.textContent = remaining > 0 ? `Geocoding... (${remaining} remaining)` : 'All towns processed.';
-      // polite delay to minimize Nominatim throttling
-      await new Promise(res => setTimeout(res, 400));
+      // polite delay to avoid hitting Nominatim rate limits
+      await new Promise(res => setTimeout(res, 350));
     }
 
-    // Draw route (polyline)
+    // draw route polyline
     if (routeCoords.length > 1) {
-      routePolyline = L.polyline(routeCoords, {color: '#E87722', weight: 4, opacity: 0.9}).addTo(routeLayer);
+      routePolyline = L.polyline(routeCoords, { color: '#E87722', weight: 4, opacity: 0.9 }).addTo(routeLayer);
     }
 
     if (bounds.isValid()) map.fitBounds(bounds.pad(0.2));
     else map.setView([-25.0,134.0], 4);
   }
 
-  // Geocode using Nominatim (OpenStreetMap)
-  async function geocodeTown(town) {
-    if (!town) return null;
-    const q = encodeURIComponent(town + ', Australia');
-    const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
-    try {
-      const resp = await fetch(url, { headers: { 'Accept-Language': 'en' }});
-      const data = await resp.json();
-      if (data && data.length > 0) return {lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon)};
-      return null;
-    } catch (e) {
-      return null;
+  // Try server-side file, else wait for upload
+  (async () => {
+    statusEl.textContent = 'Attempting to load itinerary from server file...';
+    const serverRecs = await tryLoadServerFile();
+    if (serverRecs && serverRecs.length) {
+      await renderFromRecords(serverRecs);
+    } else {
+      statusEl.textContent = 'Server-side Excel not found — please upload the file using the control above.';
     }
-  }
+  })();
 
-  // Fallback: parse user-uploaded file
+  // When user uploads file
   fileInput.addEventListener('change', async (ev) => {
     const f = ev.target.files[0];
     if (!f) return;
@@ -351,24 +396,16 @@
     }
   });
 
-  // Try to auto-load server file first. If not present, user can upload
-  (async () => {
-    const recs = await tryLoadServerFile();
-    if (recs && recs.length) {
-      await renderFromRecords(recs);
-    } else {
-      statusEl.textContent = 'No server-side Excel found — please use the Upload control to load your itinerary, or place "ShowcasingOz TV Business.xlsx" in the same folder as this page.';
-    }
-  })();
-
-  // Buttons
+  // Controls
   zoomAllBtn.addEventListener('click', () => { if (bounds.isValid()) map.fitBounds(bounds.pad(0.2)); });
   toggleRouteBtn.addEventListener('click', () => {
     if (!routePolyline) return;
     if (map.hasLayer(routePolyline)) map.removeLayer(routePolyline);
     else routePolyline.addTo(map);
   });
+
   </script>
 
 </body>
 </html>
+
