@@ -62,6 +62,154 @@
 
     .menu-btn {
       display: none;
-      fo
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+      }
+
+      nav.active { display: flex; }
+
+      .menu-btn { display: block; }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+
+    /* MAP SECTION */
+    #map {
+      height: 700px;
+      width: 100%;
+      border: none;
+      margin: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html"><img src="logo.png" alt="ShowcasingOz TV Logo"></a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="contact.html">Contact</a>
+        <a href="filmingmap.html" style="color:#E87722;">Filming Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+
+  <!-- MAP SECTION -->
+  <div id="map"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="filmingmap.html">Filming Map</a>
+    </div>
+    <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+       © 2025 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize map
+    const map = L.map('map').setView([-25.5, 134.5], 5);
+
+    // Tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Towns (in filming order, corrected locations)
+    const filmingStops = [
+      { town: "Hopetoun, VIC", lat: -35.731, lng: 142.366 },
+      { town: "Ivanhoe, NSW", lat: -32.9, lng: 144.3 },
+      { town: "Broken Hill, NSW", lat: -31.953, lng: 141.453 },
+      { town: "Coober Pedy, SA", lat: -29.013, lng: 134.754 },
+      { town: "Laura, SA", lat: -33.184, lng: 138.304 },
+      { town: "Alice Springs, NT", lat: -23.698, lng: 133.881 },
+      { town: "Rabbit Flat, NT", lat: -20.183, lng: 130.016 },
+      { town: "Halls Creek, WA", lat: -18.229, lng: 127.666 },
+      { town: "Kununurra, WA", lat: -15.775, lng: 128.738 },
+      { town: "Katherine, NT", lat: -14.465, lng: 132.263 },
+      { town: "Darwin, NT", lat: -12.463, lng: 130.845 },
+      { town: "Mount Isa, QLD", lat: -20.725, lng: 139.492 },
+      { town: "Longreach, QLD", lat: -23.443, lng: 144.249 },
+      { town: "Rockhampton, QLD", lat: -23.380, lng: 150.505 },
+      { town: "Bundaberg, QLD", lat: -24.866, lng: 152.351 },
+      { town: "Brisbane, QLD", lat: -27.470, lng: 153.022 },
+      { town: "Newcastle, NSW", lat: -32.926, lng: 151.778 },
+      { town: "Sydney, NSW", lat: -33.8688, lng: 151.2093 },
+      { town: "Canberra, ACT", lat: -35.283, lng: 149.128 },
+      { town: "Melbourne, VIC", lat: -37.8136, lng: 144.9631 }
+    ];
+
+    // Add markers
+    filmingStops.forEach(stop => {
+      L.marker([stop.lat, stop.lng])
+        .addTo(map)
+        .bindPopup(`<strong>${stop.town}</strong>`);
+    });
+
+    // Draw red route line
+    const routeCoords = filmingStops.map(stop => [stop.lat, stop.lng]);
+    L.polyline(routeCoords, { color: "red", weight: 3 }).addTo(map);
+  </script>
+
+</body>
+</html>
+
 
 
