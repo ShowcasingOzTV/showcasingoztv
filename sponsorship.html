@@ -266,7 +266,7 @@
         <a href="about.html">About Us</a>
         <a href="partner.html">Partner With Us</a>
         <a href="sponsorship.html">Sponsorship</a>
-        <a href="filming-map.html">Filming Map</a>
+        <a href="filmingmap.html">Filming Map</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -308,5 +308,60 @@
     </div>
 
     <div class="prospectus-link">
-      <a href="https://github.com/ShowcasingOzTV/sho
+      <a href="https://github.com/ShowcasingOzTV/showcasingoztv/raw/main/ShowcasingOz%20TV%20Sponsorship%20Prospectus.pdf" target="_blank">
+        Download Sponsorship Prospectus
+      </a>
+    </div>
+  </section>
+
+  <!-- ENQUIRY POPUP FORM -->
+  <div id="enquiry-form">
+    <div class="form-container">
+      <button class="close-btn" onclick="closeForm()">&times;</button>
+      <h2>Send Sponsorship Enquiry</h2>
+      <form action="mailto:showcasingoztv@gmail.com" method="post" enctype="text/plain">
+        <label for="package">Sponsorship Package</label>
+        <input type="text" id="package" name="package" readonly>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openForm(packageName) {
+      document.getElementById("enquiry-form").classList.add("active");
+      document.getElementById("package").value = packageName;
+    }
+
+    function closeForm() {
+      document.getElementById("enquiry-form").classList.remove("active");
+    }
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="filmingmap.html">Filming Map</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2026 ShowcasingOz TV. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
 
