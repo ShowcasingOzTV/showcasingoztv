@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Showcase Your Business | ShowcasingOz TV</title>
+  <title>Partner With Us | ShowcasingOz TV</title>
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -71,8 +71,15 @@
         right: 0;
         width: 100%;
       }
-      nav.active { display: flex; }
-      .menu-btn { display: block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
         padding: 15px;
         border-top: 1px solid rgba(255,255,255,0.1);
@@ -82,7 +89,7 @@
     /* HERO SECTION */
     .hero {
       position: relative;
-      background: url('outback-banner.jpg') center/cover no-repeat;
+      background: url('advertising-banner.jpg') center/cover no-repeat;
       color: #fff;
       padding: 120px 20px;
       text-align: center;
@@ -92,8 +99,10 @@
     .hero::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(0, 0, 0, 0.55);
       z-index: 1;
     }
@@ -105,7 +114,7 @@
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 15px;
     }
 
@@ -116,9 +125,49 @@
       line-height: 1.6;
     }
 
+    /* SHOWCASE SECTION */
+    .showcase {
+      background: #f9f9f9;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .showcase h2 {
+      color: #0E3557;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .showcase p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .showcase video {
+      width: 80%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 25px;
+    }
+
+    .showcase a.button {
+      background: #E87722;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .showcase a.button:hover {
+      background: #c45e15;
+    }
+
     /* MAIN CONTENT */
     .content {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 50px auto;
       padding: 0 20px;
       text-align: left;
@@ -134,80 +183,110 @@
       margin-bottom: 20px;
     }
 
-    .highlight { color: #E87722; font-weight: bold; }
-
-    /* VIDEO SHOWCASE */
-    .showcase-sample {
-      text-align: center;
-      margin: 60px auto;
-    }
-    .showcase-sample video, .showcase-sample img {
-      width: 80%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    .highlight {
+      color: #E87722;
+      font-weight: bold;
     }
 
-    /* FEATURED LOCATIONS */
-    .featured-towns {
+    /* WHY PARTNER */
+    .why-partner {
       background: #f9f9f9;
-      padding: 60px 20px;
+      padding: 40px 20px;
       border-radius: 12px;
-      margin-top: 40px;
-    }
-    .featured-towns h2 {
-      color: #0E3557;
-      margin-bottom: 40px;
+      margin: 50px 0;
       text-align: center;
     }
-    .town {
-      margin-bottom: 40px;
+
+    .why-partner h2 {
+      color: #0E3557;
+      margin-bottom: 20px;
     }
-    .business-cards {
+
+    .why-partner p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    /* WHAT YOU GET */
+    .benefits {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-      width: 260px;
-      overflow: hidden;
+      margin-top: 40px;
       text-align: left;
     }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .card h4 {
-      margin: 15px 15px 5px;
-      color: #0E3557;
-    }
-    .card p {
-      margin: 0 15px 15px;
-      color: #333;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-    .card a.button {
-      display: block;
-      text-align: center;
-      background: #E87722;
-      color: #fff;
-      padding: 10px;
-      margin: 0 15px 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .card a.button:hover {
-      background: #c45e15;
+
+    .benefit-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
     }
 
-    /* CTA BUTTON */
+    .benefit-card i {
+      font-size: 2rem;
+      color: #E87722;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card h3 {
+      margin: 10px 0 5px;
+      color: #0E3557;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .step {
+      flex: 1 1 180px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 200px;
+    }
+
+    .step i {
+      font-size: 2rem;
+      color: #E87722;
+      margin-bottom: 10px;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: #E87722;
+      align-self: center;
+    }
+
+    /* FAQ */
+    .faq {
+      margin-top: 60px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-item h4 {
+      color: #E87722;
+      margin-bottom: 5px;
+    }
+
+    /* BUTTON */
     .button {
       display: inline-block;
       background: #E87722;
@@ -218,7 +297,10 @@
       font-weight: bold;
       margin: 40px auto;
     }
-    .button:hover { background: #c45e15; }
+
+    .button:hover {
+      background: #c45e15;
+    }
 
     /* FOOTER */
     footer {
@@ -229,13 +311,20 @@
       text-align: center;
       margin-top: 60px;
     }
-    footer .footer-links { margin-bottom: 15px; }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
     footer a {
       color: #E87722;
       text-decoration: none;
       margin: 0 10px;
     }
-    footer a:hover { text-decoration: underline; }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -267,61 +356,109 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Showcase Your Business with ShowcasingOz TV</h1>
-    <p>Get your motel, attraction, or experience featured in our national travel series and online platform — reaching travellers across Australia and beyond.</p>
+    <h1>Showcase Your Business Across Australia</h1>
+    <p>Partner with ShowcasingOz TV to create stunning video and photo features that highlight your accommodation, attraction, or local experience — seen by thousands of travellers nationwide.</p>
   </section>
 
-  <!-- SAMPLE SHOWCASE VIDEO -->
-  <section class="showcase-sample">
-    <h2>See What We Can Create For You</h2>
-    <video controls poster="sample-thumbnail.jpg">
-      <source src="sample-showcase.mp4" type="video/mp4">
+  <!-- SHOWCASE SECTION -->
+  <section class="showcase">
+    <h2>Showcase Your Business Here</h2>
+    <p>Below is an example of the professional standard we bring to every filming partnership. Our team produces cinematic video and photo features that authentically showcase what makes your destination special.</p>
+    <video controls poster="video-thumbnail.jpg">
+      <source src="sample-advertising-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <p style="max-width:700px;margin:20px auto;">Here’s an example of how your business could be presented on ShowcasingOz TV — through cinematic visuals, storytelling, and professional editing designed to inspire travel.</p>
+    <a href="contact.html" class="button">Enquire About a Feature</a>
   </section>
 
-  <!-- FEATURED BUSINESSES -->
-  <section class="featured-towns">
-    <h2>Featured Locations</h2>
+  <!-- WHY PARTNER -->
+  <section class="why-partner">
+    <h2>Why Partner With ShowcasingOz TV?</h2>
+    <p>ShowcasingOz TV is more than a travel show — it’s a movement celebrating regional Australia. We work with accommodation providers, attractions, and tourism operators to bring their unique stories to life through engaging film production and digital storytelling.</p>
+    <p>Our platform reaches audiences across social media, YouTube, and broadcast networks — giving your business national exposure and helping drive real visitor interest.</p>
+  </section>
 
-    <div class="town">
-      <h3>Broken Hill, NSW</h3>
-      <div class="business-cards">
-        <div class="card">
-          <img src="images/outback-sunset-motel.jpg" alt="Outback Sunset Motel">
-          <h4>Outback Sunset Motel</h4>
-          <p>Experience true outback hospitality and panoramic desert views.</p>
-          <a href="#" class="button">Watch Video</a>
-        </div>
-
-        <div class="card">
-          <img src="images/living-desert-gallery.jpg" alt="Living Desert Art Gallery">
-          <h4>Living Desert Art Gallery</h4>
-          <p>Discover creativity shaped by the spirit of the Australian desert.</p>
-          <a href="#" class="button">Watch Video</a>
-        </div>
+  <!-- WHAT YOU GET -->
+  <section class="content">
+    <h2>What You’ll Receive</h2>
+    <div class="benefits">
+      <div class="benefit-card">
+        <i class="fa-solid fa-video"></i>
+        <h3>Professional Video Feature</h3>
+        <p>Our team visits your business and produces a high-quality video highlighting what makes your experience unique.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Worldwide Exposure</h3>
+        <p>Your story will reach travellers through our website, social media, and broadcast channels worldwide.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Digital Promotion</h3>
+        <p>We share your feature across YouTube, Facebook, Instagram, and TikTok to engage both local and international audiences.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>Community Collaboration</h3>
+        <p>We love working with regional councils and tourism bodies to strengthen local networks and visibility.</p>
       </div>
     </div>
+  </section>
 
-    <div class="town">
-      <h3>Esperance, WA</h3>
-      <div class="business-cards">
-        <div class="card">
-          <img src="images/bayview-resort.jpg" alt="Bayview Resort">
-          <h4>Bayview Resort</h4>
-          <p>Wake up to turquoise waters and white-sand beaches — the jewel of WA’s south coast.</p>
-          <a href="#" class="button">Watch Video</a>
-        </div>
+  <!-- HOW IT WORKS -->
+  <section class="content">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fa-solid fa-envelope"></i>
+        <h4>1. Enquire</h4>
+        <p>Send us a message to discuss your goals and vision.</p>
       </div>
+      <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step">
+        <i class="fa-solid fa-comments"></i>
+        <h4>2. Plan & Schedule</h4>
+        <p>We chat through ideas, logistics, and production timing.</p>
+      </div>
+      <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step">
+        <i class="fa-solid fa-video"></i>
+        <h4>3. Film & Produce</h4>
+        <p>Our crew films your story and edits a professional feature.</p>
+      </div>
+      <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step">
+        <i class="fa-solid fa-tv"></i>
+        <h4>4. You’re Featured!</h4>
+        <p>Your business is showcased across our digital and TV platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="content faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>💬 How much does it cost?</h4>
+      <p>We offer flexible, affordable packages starting from under $500 — with options for both small operators and large attractions.</p>
+    </div>
+    <div class="faq-item">
+      <h4>🎥 What’s included?</h4>
+      <p>All packages include filming, editing, promotional distribution, and social sharing. Optional add-ons include extended edits and drone footage.</p>
+    </div>
+    <div class="faq-item">
+      <h4>📅 How soon can filming happen?</h4>
+      <p>We will be on the road in 2026 travelling all across Australia — once you book, we’ll align filming with our schedule in your region.</p>
+    </div>
+    <div class="faq-item">
+      <h4>📈 What results can I expect?</h4>
+      <p>Our features help partners gain new exposure, drive online engagement, and increase visitation by connecting with inspired travellers.</p>
     </div>
   </section>
 
   <!-- CTA -->
   <div style="text-align:center;">
-    <h2>Want Your Business Featured?</h2>
-    <p style="max-width:700px;margin:0 auto 30px;">Join our growing network of regional partners and let ShowcasingOz TV tell your story. We produce affordable, cinematic features tailored to your business and region.</p>
-    <a href="contact.html" class="button">Enquire Now</a>
+    <a href="contact.html" class="button">Let’s Get Started!</a>
   </div>
 
   <!-- FOOTER -->
@@ -334,11 +471,9 @@
       <a href="filming-map.html">Filming Map</a> |
       <a href="contact.html">Contact</a>
     </div>
-    <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      © 2025 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
+    <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
-
 </body>
 </html>
+
