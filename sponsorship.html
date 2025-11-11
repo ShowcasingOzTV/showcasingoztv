@@ -266,7 +266,7 @@
         <a href="about.html">About Us</a>
         <a href="partner.html">Partner With Us</a>
         <a href="sponsorship.html">Sponsorship</a>
-        <a href="filming-map.html">Filming Map</a> <!-- ✅ Added -->
+        <a href="filming-map.html">Filming Map</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -308,53 +308,5 @@
     </div>
 
     <div class="prospectus-link">
-      <a href="https://github.com/ShowcasingOzTV/showcasingoztv/raw/main/ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank">
-        📄 Download Sponsorship Prospectus (PDF)
-      </a>
-    </div>
-  </section>
+      <a href="https://github.com/ShowcasingOzTV/sho
 
-  <!-- POPUP ENQUIRY FORM -->
-  <div id="enquiry-form">
-    <div class="form-container">
-      <button class="close-btn" onclick="closeForm()">&times;</button>
-      <h2>Sponsorship Enquiry</h2>
-      <form action="https://formspree.io/f/movqjgnq" method="POST">
-        <input type="hidden" name="Package" id="packageInput" />
-        <label>Your Name:</label>
-        <input type="text" name="Name" required>
-        <label>Email:</label>
-        <input type="email" name="Email" required>
-        <label>Message:</label>
-        <textarea name="Message" rows="4" required></textarea>
-        <button type="submit">Send Enquiry</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    // Popup form logic
-    function openForm(packageName) {
-      document.getElementById('enquiry-form').classList.add('active');
-      document.getElementById('packageInput').value = packageName;
-    }
-    function closeForm() {
-      document.getElementById('enquiry-form').classList.remove('active');
-    }
-  </script>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="partner.html">Partner With Us</a> |
-      <a href="sponsorship.html">Sponsorship</a> |
-      <a href="filming-map.html">Filming Map</a> | <!-- ✅ Added -->
-      <a href="contact.html">Contact</a>
-    </div>
-    <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
-  </footer>
-
-</body>
-</html>
