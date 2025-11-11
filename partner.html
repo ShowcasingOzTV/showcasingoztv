@@ -144,15 +144,24 @@
       line-height: 1.6;
     }
 
-    .showcase video {
-      width: 80%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin-bottom: 25px;
+    .video-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
     }
 
-    .showcase a.button {
+    .showcase video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* make the CTA centered under the video */
+    .showcase .button {
+      display: block;
+      width: fit-content;
+      margin: 18px auto 0;
       background: #E87722;
       color: #fff;
       padding: 14px 30px;
@@ -161,7 +170,7 @@
       font-weight: bold;
     }
 
-    .showcase a.button:hover {
+    .showcase .button:hover {
       background: #c45e15;
     }
 
@@ -286,7 +295,7 @@
       margin-bottom: 5px;
     }
 
-    /* BUTTON */
+    /* BUTTON (generic) */
     .button {
       display: inline-block;
       background: #E87722;
@@ -325,6 +334,12 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 900px) {
+      .content, .showcase { padding-left: 18px; padding-right: 18px; }
+      .hero { padding: 80px 16px; }
+      .showcase video { width: 100%; }
+    }
   </style>
 </head>
 
@@ -357,18 +372,23 @@
   <!-- HERO -->
   <section class="hero">
     <h1>Showcase Your Business Across Australia</h1>
-    <p>Partner with ShowcasingOz TV to create stunning video and photo features that highlight your accommodation, attraction, or local experience — seen by thousands of travellers worldwide.</p>
+    <p>Partner with ShowcasingOz TV to create stunning video and photo features that highlight your accommodation, attraction, or local experience — seen by thousands of travellers nationwide.</p>
   </section>
 
   <!-- SHOWCASE SECTION -->
   <section class="showcase">
     <h2>Showcase Your Business Here</h2>
     <p>Below is an example of the professional standard we bring to every filming partnership. Our team produces cinematic video and photo features that authentically showcase what makes your destination special.</p>
-    <video controls poster="video-thumbnail.jpg">
-      <source src="sample-advertising-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <a href="contact.html" class="button">Enquire About a Feature</a>
+
+    <div class="video-wrap">
+      <video controls poster="video-thumbnail.jpg">
+        <source src="sample-advertising-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- centered CTA under the video -->
+    <a href="contact.html" class="button" aria-label="Enquire About a Feature">Enquire About a Feature</a>
   </section>
 
   <!-- WHY PARTNER -->
@@ -476,4 +496,5 @@
   </footer>
 </body>
 </html>
+
 
