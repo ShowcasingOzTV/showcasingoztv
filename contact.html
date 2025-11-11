@@ -89,7 +89,7 @@
     /* MAIN CONTENT */
     .content {
       max-width: 700px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 0 20px;
       text-align: center;
     }
@@ -101,6 +101,7 @@
 
     p {
       margin-bottom: 30px;
+      line-height: 1.6;
     }
 
     form {
@@ -116,6 +117,12 @@
       border-radius: 8px;
       font-size: 1rem;
       width: 100%;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #E87722;
+      box-shadow: 0 0 4px rgba(232, 119, 34, 0.5);
     }
 
     button {
@@ -176,7 +183,7 @@
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
       <nav id="menu">
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a> <!-- ✅ New About Us link -->
+        <a href="about.html">About Us</a>
         <a href="partner.html">Partner With Us</a>
         <a href="sponsorship.html">Sponsorship</a>
         <a href="contact.html">Contact</a>
@@ -193,7 +200,8 @@
   <!-- CONTENT -->
   <section class="content">
     <h1>Contact Us</h1>
-    <p>We’d love to hear from you! Use the form below or email us directly at 
+    <p>
+      We’d love to hear from you! Use the form below or email us directly at 
       <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.
     </p>
 
@@ -241,7 +249,7 @@
   <footer>
     <div class="footer-links">
       <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> | <!-- ✅ New About Us link -->
+      <a href="about.html">About Us</a> |
       <a href="partner.html">Partner With Us</a> |
       <a href="sponsorship.html">Sponsorship</a> |
       <a href="contact.html">Contact</a>
