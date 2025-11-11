@@ -198,4 +198,238 @@
     /* HOW IT WORKS */
     .steps {
       display: flex;
-      flex-wra
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .step {
+      flex: 1 1 180px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 200px;
+    }
+
+    .step i {
+      font-size: 2rem;
+      color: #E87722;
+      margin-bottom: 10px;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: #E87722;
+      align-self: center;
+    }
+
+    /* FAQ */
+    .faq {
+      margin-top: 60px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-item h4 {
+      color: #E87722;
+      margin-bottom: 5px;
+    }
+
+    /* BUTTON */
+    .button {
+      display: inline-block;
+      background: #E87722;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 40px auto;
+    }
+
+    .button:hover {
+      background: #c45e15;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html">
+        <img src="logo.png" alt="ShowcasingOz TV Logo">
+      </a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="filming-map.html">Filming Map</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Showcase Your Destination to Australia — and the World</h1>
+    <p>Join us on our mission to tell Australia’s stories through professional, authentic video content that inspires travellers nationwide.</p>
+  </section>
+
+  <!-- WHY PARTNER -->
+  <section class="why-partner">
+    <h2>Why Partner With ShowcasingOz TV?</h2>
+    <p>ShowcasingOz TV is more than a travel show — it’s a movement celebrating regional Australia. We work with accommodation providers, attractions, and tourism operators to bring their unique stories to life through engaging film production and digital storytelling.</p>
+    <p>Our platform reaches audiences across social media, YouTube, and broadcast networks — giving your business national exposure and helping drive real visitor interest.</p>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="content">
+    <h2>What You’ll Receive</h2>
+    <div class="benefits">
+      <div class="benefit-card">
+        <i class="fa-solid fa-video"></i>
+        <h3>Professional Video Feature</h3>
+        <p>Our team visits your business and produces a high-quality video highlighting what makes your experience unique.</p>
+      </div>
+
+      <div class="benefit-card">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Worldwide Exposure</h3>
+        <p>Your story will reach travellers through our website, social media, and broadcast channels worldwide.</p>
+      </div>
+
+      <div class="benefit-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Digital Promotion</h3>
+        <p>We share your feature across YouTube, Facebook, Instagram, and TikTok to engage both local and international audiences.</p>
+      </div>
+
+      <div class="benefit-card">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>Community Collaboration</h3>
+        <p>We love working with regional councils and tourism bodies to strengthen local networks and visibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="content">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fa-solid fa-envelope"></i>
+        <h4>1. Enquire</h4>
+        <p>Send us a message to discuss your goals and vision.</p>
+      </div>
+      <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step">
+        <i class="fa-solid fa-comments"></i>
+        <h4>2. Plan & Schedule</h4>
+        <p>We chat through ideas, logistics, and production timing.</p>
+      </div>
+      <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step">
+        <i class="fa-solid fa-video"></i>
+        <h4>3. Film & Produce</h4>
+        <p>Our crew films your story and edits a professional feature.</p>
+      </div>
+      <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step">
+        <i class="fa-solid fa-tv"></i>
+        <h4>4. You’re Featured!</h4>
+        <p>Your business is showcased across our digital and TV platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="content faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>💬 How much does it cost?</h4>
+      <p>We offer flexible, affordable packages starting from under $500 — with options for both small operators and large attractions.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>🎥 What’s included?</h4>
+      <p>All packages include filming, editing, promotional distribution, and social sharing. Optional add-ons include extended edits and drone footage.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>📅 How soon can filming happen?</h4>
+      <p>We will be on the road in 2026 travelling all across Australia — once you book, we’ll align filming with our schedule in your region.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>📈 What results can I expect?</h4>
+      <p>Our features help partners gain new exposure, drive online engagement, and increase visitation by connecting with inspired travellers.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div style="text-align:center;">
+    <a href="contact.html" class="button">Let’s Get Started!</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="filming-map.html">Filming Map</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>
+      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      © 2025 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+  </footer>
+</body>
+</html>
+
