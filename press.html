@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Press & Media | ShowcasingOz TV</title>
+  <title>Press | ShowcasingOz TV</title>
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -15,6 +15,7 @@
       margin: 0;
       color: #0E3557;
       background: #fff;
+      text-align: center;
     }
 
     /* HEADER NAVBAR */
@@ -26,7 +27,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      text-align: center;
     }
 
     header.navbar .container {
@@ -88,46 +88,38 @@
 
     /* HERO */
     .hero {
-      position: relative;
       background: url('press-banner.jpg') center/cover no-repeat;
       color: #fff;
-      padding: 120px 20px;
-      text-align: center;
-      overflow: hidden;
+      padding: 100px 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      position: relative;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0,0,0,0.55);
-      z-index: 1;
-    }
-
-    .hero h1, .hero p {
-      position: relative;
-      z-index: 2;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
     }
 
     .hero h1 {
       font-size: 2.6rem;
-      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero p {
+      position: relative;
+      z-index: 1;
       font-size: 1.2rem;
       max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
+      margin: 10px auto 0;
     }
 
-    /* CONTENT */
+    /* MAIN CONTENT */
     .content {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 50px auto;
       padding: 0 20px;
       text-align: left;
@@ -136,70 +128,55 @@
     .content h2 {
       color: #0E3557;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
-    /* NEWS SECTION */
-    .news-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .news-card {
-      background: #f9f9f9;
-      border-radius: 12px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-    }
-
-    .news-card img {
+    .content img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .press-item {
+      margin-bottom: 60px;
+    }
+
+    .press-item h3 {
+      color: #E87722;
       margin-bottom: 10px;
     }
 
-    .news-card h3 {
-      color: #0E3557;
-      margin: 10px 0 5px;
+    .press-item p {
+      line-height: 1.6;
     }
 
-    .news-card p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #333;
-    }
-
-    /* MEDIA COVERAGE */
+    /* MEDIA COVERAGE SECTION */
     .media-logos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      margin: 40px 0;
+      margin-top: 40px;
     }
 
-    .media-logos img {
-      width: 140px;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-
-    .media-logos img:hover {
-      opacity: 1;
-    }
-
-    /* PRESS KIT */
-    .press-kit {
-      background: #f9f9f9;
-      padding: 40px 20px;
+    .media-logo {
+      background: #f1f1f1;
       border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 180px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #777;
+      font-weight: 600;
       text-align: center;
-      margin-top: 60px;
+      padding: 10px;
     }
 
+    /* CTA BUTTON */
     .button {
       display: inline-block;
       background: #E87722;
@@ -208,7 +185,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 15px;
+      margin: 40px auto;
     }
 
     .button:hover {
@@ -238,6 +215,7 @@
     footer a:hover {
       text-decoration: underline;
     }
+
   </style>
 </head>
 
@@ -246,7 +224,9 @@
   <!-- HEADER -->
   <header class="navbar">
     <div class="container">
-      <a href="index.html"><img src="logo.png" alt="ShowcasingOz TV Logo"></a>
+      <a href="index.html">
+        <img src="logo.png" alt="ShowcasingOz TV Logo">
+      </a>
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
       <nav id="menu">
         <a href="index.html">Home</a>
@@ -268,50 +248,35 @@
   <!-- HERO -->
   <section class="hero">
     <h1>Press & Media</h1>
-    <p>Explore our latest announcements, media coverage, and press resources as we share stories from across regional Australia.</p>
+    <p>Official announcements, media coverage, and resources from ShowcasingOz TV</p>
   </section>
 
-  <!-- LATEST NEWS -->
-  <section class="content">
-    <h2>Latest News & Announcements</h2>
-    <div class="news-grid">
-      <div class="news-card">
-        <img src="news-placeholder.jpg" alt="News Image">
-        <h3>Filming Road Trip 2026 Announced</h3>
-        <p>ShowcasingOz TV will embark on a national filming journey from June 2026, capturing stories from regional destinations and local tourism operators.</p>
-      </div>
-      <div class="news-card">
-        <img src="news-placeholder2.jpg" alt="News Image">
-        <h3>Partner Opportunities Now Open</h3>
-        <p>Businesses can now register interest to be featured in upcoming episodes highlighting Australia's unique accommodations and experiences.</p>
-      </div>
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <div class="press-item">
+      <img src="press-roadtrip.jpg" alt="Outback road trip photo">
+      <h2>Filming Road Trip 2026 Announced</h2>
+      <p>ShowcasingOz TV is embarking on an extraordinary journey across Australia in 2026, capturing the stories, people, and landscapes that define our incredible nation. The series will highlight both regional and metropolitan experiences — from the red heart of the outback to the vibrant energy of our capital cities.</p>
     </div>
-  </section>
 
-  <!-- MEDIA COVERAGE -->
-  <section class="content">
+    <div class="press-item">
+      <img src="press-partners.jpg" alt="Business partnership handshake">
+      <h2>Partner Opportunities Now Open</h2>
+      <p>We’re now inviting motels, attractions, and tourism operators nationwide to feature in ShowcasingOz TV. Businesses can gain national exposure through cinematic storytelling, with every feature shared across web, broadcast, and social media platforms.</p>
+      <a href="partner.html" class="button">Become a Partner</a>
+    </div>
+
     <h2>Media Coverage & Mentions</h2>
     <div class="media-logos">
-      <img src="media-logo1.png" alt="Media Logo 1">
-      <img src="media-logo2.png" alt="Media Logo 2">
-      <img src="media-logo3.png" alt="Media Logo 3">
+      <div class="media-logo">Your Media Logo<br>Could Appear Here</div>
+      <div class="media-logo">Your Media Logo<br>Could Appear Here</div>
+      <div class="media-logo">Your Media Logo<br>Could Appear Here</div>
     </div>
-    <p style="text-align:center;">We’re proud to collaborate with regional publications, tourism networks, and national broadcasters to share stories of authentic Australian travel.</p>
-  </section>
 
-  <!-- PRESS KIT -->
-  <section class="press-kit">
-    <h2>Press Kit & Media Resources</h2>
-    <p>Download our official media kit for logos, images, and information about ShowcasingOz TV, including brand assets and background details.</p>
-    <a href="ShowcasingOz_PressKit.pdf" class="button" download>Download Press Kit</a>
-  </section>
+    <a href="press-kit.pdf" class="button" download>📎 Download Press Kit</a>
 
-  <!-- CONTACT -->
-  <section class="content" style="text-align:center;">
-    <h2>Press Enquiries</h2>
-    <p>For interviews, promotional collaborations, or media questions, please contact us directly.</p>
-    <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a></p>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -323,7 +288,10 @@
       <a href="filming-map.html">Filming Map</a> |
       <a href="contact.html">Contact</a>
     </div>
-    <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
+    <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
+
 </body>
 </html>
+
