@@ -88,7 +88,7 @@
 
     /* HERO */
     .hero {
-      background: url('press-banner.jpg') center/cover no-repeat;
+      background: url('images/press-banner.jpg') center/cover no-repeat;
       color: #fff;
       padding: 100px 20px;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
@@ -177,6 +177,14 @@
     }
 
     /* CTA BUTTON */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
     .button {
       display: inline-block;
       background: #E87722;
@@ -185,7 +193,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin: 40px auto;
+      text-align: center;
     }
 
     .button:hover {
@@ -255,16 +263,19 @@
   <div class="content">
 
     <div class="press-item">
-      <img src="press-roadtrip.jpg" alt="Outback road trip photo">
+      <img src="images/press-roadtrip.jpg" alt="Outback road trip photo">
       <h2>Filming Road Trip 2026 Announced</h2>
       <p>ShowcasingOz TV is embarking on an extraordinary journey across Australia in 2026, capturing the stories, people, and landscapes that define our incredible nation. The series will highlight both regional and metropolitan experiences — from the red heart of the outback to the vibrant energy of our capital cities.</p>
     </div>
 
     <div class="press-item">
-      <img src="press-partners.jpg" alt="Business partnership handshake">
+      <img src="images/press-handshake.jpg" alt="Business partnership handshake">
       <h2>Partner Opportunities Now Open</h2>
       <p>We’re now inviting motels, attractions, and tourism operators nationwide to feature in ShowcasingOz TV. Businesses can gain national exposure through cinematic storytelling, with every feature shared across web, broadcast, and social media platforms.</p>
-      <a href="partner.html" class="button">Become a Partner</a>
+      <div class="button-container">
+        <a href="partner.html" class="button">Become a Partner</a>
+        <a href="press-kit.pdf" class="button" download>📎 Download Press Kit</a>
+      </div>
     </div>
 
     <h2>Media Coverage & Mentions</h2>
@@ -273,8 +284,6 @@
       <div class="media-logo">Your Media Logo<br>Could Appear Here</div>
       <div class="media-logo">Your Media Logo<br>Could Appear Here</div>
     </div>
-
-    <a href="press-kit.pdf" class="button" download>📎 Download Press Kit</a>
 
   </div>
 
@@ -294,4 +303,3 @@
 
 </body>
 </html>
-
