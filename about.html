@@ -5,10 +5,56 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Us | ShowcasingOz TV</title>
 
+  <!-- ✅ SEO META TAGS -->
+  <meta name="description" content="Learn about ShowcasingOz TV — an independent Australian travel and tourism series that captures authentic regional stories, attractions, and adventures.">
+  <meta name="keywords" content="about ShowcasingOz TV, Australian travel show, tourism media, regional Australia, travel documentaries, attractions, tourism marketing, Australian destinations">
+  <meta name="author" content="ShowcasingOz TV">
+
+  <!-- ✅ OPEN GRAPH (for social media previews) -->
+  <meta property="og:title" content="About ShowcasingOz TV — Discover. Capture. Share.">
+  <meta property="og:description" content="ShowcasingOz TV shares the real Australia through film — connecting travellers with authentic regional stories, destinations, and local businesses.">
+  <meta property="og:image" content="https://showcasingoztv.com.au/images/banner.png">
+  <meta property="og:url" content="https://showcasingoztv.com.au/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ShowcasingOz TV">
+
+  <!-- ✅ TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About ShowcasingOz TV — Discover. Capture. Share.">
+  <meta name="twitter:description" content="Discover the story behind ShowcasingOz TV — the platform showcasing authentic Australian travel, attractions, and regional life.">
+  <meta name="twitter:image" content="https://showcasingoztv.com.au/images/banner.png">
+
+  <!-- ✅ FAVICON -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- ✅ SCHEMA MARKUP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://showcasingoztv.com.au/about.html",
+    "mainEntityOfPage": {
+      "@type": "Organization",
+      "name": "ShowcasingOz TV",
+      "url": "https://showcasingoztv.com.au",
+      "logo": "https://showcasingoztv.com.au/images/logo.png",
+      "sameAs": [
+        "https://www.youtube.com/@ShowcasingOzTV",
+        "https://www.instagram.com/showcasingoztv/",
+        "https://www.tiktok.com/@showcasingoztv",
+        "https://www.facebook.com/profile.php?id=61583522543965"
+      ]
+    },
+    "description": "ShowcasingOz TV is an Australian travel and tourism platform uncovering the heart and soul of Australia through stories, attractions, and regional adventures."
+  }
+  </script>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- ✅ EXISTING STYLES (unchanged) -->
   <style>
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -17,7 +63,6 @@
       background: #fff;
       text-align: center;
     }
-
     /* HEADER NAVBAR */
     header.navbar {
       background: #0E3557;
@@ -28,7 +73,6 @@
       top: 0;
       z-index: 1000;
     }
-
     header.navbar .container {
       display: flex;
       justify-content: space-between;
@@ -37,30 +81,25 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-
     header.navbar img {
       height: 50px;
       width: auto;
     }
-
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav a:hover {
       color: #E87722;
       transition: color 0.3s ease;
     }
-
     .menu-btn {
       display: none;
       font-size: 1.5rem;
       cursor: pointer;
     }
-
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -71,21 +110,17 @@
         right: 0;
         width: 100%;
       }
-
       nav.active {
         display: flex;
       }
-
       .menu-btn {
         display: block;
       }
-
       nav a {
         padding: 15px;
         border-top: 1px solid rgba(255,255,255,0.1);
       }
     }
-
     /* CONTENT */
     .content {
       max-width: 1000px;
@@ -94,18 +129,15 @@
       text-align: left;
       line-height: 1.7;
     }
-
     .content h1 {
       text-align: center;
       color: #0E3557;
       margin-bottom: 30px;
     }
-
     .highlight {
       color: #E87722;
       font-weight: bold;
     }
-
     .values {
       display: flex;
       flex-wrap: wrap;
@@ -113,7 +145,6 @@
       gap: 20px;
       margin-top: 40px;
     }
-
     .value-card {
       flex: 1 1 280px;
       background: #f9f9f9;
@@ -122,12 +153,10 @@
       text-align: center;
       border: 1px solid #eee;
     }
-
     .value-card h3 {
       color: #E87722;
       margin-bottom: 10px;
     }
-
     /* FOOTER */
     footer {
       background: #0E3557;
@@ -137,17 +166,14 @@
       text-align: center;
       margin-top: 60px;
     }
-
     footer .footer-links {
       margin-bottom: 15px;
     }
-
     footer a {
       color: #E87722;
       text-decoration: none;
       margin: 0 10px;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
@@ -164,14 +190,14 @@
       </a>
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
       <nav id="menu">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="partner.html">Partner With Us</a>
-  <a href="sponsorship.html">Sponsorship</a>
-  <a href="filming-map.html">Filming Map</a>
-  <a href="press.html">Press</a>
-  <a href="contact.html">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner With Us</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="filming-map.html">Filming Map</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
@@ -223,15 +249,15 @@
 
   <!-- FOOTER -->
   <footer>
-   <div class="footer-links">
-  <a href="index.html">Home</a> |
-  <a href="about.html">About Us</a> |
-  <a href="partner.html">Partner With Us</a> |
-  <a href="sponsorship.html">Sponsorship</a> |
-  <a href="filming-map.html">Filming Map</a> |
-  <a href="press.html">Press</a> |
-  <a href="contact.html">Contact</a>
-</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="partner.html">Partner With Us</a> |
+      <a href="sponsorship.html">Sponsorship</a> |
+      <a href="filming-map.html">Filming Map</a> |
+      <a href="press.html">Press</a> |
+      <a href="contact.html">Contact</a>
+    </div>
     <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
 
