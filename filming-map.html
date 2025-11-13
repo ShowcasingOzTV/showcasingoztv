@@ -98,14 +98,15 @@
       }
     }
 
+    /* ✅ Banner adjusted to remove large gap */
     .banner {
       display: block;
       width: 100%;
-      height: 260px;
+      height: 140px;
       background: url('banner.png') center top / contain no-repeat;
       background-color: #ffffff;
       border: none;
-      margin-bottom: 20px;
+      margin: 0; /* removed margin-bottom */
     }
 
     .hero {
@@ -118,6 +119,7 @@
     #map {
       height: 60vh;
       min-height: 480px;
+      margin-top: 0; /* ✅ no gap above map */
     }
 
     .container {
@@ -175,7 +177,7 @@
       padding: 30px 20px;
       font-size: 0.9rem;
       margin-top: 50px;
-      text-align: center; /* ✅ Centered footer */
+      text-align: center;
     }
 
     footer .footer-links {
@@ -225,7 +227,7 @@
     if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
   </script>
 
-  <!-- Banner -->
+  <!-- ✅ Reduced Banner Gap -->
   <section class="banner"></section>
 
   <div class="hero">
@@ -271,7 +273,6 @@
 
   <!-- Existing Map Script -->
   <script>
-    // Helper: escape HTML
     function escapeHtml(s) {
       if(!s) return '';
       return String(s)
@@ -319,7 +320,6 @@
         const ws = wb.Sheets[sheetName];
         const rows = XLSX.utils.sheet_to_json(ws, {defval: ''});
         if (!rows || rows.length === 0) return [];
-
         const keys = Object.keys(rows[0]);
         function findKey(cands) {
           for (const c of cands)
@@ -328,15 +328,12 @@
                 return k;
           return null;
         }
-
         const dateKey = findKey(['date','day']);
         const townKey = findKey(['town','city']);
         const attrKey = findKey(['activity','attraction','itiner']);
-
         const dk = dateKey || keys[0];
         const tk = townKey || keys[1] || keys[0];
         const ak = attrKey || keys[2] || keys[keys.length-1];
-
         const normalized = rows.map(r => {
           const rawDate = r[dk];
           let dateObj = null;
@@ -451,5 +448,6 @@
   </script>
 </body>
 </html>
+
 
 
