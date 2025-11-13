@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  gtag('config', 'G-RB6N742VZW');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Partner With Us | ShowcasingOz TV</title>
@@ -251,7 +251,7 @@
     </p>
 
     <div class="cta-container">
-      <a href="contact.html" class="cta-button">Express Your Interest</a>
+      <a href="contact.html" class="cta-button" id="partnerInterestBtn">Express Your Interest</a>
     </div>
   </section>
 
@@ -268,5 +268,15 @@
     </div>
     <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
+
+  <!-- Google Analytics Event Tracking -->
+  <script>
+    document.getElementById("partnerInterestBtn").addEventListener("click", function() {
+      gtag("event", "express_interest_click", {
+        event_category: "Engagement",
+        event_label: "Partner Page - Express Interest Button"
+      });
+    });
+  </script>
 </body>
 </html>
