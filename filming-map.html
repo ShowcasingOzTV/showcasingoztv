@@ -1,271 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ShowcasingOz TV Filming Map</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ShowcasingOz TV Filming Map</title>
 
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-  <style>
-    body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 0;
-      color: #0E3557;
-      background: #fff;
-    }
+<style>
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  color: #0E3557;
+  background: #fff;
+}
 
-    header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 15px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* HEADER */
+header.navbar {
+  background: #0E3557;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    header.navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+header.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    header.navbar img {
-      height: 50px;
-      width: auto;
-    }
+header.navbar img {
+  height: 50px;
+  width: auto;
+}
 
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    nav a:hover {
-      color: #E87722;
-      transition: color 0.3s ease;
-    }
+nav a:hover {
+  color: #E87722;
+  transition: color 0.3s ease;
+}
 
-    .menu-btn {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #0E3557;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-      }
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0E3557;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+  }
 
-      nav.active {
-        display: flex;
-      }
+  nav.active {
+    display: flex;
+  }
 
-      .menu-btn {
-        display: block;
-      }
+  .menu-btn {
+    display: block;
+  }
 
-      nav a {
-        padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-      }
-    }
+  nav a {
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
 
-    .banner {
-      display: block;
-      width: 100%;
-      height: 260px;
-      background: url('banner.png') center top / contain no-repeat;
-      background-color: #ffffff;
-      border: none;
-      margin-bottom: 20px;
-    }
+/* BANNER + HERO */
+.banner {
+  display: block;
+  width: 100%;
+  height: 260px;
+  background: url('banner.png') center top / contain no-repeat;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 20px;
+}
 
-    .hero {
-      padding: 18px;
-      background: linear-gradient(180deg,#0f172a,#0b1220);
-      color: white;
-      text-align: center;
-    }
+.hero {
+  padding: 18px;
+  background: linear-gradient(180deg,#0f172a,#0b1220);
+  color: white;
+  text-align: center;
+}
 
-    #map {
-      height: 60vh;
-      min-height: 480px;
-    }
+/* MAP */
+#map {
+  height: 60vh;
+  min-height: 480px;
+}
 
-    .container {
-      padding: 18px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+/* TABLE */
+.container {
+  padding: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-      vertical-align: top;
-    }
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
 
-    th {
-      background: #f4f4f4;
-    }
+th {
+  background: #f4f4f4;
+}
 
-    .note {
-      font-size:0.95rem;
-      color:#444;
-    }
+.note {
+  font-size: 0.95rem;
+  color: #444;
+}
 
-    .popup-content {
-      max-width: 320px;
-    }
+.popup-content {
+  max-width: 320px;
+}
 
-    .controls {
-      display:flex;
-      gap:12px;
-      align-items:center;
-      margin-top:12px;
-      justify-content:flex-end;
-    }
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
 
-    .btn {
-      background:#0b74de;
-      color:white;
-      padding:8px 12px;
-      border-radius:6px;
-      border:none;
-      cursor:pointer;
-    }
+.btn {
+  background: #0b74de;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
 
-    /* FIXED FOOTER ALIGNMENT */
-    footer {
-      background: #0E3557;
-      color: #fff;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      margin-top: 50px;
-      text-align: center; /* <-- Center footer content */
-    }
+/* FOOTER - FIXED CENTER ALIGNMENT */
+footer {
+  background: #0E3557;
+  color: #fff;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+  text-align: center; /* ✅ Centers all footer text and links */
+}
 
-    footer .footer-links {
-      margin-bottom: 15px;
-    }
+footer .footer-links {
+  margin-bottom: 15px;
+}
 
-    footer a {
-      color: #E87722;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+footer a {
+  color: #E87722;
+  text-decoration: none;
+  margin: 0 10px;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
 
-    @media (max-width: 900px) {
-      .container { padding: 12px; }
-    }
-  </style>
+@media (max-width: 900px) {
+  .container {
+    padding: 12px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html">
-        <img src="images/logo.png" alt="ShowcasingOz TV Logo">
-      </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-      <nav id="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="partner.html">Partner With Us</a>
-        <a href="sponsorship.html">Sponsorship</a>
-        <a href="filming-map.html">Filming Map</a>
-        <a href="press.html">Press</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-  </script>
-
-  <!-- Banner -->
-  <section class="banner"></section>
-
-  <div class="hero">
-    <h1>ShowcasingOz TV Filming Map</h1>
-    <p>Interactive map showing each town we will visit (one marker per town). Click pins for dates and attractions. Route line connects towns in visit order.</p>
-  </div>
-
-  <!-- Map -->
-  <div id="map"></div>
-
+<!-- HEADER -->
+<header class="navbar">
   <div class="container">
-    <p class="note" id="status">Loading itinerary data and placing markers...</p>
-
-    <h2>Planned Filming Schedule (one entry per town, date order)</h2>
-    <table id="itinerary-table" aria-describedby="status">
-      <thead>
-        <tr><th>Date Range</th><th>Town</th><th>Attractions / Filming Highlights</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <p class="note" style="margin-top:8px;">Data source: <strong>Itinerary 2026</strong> sheet from your uploaded Excel file.</p>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="partner.html">Partner With Us</a> |
-      <a href="sponsorship.html">Sponsorship</a> |
-      <a href="filming-map.html">Filming Map</a> |
-      <a href="press.html">Press</a> |
+    <a href="index.html">
+      <img src="images/logo.png" alt="ShowcasingOz TV Logo">
+    </a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="partner.html">Partner With Us</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="filming-map.html">Filming Map</a>
+      <a href="press.html">Press</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
+  </div>
+</header>
 
-    <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      © 2025 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
-  </footer>
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<!-- Banner -->
+<section class="banner"></section>
 
-  <!-- Existing Map Script (unchanged) -->
-  <script>
-    // (Your existing map logic remains unchanged here)
-  </script>
+<div class="hero">
+  <h1>ShowcasingOz TV Filming Map</h1>
+  <p>Interactive map showing each town we will visit (one marker per town). Click pins for dates and attractions. Route line connects towns in visit order.</p>
+</div>
+
+<!-- Map -->
+<div id="map"></div>
+
+<div class="container">
+  <p class="note" id="status">Loading itinerary data and placing markers...</p>
+
+  <h2>Planned Filming Schedule (one entry per town, date order)</h2>
+  <table id="itinerary-table" aria-describedby="status">
+    <thead>
+      <tr><th>Date Range</th><th>Town</th><th>Attractions / Filming Highlights</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <p class="note" style="margin-top:8px;">Data source: <strong>Itinerary 2026</strong> sheet from your uploaded Excel file.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="partner.html">Partner With Us</a> |
+    <a href="sponsorship.html">Sponsorship</a> |
+    <a href="filming-map.html">Filming Map</a> |
+    <a href="press.html">Press</a> |
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
+
+<!-- Leaflet + XLSX -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<!-- Existing Map Script (unchanged) -->
+<script>
+/* your existing map JavaScript remains exactly as before */
+</script>
+
 </body>
 </html>
+
