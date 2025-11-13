@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  gtag('config', 'G-RB6N742VZW');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | ShowcasingOz TV</title>
@@ -36,23 +36,68 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- STRUCTURED DATA (LocalBusiness) -->
+  <!-- STRUCTURED DATA (Schema.org JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ShowcasingOz TV",
-    "url": "https://www.showcasingoztv.com.au",
-    "logo": "https://www.showcasingoztv.com.au/images/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/ShowcasingOzTV",
-      "https://www.instagram.com/ShowcasingOzTV"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "showcasingoztv@gmail.com",
-      "contactType": "Customer Service"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "ShowcasingOz TV",
+        "url": "https://www.showcasingoztv.com.au",
+        "logo": "https://www.showcasingoztv.com.au/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/ShowcasingOzTV",
+          "https://www.instagram.com/ShowcasingOzTV"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "showcasingoztv@gmail.com",
+          "contactType": "Customer Service",
+          "areaServed": "AU",
+          "availableLanguage": ["English"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://www.showcasingoztv.com.au",
+        "name": "ShowcasingOz TV",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.showcasingoztv.com.au/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "ContactPage",
+        "name": "Contact ShowcasingOz TV",
+        "url": "https://www.showcasingoztv.com.au/contact.html",
+        "description": "Contact page for ShowcasingOz TV, where users can send enquiries about partnerships, filming, or media opportunities.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ShowcasingOz TV"
+        },
+        "mainEntity": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "email": "showcasingoztv@gmail.com",
+          "availableLanguage": "English"
+        },
+        "potentialAction": {
+          "@type": "CommunicateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://formspree.io/f/mpwkaqyz",
+            "actionPlatform": [
+              "https://www.showcasingoztv.com.au",
+              "https://mobile.showcasingoztv.com.au"
+            ],
+            "inLanguage": "en"
+          },
+          "description": "Send a contact enquiry to ShowcasingOz TV via form."
+        }
+      }
+    ]
   }
   </script>
 
