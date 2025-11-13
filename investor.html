@@ -129,8 +129,50 @@
       text-decoration: underline;
     }
   </style>
-</head>
 
+  <!-- JSON-LD schema (WebPage + Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Investor Opportunity — ShowcasingOz TV",
+        "url": "https://showcasingoztv.com.au/investor.html",
+        "description": "Investor opportunity page for ShowcasingOz TV — details on investment use, returns, and partnership options to support the 2026 travel documentary series.",
+        "inLanguage": "en-AU",
+        "publisher": {
+          "@id": "https://showcasingoztv.com.au/#org"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://showcasingoztv.com.au/#org",
+        "name": "ShowcasingOz TV",
+        "url": "https://showcasingoztv.com.au",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://showcasingoztv.com.au/images/logo.png"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ShowcasingOzTV",
+          "https://www.instagram.com/showcasingoztv",
+          "https://www.youtube.com/@ShowcasingOzTV",
+          "https://www.tiktok.com/@showcasingoztv"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Investor Relations",
+          "email": "showcasingoztv@gmail.com",
+          "areaServed": "AU",
+          "availableLanguage": "en"
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
 <body>
   <!-- HEADER -->
   <header class="navbar">
