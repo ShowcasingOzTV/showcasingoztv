@@ -52,30 +52,7 @@
       "contactType": "Sponsorship Enquiries",
       "areaServed": "AU",
       "availableLanguage": "en"
-    },
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "name": "Bronze Sponsor",
-        "price": "500.00",
-        "priceCurrency": "AUD",
-        "description": "Logo placement on all videos and mentions in social media posts."
-      },
-      {
-        "@type": "Offer",
-        "name": "Silver Sponsor",
-        "price": "1000.00",
-        "priceCurrency": "AUD",
-        "description": "Bronze benefits plus a short feature inclusion in an episode."
-      },
-      {
-        "@type": "Offer",
-        "name": "Gold Sponsor",
-        "price": "2500.00",
-        "priceCurrency": "AUD",
-        "description": "Full feature episode highlighting your business and location."
-      }
-    ]
+    }
   }
   </script>
 
@@ -159,11 +136,11 @@
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
-      text-align: left;
+      text-align: center;
     }
 
     .content h1 { color: #0E3557; text-align: center; margin-bottom: 8px; }
-    .content p { line-height: 1.6; color: #333; }
+    .content p { line-height: 1.6; color: #333; text-align: center; }
 
     .packages {
       display: flex;
@@ -171,6 +148,7 @@
       justify-content: center;
       gap: 20px;
       margin-top: 30px;
+      text-align: center;
     }
     .package {
       border: 2px solid #0E3557;
@@ -178,7 +156,7 @@
       padding: 20px;
       width: 320px;
       background: #f9f9f9;
-      text-align: left;
+      text-align: center;
     }
     .package h2 { color: #E87722; margin: 0 0 8px 0; }
     .price { font-size: 1.25rem; font-weight: bold; color: #0E3557; margin-top: 8px; }
@@ -195,7 +173,7 @@
     .button:hover { background: #c45e15; }
 
     .prospectus-link { margin-top: 28px; text-align: center; }
-    .prospectus-link a { background: #0E3557; color: #fff; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .prospectus-link a { background: #0E3557; color: #fff; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
     .prospectus-link a:hover { background: #E87722; }
 
     /* popup form */
@@ -243,7 +221,6 @@
   </header>
 
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
     if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
@@ -261,21 +238,21 @@
     <p>Our sponsorships combine on-screen exposure, dedicated social promotion and distribution across our digital channels and broadcast partners.</p>
 
     <div class="packages" role="list">
-      <div class="package" role="listitem" aria-label="Bronze Sponsorship">
+      <div class="package" role="listitem">
         <h2>Bronze Sponsor</h2>
         <p>Logo placement on episode credits and mentions across our social posts.</p>
         <div class="price">$500</div>
         <a href="#" class="button" onclick="openForm('Bronze Sponsor')">Send Enquiry</a>
       </div>
 
-      <div class="package" role="listitem" aria-label="Silver Sponsorship">
+      <div class="package" role="listitem">
         <h2>Silver Sponsor</h2>
         <p>Bronze benefits plus a short in-episode feature and social amplification.</p>
         <div class="price">$1,000</div>
         <a href="#" class="button" onclick="openForm('Silver Sponsor')">Send Enquiry</a>
       </div>
 
-      <div class="package" role="listitem" aria-label="Gold Sponsorship">
+      <div class="package" role="listitem">
         <h2>Gold Sponsor</h2>
         <p>Full episode feature, bespoke promotion and priority scheduling during filming.</p>
         <div class="price">$2,500</div>
@@ -283,7 +260,7 @@
       </div>
     </div>
 
-    <div class="prospectus-link" aria-hidden="false">
+    <div class="prospectus-link">
       <a href="https://github.com/ShowcasingOzTV/showcasingoztv/raw/main/ShowcasingOz%20TV%20Sponsorship%20Prospectus.pdf" target="_blank" rel="noopener noreferrer">
         Download Sponsorship Prospectus
       </a>
@@ -293,10 +270,10 @@
   </section>
 
   <!-- ENQUIRY POPUP FORM -->
-  <div id="enquiry-form" aria-hidden="true">
-    <div class="form-container" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
-      <button class="close-btn" onclick="closeForm()" aria-label="Close enquiry form">&times;</button>
-      <h2 id="enquiry-title">Send Sponsorship Enquiry</h2>
+  <div id="enquiry-form">
+    <div class="form-container" role="dialog" aria-modal="true">
+      <button class="close-btn" onclick="closeForm()">&times;</button>
+      <h2>Send Sponsorship Enquiry</h2>
       <form action="mailto:showcasingoztv@gmail.com" method="post" enctype="text/plain">
         <label for="package">Sponsorship Package</label>
         <input type="text" id="package" name="package" readonly>
@@ -320,14 +297,10 @@
       const ef = document.getElementById('enquiry-form');
       document.getElementById('package').value = packageName;
       ef.classList.add('active');
-      ef.setAttribute('aria-hidden','false');
     }
     function closeForm() {
-      const ef = document.getElementById('enquiry-form');
-      ef.classList.remove('active');
-      ef.setAttribute('aria-hidden','true');
+      document.getElementById('enquiry-form').classList.remove('active');
     }
-    // close when clicking outside
     document.addEventListener('click', (e) => {
       const ef = document.getElementById('enquiry-form');
       if (!ef.classList.contains('active')) return;
@@ -337,7 +310,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-links" role="navigation" aria-label="Footer links">
+    <div class="footer-links">
       <a href="index.html">Home</a> |
       <a href="about.html">About Us</a> |
       <a href="partner.html">Partner With Us</a> |
@@ -351,4 +324,3 @@
   </footer>
 </body>
 </html>
-
