@@ -142,21 +142,37 @@
     p, li { line-height: 1.6; color: #333; }
     ul { padding-left: 20px; }
 
-    .cta {
-      text-align: center;
-      margin: 50px 0 40px;
-    }
-
-    .cta a {
-      background: #0E3557;
+    /* Orange Apply button — matches co-presenter page */
+    .apply-btn {
+      display: inline-block;
+      background: #E87722;
       color: #fff;
-      padding: 12px 24px;
+      padding: 12px 25px;
       border-radius: 8px;
       text-decoration: none;
+      margin-top: 20px;
       font-weight: 600;
+      transition: background 0.3s;
+    }
+    .apply-btn:hover { background: #c45e15; }
+
+    .apply-block {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 40px;
     }
 
-    .cta a:hover { background: #E87722; }
+    footer {
+      background: #0E3557;
+      color: #fff;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    footer a { color: #E87722; text-decoration: none; margin: 0 10px; }
+    footer a:hover { text-decoration: underline; }
 </style>
 </head>
 
@@ -250,7 +266,7 @@
 
   <h2>What We Provide</h2>
   <ul>
-    <li>Accommodation expenses covered with daily meal allowance included</li>
+    <li>Accommodation expenses covered with daily meal allowance allocatedd</li>
     <li>Filming schedule & production support</li>
     <li>Shared access to editing equipment if required</li>
     <li>National platform with a future career pathway</li>
@@ -279,30 +295,33 @@
     of something special.
   </p>
 
-  <div class="cta">
-    <a href="mailto:showcasingoztv@gmail.com">Apply Now — showcasingoztv@gmail.com</a>
+  <!-- UPDATED APPLY BLOCK -->
+  <div class="apply-block">
+    <p style="font-size:1.05rem; margin-bottom:10px;">
+      📧 <strong>Apply now:</strong> <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      Include your résumé, a short cover letter, and any samples of your work (if available).
+    </p>
+
+    <a href="contact.html" class="apply-btn">Express Interest</a>
   </div>
 
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#0E3557; color:#fff; padding:30px 0; margin-top:40px;">
-  <div style="max-width:1100px; margin:0 auto; padding:0 20px;">
-    <p>&copy; 2025 ShowcasingOz TV. All Rights Reserved.</p>
-
-    <div style="margin-top:10px;">
-      <a href="https://www.facebook.com" target="_blank" style="color:#fff; margin-right:10px;">
-        <i class="fab fa-facebook fa-lg"></i>
-      </a>
-      <a href="https://www.instagram.com" target="_blank" style="color:#fff; margin-right:10px;">
-        <i class="fab fa-instagram fa-lg"></i>
-      </a>
-      <a href="https://www.youtube.com" target="_blank" style="color:#fff;">
-        <i class="fab fa-youtube fa-lg"></i>
-      </a>
-    </div>
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="partner.html">Partner With Us</a> |
+    <a href="sponsorship.html">Sponsorship</a> |
+    <a href="filming-map.html">Filming Map</a> |
+    <a href="press.html">Press</a> |
+    <a href="contact.html">Contact</a>
   </div>
+  <p>📧 <a href="mailto:showcasingoztv@gmail.com" style="color:#fff; text-decoration:underline;">showcasingoztv@gmail.com</a><br>
+  © 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
 </footer>
 
 </body>
 </html>
+
