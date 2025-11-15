@@ -43,44 +43,56 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
   <style>
-    :root{--nav:#0E3557;--accent:#E87722;--text:#0E3557;--muted:#6b7280;--card:#fff}
+    :root{--nav:#0d3150;--accent:#E87722;--text:#0E3557;--muted:#6b7280;--card:#ffffff;--intro-bg:#fff6ef}
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0;color:var(--text);background:#fff}
-    header.navbar{background:var(--nav);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,0.08)}
-    header .container{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;}
-    header img{height:48px}
-    nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:600}
-    nav a:hover{color:var(--accent)}
+    header.navbar{background:var(--nav);color:#fff;padding:12px 0;position:sticky;top:0;z-index:1000}
+    header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between}
+    header img{height:52px}
+    nav.primary{display:flex;gap:20px;align-items:center}
+    nav.primary a{color:#fff;text-decoration:none;font-weight:600}
+    nav.primary a:hover{color:var(--accent)}
     .menu-btn{display:none}
-    @media(max-width:768px){.menu-btn{display:block;color:#fff;font-size:20px} nav{display:none;flex-direction:column;background:var(--nav);position:absolute;top:64px;right:0;width:100%} nav.active{display:flex} nav a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
+    @media(max-width:768px){.menu-btn{display:block;color:#fff} nav.primary{display:none;flex-direction:column;position:absolute;top:68px;right:0;background:var(--nav);width:100%} nav.primary.active{display:flex} nav.primary a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
 
-    .hero{background:#808386;padding:80px 20px;text-align:center;color:#fff}
-    .hero h1{font-size:36px;margin:0 0 12px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
+    .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
+    .hero h1{font-size:34px;margin:0 0 10px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
     .hero p{margin:0;opacity:0.95}
 
-    .wrap{max-width:1100px;margin:36px auto;padding:0 20px}
+    .wrap{max-width:1100px;margin:36px auto;padding:0 18px}
     h2{color:var(--nav);margin-bottom:8px;border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:6px}
     .lead{line-height:1.7;color:#333}
 
-    .service-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+    .note{font-size:0.95rem;color:var(--muted);margin-top:12px}
+
+    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.packages{grid-template-columns:1fr}}
+    .package-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06);text-align:center}
+    .package-card h4{margin:8px 0;color:var(--nav)}
+    .std-price{font-weight:800;color:var(--text);font-size:18px}
+    .intro-price{display:inline-block;background:var(--intro-bg);border-left:6px solid var(--accent);padding:8px 12px;border-radius:6px;font-weight:900;color:var(--accent);font-size:20px;margin-top:8px}
+    .price-note{font-size:13px;color:var(--muted);margin-top:8px}
+    .includes{margin-top:12px;text-align:left;font-size:14px}
+    .package-card .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    .card .btn:hover{background:#c45e15}
+
+    .wide-row{grid-column:1/-1; display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+    @media(max-width:800px){.wide-row{grid-template-columns:1fr}}
+
+    .service-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:26px}
     .service{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06)}
     .service h3{margin:0 0 8px;color:var(--nav)}
     .service .what, .service .receive{margin:6px 0;padding-left:14px}
     .service ul{margin:6px 0 0 18px}
 
-    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-    @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){.packages{grid-template-columns:1fr}}
-    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06);text-align:center}
-    .card h4{margin:6px 0;color:var(--nav)}
-    .price-intro{font-size:20px;color:var(--accent);font-weight:800}
-    .price-standard{font-size:13px;color:var(--muted);margin-top:6px}
-    .card .includes{text-align:left;margin-top:12px;font-size:14px}
-    .card .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
-    .note{font-size:0.95rem;color:var(--muted);margin-top:16px}
+    .price-block{margin-top:10px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+    .price-block .intro{font-size:22px;color:var(--accent);font-weight:900;background:var(--intro-bg);padding:6px 10px;border-left:5px solid var(--accent);border-radius:6px}
+    .price-block .std{font-size:16px;color:var(--text);opacity:0.9}
 
-    footer{background:var(--nav);color:#fff;padding:28px 20px;margin-top:36px;text-align:center}
+    footer{background:var(--nav);color:#fff;padding:26px 18px;text-align:center}
     footer a{color:var(--accent);text-decoration:none;margin:0 8px}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -90,13 +102,11 @@
     <div class="container">
       <a href="index.html"><img src="images/logo.png" alt="ShowcasingOz TV"></a>
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-      <nav id="menu">
+      <nav class="primary" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="partner.html">Partner With Us</a>
         <a href="sponsorship.html">Sponsorship</a>
-        <a href="accommodation-partners.html">Accommodation</a>
-        <a href="attraction-partners.html">Attractions</a>
         <a href="filming-map.html">Filming Map</a>
         <a href="press.html">Press</a>
         <a href="contact.html">Contact</a>
@@ -123,68 +133,98 @@
     <div class="note"><strong>Note:</strong> All prices are <strong>exclusive of GST</strong>.</div>
 
     <!-- PACKAGES -->
-    <h2 style="margin-top:28px">Season 1 — Introductory Packages</h2>
-    <div class="packages">
-      <div class="card">
+    <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
+
+    <div class="packages" aria-label="Attraction packages">
+      <!-- Bronze -->
+      <div class="package-card">
         <h4>🟫 BRONZE — Starter Visibility</h4>
-        <div class="price-intro">$345</div>
-        <div class="price-standard">Standard: $295</div>
+        <div class="intro-price">$276<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $345</div>
         <div class="includes">
           <strong>Includes:</strong>
-          <ul><li>Drone aerial package</li><li>Short social bundle</li><li>Feature spot in episode</li></ul>
+          <ul>
+            <li>Drone aerial package</li>
+            <li>Short social bundle</li>
+            <li>Feature spot in episode</li>
+          </ul>
         </div>
         <a class="btn" href="contact.html" id="attrBronzeBtn">Express Interest</a>
       </div>
 
-      <div class="card">
+      <!-- Silver -->
+      <div class="package-card">
         <h4>🟪 SILVER — Visitor Conversion</h4>
-        <div class="price-intro">$545</div>
-        <div class="price-standard">Standard: $495</div>
+        <div class="intro-price">$436<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $545</div>
         <div class="includes">
           <strong>Includes:</strong>
-          <ul><li>Feature video</li><li>Drone footage</li><li>Google profile upgrade & TV spot</li></ul>
+          <ul>
+            <li>Feature video</li>
+            <li>Drone footage</li>
+            <li>Google profile upgrade & TV spot</li>
+          </ul>
         </div>
         <a class="btn" href="contact.html" id="attrSilverBtn">Express Interest</a>
       </div>
 
-      <div class="card">
+      <!-- Gold -->
+      <div class="package-card">
         <h4>🟨 GOLD — Full Experience</h4>
-        <div class="price-intro">$845</div>
-        <div class="price-standard">Standard: $795</div>
+        <div class="intro-price">$676<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $845</div>
         <div class="includes">
           <strong>Includes:</strong>
-          <ul><li>Feature video + action reel</li><li>Visitor walkthrough</li><li>Drone & social bundle</li></ul>
+          <ul>
+            <li>Feature video + action reel</li>
+            <li>Visitor walkthrough</li>
+            <li>Drone & social bundle</li>
+          </ul>
         </div>
         <a class="btn" href="contact.html" id="attrGoldBtn">Express Interest</a>
       </div>
 
-      <div class="card" style="grid-column:span 3; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:10px;">
-        <div style="background:var(--card);padding:18px;border-radius:10px;">
+      <!-- Platinum & Diamond -->
+      <div class="wide-row" style="grid-column:1/-1;margin-top:8px">
+        <div class="package-card" style="text-align:left">
           <h4>🟦 PLATINUM — Marketing Power</h4>
-          <div class="price-intro">$1,245</div>
-          <div class="price-standard">Standard: $1,195</div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="intro-price">$996<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+            <div class="std-price" style="margin-left:auto">Standard Price: $1,245</div>
+          </div>
           <div class="includes">
             <strong>Includes:</strong>
-            <ul><li>Everything in Gold</li><li>30–60s promo ad</li><li>Drone & promo usage rights</li></ul>
+            <ul>
+              <li>Everything in Gold</li>
+              <li>30–60s promo ad</li>
+              <li>Drone & promo usage rights</li>
+            </ul>
           </div>
           <a class="btn" href="contact.html" id="attrPlatinumBtn">Express Interest</a>
         </div>
 
-        <div style="background:var(--card);padding:18px;border-radius:10px;">
+        <div class="package-card" style="text-align:left">
           <h4>💎 DIAMOND — Ultimate Tourism Partner</h4>
-          <div class="price-intro">$1,845</div>
-          <div class="price-standard">Standard: $1,795</div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="intro-price">$1,476<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+            <div class="std-price" style="margin-left:auto">Standard Price: $1,845</div>
+          </div>
           <div class="includes">
             <strong>Includes:</strong>
-            <ul><li>Everything in Platinum</li><li>Extended 2–3min feature</li><li>Extra promo reels & top placement</li></ul>
+            <ul>
+              <li>Everything in Platinum</li>
+              <li>Extended 2–3min feature</li>
+              <li>Extra promo reels & top placement</li>
+            </ul>
           </div>
           <a class="btn" href="contact.html" id="attrDiamondBtn">Express Interest</a>
         </div>
       </div>
     </div>
 
-    <!-- DETAILED SERVICES -->
-    <h2 style="margin-top:28px">Attraction Services (detailed)</h2>
+    <!-- Detailed services -->
+    <h2 style="margin-top:32px">Attraction Services — Detailed (Introductory & Standard Prices)</h2>
+
     <div class="service-list">
       <!-- T1 -->
       <div class="service">
@@ -193,7 +233,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Broadcast-quality 1–2 min feature edit, music and captions</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $650 — Standard: $1,100</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $880</div>
+          <div class="std">Standard Price: $1,100</div>
+        </div>
       </div>
 
       <!-- T2 -->
@@ -203,7 +246,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Interview edit + B-roll + short social cuts</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $550 — Standard: $899</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $719</div>
+          <div class="std">Standard Price: $899</div>
+        </div>
       </div>
 
       <!-- T3 -->
@@ -213,7 +259,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>30–60s fast-cut edit with captions/graphics</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $450 — Standard: $750</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $600</div>
+          <div class="std">Standard Price: $750</div>
+        </div>
       </div>
 
       <!-- T4 -->
@@ -223,7 +272,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Informative host or voiceover-led edit with supporting graphics</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $595 — Standard: $950</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $760</div>
+          <div class="std">Standard Price: $950</div>
+        </div>
       </div>
 
       <!-- T5 -->
@@ -233,7 +285,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Step-by-step visitor walkthrough video</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $680 — Standard: $1,150</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $920</div>
+          <div class="std">Standard Price: $1,150</div>
+        </div>
       </div>
 
       <!-- T6 -->
@@ -243,17 +298,23 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>4K drone footage + stills + edited aerial highlight</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $395 — Standard: $650</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $520</div>
+          <div class="std">Standard Price: $650</div>
+        </div>
       </div>
 
       <!-- T7 -->
       <div class="service">
         <h3>T7. Short-Form Social Media Bundle</h3>
-        <div class="what"><strong>What we do:</strong> Produce vertical reels, teasers and photo sets to keep your socials active.</div>
+        <div class="what"><strong>What we do:</strong> Produce vertical reels, teasers and photo sets to keep your channels active.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Vertical reels, teaser clips and caption suggestions</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $320 — Standard: $450</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $360</div>
+          <div class="std">Standard Price: $450</div>
+        </div>
       </div>
 
       <!-- T8 -->
@@ -263,7 +324,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>New photos & videos + category & description optimisations</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $275 — Standard: $399</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $319</div>
+          <div class="std">Standard Price: $399</div>
+        </div>
       </div>
 
       <!-- T9 -->
@@ -273,7 +337,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Landing page copy + promo video + CTAs</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $299 — Standard: $450</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $360</div>
+          <div class="std">Standard Price: $450</div>
+        </div>
       </div>
 
       <!-- T10 -->
@@ -283,50 +350,55 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Feature within episode + social & website promotion</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $295 — Standard: $550</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $440</div>
+          <div class="std">Standard Price: $550</div>
+        </div>
       </div>
     </div>
 
     <!-- CTA -->
-    <div style="text-align:center;margin:32px 0;">
-      <p style="font-weight:700">Introductory slots are limited in each region. Secure your season 1 feature now.</p>
-      <a href="contact.html" class="btn" id="attrContact">Express Your Interest</a>
+    <div style="text-align:center;margin:28px 0">
+      <p style="font-weight:700">Introductory slots limited per region — book now to secure Season 1 pricing.</p>
+      <a href="contact.html" class="btn" id="attrContact" style="background:var(--accent);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700">Express Your Interest</a>
     </div>
+
+    <!-- Pricing clause -->
+    <p style="font-size:0.95rem;color:var(--muted);text-align:center;margin-top:12px;">
+      <strong>Note:</strong> The Introductory prices are strictly valid until the <strong>22nd of December, 2026</strong> and will revert to Standard prices thereafter. All services and packages must be booked prior to the 22nd of December, 2026 to receive Introductory pricing.
+    </p>
 
   </main>
 
   <footer>
-    <div style="max-width:1100px;margin:0 auto;padding:0 20px;">
-      <div style="margin-bottom:10px;">
+    <div style="max-width:1100px;margin:0 auto;padding:10px 18px;">
+      <div style="margin-bottom:8px;">
         <a href="index.html">Home</a> |
         <a href="about.html">About Us</a> |
         <a href="partner.html">Partner With Us</a> |
         <a href="sponsorship.html">Sponsorship</a> |
-        <a href="accommodation-partners.html">Accommodation</a> |
-        <a href="attraction-partners.html">Attractions</a> |
         <a href="filming-map.html">Filming Map</a> |
         <a href="press.html">Press</a> |
         <a href="contact.html">Contact</a>
       </div>
-      <p>All prices are <strong>exclusive of GST</strong>. &nbsp; 📧 <a href="mailto:showcasingoztv@gmail.com" style="color:#fff;text-decoration:underline;">showcasingoztv@gmail.com</a> · © 2025 ShowcasingOz TV</p>
+      <div style="color:#fff;opacity:0.95">All prices are <strong>exclusive of GST</strong>. &nbsp; 📧 <a href="mailto:showcasingoztv@gmail.com" style="color:#fff;text-decoration:underline;">showcasingoztv@gmail.com</a> · © 2025 ShowcasingOz TV · Discover. Capture. Share.</div>
     </div>
   </footer>
 
   <script>
     // CTA tracking (Attractions)
-    const track = (eventLabel) => {
-      if (typeof gtag === 'function') {
-        gtag('event','express_interest_click',{event_category:'Engagement', event_label:eventLabel});
-      }
-    };
-    document.getElementById('attrBronzeBtn').addEventListener('click', ()=> track('Attr_Bronze'));
-    document.getElementById('attrSilverBtn').addEventListener('click', ()=> track('Attr_Silver'));
-    document.getElementById('attrGoldBtn').addEventListener('click', ()=> track('Attr_Gold'));
-    document.getElementById('attrPlatinumBtn').addEventListener('click', ()=> track('Attr_Platinum'));
-    document.getElementById('attrDiamondBtn').addEventListener('click', ()=> track('Attr_Diamond'));
-    document.getElementById('attrContact').addEventListener('click', ()=> track('Attr_Contact'));
+    function trackA(label){
+      if(typeof gtag === 'function') gtag('event','express_interest_click',{event_category:'Engagement', event_label:label});
+    }
+    document.getElementById('attrBronzeBtn').addEventListener('click', ()=> trackA('Attr_Bronze'));
+    document.getElementById('attrSilverBtn').addEventListener('click', ()=> trackA('Attr_Silver'));
+    document.getElementById('attrGoldBtn').addEventListener('click', ()=> trackA('Attr_Gold'));
+    document.getElementById('attrPlatinumBtn').addEventListener('click', ()=> trackA('Attr_Platinum'));
+    document.getElementById('attrDiamondBtn').addEventListener('click', ()=> trackA('Attr_Diamond'));
+    document.getElementById('attrContact').addEventListener('click', ()=> trackA('Attr_Contact'));
   </script>
 
 </body>
 </html>
+
 
