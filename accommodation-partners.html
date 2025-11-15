@@ -41,73 +41,91 @@
   }
   </script>
 
-  <!-- Styles (keeps layout consistent with your site / sponsorship hero) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     :root{
-      --nav:#0E3557; --accent:#E87722; --text:#0E3557; --muted:#6b7280; --card:#fff;
+      --nav:#0d3150; /* using your home header colour */
+      --accent:#E87722;
+      --text:#0E3557;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --intro-bg: #fff6ef;
     }
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
-    header.navbar{background:var(--nav); color:#fff; position:sticky; top:0; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.08);}
-    header .container{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;}
-    header img{height:48px;}
-    nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:600}
-    nav a:hover{color:var(--accent)}
+    /* Header (matches home page layout) */
+    header.navbar{background:var(--nav); color:#fff; padding:12px 0; position:sticky; top:0; z-index:1000;}
+    header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;}
+    header img{height:52px;}
+    nav.primary{display:flex;gap:20px;align-items:center}
+    nav.primary a{color:#fff;text-decoration:none;font-weight:600}
+    nav.primary a:hover{color:var(--accent)}
     .menu-btn{display:none}
-    @media(max-width:768px){.menu-btn{display:block;color:#fff;font-size:20px} nav{display:none;flex-direction:column;background:var(--nav);position:absolute;top:64px;right:0;width:100%} nav.active{display:flex} nav a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
+    @media(max-width:768px){.menu-btn{display:block;color:#fff} nav.primary{display:none;flex-direction:column;position:absolute;top:68px;right:0;background:var(--nav);width:100%;} nav.primary.active{display:flex} nav.primary a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
 
-    /* HERO similar to Sponsorship screenshot */
-    .hero{background:#808386;padding:80px 20px;text-align:center;color:#fff}
-    .hero h1{font-size:36px;margin:0 0 12px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
+    /* Hero styled like Sponsorship page */
+    .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
+    .hero h1{font-size:34px;margin:0 0 10px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
     .hero p{margin:0;opacity:0.95}
 
-    /* main layout */
-    .wrap{max-width:1100px;margin:36px auto;padding:0 20px}
-    h2{color:var(--nav);margin-bottom:8px;border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:6px}
-    p.lead{color:#333;line-height:1.7}
+    /* Page wrap */
+    .wrap{max-width:1100px;margin:34px auto;padding:0 18px}
+    h2{color:var(--nav); margin:0 0 12px; border-bottom:3px solid var(--accent); display:inline-block; padding-bottom:6px}
+    p.lead{color:#333;line-height:1.7;margin-top:6px}
 
-    /* services */
-    .service-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
-    .service{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06)}
-    .service h3{margin:0 0 8px;color:var(--nav)}
-    .service .what, .service .receive{margin:6px 0;padding-left:14px}
-    .service ul{margin:6px 0 0 18px}
+    .note{font-size:0.95rem;color:var(--muted);margin-top:12px}
 
-    /* packages: 3 across */
+    /* Packages 3-across */
     .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
     @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.packages{grid-template-columns:1fr}}
-    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06);text-align:center}
-    .card h4{margin:6px 0;color:var(--nav)}
-    .price-intro{font-size:20px;color:var(--accent);font-weight:800}
-    .price-standard{font-size:13px;color:var(--muted);margin-top:6px}
+    .package-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06);text-align:center}
+    .package-card h4{margin:8px 0;color:var(--nav)}
+    .std-price{font-weight:800;color:var(--text);font-size:18px} /* standard (former orange) */
+    .intro-price{display:inline-block;background:var(--intro-bg);border-left:6px solid var(--accent);padding:8px 12px;border-radius:6px;font-weight:900;color:var(--accent);font-size:20px;margin-top:8px}
+    .price-note{font-size:13px;color:var(--muted);margin-top:8px}
+    .includes{margin-top:12px;text-align:left;font-size:14px}
+    .package-card .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    .package-card .btn:hover{background:#c45e15}
 
-    .card .includes{text-align:left;margin-top:12px;font-size:14px}
-    .card .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
-    .card .btn:hover{background:#c45e15}
+    /* second-row twin cards */
+    .wide-row{grid-column:1/-1; display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+    @media(max-width:800px){.wide-row{grid-template-columns:1fr}}
 
-    .note{font-size:0.95rem;color:var(--muted);margin-top:16px}
+    /* Services list */
+    .service-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:26px}
+    .service{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06)}
+    .service h3{margin:0 0 8px;color:var(--nav)}
+    .service .what,.service .receive{margin:6px 0;padding-left:14px}
+    .service ul{margin:6px 0 0 18px}
 
-    footer{background:var(--nav);color:#fff;padding:28px 20px;margin-top:36px;text-align:center}
-    footer a{color:var(--accent);text-decoration:none;margin:0 8px}
+    .price-block{margin-top:10px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+    .price-block .intro{font-size:22px;color:var(--accent);font-weight:900;background:var(--intro-bg);padding:6px 10px;border-left:5px solid var(--accent);border-radius:6px}
+    .price-block .std{font-size:16px;color:var(--text);opacity:0.9}
+
+    /* CTA */
+    .cta{text-align:center;margin:28px 0}
+    .cta .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:800}
+
+    footer{background:var(--nav); color:#fff; padding:26px 18px; text-align:center}
+    footer .links{margin-bottom:8px}
+    footer a{color:var(--accent); text-decoration:none; margin:0 8px}
     footer a:hover{text-decoration:underline}
+    .legal{color:#fff;opacity:0.9;margin-top:8px}
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (Home page style: logo left, nav right) -->
   <header class="navbar">
     <div class="container">
       <a href="index.html"><img src="images/logo.png" alt="ShowcasingOz TV"></a>
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-      <nav id="menu">
+      <nav class="primary" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="partner.html">Partner With Us</a>
         <a href="sponsorship.html">Sponsorship</a>
-        <a href="accommodation-partners.html">Accommodation</a>
-        <a href="attraction-partners.html">Attractions</a>
         <a href="filming-map.html">Filming Map</a>
         <a href="press.html">Press</a>
         <a href="contact.html">Contact</a>
@@ -124,23 +142,25 @@
   <!-- HERO -->
   <section class="hero">
     <h1>Partner with ShowcasingOz TV — Accommodation Owners</h1>
-    <p>Feature your property on our national travel series and get professional filmed content, photos and social assets that drive bookings.</p>
+    <p>Feature your property on our national travel series and receive broadcast-ready video, photography and social assets that drive bookings.</p>
   </section>
 
-  <!-- MAIN -->
   <main class="wrap">
     <h2>What partnering looks like</h2>
-    <p class="lead">We work with motels, caravan parks, resorts, holiday parks, B&Bs, boutique stays and farm stays. Our production team films authentic storytelling segments and delivers assets you can use immediately across websites, booking platforms and social channels.</p>
+    <p class="lead">We work with motels, caravan parks, resorts, holiday parks, B&Bs and boutique stays. Our production team films authentic storytelling segments and delivers assets you can use immediately across websites, booking platforms and social channels.</p>
 
-    <div class="note"><strong>Note:</strong> All prices are exclusive of GST.</div>
+    <div class="note"><strong>Note:</strong> All prices are <strong>exclusive of GST</strong>.</div>
 
-    <!-- PACKAGES (3 across) -->
-    <h2 style="margin-top:28px">Season 1 — Introductory Packages</h2>
-    <div class="packages">
-      <div class="card">
+    <!-- PACKAGES -->
+    <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
+
+    <div class="packages" aria-label="Accommodation packages">
+      <!-- Standard prices (previously orange) become Standard; intro = 20% less and highlighted -->
+      <!-- Bronze -->
+      <div class="package-card">
         <h4>🟫 BRONZE — Essential Visibility</h4>
-        <div class="price-intro">$400</div>
-        <div class="price-standard">Standard: $350</div>
+        <div class="intro-price">$320<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $400</div>
         <div class="includes">
           <strong>Includes:</strong>
           <ul>
@@ -152,26 +172,28 @@
         <a class="btn" href="contact.html" id="accomBronzeBtn">Express Interest</a>
       </div>
 
-      <div class="card">
+      <!-- Silver -->
+      <div class="package-card">
         <h4>🟪 SILVER — Guest Conversion</h4>
-        <div class="price-intro">$700</div>
-        <div class="price-standard">Standard: $650</div>
+        <div class="intro-price">$560<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $700</div>
         <div class="includes">
           <strong>Includes:</strong>
           <ul>
             <li>Full accommodation walkthrough video</li>
             <li>Professional photography</li>
             <li>Booking booster (copy + short video)</li>
-            <li>Google profile upgrade & TV spot</li>
+            <li>Google profile upgrade & TV feature</li>
           </ul>
         </div>
         <a class="btn" href="contact.html" id="accomSilverBtn">Express Interest</a>
       </div>
 
-      <div class="card">
+      <!-- Gold -->
+      <div class="package-card">
         <h4>🟨 GOLD — Full Property Marketing</h4>
-        <div class="price-intro">$1,045</div>
-        <div class="price-standard">Standard: $995</div>
+        <div class="intro-price">$836<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $1,045</div>
         <div class="includes">
           <strong>Includes:</strong>
           <ul>
@@ -183,12 +205,14 @@
         <a class="btn" href="contact.html" id="accomGoldBtn">Express Interest</a>
       </div>
 
-      <!-- second row: platinum and diamond centered -->
-      <div class="card" style="grid-column:span 3; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:10px;">
-        <div style="background:var(--card);padding:18px;border-radius:10px;">
+      <!-- Platinum & Diamond (wide row) -->
+      <div class="wide-row" style="grid-column:1/-1;margin-top:8px">
+        <div class="package-card" style="text-align:left">
           <h4>🟦 PLATINUM — Social & Video Master</h4>
-          <div class="price-intro">$1,445</div>
-          <div class="price-standard">Standard: $1,395</div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="intro-price">$1,156<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+            <div class="std-price" style="margin-left:auto">Standard Price: $1,445</div>
+          </div>
           <div class="includes">
             <strong>Includes:</strong>
             <ul>
@@ -200,10 +224,12 @@
           <a class="btn" href="contact.html" id="accomPlatinumBtn">Express Interest</a>
         </div>
 
-        <div style="background:var(--card);padding:18px;border-radius:10px;">
+        <div class="package-card" style="text-align:left">
           <h4>💎 DIAMOND — Signature Brand</h4>
-          <div class="price-intro">$2,045</div>
-          <div class="price-standard">Standard: $1,995</div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="intro-price">$1,636<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+            <div class="std-price" style="margin-left:auto">Standard Price: $2,045</div>
+          </div>
           <div class="includes">
             <strong>Includes:</strong>
             <ul>
@@ -217,21 +243,21 @@
       </div>
     </div>
 
-    <!-- DETAILED SERVICES -->
-    <h2 style="margin-top:28px">Accommodation Services (detailed)</h2>
+    <!-- Detailed services -->
+    <h2 style="margin-top:32px">Accommodation Services — Detailed (Introductory & Standard Prices)</h2>
+
     <div class="service-list">
       <!-- A1 -->
       <div class="service">
         <h3>A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
         <div class="what"><strong>What we do:</strong> Film a polished room-by-room tour (exterior, reception, rooms, facilities), steady walkthroughs, optional host segments, music bed and captions.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul>
-            <li>Broadcast-quality 1–2 min walkthrough</li>
-            <li>Optional host narration</li>
-            <li>Edit with branding & captions</li>
-          </ul>
+          <ul><li>Broadcast-quality 1–2 min walkthrough</li><li>Optional host narration</li><li>Edit with branding & captions</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $499 — Standard: $799</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $639</div>
+          <div class="std">Standard Price: $799</div>
+        </div>
       </div>
 
       <!-- A2 -->
@@ -239,25 +265,25 @@
         <h3>A2. Room Showcase Short Clips (15–30s per room)</h3>
         <div class="what"><strong>What we do:</strong> Shoot cinematic clips for each room type, optimised for vertical and horizontal formats.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul>
-            <li>15–30s clips for each room type (vertical + horiz)</li>
-            <li>Optimised for OTAs & Reels/TikTok</li>
-          </ul>
+          <ul><li>15–30s clips for each room type (vertical + horiz)</li><li>Optimised for OTAs & Reels/TikTok</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $120/room (bulk 4+ → $350) — Standard: $199/room</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $159 per room</div>
+          <div class="std">Standard Price: $199 per room (bulk 4+ rooms → $350)</div>
+        </div>
       </div>
 
       <!-- A3 -->
       <div class="service">
         <h3>A3. Drone Exterior Video + Photography</h3>
-        <div class="what"><strong>What we do:</strong> Licensed drone capture of property, grounds and points of interest (subject to CASA and local approvals).</div>
+        <div class="what"><strong>What we do:</strong> Licensed drone capture of property, grounds and points of interest (subject to CASA/local approvals).</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul>
-            <li>4K aerial footage & drone stills</li>
-            <li>Edited aerial highlight reel</li>
-          </ul>
+          <ul><li>4K aerial footage & drone stills</li><li>Edited aerial highlight reel</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $395 — Standard: $650</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $520</div>
+          <div class="std">Standard Price: $650</div>
+        </div>
       </div>
 
       <!-- A4 -->
@@ -265,12 +291,12 @@
         <h3>A4. Guest Experience Highlight Video</h3>
         <div class="what"><strong>What we do:</strong> Lifestyle-style edit showing guest arrival, amenities and evening ambience to create an emotional connection.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul>
-            <li>Warm, emotive 60–90s video</li>
-            <li>Suitable for website and socials</li>
-          </ul>
+          <ul><li>Warm, emotive 60–90s video</li><li>Suitable for website and socials</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $550 — Standard: $899</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $719</div>
+          <div class="std">Standard Price: $899</div>
+        </div>
       </div>
 
       <!-- A5 -->
@@ -280,7 +306,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Short ad-ready video + optional voiceover</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $295 — Standard: $450</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $360</div>
+          <div class="std">Standard Price: $450</div>
+        </div>
       </div>
 
       <!-- A6 -->
@@ -290,7 +319,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>High-resolution edited photos in web & print sizes</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $350 — Standard: $550</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $440</div>
+          <div class="std">Standard Price: $550</div>
+        </div>
       </div>
 
       <!-- A7 -->
@@ -300,7 +332,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Short welcome edit with light branding</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $250 — Standard: $399</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $319</div>
+          <div class="std">Standard Price: $399</div>
+        </div>
       </div>
 
       <!-- A8 -->
@@ -310,7 +345,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Photos & video added to Google listing, description updates & optimisation</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $275 — Standard: $399</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $319</div>
+          <div class="std">Standard Price: $399</div>
+        </div>
       </div>
 
       <!-- A9 -->
@@ -320,7 +358,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>10–20 ready-to-post assets + captions</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $320 — Standard: $450</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $360</div>
+          <div class="std">Standard Price: $450</div>
+        </div>
       </div>
 
       <!-- A10 -->
@@ -330,7 +371,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Promo video + rewritten headlines and CTAs for your website</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $129 — Standard: $199</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $159</div>
+          <div class="std">Standard Price: $199</div>
+        </div>
       </div>
 
       <!-- A11 -->
@@ -340,7 +384,10 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>8–12 posts per month, captions, scheduling and basic analytics</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $199/month — Standard: $299/month</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $239 / month</div>
+          <div class="std">Standard Price: $299 / month</div>
+        </div>
       </div>
 
       <!-- A12 -->
@@ -350,50 +397,54 @@
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>On-screen feature, host segment and social promotion</li></ul>
         </div>
-        <div class="price-standard">Season 1 Intro: $199 — Standard: $350</div>
+        <div class="price-block">
+          <div class="intro">Introductory Price: $280</div>
+          <div class="std">Standard Price: $350</div>
+        </div>
       </div>
-
-    </div> <!-- end services -->
+    </div>
 
     <!-- CTA -->
-    <div style="text-align:center;margin:32px 0;">
-      <p style="font-weight:700">Limited Season 1 slots available across regions — secure your filming window today.</p>
-      <a href="contact.html" class="btn" id="accomContact">Express Your Interest</a>
+    <div class="cta">
+      <p style="font-weight:700">Limited Season 1 slots available — secure your filming window today.</p>
+      <a href="contact.html" class="cta-btn" id="accomContact">Express Your Interest</a>
     </div>
+
+    <!-- Pricing clause -->
+    <p style="font-size:0.95rem;color:var(--muted);text-align:center;margin-top:18px;">
+      <strong>Note:</strong> The Introductory prices are strictly valid until the <strong>22nd of December, 2026</strong> and will revert to Standard prices thereafter. All services and packages must be booked prior to the 22nd of December, 2026 to receive Introductory pricing.
+    </p>
 
   </main>
 
   <footer>
-    <div style="max-width:1100px;margin:0 auto;padding:0 20px;">
-      <div style="margin-bottom:10px;">
+    <div style="max-width:1100px;margin:0 auto;padding:10px 18px;">
+      <div class="links" style="margin-bottom:8px;">
         <a href="index.html">Home</a> |
         <a href="about.html">About Us</a> |
         <a href="partner.html">Partner With Us</a> |
         <a href="sponsorship.html">Sponsorship</a> |
-        <a href="accommodation-partners.html">Accommodation</a> |
-        <a href="attraction-partners.html">Attractions</a> |
         <a href="filming-map.html">Filming Map</a> |
         <a href="press.html">Press</a> |
         <a href="contact.html">Contact</a>
       </div>
-      <p>All prices are <strong>exclusive of GST</strong>. &nbsp; 📧 <a href="mailto:showcasingoztv@gmail.com" style="color:#fff;text-decoration:underline;">showcasingoztv@gmail.com</a> · © 2025 ShowcasingOz TV</p>
+      <div class="legal">📧 <a href="mailto:showcasingoztv@gmail.com" style="color:#fff;text-decoration:underline;">showcasingoztv@gmail.com</a> · © 2025 ShowcasingOz TV · Discover. Capture. Share.</div>
     </div>
   </footer>
 
   <script>
     // CTA tracking (Accommodations)
-    const track = (eventLabel) => {
-      if (typeof gtag === 'function') {
-        gtag('event','express_interest_click',{event_category:'Engagement', event_label:eventLabel});
-      }
-    };
-    document.getElementById('accomBronzeBtn').addEventListener('click', () => track('Accom_Bronze'));
-    document.getElementById('accomSilverBtn').addEventListener('click', () => track('Accom_Silver'));
-    document.getElementById('accomGoldBtn').addEventListener('click', () => track('Accom_Gold'));
-    document.getElementById('accomPlatinumBtn').addEventListener('click', () => track('Accom_Platinum'));
-    document.getElementById('accomDiamondBtn').addEventListener('click', () => track('Accom_Diamond'));
-    document.getElementById('accomContact').addEventListener('click', () => track('Accom_Contact'));
+    function track(label){
+      if(typeof gtag === 'function') gtag('event','express_interest_click',{event_category:'Engagement', event_label:label});
+    }
+    document.getElementById('accomBronzeBtn').addEventListener('click',()=>track('Accom_Bronze'));
+    document.getElementById('accomSilverBtn').addEventListener('click',()=>track('Accom_Silver'));
+    document.getElementById('accomGoldBtn').addEventListener('click',()=>track('Accom_Gold'));
+    document.getElementById('accomPlatinumBtn').addEventListener('click',()=>track('Accom_Platinum'));
+    document.getElementById('accomDiamondBtn').addEventListener('click',()=>track('Accom_Diamond'));
+    document.getElementById('accomContact').addEventListener('click',()=>track('Accom_Contact'));
   </script>
 
 </body>
 </html>
+
