@@ -41,19 +41,20 @@
   }
   </script>
 
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
   <style>
     :root{
-      --nav:#0d3150; /* using your home header colour */
+      --nav:#0d3150;
       --accent:#E87722;
       --text:#0E3557;
       --muted:#6b7280;
       --card:#ffffff;
-      --intro-bg: #fff6ef;
+      --intro-bg:#fff6ef;
     }
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
-    /* Header (matches home page layout) */
     header.navbar{background:var(--nav); color:#fff; padding:12px 0; position:sticky; top:0; z-index:1000;}
     header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;}
     header img{height:52px;}
@@ -61,41 +62,37 @@
     nav.primary a{color:#fff;text-decoration:none;font-weight:600}
     nav.primary a:hover{color:var(--accent)}
     .menu-btn{display:none}
-    @media(max-width:768px){.menu-btn{display:block;color:#fff} nav.primary{display:none;flex-direction:column;position:absolute;top:68px;right:0;background:var(--nav);width:100%;} nav.primary.active{display:flex} nav.primary a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
+    @media(max-width:768px){.menu-btn{display:block;color:#fff} nav.primary{display:none;flex-direction:column;position:absolute;top:68px;right:0;background:var(--nav);width:100%} nav.primary.active{display:flex} nav.primary a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
 
-    /* Hero styled like Sponsorship page */
     .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
     .hero h1{font-size:34px;margin:0 0 10px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
     .hero p{margin:0;opacity:0.95}
 
-    /* Page wrap */
     .wrap{max-width:1100px;margin:34px auto;padding:0 18px}
     h2{color:var(--nav); margin:0 0 12px; border-bottom:3px solid var(--accent); display:inline-block; padding-bottom:6px}
     p.lead{color:#333;line-height:1.7;margin-top:6px}
 
     .note{font-size:0.95rem;color:var(--muted);margin-top:12px}
 
-    /* Packages 3-across */
     .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
     @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.packages{grid-template-columns:1fr}}
     .package-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06);text-align:center}
     .package-card h4{margin:8px 0;color:var(--nav)}
-    .std-price{font-weight:800;color:var(--text);font-size:18px} /* standard (former orange) */
+    .std-price{font-weight:800;color:var(--text);font-size:18px}
     .intro-price{display:inline-block;background:var(--intro-bg);border-left:6px solid var(--accent);padding:8px 12px;border-radius:6px;font-weight:900;color:var(--accent);font-size:20px;margin-top:8px}
     .price-note{font-size:13px;color:var(--muted);margin-top:8px}
     .includes{margin-top:12px;text-align:left;font-size:14px}
     .package-card .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
     .package-card .btn:hover{background:#c45e15}
 
-    /* second-row twin cards */
     .wide-row{grid-column:1/-1; display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
     @media(max-width:800px){.wide-row{grid-template-columns:1fr}}
 
-    /* Services list */
     .service-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:26px}
     .service{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06)}
-    .service h3{margin:0 0 8px;color:var(--nav)}
+    .service h3{margin:0 0 8px;color:var(--nav);display:flex;align-items:center;gap:10px;font-size:1.1rem}
+    .service h3 i{color:var(--accent);font-size:1.05em}
     .service .what,.service .receive{margin:6px 0;padding-left:14px}
     .service ul{margin:6px 0 0 18px}
 
@@ -103,7 +100,6 @@
     .price-block .intro{font-size:22px;color:var(--accent);font-weight:900;background:var(--intro-bg);padding:6px 10px;border-left:5px solid var(--accent);border-radius:6px}
     .price-block .std{font-size:16px;color:var(--text);opacity:0.9}
 
-    /* CTA */
     .cta{text-align:center;margin:28px 0}
     .cta .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:800}
 
@@ -116,7 +112,7 @@
 </head>
 <body>
 
-  <!-- HEADER (Home page style: logo left, nav right) -->
+  <!-- HEADER (Home page style: logo left, nav right - removed Accommodation & Attractions links) -->
   <header class="navbar">
     <div class="container">
       <a href="index.html"><img src="images/logo.png" alt="ShowcasingOz TV"></a>
@@ -155,7 +151,6 @@
     <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
 
     <div class="packages" aria-label="Accommodation packages">
-      <!-- Standard prices (previously orange) become Standard; intro = 20% less and highlighted -->
       <!-- Bronze -->
       <div class="package-card">
         <h4>🟫 BRONZE — Essential Visibility</h4>
@@ -169,7 +164,10 @@
             <li>Inclusion in a ShowcasingOz TV episode</li>
           </ul>
         </div>
-        <a class="btn" href="contact.html" id="accomBronzeBtn">Express Interest</a>
+        <a class="btn" id="accomBronzeBtn"
+           href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Bronze&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Bronze%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+          Express Interest
+        </a>
       </div>
 
       <!-- Silver -->
@@ -186,7 +184,10 @@
             <li>Google profile upgrade & TV feature</li>
           </ul>
         </div>
-        <a class="btn" href="contact.html" id="accomSilverBtn">Express Interest</a>
+        <a class="btn" id="accomSilverBtn"
+           href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Silver&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Silver%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+          Express Interest
+        </a>
       </div>
 
       <!-- Gold -->
@@ -202,7 +203,10 @@
             <li>Professional photography</li>
           </ul>
         </div>
-        <a class="btn" href="contact.html" id="accomGoldBtn">Express Interest</a>
+        <a class="btn" id="accomGoldBtn"
+           href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Gold&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Gold%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+          Express Interest
+        </a>
       </div>
 
       <!-- Platinum & Diamond (wide row) -->
@@ -221,7 +225,10 @@
               <li>Promotional/seasonal video + owner intro</li>
             </ul>
           </div>
-          <a class="btn" href="contact.html" id="accomPlatinumBtn">Express Interest</a>
+          <a class="btn" id="accomPlatinumBtn"
+             href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Platinum&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Platinum%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+            Express Interest
+          </a>
         </div>
 
         <div class="package-card" style="text-align:left">
@@ -238,7 +245,10 @@
               <li>2 additional promotional videos + 12-month retainer discount</li>
             </ul>
           </div>
-          <a class="btn" href="contact.html" id="accomDiamondBtn">Express Interest</a>
+          <a class="btn" id="accomDiamondBtn"
+             href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Diamond&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Diamond%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+            Express Interest
+          </a>
         </div>
       </div>
     </div>
@@ -249,7 +259,7 @@
     <div class="service-list">
       <!-- A1 -->
       <div class="service">
-        <h3>A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
+        <h3><i class="fa fa-film" aria-hidden="true"></i> A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
         <div class="what"><strong>What we do:</strong> Film a polished room-by-room tour (exterior, reception, rooms, facilities), steady walkthroughs, optional host segments, music bed and captions.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Broadcast-quality 1–2 min walkthrough</li><li>Optional host narration</li><li>Edit with branding & captions</li></ul>
@@ -262,20 +272,20 @@
 
       <!-- A2 -->
       <div class="service">
-        <h3>A2. Room Showcase Short Clips (15–30s per room)</h3>
+        <h3><i class="fa fa-mobile-screen-button" aria-hidden="true"></i> A2. Room Showcase Short Clips (15–30s per room)</h3>
         <div class="what"><strong>What we do:</strong> Shoot cinematic clips for each room type, optimised for vertical and horizontal formats.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>15–30s clips for each room type (vertical + horiz)</li><li>Optimised for OTAs & Reels/TikTok</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $159 per room</div>
-          <div class="std">Standard Price: $199 per room (bulk 4+ rooms → $350)</div>
+          <div class="std">Standard Price: $199 per room (bulk 4+ → $350)</div>
         </div>
       </div>
 
       <!-- A3 -->
       <div class="service">
-        <h3>A3. Drone Exterior Video + Photography</h3>
+        <h3><i class="fa fa-camera" aria-hidden="true"></i> A3. Drone Exterior Video + Photography</h3>
         <div class="what"><strong>What we do:</strong> Licensed drone capture of property, grounds and points of interest (subject to CASA/local approvals).</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>4K aerial footage & drone stills</li><li>Edited aerial highlight reel</li></ul>
@@ -288,7 +298,7 @@
 
       <!-- A4 -->
       <div class="service">
-        <h3>A4. Guest Experience Highlight Video</h3>
+        <h3><i class="fa fa-microphone" aria-hidden="true"></i> A4. Guest Experience Highlight Video</h3>
         <div class="what"><strong>What we do:</strong> Lifestyle-style edit showing guest arrival, amenities and evening ambience to create an emotional connection.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Warm, emotive 60–90s video</li><li>Suitable for website and socials</li></ul>
@@ -301,7 +311,7 @@
 
       <!-- A5 -->
       <div class="service">
-        <h3>A5. Seasonal or Promotional Video</h3>
+        <h3><i class="fa fa-hotel" aria-hidden="true"></i> A5. Seasonal or Promotional Video</h3>
         <div class="what"><strong>What we do:</strong> Produce campaign-ready short ads for mid-week deals, holiday specials or paid campaigns.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Short ad-ready video + optional voiceover</li></ul>
@@ -314,7 +324,7 @@
 
       <!-- A6 -->
       <div class="service">
-        <h3>A6. Professional Photography Package</h3>
+        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> A6. Professional Photography Package</h3>
         <div class="what"><strong>What we do:</strong> Capture bright, composed stills of rooms, facilities and social spaces, optimised for OTAs and websites.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>High-resolution edited photos in web & print sizes</li></ul>
@@ -327,7 +337,7 @@
 
       <!-- A7 -->
       <div class="service">
-        <h3>A7. Staff or Owner Introduction Video</h3>
+        <h3><i class="fa fa-user" aria-hidden="true"></i> A7. Staff or Owner Introduction Video</h3>
         <div class="what"><strong>What we do:</strong> Short interview/welcome message featuring owners or staff to humanise your brand.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Short welcome edit with light branding</li></ul>
@@ -340,7 +350,7 @@
 
       <!-- A8 -->
       <div class="service">
-        <h3>A8. Google Business Profile Enhancement</h3>
+        <h3><i class="fa fa-map-marker-alt" aria-hidden="true"></i> A8. Google Business Profile Enhancement</h3>
         <div class="what"><strong>What we do:</strong> Update listing with fresh media, optimise categories and provide review response guidance.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Photos & video added to Google listing, description updates & optimisation</li></ul>
@@ -353,7 +363,7 @@
 
       <!-- A9 -->
       <div class="service">
-        <h3>A9. Social Media Content Bundle (10–20 assets)</h3>
+        <h3><i class="fa fa-share-alt" aria-hidden="true"></i> A9. Social Media Content Bundle (10–20 assets)</h3>
         <div class="what"><strong>What we do:</strong> Create vertical clips and photo sets from filmed footage, with caption suggestions and posting schedule.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>10–20 ready-to-post assets + captions</li></ul>
@@ -366,7 +376,7 @@
 
       <!-- A10 -->
       <div class="service">
-        <h3>A10. Booking Booster Add-On (Copywriting + Video)</h3>
+        <h3><i class="fa fa-edit" aria-hidden="true"></i> A10. Booking Booster Add-On (Copywriting + Video)</h3>
         <div class="what"><strong>What we do:</strong> Combine a short promo video with conversion-led copy to increase direct bookings.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Promo video + rewritten headlines and CTAs for your website</li></ul>
@@ -379,7 +389,7 @@
 
       <!-- A11 -->
       <div class="service">
-        <h3>A11. Monthly Social Media + Marketing Support Retainer</h3>
+        <h3><i class="fa fa-calendar-alt" aria-hidden="true"></i> A11. Monthly Social Media + Marketing Support Retainer</h3>
         <div class="what"><strong>What we do:</strong> Ongoing posting, captions, small edits and analytics using previously filmed footage.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>8–12 posts per month, captions, scheduling and basic analytics</li></ul>
@@ -392,7 +402,7 @@
 
       <!-- A12 -->
       <div class="service">
-        <h3>A12. Inclusion in the ShowcasingOz TV Series</h3>
+        <h3><i class="fa fa-tv" aria-hidden="true"></i> A12. Inclusion in the ShowcasingOz TV Series</h3>
         <div class="what"><strong>What we do:</strong> Feature selected accommodation in a season episode with presenter-led coverage and promotion.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>On-screen feature, host segment and social promotion</li></ul>
@@ -407,7 +417,10 @@
     <!-- CTA -->
     <div class="cta">
       <p style="font-weight:700">Limited Season 1 slots available — secure your filming window today.</p>
-      <a href="contact.html" class="cta-btn" id="accomContact">Express Your Interest</a>
+      <a class="cta-btn" id="accomContact"
+         href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20Accommodation%20Partnership%20Packages.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APackage%20I'm%20Interested%20In:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+        Express Your Interest
+      </a>
     </div>
 
     <!-- Pricing clause -->
@@ -447,4 +460,5 @@
 
 </body>
 </html>
+
 
