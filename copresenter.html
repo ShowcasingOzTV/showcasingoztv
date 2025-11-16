@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-RB6N742VZW');
 </script>
   <meta charset="utf-8" />
@@ -135,6 +134,7 @@
       margin-top: 30px;
       font-weight: 600;
       transition: background 0.3s;
+      cursor: pointer;
     }
     .apply-btn:hover { background: #c45e15; }
     footer {
@@ -147,10 +147,53 @@
     }
     footer a { color: #E87722; text-decoration: none; margin: 0 10px; }
     footer a:hover { text-decoration: underline; }
+
+    /* ✅ MODAL STYLES (copied from Sponsorship page) */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .modal-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .modal-box h2 {
+      color: #0E3557;
+      margin-bottom: 15px;
+    }
+    .modal-box p {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .close-modal {
+      background: #E87722;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .close-modal:hover {
+      background: #c45e15;
+    }
   </style>
 </head>
 
 <body>
+
   <!-- HEADER -->
   <header class="navbar">
     <div class="container">
@@ -215,7 +258,6 @@
       <li>Previous on-camera, modelling, or promotional work</li>
     </ul>
 
-    <!-- NEW CONTRACT CONDITIONS SECTION -->
     <h2>🔎 Contract Conditions</h2>
     <p>This position is offered on a contractor basis for Season 1 (May–December 2026). Applicants must hold a valid ABN and will be responsible for managing their own tax and superannuation obligations throughout the contract period. Subject to performance and production requirements, there is a pathway to a full-time employed position beginning in Season 2 (from late January 2027).</p>
 
@@ -228,15 +270,8 @@
     </p>
 
     <div style="text-align:center;">
-
-      <!-- ✅ UPDATED MAILTO BUTTON HERE -->
-      <a class="apply-btn"
-         href="mailto:showcasingoztv@gmail.com
-?subject=Co-Presenter%20Application%20-%20ShowcasingOz%20TV
-&body=Hi%20David%2C%0D%0A%0D%0AI%27m%20interested%20in%20the%20Co-Presenter%20role.%20Please%20find%20my%20details%20below%3A%0D%0A%0D%0AName%3A%20%0D%0AState%20%2F%20Location%3A%20%0D%0APhone%3A%20%0D%0AWhy%20I%27d%20be%20a%20great%20fit%3A%20%0D%0A%0D%0AResume%20attached.%0D%0A%0D%0AThank%20you!">
-        Express Interest
-      </a>
-
+      <!-- ✅ UPDATED BUTTON – NOW OPENS MODAL -->
+      <a class="apply-btn" id="openModalBtn">Express Interest</a>
     </div>
   </section>
 
@@ -254,5 +289,34 @@
     <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
     © 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
   </footer>
+
+  <!-- ✅ MODAL HTML (copied exactly from Sponsorship page) -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <h2>Send Your Enquiry</h2>
+      <p>Please email us at:<br><strong>showcasingoztv@gmail.com</strong></p>
+      <a class="close-modal" id="closeModalBtn">Close</a>
+    </div>
+  </div>
+
+  <!-- ✅ MODAL SCRIPT -->
+  <script>
+    const modal = document.getElementById('modalOverlay');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>
