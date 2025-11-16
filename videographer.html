@@ -84,6 +84,7 @@
       border-radius: 6px;
       text-decoration: none;
       font-size: 18px;
+      cursor: pointer;
     }
     .cta-btn:hover {
       background: #e65c00;
@@ -109,6 +110,68 @@
     footer a:hover {
       color: #ff6600;
     }
+
+    /* --- MODAL STYLES (copied from Sponsorship page) --- */
+    #enquiry-form {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 3000;
+    }
+    #enquiry-form.active { display: flex; }
+
+    .form-container {
+      background: #fff;
+      padding: 24px;
+      border-radius: 10px;
+      width: 94%;
+      max-width: 520px;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 3001;
+    }
+
+    .form-container h2 { margin-top: 0; color: #0E3557; }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: #0E3557;
+    }
+
+    input[type="submit"].submit-btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+    }
+    input[type="submit"].submit-btn:hover { background: #e65c00; }
+
   </style>
 </head>
 
@@ -133,7 +196,7 @@
 <div class="section">
 
   <p>
-    We are seeking an experienced **Videographer / Video Editor** to join ShowcasingOz TV for the 2026 travel season.
+    We are seeking an experienced <strong>Videographer / Video Editor</strong> to join ShowcasingOz TV for the 2026 travel season.
     You'll work alongside our host, capturing beautiful stories of Australian towns, tourism providers, and regional experiences.
   </p>
 
@@ -163,13 +226,8 @@
     <li>Travel + accommodation included</li>
   </ul>
 
-  <!-- Mailto CTA -->
-  <a
-    class="cta-btn"
-    href="mailto:info@showcasingoztv.com.au?subject=Application%20%E2%80%93%20Videographer%20%2F%20Video%20Editor%20(ShowcasingOz%20TV)&body=Hi%20ShowcasingOz%20TV%20team%2C%0A%0AI'm%20interested%20in%20applying%20for%20the%20Videographer%20%2F%20Video%20Editor%20role.%20%0APlease%20find%20my%20details%20below%3A%0A%0AName%3A%0AState%3A%0APhone%3A%0AWebsite%2FPortfolio%3A%0AShowreel%20link%3A%0ARelevant%20experience%3A%0A%0AThanks%20and%20looking%20forward%20to%20hearing%20from%20you."
-  >
-    Express Interest
-  </a>
+  <!-- CTA NOW TRIGGERS MODAL -->
+  <a class="cta-btn" onclick="openForm()">Express Interest</a>
 
 </div>
 
@@ -184,5 +242,58 @@
   <div style="margin-top: 20px;">© 2025 ShowcasingOz TV</div>
 </footer>
 
+<!-- --- MODAL HTML (copied from Sponsorship page) --- -->
+<div id="enquiry-form" aria-hidden="true">
+  <div class="form-container" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
+    <button class="close-btn" onclick="closeForm()" aria-label="Close enquiry form">&times;</button>
+    <h2 id="enquiry-title">Videographer Application</h2>
+
+    <form action="https://formspree.io/f/movyjevl" method="POST">
+
+      <!-- Hidden subject -->
+      <input type="hidden" name="_subject" value="New Videographer Application – ShowcasingOz TV">
+
+      <label for="role">Role</label>
+      <input type="text" id="role" name="role" value="Videographer / Video Editor" readonly>
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <input type="submit" value="Send" class="submit-btn">
+
+    </form>
+  </div>
+</div>
+
+<!-- --- MODAL JS (copied from Sponsorship page) --- -->
+<script>
+  function openForm() {
+    const ef = document.getElementById('enquiry-form');
+    ef.classList.add('active');
+    ef.setAttribute('aria-hidden','false');
+    setTimeout(()=>document.getElementById('name').focus(), 120);
+  }
+  function closeForm() {
+    const ef = document.getElementById('enquiry-form');
+    ef.classList.remove('active');
+    ef.setAttribute('aria-hidden','true');
+  }
+  document.addEventListener('click', (e) => {
+    const ef = document.getElementById('enquiry-form');
+    if (!ef.classList.contains('active')) return;
+    if (e.target === ef) closeForm();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeForm();
+  });
+</script>
+
 </body>
 </html>
+
