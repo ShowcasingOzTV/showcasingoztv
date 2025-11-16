@@ -9,46 +9,112 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body { margin: 0; font-family: 'Montserrat', sans-serif; background: #f8f8f8; color: #333; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
 
     /* Header */
-    header { background: #ffffff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e5e5; }
-    header nav a { margin-left: 25px; text-decoration: none; color: #333; font-weight: 600; }
-    header nav a:hover { color: #ff6600; }
+    header {
+      background: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    header nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    header nav a:hover {
+      color: #ff6600;
+    }
 
     /* Hero */
-    .hero { background: url('https://showcasingoztv.com.au/wp-content/uploads/2024/09/Outback3.jpeg') center/cover no-repeat; height: 360px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; font-size: 42px; font-weight: 700; padding: 20px; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+    .hero {
+      background: url('https://showcasingoztv.com.au/wp-content/uploads/2024/09/Outback3.jpeg') center/cover no-repeat;
+      height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 42px;
+      font-weight: 700;
+      padding: 20px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    }
 
     /* Main Content */
-    .section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-    h2 { margin-top: 40px; font-size: 28px; font-weight: 700; }
-    p, li { font-size: 17px; line-height: 1.6; }
-    ul { margin-top: 10px; }
+    .section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
 
     /* CTA Button */
-    .cta-btn { display: inline-block; margin-top: 35px; padding: 14px 26px; background: #ff6600; color: #fff; font-weight: 700; border-radius: 6px; text-decoration: none; font-size: 18px; }
-    .cta-btn:hover { background: #e65c00; cursor: pointer; }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 26px;
+      background: #ff6600;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .cta-btn:hover {
+      background: #e65c00;
+    }
 
     /* Footer */
-    footer { background: #222; color: #fff; padding: 40px 20px; margin-top: 60px; text-align: center; font-size: 15px; }
-    footer a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: 600; }
-    footer a:hover { color: #ff6600; }
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 15px;
+    }
 
-    /* ==== Modal styles (copied from your Sponsorship page) ==== */
-    #enquiry-form { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 3000; }
-    #enquiry-form.active { display: flex; }
-    .form-container { background: #fff; padding: 24px; border-radius: 10px; width: 94%; max-width: 520px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.25); position: relative; z-index: 3001; }
-    .form-container h2 { margin-top: 0; color: #0E3557; }
-    input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-    .close-btn { position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #0E3557; }
-    input[type="submit"].submit-btn { background: #E87722; color: #fff; padding: 12px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; display: block; width: 100%; margin-top: 8px; }
-    input[type="submit"].submit-btn:hover { background: #c45e15; }
-    /* ====================================================== */
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: #ff6600;
+    }
   </style>
 </head>
 <body>
   <header>
     <div style="font-size: 22px; font-weight: 700;">ShowcasingOz TV</div>
+
     <nav>
       <a href="/index.html">Home</a>
       <a href="/about.html">About</a>
@@ -63,8 +129,9 @@
   </div>
 
   <div class="section">
+
     <p>
-      We are seeking an experienced <strong>Videographer / Video Editor</strong> to join ShowcasingOz TV for the 2026 travel season.
+      We are seeking an experienced **Videographer / Video Editor** to join ShowcasingOz TV for the 2026 travel season.
       You'll work alongside our host, capturing beautiful stories of Australian towns, tourism providers, and regional experiences.
     </p>
 
@@ -94,8 +161,14 @@
       <li>Travel + accommodation included</li>
     </ul>
 
-    <!-- CTA now opens the modal (only change) -->
-    <a class="cta-btn" href="#" onclick="openForm('Videographer / Video Editor'); return false;">Express Interest</a>
+    <!-- Mailto CTA -->
+    <a
+      class="cta-btn"
+      href="mailto:info@showcasingoztv.com.au?subject=Application%20%E2%80%93%20Videographer%20%2F%20Video%20Editor%20(ShowcasingOz%20TV)&body=Hi%20ShowcasingOz%20TV%20team%2C%0A%0AI'm%20interested%20in%20applying%20for%20the%20Videographer%20%2F%20Video%20Editor%20role.%20%0APlease%20find%20my%20details%20below%3A%0A%0AName%3A%0AState%3A%0APhone%3A%0AWebsite%2FPortfolio%3A%0AShowreel%20link%3A%0ARelevant%20experience%3A%0A%0AThanks%20and%20looking%20forward%20to%20hearing%20from%20you."
+    >
+      Express Interest
+    </a>
+
   </div>
 
   <footer>
@@ -108,56 +181,5 @@
     </div>
     <div style="margin-top: 20px;">© 2025 ShowcasingOz TV</div>
   </footer>
-
-  <!-- ==== ENQUIRY MODAL (copied exactly from Sponsorship page, heading set for this role) ==== -->
-  <div id="enquiry-form" aria-hidden="true">
-    <div class="form-container" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
-      <button class="close-btn" onclick="closeForm()" aria-label="Close enquiry form">&times;</button>
-      <h2 id="enquiry-title">Videographer / Video Editor Job Enquiry</h2>
-
-      <form action="https://formspree.io/f/movyjevl" method="POST">
-        <!-- Hidden subject so emails look clean -->
-        <input type="hidden" name="_subject" value="New Videographer Enquiry from ShowcasingOz TV">
-
-        <label for="package">Position</label>
-        <input type="text" id="package" name="package" value="Videographer / Video Editor" readonly>
-
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <input type="submit" value="Send" class="submit-btn">
-      </form>
-    </div>
-  </div>
-
-  <script>
-    function openForm(packageName) {
-      const ef = document.getElementById('enquiry-form');
-      if (packageName) document.getElementById('package').value = packageName;
-      ef.classList.add('active');
-      ef.setAttribute('aria-hidden','false');
-      setTimeout(()=>document.getElementById('name').focus(), 120);
-    }
-    function closeForm() {
-      const ef = document.getElementById('enquiry-form');
-      ef.classList.remove('active');
-      ef.setAttribute('aria-hidden','true');
-    }
-    document.addEventListener('click', (e) => {
-      const ef = document.getElementById('enquiry-form');
-      if (!ef.classList.contains('active')) return;
-      if (e.target === ef) closeForm();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeForm();
-    });
-  </script>
 </body>
 </html>
-
