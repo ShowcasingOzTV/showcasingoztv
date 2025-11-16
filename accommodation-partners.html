@@ -108,6 +108,21 @@
     footer a{color:var(--accent); text-decoration:none; margin:0 8px}
     footer a:hover{text-decoration:underline}
     .legal{color:#fff;opacity:0.9;margin-top:8px}
+
+    /* Modal styles */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:2000}
+    .modal{background:#fff;padding:20px;border-radius:10px;max-width:520px;width:95%;box-shadow:0 8px 30px rgba(0,0,0,0.25);position:relative}
+    .modal h3{margin:0 0 12px;color:var(--nav)}
+    .modal .close-btn{position:absolute;right:12px;top:10px;background:transparent;border:0;font-size:18px;cursor:pointer;color:var(--muted)}
+    .form-row{margin-bottom:10px}
+    label{display:block;font-weight:700;margin-bottom:6px;color:var(--text)}
+    input[type="text"], input[type="email"], textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:15px}
+    textarea{min-height:110px;resize:vertical}
+    .modal .btn-submit{background:var(--nav);color:#fff;border:0;padding:10px 14px;border-radius:8px;font-weight:800;cursor:pointer}
+    .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
+    .thank-you{display:none;text-align:center;padding:20px}
+    .error{color:#b00020;margin-top:8px}
+    .service-cta{margin-top:12px}
   </style>
 </head>
 <body>
@@ -164,8 +179,9 @@
             <li>Inclusion in a ShowcasingOz TV episode</li>
           </ul>
         </div>
-        <a class="btn" id="accomBronzeBtn"
-           href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Bronze&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Bronze%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+        <!-- open modal, data-title used to populate subject -->
+        <a class="btn open-modal" id="accomBronzeBtn" href="#"
+           data-title="Accommodation Bronze Package Enquiry">
           Express Interest
         </a>
       </div>
@@ -184,8 +200,8 @@
             <li>Google profile upgrade & TV feature</li>
           </ul>
         </div>
-        <a class="btn" id="accomSilverBtn"
-           href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Silver&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Silver%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+        <a class="btn open-modal" id="accomSilverBtn" href="#"
+           data-title="Accommodation Silver Package Enquiry">
           Express Interest
         </a>
       </div>
@@ -203,13 +219,13 @@
             <li>Professional photography</li>
           </ul>
         </div>
-        <a class="btn" id="accomGoldBtn"
-           href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Gold&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Gold%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+        <a class="btn open-modal" id="accomGoldBtn" href="#"
+           data-title="Accommodation Gold Package Enquiry">
           Express Interest
         </a>
       </div>
 
-      <!-- Platinum & Diamond (wide row) -->
+      <!-- Platinum & Diamond -->
       <div class="wide-row" style="grid-column:1/-1;margin-top:8px">
         <div class="package-card" style="text-align:left">
           <h4>🟦 PLATINUM — Social & Video Master</h4>
@@ -225,8 +241,8 @@
               <li>Promotional/seasonal video + owner intro</li>
             </ul>
           </div>
-          <a class="btn" id="accomPlatinumBtn"
-             href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Platinum&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Platinum%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+          <a class="btn open-modal" id="accomPlatinumBtn" href="#"
+             data-title="Accommodation Platinum Package Enquiry">
             Express Interest
           </a>
         </div>
@@ -245,8 +261,8 @@
               <li>2 additional promotional videos + 12-month retainer discount</li>
             </ul>
           </div>
-          <a class="btn" id="accomDiamondBtn"
-             href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry%20-%20Diamond&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20the%20Accommodation%20Diamond%20package.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+          <a class="btn open-modal" id="accomDiamondBtn" href="#"
+             data-title="Accommodation Diamond Package Enquiry">
             Express Interest
           </a>
         </div>
@@ -268,6 +284,9 @@
           <div class="intro">Introductory Price: $639</div>
           <div class="std">Standard Price: $799</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A1. Full Accommodation Walkthrough Video Enquiry">Express Interest</a>
+        </div>
       </div>
 
       <!-- A2 -->
@@ -280,6 +299,9 @@
         <div class="price-block">
           <div class="intro">Introductory Price: $159 per room</div>
           <div class="std">Standard Price: $199 per room (bulk 4+ → $350)</div>
+        </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A2. Room Showcase Short Clips Enquiry">Express Interest</a>
         </div>
       </div>
 
@@ -294,6 +316,9 @@
           <div class="intro">Introductory Price: $520</div>
           <div class="std">Standard Price: $650</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A3. Drone Exterior Video + Photography Enquiry">Express Interest</a>
+        </div>
       </div>
 
       <!-- A4 -->
@@ -306,6 +331,9 @@
         <div class="price-block">
           <div class="intro">Introductory Price: $719</div>
           <div class="std">Standard Price: $899</div>
+        </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A4. Guest Experience Highlight Video Enquiry">Express Interest</a>
         </div>
       </div>
 
@@ -320,6 +348,9 @@
           <div class="intro">Introductory Price: $360</div>
           <div class="std">Standard Price: $450</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A5. Seasonal or Promotional Video Enquiry">Express Interest</a>
+        </div>
       </div>
 
       <!-- A6 -->
@@ -332,6 +363,9 @@
         <div class="price-block">
           <div class="intro">Introductory Price: $440</div>
           <div class="std">Standard Price: $550</div>
+        </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A6. Professional Photography Package Enquiry">Express Interest</a>
         </div>
       </div>
 
@@ -346,6 +380,9 @@
           <div class="intro">Introductory Price: $319</div>
           <div class="std">Standard Price: $399</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A7. Staff or Owner Introduction Video Enquiry">Express Interest</a>
+        </div>
       </div>
 
       <!-- A8 -->
@@ -358,6 +395,9 @@
         <div class="price-block">
           <div class="intro">Introductory Price: $319</div>
           <div class="std">Standard Price: $399</div>
+        </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A8. Google Business Profile Enhancement Enquiry">Express Interest</a>
         </div>
       </div>
 
@@ -372,6 +412,9 @@
           <div class="intro">Introductory Price: $360</div>
           <div class="std">Standard Price: $450</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A9. Social Media Content Bundle Enquiry">Express Interest</a>
+        </div>
       </div>
 
       <!-- A10 -->
@@ -384,6 +427,9 @@
         <div class="price-block">
           <div class="intro">Introductory Price: $159</div>
           <div class="std">Standard Price: $199</div>
+        </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A10. Booking Booster Add-On Enquiry">Express Interest</a>
         </div>
       </div>
 
@@ -398,6 +444,9 @@
           <div class="intro">Introductory Price: $239 / month</div>
           <div class="std">Standard Price: $299 / month</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A11. Monthly Social Media + Marketing Support Enquiry">Express Interest</a>
+        </div>
       </div>
 
       <!-- A12 -->
@@ -411,14 +460,16 @@
           <div class="intro">Introductory Price: $280</div>
           <div class="std">Standard Price: $350</div>
         </div>
+        <div class="service-cta">
+          <a class="btn open-modal" href="#" data-title="Accommodation — A12. Inclusion in the ShowcasingOz TV Series Enquiry">Express Interest</a>
+        </div>
       </div>
     </div>
 
     <!-- CTA -->
     <div class="cta">
       <p style="font-weight:700">Limited Season 1 slots available — secure your filming window today.</p>
-      <a class="cta-btn" id="accomContact"
-         href="mailto:showcasingoztv@gmail.com?subject=Accommodation%20Partnership%20Enquiry&body=Hi%20ShowcasingOz%20TV%20Team,%0A%0AI%27m%20interested%20in%20Accommodation%20Partnership%20Packages.%0A%0ABusiness%20Name:%0AContact%20Name:%0APhone:%0ALocation:%0APackage%20I'm%20Interested%20In:%0APreferred%20Filming%20Dates:%0AAdditional%20Notes:%0A">
+      <a class="cta-btn open-modal" id="accomContact" href="#" data-title="Accommodation Partnership Enquiry">
         Express Your Interest
       </a>
     </div>
@@ -429,6 +480,52 @@
     </p>
 
   </main>
+
+  <!-- Modal markup -->
+  <div class="modal-backdrop" id="modalBack">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-btn" id="modalClose" aria-label="Close modal">&times;</button>
+
+      <!-- Form container -->
+      <div id="formContainer">
+        <h3 id="modalTitle">Express Interest</h3>
+
+        <!-- The form posts to your Formspree endpoint -->
+        <form id="interestForm" action="https://formspree.io/f/movynnqj" method="POST">
+          <!-- subject will be set dynamically -->
+          <input type="hidden" name="subject" id="formSubject" value="Accommodation Enquiry">
+
+          <div class="form-row">
+            <label for="name">Your name <span style="color:#b00020">*</span></label>
+            <input id="name" name="name" type="text" required placeholder="Your full name">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email address <span style="color:#b00020">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message / details <span style="color:#b00020">*</span></label>
+            <textarea id="message" name="message" required placeholder="Tell us any dates, property name, location or questions..."></textarea>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button type="submit" class="btn-submit">Send enquiry</button>
+            <div id="formStatus" style="font-size:0.95rem;color:var(--muted)"></div>
+          </div>
+          <div class="error" id="formError" role="alert" aria-live="polite" style="display:none"></div>
+        </form>
+      </div>
+
+      <!-- Thank you screen -->
+      <div class="thank-you" id="thankYou">
+        <h3>Thanks — we received your enquiry</h3>
+        <p>We will get back to you shortly. If you'd like to contact us directly, email <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.</p>
+        <button class="btn-submit" id="thankClose">Close</button>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div style="max-width:1100px;margin:0 auto;padding:10px 18px;">
@@ -450,15 +547,111 @@
     function track(label){
       if(typeof gtag === 'function') gtag('event','express_interest_click',{event_category:'Engagement', event_label:label});
     }
+    // existing tracking bindings (keeps same labels)
     document.getElementById('accomBronzeBtn').addEventListener('click',()=>track('Accom_Bronze'));
     document.getElementById('accomSilverBtn').addEventListener('click',()=>track('Accom_Silver'));
     document.getElementById('accomGoldBtn').addEventListener('click',()=>track('Accom_Gold'));
     document.getElementById('accomPlatinumBtn').addEventListener('click',()=>track('Accom_Platinum'));
     document.getElementById('accomDiamondBtn').addEventListener('click',()=>track('Accom_Diamond'));
-    document.getElementById('accomContact').addEventListener('click',()=>track('Accom_Contact'));
+    // accomContact bound below after adding modal listeners
+
+    // Modal + Formspree handling
+    (function(){
+      const modalBack = document.getElementById('modalBack');
+      const modalClose = document.getElementById('modalClose');
+      const openButtons = document.querySelectorAll('.open-modal');
+      const form = document.getElementById('interestForm');
+      const subjectInput = document.getElementById('formSubject');
+      const formStatus = document.getElementById('formStatus');
+      const formError = document.getElementById('formError');
+      const thankYou = document.getElementById('thankYou');
+      const formContainer = document.getElementById('formContainer');
+      const thankClose = document.getElementById('thankClose');
+
+      // open modal helper
+      function openModal(title){
+        subjectInput.value = title || 'Accommodation Enquiry';
+        document.getElementById('modalTitle').textContent = title || 'Express Interest';
+        formStatus.textContent = '';
+        formError.style.display = 'none';
+        formError.textContent = '';
+        formContainer.style.display = 'block';
+        thankYou.style.display = 'none';
+        modalBack.style.display = 'flex';
+        // focus name field
+        setTimeout(()=>document.getElementById('name').focus(), 120);
+        // tracking
+        track('Modal_Open');
+        if(typeof gtag === 'function') gtag('event','modal_open',{event_category:'Engagement', event_label:title});
+      }
+
+      function closeModal(){
+        modalBack.style.display = 'none';
+      }
+
+      openButtons.forEach(btn=>{
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          const title = this.dataset.title || this.getAttribute('data-title') || 'Accommodation Enquiry';
+          openModal(title);
+        });
+      });
+
+      modalClose.addEventListener('click', closeModal);
+      modalBack.addEventListener('click', function(e){
+        if(e.target === modalBack) closeModal();
+      });
+
+      thankClose.addEventListener('click', closeModal);
+
+      // Send to Formspree via fetch (keeps user on page and shows thank you)
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        formError.style.display = 'none';
+        formError.textContent = '';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        formStatus.textContent = 'Sending...';
+
+        const data = new FormData(form);
+
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(function(response){
+          submitBtn.disabled = false;
+          if(response.ok){
+            // success
+            form.reset();
+            formContainer.style.display = 'none';
+            thankYou.style.display = 'block';
+            formStatus.textContent = '';
+            track('Form_Submit_Success');
+            if(typeof gtag === 'function') gtag('event','form_submit',{event_category:'Engagement', event_label:subjectInput.value});
+          } else {
+            // parse error message json
+            return response.json().then(function(err){
+              throw err;
+            }).catch(function(){
+              throw new Error('There was a problem submitting the form. Please try again.');
+            });
+          }
+        })
+        .catch(function(err){
+          submitBtn.disabled = false;
+          formStatus.textContent = '';
+          formError.style.display = 'block';
+          formError.textContent = err && err.error ? err.error : (err.message || 'Submission failed — please try again.');
+          track('Form_Submit_Error');
+          if(typeof gtag === 'function') gtag('event','form_error',{event_category:'Engagement', event_label:subjectInput.value});
+        });
+      });
+    })();
   </script>
 
 </body>
 </html>
-
-
