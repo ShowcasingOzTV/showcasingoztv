@@ -116,7 +116,7 @@
       position: relative;
       background: url('images/showcasingoz-tv-cover.jpg') center/cover no-repeat;
       color: #fff;
-      padding: 84px 20px 48px; /* slightly larger bottom padding to give space */
+      padding: 84px 20px 48px; /* space under hero so overview doesn't collide */
       text-align: center;
       overflow: hidden;
     }
@@ -128,10 +128,10 @@
     .hero h1 { font-size: 2.1rem; margin-bottom: 12px; color: #fff; text-shadow: 1px 1px 6px rgba(0,0,0,0.6); }
     .hero p { max-width: 880px; margin: 0 auto; color: #f3f6f9; font-size: 1.05rem; }
 
-    /* OVERVIEW PANEL (moved below hero; removed overlap) */
+    /* OVERVIEW PANEL */
     .overview {
       max-width: var(--maxw);
-      margin: 18px auto; /* no negative margin — sits below hero */
+      margin: 18px auto;
       padding: 18px;
       background: #fff;
       border-radius: 10px;
@@ -158,7 +158,7 @@
     .section-title { text-align:center; margin-bottom:12px; color:var(--text); }
     .section-lead { text-align:center; max-width:820px; margin: 0 auto 18px; color:#444; }
 
-    /* SUPPORTER TILES (feature) */
+    /* SUPPORTER TILES */
     .supporters {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -175,15 +175,22 @@
       box-shadow: 0 6px 18px rgba(14,53,87,0.04);
       display:flex;
       flex-direction:column;
-      justify-content:space-between; /* ensures buttons align at similar vertical level */
-      min-height: 260px;
+      justify-content:space-between;
+      min-height: 300px; /* ensure both tiles are equal height */
+    }
+    .supporter .top { }
+    .supporter .bottom {
+      display:flex;
+      flex-direction:column;
+      align-items:center; /* center CTAs horizontally */
+      margin-top: 8px;
     }
     .supporter h3 { margin: 0 0 8px 0; color: var(--accent); }
     .supporter .desc { margin: 0 0 10px 0; color:#333; font-weight:600; }
     .supporter ul { margin: 8px 0 0 16px; color:#333; }
     .supporter .price { margin-top:12px; font-size:1.15rem; font-weight:700; color:var(--text); }
     .supporter .small { font-size:0.95rem; color:#666; margin-top:8px; }
-    .supporter .btn { margin-top:12px; display:inline-block; background:var(--accent); color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700; align-self:center; } /* centered horizontally */
+    .supporter .btn { margin-top:12px; display:inline-block; background:var(--accent); color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700; }
     .supporter .btn:hover { background:#c45e15; }
 
     @media (max-width:820px) {
@@ -196,7 +203,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-top: 22px;
-      align-items: start;
+      align-items: stretch;
     }
     .package {
       border-radius: 12px;
@@ -205,7 +212,7 @@
       border: 1px solid rgba(14,53,87,0.08);
       text-align: left;
       box-shadow: 0 8px 20px rgba(14,53,87,0.03);
-      min-height: 340px;
+      min-height: 420px; /* equal height for Bronze/Silver/Gold */
       display:flex;
       flex-direction:column;
       justify-content:space-between;
@@ -223,13 +230,14 @@
 
     @media (max-width:1100px) {
       .packages { grid-template-columns: repeat(2, 1fr); }
-      .package { min-height: 300px; }
+      .package { min-height: 360px; }
     }
     @media (max-width:720px) {
       .packages { grid-template-columns: 1fr; }
+      .package { min-height: auto; }
     }
 
-    /* PLATINUM / MAJOR (full-width emphasis) */
+    /* PLATINUM / MAJOR - full-width premium boxes */
     .premium {
       margin-top: 28px;
       padding: 18px;
@@ -237,11 +245,20 @@
       border-radius: 12px;
       border: 2px solid rgba(232,119,34,0.06);
       box-shadow: 0 12px 30px rgba(14,53,87,0.04);
+      max-width: var(--maxw);
+      margin-left: auto;
+      margin-right: auto;
     }
     .premium .premium-inner { display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
     .premium .left { flex:1; text-align:left; }
     .premium h3 { margin-top:0; color:var(--accent); }
     .premium .price { font-size:1.5rem; font-weight:900; color:var(--text); }
+    .premium .premium-ctas { display:flex; gap:10px; justify-content:center; margin-top:12px; }
+
+    @media (max-width:820px) {
+      .premium .premium-inner { flex-direction:column; align-items:stretch; }
+      .premium .premium-ctas { justify-content:flex-start; }
+    }
 
     /* PROSPECTUS CTA */
     .prospectus {
@@ -271,12 +288,12 @@
       padding: 20px;
       border-radius: 10px;
       width: 94%;
-      max-width: 560px;
+      max-width: 640px;
       text-align: left;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       position: relative;
       z-index: 3001;
-      max-height: 80vh; /* allow internal scrolling */
+      max-height: 86vh; /* allow internal scrolling */
       overflow: auto;    /* allow user to scroll the modal content */
     }
     .form-container h2 { margin-top: 0; color: var(--text); }
@@ -325,6 +342,8 @@
     footer a { color: var(--accent); text-decoration: none; margin: 0 8px; font-weight:600; }
     footer a:hover { text-decoration: underline; }
 
+    /* Small helper to ensure consistent button widths */
+    .button, .secondary, .supporter .btn { white-space: nowrap; }
   </style>
 </head>
 <body>
@@ -364,7 +383,7 @@
   <div class="overview" role="region" aria-label="Sponsorship overview">
     <div class="left">
       <h2>Why sponsor ShowcasingOz TV?</h2>
-      <p>We make travel stories that audiences trust. Sponsoring us gives your business tangible exposure: video content you can use, direct social promotion, searchable online presence, and authentic storytelling that drives visitation and bookings.</p>
+      <p>We make travel stories that audiences trust. Sponsoring us gives your business tangible exposure: professional video content you can repurpose, targeted social promotion, searchable online presence and authentic storytelling that drives visitation and bookings.</p>
     </div>
     <div class="cta">
       <a href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer">
@@ -375,22 +394,22 @@
 
   <main class="content" id="main-content">
     <h2 class="section-title">Supporter Tiers — Quick, affordable & high-conversion</h2>
-    <p class="section-lead">Ideal for small businesses, cafes, attractions and community groups. These low-cost options are designed to be simple, immediate and publicly visible.</p>
+    <p class="section-lead">Ideal for small businesses, cafés, attractions and community groups. These low-cost options are designed to be simple, immediate and publicly visible.</p>
 
     <!-- SUPPORTER TILES -->
     <div class="supporters" role="list">
       <div class="supporter" role="listitem" aria-labelledby="supporter-50">
-        <div>
+        <div class="top">
           <h3 id="supporter-50">$50 — Local Supporter</h3>
           <div class="desc">Best for small local businesses who want to show support and be found by travellers.</div>
           <ul>
             <li><strong>Digital Local Supporter Badge</strong> — use on your website, email footer or social profiles.</li>
-            <li><strong>Business name + town listed</strong> on our Season 1 Contributors page (searchable, good for SEO).</li>
+            <li><strong>Business name + town listed</strong> on our Season 1 Contributors page (searchable, great for SEO).</li>
             <li><strong>Early access updates</strong> — route announcements & behind-the-scenes content before public release.</li>
           </ul>
         </div>
 
-        <div>
+        <div class="bottom">
           <div class="price">$50</div>
           <div class="small">Low commitment — high goodwill. Quick sign-up, immediate recognition.</div>
           <a class="btn" href="#" onclick="openForm('Local Supporter — $50')">Become a Local Supporter</a>
@@ -398,7 +417,7 @@
       </div>
 
       <div class="supporter" role="listitem" aria-labelledby="supporter-100">
-        <div>
+        <div class="top">
           <h3 id="supporter-100">$100 — Community Champion</h3>
           <div class="desc">For businesses that want visible branding and ongoing promotion without a full filming package.</div>
           <ul>
@@ -409,7 +428,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class="bottom">
           <div class="price">$100</div>
           <div class="small">Adds brand visibility and an easy route to upgrade to paid video packages later.</div>
           <a class="btn" href="#" onclick="openForm('Community Champion — $100')">Become a Community Champion</a>
@@ -493,7 +512,7 @@
       </div>
     </div>
 
-    <!-- PLATINUM & MAJOR -->
+    <!-- PLATINUM & MAJOR - full width emphasis -->
     <div class="premium" role="region" aria-label="Premium sponsorship options">
       <div class="premium-inner">
         <div class="left">
@@ -509,15 +528,15 @@
 
         <div style="min-width:220px; text-align:right;">
           <div class="price">$4,995</div>
-          <div style="margin-top:12px; display:flex; gap:10px; justify-content:center;">
-            <a href="#" class="button" onclick="openForm('Platinum Partner — $4,995')">Request Platinum</a>
-            <a class="secondary" href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;">Download Full Terms</a>
+          <div class="premium-ctas">
+            <a href="#" class="button" onclick="openForm('Platinum Partner — $4,995')">Send Enquiry</a>
+            <a href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" class="secondary" target="_blank" rel="noopener noreferrer">View Prospectus</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="premium" style="margin-top:12px;">
+    <div class="premium" role="region" aria-label="Major sponsorship options" style="margin-top:12px;">
       <div class="premium-inner">
         <div class="left">
           <h3>Major National Sponsor — $14,995 (Exclusive)</h3>
@@ -533,9 +552,9 @@
 
         <div style="min-width:220px; text-align:right;">
           <div class="price">$14,995</div>
-          <div style="margin-top:12px; display:flex; gap:10px; justify-content:center;">
-            <a href="#" class="button" onclick="openForm('Major National Sponsor — $14,995')">Discuss Major Sponsorship</a>
-            <a class="secondary" href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;">Download Prospectus</a>
+          <div class="premium-ctas">
+            <a href="#" class="button" onclick="openForm('Major National Sponsor — $14,995')">Send Enquiry</a>
+            <a href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" class="secondary" target="_blank" rel="noopener noreferrer">View Prospectus</a>
           </div>
         </div>
       </div>
@@ -602,15 +621,20 @@
       pkg.value = packageName;
       ef.classList.add('active');
       ef.setAttribute('aria-hidden','false');
-      // ensure body not scroll behind modal on smaller devices
+      // prevent background scroll while modal open
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-      setTimeout(()=>document.getElementById('name').focus(), 160);
+      // ensure focus
+      setTimeout(()=> {
+        const name = document.getElementById('name');
+        if (name) name.focus();
+      }, 160);
     }
     function closeForm() {
       const ef = document.getElementById('enquiry-form');
       ef.classList.remove('active');
       ef.setAttribute('aria-hidden','true');
+      // restore scroll
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     }
@@ -646,4 +670,3 @@
 
 </body>
 </html>
-
