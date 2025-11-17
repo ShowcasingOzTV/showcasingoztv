@@ -116,7 +116,7 @@
       position: relative;
       background: url('images/showcasingoz-tv-cover.jpg') center/cover no-repeat;
       color: #fff;
-      padding: 84px 20px;
+      padding: 84px 20px 48px; /* slightly larger bottom padding to give space */
       text-align: center;
       overflow: hidden;
     }
@@ -128,10 +128,10 @@
     .hero h1 { font-size: 2.1rem; margin-bottom: 12px; color: #fff; text-shadow: 1px 1px 6px rgba(0,0,0,0.6); }
     .hero p { max-width: 880px; margin: 0 auto; color: #f3f6f9; font-size: 1.05rem; }
 
-    /* OVERVIEW PANEL */
+    /* OVERVIEW PANEL (moved below hero; removed overlap) */
     .overview {
       max-width: var(--maxw);
-      margin: -40px auto 20px;
+      margin: 18px auto; /* no negative margin — sits below hero */
       padding: 18px;
       background: #fff;
       border-radius: 10px;
@@ -173,13 +173,17 @@
       padding: 20px;
       text-align: left;
       box-shadow: 0 6px 18px rgba(14,53,87,0.04);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between; /* ensures buttons align at similar vertical level */
+      min-height: 260px;
     }
     .supporter h3 { margin: 0 0 8px 0; color: var(--accent); }
     .supporter .desc { margin: 0 0 10px 0; color:#333; font-weight:600; }
     .supporter ul { margin: 8px 0 0 16px; color:#333; }
     .supporter .price { margin-top:12px; font-size:1.15rem; font-weight:700; color:var(--text); }
     .supporter .small { font-size:0.95rem; color:#666; margin-top:8px; }
-    .supporter .btn { margin-top:12px; display:inline-block; background:var(--accent); color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700; }
+    .supporter .btn { margin-top:12px; display:inline-block; background:var(--accent); color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700; align-self:center; } /* centered horizontally */
     .supporter .btn:hover { background:#c45e15; }
 
     @media (max-width:820px) {
@@ -201,7 +205,7 @@
       border: 1px solid rgba(14,53,87,0.08);
       text-align: left;
       box-shadow: 0 8px 20px rgba(14,53,87,0.03);
-      min-height: 320px;
+      min-height: 340px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
@@ -212,14 +216,14 @@
     .benefits li { margin-bottom:8px; }
     .price { font-size:1.25rem; font-weight:800; color:var(--text); margin-top:6px; }
     .muted { color:#666; font-size:0.95rem; margin-top:6px; }
-    .package .cta-row { margin-top: 12px; display:flex; gap:10px; align-items:center; }
+    .package .cta-row { margin-top: 12px; display:flex; gap:10px; align-items:center; justify-content:center; } /* centered horizontally */
     .package .button { background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; }
     .package .secondary { background:#fff; color:var(--text); border:1px solid rgba(14,53,87,0.12); padding:9px 12px; border-radius:8px; text-decoration:none; font-weight:700; }
     .package .button:hover { background:#c45e15; }
 
     @media (max-width:1100px) {
       .packages { grid-template-columns: repeat(2, 1fr); }
-      .package { min-height: 280px; }
+      .package { min-height: 300px; }
     }
     @media (max-width:720px) {
       .packages { grid-template-columns: 1fr; }
@@ -259,6 +263,7 @@
       justify-content: center;
       align-items: center;
       z-index: 3000;
+      padding: 24px; /* helps with small screens */
     }
     #enquiry-form.active { display: flex; }
     .form-container {
@@ -271,6 +276,8 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       position: relative;
       z-index: 3001;
+      max-height: 80vh; /* allow internal scrolling */
+      overflow: auto;    /* allow user to scroll the modal content */
     }
     .form-container h2 { margin-top: 0; color: var(--text); }
     input[type="text"], input[type="email"], textarea, select {
@@ -373,30 +380,40 @@
     <!-- SUPPORTER TILES -->
     <div class="supporters" role="list">
       <div class="supporter" role="listitem" aria-labelledby="supporter-50">
-        <h3 id="supporter-50">$50 — Local Supporter</h3>
-        <div class="desc">Best for small local businesses who want to show support and be found by travellers.</div>
-        <ul>
-          <li><strong>Digital Local Supporter Badge</strong> — use on your website, email footer or social profiles.</li>
-          <li><strong>Business name + town listed</strong> on our Season 1 Contributors page (searchable, good for SEO).</li>
-          <li><strong>Early access updates</strong> — route announcements & behind-the-scenes content before public release.</li>
-        </ul>
-        <div class="price">$50</div>
-        <div class="small">Low commitment — high goodwill. Quick sign-up, immediate recognition.</div>
-        <a class="btn" href="#" onclick="openForm('Local Supporter — $50')">Become a Local Supporter</a>
+        <div>
+          <h3 id="supporter-50">$50 — Local Supporter</h3>
+          <div class="desc">Best for small local businesses who want to show support and be found by travellers.</div>
+          <ul>
+            <li><strong>Digital Local Supporter Badge</strong> — use on your website, email footer or social profiles.</li>
+            <li><strong>Business name + town listed</strong> on our Season 1 Contributors page (searchable, good for SEO).</li>
+            <li><strong>Early access updates</strong> — route announcements & behind-the-scenes content before public release.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="price">$50</div>
+          <div class="small">Low commitment — high goodwill. Quick sign-up, immediate recognition.</div>
+          <a class="btn" href="#" onclick="openForm('Local Supporter — $50')">Become a Local Supporter</a>
+        </div>
       </div>
 
       <div class="supporter" role="listitem" aria-labelledby="supporter-100">
-        <h3 id="supporter-100">$100 — Community Champion</h3>
-        <div class="desc">For businesses that want visible branding and ongoing promotion without a full filming package.</div>
-        <ul>
-          <li>Everything in the $50 tier, <em>plus</em>:</li>
-          <li><strong>Logo placement</strong> on the Community Champions wall (visible on Contributors page).</li>
-          <li><strong>Rotating supporter spotlight</strong> — included in social media 'Supporter Showcase' posts.</li>
-          <li><strong>10% discount</strong> on future filming packages (valid 24 months) — a real saving if you later want video content.</li>
-        </ul>
-        <div class="price">$100</div>
-        <div class="small">Adds brand visibility and an easy route to upgrade to paid video packages later.</div>
-        <a class="btn" href="#" onclick="openForm('Community Champion — $100')">Become a Community Champion</a>
+        <div>
+          <h3 id="supporter-100">$100 — Community Champion</h3>
+          <div class="desc">For businesses that want visible branding and ongoing promotion without a full filming package.</div>
+          <ul>
+            <li>Everything in the $50 tier, <em>plus</em>:</li>
+            <li><strong>Logo placement</strong> on the Community Champions wall (visible on Contributors page).</li>
+            <li><strong>Rotating supporter spotlight</strong> — included in social media 'Supporter Showcase' posts.</li>
+            <li><strong>10% discount</strong> on future filming packages (valid 24 months) — a real saving if you later want video content.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="price">$100</div>
+          <div class="small">Adds brand visibility and an easy route to upgrade to paid video packages later.</div>
+          <a class="btn" href="#" onclick="openForm('Community Champion — $100')">Become a Community Champion</a>
+        </div>
       </div>
     </div>
 
@@ -492,9 +509,9 @@
 
         <div style="min-width:220px; text-align:right;">
           <div class="price">$4,995</div>
-          <div style="margin-top:12px;">
+          <div style="margin-top:12px; display:flex; gap:10px; justify-content:center;">
             <a href="#" class="button" onclick="openForm('Platinum Partner — $4,995')">Request Platinum</a>
-            <a class="secondary" href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-left:10px;">Download Full Terms</a>
+            <a class="secondary" href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;">Download Full Terms</a>
           </div>
         </div>
       </div>
@@ -516,9 +533,9 @@
 
         <div style="min-width:220px; text-align:right;">
           <div class="price">$14,995</div>
-          <div style="margin-top:12px;">
+          <div style="margin-top:12px; display:flex; gap:10px; justify-content:center;">
             <a href="#" class="button" onclick="openForm('Major National Sponsor — $14,995')">Discuss Major Sponsorship</a>
-            <a class="secondary" href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-left:10px;">Download Prospectus</a>
+            <a class="secondary" href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;">Download Prospectus</a>
           </div>
         </div>
       </div>
@@ -530,7 +547,7 @@
       <a href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" target="_blank" rel="noopener noreferrer">Download Sponsorship Prospectus</a>
     </div>
 
-    <p class="contact-line">Prefer to talk? Email us at <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a> or call <strong>0400 000 000</strong> (replace with your contact number). We're happy to tailor a package.</p>
+    <p class="contact-line">For further information on our Sponsorship packages, please email us <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>. We're happy to tailor a package.</p>
 
   </main>
 
@@ -542,7 +559,7 @@
       <p style="margin-top:0; color:#444;">Tell us a bit about your business and which sponsorship tier you're interested in. We'll respond within 48 hours (or sooner).</p>
 
       <!-- FORMSPREE FORM -->
-      <form action="https://formspree.io/f/movyjevl" method="POST" id="sponsorForm">
+      <form action="https://formspree.io/f/movyjevl" method="POST" id="sponsorForm" novalidate>
         <input type="hidden" name="_subject" value="New Sponsorship Enquiry from ShowcasingOz TV">
         <label for="package">Sponsorship Package</label>
         <input type="text" id="package" name="package" readonly>
@@ -585,13 +602,17 @@
       pkg.value = packageName;
       ef.classList.add('active');
       ef.setAttribute('aria-hidden','false');
-      // small delay to allow screen readers and focus
+      // ensure body not scroll behind modal on smaller devices
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
       setTimeout(()=>document.getElementById('name').focus(), 160);
     }
     function closeForm() {
       const ef = document.getElementById('enquiry-form');
       ef.classList.remove('active');
       ef.setAttribute('aria-hidden','true');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     }
     // close when clicking backdrop
     document.addEventListener('click', (e) => {
@@ -604,7 +625,7 @@
       if (e.key === 'Escape') closeForm();
     });
 
-    // Progressive enhancement: if JS disabled, Ensure the form is still reachable by the Prospectus link and email.
+    // keep a11y: focus trap not implemented here but can be added if you want.
     (function(){ /* placeholder for any analytics or future form validation */ })();
   </script>
 
@@ -625,3 +646,4 @@
 
 </body>
 </html>
+
