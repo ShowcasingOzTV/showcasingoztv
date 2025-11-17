@@ -191,7 +191,7 @@
     .supporter ul { margin: 8px 0 0 16px; color:#333; text-align:left; }
     .supporter .price { margin-top:12px; font-size:1.15rem; font-weight:700; color:var(--text); text-align:center; }
     .supporter .small { font-size:0.95rem; color:#666; margin-top:8px; text-align:center; }
-    .supporter .btn { margin-top:12px; display:inline-block; background:var(--accent); color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700; }
+    .supporter .btn { margin-top:12px; display:inline-block; background:var(--accent); color:#fff; padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700; border:none; cursor:pointer; }
     .supporter .btn:hover { background:#c45e15; }
 
     @media (max-width:820px) {
@@ -226,9 +226,10 @@
     .package .price { font-size:1.25rem; font-weight:800; color:var(--text); margin: 12px auto 6px auto; text-align:center; }
     .muted { color:#666; font-size:0.95rem; margin-top:6px; text-align:center; }
     .package .cta-row { margin-top: 12px; display:flex; gap:10px; align-items:center; justify-content:center; } /* centered horizontally */
-    .package .button { background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; }
-    .package .secondary { background:#fff; color:var(--text); border:1px solid rgba(14,53,87,0.12); padding:9px 12px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; }
-    .package .button:hover { background:#c45e15; }
+    .button { background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; border:none; cursor:pointer; }
+    .secondary { background:#fff; color:var(--text); border:1px solid rgba(14,53,87,0.12); padding:9px 12px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; cursor:pointer; }
+    .button:hover { background:#c45e15; }
+    .secondary:hover { background:#f7f7f7; border-color:rgba(14,53,87,0.18); }
 
     @media (max-width:1100px) {
       .packages { grid-template-columns: repeat(2, 1fr); }
@@ -257,8 +258,7 @@
     .premium .price { font-size:1.5rem; font-weight:900; color:var(--text); text-align:right; }
     .premium .premium-ctas { display:flex; gap:10px; justify-content:center; margin-top:12px; }
     /* ensure the secondary class looks like a button in premium area too */
-    .secondary { background:#fff; color:var(--text); border:1px solid rgba(14,53,87,0.12); padding:9px 12px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block; }
-    .secondary:hover { background:#f7f7f7; border-color:rgba(14,53,87,0.18); }
+    /* (already defined above) */
 
     @media (max-width:820px) {
       .premium .premium-inner { flex-direction:column; align-items:stretch; }
@@ -417,7 +417,7 @@
         <div class="bottom">
           <div class="price">$50</div>
           <div class="small">Low commitment — high goodwill. Quick sign-up, immediate recognition.</div>
-          <a class="btn" href="#" onclick="openForm('Local Supporter — $50')">Become a Local Supporter</a>
+          <button class="btn" type="button" onclick="openForm('Local Supporter — $50')">Become a Local Supporter</button>
         </div>
       </div>
 
@@ -436,7 +436,7 @@
         <div class="bottom">
           <div class="price">$100</div>
           <div class="small">Adds brand visibility and an easy route to upgrade to paid video packages later.</div>
-          <a class="btn" href="#" onclick="openForm('Community Champion — $100')">Become a Community Champion</a>
+          <button class="btn" type="button" onclick="openForm('Community Champion — $100')">Become a Community Champion</button>
         </div>
       </div>
     </div>
@@ -534,8 +534,9 @@
         <div style="min-width:220px; text-align:right;">
           <div class="price">$4,995</div>
           <div class="premium-ctas">
-            <a href="#" class="button" onclick="openForm('Platinum Partner — $4,995')">Send Enquiry</a>
-            <a href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" class="secondary" target="_blank" rel="noopener noreferrer">View Prospectus</a>
+            <!-- Changed to buttons as requested -->
+            <button type="button" class="button" onclick="openForm('Platinum Partner — $4,995')">Send Enquiry</button>
+            <button type="button" class="secondary" onclick="window.open('ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf','_blank')">View Prospectus</button>
           </div>
         </div>
       </div>
@@ -558,8 +559,9 @@
         <div style="min-width:220px; text-align:right;">
           <div class="price">$14,995</div>
           <div class="premium-ctas">
-            <a href="#" class="button" onclick="openForm('Major National Sponsor — $14,995')">Send Enquiry</a>
-            <a href="ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf" class="secondary" target="_blank" rel="noopener noreferrer">View Prospectus</a>
+            <!-- Changed to buttons as requested -->
+            <button type="button" class="button" onclick="openForm('Major National Sponsor — $14,995')">Send Enquiry</button>
+            <button type="button" class="secondary" onclick="window.open('ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf','_blank')">View Prospectus</button>
           </div>
         </div>
       </div>
@@ -675,4 +677,3 @@
 
 </body>
 </html>
-
