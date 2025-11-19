@@ -21,7 +21,7 @@
   <meta name="keywords" content="ShowcasingOz TV, Australian travel show, travel series Australia, discover Australia, tourism Australia, Australian destinations, TV travel host" />
   <meta name="author" content="ShowcasingOz TV" />
 
-  <!-- ✅ OPEN GRAPH (SOCIAL SHARING) -->
+  <!-- OPEN GRAPH -->
   <meta property="og:title" content="ShowcasingOz TV — Discover. Capture. Share." />
   <meta property="og:description" content="Discover authentic Australian travel stories and destinations through ShowcasingOz TV — the independent travel and tourism series promoting regional experiences." />
   <meta property="og:image" content="https://showcasingoztv.com.au/images/banner.png" />
@@ -29,19 +29,19 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShowcasingOz TV" />
 
-  <!-- ✅ TWITTER CARD -->
+  <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ShowcasingOz TV — Discover. Capture. Share." />
   <meta name="twitter:description" content="Discover the real Australia — regional travel, attractions, and stories captured on film." />
   <meta name="twitter:image" content="https://showcasingoztv.com.au/images/banner.png" />
 
-  <!-- ✅ CANONICAL -->
+  <!-- CANONICAL -->
   <link rel="canonical" href="https://showcasingoztv.com.au/" />
 
-  <!-- ✅ FAVICON -->
+  <!-- FAVICON -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- ✅ SCHEMA (Organization) -->
+  <!-- SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,10 +73,7 @@
     "https://www.tiktok.com/@showcasingoztv"
   ],
   "description": "ShowcasingOz TV is an Australian travel and lifestyle television series celebrating real destinations, people, and stories across Australia.",
-  "founder": {
-    "@type": "Person",
-    "name": "David Stidston"
-  },
+  "founder": { "@type": "Person", "name": "David Stidston" },
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Media & Partnerships",
@@ -86,12 +83,12 @@
 }
 </script>
 
-  <!-- Font Awesome for social icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Styles (kept exactly as in your original file) -->
+  <!-- Styles -->
   <style>
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -122,7 +119,7 @@
     }
 
     header.navbar img {
-      height: 65px; /* Increased logo size */
+      height: 65px;
       width: auto;
     }
 
@@ -133,12 +130,8 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #E87722;
-      transition: color 0.3s ease;
-    }
+    nav a:hover { color: #E87722; }
 
-    /* Mobile Menu */
     .menu-btn {
       display: none;
       font-size: 1.5rem;
@@ -155,33 +148,23 @@
         right: 0;
         width: 100%;
       }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      nav a {
-        padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-      }
+      nav.active { display: flex; }
+      .menu-btn { display: block; }
+      nav a { padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
     }
 
     /* Banner */
     .banner {
       display: block;
       width: 100%;
-      height: 520px; /* Taller banner */
+      height: 520px;
       background: url('images/banner.png') center center / cover no-repeat;
       background-color: #ffffff;
       border: none;
       margin-bottom: 40px;
     }
 
-    /* Intro section */
+    /* Intro */
     .intro {
       display: flex;
       justify-content: center;
@@ -192,21 +175,14 @@
     }
 
     .intro img.logo {
-      width: 180px; /* Bigger logo below banner */
+      width: 180px;
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
     }
 
-    .text-block h1 {
-      font-size: 2.2rem;
-      margin: 0;
-    }
-
-    .text-block p {
-      color: #444;
-      margin: 5px 0 0;
-    }
+    .text-block h1 { font-size: 2.2rem; margin: 0; }
+    .text-block p { color: #444; margin: 5px 0 0; }
 
     .tagline {
       color: #E87722;
@@ -244,6 +220,7 @@
       padding: 20px;
     }
 
+    /* Careers */
     .careers-section {
       max-width: 1100px;
       margin: 80px auto;
@@ -314,7 +291,6 @@
     .tt { background: #000000; }
     .fb { background: #1877F2; }
 
-    /* FOOTER */
     footer {
       background: #0E3557;
       color: #fff;
@@ -336,6 +312,18 @@
     @media (max-width: 900px) {
       .about-cards, .careers-grid { flex-direction: column; align-items: center; }
     }
+
+    /* --- MOBILE BANNER FIX (prevents banner overflow) --- */
+    @media (max-width: 768px) {
+      .banner {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+    }
+
   </style>
 </head>
 
@@ -361,7 +349,6 @@
   </header>
 
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
     menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
