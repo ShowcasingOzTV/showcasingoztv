@@ -17,7 +17,7 @@
   <meta name="description" content="Browse Australian towns featured in ShowcasingOz TV’s documentaries. View destinations alphabetically and explore upcoming full-town video guides and attractions." />
   <meta name="keywords" content="Australian towns, travel towns Australia, tourism regions Australia, ShowcasingOz TV, destinations, attractions" />
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -73,7 +73,6 @@
       nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.1); }
     }
 
-    /* Page Title */
     .page-header {
       margin: 40px auto 10px;
     }
@@ -89,7 +88,6 @@
       margin-top: 5px;
     }
 
-    /* Grid */
     .towns-grid {
       max-width: 1100px;
       margin: 50px auto;
@@ -106,7 +104,7 @@
       background: #ffffff;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      text-align: left;
+      text-align: center; /* fixed */
       overflow: hidden;
       display:flex;
       flex-direction:column;
@@ -121,6 +119,7 @@
 
     .town-card-content {
       padding: 20px;
+      text-align: center;
     }
 
     .town-card h3 {
@@ -143,7 +142,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      text-align:center;
+      text-align: center;
       margin-top: 15px;
     }
 
@@ -164,17 +163,17 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="index.html"><img src="images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
     <nav id="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="towns.html" style="color:#E87722;">Towns</a>
-      <a href="partner.html">Partner With Us</a>
-      <a href="sponsorship.html">Sponsorship</a>
-      <a href="filming-map.html">Filming Map</a>
-      <a href="press.html">Press</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -195,158 +194,574 @@
 <section class="towns-grid">
 
 <!-- === A === -->
-<div class="town-card"><img src="images/towns/alice-springs.png" alt="Alice Springs"><div class="town-card-content"><h3>Alice Springs (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/alice-springs.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/alice-springs.png" alt="Alice Springs">
+  <div class="town-card-content">
+    <h3>Alice Springs (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="alice-springs.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/andamooka.jpg"><div class="town-card-content"><h3>Andamooka (SA)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/andamooka.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/andamooka.jpg">
+  <div class="town-card-content">
+    <h3>Andamooka (SA)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="andamooka.html">View Town</a>
+  </div>
+</div>
 
 <!-- === B === -->
-<div class="town-card"><img src="images/towns/balranald.jpg"><div class="town-card-content"><h3>Balranald (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/balranald.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/balranald.jpg">
+  <div class="town-card-content">
+    <h3>Balranald (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="balranald.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/barham.jpg"><div class="town-card-content"><h3>Barham (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/barham.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/barham.jpg">
+  <div class="town-card-content">
+    <h3>Barham (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="barham.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/barkly-roadhouse.jpg"><div class="town-card-content"><h3>Barkly Roadhouse (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/barkly-roadhouse.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/barkly-roadhouse.jpg">
+  <div class="town-card-content">
+    <h3>Barkly Roadhouse (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="barkly-roadhouse.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/bendigo.jpg"><div class="town-card-content"><h3>Bendigo (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/bendigo.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/bendigo.jpg">
+  <div class="town-card-content">
+    <h3>Bendigo (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="bendigo.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/birchip.jpg"><div class="town-card-content"><h3>Birchip (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/birchip.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/birchip.jpg">
+  <div class="town-card-content">
+    <h3>Birchip (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="birchip.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/borroloola.jpg"><div class="town-card-content"><h3>Borroloola (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/borroloola.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/borroloola.jpg">
+  <div class="town-card-content">
+    <h3>Borroloola (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="borroloola.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/bourke.jpg"><div class="town-card-content"><h3>Bourke (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/bourke.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/bourke.jpg">
+  <div class="town-card-content">
+    <h3>Bourke (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="bourke.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/broken-hill.jpg"><div class="town-card-content"><h3>Broken Hill (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/broken-hill.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/broken-hill.jpg">
+  <div class="town-card-content">
+    <h3>Broken Hill (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="broken-hill.html">View Town</a>
+  </div>
+</div>
 
 <!-- === C === -->
-<div class="town-card"><img src="images/towns/charleville.jpg"><div class="town-card-content"><h3>Charleville (QLD)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/charleville.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/charleville.jpg">
+  <div class="town-card-content">
+    <h3>Charleville (QLD)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="charleville.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/charlton.jpg"><div class="town-card-content"><h3>Charlton (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/charlton.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/charlton.jpg">
+  <div class="town-card-content">
+    <h3>Charlton (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="charlton.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/cobar.jpg"><div class="town-card-content"><h3>Cobar (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/cobar.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/cobar.jpg">
+  <div class="town-card-content">
+    <h3>Cobar (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="cobar.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/coober-pedy.jpg"><div class="town-card-content"><h3>Coober Pedy (SA)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/coober-pedy.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/coober-pedy.jpg">
+  <div class="town-card-content">
+    <h3>Coober Pedy (SA)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="coober-pedy.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/cunnamulla.jpg"><div class="town-card-content"><h3>Cunnamulla (QLD)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/cunnamulla.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/cunnamulla.jpg">
+  <div class="town-card-content">
+    <h3>Cunnamulla (QLD)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="cunnamulla.html">View Town</a>
+  </div>
+</div>
 
 <!-- === D === -->
-<div class="town-card"><img src="images/towns/daly-waters.jpg"><div class="town-card-content"><h3>Daly Waters (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/daly-waters.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/daly-waters.jpg">
+  <div class="town-card-content">
+    <h3>Daly Waters (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="daly-waters.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/deniliquin.jpg"><div class="town-card-content"><h3>Deniliquin (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/deniliquin.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/deniliquin.jpg">
+  <div class="town-card-content">
+    <h3>Deniliquin (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="deniliquin.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/donald.jpg"><div class="town-card-content"><h3>Donald (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/donald.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/donald.jpg">
+  <div class="town-card-content">
+    <h3>Donald (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="donald.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/dunkeld.jpg"><div class="town-card-content"><h3>Dunkeld (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/dunkeld.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/dunkeld.jpg">
+  <div class="town-card-content">
+    <h3>Dunkeld (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="dunkeld.html">View Town</a>
+  </div>
+</div>
 
 <!-- === E === -->
-<div class="town-card"><img src="images/towns/edenhope.jpg"><div class="town-card-content"><h3>Edenhope (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/edenhope.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/edenhope.jpg">
+  <div class="town-card-content">
+    <h3>Edenhope (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="edenhope.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/eromanga.jpg"><div class="town-card-content"><h3>Eromanga (QLD)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/eromanga.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/eromanga.jpg">
+  <div class="town-card-content">
+    <h3>Eromanga (QLD)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="eromanga.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/euston.jpg"><div class="town-card-content"><h3>Euston (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/euston.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/euston.jpg">
+  <div class="town-card-content">
+    <h3>Euston (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="euston.html">View Town</a>
+  </div>
+</div>
 
 <!-- === G === -->
-<div class="town-card"><img src="images/towns/griffith.jpg"><div class="town-card-content"><h3>Griffith (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/griffith.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/griffith.jpg">
+  <div class="town-card-content">
+    <h3>Griffith (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="griffith.html">View Town</a>
+  </div>
+</div>
 
 <!-- === H === -->
-<div class="town-card"><img src="images/towns/halls-creek.jpg"><div class="town-card-content"><h3>Halls Creek (WA)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/halls-creek.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/halls-creek.jpg">
+  <div class="town-card-content">
+    <h3>Halls Creek (WA)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="halls-creek.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/halls-gap.jpg"><div class="town-card-content"><h3>Halls Gap (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/halls-gap.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/halls-gap.jpg">
+  <div class="town-card-content">
+    <h3>Halls Gap (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="halls-gap.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/hay.jpg"><div class="town-card-content"><h3>Hay (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/hay.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/hay.jpg">
+  <div class="town-card-content">
+    <h3>Hay (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="hay.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/hillston.jpg"><div class="town-card-content"><h3>Hillston (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/hillston.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/hillston.jpg">
+  <div class="town-card-content">
+    <h3>Hillston (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="hillston.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/hopetoun.jpg"><div class="town-card-content"><h3>Hopetoun (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/hopetoun.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/hopetoun.jpg">
+  <div class="town-card-content">
+    <h3>Hopetoun (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="hopetoun.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/horsham.jpg"><div class="town-card-content"><h3>Horsham (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/horsham.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/horsham.jpg">
+  <div class="town-card-content">
+    <h3>Horsham (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="horsham.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/hamilton.jpg"><div class="town-card-content"><h3>Hamilton (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/hamilton.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/hamilton.jpg">
+  <div class="town-card-content">
+    <h3>Hamilton (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="hamilton.html">View Town</a>
+  </div>
+</div>
 
 <!-- === I === -->
-<div class="town-card"><img src="images/towns/ivanhoe.jpg"><div class="town-card-content"><h3>Ivanhoe (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/ivanhoe.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/ivanhoe.jpg">
+  <div class="town-card-content">
+    <h3>Ivanhoe (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="ivanhoe.html">View Town</a>
+  </div>
+</div>
 
 <!-- === J === -->
-<div class="town-card"><img src="images/towns/jerilderie.jpg"><div class="town-card-content"><h3>Jerilderie (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/jerilderie.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/jerilderie.jpg">
+  <div class="town-card-content">
+    <h3>Jerilderie (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="jerilderie.html">View Town</a>
+  </div>
+</div>
 
 <!-- === K === -->
-<div class="town-card"><img src="images/towns/kerang.jpg"><div class="town-card-content"><h3>Kerang (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/kerang.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/kerang.jpg">
+  <div class="town-card-content">
+    <h3>Kerang (VIC)</h>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="kerang.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/kings-canyon.jpg"><div class="town-card-content"><h3>Kings Canyon (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/kings-canyon.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/kings-canyon.jpg">
+  <div class="town-card-content">
+    <h3>Kings Canyon (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="kings-canyon.html">View Town</a>
+  </div>
+</div>
 
 <!-- === L === -->
-<div class="town-card"><img src="images/towns/laura.jpg"><div class="town-card-content"><h3>Laura (SA)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/laura.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/laura.jpg">
+  <div class="town-card-content">
+    <h3>Laura (SA)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="laura.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/louth.jpg"><div class="town-card-content"><h3>Louth (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/louth.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/louth.jpg">
+  <div class="town-card-content">
+    <h3>Louth (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="louth.html">View Town</a>
+  </div>
+</div>
 
 <!-- === M === -->
-<div class="town-card"><img src="images/towns/menindee.jpg"><div class="town-card-content"><h3>Menindee (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/menindee.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/menindee.jpg">
+  <div class="town-card-content">
+    <h3>Menindee (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="menindee.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/moulamein.jpg"><div class="town-card-content"><h3>Moulamein (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/moulamein.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/moulamein.jpg">
+  <div class="town-card-content">
+    <h3>Moulamein (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="moulamein.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/mungo.jpg"><div class="town-card-content"><h3>Mungo (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/mungo.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/mungo.jpg">
+  <div class="town-card-content">
+    <h3>Mungo (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="mungo.html">View Town</a>
+  </div>
+</div>
 
 <!-- === N === -->
-<div class="town-card"><img src="images/towns/nhill.jpg"><div class="town-card-content"><h3>Nhill (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/nhill.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/nhill.jpg">
+  <div class="town-card-content">
+    <h3>Nhill (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="nhill.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/nyngan.jpg"><div class="town-card-content"><h3>Nyngan (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/nyngan.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/nyngan.jpg">
+  <div class="town-card-content">
+    <h3>Nyngan (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="nyngan.html">View Town</a>
+  </div>
+</div>
 
 <!-- === P === -->
-<div class="town-card"><img src="images/towns/portland.jpg"><div class="town-card-content"><h3>Portland (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/portland.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/portland.jpg">
+  <div class="town-card-content">
+    <h3>Portland (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="portland.html">View Town</a>
+  </div>
+</div>
 
 <!-- === Q === -->
-<div class="town-card"><img src="images/towns/quilpie.jpg"><div class="town-card-content"><h3>Quilpie (QLD)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/quilpie.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/quilpie.jpg">
+  <div class="town-card-content">
+    <h3>Quilpie (QLD)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="quilpie.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/quorn.jpg"><div class="town-card-content"><h3>Quorn (SA)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/quorn.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/quorn.jpg">
+  <div class="town-card-content">
+    <h3>Quorn (SA)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="quorn.html">View Town</a>
+  </div>
+</div>
 
 <!-- === R === -->
-<div class="town-card"><img src="images/towns/rabbit-flat.jpg"><div class="town-card-content"><h3>Rabbit Flat (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/rabbit-flat.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/rabbit-flat.jpg">
+  <div class="town-card-content">
+    <h3>Rabbit Flat (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="rabbit-flat.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/roxby-downs.jpg"><div class="town-card-content"><h3>Roxby Downs (SA)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/roxby-downs.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/roxby-downs.jpg">
+  <div class="town-card-content">
+    <h3>Roxby Downs (SA)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="roxby-downs.html">View Town</a>
+  </div>
+</div>
 
 <!-- === S === -->
-<div class="town-card"><img src="images/towns/silverton.jpg"><div class="town-card-content"><h3>Silverton (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/silverton.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/silverton.jpg">
+  <div class="town-card-content">
+    <h3>Silverton (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="silverton.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/st-arnaud.jpg"><div class="town-card-content"><h3>St Arnaud (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/st-arnaud.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/st-arnaud.jpg">
+  <div class="town-card-content">
+    <h3>St Arnaud (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="st-arnaud.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/stawell.jpg"><div class="town-card-content"><h3>Stawell (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/stawell.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/stawell.jpg">
+  <div class="town-card-content">
+    <h3>Stawell (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="stawell.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/swan-hill.jpg"><div class="town-card-content"><h3>Swan Hill (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/swan-hill.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/swan-hill.jpg">
+  <div class="town-card-content">
+    <h3>Swan Hill (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="swan-hill.html">View Town</a>
+  </div>
+</div>
 
 <!-- === T === -->
-<div class="town-card"><img src="images/towns/tennant-creek.jpg"><div class="town-card-content"><h3>Tennant Creek (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/tennant-creek.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/tennant-creek.jpg">
+  <div class="town-card-content">
+    <h3>Tennant Creek (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="tennant-creek.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/thargomindah.jpg"><div class="town-card-content"><h3>Thargomindah (QLD)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/thargomindah.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/thargomindah.jpg">
+  <div class="town-card-content">
+    <h3>Thargomindah (QLD)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="thargomindah.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/tibooburra.jpg"><div class="town-card-content"><h3>Tibooburra (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/tibooburra.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/tibooburra.jpg">
+  <div class="town-card-content">
+    <h3>Tibooburra (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="tibooburra.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/timouth-well.jpg"><div class="town-card-content"><h3>Timouth Well (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/timouth-well.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/timouth-well.jpg">
+  <div class="town-card-content">
+    <h3>Timouth Well (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="timouth-well.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/top-springs.jpg"><div class="town-card-content"><h3>Top Springs (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/top-springs.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/top-springs.jpg">
+  <div class="town-card-content">
+    <h3>Top Springs (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="top-springs.html">View Town</a>
+  </div>
+</div>
 
 <!-- === U === -->
-<div class="town-card"><img src="images/towns/uluru-yulara.jpg"><div class="town-card-content"><h3>Uluru / Yulara (NT)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/uluru-yulara.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/uluru-yulara.jpg">
+  <div class="town-card-content">
+    <h3>Uluru / Yulara (NT)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="uluru-yulara.html">View Town</a>
+  </div>
+</div>
 
 <!-- === W === -->
-<div class="town-card"><img src="images/towns/warrnambool.jpg"><div class="town-card-content"><h3>Warrnambool (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/warrnambool.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/warrnambool.jpg">
+  <div class="town-card-content">
+    <h3>Warrnambool (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="warrnambool.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/wedderburn.jpg"><div class="town-card-content"><h3>Wedderburn (VIC)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/wedderburn.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/wedderburn.jpg">
+  <div class="town-card-content">
+    <h3>Wedderburn (VIC)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="wedderburn.html">View Town</a>
+  </div>
+</div>
 
-<div class="town-card"><img src="images/towns/white-cliffs.jpg"><div class="town-card-content"><h3>White Cliffs (NSW)</h3><p>Full documentary coming soon!</p><a class="btn-primary" href="towns/white-cliffs.html">View Town</a></div></div>
+<div class="town-card">
+  <img src="../images/towns/white-cliffs.jpg">
+  <div class="town-card-content">
+    <h3>White Cliffs (NSW)</h3>
+    <p>Full documentary coming soon!</p>
+    <a class="btn-primary" href="white-cliffs.html">View Town</a>
+  </div>
+</div>
 
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Us</a> |
-    <a href="partner.html">Partner With Us</a> |
-    <a href="sponsorship.html">Sponsorship</a> |
-    <a href="filming-map.html">Filming Map</a> |
-    <a href="press.html">Press</a> |
-    <a href="contact.html">Contact</a>
+    <a href="../index.html">Home</a> |
+    <a href="../about.html">About Us</a> |
+    <a href="../towns/index.html">Towns</a> |
+    <a href="../partner.html">Partner With Us</a> |
+    <a href="../sponsorship.html">Sponsorship</a> |
+    <a href="../filming-map.html">Filming Map</a> |
+    <a href="../press.html">Press</a> |
+    <a href="../contact.html">Contact</a>
   </div>
-  <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-  © 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
 </footer>
 
 </body>
