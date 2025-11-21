@@ -11,27 +11,24 @@
   </script>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Nyngan (New South Wales) | ShowcasingOz TV</title>
-  <meta name="description" content="Full documentary for Nyngan (New South Wales) coming soon on ShowcasingOz TV — featuring local attractions, landmarks, and travel stories." />
+  <title>Nyngan (NSW) | ShowcasingOz TV</title>
+  <meta name="description" content="Discover Nyngan (NSW) — an iconic outback town known for the Big Bogan, rich agricultural heritage, the Bogan River and welcoming country hospitality. Featured in ShowcasingOz TV’s travel series." />
+  <meta name="keywords" content="Nyngan, NSW, Big Bogan, Bogan River, outback NSW, Bogan Shire, agriculture, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
 
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
-      text-align: center;
     }
 
+    /* Header */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -41,8 +38,7 @@
       top: 0;
       z-index: 1000;
     }
-
-    header.navbar .container {
+    header .container {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
@@ -50,87 +46,88 @@
       align-items: center;
       padding: 0 20px;
     }
-
-    header.navbar img {
-      height: 65px;
-    }
-
+    header img { height: 65px; }
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-    nav a:hover { color:#E87722; }
-
+    nav a:hover { color: #E87722; }
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
       nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.1); }
+      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
     }
 
+    /* Hero Banner */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background: url('../images/towns/nyngan.png') center center / cover no-repeat;
+    }
+
+    /* Content */
     .content {
       max-width: 900px;
       margin: 40px auto;
-      padding: 0 20px 60px;
-      text-align: left;
+      padding: 0 20px;
     }
 
-    .content h1 {
-      font-size: 2rem;
-      color: #0E3557;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
+    h2 { color:#E87722; margin-top:40px; }
 
-    .content p {
-      font-size: 1.05rem;
-      color: #333;
-      line-height: 1.6;
-    }
+    p { line-height:1.6; color:#333; }
 
-    .hero-image {
-      width: 100%;
-      max-width: 900px;
-      height: 320px;
-      background: #ddd;
-      border-radius: 12px;
-      margin: 20px auto 30px;
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-    }
-
-    .coming-soon {
-      background:#f5f7fa;
-      border-radius:12px;
-      padding:20px;
+    /* Attractions Grid */
+    .attraction-grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:25px;
+      justify-content:center;
       margin-top:20px;
     }
-
-    .back-link {
-      display:inline-block;
-      margin-top:25px;
-      color:#0E3557;
-      font-weight:600;
-      text-decoration:none;
+    .attraction-card {
+      width:260px;
+      background:#f9f9f9;
+      border-radius:12px;
+      padding:15px;
+      text-align:center;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
     }
-    .back-link i { margin-right:6px; }
-    .back-link:hover { text-decoration:underline; }
+    .attraction-card img {
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:10px;
+      background:#ddd;
+    }
+
+    /* Video Placeholder */
+    .video-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
+      border-radius:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.3rem;
+      margin-top:20px;
+    }
 
     footer {
       background:#0E3557;
       color:#fff;
       padding:30px 20px;
       margin-top:60px;
-      font-size:0.9rem;
+      text-align:center;
     }
-
-    footer a { color:#E87722; text-decoration:none; margin:0 10px; }
-    footer a:hover { text-decoration:underline; }
+    footer a { color:#E87722; text-decoration:none; }
   </style>
 </head>
 
@@ -141,61 +138,82 @@
   <div class="container">
     <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
- <nav id="menu">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="towns.html">Towns</a>
-  <a href="partner.html">Partner With Us</a>
-  <a href="sponsorship.html">Sponsorship</a>
-  <a href="filming-map.html">Filming Map</a>
-  <a href="press.html">Press</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
 <script>
-  const menuBtn=document.getElementById('menu-btn');
-  const menu=document.getElementById('menu');
-  menuBtn.addEventListener('click',()=>menu.classList.toggle('active'));
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
+
+<!-- HERO -->
+<section class="hero"></section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
-  <h1>Nyngan (New South Wales)</h1>
+  <h1>Nyngan (NSW)</h1>
 
-  <div class="hero-image" style="background-image:url('../images/towns/nyngan.png');"></div>
+  <p>
+    Nyngan is a friendly and iconic outback NSW town located on the banks of the  
+    Bogan River. Known for its strong agricultural heritage, wide-open landscapes  
+    and welcoming country spirit, Nyngan is a memorable stop for travellers  
+    crossing western New South Wales.
+    <br><br>
+    The town is home to the famous **Big Bogan** statue, a fun and much-loved  
+    attraction that draws visitors from all over Australia. Nyngan also features  
+    local museums, riverside walks, rich country history and easy access to  
+    far-west NSW adventures.
+    <br><br>
+    ShowcasingOz TV will be capturing Nyngan’s stories, culture, scenery and  
+    classic outback hospitality during our 2026 filming journey.
+  </p>
 
-  <div class="coming-soon">
-    <p><strong>Full documentary coming soon!</strong></p>
-    <p>
-      ShowcasingOz TV will be filming a dedicated feature on <strong>Nyngan (New South Wales)</strong>,
-      highlighting its local attractions, points of interest, and unique travel experiences.
-      Once filming and editing are complete, you’ll be able to watch the full episode and explore
-      a breakdown of the key highlights right here.
-    </p>
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">
+    Documentary Coming Soon
   </div>
 
-  <a class="back-link" href="../towns.html">
-    <i class="fa fa-arrow-left"></i> Back to all towns
-  </a>
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p>
+    We'll be highlighting Nyngan’s riverfront, heritage, famous Big Bogan and  
+    local attractions in September 2026 during Series 1.
+  </p>
+
+  <div class="attraction-grid">
+    <div class="attraction-card">
+      <img src="../images/coming-soon.png" alt="Coming Soon">
+      <p>Attractions Coming Soon</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- FOOTER -->
 <footer>
-<div class="footer-links">
-  <a href="index.html">Home</a> |
-  <a href="about.html">About Us</a> |
-  <a href="towns.html">Towns</a> |
-  <a href="partner.html">Partner With Us</a> |
-  <a href="sponsorship.html">Sponsorship</a> |
-  <a href="filming-map.html">Filming Map</a> |
-  <a href="press.html">Press</a> |
-  <a href="contact.html">Contact</a>
-</div>
-  <p>📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-  © 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a> |
+    <a href="../about.html">About Us</a> |
+    <a href="../towns/index.html">Towns</a> |
+    <a href="../partner.html">Partner With Us</a> |
+    <a href="../sponsorship.html">Sponsorship</a> |
+    <a href="../filming-map.html">Filming Map</a> |
+    <a href="../press.html">Press</a> |
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <p>© 2025 ShowcasingOz TV · Discover. Capture. Share.</p>
 </footer>
 
 </body>
