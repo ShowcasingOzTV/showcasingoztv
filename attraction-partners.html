@@ -47,14 +47,38 @@
     :root{--nav:#0d3150;--accent:#E87722;--text:#0E3557;--muted:#6b7280;--card:#ffffff;--intro-bg:#fff6ef}
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0;color:var(--text);background:#fff}
-    header.navbar{background:var(--nav);color:#fff;padding:12px 0;position:sticky;top:0;z-index:1000}
+
+    /* UPDATED: white header to match other pages */
+    header.navbar{
+      background:#ffffff;
+      color:var(--text);
+      padding:12px 0;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
     header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between}
     header img{height:52px}
     nav.primary{display:flex;gap:20px;align-items:center}
-    nav.primary a{color:#fff;text-decoration:none;font-weight:600}
+    nav.primary a{color:var(--text);text-decoration:none;font-weight:600}
     nav.primary a:hover{color:var(--accent)}
-    .menu-btn{display:none}
-    @media(max-width:768px){.menu-btn{display:block;color:#fff} nav.primary{display:none;flex-direction:column;position:absolute;top:68px;right:0;background:var(--nav);width:100%} nav.primary.active{display:flex} nav.primary a{padding:12px;border-top:1px solid rgba(255,255,255,0.06)}}
+    .menu-btn{display:none;color:var(--text);}
+    @media(max-width:768px){
+      .menu-btn{display:block}
+      nav.primary{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:68px;
+        right:0;
+        background:#ffffff;
+        width:100%;
+        border-top:1px solid #eee;
+      }
+      nav.primary.active{display:flex}
+      nav.primary a{padding:12px;border-top:1px solid rgba(0,0,0,0.06)}
+    }
 
     .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
     .hero h1{font-size:34px;margin:0 0 10px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
@@ -201,21 +225,21 @@
 
   <!-- HEADER (Home page style: logo left, nav right - removed Accommodation & Attractions links) -->
   <header class="navbar">
-  <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
-    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-    <nav id="menu">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About Us</a>
-      <a href="../towns/index.html">Towns</a>
-      <a href="../partner.html">Partner With Us</a>
-      <a href="../sponsorship.html">Sponsorship</a>
-      <a href="../filming-map.html">Filming Map</a>
-      <a href="../press.html">Press</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    <div class="container">
+      <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Us</a>
+        <a href="../towns/index.html">Towns</a>
+        <a href="../partner.html">Partner With Us</a>
+        <a href="../sponsorship.html">Sponsorship</a>
+        <a href="../filming-map.html">Filming Map</a>
+        <a href="../press.html">Press</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <script>
     document.getElementById('menu-btn').addEventListener('click', ()=> {
@@ -360,7 +384,6 @@
           <div class="intro">Introductory Price: $880</div>
           <div class="std">Standard Price: $1,100</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T1 Attraction Feature Video','Attr_T1'); return false;">
           Express Interest
@@ -378,7 +401,6 @@
           <div class="intro">Introductory Price: $719</div>
           <div class="std">Standard Price: $899</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T2 Operator Interview / Story Video','Attr_T2'); return false;">
           Express Interest
@@ -396,7 +418,6 @@
           <div class="intro">Introductory Price: $600</div>
           <div class="std">Standard Price: $750</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T3 Action Highlight Reel','Attr_T3'); return false;">
           Express Interest
@@ -414,7 +435,6 @@
           <div class="intro">Introductory Price: $760</div>
           <div class="std">Standard Price: $950</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T4 Educational / Interpretive Video','Attr_T4'); return false;">
           Express Interest
@@ -432,7 +452,6 @@
           <div class="intro">Introductory Price: $920</div>
           <div class="std">Standard Price: $1,150</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T5 Visitor Experience Walkthrough','Attr_T5'); return false;">
           Express Interest
@@ -450,7 +469,6 @@
           <div class="intro">Introductory Price: $520</div>
           <div class="std">Standard Price: $650</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T6 Drone Aerial Package','Attr_T6'); return false;">
           Express Interest
@@ -468,7 +486,6 @@
           <div class="intro">Introductory Price: $360</div>
           <div class="std">Standard Price: $450</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T7 Short-Form Social Media Bundle','Attr_T7'); return false;">
           Express Interest
@@ -486,7 +503,6 @@
           <div class="intro">Introductory Price: $319</div>
           <div class="std">Standard Price: $399</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T8 Google Business Profile Upgrade','Attr_T8'); return false;">
           Express Interest
@@ -504,7 +520,6 @@
           <div class="intro">Introductory Price: $360</div>
           <div class="std">Standard Price: $450</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T9 Ticket-Sales Optimisation','Attr_T9'); return false;">
           Express Interest
@@ -522,7 +537,6 @@
           <div class="intro">Introductory Price: $440</div>
           <div class="std">Standard Price: $550</div>
         </div>
-        <!-- CHANGED to button -->
         <button class="btn" type="button"
            onclick="openForm('Attraction Service - T10 ShowcasingOz TV Feature Spot','Attr_T10'); return false;">
           Express Interest
@@ -549,17 +563,17 @@
 
   </main>
 
- <footer>
+  <footer>
     <div class="footer-links">
-    <a href="../index.html">Home</a> |
-    <a href="../about.html">About Us</a> |
-    <a href="../towns/index.html">Towns</a> |
-    <a href="../partner.html">Partner With Us</a> |
-    <a href="../sponsorship.html">Sponsorship</a> |
-    <a href="../filming-map.html">Filming Map</a> |
-    <a href="../press.html">Press</a> |
-    <a href="../contact.html">Contact</a>
-  </div>
+      <a href="../index.html">Home</a> |
+      <a href="../about.html">About Us</a> |
+      <a href="../towns/index.html">Towns</a> |
+      <a href="../partner.html">Partner With Us</a> |
+      <a href="../sponsorship.html">Sponsorship</a> |
+      <a href="../filming-map.html">Filming Map</a> |
+      <a href="../press.html">Press</a> |
+      <a href="../contact.html">Contact</a>
+    </div>
     <p>
       📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
       © 2025 ShowcasingOz TV · Discover. Capture. Share.
@@ -572,7 +586,7 @@
       <button class="close-btn" onclick="closeForm()" aria-label="Close enquiry form">&times;</button>
       <h2 id="enquiryTitle">Send Enquiry</h2>
 
-      <!-- Form posts to your Formspree endpoint -->
+      <!-- The form posts to your Formspree endpoint -->
       <form id="partnerEnquiryForm" method="POST" novalidate>
         <input type="hidden" name="_subject" id="subjectInput" value="New Attraction Enquiry">
         <div class="form-row">
@@ -693,7 +707,6 @@
           form.reset();
           packageInput.value = '';
           thankOverlay.classList.add('active');
-          // Optionally track successful submission
           trackA('Attr_Submitted_' + (packageVal.replace(/\s+/g,'_').slice(0,40)));
         } else {
           let data;
@@ -707,7 +720,7 @@
       }
     });
 
-    /***** Attach safe tracking listeners for package buttons (redundant but safe) *****/
+    /***** Attach safe tracking listeners for package buttons *****/
     (function attachTrackListeners(){
       const safeAdd = (id, label) => {
         const el = document.getElementById(id);
@@ -725,3 +738,4 @@
 
 </body>
 </html>
+
