@@ -54,9 +54,14 @@
       --intro-bg:#fff6ef;
     }
     *{box-sizing:border-box}
-    body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
+    body{
+      font-family:"Segoe UI", Roboto, Arial, sans-serif;
+      margin:0;
+      color:var(--text);
+      background:#fff;
+    }
 
-    /* ★★★ UPDATED: White Header (matching all pages) ★★★ */
+    /* HEADER – only this block + related nav colours have been changed */
     header.navbar{
       background:#ffffff;
       color:var(--text);
@@ -66,32 +71,48 @@
       z-index:1000;
       box-shadow:0 2px 5px rgba(0,0,0,0.1);
     }
-    header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;}
+    header .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
     header img{height:52px;}
-    nav.primary{display:flex;gap:20px;align-items:center}
-
-    /* Nav link colours updated for white header */
-    nav.primary a,
-    #menu a {
+    nav.primary{
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    nav.primary a{
       color:var(--text);
       text-decoration:none;
       font-weight:600;
     }
-    nav.primary a:hover,
-    #menu a:hover {
+    nav.primary a:hover{
       color:var(--accent);
     }
-
-    .menu-btn{
-      display:none;
-      color:var(--text);
-    }
-
+    .menu-btn{display:none}
     @media(max-width:768px){
-      .menu-btn{display:block;}
-      nav.primary{display:none;flex-direction:column;position:absolute;top:68px;right:0;background:#ffffff;width:100%;border-top:1px solid #eee;}
+      .menu-btn{
+        display:block;
+        color:var(--text);
+      }
+      nav.primary{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:68px;
+        right:0;
+        background:#ffffff;
+        width:100%;
+      }
       nav.primary.active{display:flex}
-      nav.primary a{padding:12px;border-top:1px solid rgba(0,0,0,0.06)}
+      nav.primary a{
+        padding:12px;
+        border-top:1px solid rgba(0,0,0,0.06);
+      }
     }
 
     .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
@@ -139,7 +160,7 @@
     footer a:hover{text-decoration:underline}
     .legal{color:#fff;opacity:0.9;margin-top:8px}
 
-    /* Modal */
+    /* Modal styles */
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:2000}
     .modal{background:#fff;padding:20px;border-radius:10px;max-width:520px;width:95%;box-shadow:0 8px 30px rgba(0,0,0,0.25);position:relative}
     .modal h3{margin:0 0 12px;color:var(--nav)}
@@ -157,7 +178,7 @@
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (same structure, now white background) -->
   <header class="navbar">
     <div class="container">
       <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
@@ -187,9 +208,7 @@
     <p>Feature your property on our national travel series and receive broadcast-ready video, photography and social assets that drive bookings.</p>
   </section>
 
-  <!-- MAIN CONTENT -->
   <main class="wrap">
-
     <h2>What partnering looks like</h2>
     <p class="lead">We work with motels, caravan parks, resorts, holiday parks, B&Bs and boutique stays. Our production team films authentic storytelling segments and delivers assets you can use immediately across websites, booking platforms and social channels.</p>
 
@@ -199,7 +218,6 @@
     <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
 
     <div class="packages" aria-label="Accommodation packages">
-
       <!-- Bronze -->
       <div class="package-card">
         <h4>🟫 BRONZE — Essential Visibility</h4>
@@ -213,7 +231,10 @@
             <li>Inclusion in a ShowcasingOz TV episode</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomBronzeBtn" href="#" data-title="Accommodation Bronze Package Enquiry">Express Interest</a>
+        <a class="btn open-modal" id="accomBronzeBtn" href="#"
+           data-title="Accommodation Bronze Package Enquiry">
+          Express Interest
+        </a>
       </div>
 
       <!-- Silver -->
@@ -230,7 +251,10 @@
             <li>Google profile upgrade & TV feature</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomSilverBtn" href="#" data-title="Accommodation Silver Package Enquiry">Express Interest</a>
+        <a class="btn open-modal" id="accomSilverBtn" href="#"
+           data-title="Accommodation Silver Package Enquiry">
+          Express Interest
+        </a>
       </div>
 
       <!-- Gold -->
@@ -246,12 +270,14 @@
             <li>Professional photography</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomGoldBtn" href="#" data-title="Accommodation Gold Package Enquiry">Express Interest</a>
+        <a class="btn open-modal" id="accomGoldBtn" href="#"
+           data-title="Accommodation Gold Package Enquiry">
+          Express Interest
+        </a>
       </div>
 
       <!-- Platinum & Diamond -->
-      <div class="wide-row">
-
+      <div class="wide-row" style="grid-column:1/-1;margin-top:8px">
         <div class="package-card" style="text-align:left">
           <h4>🟦 PLATINUM — Social & Video Master</h4>
           <div style="display:flex;align-items:center;gap:12px">
@@ -266,7 +292,10 @@
               <li>Promotional/seasonal video + owner intro</li>
             </ul>
           </div>
-          <a class="btn open-modal" id="accomPlatinumBtn" href="#" data-title="Accommodation Platinum Package Enquiry">Express Interest</a>
+          <a class="btn open-modal" id="accomPlatinumBtn" href="#"
+             data-title="Accommodation Platinum Package Enquiry">
+            Express Interest
+          </a>
         </div>
 
         <div class="package-card" style="text-align:left">
@@ -283,20 +312,21 @@
               <li>2 additional promotional videos + 12-month retainer discount</li>
             </ul>
           </div>
-          <a class="btn open-modal" id="accomDiamondBtn" href="#" data-title="Accommodation Diamond Package Enquiry">Express Interest</a>
+          <a class="btn open-modal" id="accomDiamondBtn" href="#"
+             data-title="Accommodation Diamond Package Enquiry">
+            Express Interest
+          </a>
         </div>
-
-      </div><!-- wide-row -->
-    </div><!-- packages -->
+      </div>
+    </div>
 
     <!-- Detailed services -->
     <h2 style="margin-top:32px">Accommodation Services — Detailed (Introductory & Standard Prices)</h2>
 
     <div class="service-list">
-
       <!-- A1 -->
       <div class="service">
-        <h3><i class="fa fa-film"></i> A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
+        <h3><i class="fa fa-film" aria-hidden="true"></i> A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
         <div class="what"><strong>What we do:</strong> Film a polished room-by-room tour (exterior, reception, rooms, facilities), steady walkthroughs, optional host segments, music bed and captions.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Broadcast-quality 1–2 min walkthrough</li><li>Optional host narration</li><li>Edit with branding & captions</li></ul>
@@ -312,7 +342,7 @@
 
       <!-- A2 -->
       <div class="service">
-        <h3><i class="fa fa-mobile-screen-button"></i> A2. Room Showcase Short Clips (15–30s per room)</h3>
+        <h3><i class="fa fa-mobile-screen-button" aria-hidden="true"></i> A2. Room Showcase Short Clips (15–30s per room)</h3>
         <div class="what"><strong>What we do:</strong> Shoot cinematic clips for each room type, optimised for vertical and horizontal formats.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>15–30s clips for each room type (vertical + horiz)</li><li>Optimised for OTAs & Reels/TikTok</li></ul>
@@ -328,7 +358,7 @@
 
       <!-- A3 -->
       <div class="service">
-        <h3><i class="fa fa-camera"></i> A3. Drone Exterior Video + Photography</h3>
+        <h3><i class="fa fa-camera" aria-hidden="true"></i> A3. Drone Exterior Video + Photography</h3>
         <div class="what"><strong>What we do:</strong> Licensed drone capture of property, grounds and points of interest (subject to CASA/local approvals).</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>4K aerial footage & drone stills</li><li>Edited aerial highlight reel</li></ul>
@@ -344,7 +374,7 @@
 
       <!-- A4 -->
       <div class="service">
-        <h3><i class="fa fa-microphone"></i> A4. Guest Experience Highlight Video</h3>
+        <h3><i class="fa fa-microphone" aria-hidden="true"></i> A4. Guest Experience Highlight Video</h3>
         <div class="what"><strong>What we do:</strong> Lifestyle-style edit showing guest arrival, amenities and evening ambience to create an emotional connection.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Warm, emotive 60–90s video</li><li>Suitable for website and socials</li></ul>
@@ -360,7 +390,7 @@
 
       <!-- A5 -->
       <div class="service">
-        <h3><i class="fa fa-hotel"></i> A5. Seasonal or Promotional Video</h3>
+        <h3><i class="fa fa-hotel" aria-hidden="true"></i> A5. Seasonal or Promotional Video</h3>
         <div class="what"><strong>What we do:</strong> Produce campaign-ready short ads for mid-week deals, holiday specials or paid campaigns.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Short ad-ready video + optional voiceover</li></ul>
@@ -376,7 +406,7 @@
 
       <!-- A6 -->
       <div class="service">
-        <h3><i class="fa fa-camera-retro"></i> A6. Professional Photography Package</h3>
+        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> A6. Professional Photography Package</h3>
         <div class="what"><strong>What we do:</strong> Capture bright, composed stills of rooms, facilities and social spaces, optimised for OTAs and websites.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>High-resolution edited photos in web & print sizes</li></ul>
@@ -392,7 +422,7 @@
 
       <!-- A7 -->
       <div class="service">
-        <h3><i class="fa fa-user"></i> A7. Staff or Owner Introduction Video</h3>
+        <h3><i class="fa fa-user" aria-hidden="true"></i> A7. Staff or Owner Introduction Video</h3>
         <div class="what"><strong>What we do:</strong> Short interview/welcome message featuring owners or staff to humanise your brand.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Short welcome edit with light branding</li></ul>
@@ -408,7 +438,7 @@
 
       <!-- A8 -->
       <div class="service">
-        <h3><i class="fa fa-map-marker-alt"></i> A8. Google Business Profile Enhancement</h3>
+        <h3><i class="fa fa-map-marker-alt" aria-hidden="true"></i> A8. Google Business Profile Enhancement</h3>
         <div class="what"><strong>What we do:</strong> Update listing with fresh media, optimise categories and provide review response guidance.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Photos & video added to Google listing, description updates & optimisation</li></ul>
@@ -424,7 +454,7 @@
 
       <!-- A9 -->
       <div class="service">
-        <h3><i class="fa fa-share-alt"></i> A9. Social Media Content Bundle (10–20 assets)</h3>
+        <h3><i class="fa fa-share-alt" aria-hidden="true"></i> A9. Social Media Content Bundle (10–20 assets)</h3>
         <div class="what"><strong>What we do:</strong> Create vertical clips and photo sets from filmed footage, with caption suggestions and posting schedule.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>10–20 ready-to-post assets + captions</li></ul>
@@ -440,7 +470,7 @@
 
       <!-- A10 -->
       <div class="service">
-        <h3><i class="fa fa-edit"></i> A10. Booking Booster Add-On (Copywriting + Video)</h3>
+        <h3><i class="fa fa-edit" aria-hidden="true"></i> A10. Booking Booster Add-On (Copywriting + Video)</h3>
         <div class="what"><strong>What we do:</strong> Combine a short promo video with conversion-led copy to increase direct bookings.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>Promo video + rewritten headlines and CTAs for your website</li></ul>
@@ -456,7 +486,7 @@
 
       <!-- A11 -->
       <div class="service">
-        <h3><i class="fa fa-calendar-alt"></i> A11. Monthly Social Media + Marketing Support Retainer</h3>
+        <h3><i class="fa fa-calendar-alt" aria-hidden="true"></i> A11. Monthly Social Media + Marketing Support Retainer</h3>
         <div class="what"><strong>What we do:</strong> Ongoing posting, captions, small edits and analytics using previously filmed footage.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>8–12 posts per month, captions, scheduling and basic analytics</li></ul>
@@ -472,7 +502,7 @@
 
       <!-- A12 -->
       <div class="service">
-        <h3><i class="fa fa-tv"></i> A12. Inclusion in the ShowcasingOz TV Series</h3>
+        <h3><i class="fa fa-tv" aria-hidden="true"></i> A12. Inclusion in the ShowcasingOz TV Series</h3>
         <div class="what"><strong>What we do:</strong> Feature selected accommodation in a season episode with presenter-led coverage and promotion.</div>
         <div class="receive"><strong>What you receive:</strong>
           <ul><li>On-screen feature, host segment and social promotion</li></ul>
@@ -485,30 +515,35 @@
           <a class="btn open-modal" href="#" data-title="Accommodation — A12. Inclusion in the ShowcasingOz TV Series Enquiry">Express Interest</a>
         </div>
       </div>
-
-    </div><!-- service-list -->
+    </div>
 
     <!-- CTA -->
     <div class="cta">
       <p style="font-weight:700">Limited Season 1 slots available — secure your filming window today.</p>
-      <a class="cta-btn open-modal" id="accomContact" href="#" data-title="Accommodation Partnership Enquiry">Express Your Interest</a>
+      <a class="cta-btn open-modal" id="accomContact" href="#" data-title="Accommodation Partnership Enquiry">
+        Express Your Interest
+      </a>
     </div>
 
+    <!-- Pricing clause -->
     <p style="font-size:0.95rem;color:var(--muted);text-align:center;margin-top:18px;">
       <strong>Note:</strong> The Introductory prices are strictly valid until the <strong>22nd of December, 2026</strong> and will revert to Standard prices thereafter. All services and packages must be booked prior to the 22nd of December, 2026 to receive Introductory pricing.
     </p>
 
   </main>
 
-  <!-- Modal -->
+  <!-- Modal markup -->
   <div class="modal-backdrop" id="modalBack">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="close-btn" id="modalClose" aria-label="Close modal">&times;</button>
 
+      <!-- Form container -->
       <div id="formContainer">
         <h3 id="modalTitle">Express Interest</h3>
 
+        <!-- The form posts to your Formspree endpoint -->
         <form id="interestForm" action="https://formspree.io/f/movynnqj" method="POST">
+          <!-- subject will be set dynamically -->
           <input type="hidden" name="subject" id="formSubject" value="Accommodation Enquiry">
 
           <div class="form-row">
@@ -530,17 +565,16 @@
             <button type="submit" class="btn-submit">Send enquiry</button>
             <div id="formStatus" style="font-size:0.95rem;color:var(--muted)"></div>
           </div>
-
-          <div class="error" id="formError" style="display:none"></div>
+          <div class="error" id="formError" role="alert" aria-live="polite" style="display:none"></div>
         </form>
       </div>
 
+      <!-- Thank you screen -->
       <div class="thank-you" id="thankYou">
         <h3>Thanks — we received your enquiry</h3>
         <p>We will get back to you shortly. If you'd like to contact us directly, email <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.</p>
         <button class="btn-submit" id="thankClose">Close</button>
       </div>
-
     </div>
   </div>
 
@@ -561,12 +595,11 @@
     </p>
   </footer>
 
-  <!-- Form + Modal Script -->
   <script>
+    // CTA tracking (Accommodations)
     function track(label){
       if(typeof gtag === 'function') gtag('event','express_interest_click',{event_category:'Engagement', event_label:label});
     }
-
     document.getElementById('accomBronzeBtn').addEventListener('click',()=>track('Accom_Bronze'));
     document.getElementById('accomSilverBtn').addEventListener('click',()=>track('Accom_Silver'));
     document.getElementById('accomGoldBtn').addEventListener('click',()=>track('Accom_Gold'));
@@ -596,6 +629,7 @@
         modalBack.style.display = 'flex';
         setTimeout(()=>document.getElementById('name').focus(), 120);
         track('Modal_Open');
+        if(typeof gtag === 'function') gtag('event','modal_open',{event_category:'Engagement', event_label:title});
       }
 
       function closeModal(){
@@ -605,7 +639,8 @@
       openButtons.forEach(btn=>{
         btn.addEventListener('click', function(e){
           e.preventDefault();
-          openModal(this.dataset.title);
+          const title = this.dataset.title || this.getAttribute('data-title') || 'Accommodation Enquiry';
+          openModal(title);
         });
       });
 
@@ -618,31 +653,42 @@
       form.addEventListener('submit', function(e){
         e.preventDefault();
         formError.style.display = 'none';
+        formError.textContent = '';
         const submitBtn = form.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
         formStatus.textContent = 'Sending...';
 
+        const data = new FormData(form);
+
         fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
-          headers: {'Accept': 'application/json'}
+          body: data,
+          headers: { 'Accept': 'application/json' }
         })
-        .then(res=>{
+        .then(function(response){
           submitBtn.disabled = false;
-          if(res.ok){
+          if(response.ok){
             form.reset();
             formContainer.style.display = 'none';
             thankYou.style.display = 'block';
             formStatus.textContent = '';
+            track('Form_Submit_Success');
+            if(typeof gtag === 'function') gtag('event','form_submit',{event_category:'Engagement', event_label:subjectInput.value});
           } else {
-            throw new Error('There was a problem submitting the form. Please try again.');
+            return response.json().then(function(err){
+              throw err;
+            }).catch(function(){
+              throw new Error('There was a problem submitting the form. Please try again.');
+            });
           }
         })
-        .catch(err=>{
+        .catch(function(err){
           submitBtn.disabled = false;
           formStatus.textContent = '';
           formError.style.display = 'block';
-          formError.textContent = err.message;
+          formError.textContent = err && err.error ? err.error : (err.message || 'Submission failed — please try again.');
+          track('Form_Submit_Error');
+          if(typeof gtag === 'function') gtag('event','form_error',{event_category:'Engagement', event_label:subjectInput.value});
         });
       });
     })();
@@ -650,4 +696,3 @@
 
 </body>
 </html>
-
