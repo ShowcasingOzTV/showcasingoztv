@@ -48,36 +48,54 @@
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0;color:var(--text);background:#fff}
 
-    /* UPDATED: white header to match other pages */
+    /* HEADER – dark blue bar with white links (matches rest of site) */
     header.navbar{
-      background:#ffffff;
-      color:var(--text);
+      background:var(--nav);
+      color:#fff;
       padding:12px 0;
       position:sticky;
       top:0;
       z-index:1000;
       box-shadow:0 2px 5px rgba(0,0,0,0.1);
     }
-    header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between}
-    header img{height:52px}
-    nav.primary{display:flex;gap:20px;align-items:center}
-    nav.primary a{color:var(--text);text-decoration:none;font-weight:600}
-    nav.primary a:hover{color:var(--accent)}
-    .menu-btn{display:none;color:var(--text);}
+    header .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    header img{height:52px;}
+    #menu a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:600;
+    }
+    #menu a:hover{color:var(--accent);}
+    .menu-btn{
+      display:none;
+      color:#fff;
+      cursor:pointer;
+    }
     @media(max-width:768px){
-      .menu-btn{display:block}
-      nav.primary{
+      .menu-btn{display:block;}
+      #menu{
         display:none;
         flex-direction:column;
         position:absolute;
         top:68px;
         right:0;
-        background:#ffffff;
+        background:var(--nav);
         width:100%;
-        border-top:1px solid #eee;
       }
-      nav.primary.active{display:flex}
-      nav.primary a{padding:12px;border-top:1px solid rgba(0,0,0,0.06)}
+      #menu.active{display:flex;}
+      #menu a{
+        margin-left:0;
+        padding:12px;
+        border-top:1px solid rgba(255,255,255,0.06);
+      }
     }
 
     .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
@@ -216,14 +234,25 @@
       .form-container{padding:16px}
     }
 
-    /* small style for service buttons to match package-btn look */
-    .service .btn { display:inline-block; margin-top:14px; padding:10px 18px; border-radius:8px; background:var(--accent); color:#fff; font-weight:700; border:none; cursor:pointer; text-decoration:none; }
+    /* service buttons */
+    .service .btn {
+      display:inline-block;
+      margin-top:14px;
+      padding:10px 18px;
+      border-radius:8px;
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      text-decoration:none;
+    }
     .service .btn:hover { background:#c45e15; }
   </style>
 </head>
 <body>
 
-  <!-- HEADER (Home page style: logo left, nav right - removed Accommodation & Attractions links) -->
+  <!-- HEADER -->
   <header class="navbar">
     <div class="container">
       <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
@@ -586,7 +615,7 @@
       <button class="close-btn" onclick="closeForm()" aria-label="Close enquiry form">&times;</button>
       <h2 id="enquiryTitle">Send Enquiry</h2>
 
-      <!-- The form posts to your Formspree endpoint -->
+      <!-- Form posts to your Formspree endpoint -->
       <form id="partnerEnquiryForm" method="POST" novalidate>
         <input type="hidden" name="_subject" id="subjectInput" value="New Attraction Enquiry">
         <div class="form-row">
@@ -676,7 +705,6 @@
     form.addEventListener('submit', async function(e){
       e.preventDefault();
 
-      // front-end validation
       const name = document.getElementById('nameInput').value.trim();
       const email = document.getElementById('emailInput').value.trim();
       const message = document.getElementById('messageInput').value.trim();
@@ -720,7 +748,6 @@
       }
     });
 
-    /***** Attach safe tracking listeners for package buttons *****/
     (function attachTrackListeners(){
       const safeAdd = (id, label) => {
         const el = document.getElementById(id);
@@ -738,4 +765,5 @@
 
 </body>
 </html>
+
 
