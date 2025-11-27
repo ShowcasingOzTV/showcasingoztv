@@ -54,64 +54,29 @@
       --intro-bg:#fff6ef;
     }
     *{box-sizing:border-box}
-    body{
-      font-family:"Segoe UI", Roboto, Arial, sans-serif;
-      margin:0;
-      color:var(--text);
-      background:#fff;
-    }
-
-    /* HEADER – only this block + related nav colours have been changed */
-    header.navbar{
-      background:#ffffff;
-      color:var(--text);
-      padding:12px 0;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 5px rgba(0,0,0,0.1);
-    }
-    header .container{
-      max-width:1200px;
-      margin:0 auto;
-      padding:0 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+    body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
+    header.navbar{background:var(--nav); color:#fff; padding:12px 0; position:sticky; top:0; z-index:1000;}
+    header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;}
     header img{height:52px;}
-    nav.primary{
-      display:flex;
-      gap:20px;
-      align-items:center;
-    }
-    nav.primary a{
-      color:var(--text);
-      text-decoration:none;
-      font-weight:600;
-    }
-    nav.primary a:hover{
-      color:var(--accent);
-    }
-    .menu-btn{display:none}
+    nav.primary{display:flex;gap:20px;align-items:center}
+    nav.primary a{color:#fff;text-decoration:none;font-weight:600}
+    nav.primary a:hover{color:var(--accent)}
+    .menu-btn{display:none;color:#fff;cursor:pointer}
     @media(max-width:768px){
-      .menu-btn{
-        display:block;
-        color:var(--text);
-      }
+      .menu-btn{display:block}
       nav.primary{
         display:none;
         flex-direction:column;
         position:absolute;
         top:68px;
         right:0;
-        background:#ffffff;
+        background:var(--nav);
         width:100%;
       }
       nav.primary.active{display:flex}
       nav.primary a{
         padding:12px;
-        border-top:1px solid rgba(0,0,0,0.06);
+        border-top:1px solid rgba(255,255,255,0.06);
       }
     }
 
@@ -173,12 +138,25 @@
     .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
     .thank-you{display:none;text-align:center;padding:20px}
     .error{color:#b00020;margin-top:8px}
+
+    /* NEW – make service "Express Interest" buttons orange like package buttons */
+    .service .btn{
+      display:inline-block;
+      margin-top:14px;
+      padding:10px 18px;
+      border-radius:8px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+    }
+    .service .btn:hover{background:#c45e15}
     .service-cta{margin-top:12px}
   </style>
 </head>
 <body>
 
-  <!-- HEADER (same structure, now white background) -->
+  <!-- HEADER -->
   <header class="navbar">
     <div class="container">
       <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
@@ -696,3 +674,4 @@
 
 </body>
 </html>
+
