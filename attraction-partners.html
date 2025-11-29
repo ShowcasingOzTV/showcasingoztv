@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Attraction Partnerships | ShowcasingOz TV" />
-  <meta name="twitter:description" content="Video and promotional marketing packages for attractions — tours, parks, museums, adventure operators." />
+  <meta name="twitter:description" content="Video and promotional marketing packages for attractions — tours, theme parks, museums, wildlife experiences and adventure operators." />
   <meta name="twitter:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
 
   <!-- JSON-LD -->
@@ -155,23 +155,22 @@
     .thank-you{display:none;text-align:center;padding:20px}
     .error{color:#b00020;margin-top:8px}
 
-    /* Force Services "Express Interest" buttons to match package buttons */
-.service .btn {
-  display: inline-block !important;
-  padding: 10px 18px !important;
-  background: var(--accent) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-  border-radius: 8px !important;
-  font-weight: 700 !important;
-  margin-top: 14px !important;
-  text-align: center !important;
-}
+    /* Force orange Express Interest buttons in Services to match package buttons */
+    .service .btn {
+      display: inline-block !important;
+      padding: 10px 18px !important;
+      background: var(--accent) !important;
+      color: #fff !important;
+      text-decoration: none !important;
+      border-radius: 8px !important;
+      font-weight: 700 !important;
+      margin-top: 14px !important;
+      text-align: center !important;
+    }
 
-.service .btn:hover {
-  background: #c45e15 !important;
-}
-
+    .service .btn:hover {
+      background: #c45e15 !important;
+    }
   </style>
 </head>
 <body>
@@ -293,7 +292,7 @@
           <ul>
             <li>Hero experience film (60–90s)</li>
             <li>Drone + on-the-ground footage</li>
-            <li>Extended photo library & social cut-downs</li>
+            <li>Extended photo library &amp; social cut-downs</li>
           </ul>
         </div>
         <a class="btn" id="attrGoldBtn"
@@ -333,7 +332,7 @@
           <ul>
             <li>Flagship attraction film (multi-angle, presenter-led)</li>
             <li>Comprehensive media kit (photos, reels, website video)</li>
-            <li>Priority marketing support & seasonal promo clip</li>
+            <li>Priority marketing support &amp; seasonal promo clip</li>
           </ul>
         </div>
         <a class="btn" id="attrDiamondBtn"
@@ -519,14 +518,31 @@
       </div>
     </div>
 
-    <!-- CTA -->
-    <div style="text-align:center;margin:28px 0">
-      <p style="font-weight:700">Introductory slots limited per region — book now to secure Season 1 pricing.</p>
-      <a href="#"
-         class="btn"
-         onclick="openForm('Attraction Partnership Enquiry','Attraction_General'); return false;">
-        Reserve Your Allocation
-      </a>
+    <!-- PARTICIPATION CTA (replaces Reserve Your Allocation) -->
+    <div style="margin:32px 0;">
+      <div style="max-width:780px;margin:0 auto;background:#f9fafb;border-radius:12px;padding:22px 18px;box-shadow:0 4px 14px rgba(0,0,0,0.04);">
+        <h3 style="margin-top:0;margin-bottom:10px;color:var(--nav);text-align:center;">
+          Ready to Participate in ShowcasingOz TV?
+        </h3>
+        <p style="margin:8px 0;line-height:1.6;">
+          As we prepare our filming schedule for your region, we invite local attractions to confirm that they would like to be included in the
+          ShowcasingOz TV episode for their town.
+        </p>
+        <p style="margin:8px 0;line-height:1.6;">
+          This confirmation simply lets us know that you’re happy for us to film your attraction as part of our tourism storytelling project.
+          <strong>There is no cost or obligation attached</strong>—all marketing packages and optional upgrades remain completely optional.
+        </p>
+        <p style="margin:8px 0;line-height:1.6;">
+          This step helps us coordinate access, filming times and on-site logistics, and ensures your attraction is included in the regional story we share.
+        </p>
+        <div style="text-align:center;margin-top:16px;">
+          <a href="#"
+             class="btn"
+             onclick="openForm('Attraction Filming Participation','Attraction_Filming'); return false;">
+            Confirm Your Participation in Filming
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Pricing clause -->
@@ -775,3 +791,4 @@
   </script>
 </body>
 </html>
+
