@@ -260,10 +260,26 @@
     /* ensure the secondary class looks like a button in premium area too */
     /* (already defined above) */
 
-    @media (max-width:820px) {
-      .premium .premium-inner { flex-direction:column; align-items:stretch; }
-      .premium .premium-ctas { justify-content:flex-start; }
-    }
+@media (max-width:820px) {
+  .premium .premium-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Override the inline right-aligned text on the right column for mobile */
+  .premium .premium-inner > div:last-child {
+    text-align: center !important;
+  }
+
+  .premium .price {
+    text-align: center;
+  }
+
+  .premium .premium-ctas {
+    justify-content: center;
+  }
+}
 
     /* PROSPECTUS CTA */
     .prospectus {
@@ -349,6 +365,25 @@
 
     /* Small helper to ensure consistent button widths */
     .button, .secondary, .supporter .btn { white-space: nowrap; }
+
+    @media (max-width: 768px) {
+  /* Stack overview text and button on mobile so the button sits under the paragraph */
+  .overview {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .overview .cta {
+    margin: 0;
+    width: 100%;
+  }
+
+  .overview .cta a {
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
   </style>
 </head>
 <body>
