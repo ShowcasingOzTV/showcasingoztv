@@ -93,7 +93,16 @@
     .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
     @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.packages{grid-template-columns:1fr}}
-    .package-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06);text-align:center}
+    .package-card{
+      background:var(--card);
+      padding:18px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(14,53,87,0.06);
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
     .package-card h4{margin:8px 0;color:var(--nav)}
     .std-price{font-weight:800;color:var(--text);font-size:18px}
     .intro-price{display:inline-block;background:var(--intro-bg);border-left:6px solid var(--accent);padding:8px 12px;border-radius:6px;font-weight:900;color:var(--accent);font-size:20px;margin-top:8px}
@@ -132,7 +141,7 @@
     .modal .close-btn{position:absolute;right:12px;top:10px;background:transparent;border:0;font-size:18px;cursor:pointer;color:var(--muted)}
     .form-row{margin-bottom:10px}
     label{display:block;font-weight:700;margin-bottom:6px;color:var(--text)}
-    input[type="text"], input[type="email"], textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:15px}
+    input[type="text"], input[type="email"], textarea, select{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:15px}
     textarea{min-height:110px;resize:vertical}
     .modal .btn-submit{background:var(--nav);color:#fff;border:0;padding:10px 14px;border-radius:8px;font-weight:800;cursor:pointer}
     .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
@@ -188,74 +197,106 @@
 
   <main class="wrap">
     <h2>ShowcasingOz TV — Our Mission & How You Can Be Featured</h2>
-<p class="lead">
-  ShowcasingOz TV is a national tourism, storytelling and regional promotion project travelling across
-  Australia’s vast network of <strong>13,000+ towns and cities</strong>. Our mission is simple:
-  to champion Australian tourism by showcasing the people, places, businesses and experiences that make each region unique.
-</p>
+    <p class="lead">
+      ShowcasingOz TV is a national tourism, storytelling and regional promotion project travelling across
+      Australia’s vast network of <strong>13,000+ towns and cities</strong>. Our mission is simple:
+      to champion Australian tourism by showcasing the people, places, businesses and experiences that make each region unique.
+    </p>
 
-<p class="lead">
-  From June to December 2026, our Season 1 filming journey will visit over <strong>200 destinations</strong>
-  across NT, NSW, VIC, SA, WA and QLD — capturing authentic stories, highlighting local operators,
-  and creating high-quality visual content that helps accommodation providers increase visibility,
-  grow bookings and strengthen their digital presence.
-</p>
+    <p class="lead">
+      From June to December 2026, our Season 1 filming journey will visit over <strong>200 destinations</strong>
+      across NT, NSW, VIC, SA, WA and QLD — capturing authentic stories, highlighting local operators,
+      and creating high-quality visual content that helps accommodation providers increase visibility,
+      grow bookings and strengthen their digital presence.
+    </p>
 
-<p class="lead">
-  As a featured accommodation partner, your business can benefit from <strong>broadcast-quality video,
-  professional photography, tailored social media assets</strong> and presenter-led coverage — all designed
-  to showcase your property to travellers across Australia and the world.
-  Our aim is to support accommodation owners, boost regional tourism, and help travellers discover
-  great places to stay.
-</p>
+    <p class="lead">
+      As a featured accommodation partner, your business can benefit from <strong>broadcast-quality video,
+      professional photography, tailored social media assets</strong> and presenter-led coverage — all designed
+      to showcase your property to travellers across Australia and the world.
+      Our aim is to support accommodation owners, boost regional tourism, and help travellers discover
+      great places to stay.
+    </p>
 
-<p class="lead">
-  If a videography or photography service doesn’t suit your current needs or budget, you can still be part of
-  the project by contributing a small <strong>sponsorship amount — starting from as little as $50</strong>.
-  As a sponsor, your business will be acknowledged as a supporter of regional tourism, receive visibility within
-  our network, and still gain promotional benefits that help travellers discover your accommodation.
-  You can learn more at our
-  <a href="../sponsorship.html" style="color:var(--accent);font-weight:600">Sponsorship page</a>.
-</p>
+    <p class="lead">
+      If a videography or photography service doesn’t suit your current needs or budget, you can still be part of
+      the project by contributing a small <strong>sponsorship amount — starting from as little as $50</strong>.
+      As a sponsor, your business will be acknowledged as a supporter of regional tourism, receive visibility within
+      our network, and still gain promotional benefits that help travellers discover your accommodation.
+      You can learn more at our
+      <a href="../sponsorship.html" style="color:var(--accent);font-weight:600">Sponsorship page</a>.
+    </p>
 
-<p class="lead">
-  We also offer a special <strong>Stay-for-Free Exchange Package</strong> for accommodation providers who prefer a
-  mutually beneficial exchange instead of purchasing a service. If your property can provide
-  <strong>2 × twin rooms for the full length of our stay in your town</strong>, we will provide a
-  <strong>videography and photography package equal to the total value of the accommodation</strong> in return.
-</p>
+    <p class="lead">
+      We also offer a special
+      <strong><a href="#free-exchange-package" style="color:var(--accent);font-weight:700;text-decoration:none;">
+      Stay-for-Free Exchange Package</a></strong>
+      for accommodation providers who prefer a mutually beneficial exchange instead of purchasing a service.
+      If your property can provide <strong>2 × twin rooms for the full length of our stay in your town</strong>,
+      we will provide a <strong>videography and photography package equal to the total value of the accommodation</strong>
+      in return.
+    </p>
 
-<p class="lead">
-  For example, if your nightly rate is $200 per room (2 rooms = $400 per night), and our crew stays in your town for
-  <strong>12 nights</strong>, your in-kind contribution would be valued at <strong>$4,800</strong>. In exchange, we will
-  deliver a professional content package worth the same amount — at no financial cost to your business.
-</p>
+    <p class="lead">
+      For example, if your nightly rate is $200 per room (2 rooms = $400 per night), and our crew stays in your town for
+      <strong>12 nights</strong>, your in-kind contribution would be valued at <strong>$4,800</strong>. In exchange, we will
+      deliver a professional content package worth the same amount — at no financial cost to your business.
+    </p>
 
-<p class="lead" style="margin-top:4px;">
-  This package is extremely limited and operates strictly on a <strong>first in, best dressed</strong> basis, with only one
-  accommodation partner selected per town due to scheduling and filming constraints. If this option interests you, we strongly
-  encourage early submission of interest.
-</p>
+    <p class="lead" style="margin-top:4px;">
+      This package is extremely limited and operates strictly on a <strong>first in, best dressed</strong> basis, with only one
+      accommodation partner selected per town due to scheduling and filming constraints. If this option interests you, we strongly
+      encourage early submission of interest.
+    </p>
 
-<p class="lead" style="margin-top:8px;">
-  Due to the tight filming schedule and the extensive number of towns we visit,
-  <strong>each region is allocated only a limited number of feature positions</strong>. Once these allocations are filled,
-  we are unable to take additional businesses for that location. For that reason, we encourage accommodation owners to
-  reserve their allocation early and avoid missing out while other properties in the area benefit from the exposure.
-</p>
+    <p class="lead" style="margin-top:8px;">
+      Due to the tight filming schedule and the extensive number of towns we visit,
+      <strong>each region is allocated only a limited number of feature positions</strong>. Once these allocations are filled,
+      we are unable to take additional businesses for that location. For that reason, we encourage accommodation owners to
+      reserve their allocation early and avoid missing out while other properties in the area benefit from the exposure.
+    </p>
 
-<div class="cta" style="margin-top:18px;">
-  <a class="cta-btn open-modal" href="#" data-title="Accommodation Partnership Enquiry">
-    Reserve Your Allocation
-  </a>
-</div>
+    <div class="cta" style="margin-top:18px;">
+      <a class="cta-btn open-modal" href="#" data-title="Accommodation Partnership Enquiry">
+        Reserve Your Allocation
+      </a>
+    </div>
 
-<div class="note"><strong>Note:</strong> All prices are <strong>exclusive of GST</strong>.</div>
+    <div class="note"><strong>Note:</strong> All prices are <strong>exclusive of GST</strong>.</div>
 
     <!-- PACKAGES -->
     <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
 
     <div class="packages" aria-label="Accommodation packages">
+      <!-- FREE Stay-for-Free Exchange Package -->
+      <div class="package-card" id="free-exchange-package">
+        <h4>🆓 FREE — Stay-for-Free Exchange Package</h4>
+        <div class="intro-price" style="font-size:22px;">
+          $0
+          <span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Exchange Only</span>
+        </div>
+        <div style="margin-top:8px" class="std-price">Standard Price: $0</div>
+        <div class="includes">
+          <strong>Includes:</strong>
+          <ul>
+            <li>
+              A free professional videography/photography package (rooms &amp; facilities) and/or sponsorship
+              to the value of housing our staff for 2 × twin rooms for the number of nights we have allocated in your region.
+            </li>
+            <li>Google Business enhancement</li>
+            <li>Inclusion in a ShowcasingOz TV episode</li>
+          </ul>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px;">
+            * This package is valid only for one accommodation per town, or two accommodations per town when our allocated
+            time in that region exceeds 5 days.
+          </p>
+        </div>
+        <a class="btn open-modal" href="#"
+           data-title="Free Stay-for-Free Exchange Package Enquiry">
+          Express Interest
+        </a>
+      </div>
+
       <!-- Bronze -->
       <div class="package-card">
         <h4>🟫 BRONZE — Essential Visibility</h4>
@@ -264,7 +305,7 @@
         <div class="includes">
           <strong>Includes:</strong>
           <ul>
-            <li>Professional photography (rooms & facilities)</li>
+            <li>Professional photography (rooms &amp; facilities)</li>
             <li>Google Business enhancement</li>
             <li>Inclusion in a ShowcasingOz TV episode</li>
           </ul>
@@ -286,7 +327,7 @@
             <li>Full accommodation walkthrough video</li>
             <li>Professional photography</li>
             <li>Booking booster (copy + short video)</li>
-            <li>Google profile upgrade & TV feature</li>
+            <li>Google profile upgrade &amp; TV feature</li>
           </ul>
         </div>
         <a class="btn open-modal" id="accomSilverBtn" href="#"
@@ -314,52 +355,51 @@
         </a>
       </div>
 
-      <!-- Platinum & Diamond -->
-      <div class="wide-row" style="grid-column:1/-1;margin-top:8px">
-        <div class="package-card" style="text-align:left">
-          <h4>🟦 PLATINUM — Social & Video Master</h4>
-          <div style="display:flex;align-items:center;gap:12px">
-            <div class="intro-price">$1,156<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-            <div class="std-price" style="margin-left:auto">Standard Price: $1,445</div>
-          </div>
-          <div class="includes">
-            <strong>Includes:</strong>
-            <ul>
-              <li>All Gold inclusions</li>
-              <li>Social media content bundle (15–20 assets)</li>
-              <li>Promotional/seasonal video + owner intro</li>
-            </ul>
-          </div>
-          <a class="btn open-modal" id="accomPlatinumBtn" href="#"
-             data-title="Accommodation Platinum Package Enquiry">
-            Express Interest
-          </a>
+      <!-- Platinum -->
+      <div class="package-card">
+        <h4>🟦 PLATINUM — Social &amp; Video Master</h4>
+        <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <div class="intro-price">$1,156<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+          <div class="std-price">Standard Price: $1,445</div>
         </div>
+        <div class="includes">
+          <strong>Includes:</strong>
+          <ul>
+            <li>All Gold inclusions</li>
+            <li>Social media content bundle (15–20 assets)</li>
+            <li>Promotional/seasonal video + owner intro</li>
+          </ul>
+        </div>
+        <a class="btn open-modal" id="accomPlatinumBtn" href="#"
+           data-title="Accommodation Platinum Package Enquiry">
+          Express Interest
+        </a>
+      </div>
 
-        <div class="package-card" style="text-align:left">
-          <h4>💎 DIAMOND — Signature Brand</h4>
-          <div style="display:flex;align-items:center;gap:12px">
-            <div class="intro-price">$1,636<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-            <div class="std-price" style="margin-left:auto">Standard Price: $2,045</div>
-          </div>
-          <div class="includes">
-            <strong>Includes:</strong>
-            <ul>
-              <li>All Platinum inclusions</li>
-              <li>Custom brand story film with presenter</li>
-              <li>2 additional promotional videos + 12-month retainer discount</li>
-            </ul>
-          </div>
-          <a class="btn open-modal" id="accomDiamondBtn" href="#"
-             data-title="Accommodation Diamond Package Enquiry">
-            Express Interest
-          </a>
+      <!-- Diamond -->
+      <div class="package-card">
+        <h4>💎 DIAMOND — Signature Brand</h4>
+        <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <div class="intro-price">$1,636<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+          <div class="std-price">Standard Price: $2,045</div>
         </div>
+        <div class="includes">
+          <strong>Includes:</strong>
+          <ul>
+            <li>All Platinum inclusions</li>
+            <li>Custom brand story film with presenter</li>
+            <li>2 additional promotional videos + 12-month retainer discount</li>
+          </ul>
+        </div>
+        <a class="btn open-modal" id="accomDiamondBtn" href="#"
+           data-title="Accommodation Diamond Package Enquiry">
+          Express Interest
+        </a>
       </div>
     </div>
 
     <!-- Detailed services -->
-    <h2 style="margin-top:32px">Accommodation Services — Detailed (Introductory & Standard Prices)</h2>
+    <h2 style="margin-top:32px">Accommodation Services — Detailed (Introductory &amp; Standard Prices)</h2>
 
     <div class="service-list">
       <!-- A1 -->
@@ -367,7 +407,7 @@
         <h3><i class="fa fa-film" aria-hidden="true"></i> A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
         <div class="what"><strong>What we do:</strong> Film a polished room-by-room tour (exterior, reception, rooms, facilities), steady walkthroughs, optional host segments, music bed and captions.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Broadcast-quality 1–2 min walkthrough</li><li>Optional host narration</li><li>Edit with branding & captions</li></ul>
+          <ul><li>Broadcast-quality 1–2 min walkthrough</li><li>Optional host narration</li><li>Edit with branding &amp; captions</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $639</div>
@@ -383,7 +423,7 @@
         <h3><i class="fa fa-mobile-screen-button" aria-hidden="true"></i> A2. Room Showcase Short Clips (15–30s per room)</h3>
         <div class="what"><strong>What we do:</strong> Shoot cinematic clips for each room type, optimised for vertical and horizontal formats.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>15–30s clips for each room type (vertical + horiz)</li><li>Optimised for OTAs & Reels/TikTok</li></ul>
+          <ul><li>15–30s clips for each room type (vertical + horiz)</li><li>Optimised for OTAs &amp; Reels/TikTok</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $159 per room</div>
@@ -399,7 +439,7 @@
         <h3><i class="fa fa-camera" aria-hidden="true"></i> A3. Drone Exterior Video + Photography</h3>
         <div class="what"><strong>What we do:</strong> Licensed drone capture of property, grounds and points of interest (subject to CASA/local approvals).</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>4K aerial footage & drone stills</li><li>Edited aerial highlight reel</li></ul>
+          <ul><li>4K aerial footage &amp; drone stills</li><li>Edited aerial highlight reel</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $520</div>
@@ -447,7 +487,7 @@
         <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> A6. Professional Photography Package</h3>
         <div class="what"><strong>What we do:</strong> Capture bright, composed stills of rooms, facilities and social spaces, optimised for OTAs and websites.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>High-resolution edited photos in web & print sizes</li></ul>
+          <ul><li>High-resolution edited photos in web &amp; print sizes</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $440</div>
@@ -479,7 +519,7 @@
         <h3><i class="fa fa-map-marker-alt" aria-hidden="true"></i> A8. Google Business Profile Enhancement</h3>
         <div class="what"><strong>What we do:</strong> Update listing with fresh media, optimise categories and provide review response guidance.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Photos & video added to Google listing, description updates & optimisation</li></ul>
+          <ul><li>Photos &amp; video added to Google listing, description updates &amp; optimisation</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $319</div>
@@ -557,14 +597,14 @@
 
     <!-- CTA -->
     <div class="cta">
-  <p style="font-weight:700">
-    Limited Season 1 filming allocations are available in each town — don’t sit back and watch other
-    accommodations benefit from the exposure while your business misses out.
-  </p>
-  <a class="cta-btn open-modal" id="accomContact" href="#" data-title="Accommodation Partnership Enquiry">
-    Reserve Your Allocation
-  </a>
-</div>
+      <p style="font-weight:700">
+        Limited Season 1 filming allocations are available in each town — don’t sit back and watch other
+        accommodations benefit from the exposure while your business misses out.
+      </p>
+      <a class="cta-btn open-modal" id="accomContact" href="#" data-title="Accommodation Partnership Enquiry">
+        Reserve Your Allocation
+      </a>
+    </div>
 
     <!-- Pricing clause -->
     <p style="font-size:0.95rem;color:var(--muted);text-align:center;margin-top:18px;">
@@ -598,73 +638,72 @@
           </div>
 
           <div class="form-row">
-  <label for="town">Filming town / location <span style="color:#b00020">*</span></label>
-  <select id="town" name="town" required>
-    <option value="">Please select…</option>
-    <!-- Overnight filming towns (example list — extend/adjust as needed) -->
-    <option value="Alice Springs1">Alice Springs1</option>
-    <option value="Uluru / Yulara">Uluru / Yulara</option>
-    <option value="Kings Canyon">Kings Canyon</option>
-    <option value="Timouth Well">Timouth Well</option>
-    <option value="Rabbit Flat">Rabbit Flat</option>
-    <option value="Halls Creek">Halls Creek</option>
-    <option value="Top Springs">Top Springs</option>
-    <option value="Daly Waters">Daly Waters</option>
-    <option value="Borroloola">Borroloola</option>
-    <option value="Barkly Roadhouse">Barkly Roadhouse</option>
-    <option value="Tennant Creek">Tennant Creek</option>
-    <option value="Alice Springs2">Alice Springs2</option>
-    <option value="Coober Pedy">Coober Pedy</option>
-    <option value="Roxby Downs1">Roxby Downs1</option>
-    <option value="Andamooka">Andamooka</option>
-    <option value="Roxby Downs2">Roxby Downs2</option>
-    <option value="Quorn">Quorn</option>
-    <option value="Laura">Laura</option>
-    <option value="Broken Hill">Broken Hill</option>
-    <option value="Silverton">Silverton</option>
-    <option value="Tibooburra">Tibooburra</option>
-    <option value="Eromanga">Eromanga</option>
-    <option value="Quilpie">Quilpie</option>
-    <option value="Charleville">Charleville</option>
-    <option value="Cunnamulla">Cunnamulla</option>
-    <option value="Thargomindah">Thargomindah</option>
-    <option value="Bourke">Bourke</option>
-    <option value="Nyngan">Nyngan</option>
-    <option value="Cobar">Cobar</option>
-    <option value="Hillston">Hillston</option>
-    <option value="Griffith">Griffith</option>
-    <option value="Jerilderie">Jerilderie</option>
-    <option value="Deniliquin">Deniliquin</option>
-    <option value="Moulamein">Moulamein</option>
-    <option value="Balranald">Balranald</option>
-    <option value="Hay">Hay</option>
-    <option value="Ivanhoe">Ivanhoe</option>
-    <option value="White Cliffs">White Cliffs</option>
-    <option value="Menindee">Menindee</option>
-    <option value="Mungo">Mungo</option>
-    <option value="Euston">Euston</option>
-    <option value="Swan Hill">Swan Hill</option>
-    <option value="Hopetoun">Hopetoun</option>
-    <option value="Horsham">Horsham</option>
-    <option value="Nhill">Nhill</option>
-    <option value="Edenhope">Edenhope</option>
-    <option value="Portland">Portland</option>
-    <option value="Warrnambool">Warrnambool</option>
-    <option value="Hamilton">Hamilton</option>
-    <option value="Dunkeld">Dunkeld</option>
-    <option value="Halls Gap">Halls Gap</option>
-    <option value="Stawell">Stawell</option>
-    <option value="St Arnaud">St Arnaud</option>
-    <option value="Donald">Donald</option>   
-    <option value="Birchip">Birchip</option>
-    <option value="Barham">Barham</option>
-    <option value="Kerang">Kerang</option>
-    <option value="Charlton">Charlton</option>
-    <option value="Wedderburn">Wdderburn</option>
-    <option value="Bendigo">Bendigo</option>    
-    <!-- TODO: add all 58 overnight towns here once final list is confirmed -->
-  </select>
-</div>
+            <label for="town">Filming town / location <span style="color:#b00020">*</span></label>
+            <select id="town" name="town" required>
+              <option value="">Please select…</option>
+              <!-- Overnight filming towns (from your list) -->
+              <option value="Alice Springs1">Alice Springs1</option>
+              <option value="Uluru / Yulara">Uluru / Yulara</option>
+              <option value="Kings Canyon">Kings Canyon</option>
+              <option value="Timouth Well">Timouth Well</option>
+              <option value="Rabbit Flat">Rabbit Flat</option>
+              <option value="Halls Creek">Halls Creek</option>
+              <option value="Top Springs">Top Springs</option>
+              <option value="Daly Waters">Daly Waters</option>
+              <option value="Borroloola">Borroloola</option>
+              <option value="Barkly Roadhouse">Barkly Roadhouse</option>
+              <option value="Tennant Creek">Tennant Creek</option>
+              <option value="Alice Springs2">Alice Springs2</option>
+              <option value="Coober Pedy">Coober Pedy</option>
+              <option value="Roxby Downs1">Roxby Downs1</option>
+              <option value="Andamooka">Andamooka</option>
+              <option value="Roxby Downs2">Roxby Downs2</option>
+              <option value="Quorn">Quorn</option>
+              <option value="Laura">Laura</option>
+              <option value="Broken Hill">Broken Hill</option>
+              <option value="Silverton">Silverton</option>
+              <option value="Tibooburra">Tibooburra</option>
+              <option value="Eromanga">Eromanga</option>
+              <option value="Quilpie">Quilpie</option>
+              <option value="Charleville">Charleville</option>
+              <option value="Cunnamulla">Cunnamulla</option>
+              <option value="Thargomindah">Thargomindah</option>
+              <option value="Bourke">Bourke</option>
+              <option value="Nyngan">Nyngan</option>
+              <option value="Cobar">Cobar</option>
+              <option value="Hillston">Hillston</option>
+              <option value="Griffith">Griffith</option>
+              <option value="Jerilderie">Jerilderie</option>
+              <option value="Deniliquin">Deniliquin</option>
+              <option value="Moulamein">Moulamein</option>
+              <option value="Balranald">Balranald</option>
+              <option value="Hay">Hay</option>
+              <option value="Ivanhoe">Ivanhoe</option>
+              <option value="White Cliffs">White Cliffs</option>
+              <option value="Menindee">Menindee</option>
+              <option value="Mungo">Mungo</option>
+              <option value="Euston">Euston</option>
+              <option value="Swan Hill">Swan Hill</option>
+              <option value="Hopetoun">Hopetoun</option>
+              <option value="Horsham">Horsham</option>
+              <option value="Nhill">Nhill</option>
+              <option value="Edenhope">Edenhope</option>
+              <option value="Portland">Portland</option>
+              <option value="Warrnambool">Warrnambool</option>
+              <option value="Hamilton">Hamilton</option>
+              <option value="Dunkeld">Dunkeld</option>
+              <option value="Halls Gap">Halls Gap</option>
+              <option value="Stawell">Stawell</option>
+              <option value="St Arnaud">St Arnaud</option>
+              <option value="Donald">Donald</option>
+              <option value="Birchip">Birchip</option>
+              <option value="Barham">Barham</option>
+              <option value="Kerang">Kerang</option>
+              <option value="Charlton">Charlton</option>
+              <option value="Wedderburn">Wedderburn</option>
+              <option value="Bendigo">Bendigo</option>
+            </select>
+          </div>
 
           <div class="form-row">
             <label for="message">Message / details <span style="color:#b00020">*</span></label>
@@ -806,4 +845,5 @@
 
 </body>
 </html>
+
 
