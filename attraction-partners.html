@@ -171,6 +171,18 @@
     .service .btn:hover {
       background: #c45e15 !important;
     }
+    /* Force centre alignment of Service buttons on mobile */
+@media (max-width: 640px) {
+  .service {
+    text-align: center !important;
+  }
+
+  .service .btn {
+    display: inline-block !important;
+    margin: 12px auto 0 auto !important;
+    text-align: center !important;
+  }
+}
   </style>
 </head>
 <body>
