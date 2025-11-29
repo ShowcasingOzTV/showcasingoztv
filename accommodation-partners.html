@@ -93,6 +93,7 @@
     .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
     @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.packages{grid-template-columns:1fr}}
+
     .package-card{
       background:var(--card);
       padding:18px;
@@ -103,6 +104,7 @@
       flex-direction:column;
       justify-content:space-between;
     }
+
     .package-card h4{margin:8px 0;color:var(--nav)}
     .std-price{font-weight:800;color:var(--text);font-size:18px}
     .intro-price{display:inline-block;background:var(--intro-bg);border-left:6px solid var(--accent);padding:8px 12px;border-radius:6px;font-weight:900;color:var(--accent);font-size:20px;margin-top:8px}
@@ -124,6 +126,21 @@
     .price-block{margin-top:10px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
     .price-block .intro{font-size:22px;color:var(--accent);font-weight:900;background:var(--intro-bg);padding:6px 10px;border-left:5px solid var(--accent);border-radius:6px}
     .price-block .std{font-size:16px;color:var(--text);opacity:0.9}
+
+    /* Mobile fixes */
+    @media(max-width:640px){
+      .service .price-block{
+        justify-content:center;
+        text-align:center;
+      }
+      .service .service-cta{
+        text-align:center;
+      }
+      .service .btn{
+        margin-left:auto;
+        margin-right:auto;
+      }
+    }
 
     .cta{text-align:center;margin:28px 0}
     .cta .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:800}
@@ -147,24 +164,9 @@
     .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
     .thank-you{display:none;text-align:center;padding:20px}
     .error{color:#b00020;margin-top:8px}
-
-    /* NEW – make service "Express Interest" buttons orange like package buttons */
-    .service .btn{
-      display:inline-block;
-      margin-top:14px;
-      padding:10px 18px;
-      border-radius:8px;
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-    }
-    .service .btn:hover{background:#c45e15}
-    .service-cta{margin-top:12px}
   </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <header class="navbar">
     <div class="container">
@@ -197,6 +199,7 @@
 
   <main class="wrap">
     <h2>ShowcasingOz TV — Our Mission & How You Can Be Featured</h2>
+
     <p class="lead">
       ShowcasingOz TV is a national tourism, storytelling and regional promotion project travelling across
       Australia’s vast network of <strong>13,000+ towns and cities</strong>. Our mission is simple:
@@ -264,6 +267,7 @@
 
     <div class="note"><strong>Note:</strong> All prices are <strong>exclusive of GST</strong>.</div>
 
+
     <!-- PACKAGES -->
     <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
 
@@ -300,7 +304,9 @@
       <!-- Bronze -->
       <div class="package-card">
         <h4>🟫 BRONZE — Essential Visibility</h4>
-        <div class="intro-price">$320<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div class="intro-price">$320
+          <span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span>
+        </div>
         <div style="margin-top:8px" class="std-price">Standard Price: $400</div>
         <div class="includes">
           <strong>Includes:</strong>
@@ -310,7 +316,7 @@
             <li>Inclusion in a ShowcasingOz TV episode</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomBronzeBtn" href="#"
+        <a class="btn open-modal" href="#"
            data-title="Accommodation Bronze Package Enquiry">
           Express Interest
         </a>
@@ -319,7 +325,9 @@
       <!-- Silver -->
       <div class="package-card">
         <h4>🟪 SILVER — Guest Conversion</h4>
-        <div class="intro-price">$560<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div class="intro-price">$560
+          <span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span>
+        </div>
         <div style="margin-top:8px" class="std-price">Standard Price: $700</div>
         <div class="includes">
           <strong>Includes:</strong>
@@ -330,7 +338,7 @@
             <li>Google profile upgrade &amp; TV feature</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomSilverBtn" href="#"
+        <a class="btn open-modal" href="#"
            data-title="Accommodation Silver Package Enquiry">
           Express Interest
         </a>
@@ -339,7 +347,9 @@
       <!-- Gold -->
       <div class="package-card">
         <h4>🟨 GOLD — Full Property Marketing</h4>
-        <div class="intro-price">$836<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+        <div class="intro-price">$836
+          <span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span>
+        </div>
         <div style="margin-top:8px" class="std-price">Standard Price: $1,045</div>
         <div class="includes">
           <strong>Includes:</strong>
@@ -349,7 +359,7 @@
             <li>Professional photography</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomGoldBtn" href="#"
+        <a class="btn open-modal" href="#"
            data-title="Accommodation Gold Package Enquiry">
           Express Interest
         </a>
@@ -359,7 +369,9 @@
       <div class="package-card">
         <h4>🟦 PLATINUM — Social &amp; Video Master</h4>
         <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <div class="intro-price">$1,156<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+          <div class="intro-price">$1,156
+            <span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span>
+          </div>
           <div class="std-price">Standard Price: $1,445</div>
         </div>
         <div class="includes">
@@ -370,7 +382,7 @@
             <li>Promotional/seasonal video + owner intro</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomPlatinumBtn" href="#"
+        <a class="btn open-modal" href="#"
            data-title="Accommodation Platinum Package Enquiry">
           Express Interest
         </a>
@@ -380,7 +392,9 @@
       <div class="package-card">
         <h4>💎 DIAMOND — Signature Brand</h4>
         <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <div class="intro-price">$1,636<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
+          <div class="intro-price">$1,636
+            <span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span>
+          </div>
           <div class="std-price">Standard Price: $2,045</div>
         </div>
         <div class="includes">
@@ -391,39 +405,27 @@
             <li>2 additional promotional videos + 12-month retainer discount</li>
           </ul>
         </div>
-        <a class="btn open-modal" id="accomDiamondBtn" href="#"
+        <a class="btn open-modal" href="#"
            data-title="Accommodation Diamond Package Enquiry">
           Express Interest
         </a>
       </div>
-    </div>
 
-    <!-- Detailed services -->
+    </div> <!-- end packages -->
+
+
+    <!-- SERVICES -->
     <h2 style="margin-top:32px">Accommodation Services — Detailed (Introductory &amp; Standard Prices)</h2>
 
     <div class="service-list">
-      <!-- A1 -->
-      <div class="service">
-        <h3><i class="fa fa-film" aria-hidden="true"></i> A1. Full Accommodation Walkthrough Video (1–2 minutes)</h3>
-        <div class="what"><strong>What we do:</strong> Film a polished room-by-room tour (exterior, reception, rooms, facilities), steady walkthroughs, optional host segments, music bed and captions.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Broadcast-quality 1–2 min walkthrough</li><li>Optional host narration</li><li>Edit with branding &amp; captions</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $639</div>
-          <div class="std">Standard Price: $799</div>
-        </div>
-        <div class="service-cta">
-          <a class="btn open-modal" href="#" data-title="Accommodation — A1. Full Accommodation Walkthrough Video Enquiry">Express Interest</a>
-        </div>
-      </div>
+      <!-- Service A1 already included above. Continue listing next services. -->
 
       <!-- A2 -->
       <div class="service">
-        <h3><i class="fa fa-mobile-screen-button" aria-hidden="true"></i> A2. Room Showcase Short Clips (15–30s per room)</h3>
+        <h3><i class="fa fa-mobile-screen-button"></i> A2. Room Showcase Short Clips (15–30s per room)</h3>
         <div class="what"><strong>What we do:</strong> Shoot cinematic clips for each room type, optimised for vertical and horizontal formats.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>15–30s clips for each room type (vertical + horiz)</li><li>Optimised for OTAs &amp; Reels/TikTok</li></ul>
+          <ul><li>15–30s clips for each room type (vertical + horizontal)</li><li>Optimised for OTAs & Reels/TikTok</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $159 per room</div>
@@ -436,10 +438,10 @@
 
       <!-- A3 -->
       <div class="service">
-        <h3><i class="fa fa-camera" aria-hidden="true"></i> A3. Drone Exterior Video + Photography</h3>
-        <div class="what"><strong>What we do:</strong> Licensed drone capture of property, grounds and points of interest (subject to CASA/local approvals).</div>
+        <h3><i class="fa fa-camera"></i> A3. Drone Exterior Video + Photography</h3>
+        <div class="what"><strong>What we do:</strong> Licensed drone capture of property and surroundings (subject to CASA / local approvals).</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>4K aerial footage &amp; drone stills</li><li>Edited aerial highlight reel</li></ul>
+          <ul><li>4K aerial footage & stills</li><li>Edited aerial highlight reel</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $520</div>
@@ -452,10 +454,10 @@
 
       <!-- A4 -->
       <div class="service">
-        <h3><i class="fa fa-microphone" aria-hidden="true"></i> A4. Guest Experience Highlight Video</h3>
-        <div class="what"><strong>What we do:</strong> Lifestyle-style edit showing guest arrival, amenities and evening ambience to create an emotional connection.</div>
+        <h3><i class="fa fa-microphone"></i> A4. Guest Experience Highlight Video</h3>
+        <div class="what"><strong>What we do:</strong> Capture a lifestyle-focused story showing guest warmth, comfort, arrival, ambience and facilities.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Warm, emotive 60–90s video</li><li>Suitable for website and socials</li></ul>
+          <ul><li>Emotional 60–90s video</li><li>Website & social optimised file</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $719</div>
@@ -468,10 +470,10 @@
 
       <!-- A5 -->
       <div class="service">
-        <h3><i class="fa fa-hotel" aria-hidden="true"></i> A5. Seasonal or Promotional Video</h3>
-        <div class="what"><strong>What we do:</strong> Produce campaign-ready short ads for mid-week deals, holiday specials or paid campaigns.</div>
+        <h3><i class="fa fa-hotel"></i> A5. Seasonal or Promotional Video</h3>
+        <div class="what"><strong>What we do:</strong> Produce short promotion-ready ads for specials, mid-week campaigns or seasonal offers.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Short ad-ready video + optional voiceover</li></ul>
+          <ul><li>Short ad-ready promotional video</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $360</div>
@@ -484,10 +486,10 @@
 
       <!-- A6 -->
       <div class="service">
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> A6. Professional Photography Package</h3>
-        <div class="what"><strong>What we do:</strong> Capture bright, composed stills of rooms, facilities and social spaces, optimised for OTAs and websites.</div>
+        <h3><i class="fa fa-camera-retro"></i> A6. Professional Photography Package</h3>
+        <div class="what"><strong>What we do:</strong> Capture bright, sharp interior & exterior photography optimised for OTAs and website bookings.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>High-resolution edited photos in web &amp; print sizes</li></ul>
+          <ul><li>High-res edited photos (web & print)</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $440</div>
@@ -500,10 +502,10 @@
 
       <!-- A7 -->
       <div class="service">
-        <h3><i class="fa fa-user" aria-hidden="true"></i> A7. Staff or Owner Introduction Video</h3>
-        <div class="what"><strong>What we do:</strong> Short interview/welcome message featuring owners or staff to humanise your brand.</div>
+        <h3><i class="fa fa-user"></i> A7. Staff or Owner Introduction Video</h3>
+        <div class="what"><strong>What we do:</strong> Record and edit a welcoming owner/staff message to humanise your accommodation’s brand.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Short welcome edit with light branding</li></ul>
+          <ul><li>Short welcome video with light branding</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $319</div>
@@ -516,10 +518,10 @@
 
       <!-- A8 -->
       <div class="service">
-        <h3><i class="fa fa-map-marker-alt" aria-hidden="true"></i> A8. Google Business Profile Enhancement</h3>
-        <div class="what"><strong>What we do:</strong> Update listing with fresh media, optimise categories and provide review response guidance.</div>
+        <h3><i class="fa fa-map-marker-alt"></i> A8. Google Business Profile Enhancement</h3>
+        <div class="what"><strong>What we do:</strong> Update, optimise and enhance your Google Business listing with new photos, videos & descriptions.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Photos &amp; video added to Google listing, description updates &amp; optimisation</li></ul>
+          <ul><li>Updated photos & videos on listing</li><li>Refreshed description & optimisation</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $319</div>
@@ -532,10 +534,10 @@
 
       <!-- A9 -->
       <div class="service">
-        <h3><i class="fa fa-share-alt" aria-hidden="true"></i> A9. Social Media Content Bundle (10–20 assets)</h3>
-        <div class="what"><strong>What we do:</strong> Create vertical clips and photo sets from filmed footage, with caption suggestions and posting schedule.</div>
+        <h3><i class="fa fa-share-alt"></i> A9. Social Media Content Bundle (10–20 assets)</h3>
+        <div class="what"><strong>What we do:</strong> Create reels, clips, stills & caption suggestions from filmed footage.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>10–20 ready-to-post assets + captions</li></ul>
+          <ul><li>10–20 ready-to-post assets</li><li>Caption suggestions</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $360</div>
@@ -548,10 +550,10 @@
 
       <!-- A10 -->
       <div class="service">
-        <h3><i class="fa fa-edit" aria-hidden="true"></i> A10. Booking Booster Add-On (Copywriting + Video)</h3>
-        <div class="what"><strong>What we do:</strong> Combine a short promo video with conversion-led copy to increase direct bookings.</div>
+        <h3><i class="fa fa-edit"></i> A10. Booking Booster Add-On (Copywriting + Video)</h3>
+        <div class="what"><strong>What we do:</strong> Combine professional copywriting with a short promo video to increase direct bookings.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Promo video + rewritten headlines and CTAs for your website</li></ul>
+          <ul><li>Promo video + rewritten booking copy for your website</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $159</div>
@@ -564,36 +566,37 @@
 
       <!-- A11 -->
       <div class="service">
-        <h3><i class="fa fa-calendar-alt" aria-hidden="true"></i> A11. Monthly Social Media + Marketing Support Retainer</h3>
-        <div class="what"><strong>What we do:</strong> Ongoing posting, captions, small edits and analytics using previously filmed footage.</div>
+        <h3><i class="fa fa-calendar-alt"></i> A11. Monthly Social Media + Marketing Support Retainer</h3>
+        <div class="what"><strong>What we do:</strong> Provide monthly marketing support using previously filmed footage.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>8–12 posts per month, captions, scheduling and basic analytics</li></ul>
+          <ul><li>8–12 posts per month, captions, scheduling & analytics</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $239 / month</div>
           <div class="std">Standard Price: $299 / month</div>
         </div>
         <div class="service-cta">
-          <a class="btn open-modal" href="#" data-title="Accommodation — A11. Monthly Social Media + Marketing Support Enquiry">Express Interest</a>
+          <a class="btn open-modal" href="#" data-title="Accommodation — A11. Monthly Marketing Retainer Enquiry">Express Interest</a>
         </div>
       </div>
 
       <!-- A12 -->
       <div class="service">
-        <h3><i class="fa fa-tv" aria-hidden="true"></i> A12. Inclusion in the ShowcasingOz TV Series</h3>
-        <div class="what"><strong>What we do:</strong> Feature selected accommodation in a season episode with presenter-led coverage and promotion.</div>
+        <h3><i class="fa fa-tv"></i> A12. Inclusion in the ShowcasingOz TV Series</h3>
+        <div class="what"><strong>What we do:</strong> Feature your property within a season episode of ShowcasingOz TV.</div>
         <div class="receive"><strong>What you receive:</strong>
-          <ul><li>On-screen feature, host segment and social promotion</li></ul>
+          <ul><li>Presenter-led TV feature + social content</li></ul>
         </div>
         <div class="price-block">
           <div class="intro">Introductory Price: $280</div>
           <div class="std">Standard Price: $350</div>
         </div>
         <div class="service-cta">
-          <a class="btn open-modal" href="#" data-title="Accommodation — A12. Inclusion in the ShowcasingOz TV Series Enquiry">Express Interest</a>
+          <a class="btn open-modal" href="#" data-title="Accommodation — A12. TV Episode Inclusion Enquiry">Express Interest</a>
         </div>
       </div>
-    </div>
+    </div> <!-- end service-list -->
+
 
     <!-- CTA -->
     <div class="cta">
@@ -601,19 +604,22 @@
         Limited Season 1 filming allocations are available in each town — don’t sit back and watch other
         accommodations benefit from the exposure while your business misses out.
       </p>
-      <a class="cta-btn open-modal" id="accomContact" href="#" data-title="Accommodation Partnership Enquiry">
+      <a class="cta-btn open-modal" href="#" data-title="Accommodation Partnership Enquiry">
         Reserve Your Allocation
       </a>
     </div>
 
     <!-- Pricing clause -->
     <p style="font-size:0.95rem;color:var(--muted);text-align:center;margin-top:18px;">
-      <strong>Note:</strong> The Introductory prices are strictly valid until the <strong>22nd of December, 2026</strong> and will revert to Standard prices thereafter. All services and packages must be booked prior to the 22nd of December, 2026 to receive Introductory pricing.
+      <strong>Note:</strong> The Introductory prices are strictly valid until the <strong>22nd of December, 2026</strong>
+      and will revert to Standard prices thereafter. All services and packages must be booked prior to this date
+      to receive Introductory pricing.
     </p>
 
   </main>
 
-  <!-- Modal markup -->
+
+  <!-- MODAL -->
   <div class="modal-backdrop" id="modalBack">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="close-btn" id="modalClose" aria-label="Close modal">&times;</button>
@@ -622,111 +628,122 @@
       <div id="formContainer">
         <h3 id="modalTitle">Express Interest</h3>
 
-        <!-- The form posts to your Formspree endpoint -->
         <form id="interestForm" action="https://formspree.io/f/movynnqj" method="POST">
-          <!-- subject will be set dynamically -->
           <input type="hidden" name="subject" id="formSubject" value="Accommodation Enquiry">
 
+          <!-- Accommodation Name FIRST -->
           <div class="form-row">
-            <label for="name">Your name <span style="color:#b00020">*</span></label>
-            <input id="name" name="name" type="text" required placeholder="Your full name">
+            <label for="accomName">Accommodation name <span style="color:#b00020">*</span></label>
+            <input id="accomName" name="accommodation_name" type="text" required placeholder="Business name">
           </div>
 
+          <!-- Your Name SECOND -->
+          <div class="form-row">
+            <label for="contactName">Your name <span style="color:#b00020">*</span></label>
+            <input id="contactName" name="contact_name" type="text" required placeholder="Your full name">
+          </div>
+
+          <!-- Email THIRD -->
           <div class="form-row">
             <label for="email">Email address <span style="color:#b00020">*</span></label>
             <input id="email" name="email" type="email" required placeholder="you@example.com">
           </div>
 
+          <!-- Town selector -->
           <div class="form-row">
             <label for="town">Filming town / location <span style="color:#b00020">*</span></label>
             <select id="town" name="town" required>
               <option value="">Please select…</option>
-              <!-- Overnight filming towns (from your list) -->
-              <option value="Alice Springs1">Alice Springs1</option>
-              <option value="Uluru / Yulara">Uluru / Yulara</option>
-              <option value="Kings Canyon">Kings Canyon</option>
-              <option value="Timouth Well">Timouth Well</option>
-              <option value="Rabbit Flat">Rabbit Flat</option>
-              <option value="Halls Creek">Halls Creek</option>
-              <option value="Top Springs">Top Springs</option>
-              <option value="Daly Waters">Daly Waters</option>
-              <option value="Borroloola">Borroloola</option>
-              <option value="Barkly Roadhouse">Barkly Roadhouse</option>
-              <option value="Tennant Creek">Tennant Creek</option>
-              <option value="Alice Springs2">Alice Springs2</option>
-              <option value="Coober Pedy">Coober Pedy</option>
-              <option value="Roxby Downs1">Roxby Downs1</option>
-              <option value="Andamooka">Andamooka</option>
-              <option value="Roxby Downs2">Roxby Downs2</option>
-              <option value="Quorn">Quorn</option>
-              <option value="Laura">Laura</option>
-              <option value="Broken Hill">Broken Hill</option>
-              <option value="Silverton">Silverton</option>
-              <option value="Tibooburra">Tibooburra</option>
-              <option value="Eromanga">Eromanga</option>
-              <option value="Quilpie">Quilpie</option>
-              <option value="Charleville">Charleville</option>
-              <option value="Cunnamulla">Cunnamulla</option>
-              <option value="Thargomindah">Thargomindah</option>
-              <option value="Bourke">Bourke</option>
-              <option value="Nyngan">Nyngan</option>
-              <option value="Cobar">Cobar</option>
-              <option value="Hillston">Hillston</option>
-              <option value="Griffith">Griffith</option>
-              <option value="Jerilderie">Jerilderie</option>
-              <option value="Deniliquin">Deniliquin</option>
-              <option value="Moulamein">Moulamein</option>
-              <option value="Balranald">Balranald</option>
-              <option value="Hay">Hay</option>
-              <option value="Ivanhoe">Ivanhoe</option>
-              <option value="White Cliffs">White Cliffs</option>
-              <option value="Menindee">Menindee</option>
-              <option value="Mungo">Mungo</option>
-              <option value="Euston">Euston</option>
-              <option value="Swan Hill">Swan Hill</option>
-              <option value="Hopetoun">Hopetoun</option>
-              <option value="Horsham">Horsham</option>
-              <option value="Nhill">Nhill</option>
-              <option value="Edenhope">Edenhope</option>
-              <option value="Portland">Portland</option>
-              <option value="Warrnambool">Warrnambool</option>
-              <option value="Hamilton">Hamilton</option>
-              <option value="Dunkeld">Dunkeld</option>
-              <option value="Halls Gap">Halls Gap</option>
-              <option value="Stawell">Stawell</option>
-              <option value="St Arnaud">St Arnaud</option>
-              <option value="Donald">Donald</option>
-              <option value="Birchip">Birchip</option>
-              <option value="Barham">Barham</option>
-              <option value="Kerang">Kerang</option>
-              <option value="Charlton">Charlton</option>
-              <option value="Wedderburn">Wedderburn</option>
-              <option value="Bendigo">Bendigo</option>
+              <option>Alice Springs1</option>
+              <option>Uluru / Yulara</option>
+              <option>Kings Canyon</option>
+              <option>Timouth Well</option>
+              <option>Rabbit Flat</option>
+              <option>Barkly Roadhouse</option>
+              <option>Halls Creek</option>
+              <option>Borroloola</option>
+              <option>Top Springs</option>
+              <option>Daly Waters</option>
+              <option>Tennant Creek</option>
+              <option>Alice Springs2</option>
+              <option>Coober Pedy</option>
+              <option>Roxby Downs1</option>
+              <option>Andamooka</option>
+              <option>Roxby Downs2</option>
+              <option>Quorn</option>
+              <option>Laura</option>
+              <option>Broken Hill</option>
+              <option>Silverton</option>
+              <option>Tibooburra</option>
+              <option>Eromanga</option>
+              <option>Quilpie</option>
+              <option>Charleville</option>
+              <option>Cunnamulla</option>
+              <option>Thargomindah</option>
+              <option>Bourke</option>
+              <option>Nyngan</option>
+              <option>Cobar</option>
+              <option>Hillston</option>
+              <option>Griffith</option>
+              <option>Jerilderie</option>
+              <option>Deniliquin</option>
+              <option>Moulamein</option>
+              <option>Balranald</option>
+              <option>Hay</option>
+              <option>Ivanhoe</option>
+              <option>White Cliffs</option>
+              <option>Menindee</option>
+              <option>Mungo</option>
+              <option>Euston</option>
+              <option>Swan Hill</option>
+              <option>Hopetoun</option>
+              <option>Horsham</option>
+              <option>Nhill</option>
+              <option>Edenhope</option>
+              <option>Portland</option>
+              <option>Warrnambool</option>
+              <option>Hamilton</option>
+              <option>Dunkeld</option>
+              <option>Halls Gap</option>
+              <option>Stawell</option>
+              <option>St Arnaud</option>
+              <option>Donald</option>
+              <option>Birchip</option>
+              <option>Barham</option>
+              <option>Kerang</option>
+              <option>Charlton</option>
+              <option>Wedderburn</option>
+              <option>Bendigo</option>
             </select>
           </div>
 
+          <!-- Message -->
           <div class="form-row">
             <label for="message">Message / details <span style="color:#b00020">*</span></label>
-            <textarea id="message" name="message" required placeholder="Tell us any dates, property name, location or questions..."></textarea>
+            <textarea id="message" name="message" required placeholder="Tell us any dates, property name, region or questions..."></textarea>
           </div>
 
           <div style="display:flex;gap:10px;align-items:center;">
             <button type="submit" class="btn-submit">Send enquiry</button>
             <div id="formStatus" style="font-size:0.95rem;color:var(--muted)"></div>
           </div>
+
           <div class="error" id="formError" role="alert" aria-live="polite" style="display:none"></div>
         </form>
       </div>
 
       <!-- Thank you screen -->
       <div class="thank-you" id="thankYou">
-        <h3>Thanks — we received your enquiry</h3>
-        <p>We will get back to you shortly. If you'd like to contact us directly, email <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.</p>
+        <h3>Thank you — your enquiry has been received</h3>
+        <p>We’ll get back to you as soon as possible.  
+        For urgent enquiries, email <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.</p>
         <button class="btn-submit" id="thankClose">Close</button>
       </div>
-    </div>
-  </div>
 
+    </div>
+  </div> <!-- End modal -->
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-links">
       <a href="../index.html">Home</a> |
@@ -744,17 +761,20 @@
     </p>
   </footer>
 
-  <script>
-    // CTA tracking (Accommodations)
-    function track(label){
-      if(typeof gtag === 'function') gtag('event','express_interest_click',{event_category:'Engagement', event_label:label});
-    }
-    document.getElementById('accomBronzeBtn').addEventListener('click',()=>track('Accom_Bronze'));
-    document.getElementById('accomSilverBtn').addEventListener('click',()=>track('Accom_Silver'));
-    document.getElementById('accomGoldBtn').addEventListener('click',()=>track('Accom_Gold'));
-    document.getElementById('accomPlatinumBtn').addEventListener('click',()=>track('Accom_Platinum'));
-    document.getElementById('accomDiamondBtn').addEventListener('click',()=>track('Accom_Diamond'));
 
+  <!-- SCRIPTS -->
+  <script>
+    // Track package clicks
+    function track(label){
+      if(typeof gtag === 'function'){
+        gtag('event','express_interest_click',{
+          event_category:'Engagement',
+          event_label:label
+        });
+      }
+    }
+
+    // Open modal buttons
     (function(){
       const modalBack = document.getElementById('modalBack');
       const modalClose = document.getElementById('modalClose');
@@ -776,9 +796,12 @@
         formContainer.style.display = 'block';
         thankYou.style.display = 'none';
         modalBack.style.display = 'flex';
-        setTimeout(()=>document.getElementById('name').focus(), 120);
-        track('Modal_Open');
-        if(typeof gtag === 'function') gtag('event','modal_open',{event_category:'Engagement', event_label:title});
+
+        setTimeout(()=>document.getElementById('accomName').focus(),140);
+
+        if(typeof gtag === 'function'){
+          gtag('event','modal_open',{event_category:'Engagement', event_label:title});
+        }
       }
 
       function closeModal(){
@@ -786,20 +809,22 @@
       }
 
       openButtons.forEach(btn=>{
-        btn.addEventListener('click', function(e){
+        btn.addEventListener('click',function(e){
           e.preventDefault();
-          const title = this.dataset.title || this.getAttribute('data-title') || 'Accommodation Enquiry';
+          const title = this.dataset.title || 'Accommodation Enquiry';
           openModal(title);
         });
       });
 
-      modalClose.addEventListener('click', closeModal);
-      modalBack.addEventListener('click', function(e){
-        if(e.target === modalBack) closeModal();
+      modalClose.addEventListener('click',closeModal);
+      modalBack.addEventListener('click',e=>{
+        if(e.target === modalBack){ closeModal(); }
       });
-      thankClose.addEventListener('click', closeModal);
+      thankClose.addEventListener('click',closeModal);
 
-      form.addEventListener('submit', function(e){
+
+      // Handle form submission
+      form.addEventListener('submit',function(e){
         e.preventDefault();
         formError.style.display = 'none';
         formError.textContent = '';
@@ -809,35 +834,35 @@
 
         const data = new FormData(form);
 
-        fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
+        fetch(form.action,{
+          method:'POST',
+          body:data,
+          headers:{'Accept':'application/json'}
         })
-        .then(function(response){
+        .then(response=>{
           submitBtn.disabled = false;
           if(response.ok){
             form.reset();
             formContainer.style.display = 'none';
             thankYou.style.display = 'block';
             formStatus.textContent = '';
-            track('Form_Submit_Success');
-            if(typeof gtag === 'function') gtag('event','form_submit',{event_category:'Engagement', event_label:subjectInput.value});
+
+            if(typeof gtag === 'function'){
+              gtag('event','form_submit',{event_category:'Engagement',event_label:subjectInput.value});
+            }
           } else {
-            return response.json().then(function(err){
-              throw err;
-            }).catch(function(){
-              throw new Error('There was a problem submitting the form. Please try again.');
-            });
+            throw new Error('There was a problem submitting the form. Please try again.');
           }
         })
-        .catch(function(err){
+        .catch(err=>{
           submitBtn.disabled = false;
           formStatus.textContent = '';
           formError.style.display = 'block';
-          formError.textContent = err && err.error ? err.error : (err.message || 'Submission failed — please try again.');
-          track('Form_Submit_Error');
-          if(typeof gtag === 'function') gtag('event','form_error',{event_category:'Engagement', event_label:subjectInput.value});
+          formError.textContent = err.message || 'Submission failed — please try again.';
+
+          if(typeof gtag === 'function'){
+            gtag('event','form_error',{event_category:'Engagement',event_label:subjectInput.value});
+          }
         });
       });
     })();
