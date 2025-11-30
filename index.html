@@ -154,12 +154,12 @@
     }
 
     /* Banner – now uses real <img> for better LCP & CLS */
-  .banner {
+.banner {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0 20px; /* top/bottom spacing */
+  padding: 20px 0 0; /* reduced bottom space */
   background: #ffffff;
 }
 
@@ -176,14 +176,14 @@
 }
 
     /* Intro */
-    .intro {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 0;    /* was 10px – now zero */
+}
 
     .intro img.logo {
       width: 180px;
@@ -195,12 +195,12 @@
     .text-block h1 { font-size: 2.2rem; margin: 0; }
     .text-block p { color: #444; margin: 5px 0 0; }
 
-    .tagline {
-      color: #E87722;
-      margin-top: 25px;
-      font-weight: bold;
-      font-size: 1.4rem;
-    }
+.tagline {
+  color: #E87722;
+  margin-top: 10px;  /* reduce from 25px */
+  font-weight: bold;
+  font-size: 1.4rem;
+}
 
     .about {
       max-width: 800px;
