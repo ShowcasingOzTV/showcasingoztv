@@ -36,7 +36,7 @@
   <meta name="twitter:image" content="https://showcasingoztv.com.au/images/banner.png" />
 
   <!-- CANONICAL -->
-  <link rel="canonical" href="https://showcasingoztv.com.au/" />
+  <link rel="canonical" href="https://showcacingoztv.com.au/" />
 
   <!-- FAVICON -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
@@ -153,15 +153,23 @@
       nav a { padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
     }
 
-    /* Banner */
+    /* Banner – now uses real <img> for better LCP & CLS */
     .banner {
       display: block;
       width: 100%;
-      height: 520px;
-      background: url('images/banner.png') center center / cover no-repeat;
+      max-height: 520px;
+      overflow: hidden;
       background-color: #ffffff;
       border: none;
       margin-bottom: 40px;
+    }
+
+    .banner picture,
+    .banner img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     /* Intro */
@@ -316,10 +324,7 @@
     /* --- MOBILE BANNER FIX (prevents banner overflow) --- */
     @media (max-width: 768px) {
       .banner {
-        width: 100%;
-        height: 300px;
-        background-size: cover;
-        background-position: center;
+        max-height: 320px;
         overflow: hidden;
       }
     }
@@ -354,12 +359,25 @@
   </script>
 
   <!-- Banner -->
-  <section class="banner"></section>
+  <section class="banner">
+    <picture>
+      <!-- You’ll need to create this optimised image file -->
+      <source srcset="images/banner.webp" type="image/webp">
+      <source srcset="images/banner.png" type="image/png">
+      <img
+        src="images/banner.png"
+        alt="ShowcasingOz TV travel banner across Australia"
+        width="1920"
+        height="640"
+        decoding="async"
+      />
+    </picture>
+  </section>
 
   <!-- Logo + Title -->
   <section class="intro">
     <div class="intro-content">
-      <img src="images/logo.png" alt="ShowcasingOz TV Logo" class="logo">
+      <img src="images/logo.png" alt="ShowcasingOz TV Logo" class="logo" width="180" height="180">
       <div class="text-block">
         <h1>ShowcasingOz TV</h1>
         <p>Video documentaries across Australia — Accommodation, Attractions & Travel Stories</p>
@@ -498,4 +516,5 @@
 
 </body>
 </html>
+
 
