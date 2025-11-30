@@ -360,19 +360,23 @@
 
   <!-- Banner -->
   <section class="banner">
-    <picture>
-      <!-- You’ll need to create this optimised image file -->
-      <source srcset="images/banner.webp" type="image/webp">
-      <source srcset="images/banner.png" type="image/png">
-      <img
-        src="images/banner.png"
-        alt="ShowcasingOz TV travel banner across Australia"
-        width="1920"
-        height="640"
-        decoding="async"
-      />
-    </picture>
-  </section>
+  <picture>
+    <!-- If you later generate a .webp version, you can enable the line below -->
+    <!-- <source srcset="images/banner.webp" type="image/webp"> -->
+
+    <source srcset="images/banner.jpg" type="image/jpeg">
+
+    <img
+      src="images/banner.jpg"
+      alt="ShowcasingOz TV 4WD banner — Discover. Capture. Share."
+      width="1920"
+      height="640"
+      decoding="async"
+      loading="eager"
+      style="width:100%;height:auto;object-fit:cover;"
+    />
+  </picture>
+</section>
 
   <!-- Logo + Title -->
   <section class="intro">
