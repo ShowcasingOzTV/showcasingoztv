@@ -154,17 +154,25 @@
     }
 
     /* Banner – now uses real <img> for better LCP & CLS */
-    .banner {
+  .banner {
   width: 100%;
-  max-height: 480px; /* adjust as needed */
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 20px; /* top/bottom spacing */
+  background: #ffffff;
+}
+
+.banner picture {
+  width: 90%;
+  max-width: 900px;      /* controls how big the banner can get */
 }
 
 .banner img {
   width: 100%;
-  height: auto;          /* <-- FIXED: remove distortion */
+  height: auto;          /* keep correct proportions */
   display: block;
-  object-fit: cover;
+  object-fit: contain;   /* never crop – always show whole image */
 }
 
     /* Intro */
