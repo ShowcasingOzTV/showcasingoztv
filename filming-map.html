@@ -379,6 +379,10 @@ async function init() {
     // === HIDE NON-FILMING ENTRIES ===
     const filtered = sorted.filter(entry => {
       const town = entry.town.toLowerCase();
+  // Hide ONLY the pre-filming Coober Pedy date (30/05/2026)
+  if (entry.town.toLowerCase() === "coober pedy" && entry.date === "30/05/2026") {
+    return false;
+  }
 
       // Pre-filming travel
       if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town))
