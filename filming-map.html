@@ -383,13 +383,45 @@ async function init() {
     document.getElementById("status").innerText = "Building itinerary...";
 
     const sorted = raw.sort((a, b) =>
+      // === HIDE SPECIFIC NON-FILMING ENTRIES ===
+const hiddenTowns = [
+  "Hobart",
+  "Spirit Of Tasmania",
+  "Mt Gambier",
+  "Adelaide",
+  "Coober Pedy (PRE-FILMING)",
+  "Annual Leave"
+];
+
+const dateInRange = (date, start, end) => {
+  const d = new Date(date.split("/").reverse().join("-"));
+  const s = new Date(start.split("/").reverse().join("-"));
+  const e = new Date(end.split("/").reverse().join("-"));
+  return d >= s && d <= e;
+};
+
+// Filter out unwanted entries
+const filtered = sorted.filter(entry => {
+  // Hide specific towns
+  if (hiddenTowns.some(t => entry.town.toLowerCase().includes(t.toLowerCase()))) {
+    return false;
+  }
+
+  // Hide non-filming pause period (26 Sep → 05 Oct)
+  if (dateInRange(entry.date, "26/09/2026", "05/10/2026")) {
+    return false;
+  }
+
+  return true;
+});
+
       new Date(a.date.split("/").reverse().join("-")) -
       new Date(b.date.split("/").reverse().join("-"))
     );
 
-    const ranges = groupDateRanges(sorted);
-    populateTable(ranges);
-    buildMap(ranges);
+const ranges = groupDateRanges(filtered);
+populateTable(ranges);
+buildMap(ranges);
 
     document.getElementById("status").innerText = "Itinerary loaded successfully.";
   } catch {
