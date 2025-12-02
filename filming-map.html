@@ -16,11 +16,11 @@ gtag('config', 'G-RB6N742VZW');
 
 <!-- SEO META TAGS -->
 <title>Filming Map | ShowcasingOz TV – Discover Our Australian Travel Itinerary</title>
-<meta name="description" content="Explore the ShowcasingOz TV filming map to see each Australian town we visit and film. Discover dates, our 2026 travel route across Australia." />
+<meta name="description" content="Explore the ShowcasingOz TV filming map to see each Australian town we visit and film. Discover dates and our 2026 travel route across Australia." />
 <meta name="keywords" content="ShowcasingOz TV, filming map, Australian travel series, travel itinerary, TV filming locations, Australia travel, regional tourism" />
 
 <meta property="og:title" content="ShowcasingOz TV Filming Map" />
-<meta property="og:description" content="Interactive filming map showing each town visited by ShowcasingOz TV during our 2026 travel series." />
+<meta property="og:description" content="Interactive filming map showing each town visited by ShowcasingOz TV during our 2026 series." />
 <meta property="og:image" content="https://showcasingoztv.com.au/images/og-image-map.jpg" />
 <meta property="og:url" content="https://showcasingoztv.com.au/filming-map.html" />
 
@@ -31,6 +31,220 @@ gtag('config', 'G-RB6N742VZW');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
 
 <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<style>
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  color: #0E3557;
+  background: #fff;
+}
+header.navbar {
+  background: #0E3557;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header.navbar img {
+  height: 50px;
+  width: auto;
+}
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #E87722;
+  transition: color 0.3s ease;
+}
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0E3557;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+  nav a {
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+/* Banner */
+.banner {
+  display: block;
+  width: 100%;
+  height: 140px;
+  background: url('banner.png') center top / contain no-repeat;
+  background-color: #ffffff;
+  border: none;
+  margin: 0;
+}
+
+.hero {
+  padding: 18px;
+  background: linear-gradient(180deg,#0f172a,#0b1220);
+  color: white;
+  text-align:center;
+}
+
+#map {
+  height: 60vh;
+  min-height: 480px;
+  margin-top: 0;
+}
+
+.container {
+  padding: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background: #f4f4f4;
+}
+.note {
+  font-size:0.95rem;
+  color:#444;
+}
+
+.popup-content {
+  max-width: 320px;
+}
+
+/* Footer */
+footer {
+  background:#0E3557;
+  color:white;
+  padding:20px 0;
+  margin-top:40px;
+}
+footer .container {
+  text-align:center;
+}
+footer a {
+  color:#E87722;
+  text-decoration:none;
+}
+footer a:hover {
+  text-decoration:underline;
+}
+.footer-links {
+  font-size:0.95rem;
+}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "ShowcasingOz TV Filming Map",
+  "url": "https://showcasingoztv.com.au/filming-map.html",
+  "description": "Live filming map showing each town visited by ShowcasingOz TV during the 2026 series.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ShowcasingOz TV",
+    "url": "https://showcasingoztv.com.au",
+    "logo": "https://showcasingoztv.com.au/images/logo.png"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
+
+<!-- Banner -->
+<section class="banner"></section>
+
+<div class="hero">
+  <h1>ShowcasingOz TV Filming Map</h1>
+  <p>Live itinerary displayed using our 2026 filming schedule in Google Sheets. Click pins for date ranges.</p>
+</div>
+
+<!-- Map -->
+<div id="map"></div>
+
+<div class="container">
+  <p class="note" id="status">Loading itinerary from Google Sheets...</p>
+
+  <h2>Planned Filming Schedule</h2>
+
+  <table id="itinerary-table">
+    <thead>
+      <tr>
+        <th>Date Range</th>
+        <th>Town</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
@@ -163,9 +377,10 @@ async function buildMap(ranges) {
 async function init() {
   try {
     const raw = await loadCSV();
-    document.getElementById("status").innerText = "Building itinerary...";
+    const statusEl = document.getElementById("status");
+    if (statusEl) statusEl.innerText = "Building itinerary...";
 
-    // Sort by date
+    // Sort by date (assuming dd/mm/yyyy)
     const sorted = raw.sort((a, b) =>
       new Date(a.date.split("/").reverse().join("-")) -
       new Date(b.date.split("/").reverse().join("-"))
@@ -203,25 +418,20 @@ async function init() {
 
     const ranges = groupDateRanges(filtered);
     populateTable(ranges);
-    buildMap(ranges);
+    await buildMap(ranges);
 
-    document.getElementById("status").innerText = "Itinerary loaded successfully.";
+    if (statusEl) statusEl.innerText = "Itinerary loaded successfully.";
   } catch (e) {
     console.error(e);
-    document.getElementById("status").innerText = "Error loading itinerary from Google Sheets.";
+    const statusEl = document.getElementById("status");
+    if (statusEl) statusEl.innerText = "Error loading itinerary from Google Sheets.";
   }
 }
 
-init();
+document.addEventListener("DOMContentLoaded", init);
 </script>
 
-<!-- ===================== -->
-<!-- PART 3 — FOOTER + CLOSING TAGS -->
-<!-- ===================== -->
-
-</div> <!-- end .container -->
-
-  <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-links">
@@ -242,7 +452,6 @@ init();
     </p>
   </div>
 </footer>
-
 
 </body>
 </html>
