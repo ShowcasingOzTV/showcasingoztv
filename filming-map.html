@@ -14,21 +14,21 @@ gtag('config', 'G-RB6N742VZW');
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<!-- SEO META TAGS: Filming Map Page -->
+<!-- SEO META TAGS -->
 <title>Filming Map | ShowcasingOz TV – Discover Our Australian Travel Itinerary</title>
-<meta name="description" content="Explore the ShowcasingOz TV filming map to see each Australian town we visit and film. Discover dates, attractions, and our 2026 travel route across Australia." />
+<meta name="description" content="Explore the ShowcasingOz TV filming map to see each Australian town we visit and film. Discover dates, our 2026 travel route across Australia." />
 <meta name="keywords" content="ShowcasingOz TV, filming map, Australian travel series, travel itinerary, TV filming locations, Australia travel, regional tourism" />
 
 <meta property="og:title" content="ShowcasingOz TV Filming Map" />
-<meta property="og:description" content="Interactive filming map showcasing every Australian town visited by ShowcasingOz TV during our 2026 travel series." />
+<meta property="og:description" content="Interactive filming map showing each town visited by ShowcasingOz TV during our 2026 travel series." />
 <meta property="og:image" content="https://showcasingoztv.com.au/images/og-image-map.jpg" />
 <meta property="og:url" content="https://showcasingoztv.com.au/filming-map.html" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://showcasingoztv.com.au/filming-map.html" />
 
-<!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
 
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -97,6 +97,7 @@ nav a:hover {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 }
+
 /* Banner */
 .banner {
   display: block;
@@ -107,22 +108,26 @@ nav a:hover {
   border: none;
   margin: 0;
 }
+
 .hero {
   padding: 18px;
   background: linear-gradient(180deg,#0f172a,#0b1220);
   color: white;
   text-align:center;
 }
+
 #map {
   height: 60vh;
   min-height: 480px;
   margin-top: 0;
 }
+
 .container {
   padding: 18px;
   max-width: 1100px;
   margin: 0 auto;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -132,7 +137,6 @@ th, td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
-  vertical-align: top;
 }
 th {
   background: #f4f4f4;
@@ -141,69 +145,25 @@ th {
   font-size:0.95rem;
   color:#444;
 }
+
 .popup-content {
   max-width: 320px;
 }
-.controls {
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-top:12px;
-  justify-content:flex-end;
-}
-.btn {
-  background:#0b74de;
-  color:white;
-  padding:8px 12px;
-  border-radius:6px;
-  border:none;
-  cursor:pointer;
-}
-footer {
-  background: #0E3557;
-  color: #fff;
-  padding: 30px 20px;
-  font-size: 0.9rem;
-  margin-top: 50px;
-  text-align: center;
-}
-footer .footer-links {
-  margin-bottom: 15px;
-}
-footer a {
-  color: #E87722;
-  text-decoration: none;
-  margin: 0 10px;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 900px) {
-  .container {
-    padding: 12px;
-  }
-}
 </style>
 
-<!-- ✅ JSON-LD + Schema.Org (Only addition requested) -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "ShowcasingOz TV Filming Map",
   "url": "https://showcasingoztv.com.au/filming-map.html",
-  "description": "Interactive filming map showing each Australian town and region visited by ShowcasingOz TV during the 2026 travel series.",
+  "description": "Live filming map showing each town visited by ShowcasingOz TV during the 2026 series.",
   "publisher": {
     "@type": "Organization",
     "name": "ShowcasingOz TV",
     "url": "https://showcasingoztv.com.au",
-    "logo": "https://showcasingoztv.com.au/images/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/ShowcasingOzTV",
-      "https://www.instagram.com/ShowcasingOzTV",
-      "https://www.youtube.com/@ShowcasingOzTV",
-      "https://www.tiktok.com/@showcasingoztv"
-    ]
+    "logo": "https://showcasingoztv.com.au/images/logo.png"
   }
 }
 </script>
@@ -229,6 +189,7 @@ footer a:hover {
     </nav>
   </div>
 </header>
+
 <script>
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
@@ -240,288 +201,205 @@ if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('acti
 
 <div class="hero">
 <h1>ShowcasingOz TV Filming Map</h1>
-<p>Interactive map showing each town we will visit (one marker per town). Click pins for dates and attractions. Route line connects towns in visit order.</p>
+<p>Live itinerary displayed using your Google Sheets document. Click pins for date ranges.</p>
 </div>
 
 <!-- Map -->
 <div id="map"></div>
 
 <div class="container">
-<p class="note" id="status">Loading itinerary data and placing markers...</p>
+<p class="note" id="status">Loading itinerary from Google Sheets...</p>
 
-<h2>Planned Filming Schedule (one entry per town, date order)</h2>
+<h2>Planned Filming Schedule</h2>
 
-<table id="itinerary-table" aria-describedby="status">
+<table id="itinerary-table">
 <thead>
-<tr><th>Date Range</th><th>Town</th><th>Attractions / Filming Highlights</th></tr>
+<tr>
+  <th>Date Range</th>
+  <th>Town</th>
+</tr>
 </thead>
 <tbody></tbody>
 </table>
+<!-- ===================== -->
+<!-- PART 2 — GOOGLE SHEETS CSV LOADER + ITINERARY PROCESSOR -->
+<!-- ===================== -->
 
-<p class="note" style="margin-top:8px;">Data source: <strong>Itinerary 2026</strong> sheet from your uploaded Excel file.</p>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="../index.html">Home</a> |
-    <a href="../about.html">About Us</a> |
-    <a href="../towns/index.html">Towns</a> |
-    <a href="../partner.html">Partner With Us</a> |
-    <a href="../sponsorship.html">Sponsorship</a> |
-    <a href="../filming-map.html">Filming Map</a> |
-    <a href="../press.html">Press</a> |
-    <a href="../contact.html">Contact</a> |
-    <a href="../legal.html">Legal</a>
-  </div>
-    <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      © 2025 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
-  </footer>
-  
-<!-- Leaflet & Map Scripts -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
-<!-- Your Existing Map Script (UNCHANGED) -->
 <script>
-function escapeHtml(s) {
-  if(!s) return '';
-  return String(s)
-    .replaceAll('&','&amp;')
-    .replaceAll('<','&lt;')
-    .replaceAll('>','&gt;')
-    .replaceAll('"','&quot;');
+// === 1. GOOGLE SHEETS CSV URL ===
+const csvUrl =
+  "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&id=1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38&gid=0";
+
+// === 2. LOAD CSV ===
+async function loadCSV() {
+  const response = await fetch(csvUrl);
+  const text = await response.text();
+  return parseCSV(text);
 }
 
-const geocodeOverrides = {
-  "Hopetoun": "Hopetoun, VIC, Australia",
-  "Rabbit Flat": "Rabbit Flat, Northern Territory, Australia",
-  "Laura": "Laura, SA, Australia",
-  "Ivanhoe": "Ivanhoe, NSW, Australia"
-};
+// === 3. BASIC CSV PARSER ===
+function parseCSV(text) {
+  const lines = text.trim().split("\n");
+  const header = lines.shift().split(",").map(h => h.trim());
 
-const map = L.map('map').setView([-25.0, 134.0], 4);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  const dateIndex = header.findIndex(h => h.toLowerCase() === "date");
+  const townIndex = header.findIndex(h => h.toLowerCase() === "town");
+  const attrIndex = header.findIndex(h => h.toLowerCase().includes("attraction"));
+
+  const entries = lines.map(line => {
+    const cols = line.split(",");
+    return {
+      date: cols[dateIndex]?.trim(),
+      town: cols[townIndex]?.trim(),
+      attraction: cols[attrIndex]?.trim() || ""
+    };
+  });
+
+  return entries;
+}
+
+// === 4. GROUP INTO DATE RANGES ===
+function groupDateRanges(entries) {
+  const ranges = [];
+  if (entries.length === 0) return ranges;
+
+  let start = entries[0].date;
+  let end = entries[0].date;
+  let town = entries[0].town;
+
+  for (let i = 1; i < entries.length; i++) {
+    const e = entries[i];
+
+    if (e.town === town) {
+      end = e.date;
+    } else {
+      ranges.push({ start, end, town });
+      start = e.date;
+      end = e.date;
+      town = e.town;
+    }
+  }
+
+  ranges.push({ start, end, town });
+  return ranges;
+}
+
+// === 5. POPULATE TABLE ===
+function populateTable(ranges) {
+  const tbody = document.querySelector("#itinerary-table tbody");
+  tbody.innerHTML = "";
+
+  ranges.forEach(r => {
+    const tr = document.createElement("tr");
+
+    // ALWAYS display full range: start → end
+    const rangeText = `${r.start} → ${r.end}`;
+
+    tr.innerHTML = `
+      <td>${rangeText}</td>
+      <td>${r.town}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+// === 6. GEOCODER (OpenStreetMap Nominatim) ===
+async function geocodeTown(town) {
+  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(town + ", Australia")}`;
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
+    if (json.length > 0) {
+      return {
+        lat: parseFloat(json[0].lat),
+        lon: parseFloat(json[0].lon)
+      };
+    }
+  } catch (e) {
+    console.error("Geocoding error:", e);
+  }
+  return null;
+}
+
+// === 7. MAP INITIALISATION ===
+const map = L.map("map").setView([-25.0, 133.0], 5);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
-  attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const tableBody = document.querySelector('#itinerary-table tbody');
-const statusEl = document.getElementById('status');
+// === 8. ADD MARKERS + ROUTE ===
+async function buildMap(ranges) {
+  const points = [];
 
-let markersLayer = L.layerGroup().addTo(map);
-let routeLayer = L.layerGroup().addTo(map);
-let bounds = L.latLngBounds();
+  for (const r of ranges) {
+    const coords = await geocodeTown(r.town);
+    if (!coords) continue;
 
-async function tryLoadServerFile() {
-  const serverPath = './ShowcasingOz TV Business.xlsx';
-  try {
-    const resp = await fetch(serverPath);
-    if (!resp.ok) throw new Error('not found');
-    const ab = await resp.arrayBuffer();
-    return await parseWorkbook(ab);
-  } catch {
-    return null;
+    points.push([coords.lat, coords.lon]);
+
+    const popupHtml = `
+      <div class="popup-content">
+        <strong>${r.town}</strong><br/>
+        <span>${r.start} → ${r.end}</span>
+      </div>
+    `;
+
+    L.marker([coords.lat, coords.lon]).addTo(map).bindPopup(popupHtml);
+  }
+
+  if (points.length > 1) {
+    const poly = L.polyline(points, {
+      color: "#E87722",
+      weight: 4
+    }).addTo(map);
+    map.fitBounds(poly.getBounds(), { padding: [40, 40] });
   }
 }
 
-async function parseWorkbook(arrayBuffer) {
+// === 9. MASTER FUNCTION ===
+async function init() {
   try {
-    const wb = XLSX.read(arrayBuffer, {type:'array', cellDates:true});
-    const sheetName = wb.SheetNames.find(n => n.toLowerCase().includes('itiner')) || wb.SheetNames[0];
-    const ws = wb.Sheets[sheetName];
-    const rows = XLSX.utils.sheet_to_json(ws, {defval: ''});
-    if (!rows || rows.length === 0) return [];
+    const raw = await loadCSV();
+    document.getElementById("status").innerText = "Building itinerary...";
 
-    const keys = Object.keys(rows[0]);
-    function findKey(cands) {
-      for (const c of cands)
-        for (const k of keys)
-          if (String(k).trim().toLowerCase().includes(c))
-            return k;
-      return null;
-    }
-
-    const dateKey = findKey(['date','day']);
-    const townKey = findKey(['town','city']);
-    const attrKey = findKey(['activity','attraction','itiner']);
-
-    const dk = dateKey || keys[0];
-    const tk = townKey || keys[1] || keys[0];
-    const ak = attrKey || keys[2] || keys[keys.length-1];
-
-    const normalized = rows.map(r => {
-      const rawDate = r[dk];
-      let dateObj = null;
-
-      if (rawDate instanceof Date) dateObj = rawDate;
-      else if (typeof rawDate === 'number') {
-        const ms = (rawDate - 25569) * 86400 * 1000;
-        const d = new Date(ms);
-        if (!isNaN(d)) dateObj = d;
-      } else if (rawDate) {
-        const parsed = new Date(String(rawDate));
-        if (!isNaN(parsed)) dateObj = parsed;
-      }
-
-      const dateStr = dateObj
-        ? `${String(dateObj.getDate()).padStart(2,'0')}/${String(dateObj.getMonth()+1).padStart(2,'0')}/${dateObj.getFullYear()}`
-        : '';
-
-      const town = (r[tk] || '').trim();
-      const attractions = (r[ak] || '').trim();
-
-      return {
-        DATE_OBJ: dateObj,
-        DATE_STR: dateStr,
-        TOWN: town,
-        ATTRACTIONS: attractions
-      };
-    });
-
-    const filtered = normalized.filter(r =>
-      r.TOWN &&
-      !/annual leave|rdo|public holiday/i.test(r.ATTRACTIONS)
+    const sorted = raw.sort((a, b) =>
+      new Date(a.date.split("/").reverse().join("-")) -
+      new Date(b.date.split("/").reverse().join("-"))
     );
 
-    const agg = {};
-    for (const row of filtered) {
-      const town = row.TOWN;
-      if (!agg[town])
-        agg[town] = { dates: new Set(), attractions: new Set(), firstDateObj: null };
+    const ranges = groupDateRanges(sorted);
+    populateTable(ranges);
+    buildMap(ranges);
 
-      if (row.DATE_STR) agg[town].dates.add(row.DATE_STR);
-
-      if (row.DATE_OBJ &&
-         (!agg[town].firstDateObj || row.DATE_OBJ < agg[town].firstDateObj)
-      ) {
-        agg[town].firstDateObj = row.DATE_OBJ;
-      }
-
-      if (row.ATTRACTIONS)
-        row.ATTRACTIONS.split(/[\n\/;|]+/)
-        .forEach(p => agg[town].attractions.add(p.trim()));
-    }
-
-    const records = [];
-    for (const [town, v] of Object.entries(agg)) {
-      const dates = Array.from(v.dates).sort();
-      const dateRange =
-        dates.length === 1 ? dates[0] : `${dates[0]} → ${dates[dates.length-1]}`;
-
-      const firstDate = v.firstDateObj
-        ? `${String(v.firstDateObj.getDate()).padStart(2,'0')}/${String(v.firstDateObj.getMonth()+1).padStart(2,'0')}/${v.firstDateObj.getFullYear()}`
-        : '';
-
-      const attractions = Array.from(v.attractions).join(' / ');
-
-      const geocodeQuery =
-        geocodeOverrides[town] || `${town}, Australia`;
-
-      records.push({
-        DATE_RANGE: dateRange,
-        FIRST_DATE: firstDate,
-        TOWN: town,
-        ATTRACTIONS: attractions,
-        GEOCODE_QUERY: geocodeQuery
-      });
-    }
-
-    records.sort((a,b) => {
-      if (a.FIRST_DATE && b.FIRST_DATE)
-        return new Date(a.FIRST_DATE.split('/').reverse().join('-')) -
-               new Date(b.FIRST_DATE.split('/').reverse().join('-'));
-      return a.TOWN.localeCompare(b.TOWN);
-    });
-
-    return records;
-  } catch (err) {
-    console.error('parseWorkbook error', err);
-    return [];
-  }
-}
-
-async function geocodeQueryFn(query) {
-  if (!query) return null;
-  try {
-    const resp = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`);
-    const data = await resp.json();
-    if (data.length) return { lat: +data[0].lat, lon: +data[0].lon };
-    return null;
+    document.getElementById("status").innerText = "Itinerary loaded successfully.";
   } catch {
-    return null;
+    document.getElementById("status").innerText = "Error loading itinerary from Google Sheets.";
   }
 }
 
-async function renderFromRecords(records) {
-  markersLayer.clearLayers();
-  routeLayer.clearLayers();
-  tableBody.innerHTML = '';
-  bounds = L.latLngBounds();
-
-  const routeCoords = [];
-  let remaining = records.length;
-
-  statusEl.textContent = `Geocoding ${remaining} towns — please wait...`;
-
-  for (const r of records) {
-    const tr = document.createElement('tr');
-    tr.innerHTML =
-      `<td>${escapeHtml(r.DATE_RANGE)}</td>` +
-      `<td>${escapeHtml(r.TOWN)}</td>` +
-      `<td>${escapeHtml(r.ATTRACTIONS)}</td>`;
-    tableBody.appendChild(tr);
-
-    const coords = await geocodeQueryFn(r.GEOCODE_QUERY);
-
-    if (coords) {
-      const marker = L.marker([coords.lat, coords.lon]).addTo(markersLayer);
-      marker.bindPopup(
-        `<div class="popup-content">
-          <strong>${escapeHtml(r.TOWN)}</strong><br/>
-          <em>${escapeHtml(r.DATE_RANGE)}</em>
-          <p>${escapeHtml(r.ATTRACTIONS)}</p>
-        </div>`
-      );
-
-      bounds.extend([coords.lat, coords.lon]);
-      routeCoords.push([coords.lat, coords.lon]);
-    }
-
-    remaining--;
-    statusEl.textContent = remaining
-      ? `Geocoding... (${remaining} remaining)`
-      : 'All towns processed.';
-
-    await new Promise(res => setTimeout(res, 400));
-  }
-
-  if (routeCoords.length > 1)
-    L.polyline(routeCoords, {
-      color: '#E87722',
-      weight: 4,
-      opacity: 0.9
-    }).addTo(routeLayer);
-
-  if (bounds.isValid()) map.fitBounds(bounds.pad(0.2));
-  else map.setView([-25,134], 4);
-}
-
-(async () => {
-  statusEl.textContent = 'Attempting to load itinerary from server file...';
-
-  const records = await tryLoadServerFile();
-  if (records && records.length)
-    await renderFromRecords(records);
-  else
-    statusEl.textContent =
-      'Server-side Excel not found — please place "ShowcasingOz TV Business.xlsx" in the same folder as this page and reload.';
-})();
+init();
 </script>
+<!-- ===================== -->
+<!-- PART 3 — FOOTER + CLOSING TAGS -->
+<!-- ===================== -->
+
+</div> <!-- end .container -->
+
+<!-- FOOTER -->
+<footer style="background:#0E3557; padding:20px 0; color:white; margin-top:40px;">
+  <div class="container" style="text-align:center;">
+    <p style="margin:0; font-size:0.95rem;">© 2026 ShowcasingOz TV. All Rights Reserved.</p>
+    <p style="margin:6px 0 0;">
+      <a href="../legal.html" style="color:#E87722; text-decoration:none;">Legal</a>
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
+
 
 
