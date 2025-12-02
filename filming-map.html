@@ -31,221 +31,6 @@ gtag('config', 'G-RB6N742VZW');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
 
 <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-<style>
-body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  margin: 0;
-  color: #0E3557;
-  background: #fff;
-}
-header.navbar {
-  background: #0E3557;
-  color: #fff;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-header.navbar img {
-  height: 50px;
-  width: auto;
-}
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-nav a:hover {
-  color: #E87722;
-  transition: color 0.3s ease;
-}
-.menu-btn {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #0E3557;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-  }
-  nav.active {
-    display: flex;
-  }
-  .menu-btn {
-    display: block;
-  }
-  nav a {
-    padding: 15px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-}
-
-/* Banner */
-.banner {
-  display: block;
-  width: 100%;
-  height: 140px;
-  background: url('banner.png') center top / contain no-repeat;
-  background-color: #ffffff;
-  border: none;
-  margin: 0;
-}
-
-.hero {
-  padding: 18px;
-  background: linear-gradient(180deg,#0f172a,#0b1220);
-  color: white;
-  text-align:center;
-}
-
-#map {
-  height: 60vh;
-  min-height: 480px;
-  margin-top: 0;
-}
-
-.container {
-  padding: 18px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 12px;
-}
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-th {
-  background: #f4f4f4;
-}
-.note {
-  font-size:0.95rem;
-  color:#444;
-}
-
-.popup-content {
-  max-width: 320px;
-}
-      footer {
-      background: #0E3557;
-      color: #fff;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      margin-top: 50px;
-    }
-
-    footer .footer-links { margin-bottom: 15px; }
-
-    footer a {
-      color: #E87722;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover { text-decoration: underline; }
-  footer .container {
-  text-align: center !important;
-}
-
-</style>
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "ShowcasingOz TV Filming Map",
-  "url": "https://showcasingoztv.com.au/filming-map.html",
-  "description": "Live filming map showing each town visited by ShowcasingOz TV during the 2026 series.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ShowcasingOz TV",
-    "url": "https://showcasingoztv.com.au",
-    "logo": "https://showcasingoztv.com.au/images/logo.png"
-  }
-}
-</script>
-
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header class="navbar">
-  <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
-    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-    <nav id="menu">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About Us</a>
-      <a href="../towns/index.html">Towns</a>
-      <a href="../partner.html">Partner With Us</a>
-      <a href="../sponsorship.html">Sponsorship</a>
-      <a href="../filming-map.html">Filming Map</a>
-      <a href="../press.html">Press</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<script>
-const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu');
-if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
-
-<!-- Banner -->
-<section class="banner"></section>
-
-<div class="hero">
-<h1>ShowcasingOz TV Filming Map</h1>
-<p>Live itinerary displayed using your Google Sheets document. Click pins for date ranges.</p>
-</div>
-
-<!-- Map -->
-<div id="map"></div>
-
-<div class="container">
-<p class="note" id="status">Loading itinerary from Google Sheets...</p>
-
-<h2>Planned Filming Schedule</h2>
-
-<table id="itinerary-table">
-<thead>
-<tr>
-  <th>Date Range</th>
-  <th>Town</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-<!-- ===================== -->
-<!-- CORRECTED PART 2 — GOOGLE SHEETS CSV LOADER + ITINERARY PROCESSOR -->
-<!-- ===================== -->
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
@@ -324,8 +109,18 @@ function populateTable(ranges) {
 }
 
 // === 6. GEOCODER ===
+// Optional overrides for ambiguous town names (force correct state)
+const geocodeOverrides = {
+  "hopetoun": "Hopetoun, Victoria, Australia",
+  "ivanhoe": "Ivanhoe, New South Wales, Australia",
+  "rabbit flat": "Rabbit Flat, Northern Territory, Australia"
+};
+
 async function geocodeTown(town) {
-  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(town + ", Australia")}`;
+  const lower = (town || "").toLowerCase();
+  const searchName = geocodeOverrides[lower] || (town + ", Australia");
+
+  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(searchName)}`;
   try {
     const response = await fetch(url);
     const json = await response.json();
@@ -376,15 +171,21 @@ async function init() {
       new Date(b.date.split("/").reverse().join("-"))
     );
 
-    // === HIDE NON-FILMING ENTRIES ===
+    // === HIDE NON-FILMING ENTRIES & BLANKS ===
     const filtered = sorted.filter(entry => {
-      const town = entry.town.toLowerCase();
-  // Hide ONLY the pre-filming Coober Pedy date (30/05/2026)
-  if (entry.town.toLowerCase() === "coober pedy" && entry.date === "30/05/2026") {
-    return false;
-  }
+      // Skip any blank or malformed rows
+      if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
+        return false;
+      }
 
-      // Pre-filming travel
+      const town = entry.town.toLowerCase();
+
+      // Hide ONLY the pre-filming Coober Pedy date (30/05/2026)
+      if (town === "coober pedy" && entry.date === "30/05/2026") {
+        return false;
+      }
+
+      // Pre-filming travel (Tassie → Adelaide leg)
       if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town))
         return false;
 
