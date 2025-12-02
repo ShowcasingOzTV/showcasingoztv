@@ -397,10 +397,10 @@ const filtered = sorted.filter(entry => {
 
   const town = entry.town.trim().toLowerCase();
 
-  // Remove ONLY the pre-filming Coober Pedy date (30/05/2026)
-  if (town === "coober pedy" && entry.date.trim() === "30/05/2026") {
-      return false;
-  }
+// Remove ONLY the pre-filming Coober Pedy date (Sheet stores it as 5/30/2026)
+if (entry.date.trim() === "5/30/2026" && entry.town.trim().toLowerCase() === "coober pedy") {
+    return false;
+}
 
   // Pre-filming travel we must hide
   if (["hobart","spirit of tasmania","mt gambier","adelaide"].includes(town)) {
