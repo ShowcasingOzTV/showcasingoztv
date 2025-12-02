@@ -390,26 +390,29 @@ async function init() {
     // === HIDE NON-FILMING ENTRIES & BLANKS ===
 const filtered = sorted.filter(entry => {
 
-  if (!entry.date || !entry.town) return false;
-
-  const town = entry.town.toLowerCase();
-
-  // Hide ONLY the pre-filming Coober Pedy date (30/05/2026)
-  if (town === "coober pedy" && entry.date === "30/05/2026") {
-    return false;
+  // Skip blank rows
+  if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
+      return false;
   }
 
-  // Pre-filming travel (Tassie → Adelaide)
-  if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town))
-    return false;
+  const town = entry.town.trim().toLowerCase();
 
-  // Annual Leave
+  // Remove ONLY the pre-filming Coober Pedy date (30/05/2026)
+  if (town === "coober pedy" && entry.date.trim() === "30/05/2026") {
+      return false;
+  }
+
+  // Pre-filming travel we must hide
+  if (["hobart","spirit of tasmania","mt gambier","adelaide"].includes(town)) {
+      return false;
+  }
+
+  // Hide annual leave
   if (town.includes("annual leave")) return false;
 
-  // Pause 26 Sep → 05 Oct
+  // Hide pause period
   const d = new Date(entry.date.split("/").reverse().join("-"));
-  if (d >= new Date("2026-09-26") && d <= new Date("2026-10-05"))
-    return false;
+  if (d >= new Date("2026-09-26") && d <= new Date("2026-10-05")) return false;
 
   return true;
 });
