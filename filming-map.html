@@ -243,7 +243,7 @@ if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('acti
 <tbody></tbody>
 </table>
 <!-- ===================== -->
-<!-- PART 2 — GOOGLE SHEETS CSV LOADER + ITINERARY PROCESSOR -->
+<!-- CORRECTED PART 2 — GOOGLE SHEETS CSV LOADER + ITINERARY PROCESSOR -->
 <!-- ===================== -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -251,7 +251,7 @@ if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('acti
 <script>
 // === 1. GOOGLE SHEETS CSV URL ===
 const csvUrl =
-  "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&id=1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38&gid=0";
+  "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&gid=0";
 
 // === 2. LOAD CSV ===
 async function loadCSV() {
@@ -314,10 +314,7 @@ function populateTable(ranges) {
 
   ranges.forEach(r => {
     const tr = document.createElement("tr");
-
-    // ALWAYS display full range: start → end
     const rangeText = `${r.start} → ${r.end}`;
-
     tr.innerHTML = `
       <td>${rangeText}</td>
       <td>${r.town}</td>
@@ -326,35 +323,26 @@ function populateTable(ranges) {
   });
 }
 
-// === 6. GEOCODER (OpenStreetMap Nominatim) ===
+// === 6. GEOCODER ===
 async function geocodeTown(town) {
   const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(town + ", Australia")}`;
   try {
     const response = await fetch(url);
     const json = await response.json();
     if (json.length > 0) {
-      return {
-        lat: parseFloat(json[0].lat),
-        lon: parseFloat(json[0].lon)
-      };
+      return { lat: parseFloat(json[0].lat), lon: parseFloat(json[0].lon) };
     }
-  } catch (e) {
-    console.error("Geocoding error:", e);
-  }
+  } catch (e) { console.error("Geocoding error:", e); }
   return null;
 }
 
 // === 7. MAP INITIALISATION ===
 const map = L.map("map").setView([-25.0, 133.0], 5);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 18,
-}).addTo(map);
-
-// === 8. ADD MARKERS + ROUTE ===
+// === 8. ADD MARKERS + POLYLINE ===
 async function buildMap(ranges) {
   const points = [];
-
   for (const r of ranges) {
     const coords = await geocodeTown(r.town);
     if (!coords) continue;
@@ -367,15 +355,11 @@ async function buildMap(ranges) {
         <span>${r.start} → ${r.end}</span>
       </div>
     `;
-
     L.marker([coords.lat, coords.lon]).addTo(map).bindPopup(popupHtml);
   }
 
   if (points.length > 1) {
-    const poly = L.polyline(points, {
-      color: "#E87722",
-      weight: 4
-    }).addTo(map);
+    const poly = L.polyline(points, { color: "#E87722", weight: 4 }).addTo(map);
     map.fitBounds(poly.getBounds(), { padding: [40, 40] });
   }
 }
@@ -386,55 +370,46 @@ async function init() {
     const raw = await loadCSV();
     document.getElementById("status").innerText = "Building itinerary...";
 
+    // Sort by date
     const sorted = raw.sort((a, b) =>
-      // === HIDE SPECIFIC NON-FILMING ENTRIES ===
-const hiddenTowns = [
-  "Hobart",
-  "Spirit Of Tasmania",
-  "Mt Gambier",
-  "Adelaide",
-  "Coober Pedy (PRE-FILMING)",
-  "Annual Leave"
-];
-
-const dateInRange = (date, start, end) => {
-  const d = new Date(date.split("/").reverse().join("-"));
-  const s = new Date(start.split("/").reverse().join("-"));
-  const e = new Date(end.split("/").reverse().join("-"));
-  return d >= s && d <= e;
-};
-
-// Filter out unwanted entries
-const filtered = sorted.filter(entry => {
-  // Hide specific towns
-  if (hiddenTowns.some(t => entry.town.toLowerCase().includes(t.toLowerCase()))) {
-    return false;
-  }
-
-  // Hide non-filming pause period (26 Sep → 05 Oct)
-  if (dateInRange(entry.date, "26/09/2026", "05/10/2026")) {
-    return false;
-  }
-
-  return true;
-});
-
       new Date(a.date.split("/").reverse().join("-")) -
       new Date(b.date.split("/").reverse().join("-"))
     );
 
-const ranges = groupDateRanges(filtered);
-populateTable(ranges);
-buildMap(ranges);
+    // === HIDE NON-FILMING ENTRIES ===
+    const filtered = sorted.filter(entry => {
+      const town = entry.town.toLowerCase();
+
+      // Pre-filming travel
+      if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town))
+        return false;
+
+      // Hide annual leave
+      if (town.includes("annual leave")) return false;
+
+      // Hide 26 Sep → 05 Oct pause
+      const d = new Date(entry.date.split("/").reverse().join("-"));
+      const pauseStart = new Date("2026-09-26");
+      const pauseEnd = new Date("2026-10-05");
+      if (d >= pauseStart && d <= pauseEnd) return false;
+
+      return true;
+    });
+
+    const ranges = groupDateRanges(filtered);
+    populateTable(ranges);
+    buildMap(ranges);
 
     document.getElementById("status").innerText = "Itinerary loaded successfully.";
-  } catch {
+  } catch (e) {
+    console.error(e);
     document.getElementById("status").innerText = "Error loading itinerary from Google Sheets.";
   }
 }
 
 init();
 </script>
+
 <!-- ===================== -->
 <!-- PART 3 — FOOTER + CLOSING TAGS -->
 <!-- ===================== -->
@@ -442,23 +417,27 @@ init();
 </div> <!-- end .container -->
 
   <!-- FOOTER -->
-  <footer>
-  <div class="footer-links">
-    <a href="../index.html">Home</a> |
-    <a href="../about.html">About Us</a> |
-    <a href="../towns/index.html">Towns</a> |
-    <a href="../partner.html">Partner With Us</a> |
-    <a href="../sponsorship.html">Sponsorship</a> |
-    <a href="../filming-map.html">Filming Map</a> |
-    <a href="../press.html">Press</a> |
-    <a href="../contact.html">Contact</a> |
-    <a href="../legal.html">Legal</a>
-  </div>
-    <p>
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="../index.html">Home</a> |
+      <a href="../about.html">About Us</a> |
+      <a href="../towns/index.html">Towns</a> |
+      <a href="../partner.html">Partner With Us</a> |
+      <a href="../sponsorship.html">Sponsorship</a> |
+      <a href="../filming-map.html">Filming Map</a> |
+      <a href="../press.html">Press</a> |
+      <a href="../contact.html">Contact</a> |
+      <a href="../legal.html">Legal</a>
+    </div>
+
+    <p style="margin-top:10px;">
       📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      © 2025 ShowcasingOz TV · Discover. Capture. Share.
+      © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-  </footer>
+  </div>
+</footer>
+
 
 </body>
 </html>
