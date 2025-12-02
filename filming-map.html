@@ -328,6 +328,7 @@ const geocodeOverrides = {
   "hopetoun": "Hopetoun, Victoria, Australia",
   "ivanhoe": "Ivanhoe, New South Wales, Australia",
   "rabbit flat": "Rabbit Flat, Northern Territory, Australia"
+  "laura": "Laura, South Australia, Australia"
 };
 
 async function geocodeTown(town) {
@@ -387,34 +388,31 @@ async function init() {
     );
 
     // === HIDE NON-FILMING ENTRIES & BLANKS ===
-    const filtered = sorted.filter(entry => {
-      // Skip any blank or malformed rows
-      if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
-        return false;
-      }
+const filtered = sorted.filter(entry => {
 
-      const town = entry.town.toLowerCase();
+  if (!entry.date || !entry.town) return false;
 
-      // Hide ONLY the pre-filming Coober Pedy date (30/05/2026)
-      if (town === "coober pedy" && entry.date === "30/05/2026") {
-        return false;
-      }
+  const town = entry.town.toLowerCase();
 
-      // Pre-filming travel (Tassie → Adelaide leg)
-      if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town))
-        return false;
+  // Hide ONLY the pre-filming Coober Pedy date (30/05/2026)
+  if (town === "coober pedy" && entry.date === "30/05/2026") {
+    return false;
+  }
 
-      // Hide annual leave
-      if (town.includes("annual leave")) return false;
+  // Pre-filming travel (Tassie → Adelaide)
+  if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town))
+    return false;
 
-      // Hide 26 Sep → 05 Oct pause
-      const d = new Date(entry.date.split("/").reverse().join("-"));
-      const pauseStart = new Date("2026-09-26");
-      const pauseEnd = new Date("2026-10-05");
-      if (d >= pauseStart && d <= pauseEnd) return false;
+  // Annual Leave
+  if (town.includes("annual leave")) return false;
 
-      return true;
-    });
+  // Pause 26 Sep → 05 Oct
+  const d = new Date(entry.date.split("/").reverse().join("-"));
+  if (d >= new Date("2026-09-26") && d <= new Date("2026-10-05"))
+    return false;
+
+  return true;
+});
 
     const ranges = groupDateRanges(filtered);
     populateTable(ranges);
