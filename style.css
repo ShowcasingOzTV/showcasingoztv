@@ -99,7 +99,11 @@ footer {
   padding: 18px 12px;
   font-size: 14px;
 }
-
+footer .gst-disclaimer {
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 4px;
+}
 @media (max-width: 720px) {
   .intro-content {
     flex-direction: column;
