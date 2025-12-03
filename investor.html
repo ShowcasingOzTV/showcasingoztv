@@ -60,9 +60,9 @@
     transition: color 0.3s ease;
   }
 
-  /* NEW BANNER */
+  /* BANNER */
   .banner {
-    background: #333333; /* dark grey like Sponsorship */
+    background: #333333;
     color: #ffffff;
     padding: 70px 20px;
     text-align: center;
@@ -107,17 +107,19 @@
     margin-top: 40px;
   }
 
-  .cta a {
+  .cta button {
     background: #E87722;
     color: #fff;
-    text-decoration: none;
     padding: 14px 28px;
     border-radius: 8px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
     transition: background 0.3s ease;
+    font-size: 1rem;
   }
 
-  .cta a:hover {
+  .cta button:hover {
     background: #cf661d;
   }
 
@@ -133,40 +135,80 @@
   footer a {
     color: #E87722;
     text-decoration: none;
-    margin: 0 10px;
   }
 
   footer a:hover {
     text-decoration: underline;
   }
-</style>
 
-<!-- Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "name": "Investor Opportunity — ShowcasingOz TV",
-      "url": "https://showcasingoztv.com.au/investor.html",
-      "description": "Investment opportunity for ShowcasingOz TV — details on loan structure, funding requirements, returns, and Season 1 plans.",
-      "inLanguage": "en-AU",
-      "publisher": { "@id": "https://showcasingoztv.com.au/#org" }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://showcasingoztv.com.au/#org",
-      "name": "ShowcasingOz TV",
-      "url": "https://showcasingoztv.com.au",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://showcasingoztv.com.au/images/logo.png"
-      }
-    }
-  ]
-}
-</script>
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+
+  .modal {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  .modal h2 {
+    margin-top: 0;
+    color: #0E3557;
+  }
+
+  .modal label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #0E3557;
+  }
+
+  .modal input,
+  .modal textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+
+  .modal textarea {
+    height: 90px;
+  }
+
+  .modal button {
+    margin-top: 20px;
+    background: #E87722;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #777;
+  }
+</style>
 
 </head>
 <body>
@@ -205,16 +247,10 @@
 
   <h2>Project Summary</h2>
   <p>
-    Our mission is to to promote Australia’s tourism, culture, and diversity through
- captivating storytelling and high-quality production, fostering connections between
- travellers and destinations, and supporting regional and city-based tourism operators.
+    ShowcasingOz TV aims to promote Australia’s tourism, culture, and diversity through captivating storytelling and high-quality production, fostering connections between travellers and destinations, and supporting regional and city-based tourism operators.
   </p>
 
   <h2>Financial Overview</h2>
-  <p>
-    Based on current planning and budget projections:
-  </p>
-
   <ul>
     <li><strong>Total Season 1 Expenses:</strong> $411,186</li>
     <li><strong>Projected Tourism Package Revenue:</strong> $202,952</li>
@@ -222,20 +258,13 @@
     <li><strong>Remaining Funding Requirement:</strong> approx. $92,734</li>
   </ul>
 
-  <p>
-    To ensure full production stability we are seeking:
-  </p>
-
+  <p>We are seeking:</p>
   <ul>
     <li><strong>Minimum investment:</strong> $100,000</li>
     <li><strong>Ideal investment for complete security:</strong> $200,000</li>
   </ul>
 
   <h2>Investment Structure</h2>
-  <p>
-    We are offering a clear and simple loan-based investment model (no equity or ownership required):
-  </p>
-
   <ul>
     <li>3–4 year loan term</li>
     <li>12% annual interest</li>
@@ -244,28 +273,63 @@
 
   <h2>What Investors Receive</h2>
   <ul>
-    <li>National Presenting Partner title</li>
+    <li><strong>National Presenting Partner</strong> title</li>
     <li>Branding across selected episodes and platforms</li>
-    <li>Featured placement on the ShowcasingOz TV website</li>
+    <li>Website partner placement</li>
     <li>Optional promotional media package</li>
-    <li>Quarterly reporting and transparent financials</li>
+    <li>Quarterly reporting</li>
   </ul>
 
   <h2>Season 1 Plan</h2>
   <ul>
     <li>7 months continuous filming</li>
     <li>200+ destinations across six states and territories</li>
-    <li>Daily short-form content + regular feature episodes</li>
+    <li>Short-form & long-form content</li>
     <li>Accommodation and attraction partnerships</li>
   </ul>
 
+  <!-- EMOTIONAL SECTION -->
+  <h2>Why Your Support Truly Matters</h2>
+  <p>
+    The success of ShowcasingOz TV depends entirely on securing the funding required to begin our national filming journey. This project is more than a travel series — it is a vital storytelling mission that shines a light on the communities, towns, attractions, accommodation providers, and small businesses that rely heavily on tourism to survive.
+  </p>
+
+  <p>
+    Many destinations across Australia, especially in regional and outback areas, struggle to be seen. Their stories, heritage, and livelihoods often go unnoticed in mainstream media. By documenting over 200 destinations and sharing their experiences with audiences nationwide, ShowcasingOz TV provides exposure that many operators could never achieve on their own.
+  </p>
+
+  <p>
+    Without the support of an investor, this project cannot move into production, and the opportunity to showcase these remarkable destinations may be lost. Your contribution directly empowers these communities, helping them attract new visitors, strengthen local economies, and preserve their stories for future generations.
+  </p>
+
+  <p><strong>Your support is not just funding a project — it is helping tell Australia’s story.</strong></p>
+
   <div class="cta">
-    <a href="../contact.html">Request Investor Pack</a>
-    <!-- OPTIONAL: replace with PDF -->
-    <!-- <a href="files/ShowcasingOz_Investor_Overview_Compact.pdf">Download Investor Pack</a> -->
+    <button onclick="openModal()">Request Investor Pack</button>
   </div>
 
 </section>
+
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Request Investor Pack</h2>
+
+    <form action="mailto:showcasingoztv@gmail.com" method="POST" enctype="text/plain">
+      <label>Your Name *</label>
+      <input type="text" name="Name" required>
+
+      <label>Your Email *</label>
+      <input type="email" name="Email" required>
+
+      <label>Message (optional)</label>
+      <textarea name="Message" placeholder="Additional details or questions (optional)..."></textarea>
+
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -284,6 +348,17 @@
   © 2025 ShowcasingOz TV · Discover. Capture. Share.
 </footer>
 
+<script>
+function openModal() {
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+}
+</script>
+
 </body>
 </html>
+
 
