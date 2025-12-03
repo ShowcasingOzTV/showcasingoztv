@@ -132,3 +132,23 @@ footer a {
 footer a:hover {
   color: #f4b400 !important; /* your orange colour */
 }
+footer {
+  text-align: center !important;
+}footer, 
+footer p, 
+footer a, 
+footer span, 
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+
+footer a:hover {
+  color: #f4b400 !important; /* your orange hover colour */
+}
+footer, 
+footer .footer-links, 
+footer p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
