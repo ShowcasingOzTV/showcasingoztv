@@ -123,3 +123,12 @@ footer .gst-disclaimer {
     height: 180px;
   }
 }
+footer {
+  color: #ffffff !important;
+}
+footer a {
+  color: #ffffff !important;
+}
+footer a:hover {
+  color: #f4b400 !important; /* your orange colour */
+}
