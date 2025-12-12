@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  gtag('config', 'G-RB6N742VZW');
-</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -41,7 +41,7 @@
   <!-- FAVICON -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- SCHEMA -->
+  <!-- SCHEMA (MERGED) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,33 +55,16 @@
       "https://www.tiktok.com/@showcasingoztv",
       "https://www.facebook.com/profile.php?id=61583522543965"
     ],
-    "description": "ShowcasingOz TV produces travel and tourism documentaries that highlight Australia’s hidden gems, attractions, and authentic regional experiences."
+    "description": "ShowcasingOz TV is an Australian travel and lifestyle television series celebrating real destinations, people, and stories across Australia.",
+    "founder": { "@type": "Person", "name": "David Stidston" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Media & Partnerships",
+      "email": "info@showcasingoztv.com.au",
+      "url": "https://showcasingoztv.com.au/contact.html"
+    }
   }
   </script>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ShowcasingOz TV",
-  "url": "https://www.showcasingoztv.com.au",
-  "logo": "https://www.showcasingoztv.com.au/images/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/ShowcasingOzTV",
-    "https://www.instagram.com/showcasingoztv",
-    "https://www.youtube.com/@ShowcasingOzTV",
-    "https://www.tiktok.com/@showcasingoztv"
-  ],
-  "description": "ShowcasingOz TV is an Australian travel and lifestyle television series celebrating real destinations, people, and stories across Australia.",
-  "founder": { "@type": "Person", "name": "David Stidston" },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Media & Partnerships",
-    "email": "info@showcasingoztv.com.au",
-    "url": "https://www.showcasingoztv.com.au/contact.html"
-  }
-}
-</script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -171,7 +154,7 @@
       width: 100%;
       height: auto;
       display: block;
-      object-fit: contain;
+      object-fit: cover;
     }
 
     /* Intro */
@@ -321,7 +304,6 @@
     @media (max-width: 900px) {
       .about-cards, .careers-grid { flex-direction: column; align-items: center; }
     }
-
   </style>
 </head>
 
@@ -329,43 +311,45 @@
 
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
-  <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
-    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-    <nav id="menu">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About Us</a>
-      <a href="../towns/index.html">Towns</a>
-      <a href="../partner.html">Partner With Us</a>
-      <a href="../sponsorship.html">Sponsorship</a>
-      <a href="../filming-map.html">Filming Map</a>
-      <a href="../press.html">Press</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    <div class="container">
+      <a href="/index.html">
+        <img src="/images/logo.png" alt="ShowcasingOz TV Logo" width="170" height="65">
+      </a>
+      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <nav id="menu">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/towns/index.html">Towns</a>
+        <a href="/partner.html">Partner With Us</a>
+        <a href="/sponsorship.html">Sponsorship</a>
+        <a href="/filming-map.html">Filming Map</a>
+        <a href="/press.html">Press</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
 
   <!-- Banner -->
   <section class="banner">
-  <picture>
-    <source srcset="images/banner-cropped.webp" type="image/webp">
-    <img
-      src="images/banner-cropped.jpg"
-      alt="ShowcasingOz TV banner"
-      width="1600"
-      height="450"
-      decoding="async"
-      loading="eager"
-      style="width:100%;height:auto;object-fit:cover;"
-    />
-  </picture>
-</section>
+    <picture>
+      <source srcset="images/banner-cropped.webp" type="image/webp">
+      <img
+        src="images/banner-cropped.jpg"
+        alt="ShowcasingOz TV banner"
+        width="1600"
+        height="450"
+        decoding="async"
+        loading="eager"
+        style="width:100%;height:auto;object-fit:cover;"
+      />
+    </picture>
+  </section>
 
   <!-- Logo + Title -->
   <section class="intro">
@@ -470,19 +454,21 @@
         </div>
       </div>
 
-  <div class="career-card">
-  <div>
-    <h3>💰 Investor Opportunity – Help Launch a National Tourism Series</h3>
-    <p>
-      ShowcasingOz TV will feature over 200 destinations across Australia, shining a spotlight on regional towns, attractions, small businesses, and communities who rely on tourism. 
-      We are seeking <strong>$100k–$200k</strong> in investment to begin our 7-month national filming journey starting June 2026.
-      Your support directly helps bring this important project to life.
-    </p>
-  </div>
-  <div class="career-cta">
-    <a class="btn-accent" href="investor.html">Find Out More</a>
-  </div>
-</div>
+      <div class="career-card">
+        <div>
+          <h3>💰 Investor Opportunity – Help Launch a National Tourism Series</h3>
+          <p>
+            ShowcasingOz TV will feature over 200 destinations across Australia, shining a spotlight on regional towns, attractions, small businesses, and communities who rely on tourism. 
+            We are seeking <strong>$100k–$200k</strong> in investment to begin our 7-month national filming journey starting June 2026.
+            Your support directly helps bring this important project to life.
+          </p>
+        </div>
+        <div class="career-cta">
+          <a class="btn-accent" href="investor.html">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Social Links -->
   <section class="socials">
@@ -494,27 +480,28 @@
 
   <!-- FOOTER -->
   <footer>
-  <div class="footer-links">
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/towns/index.html">Towns</a> |
-    <a href="/partner.html">Partner With Us</a> |
-    <a href="/sponsorship.html">Sponsorship</a> |
-    <a href="/filming-map.html">Filming Map</a> |
-    <a href="/press.html">Press</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/legal.html">Legal</a>
-  </div>
+    <div class="footer-links">
+      <a href="/index.html">Home</a> |
+      <a href="/about.html">About Us</a> |
+      <a href="/towns/index.html">Towns</a> |
+      <a href="/partner.html">Partner With Us</a> |
+      <a href="/sponsorship.html">Sponsorship</a> |
+      <a href="/filming-map.html">Filming Map</a> |
+      <a href="/press.html">Press</a> |
+      <a href="/contact.html">Contact</a> |
+      <a href="/legal.html">Legal</a>
+    </div>
 
-  <p>
-    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
-  </p>
-</footer>
+    <p>
+      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      © 2025 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+  </footer>
 
 </body>
 </html>
+
 
 
 
