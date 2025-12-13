@@ -114,6 +114,89 @@
       font-size:1.3rem;
       margin-top:20px;
     }
+/* Accommodation Section */
+.accommodation-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.accommodation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.accommodation-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.accommodation-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.accommodation-content {
+  padding: 15px;
+}
+
+.accommodation-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.featured-badge {
+  display: inline-block;
+  background: #E87722;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.accommodation-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #0E3557;
+  text-decoration: none;
+}
+
+.accommodation-link:hover {
+  text-decoration: underline;
+}
+
+.booking-note {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+.other-accommodation-heading {
+  margin-top: 50px;
+}
+
+.other-accommodation-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.other-accommodation-list li {
+  margin-bottom: 6px;
+}
+
+.accommodation-disclaimer {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 15px;
+}
 
     footer {
       background:#0E3557;
@@ -195,6 +278,46 @@ footer p a:hover {
       <p>Attractions Coming Soon</p>
     </div>
   </div>
+<section class="accommodation-section">
+  <h2>Featured Accommodation in Alice Springs</h2>
+
+  <p class="accommodation-intro">
+    Our aim is to help drive real visitation and bookings for the regions and accommodation we feature through authentic storytelling and exposure.
+  </p>
+
+  <div class="accommodation-grid">
+
+    <!-- Featured Accommodation Card -->
+    <div class="accommodation-card featured">
+      <img src="images/accommodation-placeholder.jpg" alt="Accommodation in Alice Springs">
+      <div class="accommodation-content">
+        <h3>Accommodation Name</h3>
+        <p class="accommodation-location">Alice Springs, Northern Territory</p>
+        <p class="accommodation-description">
+          A short description of the accommodation, highlighting its location, experience, or unique offering for visitors to the region.
+        </p>
+        <span class="featured-badge">Featured on ShowcasingOz TV</span>
+        <a href="#" class="accommodation-link">Visit Official Website</a>
+        <p class="booking-note">Booking links will be available once this region is featured.</p>
+      </div>
+    </div>
+
+    <!-- Duplicate card as needed -->
+
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation in Alice Springs</h3>
+
+  <ul class="other-accommodation-list">
+    <li><a href="#">Accommodation Name</a></li>
+    <li><a href="#">Accommodation Name</a></li>
+    <li><a href="#">Accommodation Name</a></li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+</section>
 
 </section>
 
