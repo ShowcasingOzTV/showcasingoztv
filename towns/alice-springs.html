@@ -9,15 +9,16 @@
 
   <title>Alice Springs (NT) | ShowcasingOz TV</title>
   <meta name="description" content="Explore Alice Springs (NT) — the beating heart of Central Australia, featured in ShowcasingOz TV’s upcoming documentary series." />
-  <meta name="keywords" content="Alice Springs, Northern Territory, Outback Australia, Red Centre, ShowcasingOz TV, regional travel, attractions" />
+  <meta name="keywords" content="Alice Springs, Northern Territory, Red Centre, Outback Australia, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
+
   <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      crossorigin="anonymous"
-      media="print"
-      onload="this.media='all'">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -27,7 +28,7 @@
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -37,6 +38,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -45,96 +47,61 @@
       align-items: center;
       padding: 0 20px;
     }
+
     header img { height: 65px; }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { color: #E87722; }
+
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    /* Hero Banner */
-.hero {
-  width: 100%;
-  height: 320px;
-  background-color: #ddd;
-}
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
 
-    /* Content */
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
     p { line-height:1.6; color:#333; }
 
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
-    }
-    /* Attractions placeholder (text-based) */
-/* Attractions placeholder (match accommodation styling) */
-.attraction-placeholder {
-  height: 200px;
-  background: #e1e1e1;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: center;
-}
-<h3 class="other-attractions-heading">Other Attractions & Points of Interest in Alice Springs</h3>
-
-<ul class="other-attraction-list">
-  <li>MacDonnell Ranges</li>
-  <li>Alice Springs Desert Park</li>
-  <li>Kangaroos Alive</li>
-  <li>Royal Flying Doctor Service Museum</li>
-  <li>School of the Air</li>
-  <li>Anzac Hill</li>
-  <li>Simpsons Desert Cultural Centre</li>
-</ul>
-
-<p class="attraction-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-</p>
-    /* Video Placeholder */
-    .video-placeholder {
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
       width:100%;
       height:350px;
       background:#e1e1e1;
@@ -143,204 +110,85 @@
       justify-content:center;
       align-items:center;
       color:#666;
-      font-size:1.3rem;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
+      text-align:center;
     }
-/* Accommodation Section */
-.accommodation-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 30px;
-}
 
-.accommodation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
 
-.accommodation-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
 
-.accommodation-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
 
-.accommodation-content {
-  padding: 15px;
-}
+    .accommodation-content {
+      padding:15px;
+    }
 
-.accommodation-location {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 8px;
-}
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
 
-.featured-badge {
-  display: inline-block;
-  background: #E87722;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin: 10px 0;
-}
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
 
-.accommodation-link {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: 600;
-  color: #0E3557;
-  text-decoration: none;
-}
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
 
-.accommodation-link:hover {
-  text-decoration: underline;
-}
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
 
-.booking-note {
-  font-size: 0.8rem;
-  color: #777;
-  margin-top: 8px;
-}
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
 
-.other-accommodation-heading {
-  margin-top: 50px;
-}
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
 
-.other-accommodation-list {
-  list-style: none;
-  padding-left: 0;
-}
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
 
-.other-accommodation-list li {
-  margin-bottom: 6px;
-}
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
 
-.accommodation-disclaimer {
-  font-size: 0.8rem;
-  color: #777;
-  margin-top: 15px;
-}
-h2 {
-  text-align: center;
-}
-    /* ============================= */
-/* Accommodation Section Styling */
-/* ============================= */
-
-.accommodation-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 30px;
-}
-
-/* Centre the accommodation heading only */
-.accommodation-heading {
-  text-align: center;
-}
-
-/* Accommodation grid */
-.accommodation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-/* Accommodation card */
-.accommodation-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-/* Image placeholder – clean and intentional */
-.accommodation-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background: #e5e5e5;
-  display: block;
-}
-
-/* Content */
-.accommodation-content {
-  padding: 15px;
-}
-
-.accommodation-location {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.featured-badge {
-  display: inline-block;
-  background: #E87722;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin: 10px 0;
-}
-
-.accommodation-link {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: 600;
-  color: #0E3557;
-  text-decoration: none;
-}
-
-.accommodation-link:hover {
-  text-decoration: underline;
-}
-
-.booking-note {
-  font-size: 0.8rem;
-  color: #777;
-  margin-top: 8px;
-}
-
-.other-accommodation-heading {
-  margin-top: 50px;
-}
-
-.other-accommodation-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.other-accommodation-list li {
-  margin-bottom: 6px;
-}
-
-.accommodation-disclaimer {
-  font-size: 0.8rem;
-  color: #777;
-  margin-top: 15px;
-}
-    /* Accommodation placeholder (text-based) */
-.accommodation-placeholder {
-  height: 200px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
     footer {
       background:#0E3557;
       color:#fff;
@@ -348,17 +196,15 @@ h2 {
       margin-top:60px;
       text-align:center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+    footer a {
+      color:#E87722;
+      text-decoration:none;
+    }
+
+    footer a:hover {
+      color:#ffffff;
+    }
   </style>
 </head>
 
@@ -390,16 +236,13 @@ footer p a:hover {
 
 <!-- HERO -->
 <section class="hero">
-  <img 
-    src="../images/towns/alice-springs.jpg"
-    alt="Alice Springs Northern Territory"
-    width="1600"
-    height="320"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
-    style="width:100%;height:100%;object-fit:cover;"
-  >
+  <img src="../images/towns/alice-springs.jpg"
+       alt="Alice Springs Northern Territory"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
 </section>
 
 <!-- MAIN CONTENT -->
@@ -408,127 +251,85 @@ footer p a:hover {
   <h1>Alice Springs (NT)</h1>
 
   <p>
-    Alice Springs sits at the very heart of Australia’s Red Centre — a vibrant outback town 
-    known for its desert landscapes, rich Indigenous culture, thriving arts scene, and 
-    adventure-filled surroundings. From the stunning MacDonnell Ranges to local cultural 
-    centres and iconic wildlife encounters, Alice Springs offers an unforgettable experience 
-    for travellers exploring Central Australia.  
-    <br><br>
-    ShowcasingOz TV will be capturing its stories, attractions, and the unique spirit that 
-    makes Alice Springs such an iconic destination.
+    Alice Springs sits at the very heart of Australia’s Red Centre — a vibrant outback town
+    known for its desert landscapes, rich Indigenous culture, thriving arts scene, and
+    adventure-filled surroundings.
   </p>
 
+  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
-<div class="video-placeholder">
-  Documentary Coming Soon
-</div>
+  <div class="video-placeholder">Documentary Coming Soon</div>
 
+  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p>We can't wait to showcase the incredible attractions, landscapes, and cultural experiences in and around Alice Springs during our visit in June 2026.</p>
+  <p>We can’t wait to showcase the incredible attractions, landscapes, and cultural experiences in and around Alice Springs during our visit in June 2026.</p>
 
-<div class="attraction-grid">
-
-  <div class="attraction-card">
-    <div class="attraction-placeholder">
-      Attractions Coming Soon
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
     </div>
   </div>
 
-</div>
-<section class="accommodation-section">
-<h2 class="accommodation-heading">🏨 Featured Accommodation in Alice Springs</h2>
+  <h3 class="other-accommodation-heading">Other Attractions in Alice Springs</h3>
+  <ul class="other-accommodation-list">
+    <li>MacDonnell Ranges</li>
+    <li>Alice Springs Desert Park</li>
+    <li>Royal Flying Doctor Service Museum</li>
+    <li>School of the Air</li>
+    <li>Anzac Hill</li>
+    <li>Kangaroos Alive</li>
+  </ul>
 
-<p class="accommodation-intro">
-  Featured Accommodation highlights selected stays that partner with ShowcasingOz TV through our filming journey.
-  These businesses are showcased through professionally produced video content, photography, and storytelling —
-  placing them in a prime position within their region as part of our national series.
-</p>
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
 
-<p class="accommodation-intro">
-  Accommodation providers featured here allow ShowcasingOz TV to capture their property on location,
-  presenting their experience, setting, and story to audiences discovering where to stay across Australia.
-</p>
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation in Alice Springs</h2>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Learn how to have your accommodation featured
-  </a>
-</p>
+  <p class="accommodation-intro">
+    Featured Accommodation showcases selected stays that partner with ShowcasingOz TV through our filming journey,
+    highlighting their experience, setting, and story as part of our national series.
+  </p>
 
-<div class="accommodation-grid">
+  <p class="accommodation-intro">
+    <a href="../accommodation-partners.html" class="accommodation-link">
+      Learn how to have your accommodation featured
+    </a>
+  </p>
 
-  <div class="accommodation-card featured">
-<div class="accommodation-placeholder">
-  Accommodation Coming Soon
-</div>
-    <div class="accommodation-content">
-      <h3>Accommodation Name</h3>
-      <p class="accommodation-location">Alice Springs, Northern Territory</p>
-      <p class="accommodation-description">
-        A short description highlighting the experience, location, or unique offering for visitors to Alice Springs.
-      </p>
-      <span class="featured-badge">Featured on ShowcasingOz TV</span><br>
-      <a href="#" class="accommodation-link">Visit Official Website</a>
-      <p class="booking-note">Booking links will be available once this region is featured.</p>
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
     </div>
   </div>
 
-</div>
+  <h3 class="other-accommodation-heading">Other Accommodation in Alice Springs</h3>
+  <ul class="other-accommodation-list">
+    <li>Diplomat Hotel Alice Springs</li>
+    <li>Elkira Court Motel</li>
+    <li>Desert Palms Alice Springs</li>
+    <li>Alice Motor Inn</li>
+    <li>Stay at Alice Springs Hotel</li>
+    <li>DoubleTree by Hilton Alice Springs</li>
+    <li>Mercure Alice Springs Resort</li>
+    <li>Crowne Plaza Lasseters</li>
+  </ul>
 
-<h3 class="other-accommodation-heading">Other Accommodation in Alice Springs</h3>
-
-<ul class="other-accommodation-list">
-  <li>Diplomat Hotel Alice Springs</li>
-  <li>Elkira Court Motel</li>
-  <li>Desert Palms Alice Springs</li>
-  <li>Alice Motor Inn</li>
-  <li>Stay at Alice Springs Hotel</li>
-  <li>Alice Springs Tourist Park</li>
-  <li>DoubleTree by Hilton Alice Springs</li>
-  <li>Mercure Alice Springs Resort</li>
-  <li>Crowne Plaza Alice Springs Lasseters</li>
-  <li>Alice on Todd Apartments</li>
-  <li>Discovery Parks – Alice Springs</li>
-  <li>Jump Inn Alice Budget Accommodation</li>
-  <li>G’Day Mate Tourist Park</li>
-  <li>A Good Rest B&B</li>
-  <li>Alice’s Secret Travellers Inn</li>
-  <li>YHA Alice Springs</li>
-  <li>Alice Lodge</li>
-</ul>
-
-<p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-</p>
-</section>
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
 
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/towns/index.html">Towns</a> |
-    <a href="/partner.html">Partner With Us</a> |
-    <a href="/sponsorship.html">Sponsorship</a> |
-    <a href="/filming-map.html">Filming Map</a> |
-    <a href="/press.html">Press</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/legal.html">Legal</a>
-  </div>
-
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
     © 2025 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
+
 </body>
 </html>
+
