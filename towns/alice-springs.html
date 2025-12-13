@@ -13,7 +13,11 @@
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      crossorigin="anonymous"
+      media="print"
+      onload="this.media='all'">
 
   <style>
     body {
@@ -59,11 +63,11 @@
     }
 
     /* Hero Banner */
-    .hero {
-      width: 100%;
-      height: 320px;
-      background: url('../images/towns/alice-springs.jpg') center center / cover no-repeat;
-    }
+.hero {
+  width: 100%;
+  height: 320px;
+  background-color: #ddd;
+}
 
     /* Content */
     .content {
@@ -197,7 +201,9 @@
   color: #777;
   margin-top: 15px;
 }
-
+h2 {
+  text-align: center;
+}
     footer {
       background:#0E3557;
       color:#fff;
@@ -239,14 +245,25 @@ footer p a:hover {
   </div>
 </header>
 
-<script>
+<script defer>
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+  <img 
+    src="../images/towns/alice-springs.jpg"
+    alt="Alice Springs Northern Territory"
+    width="1600"
+    height="320"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    style="width:100%;height:100%;object-fit:cover;"
+  >
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
