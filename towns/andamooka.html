@@ -121,6 +121,49 @@
       height:200px;
       font-size:1.1rem;
     }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
 
     /* ================= SHARED GRID ================= */
     .accommodation-grid {
@@ -359,6 +402,45 @@ footer .gst-disclaimer {
   <p class="accommodation-disclaimer">
     This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
   </p>
+
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Andamooka’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Blue Dam</h3>
+      <p>A popular local swimming spot and historic water source, known for its striking blue colour
+         and significance to the Andamooka community.</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Lake Torrens</h3>
+      <p>A vast salt lake and geological landmark on the edge of the outback, offering dramatic
+         desert landscapes and a sense of scale unique to South Australia.</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Dunstan’s Dam</h3>
+      <p>A historic outback dam closely tied to Andamooka’s mining history and early settlement,
+         reflecting the ingenuity required to survive in the region.</p>
+    </div>
+  </div>
+
+</div>
 
   <!-- ACCOMMODATION -->
   <h2>🏨 Featured Accommodation in Andamooka</h2>
