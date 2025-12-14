@@ -3,36 +3,32 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ⬇️ UPDATE THIS PER TOWN -->
-  <title>TOWN NAME (STATE) | ShowcasingOz TV</title>
-  <meta name="description" content="Full documentary for TOWN NAME (STATE) coming soon on ShowcasingOz TV — featuring local attractions, landmarks, and travel stories." />
+  <title>Alice Springs (NT) | ShowcasingOz TV</title>
+  <meta name="description" content="Explore Alice Springs (NT) — the beating heart of Central Australia, featured in ShowcasingOz TV’s upcoming documentary series." />
+  <meta name="keywords" content="Alice Springs, Northern Territory, Red Centre, Outback Australia, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css">
 
-  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" />
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
-      text-align: center;
     }
 
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -43,7 +39,7 @@
       z-index: 1000;
     }
 
-    header.navbar .container {
+    header .container {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
@@ -52,9 +48,7 @@
       padding: 0 20px;
     }
 
-    header.navbar img {
-      height: 65px;
-    }
+    header img { height: 65px; }
 
     nav a {
       color: #fff;
@@ -62,76 +56,206 @@
       text-decoration: none;
       font-weight: 500;
     }
-    nav a:hover { color:#E87722; }
+
+    nav a:hover { color: #E87722; }
 
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.1); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
+
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
-      padding: 0 20px 60px;
-      text-align: left;
+      padding: 0 20px;
     }
 
-    .content h1 {
-      font-size: 2rem;
-      color: #0E3557;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
-    .content p {
-      font-size: 1.05rem;
-      color: #333;
-      line-height: 1.6;
-    }
+    p { line-height:1.6; color:#333; }
 
-    .hero-image {
-      width: 100%;
-      max-width: 900px;
-      height: 320px;
-      background: #ddd;
-      border-radius: 12px;
-      margin: 20px auto 30px;
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-    }
-
-    .coming-soon {
-      background:#f5f7fa;
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
       border-radius:12px;
-      padding:20px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
+      text-align:center;
     }
 
-    .back-link {
-      display:inline-block;
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
       margin-top:25px;
-      color:#0E3557;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
       font-weight:600;
+      color:#0E3557;
       text-decoration:none;
     }
-    .back-link i { margin-right:6px; }
-    .back-link:hover { text-decoration:underline; }
 
-    footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
-      font-size:0.9rem;
+    .accommodation-link:hover {
+      text-decoration:underline;
     }
 
-    footer a { color:#E87722; text-decoration:none; margin:0 10px; }
-    footer a:hover { text-decoration:underline; }
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
+footer .footer-links a,
+footer p a {
+  color: #E87722 !important;
+}
+
+footer .footer-links a:hover,
+footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
   </style>
 </head>
 
@@ -140,49 +264,165 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
- <nav id="menu">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="towns.html">Towns</a>
-  <a href="partner.html">Partner With Us</a>
-  <a href="sponsorship.html">Sponsorship</a>
-  <a href="filming-map.html">Filming Map</a>
-  <a href="press.html">Press</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
-<script>
-  const menuBtn=document.getElementById('menu-btn');
-  const menu=document.getElementById('menu');
-  menuBtn.addEventListener('click',()=>menu.classList.toggle('active'));
+<script defer>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="../images/towns/alice-springs.jpg"
+       alt="Alice Springs Northern Territory"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
-  <!-- ⬇️ UPDATE H1 PER TOWN -->
-  <h1>TOWN NAME (STATE)</h1>
+  <h1>Alice Springs (NT)</h1>
 
-  <!-- Optional hero image: update URL when you have a banner for this town -->
-  <div class="hero-image" style="background-image:url('../images/towns/TOWN-SLUG.jpg');"></div>
+<p>
+  Alice Springs sits at the geographic and cultural heart of Australia’s Red Centre — a town shaped by ancient landscapes,
+  rich Aboriginal heritage, and a strong sense of outback identity. Surrounded by the West and East MacDonnell Ranges,
+  Alice Springs is a gateway to some of the country’s most iconic desert scenery, walking trails, cultural institutions,
+  and wildlife experiences.
+</p>
 
-  <div class="coming-soon">
-    <p><strong>Full documentary coming soon!</strong></p>
-    <p>
-      ShowcasingOz TV will be filming a dedicated feature on <strong>TOWN NAME (STATE)</strong>,
-      highlighting its local attractions, points of interest, and unique travel experiences.
-      Once filming and editing are complete, you’ll be able to watch the full episode and explore
-      a breakdown of the key highlights right here.
-    </p>
+<p>
+  As a regional hub, Alice Springs plays a vital role in Central Australia’s tourism economy, offering visitors a blend
+  of natural beauty, cultural storytelling, adventure, and modern hospitality. From local art and history to
+  world-renowned attractions and events, the town provides a diverse and compelling experience for travellers exploring
+  the Northern Territory.
+</p>
+
+<p>
+  ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Alice Springs as part
+  of our national filming journey — highlighting what makes the region unique, welcoming, and worthy of discovery.
+</p>
+
+  <!-- DOCUMENTARY -->
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">Documentary Coming Soon</div>
+
+  <!-- ATTRACTIONS -->
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
+
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    </div>
   </div>
 
-  <a class="back-link" href="../towns.html">
-    <i class="fa fa-arrow-left"></i> Back to all towns
+  <h3 class="other-accommodation-heading">Other Attractions in Alice Springs</h3>
+  <ul class="other-accommodation-list">
+    <li>Kangaroo Sanctuary Sunset Tour</li>
+    <li>National Road Transport Hall of Fame & Old Ghan Train Museum</li>
+    <li>Royal Flying Doctor Service Museum</li>
+    <li>Alice Springs Reptile Centre</li>
+    <li>Araluen Cultural Precinct</li>
+    <li>Alice Springs Desert Park</li>
+    <li>Boomerang Art – Aboriginal Art Gallery</li>
+    <li>This Is Aboriginal Art</li>
+    <li>Earth Sanctuary Astronomy</li>
+    <li>Central Australian Aviation Museum</li>
+    <li>Museum of Central Australia</li>
+    <li>Museum & Art Gallery NT / Megafauna Central</li>
+    <li>Adelaide House Museum</li>
+    <li>Alice Springs Telegraph Station Historical Reserve</li>
+    <li>Alice Springs School of the Air</li>
+    <li>Yubu Napa Art Gallery</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation in Alice Springs</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
   </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation in Alice Springs</h3>
+  <ul class="other-accommodation-list">
+    <li>Diplomat Hotel Alice Springs</li>
+    <li>Elkira Court Motel</li>
+    <li>Desert Palms Alice Springs</li>
+    <li>Alice Motor Inn</li>
+    <li>Stay at Alice Springs Hotel</li>
+    <li>Alice Springs Tourist Park</li>
+    <li>DoubleTree by Hilton Alice Springs</li>
+    <li>Mercure Alice Springs Resort</li>
+    <li>Sturt Desert Pea House</li>
+    <li>Crowne Plaza Alice Springs Lasseters</li>
+    <li>Alice on Todd Apartments</li>
+    <li>Discovery Parks – Alice Springs</li>
+    <li>Jump Inn Alice Budget Accommodation</li>
+    <li>Stay at Alice Springs</li>
+    <li>G’Day Mate Tourist Park</li>
+    <li>A Good Rest B&B</li>
+    <li>Alice’s Secret Travellers Inn</li>
+    <li>YHA Alice Springs</li>
+    <li>Stay at Alice Springs Hotel Motel</li>
+    <li>Alice Lodge</li>
+    <li>Quest Alice Springs</li>
+    <li>BIG4 MacDonnell Range Holiday Park</li>
+    <li>Heritage Caravan Park</li>
+    <li>Wintersun Cabin & Caravan Park</li>
+    <li>Cavenagh Lodge</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
 </section>
 
 <!-- FOOTER -->
@@ -201,8 +441,10 @@
 
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
