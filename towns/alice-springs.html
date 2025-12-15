@@ -187,6 +187,82 @@
       color:#777;
       margin-top:15px;
     }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – ALICE SPRINGS ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
 
   /* ================= FOOTER ================= */
 footer {
@@ -367,6 +443,55 @@ footer .gst-disclaimer {
   <p class="accommodation-disclaimer">
     This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
   </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Andamooka’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Point Howard Lookout</h3>
+      <p>
+  Point Howard Lookout offers panoramic views across the West MacDonnell Ranges, providing visitors with a
+  sweeping perspective of Central Australia’s rugged landscapes and changing desert colours.
+  The lookout is a popular stop for photography and scenic appreciation, particularly during sunrise
+  and late afternoon.
+</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Ellery Creek Big Hole</h3>
+      <p>Ellery Creek Big Hole is one of the most iconic natural attractions in the West MacDonnell Ranges,
+  featuring a deep, permanent waterhole carved through towering quartzite cliffs.
+  A popular spot for swimming, picnicking, and bushwalking, it showcases the geological history
+  and natural beauty of the region.
+</p>
+
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Serpentine Gorge</h3>
+      <p>Serpentine Gorge is a narrow, dramatic gorge known for its striking rock formations and tranquil
+  waterhole, set among the ancient landscapes of the West MacDonnell Ranges.
+  The gorge is valued for its scenic walks, cultural significance, and peaceful atmosphere away
+  from the main tourist routes.
+</p>
+    </div>
+  </div>
+
+</div>
 
   <!-- ACCOMMODATION -->
   <h2>🏨 Featured Accommodation in Alice Springs</h2>
