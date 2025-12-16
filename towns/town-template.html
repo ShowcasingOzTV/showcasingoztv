@@ -7,9 +7,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Andamooka (SA) | ShowcasingOz TV</title>
-<meta name="description" content="Explore {TOWN NAME} {STATE INITIALS} — {ENTER BRIEF SUMMARY OF TOWN}, featured in ShowcasingOz TV’s upcoming documentary series." />
-<meta name="keywords" content="{TOWN NAME}, {STATE}, {ENTER KEYWORDS HERE}, ShowcasingOz TV" />
+  <title>Town Name (State) | ShowcasingOz TV</title>
+  <meta name="description" content="Explore Town Name (State) — brief town description for search engines, featured on ShowcasingOz TV’s upcoming documentary series." />
+  <meta name="keywords" content="Town Name, State, region, outback town, regional Australia, travel documentary, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
@@ -28,7 +28,6 @@
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -79,14 +78,12 @@
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
       background-color: #ddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
@@ -98,7 +95,6 @@
 
     p { line-height:1.6; color:#333; }
 
-    /* ================= PLACEHOLDERS ================= */
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder {
@@ -121,51 +117,38 @@
       height:200px;
       font-size:1.1rem;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    .poi-placeholder {
+      height: 160px;
+      background: #e1e1e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    .poi-content {
+      padding: 15px;
+      text-align: center;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -180,20 +163,6 @@
       overflow:hidden;
     }
 
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
     .accommodation-link {
       display:inline-block;
       margin-top:10px;
@@ -202,9 +171,7 @@
       text-decoration:none;
     }
 
-    .accommodation-link:hover {
-      text-decoration:underline;
-    }
+    .accommodation-link:hover { text-decoration:underline; }
 
     .accommodation-intro {
       text-align:center;
@@ -214,129 +181,43 @@
 
     .other-accommodation-heading {
       margin-top:50px;
+      text-align:center;
     }
 
     .other-accommodation-list {
       list-style:none;
       padding-left:0;
-    }
-
-    .other-accommodation-list li {
-      margin-bottom:6px;
+      text-align:center;
     }
 
     .accommodation-disclaimer {
       font-size:0.8rem;
       color:#777;
       margin-top:15px;
+      text-align:center;
     }
-/* ================= CENTER ALIGN – {TOWN NAME IN CAPITALS} ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    footer {
+      background:#0E3557;
+      color:#ffffff;
+      padding:40px 20px;
+      margin-top:60px;
+      text-align:center;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer a { color:#E87722; text-decoration:none; }
+    footer a:hover { color:#ffffff; }
 
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display:block;
+      margin-top:8px;
+      font-size:0.8rem;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
     <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
@@ -355,60 +236,44 @@ footer .gst-disclaimer {
 </header>
 
 <script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  document.getElementById('menu-btn')
+    .addEventListener('click', () =>
+      document.getElementById('menu').classList.toggle('active'));
 </script>
 
-<!-- HERO -->
 <section class="hero">
-  <img src="../images/towns/{TOWN NAME}.jpg"
-       alt="{TOWN NAME} {STATE}"
+  <img src="../images/towns/town-image.jpg"
+       alt="Town Name State"
        width="1600"
        height="320"
-       fetchpriority="high"
-       decoding="async"
        style="width:100%;height:100%;object-fit:cover;">
 </section>
 
-<!-- MAIN CONTENT -->
 <section class="content">
 
-  <h1>{TOWN NAME} {STATE INITIALS}</h1>
+  <h1>Town Name (State)</h1>
 
-<p>
-{TOWN DESCRIPTION PARAGRAPH 1}
-</p>
+  <p>Introductory town paragraph.</p>
+  <p>Historical or regional context paragraph.</p>
+  <p>Visitor or landscape description paragraph.</p>
+  <p>ShowcasingOz TV filming statement paragraph.</p>
 
-<p>
-{TOWN DESCRIPTION PARAGRAPH 2}
-</p>
-
-<p>
-{TOWN DESCRIPTION PARAGRAPH 3}
-</p>
-
-<p>
-{TOWN DESCRIPTION PARAGRAPH 4}
-</p>
-
-  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
   <div class="video-placeholder">Documentary Coming Soon</div>
 
-  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+  <p class="accommodation-intro">
+    Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+    professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+    in a way that static listings simply cannot achieve.
+  </p>
+
+  <p style="text-align:center;">
+    <a href="../attraction-partners.html" class="accommodation-link">
+      Explore attractions filming &amp; feature options
+    </a>
+  </p>
 
   <div class="accommodation-grid">
     <div class="accommodation-card">
@@ -416,75 +281,45 @@ footer .gst-disclaimer {
     </div>
   </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions in {TOWN NAME}</h3>
+  <h3 class="other-accommodation-heading">Other Attractions in Town Name</h3>
   <ul class="other-accommodation-list">
-    <li>Attraction 1</li>
-    <li>Attraction 2</li>
-    <li>Attraction 3</li>
-    <li>Attraction 4</li>
-    <li>Attraction 5</li>
-    <li>Attraction 6</li>
-    <li>Attraction 7</li>
-    <li>Attraction 8</li>
-    <li>Attraction 9</li>
-    <li>Attraction 10</li>
+    <li>Attraction Name</li>
   </ul>
 
   <p class="accommodation-disclaimer">
     This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
   </p>
 
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+  <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of {TOWN NAME'S} landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+  <p class="accommodation-intro">
+    These natural landmarks and local points of interest form an important part of the town’s landscape,
+    history, and sense of place.
+  </p>
 
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>LANDMARK 1 NAME</h3>
-      <p>LANDMARK 1 DESCRIPTION</p>
+  <div class="poi-grid">
+    <div class="poi-card">
+      <div class="poi-placeholder">Image Coming Soon</div>
+      <div class="poi-content">
+        <h3>Landmark Name</h3>
+        <p>Short landmark description.</p>
+      </div>
     </div>
   </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>LANDMARK 2 NAME</h3>
-      <p>LANDMARK 2 DESCRIPTION</p>
-    </div>
-  </div>
+  <h2>🏨 Featured Accommodation in Town Name</h2>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>LANDMARK 3 NAME</h3>
-      <p>LANDMARK 3 DESCRIPTION</p>
-    </div>
-  </div>
+  <p class="accommodation-intro">
+    Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+    Selected partners receive cinematic 4K video coverage and professional photography presented as
+    part of a nationally filmed travel series.
+  </p>
 
-</div>
-
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in {TOWN NAME}</h2>
-
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+  <p style="text-align:center;">
+    <a href="../accommodation-partners.html" class="accommodation-link">
+      Explore accommodation filming &amp; feature options
+    </a>
+  </p>
 
   <div class="accommodation-grid">
     <div class="accommodation-card">
@@ -492,18 +327,9 @@ footer .gst-disclaimer {
     </div>
   </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation in {TOWN NAME}</h3>
+  <h3 class="other-accommodation-heading">Other Accommodation in Town Name</h3>
   <ul class="other-accommodation-list">
-    <li>ACCOMODATION 1</li>
-    <li>ACCOMODATION 2</li>
-    <li>ACCOMODATION 3</li>
-    <li>ACCOMODATION 4</li>
-    <li>ACCOMODATION 5</li>
-    <li>ACCOMODATION 6</li>
-    <li>ACCOMODATION 7</li>
-    <li>ACCOMODATION 8</li>
-    <li>ACCOMODATION 9</li>
-    <li>ACCOMODATION 10</li>
+    <li>Accommodation Name</li>
   </ul>
 
   <p class="accommodation-disclaimer">
@@ -512,20 +338,7 @@ footer .gst-disclaimer {
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/towns/index.html">Towns</a> |
-    <a href="/partner.html">Partner With Us</a> |
-    <a href="/sponsorship.html">Sponsorship</a> |
-    <a href="/filming-map.html">Filming Map</a> |
-    <a href="/press.html">Press</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/legal.html">Legal</a>
-  </div>
-
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
     <span class="gst-disclaimer">
