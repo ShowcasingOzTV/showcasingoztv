@@ -230,6 +230,56 @@
       color:#777;
       margin-top:15px;
     }
+    .featured-accommodation-row {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.featured-content h2 {
+  color: #E87722;
+  text-align: center;
+}
+
+.featured-content p {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.feature-link {
+  text-align: center;
+  font-weight: 600;
+  color: #0E3557;
+  text-decoration: none;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
+.placeholder-card {
+  background: #eee;
+  border-radius: 12px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-weight: 500;
+}
+
+.other-accommodation-heading {
+  text-align: center;
+  margin-top: 10px;
+}
 /* ================= CENTER ALIGN – {TILMOUTH WELL} ================= */
 
 /* Centre section headings like "Other Attractions" & "Other Accommodation" */
@@ -465,29 +515,32 @@ footer .gst-disclaimer {
   <!-- ACCOMMODATION -->
   <h2>🏨 Featured Accommodation in Tilmouth Well</h2>
 
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
+<section class="featured-accommodation-row">
+  <div class="featured-content">
+    <h2>🏨 Featured Accommodation in Tilmouth Well</h2>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p>
+      Stand out from the crowd by having your accommodation professionally
+      featured on ShowcasingOz TV. Selected partners receive cinematic 4K
+      video coverage and professional photography that captures the arrival
+      experience, comfort, ambience, facilities, and genuine guest warmth
+      of their property — presented as part of a nationally filmed travel
+      series.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    <a href="/accommodation-partners.html" class="feature-link">
+      Explore accommodation filming &amp; feature options
+    </a>
+
+    <div class="placeholder-card">
+      Accommodation Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation in Tilmouth Well</h3>
-  <ul class="other-accommodation-list">
-    <li>Tilmouth Well Roadhouse</li>
-  </ul>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation in Tilmouth Well
+    </h3>
+  </div>
+</section>
 
   <p class="accommodation-disclaimer">
     This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
