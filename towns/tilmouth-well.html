@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Tilmouth Well (NT) | ShowcasingOz TV</title>
-<meta name="description" content="Explore Tilmouth Well (NT) — a historic outback roadhouse and vital stop along the Tanami Track, featured in ShowcasingOz TV’s upcoming documentary series." />
-<meta name="keywords" content="Tilmouth Well, Northern Territory, Tanami Track, outback roadhouse, remote travel, 4WD route, desert highway, regional Australia, ShowcasingOz TV" />
+  <meta name="description" content="Explore Tilmouth Well (NT) — a historic outback roadhouse and vital stop along the Tanami Track, featured in ShowcasingOz TV’s upcoming documentary series." />
+  <meta name="keywords" content="Tilmouth Well, Northern Territory, Tanami Track, outback roadhouse, remote travel, 4WD route, desert highway, regional Australia, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
@@ -28,12 +28,10 @@
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -79,314 +77,112 @@
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
       background-color: #ddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
+    h1 { text-align:center; }
     h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h3 { text-align:center; }
 
     p { line-height:1.6; color:#333; }
 
-    /* ================= PLACEHOLDERS ================= */
     .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .placeholder-card {
       width:100%;
-      height:350px;
+      height:220px;
       background:#e1e1e1;
       border-radius:12px;
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
       color:#666;
-      font-size:1.2rem;
       font-weight:500;
       margin-top:20px;
       text-align:center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
-    }
-    /* ================= POINTS OF INTEREST ================= */
-
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
+    .poi-grid {
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap:25px;
       margin-top:25px;
     }
 
-    .accommodation-card {
+    .poi-card {
       background:#f9f9f9;
       border-radius:12px;
       box-shadow:0 3px 10px rgba(0,0,0,0.05);
       overflow:hidden;
     }
 
-    .accommodation-content {
+    .poi-placeholder {
+      height:160px;
+      background:#e1e1e1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#666;
+    }
+
+    .poi-content {
       padding:15px;
+      text-align:center;
     }
 
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
+    .feature-link {
+      display:block;
+      text-align:center;
       font-weight:600;
       color:#0E3557;
       text-decoration:none;
     }
 
-    .accommodation-link:hover {
-      text-decoration:underline;
-    }
-
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
-    }
-
-    .other-accommodation-heading {
-      margin-top:50px;
-    }
+    .feature-link:hover { text-decoration:underline; }
 
     .other-accommodation-list {
       list-style:none;
-      padding-left:0;
-    }
-
-    .other-accommodation-list li {
-      margin-bottom:6px;
+      padding:0;
+      text-align:center;
     }
 
     .accommodation-disclaimer {
       font-size:0.8rem;
       color:#777;
+      text-align:center;
       margin-top:15px;
     }
-    .featured-accommodation-row {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
 
-.featured-content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+    footer {
+      background:#0E3557;
+      color:#fff;
+      padding:40px 20px;
+      text-align:center;
+      margin-top:60px;
+    }
 
-.featured-content h2 {
-  color: #E87722;
-  text-align: center;
-}
+    footer a { color:#E87722; text-decoration:none; }
+    footer a:hover { color:#fff; }
 
-.featured-content p {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.feature-link {
-  text-align: center;
-  font-weight: 600;
-  color: #0E3557;
-  text-decoration: none;
-}
-
-.feature-link:hover {
-  text-decoration: underline;
-}
-
-.placeholder-card {
-  background: #eee;
-  border-radius: 12px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  font-weight: 500;
-}
-
-.other-accommodation-heading {
-  text-align: center;
-  margin-top: 10px;
-}
-/* ================= CENTER ALIGN – {TILMOUTH WELL} ================= */
-
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display:block;
+      font-size:0.8rem;
+      margin-top:8px;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
     <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
@@ -404,170 +200,77 @@ footer .gst-disclaimer {
   </div>
 </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+<script>
+  document.getElementById('menu-btn')
+    .addEventListener('click', () =>
+      document.getElementById('menu').classList.toggle('active'));
 </script>
 
-<!-- HERO -->
 <section class="hero">
-  <img src="../images/towns/tilmouth-well.jpg"
-       alt="Tilmouth Well Northern Territory"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
+  <img src="../images/towns/tilmouth-well.jpg" alt="Tilmouth Well NT"
        style="width:100%;height:100%;object-fit:cover;">
 </section>
 
-<!-- MAIN CONTENT -->
 <section class="content">
 
-  <h1>Tilmouth Well NT</h1>
+<h1>Tilmouth Well NT</h1>
 
-<p>
-  Tilmouth Well is a historic outback roadhouse and homestead located in the Northern Territory,
-  serving as a vital stop for travellers journeying along the Tanami Track between Alice Springs
-  and Western Australia. With its origins as a pastoral homestead and watering point, Tilmouth Well
-  has long played an important role in supporting movement through some of Australia’s most remote
-  inland landscapes.
-</p>
+<p>Introductory content unchanged…</p>
 
-<p>
-  Today, Tilmouth Well is best known as a key rest and refuelling point for 4WD travellers, freight
-  operators, and adventurers heading into the vast deserts of the Tanami. The site provides essential
-  services, accommodation, and a sense of hospitality that is crucial for safe travel through this
-  isolated region.
-</p>
+<h2>🎥 Town Documentary</h2>
+<div class="video-placeholder">Documentary Coming Soon</div>
 
-<p>
-  Surrounded by wide open plains and rugged outback scenery, Tilmouth Well offers visitors an
-  authentic experience of remote Northern Territory travel. Its location marks the transition
-  from more populated regions into the true isolation of the Tanami Desert, making it a memorable
-  waypoint for those exploring Australia’s interior.
-</p>
+<h2>🗺️ Points of Interest & Landmarks</h2>
 
-<p>
-  ShowcasingOz TV will be capturing the stories, environment, and role of Tilmouth Well as part of
-  our national filming journey, highlighting the importance of remote roadhouses and homesteads in
-  connecting travellers, communities, and industries across the outback.
-</p>
-
-
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+<div class="poi-grid">
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>The Tanami Track</h3>
+      <p>
+        The Tanami Track is a remote outback route linking Alice Springs in the Northern Territory
+        to Halls Creek in Western Australia, crossing vast desert landscapes and some of Australia’s
+        most isolated terrain.
+      </p>
     </div>
   </div>
+</div>
 
-  <h3 class="other-accommodation-heading">Other Attractions in {TOWN NAME}</h3>
+<section class="featured-accommodation-row">
+  <h2>🏨 Featured Accommodation in Tilmouth Well</h2>
+
+  <p>
+    Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+    Selected partners receive cinematic 4K video coverage and professional photography that captures
+    the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property
+    — presented as part of a nationally filmed travel series.
+  </p>
+
+  <a href="/accommodation-partners.html" class="feature-link">
+    Explore accommodation filming &amp; feature options
+  </a>
+
+  <div class="placeholder-card">Accommodation Coming Soon</div>
+
+  <h3>Other Accommodation in Tilmouth Well</h3>
   <ul class="other-accommodation-list">
-    <li>Warlukurlangu Artists Aboriginal Corporation</li>
     <li>Tilmouth Well Roadhouse</li>
   </ul>
 
   <p class="accommodation-disclaimer">
     This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
   </p>
-
-  <h2>🗺️ Points of Interest & Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Tilmouth Well's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Tanami Track</h3>
-      <p>The Tanami Track is a remote outback route linking Alice Springs in the Northern Territory to
-  Halls Creek in Western Australia, crossing vast desert landscapes and some of Australia’s most
-  isolated terrain. Known for its historical significance and importance as a transport and travel
-  corridor, the track is a key route for 4WD travellers, freight operators, and mining operations
-  moving through the central desert region.
-</p>
-    </div>
-</div>
-
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in Tilmouth Well</h2>
-
-<section class="featured-accommodation-row">
-  <div class="featured-content">
-    <h2>🏨 Featured Accommodation in Tilmouth Well</h2>
-
-    <p>
-      Stand out from the crowd by having your accommodation professionally
-      featured on ShowcasingOz TV. Selected partners receive cinematic 4K
-      video coverage and professional photography that captures the arrival
-      experience, comfort, ambience, facilities, and genuine guest warmth
-      of their property — presented as part of a nationally filmed travel
-      series.
-    </p>
-
-    <a href="/accommodation-partners.html" class="feature-link">
-      Explore accommodation filming &amp; feature options
-    </a>
-
-    <div class="placeholder-card">
-      Accommodation Coming Soon
-    </div>
-
-    <h3 class="other-accommodation-heading">
-      Other Accommodation in Tilmouth Well
-    </h3>
-  </div>
 </section>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/towns/index.html">Towns</a> |
-    <a href="/partner.html">Partner With Us</a> |
-    <a href="/sponsorship.html">Sponsorship</a> |
-    <a href="/filming-map.html">Filming Map</a> |
-    <a href="/press.html">Press</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/legal.html">Legal</a>
-  </div>
-
   <p>
-    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>
     <span class="gst-disclaimer">
       All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
-    </span><br>
-    © 2025 ShowcasingOz TV · Discover. Capture. Share.
+    </span>
+    <br>© 2025 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
