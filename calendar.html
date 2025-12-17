@@ -102,6 +102,16 @@
     .public-calendar iframe { height: 650px; }
     .booking-calendar iframe { height: 750px; }
 
+    /* Hide Google Calendar footer links */
+iframe[src*="calendar.google.com"] {
+  position: relative;
+}
+
+iframe[src*="calendar.google.com"] + div,
+iframe[src*="calendar.google.com"] a {
+  display: none !important;
+}
+
     footer {
       background: #0E3557;
       color: #fff;
