@@ -3,23 +3,22 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Broken Hill (NSW) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Broken Hill (NSW) — an iconic outback city known for mining history, arts, heritage and timeless desert landscapes, featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Broken Hill, Outback NSW, Silver City, mining history, art galleries, ShowcasingOz TV, regional travel" />
+<meta name="description" content="Explore Broken Hill, an iconic outback city known for its mining heritage, vibrant arts scene, desert landscapes, historic architecture, and unique Australian character." />
+<meta name="keywords" content="Broken Hill NSW, Broken Hill outback, Broken Hill mining history, outback city Australia, Broken Hill attractions, Silver City NSW, Broken Hill arts, outback New South Wales, regional NSW tourism, historic mining towns Australia" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -29,7 +28,7 @@
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -39,6 +38,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -47,68 +47,61 @@
       align-items: center;
       padding: 0 20px;
     }
+
     header img { height: 65px; }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { color: #E87722; }
+
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    /* Hero Banner */
+    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/broken-hill.jpg') center center / cover no-repeat;
+      background-color: #ddd;
     }
 
-    /* Content */
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
     p { line-height:1.6; color:#333; }
 
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
-    }
-
-    /* Video Placeholder */
-    .video-placeholder {
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
       width:100%;
       height:350px;
       background:#e1e1e1;
@@ -117,19 +110,214 @@
       justify-content:center;
       align-items:center;
       color:#666;
-      font-size:1.3rem;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
-    }
-
-    footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
       text-align:center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+/* ================= CENTER ALIGN – BROKEN HILL ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
 footer .footer-links a,
 footer p a {
   color: #E87722 !important;
@@ -137,6 +325,10 @@ footer p a {
 
 footer .footer-links a:hover,
 footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
   color: #ffffff !important;
 }
   </style>
@@ -147,7 +339,7 @@ footer p a:hover {
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
     <nav id="menu">
       <a href="../index.html">Home</a>
@@ -162,46 +354,332 @@ footer p a:hover {
   </div>
 </header>
 
-<script>
+<script defer>
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+  <img src="../images/towns/broken-hill.jpg"
+       alt="Broken Hill New South Wales"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
   <h1>Broken Hill (NSW)</h1>
 
-  <p>
-    Broken Hill — often called the “Silver City” — is one of Australia’s most famous 
-    outback destinations. Rich in mining heritage, strong artistic culture, desert 
-    landscapes and iconic characters, Broken Hill has become a symbol of the rugged 
-    Australian interior.
-    <br><br>
-    From its sprawling mines and historic buildings to incredible sunsets, film 
-    history, vibrant galleries and nearby national parks, the town offers unforgettable 
-    stories and scenery. ShowcasingOz TV will be capturing the unique spirit, history 
-    and people that make Broken Hill such a legendary outback city.
-  </p>
+<p>Broken Hill is a historic outback city located in far-western New South Wales, near the South Australian border, and is widely recognised as one of Australia’s most significant mining and heritage centres. Often referred to as the “Silver City,” Broken Hill was established in the 1880s following the discovery of one of the world’s richest deposits of silver, lead, and zinc, shaping the city’s identity and economy for generations.</p>
 
+<p>The city is renowned for its well-preserved streetscapes, grand civic buildings, and historic hotels, many of which reflect the prosperity brought by mining during its early years. Broken Hill also played a pivotal role in Australia’s labour movement, with early union activity and industrial reforms leaving a lasting legacy that is still celebrated today.</p>
+
+<p>Beyond its industrial roots, Broken Hill has developed a strong reputation as a cultural and artistic hub. The city is home to numerous galleries, studios, and public artworks, with its dramatic desert light and landscapes attracting artists and filmmakers from around the world. Major film productions have used Broken Hill and its surrounds as iconic outback backdrops.</p>
+
+<p>The surrounding environment features vast desert plains, rugged hills, and striking natural landmarks, including nearby conservation parks and sculptural installations that showcase the region’s unique sense of space. Sunrises and sunsets over the outback are a defining feature of the Broken Hill experience, offering photographers and visitors unforgettable views.</p>
+
+<p>Today, Broken Hill combines its rich mining heritage with a vibrant arts scene, strong community identity, and essential services for the surrounding outback region. It remains a distinctive destination for travellers seeking history, culture, and an authentic outback city experience unlike anywhere else in Australia.</p>
+
+  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">
-    Documentary Coming Soon
-  </div>
+  <div class="video-placeholder">Documentary Coming Soon</div>
 
+  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p>We can’t wait to showcase Broken Hill’s mines, galleries, landscapes and outback history as part of our filming schedule in July 2026.</p>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon">
-      <p>Attractions Coming Soon</p>
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
     </div>
   </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions in Broken Hill</h3>
+  <ul class="other-accommodation-list">
+    <li>Mutawintji Heritage Tour</li>
+    <li>Kulluwirru Dreaming Tour</li>
+    <li>Broken Hill Mining Museum & Whites Mineral Art Gallery</li>
+    <li>Broken Hill Cemetery Tour</li>
+    <li>Pro Hart Gallery</li>
+    <li>Bells Milkbar</li>
+    <li>Silver City Mint & Art Centre</li>
+    <li>Flying Doctor Outback Heritage Experience</li>
+    <li>Historical Synagogue Museum</li>
+    <li>Palace Hotel</li>
+    <li>The Old Brewery</li>
+    <li>Absalom's Gallery</li>
+    <li>Broken Hill City Art Gallery</li>
+    <li>Broken Hill Distillery</li>
+    <li>Sulphide Street Railway & Historical Museum</li>
+    <li>Albert Kersten Mining and Minerals Museum</li>
+    <li>Broken Hill Heritage Walk Tour</li>
+    <li>Outback Astronomy</li>
+    <li>McCarthurs Minerals</li>
+    <li>Quandong Farm</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Broken Hill’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Yunta</h3>
+      <p>A small outback settlement north of Broken Hill, Yunta developed as a railway and pastoral service centre and offers insight into the region’s remote transport and grazing history.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>The Big Dice</h3>
+      <p>A roadside novelty attraction featuring oversized dice, providing a light-hearted photo stop for travellers exploring the outback around Broken Hill.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>SA-NSW Border</h3>
+      <p>The marked border between South Australia and New South Wales near Broken Hill, popular for photographs and symbolising the city’s close ties to South Australia.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Picnic Train Historical Site</h3>
+      <p>A historic site associated with early recreational rail travel, reflecting the importance of railways in shaping social life in Broken Hill’s early years.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Pro Hart Grave</h3>
+      <p>The resting place of renowned Australian artist Pro Hart, whose work was deeply inspired by Broken Hill’s landscapes and mining culture.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Living Desert Sculptures</h3>
+      <p>A collection of large sandstone sculptures set atop a hill within the Living Desert State Park, offering panoramic views and striking artwork against the outback backdrop.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>White Rocks Historical Site</h3>
+      <p>A former mining and settlement area that highlights the harsh conditions faced by early miners and residents during Broken Hill’s formative years.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Site of original BHP Offices</h3>
+      <p>The location of the original offices of Broken Hill Proprietary Company (BHP), marking the birthplace of one of Australia’s largest and most influential companies.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>The Big Bench</h3>
+      <p>A large public bench designed as a novelty landmark, offering a fun photo opportunity and views across the surrounding outback landscape.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Line of Lode Miners Memorial</h3>
+      <p>A prominent memorial honouring miners who lost their lives working the Line of Lode, featuring striking architecture and panoramic views over Broken Hill.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Junction Mine</h3>
+      <p>A historic mining site that played a key role in the development of Broken Hill’s mining industry, now offering insight into early extraction methods and industrial heritage.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Westside Plaza</h3>
+      <p>A modern shopping precinct serving Broken Hill’s local community, providing retail services within the city’s outback setting.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Syndicate of Seven Busts</h3>
+      <p>Public sculptures commemorating the group of prospectors who first discovered the mineral deposit that led to the founding of Broken Hill.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Trades Hall</h3>
+      <p>A heritage-listed building central to Broken Hill’s labour movement history, symbolising the city’s role in shaping workers’ rights in Australia.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Old Town Hall</h3>
+      <p>A historic civic building reflecting Broken Hill’s early municipal development and architectural heritage.</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Kintore Headframe</h3>
+      <p>A preserved mine headframe standing as a visible reminder of Broken Hill’s mining past and industrial scale.</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Broken Hill Conservation Gardens & The Big Ant</h3>
+      <p>A botanical garden showcasing native and arid-zone plants, featuring the popular Big Ant sculpture and family-friendly walking paths.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>J P Keenan Lookout</h3>
+      <p>A scenic lookout offering elevated views across Broken Hill, the surrounding ranges, and mining infrastructure.</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>The Titanic Memorial</h3>
+      <p>A unique memorial commemorating the victims of the RMS Titanic disaster, reflecting Broken Hill’s strong union and community connections to global events.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation in Broken Hill</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation in Broken Hill</h3>
+  <ul class="other-accommodation-list">
+    <li>The Palace Hotel</li>
+    <li>The Astra Hotel</li>
+    <li>Royal Exchange Hotel</li>
+    <li>Broken Hill Outback Church Stay</li>
+    <li>Desert Sand Motor Inn</li>
+    <li>Broken Hill Tourist Lodge</li>
+    <li>Ibis Styles Broken Hill</li>
+    <li>Hilltop Motel</li>
+    <li>Sturt Motel</li>
+    <li>Daydream Motel & Cottages</li>
+    <li>Charles Rasp Motor Inn & Cottages</li>
+    <li>Gateway Motor Inn</li>
+    <li>Silver Haven Motor Inn</li>
+    <li>Red Earth Motel</li>
+    <li>Emaroo Cottages</li>
+    <li>Broken Hill Tourist Park</li>
+    <li>Townhouse 3 Accommodation</li>
+    <li>The Argent Motel</li>
+    <li>Broken Hill Outback Resort</li>
+    <li>Comfort Inn Crystal</li>
+    <li>Maison de Chocolate</li>
+    <li>About Town Cottages</li>
+    <li>Broken Hill Outback View Holiday Park</li>
+    <li>Outback Church Stay</li>
+    <li>The Real McCoy Holiday Accommodation</li>
+    <li>Miner’s Cottage</li>
+    <li>Cottonwood Cottage</li>
+    <li>Maeville Cottage</li>
+    <li>Silver City Luxe</li>
+    <li>Capon Cottage</li>
+    <li>Gum Paddock Country Cottage</li>
+    <li>Caledonian Bed & Breakfast</li>
+    <li>The Grand Guest House</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
 
 </section>
 
@@ -221,8 +699,10 @@ footer p a:hover {
 
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
