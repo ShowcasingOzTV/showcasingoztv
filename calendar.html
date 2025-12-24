@@ -7,8 +7,8 @@
   <title>Filming Calendar | ShowcasingOz TV</title>
 
   <!-- SEO -->
-  <meta name="description" content="View confirmed filming dates and request available filming times with ShowcasingOz TV. Plan, book, and collaborate with our production team." />
-  <meta name="keywords" content="ShowcasingOz TV calendar, filming schedule, book filming Australia, tourism filming appointments" />
+  <meta name="description" content="View confirmed filming dates, attraction visit times, and accommodation filming opportunities with ShowcasingOz TV." />
+  <meta name="keywords" content="ShowcasingOz TV calendar, filming schedule Australia, tourism filming, accommodation filming exchange" />
   <link rel="canonical" href="https://showcasingoztv.com.au/calendar.html" />
 
   <!-- Font Awesome -->
@@ -38,115 +38,60 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 1200px;
+      margin: auto;
       padding: 0 20px;
     }
 
-    header.navbar img {
-      height: 65px;
-    }
-
-    nav a {
+    header.navbar a {
       color: #fff;
-      margin-left: 20px;
       text-decoration: none;
-      font-weight: 500;
+      margin: 0 10px;
+      font-weight: 600;
     }
-
-    nav a:hover { color: #E87722; }
-
-    .menu-btn { display:none; }
 
     .page-header {
-      max-width: 900px;
-      margin: 60px auto 30px;
-      padding: 0 20px;
-    }
-
-    .page-header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    .page-header p {
-      font-size: 1.1rem;
-      color: #444;
+      background: #f4f6f8;
+      padding: 40px 20px;
     }
 
     .calendar-section {
       max-width: 1100px;
-      margin: 50px auto;
+      margin: 40px auto;
       padding: 0 20px;
       text-align: left;
     }
 
     .calendar-card {
-      background: #f9f9f9;
-      border-radius: 12px;
+      background: #f9fafb;
       padding: 20px;
-      margin-bottom: 40px;
-    }
-
-    .calendar-card h2 {
-      color: #E87722;
-      margin-top: 0;
-    }
-
-    iframe {
-      width: 100%;
-      border: 0;
       border-radius: 8px;
+      margin-bottom: 30px;
     }
 
-    .public-calendar iframe { height: 650px; }
-    .booking-calendar iframe { height: 750px; }
+    details.calendar-day {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #fff;
+    }
 
-    /* Hide Google Calendar footer links */
-iframe[src*="calendar.google.com"] {
-  position: relative;
-}
+    details.calendar-day summary {
+      cursor: pointer;
+      font-size: 1.05em;
+    }
 
-iframe[src*="calendar.google.com"] + div,
-iframe[src*="calendar.google.com"] a {
-  display: none !important;
-}
-    .calendar-mask {
-  position: relative;
-}
-
-.calendar-mask::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 45px;
-  background: #ffffff;
-}
-    .calendar-mask::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 55px; /* was 45px */
-  background: #ffffff;
-  pointer-events: none;
-}
+    details.calendar-day h4 {
+      margin-top: 15px;
+    }
 
     footer {
       background: #0E3557;
       color: #fff;
-      padding: 30px 20px;
-      font-size: 0.9rem;
+      padding: 20px;
       margin-top: 60px;
-    }
-
-    footer a {
-      color: #E87722;
-      text-decoration: none;
-      margin: 0 10px;
+      text-align: center;
     }
   </style>
 </head>
@@ -155,93 +100,69 @@ iframe[src*="calendar.google.com"] a {
 
 <header class="navbar">
   <div class="container">
-    <a href="/index.html">
-      <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo">
-    </a>
+    <div><strong>ShowcasingOz TV</strong></div>
     <nav>
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About Us</a>
-      <a href="/towns/index.html">Towns</a>
-      <a href="/partner.html">Partner With Us</a>
-      <a href="/sponsorship.html">Sponsorship</a>
-      <a href="/filming-map.html">Filming Map</a>
-      <a href="/calendar.html">Calendar</a>
-      <a href="/contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="towns.html">Towns</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <section class="page-header">
-  <h1>Filming Calendar</h1>
-  <p>
-    View confirmed filming dates and request available time slots to collaborate
-    with the ShowcasingOz TV production team.
-  </p>
+  <h1>Confirmed Filming Calendar</h1>
+  <p>Transparent filming dates, attraction visit times, and accommodation filming opportunities.</p>
 </section>
 
 <section class="calendar-section">
 
-  <div class="calendar-card public-calendar">
-    <h2>📅 Confirmed Filming Schedule</h2>
-    <p>
-      This calendar shows confirmed filming dates and general availability.
-    </p>
-
-    <!-- 🔁 PASTE YOUR PUBLIC GOOGLE CALENDAR EMBED HERE -->
-<div class="calendar-mask">
-  <iframe
-    src="https://calendar.google.com/calendar/embed?src=3e69bde00c60118284b7927f9b357e0a9e44d19e72995a7358ab0eb27b1b3fcc%40group.calendar.google.com&ctz=Australia%2FHobart&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH"
-    style="border:0"
-    width="100%"
-    height="650"
-    frameborder="0"
-    scrolling="no">
-  </iframe>
-</div>
-
+  <div class="calendar-card">
+    <h2>📅 How to Use This Schedule</h2>
+    <ul>
+      <li>Only the times shown are available for filming.</li>
+      <li>Accommodation opportunities are listed only when a dedicated filming window exists.</li>
+      <li>Overnight stays do not imply filming unless explicitly stated.</li>
+    </ul>
   </div>
 
-  <div class="calendar-card booking-calendar">
-    <h2>🎥 Request a Filming Time</h2>
-    <p>
-      Select an available time to discuss or confirm filming.
-      This booking is free and helps us plan logistics efficiently.
-    </p>
+  <!-- Sunday -->
+  <details class="calendar-day">
+    <summary><strong>Sunday 31 May 2026 — Alice Springs</strong></summary>
+    <h4>🎥 Filming Schedule</h4>
+    <p>No filming scheduled (arrival day).</p>
+    <h4>🏨 Accommodation</h4>
+    <p>No accommodation filming available on this date.</p>
+  </details>
 
-    <!-- 🔁 PASTE YOUR GOOGLE APPOINTMENT SCHEDULE EMBED HERE -->
-<div class="calendar-mask">
-  <iframe
-    src="https://calendar.app.google/mW9M1BT7tHZSzFVz8"
-    width="100%"
-    height="750"
-    frameborder="0"
-    scrolling="no">
-  </iframe>
-</div>
-  </div>
+  <!-- Monday -->
+  <details class="calendar-day">
+    <summary><strong>Monday 1 June 2026 — Alice Springs</strong></summary>
+
+    <h4>🎥 Filming Schedule</h4>
+    <ul>
+      <li><strong>8:30am – 9:30am</strong> — Accommodation filming (available)</li>
+      <li><strong>9:45am – 11:30am</strong> — Araluen Cultural Precinct</li>
+      <li><strong>12:30pm – 3:00pm</strong> — Alice Springs Desert Park (Day Tour)</li>
+      <li><strong>7:30pm – 8:30pm</strong> — Alice Springs Desert Park (Nocturnal Tour)</li>
+    </ul>
+
+    <h4>🏨 Accommodation</h4>
+    <p>
+      <strong>Stay-for-Free Exchange available</strong><br>
+      <strong>Nights included:</strong> Sunday 31 May & Monday 1 June<br>
+      <strong>Accommodation filming windows (Monday only):</strong><br>
+      • 8:30am – 9:30am (preferred)<br>
+      • 3:30pm – 4:30pm (secondary)
+    </p>
+  </details>
 
 </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="/index.html">Home</a> |
-      <a href="/about.html">About Us</a> |
-      <a href="/towns/index.html">Towns</a> |
-      <a href="/partner.html">Partner With Us</a> |
-      <a href="/sponsorship.html">Sponsorship</a> |
-      <a href="/filming-map.html">Filming Map</a> |
-      <a href="/press.html">Press</a> |
-      <a href="/contact.html">Contact</a> |
-      <a href="/legal.html">Legal</a>
-    </div>
-
-    <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-      © 2025 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
-  </footer>
+<footer>
+  <p>© 2026 ShowcasingOz TV · Discover. Capture. Share.</p>
+</footer>
 
 </body>
 </html>
+
