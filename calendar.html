@@ -7,8 +7,8 @@
   <title>Filming Calendar | ShowcasingOz TV</title>
 
   <!-- SEO -->
-  <meta name="description" content="View confirmed filming dates and request available filming times with ShowcasingOz TV. Plan, book, and collaborate with our production team." />
-  <meta name="keywords" content="ShowcasingOz TV calendar, filming schedule, book filming Australia, tourism filming appointments" />
+  <meta name="description" content="View filming dates, locations, and available collaboration opportunities with ShowcasingOz TV." />
+  <meta name="keywords" content="ShowcasingOz TV calendar, filming schedule, tourism filming Australia" />
   <link rel="canonical" href="https://showcasingoztv.com.au/calendar.html" />
 
   <!-- Font Awesome -->
@@ -25,6 +25,9 @@
       text-align: center;
     }
 
+    /* =====================
+       HEADER (UNCHANGED)
+       ===================== */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -56,8 +59,6 @@
 
     nav a:hover { color: #E87722; }
 
-    .menu-btn { display:none; }
-
     .page-header {
       max-width: 900px;
       margin: 60px auto 30px;
@@ -74,6 +75,9 @@
       color: #444;
     }
 
+    /* =====================
+       CALENDAR LAYOUT
+       ===================== */
     .calendar-section {
       max-width: 1100px;
       margin: 50px auto;
@@ -85,7 +89,7 @@
       background: #f9f9f9;
       border-radius: 12px;
       padding: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
 
     .calendar-card h2 {
@@ -93,59 +97,114 @@
       margin-top: 0;
     }
 
-    iframe {
-      width: 100%;
-      border: 0;
-      border-radius: 8px;
+    .calendar-legend {
+      margin-bottom: 20px;
     }
 
-    .public-calendar iframe { height: 650px; }
-    .booking-calendar iframe { height: 750px; }
-
-    /* Hide Google Calendar footer links */
-    iframe[src*="calendar.google.com"] {
-      position: relative;
+    .tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-right: 8px;
     }
 
-    iframe[src*="calendar.google.com"] + div,
-    iframe[src*="calendar.google.com"] a {
-      display: none !important;
+    .tag-confirmed {
+      background: rgba(0,160,90,0.12);
+      color: #00804f;
     }
 
-    .calendar-mask {
-      position: relative;
+    .tag-available {
+      background: rgba(14,53,87,0.12);
+      color: #0E3557;
     }
 
-    .calendar-mask::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 45px;
-      background: #ffffff;
+    .tag-landmark {
+      background: rgba(232,119,34,0.15);
+      color: #E87722;
     }
 
-    .calendar-mask::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 55px; /* was 45px */
-      background: #ffffff;
-      pointer-events: none;
+    /* =====================
+       MONTH NAVIGATION
+       ===================== */
+    .calendar-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
     }
 
-    /* =========================
-       NEW: Website Run-Schedule UI
-       ========================= */
+    .calendar-nav button {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: #0E3557;
+    }
+
+    .month-links a {
+      margin: 0 8px;
+      cursor: pointer;
+      font-weight: 700;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .month-links a.active {
+      color: #E87722;
+    }
+
+    /* =====================
+       CALENDAR GRID
+       ===================== */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .day-header {
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .calendar-cell {
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      padding: 8px;
+      min-height: 85px;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .calendar-cell.muted {
+      opacity: 0.35;
+    }
+
+    .calendar-cell .date-number {
+      font-weight: 700;
+    }
+
+    .calendar-cell .route {
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+
+    /* =====================
+       DAY DETAILS PANEL
+       ===================== */
+    #day-details {
+      scroll-margin-top: 110px;
+    }
+
     details.calendar-day {
       background: #ffffff;
       border: 1px solid #e6e6e6;
       border-radius: 12px;
       padding: 14px 16px;
-      margin: 12px 0;
+      margin-bottom: 40px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
@@ -154,27 +213,14 @@
       list-style: none;
       font-weight: 700;
       color: #0E3557;
-      outline: none;
     }
 
     details.calendar-day summary::-webkit-details-marker { display: none; }
 
     details.calendar-day summary::after {
-      content: "▼";
+      content: "▲";
       float: right;
       color: #E87722;
-      font-size: 0.9rem;
-      margin-top: 2px;
-    }
-
-    details.calendar-day[open] summary::after {
-      content: "▲";
-    }
-
-    .day-meta {
-      margin: 8px 0 0;
-      color: #444;
-      font-size: 0.95rem;
     }
 
     .calendar-day h4 {
@@ -191,27 +237,6 @@
     .calendar-day li {
       margin: 6px 0;
       line-height: 1.35;
-      color: #0E3557;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-
-    .tag-available {
-      background: rgba(232,119,34,0.12);
-      color: #E87722;
-    }
-
-    .tag-locked {
-      background: rgba(14,53,87,0.10);
-      color: #0E3557;
     }
 
     .note {
@@ -221,20 +246,7 @@
       line-height: 1.45;
     }
 
-    footer {
-      background: #0E3557;
-      color: #fff;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      margin-top: 60px;
-    }
-
-    footer a {
-      color: #E87722;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-  </style>
+</style>
 </head>
 
 <body>
@@ -260,432 +272,140 @@
 <section class="page-header">
   <h1>Filming Calendar</h1>
   <p>
-    View confirmed filming dates and request available time slots to collaborate
-    with the ShowcasingOz TV production team.
+    Explore where we’ll be filming across Australia. Click a date to view the
+    detailed filming schedule and available collaboration opportunities.
   </p>
 </section>
 
 <section class="calendar-section">
 
-  <!-- NEW: Website-first schedule (replaces Google embeds) -->
   <div class="calendar-card">
-    <h2>📅 Confirmed Filming Schedule (Leg 1)</h2>
+    <h2>📅 Filming Schedule</h2>
     <p class="note">
-      This schedule shows confirmed attraction visit times and clearly defined accommodation filming opportunities.
-      <br><br>
-      <strong>Important:</strong>
-      <ul>
-        <li>Attraction times shown below are the planned filming windows.</li>
-        <li>Accommodation opportunities are only displayed when a dedicated filming slot exists.</li>
-        <li>Overnight stays do not imply filming unless explicitly stated.</li>
-      </ul>
+      The calendar below outlines our filming route and daily schedule.
+      Select a date to view filming locations, accommodation requirements,
+      and available filming appointment windows.
     </p>
-    <p class="note"><strong>Leg:</strong> Alice Springs → Tennant Creek &nbsp;|&nbsp; <strong>Dates:</strong> Sun 31 May – Sat 13 June 2026</p>
   </div>
 
   <div class="calendar-legend">
-  <span class="tag tag-confirmed">Confirmed</span>
-  <span class="tag tag-available">Appointment Available</span>
-  <span class="tag tag-landmark">Landmark / Point of Interest</span>
-</div>
+    <span class="tag tag-confirmed">Confirmed</span>
+    <span class="tag tag-available">Appointment Available</span>
+    <span class="tag tag-landmark">Landmark / Point of Interest</span>
+  </div>
 
-<!-- SUNDAY 31 MAY 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Sunday 31 May 2026 — Alice Springs</summary>
+  <div class="calendar-nav">
+    <button id="prevMonth">◀</button>
+    <div class="month-links">
+      <a data-month="5" class="active">JUN</a>
+      <a data-month="6">JUL</a>
+      <a data-month="7">AUG</a>
+      <a data-month="8">SEP</a>
+      <a data-month="9">OCT</a>
+      <a data-month="10">NOV</a>
+      <a data-month="11">DEC</a>
+    </div>
+    <button id="nextMonth">▶</button>
+  </div>
 
-  <h4 class="section-header">🎥 Filming Schedule</h4>
-  <p class="note">
-    <strong>Accommodation filming:</strong> Nil times available ❌
-  </p>
+  <div class="calendar-grid" id="calendarGrid"></div>
 
-  <h4 class="section-header">🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Alice Springs — TBC</strong><br>
-    We are currently seeking accommodation for our crew for this night.<br>
-    <a href="/accommodation-partners.html">Stay-for-Free Exchange Package available</a>
-  </p>
-</details>
-
-  <!-- ===================== -->
-  <!-- MONDAY 1 JUNE 2026 -->
-  <!-- ===================== -->
-  <details class="calendar-day" open>
-    <summary>Monday 1 June 2026 — Alice Springs</summary>
-
-    <h4>🎥 Filming Schedule</h4>
-    <ul>
-      <li><strong>8:30am – 9:30am</strong> — <strong>Accommodation filming (available)</strong> <span class="tag tag-available">Open slot</span></li>
-      <li><strong>9:45am – 11:30am</strong> — Araluen Cultural Precinct</li>
-      <li><strong>12:30pm – 3:00pm</strong> — Alice Springs Desert Park (Day Tour)</li>
-      <li><strong>7:30pm – 8:30pm</strong> — Alice Springs Desert Park (Nocturnal Tour)</li>
-    </ul>
-
-    <h4>🏨 Accommodation</h4>
-    <p class="note">
-      <strong>Accommodation Needed</strong>
-      <br>Our crew are currently seeking accommodation for this night in the Alice Springs region.<br>
-      <strong>Stay-for-Free Exchange available (2 nights)</strong><br>
-      <strong>Nights included:</strong> Sunday 31 May &amp; Monday 1 June<br>
-      <strong>Accommodation filming windows (Monday only):</strong><br>
-      • 8:30am – 9:30am (preferred)<br>
-      • 3:30pm – 4:30pm (secondary)
-    </p>
-  </details>
-
-  <!-- ===================== -->
-  <!-- TUESDAY 2 JUNE 2026 -->
-  <!-- ===================== -->
-  <details class="calendar-day">
-    <summary>Tuesday 2 June 2026 — Alice Springs → Tilmouth Well</summary>
-
-    <h4>🎥 Filming Schedule</h4>
-    <ul>
-      <li>
-        <strong>9:00am – 10:00am</strong> — Alice Springs School of the Air
-        <span class="tag tag-locked">Confirmed</span>
-      </li>
-      <li>
-        <strong>10:30am – 11:15am</strong> — Todd Mall
-      </li>
-      <li>
-        <strong>11:30am – 12:15pm</strong> — Anzac Hill
-      </li>
-      <li>
-        <strong>4:00pm – 5:30pm</strong> — Accommodation filming (Tilmouth Well)
-        <span class="tag tag-available">Appointment available</span>
-            <h4>🏨 Accommodation</h4>
-    <p class="note">
-      
-      <br><strong>Accommodation filming window (if applicable):</strong><br>
-      • 4:00pm – 6:00pm</p>
-  </details>
-      </li>
-    </ul>
-
-      <!-- ===================== -->
-  <!-- WEDNESDAY 3 JUNE 2026 -->
-  <!-- ===================== -->
-  <details class="calendar-day">
-    <summary>Wednesday 3 June 2026 — Tilmouth Well → Tanami Track</summary>
-
-    <h4>🎥 Filming Schedule</h4>
-    <ul>
-      <li>
-        <strong>11:30am – 1:00pm</strong> — Warlukurlangu Artists Aboriginal Corporation
-        <span class="tag tag-locked">Subject to permission</span>
-      </li>
-    </ul>
-
-    <p class="note">
-      <strong>Accommodation filming:</strong> Nil times available ❌
-    </p>
-
-    <h4>🏨 Accommodation</h4>
-    <p class="note">
-      <strong>Accommodation Needed</strong><br>
-      We are currently seeking accommodation for this night along the Tanami Track in the Rabbit Flat region.<br>
-    </p>
-  </details>
-
-    <!-- ===================== -->
-  <!-- THURSDAY 4 JUNE 2026 -->
-  <!-- ===================== -->
-  <details class="calendar-day">
-    <summary>Thursday 4 June 2026 — Tanami Track → Halls Creek</summary>
-
-    <h4>🎥 Filming Schedule</h4>
-    <ul>
-      <li>
-        <strong>10:15am – 10:45am</strong> — The Lookout
-        <br>
-      </li>
-      <li>
-        <strong>1:00pm – 2:30pm</strong> — Wolfe Creek Meteorite Crater
-        <br>
-      </li>
-    </ul>
-
-    <p class="note">
-      <strong>Accommodation filming:</strong> Nil times available ❌
-    </p>
-
-    <h4>🏨 Accommodation</h4>
-    <p class="note">
-      <strong>Accommodation Needed</strong><br>
-      We are currently seeking accommodation for this night in Halls Creek.<br><br>
-    </p>
-  </details>
-
-    <!-- ===================== -->
-  <!-- FRIDAY 5 JUNE 2026 -->
-  <!-- ===================== -->
-  <details class="calendar-day">
-    <summary>Friday 5 June 2026 — Halls Creek → Kalkarindji</summary>
-
-    <h4>🎥 Filming Schedule</h4>
-    <ul>
-      <li>
-        <strong>7:10am – 7:30am</strong> — Halls Creek Lookout
-        <br>
-      </li>
-      <li>
-        <strong>7:45am – 8:15am</strong> — China Wall
-        <br>
-      </li>
-      <li>
-        <strong>8:30am – 9:00am</strong> — Caroline Pool
-        <br>
-      </li>
-      <li>
-        <strong>9:15am – 9:45am</strong> — Old Halls Creek
-        <br>
-      </li>
-      <li>
-        <strong>10:25am – 11:00am</strong> — Palm Springs
-        <br>
-      </li>
-      <li>
-        <strong>1:45pm – 2:00pm</strong> — NT / WA Border
-        <br>
-      </li>
-      <li>
-        <strong>3:30pm – 4:15pm</strong> — Inverway Riveren Station
-        <span class="tag tag-locked">Subject to permission</span>
-        <br>
-      </li>
-    </ul>
-
-    <p class="note">
-      <strong>Accommodation filming:</strong> Nil times available ❌
-    </p>
-
-    <h4>🏨 Accommodation</h4>
-    <p class="note">
-      <strong>Accommodation Needed</strong><br>
-      We are currently seeking accommodation for this night in Kalkarindji.
-    </p>
-  </details>
-
-  <!-- SATURDAY 6 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Saturday 6 June 2026 — Kalkarindji → Daly Waters</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <ul>
-    <li><strong>8:30am – 9:30am</strong> — Karungjami Art and Culture Centre
-      <span class="tag tag-locked">Subject to permission</span>
-    </li>
-    <li><strong>1:00pm – 2:00pm</strong> — Top Springs Hotel (Attraction Filming)</li>
-  </ul>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> 1:00pm – 2:00pm (Top Springs Hotel)
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-<strong>1:00pm – 2:00pm</strong> — Accommodation filming (Top Springs)
-<span class="tag tag-available">Appointment available</span>
-  
-  <h4>🏨 Accommodation</h4>
-    <strong>Daly Waters Pub</strong><br>
-    Stay-for-Free Exchange available
-  </p>
-</details>
-
-<!-- SUNDAY 7 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Sunday 7 June 2026 — Daly Waters → Borroloola</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <ul>
-    <li><strong>8:30am – 9:15am</strong> — Daly Waters Pub (Accommodation Filming)</li>
-    <li><strong>9:15am – 10:00am</strong> — Daly Waters Pub (Attraction Filming)</li>
-    <li><strong>10:00am – 10:45am</strong> — Tim’s Junkyard</li>
-    <li><strong>10:45am – 11:15am</strong> — Stuart Tree</li>
-    <li><strong>11:15am – 12:15pm</strong> — Daly Waters Aviation Complex & Flying Fox</li>
-    <li><strong>12:15pm – 12:45pm</strong> — Daly Waters Telegraph Station</li>
-  </ul>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> 8:30am – 9:30am (Daly Waters Pub)
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Savannah Way Motel — Borroloola</strong><br>
-    Stay-for-Free Exchange available
-  </p>
-</details>
-
-<!-- MONDAY 8 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Monday 8 June 2026 — Borroloola</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <p class="note">
-    <strong>Public Holiday</strong> — No filming scheduled ❌
-  </p>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> Nil times available ❌
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Savannah Way Motel</strong><br>
-    Stay-for-Free Exchange available
-  </p>
-</details>
-
-<!-- TUESDAY 9 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Tuesday 9 June 2026 — Borroloola</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <p class="note">
-    <strong>RDO</strong> — No filming scheduled ❌
-  </p>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> Nil times available ❌
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Savannah Way Motel</strong><br>
-    Stay-for-Free Exchange available
-  </p>
-</details>
-
-<!-- WEDNESDAY 10 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Wednesday 10 June 2026 — Borroloola (King Ash Bay)</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <ul>
-    <li><strong>8:30am – 9:30am</strong> — Borroloola Accommodation Filming</li>
-    <li><strong>10:30am – 12:30pm</strong> — King Ash Bay (Fishing & Region Filming)</li>
-    <li><strong>2:30pm – 4:30pm</strong> — Old Borroloola Police Station Museum</li>
-  </ul>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong><br>
-    8:30am – 9:30am or 4:30pm – 5:30pm (Borroloola)<br>
-    10:30am – 1:00pm (King Ash Bay)
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Savannah Way Motel</strong><br>
-    Stay-for-Free Exchange available
-  </p>
-</details>
-
-<!-- THURSDAY 11 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Thursday 11 June 2026 — Borroloola (Limmen National Park)</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <ul>
-    <li><strong>10:30am – 11:30am</strong> — Southern Lost City</li>
-    <li><strong>12:30pm – 1:15pm</strong> — Butterfly Falls</li>
-    <li><strong>1:45pm – 2:45pm</strong> — Western Lost City
-      <span class="tag tag-locked">Gate code required</span>
-    </li>
-  </ul>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> Nil times available ❌
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Savannah Way Motel</strong><br>
-    Stay-for-Free Exchange available
-  </p>
-</details>
-
-<!-- FRIDAY 12 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Friday 12 June 2026 — Borroloola → Barkly Homestead</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <ul>
-    <li><strong>8:15am – 11:15am</strong> — Caranbirini Conservation Reserve (Waterhole & Loop Walk)</li>
-    <li><strong>12:45pm – 1:45pm</strong> — Heartbreak Hotel</li>
-  </ul>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> Nil times available ❌
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Barkly Homestead Wayside Inn</strong><br>
-    Stay-for-Free Exchange Package accepted
-  </p>
-</details>
-
-<!-- SATURDAY 13 JUNE 2026 -->
-<!-- ===================== -->
-<details class="calendar-day">
-  <summary>Saturday 13 June 2026 — Barkly Homestead → Tennant Creek</summary>
-
-  <h4>🎥 Filming Schedule</h4>
-  <ul>
-    <li><strong>8:30am – 9:30am</strong> — Barkly Homestead Wayside Inn (Accommodation Filming)</li>
-    <li><strong>9:30am – 10:25am</strong> — Barkly Homestead Surroundings & Big Goannas</li>
-    <li><strong>11:00am – 11:15am</strong> — Frewena</li>
-    <li><strong>1:15pm – 2:00pm</strong> — Warumungu</li>
-    <li><strong>2:15pm – 3:00pm</strong> — The Pebbles</li>
-    <li><strong>3:10pm – 3:40pm</strong> — Tennant Creek Telegraph Station</li>
-    <li><strong>3:45pm – 4:15pm</strong> — Seven Mile</li>
-  </ul>
-
-  <p class="note">
-    <strong>Accommodation filming:</strong> 8:30am – 9:30am (Barkly Homestead)
-  </p>
-
-  <h4>🏨 Accommodation</h4>
-  <p class="note">
-    <strong>Tennant Creek — Accommodation TBC</strong><br>
-      <strong>Accommodation Needed</strong><br>
-      We are currently seeking accommodation for this night in Tennant Creek.
-    </p>
-    Stay-for-Free Exchange Package available
-  </p>
-</details>
+  <div id="day-details"></div>
 
 </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="/index.html">Home</a> |
-      <a href="/about.html">About Us</a> |
-      <a href="/towns/index.html">Towns</a> |
-      <a href="/partner.html">Partner With Us</a> |
-      <a href="/sponsorship.html">Sponsorship</a> |
-      <a href="/filming-map.html">Filming Map</a> |
-      <a href="/press.html">Press</a> |
-      <a href="/contact.html">Contact</a> |
-      <a href="/legal.html">Legal</a>
-    </div>
+  <script>
+const calendarData = {
+  "2026-05-31": {
+    route: "Alice Springs",
+    html: `
+      <details open class="calendar-day">
+        <summary>Sunday 31 May 2026 — Alice Springs</summary>
 
-    <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-      © 2025 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
-  </footer>
+        <h4>🎥 Filming Schedule</h4>
+        <p class="note"><strong>Accommodation filming:</strong> Nil times available ❌</p>
+
+        <h4>🏨 Accommodation</h4>
+        <p class="note">
+          <strong>Alice Springs — TBC</strong><br>
+          We are currently seeking accommodation for our crew for this night.<br>
+          <a href="/accommodation-partners.html">Stay-for-Free Exchange Package available</a>
+        </p>
+      </details>
+    `
+  }
+};
+
+let currentMonth = 5; // June (0-based)
+let currentYear = 2026;
+let firstClick = true;
+
+function renderCalendar() {
+  const grid = document.getElementById("calendarGrid");
+  grid.innerHTML = "";
+
+  const start = new Date(currentYear, currentMonth, 1);
+  const firstSunday = new Date(start);
+  firstSunday.setDate(start.getDate() - start.getDay());
+
+  const headers = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  headers.forEach(h => {
+    const div = document.createElement("div");
+    div.className = "day-header";
+    div.textContent = h;
+    grid.appendChild(div);
+  });
+
+  for (let i = 0; i < 42; i++) {
+    const date = new Date(firstSunday);
+    date.setDate(firstSunday.getDate() + i);
+    const key = date.toISOString().split("T")[0];
+
+    const cell = document.createElement("div");
+    cell.className = "calendar-cell";
+    if (date.getMonth() !== currentMonth) cell.classList.add("muted");
+
+    cell.innerHTML = `
+      <div class="date-number">${date.getDate()}</div>
+      ${calendarData[key] ? `<div class="route">${calendarData[key].route}</div>` : ""}
+    `;
+
+    if (calendarData[key]) {
+      cell.addEventListener("click", () => {
+        document.getElementById("day-details").innerHTML = calendarData[key].html;
+        if (firstClick) {
+          document.getElementById("day-details").scrollIntoView({ behavior: "smooth" });
+          firstClick = false;
+        }
+      });
+    }
+
+    grid.appendChild(cell);
+  }
+}
+
+renderCalendar();
+</script>
+
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
+
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+    © 2025 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
 
 </body>
 </html>
