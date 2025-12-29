@@ -278,6 +278,19 @@
   color: #E87722;
 }
 
+    /* Restore footer layout to match Home page */
+footer {
+  text-align: center;
+}
+
+footer .footer-links {
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
 </style>
 </head>
 
@@ -345,6 +358,57 @@
   <div id="day-details"></div>
 
 </section>
+
+  <script>
+function renderCalendar() {
+  const grid = document.getElementById("calendarGrid");
+  grid.innerHTML = "";
+
+  const headers = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  headers.forEach(h => {
+    const d = document.createElement("div");
+    d.className = "day-header";
+    d.textContent = h;
+    grid.appendChild(d);
+  });
+
+  const year = 2026;
+  const month = 5; // June (0-based)
+
+  const firstOfMonth = new Date(year, month, 1);
+  const startDate = new Date(firstOfMonth);
+  startDate.setDate(firstOfMonth.getDate() - firstOfMonth.getDay());
+
+  for (let i = 0; i < 42; i++) {
+    const date = new Date(startDate);
+    date.setDate(startDate.getDate() + i);
+
+    const key = date.toISOString().split("T")[0];
+
+    const cell = document.createElement("div");
+    cell.className = "calendar-cell";
+
+    if (date.getMonth() !== month) {
+      cell.classList.add("muted");
+    }
+
+    cell.innerHTML = `
+      <div class="date-number">${date.getDate()}</div>
+      ${calendarData[key] ? `<div class="route">${calendarData[key].route}</div>` : ""}
+    `;
+
+    if (calendarData[key]) {
+      cell.addEventListener("click", () => {
+        openCalendarModal(key);
+      });
+    }
+
+    grid.appendChild(cell);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", renderCalendar);
+</script>
 
   <script>
 const calendarData = {
