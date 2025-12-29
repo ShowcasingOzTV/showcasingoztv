@@ -246,6 +246,38 @@
       line-height: 1.45;
     }
 
+    /* =====================
+   Calendar Modal
+   ===================== */
+.calendar-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.calendar-modal-content {
+  background: #fff;
+  max-width: 700px;
+  margin: 8% auto;
+  padding: 24px;
+  border-radius: 14px;
+  position: relative;
+}
+
+.calendar-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #E87722;
+}
+
 </style>
 </head>
 
@@ -319,72 +351,32 @@ const calendarData = {
   "2026-05-31": {
     route: "Alice Springs",
     html: `
-      <details open class="calendar-day">
-        <summary>Sunday 31 May 2026 — Alice Springs</summary>
+      <h3>Sunday 31 May 2026 — Alice Springs</h3>
 
-        <h4>🎥 Filming Schedule</h4>
-        <p class="note"><strong>Accommodation filming:</strong> Nil times available ❌</p>
+      <h4>🎥 Filming Schedule</h4>
+      <p><strong>Accommodation filming:</strong> Nil times available ❌</p>
 
-        <h4>🏨 Accommodation</h4>
-        <p class="note">
-          <strong>Alice Springs — TBC</strong><br>
-          We are currently seeking accommodation for our crew for this night.<br>
-          <a href="/accommodation-partners.html">Stay-for-Free Exchange Package available</a>
-        </p>
-      </details>
+      <h4>🏨 Accommodation</h4>
+      <p>
+        <strong>Alice Springs — TBC</strong><br>
+        We are currently seeking accommodation for our crew for this night.<br>
+        <a href="/accommodation-partners.html">Stay-for-Free Exchange Package available</a>
+      </p>
     `
   }
 };
 
-let currentMonth = 5; // June (0-based)
-let currentYear = 2026;
-let firstClick = true;
+const modal = document.getElementById("calendarModal");
+const modalBody = document.getElementById("calendarModalBody");
+const closeBtn = document.querySelector(".calendar-modal-close");
 
-function renderCalendar() {
-  const grid = document.getElementById("calendarGrid");
-  grid.innerHTML = "";
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
 
-  const start = new Date(currentYear, currentMonth, 1);
-  const firstSunday = new Date(start);
-  firstSunday.setDate(start.getDate() - start.getDay());
-
-  const headers = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-  headers.forEach(h => {
-    const div = document.createElement("div");
-    div.className = "day-header";
-    div.textContent = h;
-    grid.appendChild(div);
-  });
-
-  for (let i = 0; i < 42; i++) {
-    const date = new Date(firstSunday);
-    date.setDate(firstSunday.getDate() + i);
-    const key = date.toISOString().split("T")[0];
-
-    const cell = document.createElement("div");
-    cell.className = "calendar-cell";
-    if (date.getMonth() !== currentMonth) cell.classList.add("muted");
-
-    cell.innerHTML = `
-      <div class="date-number">${date.getDate()}</div>
-      ${calendarData[key] ? `<div class="route">${calendarData[key].route}</div>` : ""}
-    `;
-
-    if (calendarData[key]) {
-      cell.addEventListener("click", () => {
-        document.getElementById("day-details").innerHTML = calendarData[key].html;
-        if (firstClick) {
-          document.getElementById("day-details").scrollIntoView({ behavior: "smooth" });
-          firstClick = false;
-        }
-      });
-    }
-
-    grid.appendChild(cell);
-  }
+function openCalendarModal(dateKey) {
+  modalBody.innerHTML = calendarData[dateKey].html;
+  modal.style.display = "block";
 }
-
-renderCalendar();
 </script>
 
 <footer>
@@ -406,6 +398,14 @@ renderCalendar();
     © 2025 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
+
+  <!-- Calendar Day Modal -->
+<div id="calendarModal" class="calendar-modal">
+  <div class="calendar-modal-content">
+    <span class="calendar-modal-close">&times;</span>
+    <div id="calendarModalBody"></div>
+  </div>
+</div>
 
 </body>
 </html>
