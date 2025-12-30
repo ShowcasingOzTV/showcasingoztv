@@ -115,24 +115,20 @@
       color: #00804f;
     }
 
-    .tag-available {
-      background: rgba(14,53,87,0.12);
-      color: #0E3557;
-    }
-
     .tag-landmark {
       background: rgba(232,119,34,0.15);
       color: #E87722;
     }
     
-    .tag-available {
-  background: rgba(14, 53, 87, 0.15);
+.tag-available {
+  background: #e6f0fa;
   color: #0E3557;
+  border: 1px solid #0E3557;
   text-decoration: none;
 }
 
 .tag-available:hover {
-  background: rgba(14, 53, 87, 0.25);
+  background: #d4e6f7;
 }
 
     .tag-pending {
@@ -428,11 +424,51 @@ footer .social-icons a {
 
 </section>
 
-    <!-- Calendar Day Modal -->
+<!-- Calendar Day Modal -->
 <div id="calendarModal" class="calendar-modal">
   <div class="calendar-modal-content">
     <span class="calendar-modal-close">&times;</span>
     <div id="calendarModalBody"></div>
+  </div>
+</div>
+
+<!-- Accommodation Booking Modal -->
+<div id="bookingModal" class="calendar-modal">
+  <div class="calendar-modal-content">
+    <span class="calendar-modal-close" onclick="closeBookingModal()">&times;</span>
+
+    <h3 id="bookingModalTitle">Accommodation Filming Booking</h3>
+
+    <form id="bookingForm">
+      <label>
+        Accommodation Name *
+        <input type="text" id="accommodationName" required>
+      </label>
+
+      <label>
+        Contact Name *
+        <input type="text" id="contactName" required>
+      </label>
+
+      <label>
+        Email Address *
+        <input type="email" id="contactEmail" required>
+      </label>
+
+      <label>
+        Phone Number *
+        <input type="tel" id="contactPhone" required>
+      </label>
+
+      <label>
+        Message *
+        <textarea id="bookingMessage" rows="4" required></textarea>
+      </label>
+
+      <button type="submit" class="btn-primary">
+        Send Booking Request
+      </button>
+    </form>
   </div>
 </div>
   
@@ -518,7 +554,9 @@ const calendarData = {
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <a href="/contact.html?subject=Accommodation Filming – Alice Springs (1 June 2026)" class="tag tag-available">
+<a href="javascript:void(0)"
+   class="tag tag-available"
+   onclick="openBookingModal('Monday 1 June 2026 — Alice Springs')">
   Appointment Available
 </a>
       </li>
@@ -535,7 +573,9 @@ const calendarData = {
 
       <li>
         <strong>3:30pm – 4:30pm</strong> — Accommodation Filming (Alice Springs)
-        <a href="/contact.html?subject=Accommodation Filming – Alice Springs (1 June 2026)" class="tag tag-available">
+<a href="javascript:void(0)"
+   class="tag tag-available"
+   onclick="openBookingModal('Monday 1 June 2026 — Alice Springs')">
   Appointment Available
 </a>
       </li>
@@ -567,6 +607,37 @@ function openCalendarModal(dateKey) {
   modalBody.innerHTML = calendarData[dateKey].html;
   modal.style.display = "block";
 }
+    function openBookingModal(dateText) {
+  document.getElementById("bookingModalTitle").textContent =
+    "Accommodation Filming Booking – " + dateText;
+  document.getElementById("bookingModal").style.display = "block";
+}
+
+function closeBookingModal() {
+  document.getElementById("bookingModal").style.display = "none";
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const subject = encodeURIComponent(
+    document.getElementById("bookingModalTitle").textContent
+  );
+
+  const body = encodeURIComponent(
+    `Accommodation Name: ${document.getElementById("accommodationName").value}\n` +
+    `Contact Name: ${document.getElementById("contactName").value}\n` +
+    `Email: ${document.getElementById("contactEmail").value}\n` +
+    `Phone: ${document.getElementById("contactPhone").value}\n\n` +
+    `Message:\n${document.getElementById("bookingMessage").value}`
+  );
+
+  window.location.href =
+    `mailto:showcasingoztv@gmail.com?subject=${subject}&body=${body}`;
+
+  closeBookingModal();
+});
+
 </script>
 
 <footer>
