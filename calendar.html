@@ -301,6 +301,64 @@
   text-align: left;
 }
 
+    #bookingModal .calendar-modal-content {
+  max-width: 520px;
+}
+
+    /* =====================
+   Booking Form Styling
+   ===================== */
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #0E3557;
+}
+
+.booking-form input,
+.booking-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #0E3557;
+  box-shadow: 0 0 0 2px rgba(14,53,87,0.15);
+}
+
+.booking-submit {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0E3557;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.booking-submit:hover {
+  background: #0b2d4d;
+}
+
     /* Restore footer layout to match Home page */
 footer {
   text-align: center;
@@ -439,36 +497,38 @@ footer .social-icons a {
 
     <h3 id="bookingModalTitle">Accommodation Filming Booking</h3>
 
-    <form id="bookingForm">
-      <label>
-        Accommodation Name *
-        <input type="text" id="accommodationName" required>
-      </label>
+    <form id="bookingForm" class="booking-form">
 
-      <label>
-        Contact Name *
-        <input type="text" id="contactName" required>
-      </label>
+  <div class="form-group">
+    <label for="accommodationName">Accommodation Name *</label>
+    <input type="text" id="accommodationName" required>
+  </div>
 
-      <label>
-        Email Address *
-        <input type="email" id="contactEmail" required>
-      </label>
+  <div class="form-group">
+    <label for="contactName">Contact Name *</label>
+    <input type="text" id="contactName" required>
+  </div>
 
-      <label>
-        Phone Number *
-        <input type="tel" id="contactPhone" required>
-      </label>
+  <div class="form-group">
+    <label for="contactEmail">Email Address *</label>
+    <input type="email" id="contactEmail" required>
+  </div>
 
-      <label>
-        Message *
-        <textarea id="bookingMessage" rows="4" required></textarea>
-      </label>
+  <div class="form-group">
+    <label for="contactPhone">Phone Number *</label>
+    <input type="tel" id="contactPhone" required>
+  </div>
 
-      <button type="submit" class="btn-primary">
-        Send Booking Request
-      </button>
-    </form>
+  <div class="form-group">
+    <label for="bookingMessage">Message *</label>
+    <textarea id="bookingMessage" rows="4" required></textarea>
+  </div>
+
+  <button type="submit" class="booking-submit">
+    Send Booking Request
+  </button>
+
+</form>
   </div>
 </div>
   
