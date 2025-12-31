@@ -882,7 +882,7 @@ const calendarData = {
       <ul>
         <li>
           <strong>8:30am – 9:15am</strong> — Accommodation Filming (Daly Waters)
-          <span class="tag tag-available">Appointment Available Available</span>
+          <span class="tag tag-available">Appointment Available</span>
         </li>
 
         <li>
@@ -939,6 +939,79 @@ const calendarData = {
       </p>
     `
   }
+
+  "2026-06-09": {
+  route: "Borroloola",
+  html: `
+    <h3>Tuesday 9 June 2026 — Borroloola</h3>
+
+    <p class="note">
+      <strong>RDO</strong> | No Filming
+    </p>
+
+    <p class="note">
+      <strong>Accommodation filming:</strong> Nil times available ❌
+    </p>
+
+    <h4>🏨 Accommodation</h4>
+    <p>
+      <strong>Savannah Way Motel</strong><br>
+      <span class="tag tag-confirmed">Confirmed</span><br>
+      Stay-for-Free Exchange available
+    </p>
+  `
+},
+
+"2026-06-10": {
+  route: "Borroloola → King Ash Bay",
+  html: `
+    <h3>Wednesday 10 June 2026 — Borroloola (King Ash Bay)</h3>
+
+    <h4>🎥 Filming Schedule</h4>
+
+    <ul>
+      <li>
+        <strong>8:30am – 9:30am</strong> — Accommodation Filming (Borroloola)
+        <a href="javascript:void(0)"
+           class="tag tag-available"
+           onclick="openBookingModal('Wednesday 10 June 2026 — Borroloola')">
+          Appointment Available
+        </a>
+      </li>
+
+      <li>
+        <strong>10:30am – 12:30pm</strong> — King Ash Bay
+        <span class="tag tag-landmark">Landmark / Point of Interest</span>
+        <a href="javascript:void(0)"
+           class="tag tag-available"
+           onclick="openBookingModal('Wednesday 10 June 2026 — King Ash Bay')">
+          Appointment Available
+        </a>
+      </li>
+
+      <li>
+        <strong>2:30pm – 4:30pm</strong> — Old Borroloola Police Station Museum
+        <span class="tag tag-pending">To Be Confirmed</span>
+      </li>
+
+      <li>
+        <strong>4:30pm – 5:30pm</strong> — Accommodation Filming (Borroloola)
+        <a href="javascript:void(0)"
+           class="tag tag-available"
+           onclick="openBookingModal('Wednesday 10 June 2026 — Borroloola')">
+          Appointment Available
+        </a>
+      </li>
+    </ul>
+
+    <h4>🏨 Accommodation</h4>
+    <p>
+      <strong>Savannah Way Motel</strong><br>
+      <span class="tag tag-confirmed">Confirmed</span><br>
+      Stay-for-Free Exchange available
+    </p>
+  `
+}
 };
 
 const modal = document.getElementById("calendarModal");
