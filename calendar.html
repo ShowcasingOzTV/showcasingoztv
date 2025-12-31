@@ -872,80 +872,74 @@ const calendarData = {
   `
 },
 
-  <!-- ===================== -->
-<!-- Sunday 7 June 2026 -->
-<!-- ===================== -->
-<div class="calendar-day">
-  <h3>🗓️ Sunday 7 June 2026 — Daly Waters → Borroloola</h3>
+,
+"2026-06-07": {
+  route: "Daly Waters → Borroloola",
+  html: `
+    <h3>Sunday 7 June 2026 — Daly Waters → Borroloola</h3>
 
-  <div class="filming-block">
-    <h4>🎥 Morning — Accommodation Filming (Daly Waters)</h4>
-    <p>8:30am – 9:15am</p>
-    <p class="note">Accommodation filming spot available</p>
-  </div>
+    <h4>🎥 Filming Schedule</h4>
 
-  <div class="filming-block">
-    <h4>🎥 Morning — Daly Waters Pub (Attraction Filming)</h4>
-    <p>9:15am – 10:00am</p>
-    <p class="note">To be confirmed</p>
-  </div>
+    <ul>
+      <li>
+        <strong>8:30am – 9:15am</strong> — Accommodation Filming (Daly Waters)
+        <span class="tag tag-available">Spot Available</span>
+      </li>
 
-  <div class="filming-block">
-    <h4>🎥 Morning — Tim’s Junkyard</h4>
-    <p>10:00am – 10:45am</p>
-    <p class="note">To be confirmed</p>
-  </div>
+      <li>
+        <strong>9:15am – 10:00am</strong> — Daly Waters Pub
+        <span class="tag tag-pending">To Be Confirmed</span>
+      </li>
 
-  <div class="filming-block">
-    <h4>🎥 Morning — Stuart Tree (Landmark / POI)</h4>
-    <p>10:45am – 11:15am</p>
-  </div>
+      <li>
+        <strong>10:00am – 10:45am</strong> — Tim’s Junkyard
+        <span class="tag tag-pending">To Be Confirmed</span>
+      </li>
 
-  <div class="filming-block">
-    <h4>🎥 Morning — Daly Waters Aviation Complex & Flying Fox</h4>
-    <p>11:15am – 12:15pm</p>
-    <p class="note">To be confirmed</p>
-  </div>
+      <li>
+        <strong>10:45am – 11:15am</strong> — Stuart Tree
+        <span class="tag tag-landmark">Landmark / Point of Interest</span>
+      </li>
 
-  <div class="filming-block">
-    <h4>🎥 Afternoon — Daly Waters Telegraph Station</h4>
-    <p>12:15pm – 12:45pm</p>
-    <p class="note">To be confirmed</p>
-  </div>
+      <li>
+        <strong>11:15am – 12:15pm</strong> — Daly Waters Aviation Complex & Flying Fox
+        <span class="tag tag-pending">To Be Confirmed</span>
+      </li>
 
-  <div class="accommodation-block">
+      <li>
+        <strong>12:15pm – 12:45pm</strong> — Daly Waters Telegraph Station
+        <span class="tag tag-pending">To Be Confirmed</span>
+      </li>
+    </ul>
+
     <h4>🏨 Accommodation</h4>
-    <p><strong>Savannah Way Motel</strong> (Confirmed)</p>
-    <p class="note">Stay-for-Free Exchange available</p>
-  </div>
-</div>
+    <p>
+      <strong>Savannah Way Motel</strong><br>
+      Stay-for-Free Exchange available
+    </p>
+  `
+},
 
-  },
+"2026-06-08": {
+  route: "Borroloola",
+  html: `
+    <h3>Monday 8 June 2026 — Borroloola</h3>
 
-<!-- ===================== -->
-<!-- Monday 8 June 2026 -->
-<!-- ===================== -->
-<div class="calendar-day">
-  <h3>🗓️ Monday 8 June 2026 — Borroloola</h3>
+    <p class="note">
+      <strong>Public Holiday</strong> | No Filming
+    </p>
 
-  <div class="notice-block">
-    <p><strong>Public Holiday</strong></p>
-    <p>No Filming</p>
-  </div>
+    <p class="note">
+      <strong>Accommodation filming:</strong> Nil times available ❌
+    </p>
 
-  <div class="filming-block unavailable">
-    <h4>🎥 Accommodation Filming</h4>
-    <p>Nil times available ❌</p>
-  </div>
-
-  <div class="accommodation-block">
     <h4>🏨 Accommodation</h4>
-    <p><strong>Savannah Way Motel</strong></p>
-    <p class="note">Stay-for-Free Exchange available</p>
-  </div>
-</div>
-
-    },
+    <p>
+      <strong>Savannah Way Motel</strong><br>
+      Stay-for-Free Exchange available
+    </p>
+  `
+}
 };
 
 const modal = document.getElementById("calendarModal");
