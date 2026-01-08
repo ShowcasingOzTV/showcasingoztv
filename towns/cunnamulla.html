@@ -3,23 +3,22 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Cunnamulla (QLD) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Cunnamulla (QLD) — an authentic outback Queensland town known for red desert landscapes, friendly locals, wildlife and laid-back charm, featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Cunnamulla, Outback Queensland, Cunnamulla Fella, Warrego River, ShowcasingOz TV, regional travel" />
+  <meta name="description" content="Discover Cunnamulla, QLD — a classic outback town on the banks of the Warrego River, known for its pastoral heritage, artesian waters, and welcoming Channel Country charm." />
+  <meta name="keywords" content="Cunnamulla QLD, Cunnamulla outback, Warrego River town, Channel Country Queensland, Cunnamulla attractions, Cunnamulla accommodation, western Queensland towns, outback travel Queensland, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -29,7 +28,7 @@
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -39,6 +38,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -47,68 +47,61 @@
       align-items: center;
       padding: 0 20px;
     }
+
     header img { height: 65px; }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { color: #E87722; }
+
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    /* Hero Banner */
+    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/cunnamulla.jpg') center center / cover no-repeat;
+      background-color: #ddd;
     }
 
-    /* Content */
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
     p { line-height:1.6; color:#333; }
 
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
-    }
-
-    /* Video Placeholder */
-    .video-placeholder {
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
       width:100%;
       height:350px;
       background:#e1e1e1;
@@ -117,19 +110,215 @@
       justify-content:center;
       align-items:center;
       color:#666;
-      font-size:1.3rem;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
-    }
-
-    footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
       text-align:center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – CUNNAMULLA ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
 footer .footer-links a,
 footer p a {
   color: #E87722 !important;
@@ -137,6 +326,10 @@ footer p a {
 
 footer .footer-links a:hover,
 footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
   color: #ffffff !important;
 }
   </style>
@@ -147,7 +340,7 @@ footer p a:hover {
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
     <nav id="menu">
       <a href="../index.html">Home</a>
@@ -156,52 +349,230 @@ footer p a:hover {
       <a href="../partner.html">Partner With Us</a>
       <a href="../sponsorship.html">Sponsorship</a>
       <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
       <a href="../press.html">Press</a>
       <a href="../contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<script>
+<script defer>
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+  <img src="../images/towns/cunnamulla.jpg"
+       alt="Cunnamulla Queensland"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
   <h1>Cunnamulla (QLD)</h1>
 
-  <p>
-    Cunnamulla is a welcoming outback Queensland town located on the Warrego River, 
-    famous for its friendly locals, red desert landscapes, and laid-back character. 
-    The town is home to the iconic Cunnamulla Fella, representing the true spirit of 
-    the outback and the region’s rich pastoral heritage.
-    <br><br>
-    With unique wildlife experiences, artesian springs, river scenery, Indigenous culture, 
-    and wide-open spaces, Cunnamulla offers travellers a peaceful and genuine outback escape.  
-    ShowcasingOz TV will be capturing the stories, attractions, and natural beauty that make 
-    this town an unforgettable stop on our 2026 journey.
-  </p>
+<p>
+Cunnamulla is a well-known outback town located in south-west Queensland on the banks of the Warrego River, serving as an important regional centre for the surrounding pastoral districts of the Channel Country. The town has long been a key service hub for grazing properties and travellers navigating the vast distances of western Queensland.
+</p>
 
+<p>
+Established in the late 19th century, Cunnamulla grew alongside the expansion of pastoralism, with sheep and cattle grazing forming the foundation of its economy and identity. The town is historically associated with Australia’s wool industry and stock routes, and its development reflects the resilience required to live and work in an often harsh and unpredictable environment.
+</p>
+
+<p>
+Cunnamulla is also closely linked to Australia’s artesian water story, with the Great Artesian Basin playing a vital role in sustaining the town and surrounding properties. This connection is explored through local attractions that highlight the importance of groundwater to outback communities and the engineering achievements that made inland settlement possible.
+</p>
+
+<p>
+Today, Cunnamulla offers a range of visitor facilities and attractions that celebrate both its history and contemporary outback life. Heritage buildings, museums, river walks, and cultural sites provide insight into the town’s past, while its friendly pubs, accommodation options, and community spaces reflect the welcoming nature of the local population.
+</p>
+
+<p>
+Set against wide floodplains, open skies, and classic red-earth landscapes, Cunnamulla embodies the enduring spirit of western Queensland. It is a town shaped by the land, the river, and the people who have adapted to life in one of Australia’s most distinctive inland regions.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Cunnamulla as part of our national filming journey — highlighting its pastoral heritage, artesian water history, and the strong outback community spirit that continues to make the town a welcoming and authentic destination.
+</p>
+
+  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">
-    Documentary Coming Soon
-  </div>
+  <div class="video-placeholder">Documentary Coming Soon</div>
 
+  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p>We’re excited to highlight Cunnamulla’s wildlife, country hospitality, and desert scenery during our filming visit in August 2026.</p>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon">
-      <p>Attractions Coming Soon</p>
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
     </div>
   </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions in and around Cunnamulla</h3>
+  <ul class="other-accommodation-list">
+    <li>Cunnamulla All Aboard</li>
+    <li>Cunnamulla Fella Visitor Information Centre</li>
+    <li>Cunnamulla Hot Springs</li>
+    <li>Eulo Lizard Racing Track</li>
+    <li>Eulo Queen Opal Centre</li>
+    <li>Artesian Mud Baths Eulo</li>
+    <li>Artesian Mud Springs</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Cunnamulla’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Wyandra</h3>
+      <p>
+  Wyandra is a small outback settlement north of Cunnamulla, reflecting classic Channel Country life and serving as a quiet reminder of the region’s pastoral and railway history
+</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Cunnamulla Town Sign</h3>
+      <p>
+The Cunnamulla town sign is a popular photo stop for visitors, marking arrival in this well-known outback centre on the Warrego River.
+</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>The Robbers Tree</h3>
+      <p>
+The Robbers Tree is a historic site associated with local folklore and early settlement stories, offering insight into the colourful characters and challenges of frontier life
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Yumba Reserve</h3>
+      <p>
+Yumba Reserve is a riverside parkland area along the Warrego River, providing shaded spaces, walking paths, and a peaceful setting for locals and visitors alike.
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Allan Tannock Weir</h3>
+      <p>
+Allan Tannock Weir plays an important role in managing water flow along the Warrego River and is a focal point for recreation and local river life.
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Rotunda Bob Poncho Park</h3>
+      <p>
+Rotunda Bob Poncho Park is a community park and gathering space that reflects Cunnamulla’s relaxed outback lifestyle and strong local spirit.
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Cunnamulla Fella</h3>
+      <p>
+The Cunnamulla Fella is a well-known public artwork symbolising the resilience, humour, and character of outback people, making it a popular and recognisable local landmark.
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Cunnamulla Water Tower</h3>
+      <p>
+The Cunnamulla Water Tower stands as a prominent feature of the town skyline, representing the importance of water infrastructure in sustaining life in Australia’s arid interior.
+</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation in Cunnamulla</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation in Cunnamulla</h3>
+  <ul class="other-accommodation-list">
+    <li>Club Boutique Hotel</li>
+    <li>Warrego Hotel Motel Cunnamulla</li>
+    <li>Cunnamulla Motel</li>
+    <li>Cunnamulla Cabins & Caravan Park</li>
+    <li>Country Way Motor-Inn</li>
+    <li>Warrego Riverside Tourist Park</li>
+    <li>Hotel Cunnamulla</li>
+    <li>Corrella Motor Inn</li>
+    <li>Billabong Hotel Motel</li>
+    <li>Oxford Hotel Motel</li>
+    <li>Central on Stockyard</li>
+    <li>Cunnamulla Tourist Park</li>
+    <li>Eulo Queen Hotel & Caravan Park</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
 
 </section>
 
@@ -214,6 +585,7 @@ footer p a:hover {
     <a href="/partner.html">Partner With Us</a> |
     <a href="/sponsorship.html">Sponsorship</a> |
     <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
     <a href="/press.html">Press</a> |
     <a href="/contact.html">Contact</a> |
     <a href="/legal.html">Legal</a>
@@ -221,8 +593,10 @@ footer p a:hover {
 
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
