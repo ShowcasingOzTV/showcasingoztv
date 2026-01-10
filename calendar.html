@@ -608,49 +608,63 @@ const month = currentMonth;
   }
 }
 
-document.addEventListener("DOMContentLoaded", renderCalendar);
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll(".month-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    currentMonth = parseInt(link.dataset.month, 10);
+  const calendarGrid = document.getElementById("calendarGrid");
+  const monthLabel = document.getElementById("monthLabel");
 
-    document.querySelectorAll(".month-links a")
-      .forEach(a => a.classList.remove("active"));
+  let currentYear = 2026;
+  let currentMonth = 5;
 
-    link.classList.add("active");
-    renderCalendar();
+  function renderCalendar() {
+    calendarGrid.innerHTML = "";
+
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+
+    const startDay = firstDay.getDay();
+    const totalDays = lastDay.getDate();
+
+    monthLabel.textContent =
+      firstDay.toLocaleString("default", { month: "long" }) + " " + currentYear;
+
+    for (let i = 0; i < startDay; i++) {
+      calendarGrid.appendChild(document.createElement("div"));
+    }
+
+    for (let day = 1; day <= totalDays; day++) {
+      const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+      const cell = document.createElement("div");
+      cell.className = "calendar-day";
+      cell.textContent = day;
+
+      if (calendarData[dateStr]) {
+        cell.classList.add("has-event");
+        cell.addEventListener("click", () =>
+          openCalendarModal(dateStr)
+        );
+      }
+
+      calendarGrid.appendChild(cell);
+    }
+  }
+
+  document.querySelectorAll(".month-links a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      currentMonth = parseInt(link.dataset.month, 10);
+
+      document.querySelectorAll(".month-links a")
+        .forEach(a => a.classList.remove("active"));
+
+      link.classList.add("active");
+      renderCalendar();
+    });
   });
-});
-    document.getElementById("prevMonth").addEventListener("click", () => {
-  currentMonth--;
-  if (currentMonth < 0) {
-    currentMonth = 11;
-    currentYear--;
-  }
-  updateActiveMonth();
+
   renderCalendar();
 });
-
-document.getElementById("nextMonth").addEventListener("click", () => {
-  currentMonth++;
-  if (currentMonth > 11) {
-    currentMonth = 0;
-    currentYear++;
-  }
-  updateActiveMonth();
-  renderCalendar();
-});
-
-function updateActiveMonth() {
-  document.querySelectorAll(".month-links a")
-    .forEach(a => a.classList.remove("active"));
-
-  const active = document.querySelector(
-    `.month-links a[data-month="${currentMonth}"]`
-  );
-
-  if (active) active.classList.add("active");
-}
 </script>
 
   <script>
