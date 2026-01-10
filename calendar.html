@@ -439,17 +439,17 @@ footer .social-icons a {
   <div class="container">
     <a href="/index.html">
       <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo">
-    
+    </a>
     <nav>
-      <a href="/index.html">Home
-      <a href="/about.html">About Us
-      <a href="/towns/index.html">Towns
-      <a href="/partner.html">Partner With Us
-      <a href="/sponsorship.html">Sponsorship
-      <a href="/filming-map.html">Filming Map
-      <a href="/calendar.html">Calendar
-      <a href="/press.html">Press
-      <a href="/contact.html">Contact
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About Us</a>
+      <a href="/towns/index.html">Towns</a>
+      <a href="/partner.html">Partner With Us</a>
+      <a href="/sponsorship.html">Sponsorship</a>
+      <a href="/filming-map.html">Filming Map</a>
+      <a href="/calendar.html">Calendar</a>
+      <a href="/press.html">Press</a>
+      <a href="/contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -463,6 +463,7 @@ footer .social-icons a {
   adjust and finalise our scheduling prior to the commencement of our filming journey, and update the calendar accordingly.</p>
   <p>We encourage accommodation and attraction owners to view our schedule below and book convenient filming appointment times.</p>
   <p>Click a date to view the detailed filming schedule and available collaboration opportunities.</p>
+  </p>
 
   <p><em>Please note: Filming dates and locations are subject to change due to weather, road conditions, operational requirements, partner availability, and other unforeseen circumstances.</em>
 </p>
@@ -489,13 +490,13 @@ footer .social-icons a {
   <div class="calendar-nav">
     <button id="prevMonth">◀</button>
     <div class="month-links">
-      <a data-month="5" class="active">JUN
-      <a data-month="6">JUL
-      <a data-month="7">AUG
-      <a data-month="8">SEP
-      <a data-month="9">OCT
-      <a data-month="10">NOV
-      <a data-month="11">DEC
+      <a data-month="5" class="active">JUN</a>
+      <a data-month="6">JUL</a>
+      <a data-month="7">AUG</a>
+      <a data-month="8">SEP</a>
+      <a data-month="9">OCT</a>
+      <a data-month="10">NOV</a>
+      <a data-month="11">DEC</a>
     </div>
     <button id="nextMonth">▶</button>
   </div>
@@ -517,7 +518,7 @@ footer .social-icons a {
 <!-- Accommodation Booking Modal -->
 <div id="bookingModal" class="calendar-modal">
   <div class="calendar-modal-content">
-    <span class="calendar-modal-close" onclick="closeBookingModal(">&times;</span>
+    <span class="calendar-modal-close" onclick="closeBookingModal()">&times;</span>
 
     <h3 id="bookingModalTitle">Accommodation Filming Booking</h3>
 
@@ -608,6 +609,51 @@ const month = currentMonth;
   }
 }
 
+document.addEventListener("DOMContentLoaded", renderCalendar);
+    document.querySelectorAll(".month-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    currentMonth = parseInt(link.dataset.month, 10);
+
+    document.querySelectorAll(".month-links a")
+      .forEach(a => a.classList.remove("active"));
+
+    link.classList.add("active");
+    renderCalendar();
+  });
+});
+    document.getElementById("prevMonth").addEventListener("click", () => {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  updateActiveMonth();
+  renderCalendar();
+});
+
+document.getElementById("nextMonth").addEventListener("click", () => {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  updateActiveMonth();
+  renderCalendar();
+});
+
+function updateActiveMonth() {
+  document.querySelectorAll(".month-links a")
+    .forEach(a => a.classList.remove("active"));
+
+  const active = document.querySelector(
+    `.month-links a[data-month="${currentMonth}"]`
+  );
+
+  if (active) active.classList.add("active");
+}
+</script>
+
+  <script>
 const calendarData = {
   "2026-05-31": {
   route: "Alice Springs",
@@ -633,16 +679,16 @@ const calendarData = {
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-top: 12px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Sunday 31 May 2026 — Alice Springs'">
+   onclick="openBookingModal('Accommodation Opportunity — Sunday 31 May 2026 — Alice Springs')">
   Offer Accommodation
-
+</a>
   `
 },
   
@@ -656,11 +702,11 @@ const calendarData = {
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   'Monday 1 June 2026 — Alice Springs'">
+   onclick="openBookingModal('Monday 1 June 2026 — Alice Springs')">
   Appointment Available
-
+</a>
       </li>
 
       <li>
@@ -675,11 +721,11 @@ const calendarData = {
 
       <li>
         <strong>3:30pm – 4:30pm</strong> — Accommodation Filming (Alice Springs)
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   'Monday 1 June 2026 — Alice Springs'">
+   onclick="openBookingModal('Monday 1 June 2026 — Alice Springs')">
   Appointment Available
-
+</a>
       </li>
 
       <li>
@@ -704,16 +750,16 @@ const calendarData = {
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Monday 01 June 2026 — Alice Springs'">
+   onclick="openBookingModal('Accommodation Opportunity — Monday 01 June 2026 — Alice Springs')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -747,11 +793,11 @@ const calendarData = {
 
       <li>
         <strong>4:30pm – 5:30pm</strong> — Accommodation Filming (Tilmouth Well Roadhouse)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Tuesday 2 June 2026 — Tilmouth Well Roadhouse'">
+           onclick="openBookingModal('Tuesday 2 June 2026 — Tilmouth Well Roadhouse')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -774,16 +820,16 @@ const calendarData = {
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Tuesday 02 June 2026 — Tilmouth Well'">
+   onclick="openBookingModal('Accommodation Opportunity — Tuesday 02 June 2026 — Tilmouth Well')">
   Offer Accommodation
-
+</a>
 `
 },
 
@@ -817,11 +863,11 @@ Due to travel and filming schedules, accommodation filming is not available.
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Wednesday 03 June 2026 — Rabbit Flat/Granites Gold Mine'">
+   onclick="openBookingModal('Accommodation Opportunity — Wednesday 03 June 2026 — Rabbit Flat/Granites Gold Mine')">
   Offer Accommodation
-
+</a>
     `
   },
 
@@ -860,11 +906,11 @@ Due to travel and filming schedules, accommodation filming is not available.
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Thursday 04 June 2026 — Halls Creek'">
+   onclick="openBookingModal('Accommodation Opportunity — Thursday 04 June 2026 — Halls Creek')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -928,11 +974,11 @@ Due to travel and filming schedules, accommodation filming is not available.
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Friday 05 June 2026 — Kalkarindji'">
+   onclick="openBookingModal('Accommodation Opportunity — Friday 05 June 2026 — Kalkarindji')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -952,11 +998,11 @@ Due to travel and filming schedules, accommodation filming is not available.
         <li>
           <strong>1:00pm – 2:00pm</strong> — Top Springs Hotel
           <span class="tag tag-pending">To Be Confirmed</span>
-          <!-- BOOKING LINK REMOVED -->
+          <a href="javascript:void(0)"
              class="tag tag-available"
-             'Saturday 6 June 2026 — Top Springs Hotel'">
+             onclick="openBookingModal('Saturday 6 June 2026 — Top Springs Hotel')">
             Appointment Available
-          
+          </a>
         </li>
       </ul>
 
@@ -980,16 +1026,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Saturday 06 June 2026 — Daly Waters'">
+   onclick="openBookingModal('Accommodation Opportunity — Saturday 06 June 2026 — Daly Waters')">
   Offer Accommodation
-
+</a>
   `
   },
 
@@ -1003,11 +1049,11 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:15am</strong> — Accommodation Filming (Daly Waters)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Sunday 7 June 2026 — Daly Waters Accommodation'">
+           onclick="openBookingModal('Sunday 7 June 2026 — Daly Waters Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -1052,16 +1098,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Sunday 07 June 2026 — Borroloola'">
+   onclick="openBookingModal('Accommodation Opportunity — Sunday 07 June 2026 — Borroloola')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -1094,16 +1140,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Monday 08 June 2026 — Borroloola'">
+   onclick="openBookingModal('Accommodation Opportunity — Monday 08 June 2026 — Borroloola')">
   Offer Accommodation
-
+</a>
     `
   },
 
@@ -1136,16 +1182,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Tueday 09 June 2026 — Borroloola'">
+   onclick="openBookingModal('Accommodation Opportunity — Tueday 09 June 2026 — Borroloola')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -1159,21 +1205,21 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Borroloola)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Wednesday 10 June 2026 — Borroloola Accommodation'">
+           onclick="openBookingModal('Wednesday 10 June 2026 — Borroloola Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
         <strong>10:30am – 12:30pm</strong> — King Ash Bay
         <span class="tag tag-landmark">Landmark / Point of Interest</span>
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Wednesday 10 June 2026 — King Ash Bay'">
+           onclick="openBookingModal('Wednesday 10 June 2026 — King Ash Bay')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -1183,11 +1229,11 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:30pm – 5:30pm</strong> — Accommodation Filming (Borroloola)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Wednesday 10 June 2026 — Borroloola Accommodation'">
+           onclick="openBookingModal('Wednesday 10 June 2026 — Borroloola Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -1207,16 +1253,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Wednesday 10 June 2026 — Borroloola'">
+   onclick="openBookingModal('Accommodation Opportunity — Wednesday 10 June 2026 — Borroloola')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -1264,16 +1310,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Thursday 11 June 2026 — Borroloola'">
+   onclick="openBookingModal('Accommodation Opportunity — Thursday 11 June 2026 — Borroloola')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -1324,11 +1370,11 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Barkly Homestead Wayside Inn (Accommodation Filming)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Saturday 13 June 2026 — Barkly Homestead Wayside Inn'">
+           onclick="openBookingModal('Saturday 13 June 2026 — Barkly Homestead Wayside Inn')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -1377,16 +1423,16 @@ Due to travel and filming schedules, accommodation filming is not available.
 <p class="note">
   <a href="/accommodation-partners.html">
     View our Stay-for-Free Exchange Package
-  
+  </a>
 </p>
 
 <div style="margin-bottom: 24px;"></div>
 
-<!-- BOOKING LINK REMOVED -->
+<a href="javascript:void(0)"
    class="tag tag-available"
-   <!-- BOOKING TEXT REMOVED --> Saturday 13 June 2026 — Tennant Creek'">
+   onclick="openBookingModal('Accommodation Opportunity — Saturday 13 June 2026 — Tennant Creek')">
   Offer Accommodation
-
+</a>
   `
 },
 
@@ -1419,16 +1465,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
    <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Sunday 14 June 2026 — Tennant Creek'">
+       onclick="openBookingModal('Accommodation Opportunity — Sunday 14 June 2026 — Tennant Creek')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1461,16 +1507,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
    <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Monday 15 June 2026 — Tennant Creek'">
+       onclick="openBookingModal('Accommodation Opportunity — Monday 15 June 2026 — Tennant Creek')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1484,11 +1530,11 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Tennant Creek)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Tuesday 16 June 2026 — Tennant Creek Accommodation (Morning)'">
+           onclick="openBookingModal('Tuesday 16 June 2026 — Tennant Creek Accommodation (Morning)')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -1508,11 +1554,11 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:15pm – 5:15pm</strong> — Accommodation Filming (Tennant Creek)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Tuesday 16 June 2026 — Tennant Creek Accommodation (Afternoon)'">
+           onclick="openBookingModal('Tuesday 16 June 2026 — Tennant Creek Accommodation (Afternoon)')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -1532,16 +1578,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
    <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Tuesday 16 June 2026 — Tennant Creek'">
+       onclick="openBookingModal('Accommodation Opportunity — Tuesday 16 June 2026 — Tennant Creek')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1614,16 +1660,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
     <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Wednesday 17 June 2026 — Alice Springs'">
+       onclick="openBookingModal('Accommodation Opportunity — Wednesday 17 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1637,11 +1683,11 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Thursday 18 June 2026 — Alice Springs Accommodation (Morning)'">
+           onclick="openBookingModal('Thursday 18 June 2026 — Alice Springs Accommodation (Morning)')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -1666,11 +1712,11 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:00pm – 5:00pm</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Thursday 18 June 2026 — Alice Springs Accommodation (Afternoon)'">
+           onclick="openBookingModal('Thursday 18 June 2026 — Alice Springs Accommodation (Afternoon)')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -1690,16 +1736,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
     <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Thursday 18 June 2026 — Alice Springs'">
+       onclick="openBookingModal('Accommodation Opportunity — Thursday 18 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1713,11 +1759,11 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Friday 19 June 2026 — Alice Springs Accommodation (Morning)'">
+           onclick="openBookingModal('Friday 19 June 2026 — Alice Springs Accommodation (Morning)')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -1757,16 +1803,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
     <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Friday 19 June 2026 — Alice Springs'">
+       onclick="openBookingModal('Accommodation Opportunity — Friday 19 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 }, 
 
@@ -1824,16 +1870,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
     <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Saturday 20 June 2026 — Alice Springs'">
+       onclick="openBookingModal('Accommodation Opportunity — Saturday 20 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1866,16 +1912,16 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p class="note">
       <a href="/accommodation-partners.html">
         View our Stay-for-Free Exchange Package
-      
+      </a>
     </p>
 
     <div style="margin-bottom: 24px;"></div>
 
-    <!-- BOOKING LINK REMOVED -->
+    <a href="javascript:void(0)"
        class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Sunday 21 June 2026 — Alice Springs'">
+       onclick="openBookingModal('Accommodation Opportunity — Sunday 21 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1888,10 +1934,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Monday 22 June 2026 — Alice Springs Accommodation (Morning)'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Monday 22 June 2026 — Alice Springs Accommodation (Morning)')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li><strong>9:45am – 10:30am</strong> — Emily Gap
@@ -1911,10 +1957,10 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>3:30pm – 4:30pm</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Monday 22 June 2026 — Alice Springs Accommodation (Afternoon)'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Monday 22 June 2026 — Alice Springs Accommodation (Afternoon)')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -1928,14 +1974,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     it is not mandatory, and we welcome all offers for accommodation arrangements.</p>
 
     <p class="note"><a href="/accommodation-partners.html">
-      View our Stay-for-Free Exchange Package</p>
+      View our Stay-for-Free Exchange Package</a></p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Monday 22 June 2026 — Alice Springs'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Monday 22 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1948,10 +1994,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Tuesday 23 June 2026 — Alice Springs Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Tuesday 23 June 2026 — Alice Springs Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li><strong>10:45am – 11:30am</strong> — Serpentine Gorge
@@ -1974,14 +2020,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     it is not mandatory, and we welcome all offers for accommodation arrangements.</p>
 
     <p class="note"><a href="/accommodation-partners.html">
-      View our Stay-for-Free Exchange Package</p>
+      View our Stay-for-Free Exchange Package</a></p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Tuesday 23 June 2026 — Alice Springs'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Tuesday 23 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -1994,10 +2040,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Wednesday 24 June 2026 — Alice Springs Accommodation (Morning)'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Wednesday 24 June 2026 — Alice Springs Accommodation (Morning)')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li><strong>9:40am – 11:30am</strong> — Alice Springs Telegraph Station
@@ -2014,10 +2060,10 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>3:15pm – 4:15pm</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Wednesday 24 June 2026 — Alice Springs Accommodation (Afternoon)'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Wednesday 24 June 2026 — Alice Springs Accommodation (Afternoon)')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -2031,14 +2077,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     it is not mandatory, and we welcome all offers for accommodation arrangements.</p>
 
     <p class="note"><a href="/accommodation-partners.html">
-      View our Stay-for-Free Exchange Package</p>
+      View our Stay-for-Free Exchange Package</a></p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Wednesday 24 June 2026 — Alice Springs'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Wednesday 24 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -2051,10 +2097,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Thursday 25 June 2026 — Alice Springs Accommodation (Morning)'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Thursday 25 June 2026 — Alice Springs Accommodation (Morning)')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li><strong>9:40am – 11:15am</strong> — Meyers Hill & Olive Pink Botanic Gardens
@@ -2070,10 +2116,10 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:00pm – 5:00pm</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Thursday 25 June 2026 — Alice Springs Accommodation (Afternoon)'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Thursday 25 June 2026 — Alice Springs Accommodation (Afternoon)')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -2087,14 +2133,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     it is not mandatory, and we welcome all offers for accommodation arrangements.</p>
 
     <p class="note"><a href="/accommodation-partners.html">
-      View our Stay-for-Free Exchange Package</p>
+      View our Stay-for-Free Exchange Package</a></p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Thursday 25 June 2026 — Alice Springs'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Thursday 25 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -2107,10 +2153,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>9:30am – 10:30am</strong> — Accommodation Filming (Alice Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Friday 26 June 2026 — Alice Springs Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Friday 26 June 2026 — Alice Springs Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li><strong>10:45am – 1:15pm</strong> — Alice Springs Reptile Centre
@@ -2130,14 +2176,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     it is not mandatory, and we welcome all offers for accommodation arrangements.</p>
 
     <p class="note"><a href="/accommodation-partners.html">
-      View our Stay-for-Free Exchange Package</p>
+      View our Stay-for-Free Exchange Package</a></p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Friday 26 June 2026 — Alice Springs'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Friday 26 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -2164,14 +2210,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     it is not mandatory, and we welcome all offers for accommodation arrangements.</p>
 
     <p class="note"><a href="/accommodation-partners.html">
-      View our Stay-for-Free Exchange Package</p>
+      View our Stay-for-Free Exchange Package</a></p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Saturday 27 June 2026 — Alice Springs'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Saturday 27 June 2026 — Alice Springs')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -2226,15 +2272,15 @@ Due to travel and filming schedules, accommodation filming is not available.
     </p>
 
     <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
     </p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Sunday 28 June 2026 — Kings Canyon'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Sunday 28 June 2026 — Kings Canyon')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -2247,10 +2293,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>9:30am – 10:30am</strong> — Accommodation Filming (Kings Canyon)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Monday 29 June 2026 — Kings Canyon Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Monday 29 June 2026 — Kings Canyon Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -2283,15 +2329,15 @@ Due to travel and filming schedules, accommodation filming is not available.
     </p>
 
     <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
     </p>
 
     <div style="margin-bottom:24px;"></div>
 
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Monday 29 June 2026 — Kings Canyon'">
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Monday 29 June 2026 — Kings Canyon')">
       Offer Accommodation
-    
+    </a>
   `
 },
 
@@ -2304,10 +2350,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>8:30am – 9:30am</strong> — Accommodation Filming (Kings Canyon)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Tuesday 30 June 2026 — Kings Canyon Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Tuesday 30 June 2026 — Kings Canyon Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -2327,10 +2373,10 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:30pm – 5:30pm</strong> — Accommodation Filming (Curtin Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Tuesday 30 June 2026 — Curtin Springs Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Tuesday 30 June 2026 — Curtin Springs Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -2338,7 +2384,7 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p>
       <strong>Curtin Springs Wayside Inn</strong><br>
       <span class="tag tag-confirmed">Confirmed</span><br>
-      <a href="/accommodation-partners.html">Stay-for-Free Exchange available
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
   `
 },
@@ -2382,22 +2428,8 @@ Due to travel and filming schedules, accommodation filming is not available.
     </p>
 
     <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Wednesday 1 July 2026 — Yulara'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2444,28 +2476,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
+    <p>
       <strong>Accommodation Required — Thursday 2 July 2026</strong><br>
       We are seeking accommodation for our filming crew in Yulara.
     </p>
 
     <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Thursday 2 July 2026 — Yulara'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2478,10 +2496,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>10:00am – 11:00am</strong> — Accommodation Filming (Yulara)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Friday 3 July 2026 — Yulara Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Friday 3 July 2026 — Yulara Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -2491,28 +2509,14 @@ Due to travel and filming schedules, accommodation filming is not available.
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
+    <p>
       <strong>Accommodation Required — Friday 3 July 2026</strong><br>
       We are seeking accommodation for our filming crew in Yulara.
     </p>
 
     <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Friday 3 July 2026 — Yulara'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2545,22 +2549,8 @@ Due to travel and filming schedules, accommodation filming is not available.
     </p>
 
     <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Saturday 4 July 2026 — Yulara'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2573,10 +2563,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     <ul>
       <li>
         <strong>9:00am – 10:00am</strong> — Accommodation Filming (Yulara)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Sunday 5 July 2026 — Yulara Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Sunday 5 July 2026 — Yulara Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
 
       <li>
@@ -2596,10 +2586,10 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>2:45pm – 3:45pm</strong> — Accommodation Filming (Curtin Springs)
-        <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-           'Sunday 5 July 2026 — Curtin Springs Accommodation'">
+        <a href="javascript:void(0)" class="tag tag-available"
+           onclick="openBookingModal('Sunday 5 July 2026 — Curtin Springs Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
@@ -2607,7 +2597,7 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p>
       <strong>Curtin Springs Wayside Inn</strong><br>
       <span class="tag tag-confirmed">Confirmed</span><br>
-      <a href="/accommodation-partners.html">Stay-for-Free Exchange available
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
   `
 },
@@ -2629,7 +2619,7 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p>
       <strong>Curtin Springs Wayside Inn</strong><br>
       <span class="tag tag-confirmed">Confirmed</span><br>
-      <a href="/accommodation-partners.html">Stay-for-Free Exchange available
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
   `
 },
@@ -2651,7 +2641,7 @@ Due to travel and filming schedules, accommodation filming is not available.
     <p>
       <strong>Curtin Springs Wayside Inn</strong><br>
       <span class="tag tag-confirmed">Confirmed</span><br>
-      <a href="/accommodation-partners.html">Stay-for-Free Exchange available
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
   `
 },
@@ -2676,37 +2666,19 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>1:30pm – 4:30pm</strong> — Accommodation Filming (Erldunda)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Wednesday 8 July 2026 — Erldunda Accommodation'">
+           onclick="openBookingModal('Wednesday 8 July 2026 — Erldunda Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
-      <strong>Accommodation Required — Wednesday 8 July 2026</strong><br>
-      We are seeking accommodation for our filming crew in Erldunda.
+    <p>
+      <strong>Erldunda Desert Oaks Resort — TBC</strong><br>
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
-
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
-    </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Wednesday 8 July 2026 — Erldunda'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2754,28 +2726,10 @@ Due to travel and filming schedules, accommodation filming is not available.
     </p>
 
     <h4>🏨 Accommodation</h4>
-<p>
-      <strong>Accommodation Required — Thursday 9 July 2026</strong><br>
-      We are seeking accommodation for our filming crew in Coober Pedy.
+    <p>
+      <strong>Coober Pedy — TBC</strong><br>
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
-
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
-    </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Thursday 9 July 2026 — Coober Pedy'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2804,37 +2758,19 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:30pm – 5:30pm</strong> — Accommodation Filming (Coober Pedy)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Friday 10 July 2026 — Coober Pedy Accommodation'">
+           onclick="openBookingModal('Friday 10 July 2026 — Coober Pedy Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
-      <strong>Accommodation Required — Friday 10 July 2026</strong><br>
-      We are seeking accommodation for our filming crew in Coober Pedy.
+    <p>
+      <strong>Coober Pedy — TBC</strong><br>
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
-
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
-    </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Friday 10 July 2026 — Coober Pedy'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2883,37 +2819,19 @@ Due to travel and filming schedules, accommodation filming is not available.
 
       <li>
         <strong>4:30pm – 5:30pm</strong> — Accommodation Filming (Coober Pedy)
-        <!-- BOOKING LINK REMOVED -->
+        <a href="javascript:void(0)"
            class="tag tag-available"
-           'Saturday 11 July 2026 — Coober Pedy Accommodation'">
+           onclick="openBookingModal('Saturday 11 July 2026 — Coober Pedy Accommodation')">
           Appointment Available
-        
+        </a>
       </li>
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
-      <strong>Accommodation Required — Saturday 11 July 2026</strong><br>
-      We are seeking accommodation for our filming crew in Coober Pedy.
+    <p>
+      <strong>Coober Pedy — TBC</strong><br>
+      <a href="/accommodation-partners.html">Stay-for-Free Exchange available</a>
     </p>
-
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
-    </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Saturday 11 July 2026 — Coober Pedy'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2930,28 +2848,20 @@ Due to travel and filming schedules, accommodation filming is not available.
     </p>
 
     <h4>🏨 Accommodation</h4>
-<p>
+    <p>
+      <strong>Coober Pedy — TBC</strong>
+    </p>
+
+    <p>
       <strong>Accommodation Required — Sunday 12 July 2026</strong><br>
       We are seeking accommodation for our filming crew in Coober Pedy.
     </p>
 
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+    <p>
+      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes professional photography,
+      videography, and social media exposure. The Stay-for-Free Exchange Package is our preferred option to
+      secure accommodation; however, it is not mandatory, and we welcome all offers for accommodation arrangements.
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Sunday 12 July 2026 — Coober Pedy'">
-      Offer Accommodation
-    
   `
 },
 
@@ -2970,28 +2880,20 @@ Due to travel and filming schedules, accommodation filming is not available.
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
+    <p>
+      <strong>Coober Pedy — TBC</strong>
+    </p>
+
+    <p>
       <strong>Accommodation Required — Monday 13 July 2026</strong><br>
       We are seeking accommodation for our filming crew in Coober Pedy.
     </p>
 
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+    <p>
+      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes professional photography,
+      videography, and social media exposure. The Stay-for-Free Exchange Package is our preferred option to
+      secure accommodation; however, it is not mandatory, and we welcome all offers for accommodation arrangements.
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Monday 13 July 2026 — Coober Pedy'">
-      Offer Accommodation
-    
   `
 },
 
@@ -3042,37 +2944,23 @@ Due to travel and filming schedules, accommodation filming is not available.
         <strong>2:15pm – 2:55pm</strong> — Breakway Scenic Point
         <span class="tag tag-landmark">Landmark / Point of Interest</span>
       </li>
-
-            <li>
-        <strong>3:30pm – 4:50pm</strong> — Crocodile Harry's Underground Nest & Dugout (Dugout B&B)
-        <span class="tag tag-pending">To Be Confirmed</span>
-      </li>
-      
     </ul>
 
     <h4>🏨 Accommodation</h4>
-<p>
+    <p>
+      <strong>Coober Pedy — TBC</strong>
+    </p>
+
+    <p>
       <strong>Accommodation Required — Tuesday 14 July 2026</strong><br>
       We are seeking accommodation for our filming crew in Coober Pedy.
     </p>
 
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
+    <p>
+      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes professional photography,
+      videography, and social media exposure. The Stay-for-Free Exchange Package is our preferred option to
+      secure accommodation; however, it is not mandatory, and we welcome all offers for accommodation arrangements.
     </p>
-
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package
-    </p>
-
-    <div style="margin-bottom:24px;"></div>
-
-    <!-- BOOKING LINK REMOVED --> class="tag tag-available"
-       <!-- BOOKING TEXT REMOVED --> Tuesday 14 July 2026 — Coober Pedy'">
-      Offer Accommodation
-    
   `
 },
 };
@@ -3117,27 +3005,27 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     `mailto:showcasingoztv@gmail.com?subject=${subject}&body=${body}`;
 
   closeBookingModal();
-};
-renderCalendar();
+});
+
 </script>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="/index.html">Home |
-    <a href="/about.html">About Us |
-    <a href="/towns/index.html">Towns |
-    <a href="/partner.html">Partner With Us |
-    <a href="/sponsorship.html">Sponsorship |
-    <a href="/filming-map.html">Filming Map |
-    <a href="/calendar.html">Calendar |
-    <a href="/press.html">Press |
-    <a href="/contact.html">Contact |
-    <a href="/legal.html">Legal
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
   </div>
 
   <p>
-    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com<br>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
     <span class="gst-disclaimer">
       All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
     </span><br>
