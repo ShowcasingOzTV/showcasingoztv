@@ -558,6 +558,8 @@ footer .social-icons a {
 </div>
   
   <script>
+    let currentYear = 2026;
+let currentMonth = 5; // June (0-based)
 function renderCalendar() {
   const grid = document.getElementById("calendarGrid");
   grid.innerHTML = "";
@@ -570,8 +572,8 @@ function renderCalendar() {
     grid.appendChild(d);
   });
 
-  const year = 2026;
-  const month = 5; // June (0-based)
+const year = currentYear;
+const month = currentMonth;
 
   const firstOfMonth = new Date(year, month, 1);
   const startDate = new Date(firstOfMonth);
@@ -608,6 +610,47 @@ function renderCalendar() {
 }
 
 document.addEventListener("DOMContentLoaded", renderCalendar);
+    document.querySelectorAll(".month-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    currentMonth = parseInt(link.dataset.month, 10);
+
+    document.querySelectorAll(".month-links a")
+      .forEach(a => a.classList.remove("active"));
+
+    link.classList.add("active");
+    renderCalendar();
+  });
+});
+    document.getElementById("prevMonth").addEventListener("click", () => {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  updateActiveMonth();
+  renderCalendar();
+});
+
+document.getElementById("nextMonth").addEventListener("click", () => {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  updateActiveMonth();
+  renderCalendar();
+});
+
+function updateActiveMonth() {
+  document.querySelectorAll(".month-links a")
+    .forEach(a => a.classList.remove("active"));
+
+  const active = document.querySelector(
+    `.month-links a[data-month="${currentMonth}"]`
+  );
+
+  if (active) active.classList.add("active");
+}
 </script>
 
   <script>
