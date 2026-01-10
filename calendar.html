@@ -463,7 +463,6 @@ footer .social-icons a {
   adjust and finalise our scheduling prior to the commencement of our filming journey, and update the calendar accordingly.</p>
   <p>We encourage accommodation and attraction owners to view our schedule below and book convenient filming appointment times.</p>
   <p>Click a date to view the detailed filming schedule and available collaboration opportunities.</p>
-  </p>
 
   <p><em>Please note: Filming dates and locations are subject to change due to weather, road conditions, operational requirements, partner availability, and other unforeseen circumstances.</em>
 </p>
@@ -610,7 +609,8 @@ const month = currentMonth;
 }
 
 document.addEventListener("DOMContentLoaded", renderCalendar);
-    document.querySelectorAll(".month-links a").forEach(link => {
+
+document.querySelectorAll(".month-links a").forEach(link => {
   link.addEventListener("click", () => {
     currentMonth = parseInt(link.dataset.month, 10);
 
