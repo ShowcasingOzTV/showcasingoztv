@@ -608,62 +608,6 @@ const month = currentMonth;
   }
 }
 
-<script>
-
-  const calendarGrid = document.getElementById("calendarGrid");
-  const monthLabel = document.getElementById("monthLabel");
-
-  let currentYear = 2026;
-  let currentMonth = 5;
-
-  function renderCalendar() {
-    calendarGrid.innerHTML = "";
-
-    const firstDay = new Date(currentYear, currentMonth, 1);
-    const lastDay = new Date(currentYear, currentMonth + 1, 0);
-
-    const startDay = firstDay.getDay();
-    const totalDays = lastDay.getDate();
-
-    monthLabel.textContent =
-      firstDay.toLocaleString("default", { month: "long" }) + " " + currentYear;
-
-    for (let i = 0; i < startDay; i++) {
-      calendarGrid.appendChild(document.createElement("div"));
-    }
-
-    for (let day = 1; day <= totalDays; day++) {
-      const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-      const cell = document.createElement("div");
-      cell.className = "calendar-day";
-      cell.textContent = day;
-
-      if (calendarData[dateStr]) {
-        cell.classList.add("has-event");
-        cell.addEventListener("click", () =>
-          openCalendarModal(dateStr)
-        );
-      }
-
-      calendarGrid.appendChild(cell);
-    }
-  }
-
-  document.querySelectorAll(".month-links a").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      currentMonth = parseInt(link.dataset.month, 10);
-
-      document.querySelectorAll(".month-links a")
-        .forEach(a => a.classList.remove("active"));
-
-      link.classList.add("active");
-      renderCalendar();
-    });
-  });
-});
-</script>
-
   <script>
 const calendarData = {
   "2026-05-31": {
@@ -3173,8 +3117,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     `mailto:showcasingoztv@gmail.com?subject=${subject}&body=${body}`;
 
   closeBookingModal();
-});
-
+};
 renderCalendar();
 </script>
 
