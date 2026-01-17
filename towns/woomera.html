@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Woomera (SA) | ShowcasingOz TV</title>
+ <meta name="description" content="Discover Woomera, SA — a unique outback town with a rich aerospace and defence history, known for its rocket range heritage, museum precinct, and vast desert landscapes." />
+ <meta name="keywords" content="Woomera SA, Woomera outback, Woomera Rocket Range, aerospace history Australia, Woomera attractions, Woomera accommodation, Eyre Peninsula outback towns, South Australia desert travel, ShowcasingOz TV" />
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #0E3557;
+    }
+
+    /* ================= HEADER ================= */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    header img { height: 65px; }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #E87722; }
+
+    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+
+    @media (max-width:768px){
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
+      nav.active { display:flex; }
+      .menu-btn { display:block; }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
+
+    /* ================= CONTENT ================= */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
+
+    p { line-height:1.6; color:#333; }
+
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
+      border-radius:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.2rem;
+      font-weight:500;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – WOOMERA ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
+footer .footer-links a,
+footer p a {
+  color: #E87722 !important;
+}
+
+footer .footer-links a:hover,
+footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script defer>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="../images/towns/woomera.jpg"
+       alt="Woomera South Australia"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+  <h1>Melrose (SA)</h1>
+
+<p>
+Woomera is a distinctive outback town in South Australia, located on the edge of the Great Victoria Desert and best known for its unique role in Australia’s aerospace and defence history. Purpose-built in the mid-20th century, Woomera developed around the Woomera Rocket Range and remains one of the most historically significant scientific and military sites in the country.
+</p>
+
+<p>
+Established in the late 1940s, Woomera was created to support joint Australian–British weapons testing and rocket research. At its peak, the town was home to thousands of workers, scientists, and defence personnel, and played a pivotal role in missile testing, satellite launches, and early space exploration programs. This legacy continues to shape Woomera’s identity and national significance.
+</p>
+
+<p>
+The town’s layout and infrastructure reflect its planned origins, with wide streets, purpose-built facilities, and preserved relics from its operational years. Museums, displays, and outdoor exhibits provide insight into the technological achievements and global importance of the testing programs conducted in the surrounding desert.
+</p>
+
+<p>
+Set within a stark arid landscape of red earth, saltbush, and vast open plains, Woomera offers visitors a striking contrast between advanced technology and remote desert environment. The surrounding region highlights the isolation and scale required for large-scale testing and experimentation, reinforcing why this location was chosen for such groundbreaking work.
+</p>
+
+<p>
+Today, Woomera is a quiet community that welcomes travellers interested in history, science, and outback exploration. Visitor facilities, accommodation options, and interpretive sites allow guests to engage with the town’s past while experiencing life in one of South Australia’s most unusual inland settlements.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Woomera as part of our national filming journey — highlighting its aerospace heritage, defence history, desert setting, and the remarkable role this small town has played in Australia’s scientific and technological story.
+</p>
+
+  <!-- DOCUMENTARY -->
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">Documentary Coming Soon</div>
+
+  <!-- ATTRACTIONS -->
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
+
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Woomera</h3>
+  <ul class="other-accommodation-list">
+    <li>Woomera Heritage Museum</li>
+    <li>Woomera Observatory</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Woomera and the surrounding region's landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Glendambo</h3>
+      <p>
+  Glendambo is a small outback roadhouse settlement on the Stuart Highway, serving as an important rest and refuelling stop between Port Augusta and Coober Pedy. It reflects the essential role roadhouses play in supporting long-distance travel through South Australia’s arid interior.
+</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Lake Hart</h3>
+      <p>
+Lake Hart is a vast salt lake located south of Woomera, known for its striking white surface and expansive horizons. Easily accessible from the Stuart Highway, it is a popular photography stop and showcases the stark beauty of South Australia’s desert landscapes.
+</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Phillip Ponds Outstation Cemetery & Homestead</h3>
+      <p>
+The Phillip Ponds Outstation Cemetery and Homestead site preserves remnants of early pastoral life in the region. It offers insight into the isolation, hardship, and self-sufficiency experienced by those who lived and worked on remote outstations in South Australia’s far north.
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Rocket Park</h3>
+      <p>
+Rocket Park is one of Woomera’s most recognisable attractions, featuring an outdoor display of rockets and missiles developed and tested at the Woomera Rocket Range. The park highlights the town’s pivotal role in Australia’s defence, missile, and space research history.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Joint Defense Facility Nurrungar</h3>
+      <p>
+The former Joint Defence Facility Nurrungar was a highly classified satellite surveillance base operated by Australia and the United States during the Cold War. Although now closed, the site remains historically significant as part of Australia’s defence and intelligence history.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Pimba</h3>
+      <p>
+Pimba is a small settlement near Woomera that developed alongside rail and defence activities in the region. It continues to serve as a support point for travellers and nearby communities, reflecting the close ties between transport, defence, and outback settlement.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Island Lagoon Tracking Station</h3>
+      <p>
+The Island Lagoon Tracking Station was an important facility used to track rockets and spacecraft during Woomera’s testing programs. Located north of Woomera, the site represents the technological sophistication and international importance of Australia’s early space and missile research efforts.
+</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation In And Around Woomera</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation In And Around Woomera</h3>
+  <ul class="other-accommodation-list">
+    <li>Eldo Hotel</li>
+    <li>Spud's Roadhouse - Pimba</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
+
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
+
+</body>
+</html>
