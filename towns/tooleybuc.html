@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Tooleybuc (NSW) | ShowcasingOz TV</title>
+<meta name="description" content="Discover Tooleybuc, NSW — a small Murray River town known for its historic bridge, riverside lifestyle, irrigation farming, and relaxed country atmosphere near the Victorian border." />
+<meta name="keywords" content="Tooleybuc NSW, Tooleybuc Murray River, Murray River town NSW, Tooleybuc Bridge, Riverina towns, Tooleybuc accommodation, western NSW travel, Murray River destinations, ShowcasingOz TV" />
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #0E3557;
+    }
+
+    /* ================= HEADER ================= */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    header img { height: 65px; }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #E87722; }
+
+    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+
+    @media (max-width:768px){
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
+      nav.active { display:flex; }
+      .menu-btn { display:block; }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
+
+    /* ================= CONTENT ================= */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
+
+    p { line-height:1.6; color:#333; }
+
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
+      border-radius:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.2rem;
+      font-weight:500;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – TOOLEYBUC ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
+footer .footer-links a,
+footer p a {
+  color: #E87722 !important;
+}
+
+footer .footer-links a:hover,
+footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script defer>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="../images/towns/tooleybuc.jpg"
+       alt="Tooleybuc New South Wales"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+<h1>Tooleybuc (NSW)</h1>
+
+<p>
+Tooleybuc is a small and welcoming town in south-western New South Wales, located on the banks of the Murray River near the Victorian border. Positioned within the Riverina region, Tooleybuc is closely connected to irrigation farming, river trade history, and the relaxed lifestyle that defines many Murray River communities.
+</p>
+
+<p>
+Established in the late 19th century, Tooleybuc developed as a river crossing and agricultural service centre. The Murray River played a central role in its early growth, supporting transport, trade, and pastoral activity. Over time, irrigation schemes transformed the surrounding district into productive farmland, strengthening the town’s role in supporting cropping and livestock industries.
+</p>
+
+<p>
+One of Tooleybuc’s most recognisable landmarks is its historic lift-span bridge across the Murray River, which symbolises the town’s connection to both New South Wales and Victoria. The bridge reflects the importance of reliable river crossings in linking rural communities and enabling regional development.
+</p>
+
+<p>
+Today, Tooleybuc maintains a quiet country-town atmosphere, offering essential services, accommodation, and hospitality venues for travellers exploring the Murray River corridor. Riverside reserves, fishing spots, and open parklands provide opportunities for relaxation and outdoor recreation in a scenic river setting.
+</p>
+
+<p>
+Surrounded by flat agricultural plains, red gums, and expansive skies, Tooleybuc captures the understated charm of Australia’s inland river towns. The community reflects resilience, practicality, and a strong connection to land and water — values that continue to shape life along the Murray.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Tooleybuc as part of our national filming journey — highlighting its Murray River heritage, irrigation history, historic bridge, and the welcoming rural spirit that makes this border town a distinctive Riverina destination.
+</p>
+
+  <!-- DOCUMENTARY -->
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">Documentary Coming Soon</div>
+
+  <!-- ATTRACTIONS -->
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
+
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions in and around Tooleybuc</h3>
+  <ul class="other-accommodation-list">
+    <li>Andrew Peace Winery</li>
+    <li>Ron Dehne Ford Tractor Collection</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Tooleybuc’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Manangatang Mallee Garden</h3>
+      <p>
+      The Manangatang Mallee Garden showcases native plants suited to the semi-arid Mallee environment. The garden highlights local biodiversity and provides visitors with insight into the resilient vegetation that thrives in north-west Victoria’s dry conditions.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Manangatang</h3>
+      <p>
+      Manangatang’s town centre reflects its agricultural roots, featuring heritage buildings, local services, and community spaces that support surrounding grain and livestock farming districts. It offers a quiet, authentic country-town atmosphere.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Bridge Keeper’s Cottage</h3>
+      <p>
+      The Bridge Keeper’s Cottage near the Murray River recalls the era when river crossings required manual operation and supervision. The cottage reflects the importance of transport infrastructure in connecting communities across state borders.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Tooleybuc Bridge</h3>
+      <p>
+      The Tooleybuc Bridge is a historic lift-span bridge crossing the Murray River, linking New South Wales and Victoria. It stands as a key symbol of the town’s river heritage and its role in regional transport and development.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Tooleybuc Town Centre</h3>
+      <p>
+      Tooleybuc’s town centre offers essential services, local businesses, and hospitality venues within a relaxed Murray River setting. It reflects the town’s close connection to irrigation farming and river-based recreation.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Piangil</h3>
+      <p>
+      Piangil is a small Victorian border settlement located along the Murray River. It developed as a railway and agricultural service point and today represents the quiet resilience of farming communities in the Mallee region.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Wood Wood</h3>
+      <p>
+      Wood Wood is a rural locality in north-west Victoria with a history tied to pastoralism and grain production. The area reflects the expansive farmland and low-lying river plains that characterise the broader Mallee landscape.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Nyah</h3>
+      <p>
+      Nyah is a riverside town in Victoria situated along the Murray River. Known for its bridge crossing and agricultural base, Nyah serves as a regional link between farming districts on both sides of the river.
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation in and around Tooleybuc</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation in and around Tooleybuc</h3>
+  <ul class="other-accommodation-list">
+    <li>Tooleybuc Club Motor Inn</li>
+    <li>Tooleybuc Motel</li>
+    <li>Tooleybuc Country Roads Motor Inn</li>
+    <li>Tooleybuc River Retreat Villas</li>
+    <li>Country Club Hotel Tooleybuc</li>
+    <li>Grand Hotel Nyah West</li>
+    <li>Piangil Cabins & Caravan Park</li>
+    <li>Kyalite Caravan Park</li>
+    <li>The Manangatang Family Hotel</li>
+    <li>Wood Wood Caravan Park And General Store</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
+
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
+
+</body>
+</html>
