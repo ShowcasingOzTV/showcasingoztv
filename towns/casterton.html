@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Casterton (VIC) | ShowcasingOz TV</title>
+<meta name="description" content="Discover Casterton, VIC — a scenic Glenelg River town known as the birthplace of the Australian Kelpie, with rich pastoral heritage and rolling western Victorian landscapes." />
+<meta name="keywords" content="Casterton VIC, Casterton Victoria, Glenelg River town, Australian Kelpie birthplace, Casterton attractions, Casterton accommodation, western Victoria travel, Glenelg Shire towns, ShowcasingOz TV" />
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #0E3557;
+    }
+
+    /* ================= HEADER ================= */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    header img { height: 65px; }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #E87722; }
+
+    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+
+    @media (max-width:768px){
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
+      nav.active { display:flex; }
+      .menu-btn { display:block; }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
+
+    /* ================= CONTENT ================= */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
+
+    p { line-height:1.6; color:#333; }
+
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
+      border-radius:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.2rem;
+      font-weight:500;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – CASTERTON ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
+footer .footer-links a,
+footer p a {
+  color: #E87722 !important;
+}
+
+footer .footer-links a:hover,
+footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script defer>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="../images/towns/casterton.jpg"
+       alt="Casterton Victoria"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+<h1>Casterton (VIC)</h1>
+
+<p>
+Casterton is a picturesque rural town in western Victoria, located along the banks of the Glenelg River and surrounded by rolling farmland. As part of the Glenelg Shire, Casterton serves as an agricultural service centre for sheep and cattle grazing districts across the region.
+</p>
+
+<p>
+Established in the mid-19th century, Casterton developed alongside pastoral expansion and river-based settlement. The fertile river flats and surrounding grazing country supported the growth of sheep farming, contributing to the town’s strong rural identity and long-standing agricultural traditions.
+</p>
+
+<p>
+Casterton is widely recognised as the birthplace of the Australian Kelpie, one of the country’s most iconic working dog breeds. This heritage is celebrated through local events and attractions that honour the breed’s importance to Australian pastoral life and farming culture.
+</p>
+
+<p>
+The Glenelg River is central to Casterton’s landscape and lifestyle, providing scenic riverbanks, walking tracks, and recreational areas. The river setting enhances the town’s natural appeal, offering peaceful views framed by red gums and gently undulating hills.
+</p>
+
+<p>
+Casterton’s town centre features heritage buildings, local shops, cafés, and community facilities that reflect its proud country character. Sporting clubs, agricultural shows, and community events contribute to a strong sense of regional identity and local pride.
+</p>
+
+<p>
+Surrounded by green paddocks, historic homesteads, and expansive skies, Casterton captures the essence of western Victoria’s pastoral heartland. The town blends agricultural tradition, river scenery, and cultural heritage into a distinctive regional destination.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Casterton as part of our national filming journey — highlighting its Glenelg River setting, pastoral heritage, Australian Kelpie legacy, and the enduring community spirit that continues to shape this western Victorian town.
+</p>
+
+  <!-- DOCUMENTARY -->
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">Documentary Coming Soon</div>
+
+  <!-- ATTRACTIONS -->
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
+
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Casterton</h3>
+  <ul class="other-accommodation-list">
+    <li>Australian Kelpie Centre</li>
+    <li>Glenelg Fine Chocolates - Coleraine</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Coleraine’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Ess Lagoon</h3>
+      <p>
+      Ess Lagoon is a scenic water body along the Glenelg River system near Casterton, offering peaceful views and natural habitat for birdlife. The lagoon provides a tranquil setting for walking, photography, and appreciating the region’s river landscapes.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Casterton Town Centre</h3>
+      <p>
+      Casterton’s town centre features heritage buildings, local shops, cafés, and community facilities that reflect its strong pastoral identity. Positioned near the Glenelg River, the centre serves as both a service hub and a welcoming gathering place for residents and visitors.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Casterton Railway Station</h3>
+      <p>
+      The historic Casterton Railway Station recalls the town’s connection to Victoria’s early rail network, which supported the transport of livestock and agricultural produce. The site reflects the importance of rail in shaping regional development and trade.
+      </p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Mickle Lookout</h3>
+      <p>
+      Mickle Lookout offers elevated views over Casterton and the surrounding rolling farmland. The vantage point highlights the Glenelg River valley and provides a clear perspective of the region’s pastoral landscape.
+      </p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Peter Francis Points Arboretum</h3>
+      <p>
+      Peter Francis Points Arboretum is a landscaped reserve showcasing a diverse range of tree species suited to the local environment. The arboretum provides a quiet space for walking and learning about native and introduced plant varieties in western Victoria.
+      </p>
+    </div>
+  </div>
+
+        <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Coleraine</h3>
+      <p>
+      Coleraine is a nearby rural town situated along the Glenelg River, known for its historic buildings and strong agricultural base. It serves as a regional centre for grazing properties across the district.
+      </p>
+    </div>
+  </div>
+
+        <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Merino</h3>
+      <p>
+      Merino is a small pastoral township with deep roots in sheep grazing and wool production. The town reflects the agricultural traditions that have shaped the broader Glenelg region for generations.
+      </p>
+    </div>
+  </div>
+
+        <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Digby</h3>
+      <p>
+      Digby is a quiet rural locality located near the Glenelg River and surrounding grazing country. It represents the enduring character of western Victoria’s farming communities and their close connection to land and river systems.
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation In And Around Casterton</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation In And Around Casterton</h3>
+  <ul class="other-accommodation-list">
+    <li>Glenelg Inn Hotel</li>
+    <li>Albion Hotel Motel</li>
+    <li>Clarke Street Cottage Accommodation</li>
+    <li>Casterton Residence</li>
+    <li>Wannon River Holiday Park</li>
+    <li>Coleraine Hotel - Coleraine</li>
+    <li>The Black Horse Inn - Coleraine</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
+
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
+
+</body>
+</html>
