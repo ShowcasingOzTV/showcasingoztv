@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Port Fairy (VIC) | ShowcasingOz TV</title>
+<meta name="description" content="Discover Port Fairy, VIC — a charming coastal town known for its historic cottages, working harbour, pristine beaches, and maritime heritage along Victoria’s south-west coast." />
+<meta name="keywords" content="Port Fairy VIC, Port Fairy Victoria, Port Fairy harbour, Great Ocean Road towns, Port Fairy attractions, Port Fairy accommodation, south west Victoria coast, maritime heritage Victoria, ShowcasingOz TV" />
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #0E3557;
+    }
+
+    /* ================= HEADER ================= */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    header img { height: 65px; }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #E87722; }
+
+    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+
+    @media (max-width:768px){
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
+      nav.active { display:flex; }
+      .menu-btn { display:block; }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
+
+    /* ================= CONTENT ================= */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
+
+    p { line-height:1.6; color:#333; }
+
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
+      border-radius:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.2rem;
+      font-weight:500;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – PORT FAIRY ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
+footer .footer-links a,
+footer p a {
+  color: #E87722 !important;
+}
+
+footer .footer-links a:hover,
+footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script defer>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="../images/towns/port-fairy.jpg"
+       alt="Port Fairy Victoria"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+<h1>Port Fairy (VIC)</h1>
+
+<p>
+Port Fairy is a picturesque coastal town in south-west Victoria, located at the mouth of the Moyne River and renowned for its maritime heritage and preserved 19th-century architecture. With its historic streetscapes, working harbour, and scenic ocean views, Port Fairy is one of Victoria’s most distinctive seaside destinations.
+</p>
+
+<p>
+Established in the early 19th century, Port Fairy developed as a significant whaling and fishing port. The town’s wealth during this period contributed to the construction of many stone cottages and grand buildings that still line its streets today, creating one of the most intact historic townscapes in regional Victoria.
+</p>
+
+<p>
+The harbour and Moyne River remain central to Port Fairy’s identity, supporting a commercial fishing fleet and recreational boating. Griffiths Island, located at the river’s mouth, offers walking trails and access to the historic lighthouse, providing sweeping views of the Southern Ocean and surrounding coastline.
+</p>
+
+<p>
+Port Fairy is also known for its vibrant arts and events culture, with galleries, markets, and annual festivals drawing visitors throughout the year. The town blends its maritime past with contemporary hospitality, offering cafés, restaurants, boutique accommodation, and specialty shops within a relaxed coastal setting.
+</p>
+
+<p>
+Surrounded by rugged shoreline, sandy beaches, and rolling farmland, Port Fairy captures the natural beauty of Victoria’s south-west coast. Its combination of heritage architecture, ocean scenery, and cultural vitality makes it a standout destination along the coastal route west of the Great Ocean Road.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Port Fairy as part of our national filming journey — highlighting its maritime heritage, historic harbour precinct, coastal beauty, and the welcoming community spirit that continues to shape this iconic Victorian seaside town.
+</p>
+
+  <!-- DOCUMENTARY -->
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">Documentary Coming Soon</div>
+
+  <!-- ATTRACTIONS -->
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
+
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Port Fairy</h3>
+  <ul class="other-accommodation-list">
+    <li>Port Fairy Day Spa</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Port Fairy’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Codrington Wind Farm</h3>
+      <p>
+      Codrington Wind Farm is one of Australia’s earliest large-scale wind energy projects, located along the rugged coastline east of Port Fairy. The towering turbines overlook dramatic ocean scenery and highlight the region’s strong and consistent coastal winds.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>The Crags</h3>
+      <p>
+      The Crags is a striking coastal rock formation shaped by powerful Southern Ocean swells. The rugged cliffs and wave-cut platforms provide dramatic viewpoints that showcase the raw beauty of Victoria’s south-west coastline.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Port Fairy Town Centre</h3>
+      <p>
+      Port Fairy’s town centre features beautifully preserved 19th-century stone buildings, boutique shops, cafés, and galleries. The streetscape reflects the town’s maritime prosperity and continues to serve as a vibrant hub for visitors and the local community.
+      </p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Griffiths Island (including Port Fairy Lighthouse)</h3>
+      <p>
+      Griffiths Island is a coastal reserve at the mouth of the Moyne River, accessible by footbridge from Port Fairy. Walking tracks circle the island, leading to the historic Port Fairy Lighthouse and offering sweeping views of the harbour and Southern Ocean.
+      </p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Battery Hill</h3>
+      <p>
+      Battery Hill is an elevated coastal lookout that once served as a defensive site during the 19th century. Today, it offers panoramic views across Port Fairy’s harbour, river mouth, and surrounding coastline.
+      </p>
+    </div>
+  </div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation In And Around Port Fairy</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation In And Around Port Fairy</h3>
+  <ul class="other-accommodation-list">
+    <li>The Wandering Whale Guesthouse</li>
+    <li>BIG4 Port Fairy Holiday Park</li>
+    <li>Port Fairy Tiny Homes</li>
+    <li>Dunes - Elegant Beach Villa With Huge Swim Spa</li>
+    <li>Merrijig Kitchen</li>
+    <li>Basalt Retreat</li>
+    <li>Douglas Riverside Accommodation</li>
+    <li>Oscars Waterfront Boutique Hotel</li>
+    <li>Oceanview Port Fairy</li>
+    <li>Hearn's Beachside Villas</li>
+    <li>The Victoria Apartments</li>
+    <li>Clonmara Country House and Cottages</li>
+    <li>Laneway Apartments (Orientem)</li>
+    <li>Austral Place 88 Over Merri River</li>
+    <li>A1 Motel - Port Fairy Motel and Apartments</li>
+    <li>Dockside Waterfront Indulgence</li>
+    <li>Drift House, Small Luxury Hotel and Dining Room</li>
+    <li>Caledonian Inn Motel</li>
+    <li>Wytonia Beachfront Accommodation</li>
+    <li>Port Fairy BNB</li>
+    <li>Ruby's Beach Front</li>
+    <li>The Boatshed Waterfront B&B</li>
+    <li>The Oak & Anchor Hotel</li>
+    <li>Central Motel Port Fairy</li>
+    <li>Ashmont Motor Inn & Apartments</li>
+    <li>The Moorings</li>
+    <li>Paradise Cove</li>
+    <li>Old Market Inn</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
+
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
+
+</body>
+</html>
