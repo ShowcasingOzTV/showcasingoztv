@@ -45,6 +45,7 @@
 
     nav a:hover{ color:#E87722; transition:color .3s ease; }
 
+    /* MAIN CONTENT WRAPPER */
     .content{
       max-width:900px;
       margin:40px auto;
@@ -53,24 +54,35 @@
       padding:40px 30px;
       box-shadow:0 4px 10px rgba(0,0,0,0.05);
       text-align:left;
+
+      /* Set one consistent body text size for everything inside content */
+      font-size:1.05rem;
+      line-height:1.7;
     }
 
+    /* HEADINGS ONLY should be larger */
     .content h1{
       text-align:center;
       margin:0 0 35px 0;
       color:#0E3557;
       font-size:2.2rem;
+      line-height:1.2;
     }
 
     .content h2{
       color:#E87722;
       margin-top:28px;
+      font-size:1.6rem;
+      line-height:1.25;
     }
 
-    .content p{
-      line-height:1.7;
+    /* BODY TEXT: keep all consistent */
+    .content p,
+    .content li{
+      margin:10px 0;
       color:#333;
-      font-size:1.05rem;
+      font-size:inherit;     /* inherit 1.05rem from .content */
+      line-height:inherit;
     }
 
     .content ul{
@@ -78,6 +90,35 @@
       color:#333;
     }
 
+    /* Kicker should NOT be larger than body text */
+    .kicker{
+      margin-top:0;
+      font-size:inherit;     /* same as body */
+      line-height:inherit;
+      color:#333;
+    }
+
+    /* Callout + two column layout */
+    .callout{
+      border:1px solid #e9edf2;
+      background:#fbfcfe;
+      border-radius:12px;
+      padding:18px 18px;
+      margin:18px 0 10px 0;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:12px;
+    }
+
+    @media(max-width:900px){
+      .two-col{ grid-template-columns:1fr; }
+    }
+
+    /* CTA */
     .cta{
       text-align:center;
       margin-top:35px;
@@ -97,17 +138,16 @@
 
     .cta button:hover{ background:#cf661d; }
 
-    footer{
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      font-size:.9rem;
-      margin-top:60px;
+    /* Make the CTA note the same body size (not smaller) */
+    .cta small{
+      display:block;
+      margin-top:10px;
+      color:#666;
+      font-size:inherit;     /* same as body */
+      line-height:inherit;
     }
 
-    footer a{ color:#E87722; text-decoration:none; }
-    footer a:hover{ text-decoration:underline; }
-
+    /* Modal */
     .modal-overlay{
       display:none;
       position:fixed;
@@ -129,8 +169,21 @@
       box-shadow:0 4px 12px rgba(0,0,0,0.25);
     }
 
-    .modal h2{ margin-top:0; color:#0E3557; }
-    .modal label{ display:block; margin-top:15px; font-weight:600; color:#0E3557; }
+    .modal h2{
+      margin-top:0;
+      color:#0E3557;
+      font-size:1.4rem;
+      line-height:1.25;
+    }
+
+    .modal label{
+      display:block;
+      margin-top:15px;
+      font-weight:600;
+      color:#0E3557;
+      font-size:1.05rem;   /* consistent */
+      line-height:1.4;
+    }
 
     .modal input,.modal textarea{
       width:100%;
@@ -139,6 +192,7 @@
       border-radius:6px;
       margin-top:5px;
       font-size:1rem;
+      line-height:1.4;
     }
 
     .modal textarea{ height:90px; }
@@ -152,6 +206,7 @@
       border:none;
       font-weight:bold;
       cursor:pointer;
+      font-size:1rem;
     }
 
     .close-btn{
@@ -159,6 +214,28 @@
       cursor:pointer;
       font-size:1.2rem;
       color:#777;
+    }
+
+    /* Footer */
+    footer{
+      background:#0E3557;
+      color:#fff;
+      padding:30px 20px;
+      font-size:.9rem;
+      margin-top:60px;
+      text-align:center;
+    }
+
+    footer a{ color:#E87722; text-decoration:none; }
+    footer a:hover{ text-decoration:underline; }
+
+    .footer-links{
+      margin-bottom:12px;
+      line-height:1.8;
+    }
+
+    .gst-disclaimer{
+      opacity:0.9;
     }
   </style>
 </head>
@@ -205,7 +282,7 @@
   <h2>What the Partner Receives</h2>
   <div class="two-col">
     <div class="callout">
-      <p><strong>Brand & Placement</strong></p>
+      <p><strong>Brand &amp; Placement</strong></p>
       <ul>
         <li>Major Sponsor credit for Season 1</li>
         <li>Vehicle featured across filming travel segments</li>
@@ -277,26 +354,26 @@
 </div>
 
 <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="/index.html">Home</a> |
-      <a href="/about.html">About Us</a> |
-      <a href="/towns/index.html">Towns</a> |
-      <a href="/partner.html">Partner With Us</a> |
-      <a href="/sponsorship.html">Sponsorship</a> |
-      <a href="/filming-map.html">Filming Map</a> |
-      <a href="/calendar.html">Calendar</a> |
-      <a href="/press.html">Press</a> |
-      <a href="/contact.html">Contact</a> |
-      <a href="/legal.html">Legal</a>
-    </div>
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
 
-    <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-      © 2026 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
-  </footer>
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
 
 <script>
 function openModal(){ document.getElementById("modalOverlay").style.display = "flex"; }
