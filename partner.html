@@ -219,6 +219,27 @@
       transform: translateY(-2px);
     }
 
+    .cta-callout{
+  margin-top:25px;
+  border:1px solid #e9edf2;
+  background:#fbfcfe;
+  border-radius:12px;
+  padding:20px;
+}
+
+.cta-callout h3{
+  margin:0 0 10px 0;
+  color:#0E3557;
+  font-size:1.05rem; /* keep consistent with body text look */
+  font-weight:800;
+}
+
+.cta-callout p{
+  margin:0 0 16px 0;
+  line-height:1.7;
+  color:#333;
+}
+
     footer {
       background: #0E3557;
       color: #fff;
@@ -324,12 +345,15 @@
     <li><strong>Long-tail value</strong> — content remains discoverable well beyond the filming period</li>
   </ul>
 
-  <p style="margin-top:20px;">
-Select the relevant package below to learn more about how your business can be featured.
-You can also view our <strong><a href="filming-map.html">Filming Map</a></strong> to see when
-ShowcasingOz TV will be visiting your region. Filming availability in each town is limited,
-so we recommend getting in touch with us early by emailing us at showcasingoztv@gmail.com early to secure a suitable time while we are in your area.
-</p>
+<div class="cta-callout">
+  <h3>Ready to be featured?</h3>
+  <p>
+    Select the relevant package below to learn more about how your business can be featured.
+    You can also view our <strong><a href="filming-map.html">Filming Map</a></strong> to see when ShowcasingOz TV will be visiting your region.
+    Filming availability in each town is limited, so we recommend getting in touch early to secure a suitable time while we are filming in your area.
+  </p>
+  <button class="cta-button" id="openBookingModal">Send a Filming Booking Enquiry</button>
+</div>
 
   <div style="text-align:center; margin-top:18px;">
     <a href="accommodation-partners.html" class="cta-button" id="accomBtn">Accommodation Packages</a>
@@ -352,12 +376,15 @@ so we recommend getting in touch with us early by emailing us at showcasingoztv@
     <li><strong>Ideal for regional marketing</strong> and tourism-driven audience discovery</li>
   </ul>
 
-    <p style="margin-top:20px;">
-Select the relevant package below to learn more about how your business can be featured.
-You can also view our <strong><a href="filming-map.html">Filming Map</a></strong> to see when
-ShowcasingOz TV will be visiting your region. Filming availability in each town is limited,
-so we recommend getting in touch with us early by emailing us at showcasingoztv@gmail.com early to secure a suitable time while we are in your area.
-</p>
+<div class="cta-callout">
+  <h3>Ready to be featured?</h3>
+  <p>
+    Select the relevant package below to learn more about how your business can be featured.
+    You can also view our <strong><a href="filming-map.html">Filming Map</a></strong> to see when ShowcasingOz TV will be visiting your region.
+    Filming availability in each town is limited, so we recommend getting in touch early to secure a suitable time while we are filming in your area.
+  </p>
+  <button class="cta-button" id="openBookingModal">Send a Filming Booking Enquiry</button>
+</div>
 
   <div style="text-align:center; margin-top:18px;">
     <a href="attraction-partners.html" class="cta-button" id="attractionBtn">Attraction Packages</a>
@@ -389,12 +416,15 @@ so we recommend getting in touch with us early by emailing us at showcasingoztv@
     <li><strong>Authentic feature</strong> that builds credibility and trust</li>
   </ul>
 
-    <p style="margin-top:20px;">
-Select the relevant package below to learn more about how your business can be featured.
-You can also view our <strong><a href="filming-map.html">Filming Map</a></strong> to see when
-ShowcasingOz TV will be visiting your region. Filming availability in each town is limited,
-so we recommend getting in touch with us early by emailing us at showcasingoztv@gmail.com early to secure a suitable time while we are in your area.
-</p>
+<div class="cta-callout">
+  <h3>Ready to be featured?</h3>
+  <p>
+    Select the relevant package below to learn more about how your business can be featured.
+    You can also view our <strong><a href="filming-map.html">Filming Map</a></strong> to see when ShowcasingOz TV will be visiting your region.
+    Filming availability in each town is limited, so we recommend getting in touch early to secure a suitable time while we are filming in your area.
+  </p>
+  <button class="cta-button" id="openBookingModal">Send a Filming Booking Enquiry</button>
+</div>
 
   <div style="text-align:center; margin-top:18px;">
     <a href="small-business-partners.html" class="cta-button" id="smallBizBtn">Small Business Packages</a>
@@ -442,6 +472,48 @@ so we recommend getting in touch with us early by emailing us at showcasingoztv@
       });
     });
   </script>
+
+  <div class="modal-overlay" id="bookingModalOverlay" style="display:none;">
+  <div class="modal">
+    <span class="close-btn" id="closeBookingModal">&times;</span>
+    <h2>Filming Booking Enquiry</h2>
+
+    <!-- Replace the action URL with your Formspree endpoint -->
+    <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+      <label>Your Name *</label>
+      <input type="text" name="name" required>
+
+      <label>Business Name *</label>
+      <input type="text" name="business" required>
+
+      <label>Email *</label>
+      <input type="email" name="email" required>
+
+      <label>Town / Region *</label>
+      <input type="text" name="town_region" required>
+
+      <label>Package Type *</label>
+      <select name="package_type" required>
+        <option value="" disabled selected>Select one</option>
+        <option>Accommodation</option>
+        <option>Attraction</option>
+        <option>Small Business</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <label>Message *</label>
+      <textarea name="message" required placeholder="Tell us what you’d like filmed and any preferred dates/times while we are in your area."></textarea>
+
+      <!-- Optional hidden subject line for your inbox -->
+      <input type="hidden" name="_subject" value="Filming Booking Enquiry">
+
+      <button type="submit">Send Enquiry</button>
+      <p style="margin:12px 0 0 0; color:#666; font-size:0.95rem;">
+        We’ll respond by email with next steps and available time options.
+      </p>
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
