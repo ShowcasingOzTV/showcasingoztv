@@ -10,534 +10,714 @@
     gtag('config', 'G-RB6N742VZW');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Accommodation Packages | ShowcasingOz TV</title>
-  <meta name="description" content="Showcase your accommodation through professional filming featured across ShowcasingOz TV episodes, social media, and tourism content campaigns." />
-  <meta name="keywords" content="ShowcasingOz TV, accommodation filming packages, tourism marketing, regional accommodation promotion, travel media Australia" />
+  <meta name="description" content="Accommodation filming packages for motels, caravan parks, B&Bs, lodges and resorts — built to increase visibility and drive bookings." />
+  <link rel="canonical" href="https://www.showcasingoztv.com.au/accommodation-partners.html" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Accommodation Packages | ShowcasingOz TV" />
+  <meta property="og:description" content="Feature your accommodation with ShowcasingOz TV and receive clear, reusable marketing assets that help drive enquiries and bookings." />
+  <meta property="og:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ShowcasingOz TV" />
+  <meta property="og:locale" content="en_AU" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Accommodation Packages | ShowcasingOz TV" />
+  <meta name="twitter:description" content="Accommodation packages designed to showcase your property and help convert travellers into bookings." />
+  <meta name="twitter:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
 
   <style>
     :root{
-      --navy:#0b2a44;
-      --orange:#f47a20;
-      --soft:#f5f7fb;
-      --text:#1d2b36;
-      --muted:#5b6772;
+      --nav:#0d3150;
+      --accent:#E87722;
+      --text:#0E3557;
+      --muted:#6b7280;
       --card:#ffffff;
-      --border:#e9edf2;
-      --shadow:0 10px 26px rgba(0,0,0,.08);
-      --radius:14px;
+      --intro-bg:#fff6ef;
+      --soft:#f4f6f8;
     }
-
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:#fff;
+    body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
+
+    /* Header */
+    header.navbar{background:var(--nav); color:#fff; padding:12px 0; position:sticky; top:0; z-index:1000;}
+    header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;}
+    header img{height:52px;}
+    nav.primary{display:flex;gap:20px;align-items:center}
+    nav.primary a{color:#fff;text-decoration:none;font-weight:600}
+    nav.primary a:hover{color:var(--accent)}
+    .menu-btn{display:none;color:#fff;cursor:pointer}
+    @media(max-width:768px){
+      .menu-btn{display:block}
+      nav.primary{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:68px;
+        right:0;
+        background:var(--nav);
+        width:100%;
+      }
+      nav.primary.active{display:flex}
+      nav.primary a{
+        padding:12px;
+        border-top:1px solid rgba(255,255,255,0.06);
+      }
     }
 
-    /* ===== Header / Nav (unchanged structure) ===== */
-    header.navbar{
-      background:var(--navy);
-      color:#fff;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 4px 14px rgba(0,0,0,.15);
-    }
-    .nav-inner{
-      max-width:1400px;
-      margin:0 auto;
-      padding:12px 18px;
-      display:flex;
-      align-items:center;
-      gap:14px;
-      justify-content:space-between;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      color:#fff;
-      font-weight:700;
-      letter-spacing:.2px;
-      white-space:nowrap;
-    }
-    .brand img{
-      height:34px;
-      width:auto;
-      display:block;
-    }
-    nav.primary{
-      display:flex;
-      gap:14px;
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    nav.primary a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-      font-size:13px;
-      opacity:.92;
-      padding:6px 8px;
-      border-radius:10px;
-    }
-    nav.primary a:hover{background:rgba(255,255,255,.10); opacity:1}
-
-    /* ===== MAIN LAYOUT FIX ===== */
-    .wrap{
-      max-width:none;
-      width:min(1400px, calc(100% - 36px));
-      margin:34px auto;
-      padding:0;
-    }
-    main.wrap{display:block;}
-
-    h1{
-      text-align:center;
-      margin:0 0 8px;
-      font-size:30px;
-      letter-spacing:.2px;
-    }
-    .subhead{
-      text-align:center;
-      margin:0 auto 18px;
-      color:var(--muted);
-      max-width:900px;
-      line-height:1.6;
-      font-size:14px;
-    }
+    /* Page */
+    .wrap{max-width:1200px;margin:34px auto;padding:0 18px}
+    h1{margin:0 0 12px; text-align:center; color:var(--nav)}
+    .subhead{max-width:980px;margin:0 auto 18px;text-align:center;color:#333;line-height:1.65}
 
     .info-box{
-      width:100%;
-      max-width:none;
-      margin:22px 0 0;
+      margin:22px auto 0;
       background:var(--soft);
-      border:1px solid var(--border);
+      border:1px solid #e9edf2;
       border-radius:12px;
       padding:18px 18px;
     }
-    .info-box strong{display:block; margin-bottom:6px}
-    .info-box p{margin:0; color:#33414d; line-height:1.6}
+    .info-box h2{
+      margin:0 0 10px;
+      color:var(--nav);
+      font-size:1.15rem;
+    }
+    .info-box p{margin:0 0 10px; color:#333; line-height:1.7}
+    .info-box p:last-child{margin-bottom:0}
 
-    .section-title{
-      margin:26px 0 10px;
-      font-size:18px;
+    .pill{
+      display:inline-block;
       font-weight:800;
-      color:#14212b;
-      letter-spacing:.2px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--intro-bg);
+      border-left:6px solid var(--accent);
+      color:var(--accent);
+      margin-top:8px;
     }
 
-    .package-desc{
-      margin:0 auto 8px;
-      color:#333;
-      line-height:1.6;
-      text-align:center;
-      max-width:360px;
+    h2.section-title{
+      color:var(--nav);
+      margin:32px 0 12px;
+      border-bottom:3px solid var(--accent);
+      display:inline-block;
+      padding-bottom:6px;
     }
 
-    /* ===== GRID FIXES ===== */
-    .packages{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-      gap:18px;
-      margin-top:18px;
-    }
+    /* Packages grid */
+    .packages{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:18px;margin-top:18px}
 
-    .card{
+    .package-card{
       background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:18px 18px 16px;
-      box-shadow:var(--shadow);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(14,53,87,0.06);
       display:flex;
       flex-direction:column;
-      min-height:100%;
+      justify-content:space-between;
     }
-    .card h3{
-      margin:0 0 8px;
-      font-size:15px;
-      font-weight:800;
-      color:#13202a;
-    }
+    .package-top{text-align:center}
+    .package-card h3{margin:6px 0 4px;color:var(--nav);font-size:1.15rem}
+    .package-desc{margin:0 auto 8px; color:#333; line-height:1.6; text-align:center; max-width:360px}
 
-    .price-wrap{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
-    .intro{
-      font-size:20px;
+    .price-stack{margin-top:10px;text-align:center}
+    .intro-price{
+      display:inline-block;
+      background:var(--intro-bg);
+      border-left:6px solid var(--accent);
+      padding:10px 12px;
+      border-radius:8px;
       font-weight:900;
-      color:var(--orange);
-      line-height:1.1;
+      color:var(--accent);
+      font-size:22px;
+      line-height:1.2;
     }
-    .std{
-      font-size:12px;
-      color:#6b7782;
-      font-weight:700;
-    }
+    .intro-note{display:block;font-size:13px;color:var(--muted);font-weight:700;margin-top:6px}
+    .std-price{margin-top:10px;font-weight:800;color:var(--text);opacity:0.92}
 
-    .card .label{
-      margin-top:10px;
-      font-size:12px;
-      color:#33414d;
-      font-weight:800;
+    .deliverables{
+      margin-top:14px;
+      padding-top:12px;
+      border-top:1px solid #eef1f4;
+      color:#1f2a37;
+      line-height:1.6;
+      font-size:14px;
     }
-    ul{
-      margin:8px 0 0;
-      padding-left:18px;
-      color:#2b3741;
-      line-height:1.55;
-      font-size:13px;
-    }
-    li{margin:6px 0}
+    .deliverables ul{margin:8px 0 0 18px}
+    .deliverables li{margin:6px 0}
 
-    .cta{
-      margin-top:auto;
-      padding-top:14px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:100%;
-      background:var(--orange);
+    .btn-row{margin-top:16px;text-align:center}
+    .cta-button{
+      display:inline-block;
+      background:var(--accent);
       color:#fff;
+      padding:12px 18px;
+      border-radius:8px;
       text-decoration:none;
       font-weight:900;
-      border-radius:10px;
-      padding:10px 12px;
-      font-size:13px;
-      box-shadow:0 10px 18px rgba(244,122,32,.18);
+      border:0;
+      cursor:pointer;
     }
-    .btn:hover{filter:brightness(0.98)}
+    .cta-button:hover{background:#c45e15}
 
-    /* Exchange grid */
-    .exchange-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:18px;
-      margin-top:18px;
-    }
-    .exchange-card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-    }
-    .exchange-card h4{
-      margin:0 0 8px;
-      font-size:14px;
-      font-weight:900;
-      color:#13202a;
-    }
+    /* Exchange section */
+    .exchange-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px,1fr));gap:18px;margin-top:18px}
 
+    /* CTA panel */
     .final-cta{
-      width:100%;
-      max-width:none;
-      margin:28px 0 0;
-      border:1px solid var(--border);
+      margin:28px auto 0;
+      border:1px solid #e9edf2;
       background:#fbfcfe;
       border-radius:12px;
       padding:20px;
       text-align:center;
     }
-    .final-cta h3{margin:0 0 8px}
-    .final-cta p{margin:0 0 12px; color:#33414d; line-height:1.6}
+    .final-cta h3{margin:0 0 10px;color:var(--nav)}
+    .final-cta p{margin:0 0 14px;color:#333;line-height:1.7}
 
-    .btn-secondary{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:var(--orange);
-      color:#fff;
-      text-decoration:none;
-      font-weight:900;
-      border-radius:10px;
-      padding:10px 14px;
-      font-size:13px;
-    }
+    .note{font-size:0.95rem;color:var(--muted);margin-top:16px;text-align:center}
 
-    .note{
-      margin:16px 0 0;
-      text-align:center;
-      color:#6b7782;
-      font-size:12px;
-    }
+    /* Footer */
+    footer{background:var(--nav); color:#fff; padding:26px 18px; text-align:center; margin-top:44px}
+    footer .footer-links{margin-bottom:8px}
+    footer a{color:var(--accent); text-decoration:none; margin:0 8px}
+    footer a:hover{text-decoration:underline}
+    .gst-disclaimer{opacity:0.9}
 
-    /* ===== Footer (kept) ===== */
-    footer{
-      background:var(--navy);
-      color:#fff;
-      margin-top:36px;
-      padding:18px 0 26px;
-    }
-    .footer-inner{
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 18px;
-      text-align:center;
-      font-size:12px;
-      opacity:.92;
-      line-height:1.6;
-    }
-    .footer-links{
-      margin:10px 0 0;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
-    }
-    .footer-links a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      opacity:.92;
-      padding:4px 8px;
-      border-radius:10px;
-    }
-    .footer-links a:hover{background:rgba(255,255,255,.10); opacity:1}
-
-    /* Modal (kept if present) */
-    .modal-backdrop{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.6);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:18px;
-      z-index:2000;
-    }
-    .modal{
-      background:#fff;
-      width:min(720px, 100%);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 30px 70px rgba(0,0,0,.35);
-    }
-    .modal-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      margin-bottom:10px;
-    }
-    .modal-head h3{margin:0; font-size:16px}
-    .x{
-      border:0;
-      background:transparent;
-      font-size:22px;
-      cursor:pointer;
-      line-height:1;
-    }
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:2000}
+    .modal{background:#fff;padding:20px;border-radius:12px;max-width:560px;width:95%;box-shadow:0 8px 30px rgba(0,0,0,0.25);position:relative}
+    .modal h3{margin:0 0 12px;color:var(--nav)}
+    .modal .close-btn{position:absolute;right:12px;top:10px;background:transparent;border:0;font-size:18px;cursor:pointer;color:var(--muted)}
+    .form-row{margin-bottom:10px}
+    label{display:block;font-weight:800;margin-bottom:6px;color:var(--text)}
+    input[type="text"], input[type="email"], textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px}
+    textarea{min-height:110px;resize:vertical}
+    .modal .btn-submit{background:var(--nav);color:#fff;border:0;padding:11px 14px;border-radius:8px;font-weight:900;cursor:pointer}
+    .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
+    .thank-you{display:none;text-align:center;padding:20px}
+    .error{color:#b00020;margin-top:8px}
   </style>
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="navbar">
     <div class="container">
-      <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+      <a href="/index.html"><img src="/images/logo.png" alt="ShowcasingOz TV Logo"></a>
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
       <nav id="menu" class="primary">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About Us</a>
-        <a href="../towns/index.html">Towns</a>
-        <a href="../partner.html">Partner With Us</a>
-        <a href="../sponsorship.html">Sponsorship</a>
-        <a href="../filming-map.html">Filming Map</a>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/towns/index.html">Towns</a>
+        <a href="/partner.html">Partner With Us</a>
+        <a href="/sponsorship.html">Sponsorship</a>
+        <a href="/filming-map.html">Filming Map</a>
         <a href="/calendar.html">Calendar</a>
-        <a href="../press.html">Press</a>
-        <a href="../contact.html">Contact</a>
+        <a href="/press.html">Press</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-<main class="wrap">
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', ()=> {
+      document.getElementById('menu').classList.toggle('active');
+    });
+  </script>
 
-  <h1>Accommodation Packages</h1>
-  <p class="subhead">
-    Showcase your accommodation to a national audience through professionally filmed content featured across ShowcasingOz TV.
-  </p>
-
-  <div class="info-box">
-    <strong>What you're actually buying</strong>
-    <p>
-      These packages secure dedicated filming time at your property during the ShowcasingOz filming tour.
-      Content captured may be used in episodes, social media, and future promotional materials.
+  <main class="wrap">
+    <h1>Accommodation Packages</h1>
+    <p class="subhead">
+      ShowcasingOz TV is filming across Australia from <strong>June–December 2026</strong>.
+      If your accommodation is on our route, we can showcase your property and supply clear marketing assets designed
+      to increase visibility and help convert travellers into enquiries and bookings.
     </p>
-  </div>
 
-  <h2 class="section-title">Season 1 Accommodation Packages</h2>
+    <div class="info-box">
+      <h2>What you’re actually buying</h2>
+      <p>
+        These packages are built for accommodation owners — not for film industry people.
+        Everything is delivered in plain language, with clear “what you receive” outcomes you can use in your marketing.
+      </p>
+      <p>
+        <strong>Introductory Price – Valid until December 31st, 2026.</strong>
+        After this date, pricing reverts to Standard rates.
+      </p>
+      <p style="margin-top:10px;">
+        To view available appointment times while we are in your region, visit our
+        <strong><a href="/calendar.html">Calendar</a></strong> page.
+        The buttons below are for enquiries only.
+      </p>
+      <span class="pill">Limited filming allocations per town</span>
+    </div>
 
-  <div class="packages">
+    <h2 class="section-title">Season 1 Accommodation Packages</h2>
 
-    <article class="card">
-      <h3>Professional Property Showcase Package</h3>
-      <div class="price-wrap">
-        <div class="intro">Introductory Price – $1,188</div>
-        <div class="std">Standard Price: $1,485</div>
+    <div class="packages">
+
+      <!-- PACKAGE 1 -->
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟫 Professional Property Showcase Package</h3>
+          <p class="package-desc">
+            A strong “starter” package designed to help travellers understand your property quickly and confidently.
+          </p>
+
+          <div class="price-stack">
+            <div class="intro-price">$1,188</div>
+            <span class="intro-note">Introductory Price – Valid until Dec 31, 2026</span>
+            <div class="std-price">Standard Price: $1,485</div>
+          </div>
+        </div>
+
+        <div class="deliverables">
+          <strong>Onsite filming session (up to 60 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>Reception and common areas</li>
+            <li>Selected room types (up to 2 room styles)</li>
+            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+            <li>Surroundings and location context</li>
+            <li>Short guided owner/manager introduction (optional)</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 45–60 second</strong> property showcase video</li>
+            <li><strong>2 x</strong> short <strong>20–30 second</strong> social media clips</li>
+            <li><strong>5</strong> high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li>Delivery within <strong>30 days</strong> post-filming</li>
+          </ul>
+        </div>
+
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — Professional Property Showcase Package Enquiry">
+            Enquire Now
+          </a>
+        </div>
       </div>
-      <div class="label">What you receive</div>
-      <ul>
-        <li>Professional video showcase of your accommodation</li>
-        <li>Exterior & interior filming (rooms, facilities, amenities)</li>
-        <li>Drone footage (where permitted)</li>
-        <li>Inclusion in ShowcasingOz TV episode</li>
-        <li>Social media exposure across ShowcasingOz platforms</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire / Reserve a Slot</a>
-      </div>
-    </article>
 
-    <article class="card">
-      <h3>Extended Promotional Package</h3>
-      <div class="price-wrap">
-        <div class="intro">Introductory Price – $1,716</div>
-        <div class="std">Standard Price: $2,145</div>
-      </div>
-      <div class="label">What you receive</div>
-      <ul>
-        <li>Everything in the Professional Showcase Package</li>
-        <li>Extended filming time for a deeper property story</li>
-        <li>More room types / facilities featured</li>
-        <li>Expanded episode feature and supporting clips</li>
-        <li>Additional social media promotion</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire / Reserve a Slot</a>
-      </div>
-    </article>
+      <!-- PACKAGE 2 -->
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟪 Extended Promotional Package</h3>
+          <p class="package-desc">
+            For properties that want stronger conversion — more content coverage and more promotional flexibility.
+          </p>
 
-    <article class="card">
-      <h3>Premier Showcase Package</h3>
-      <div class="price-wrap">
-        <div class="intro">Introductory Price – $2,396</div>
-        <div class="std">Standard Price: $2,995</div>
+          <div class="price-stack">
+            <div class="intro-price">$1,716</div>
+            <span class="intro-note">Introductory Price – Valid until Dec 31, 2026</span>
+            <div class="std-price">Standard Price: $2,145</div>
+          </div>
+        </div>
+
+        <div class="deliverables">
+          <strong>Onsite filming session (up to 75 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>Reception and common areas</li>
+            <li>Up to 3 room types (where available)</li>
+            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+            <li>Surroundings and location context</li>
+            <li>Guest experience highlights (where appropriate)</li>
+            <li>Guided owner/manager introduction</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 90–120 second</strong> promotional video</li>
+            <li><strong>Aerial footage</strong> via licensed drone pilot (subject to weather &amp; airspace regulations)</li>
+            <li><strong>2 x</strong> short <strong>20–30 second</strong> social media clips</li>
+            <li><strong>10</strong> high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li><strong>Priority positioning</strong> in online release scheduling</li>
+            <li>Delivery within <strong>21 days</strong> post-filming</li>
+          </ul>
+        </div>
+
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — Extended Promotional Package Enquiry">
+            Enquire Now
+          </a>
+        </div>
       </div>
-      <div class="label">What you receive</div>
-      <ul>
-        <li>Everything in the Extended Promotional Package</li>
-        <li>Priority filming placement (where scheduling allows)</li>
-        <li>Expanded storytelling segment and additional coverage</li>
-        <li>Multiple short promotional clips for your own marketing use</li>
-        <li>Priority social promotion during release window</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire / Reserve a Slot</a>
+
+      <!-- PACKAGE 3 -->
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟨 Premier Showcase Package</h3>
+          <p class="package-desc">
+            The premium option for operators who want the strongest showcase and a full suite of reusable assets.
+          </p>
+
+          <div class="price-stack">
+            <div class="intro-price">$2,396</div>
+            <span class="intro-note">Introductory Price – Valid until Dec 31, 2026</span>
+            <div class="std-price">Standard Price: $2,995</div>
+          </div>
+        </div>
+
+        <div class="deliverables">
+          <strong>Onsite filming session (up to 90 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>Reception and common areas</li>
+            <li>Multiple room types (where available)</li>
+            <li>Key facilities and standout features (pool, gardens, dining areas, camp kitchens, etc.)</li>
+            <li>Surroundings and location context</li>
+            <li>Guest experience highlights (where appropriate)</li>
+            <li>Guided owner/manager introduction</li>
+            <li>Additional detailed feature shots to enhance storytelling</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 2–3 minute</strong> promotional video</li>
+            <li><strong>4 x</strong> short <strong>20–30 second</strong> social media clips</li>
+            <li><strong>15</strong> high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li><strong>Priority delivery</strong> within <strong>14 days</strong> post-filming</li>
+          </ul>
+        </div>
+
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — Premier Showcase Package Enquiry">
+            Enquire Now
+          </a>
+        </div>
       </div>
-    </article>
 
-  </div>
+    </div><!-- /packages -->
 
-  <h2 class="section-title" id="stay-for-free">Stay-For-Free Exchange Packages (Limited)</h2>
+    <!-- STAY-FOR-FREE EXCHANGE -->
+    <h2 class="section-title" id="stay-for-free">🆓 Stay-for-Free Exchange Packages (Limited)</h2>
 
-  <div class="info-box">
-    <strong>How the exchange works</strong>
-    <p>
-      Exchange packages are limited and offered only where they align with our filming route and logistics.
-      All exchange enquiries must be submitted via the enquiry form. Availability is shown on the Filming Calendar.
+    <div class="info-box" style="margin-top:14px;">
+      <p style="margin:0;">
+        If a paid package isn’t suitable, we offer a limited number of <strong>Stay-for-Free Exchange Packages</strong>.
+        Your accommodation supports our crew stay during filming, and in return we deliver an equivalent content package.
+        Availability is limited and depends on the route schedule and town-by-town capacity.
+      </p>
+      <p style="margin:10px 0 0;">
+        To check when we are in your town and what slots are available, visit our
+        <strong><a href="/calendar.html">Calendar</a></strong> page.
+      </p>
+    </div>
+
+    <div class="exchange-grid">
+
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟩 1 Night Exchange</h3>
+          <p class="package-desc">Ideal for overnight stopovers, roadhouses, and single-night hosts.</p>
+        </div>
+        <div class="deliverables">
+          <strong>Typical requirement:</strong>
+          <ul>
+            <li>Accommodation for our crew for <strong>1 night</strong> (rooms/configuration confirmed during enquiry)</li>
+          </ul>
+          <strong>Onsite filming session (up to 30 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>One selected room type</li>
+            <li>Key common area</li>
+            <li>Property access, parking areas &amp; street presence</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 30–45 second</strong> property showcase video</li>
+            <li><strong>1 x</strong> short social media clip</li>
+            <li><strong>2</strong> high-quality still images</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Delivery within <strong>30 days</strong> post-filming</li>
+          </ul>
+        </div>
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — 1 Night Stay-for-Free Exchange Enquiry">Express Interest</a>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟨 2 Night Exchange</h3>
+          <p class="package-desc">Enhanced coverage for properties hosting us for two nights.</p>
+        </div>
+        <div class="deliverables">
+          <strong>Typical requirement:</strong>
+          <ul>
+            <li>Accommodation for our crew for <strong>2 nights</strong> (rooms/configuration confirmed during enquiry)</li>
+          </ul>
+          <strong>Onsite filming session (up to 45 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>Two room types (where available)</li>
+            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+            <li>Short owner introduction (optional)</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 45–60 second</strong> property showcase video</li>
+            <li><strong>2 x</strong> short social media clips</li>
+            <li><strong>5</strong> high-quality still images</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Delivery within <strong>30 days</strong> post-filming</li>
+          </ul>
+        </div>
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — 2 Night Stay-for-Free Exchange Enquiry">Express Interest</a>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟧 3 Night Exchange</h3>
+          <p class="package-desc">Comprehensive visual coverage for key regional base properties.</p>
+        </div>
+        <div class="deliverables">
+          <strong>Typical requirement:</strong>
+          <ul>
+            <li>Accommodation for our crew for <strong>3 nights</strong> (rooms/configuration confirmed during enquiry)</li>
+          </ul>
+          <strong>Onsite filming session (up to 60 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>Multiple room types</li>
+            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+            <li>Surroundings</li>
+            <li>Short owner introduction (optional)</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 60–75 second</strong> property showcase video</li>
+            <li><strong>2 x</strong> short social media clips</li>
+            <li><strong>5</strong> high-quality still images</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Delivery within <strong>30 days</strong> post-filming</li>
+          </ul>
+        </div>
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — 3 Night Stay-for-Free Exchange Enquiry">Express Interest</a>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <div class="package-top">
+          <h3>⭐ 4+ Night Exchange</h3>
+          <p class="package-desc">For long-term hosts — receive the full Professional Property Showcase content package.</p>
+        </div>
+        <div class="deliverables">
+          <strong>Typical requirement:</strong>
+          <ul>
+            <li>Accommodation for our crew for <strong>4+ nights</strong> (by agreement)</li>
+          </ul>
+          <strong>Onsite filming session (up to 60 minutes):</strong>
+          <ul>
+            <li>Exterior frontage &amp; signage</li>
+            <li>Reception and common areas</li>
+            <li>Selected room types (up to 2 room styles)</li>
+            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+            <li>Surroundings and location context</li>
+            <li>Short guided owner/manager introduction (optional)</li>
+          </ul>
+          <strong>What you receive:</strong>
+          <ul>
+            <li><strong>1 x professionally edited 60–75 second</strong> property showcase video</li>
+            <li><strong>2 x</strong> short <strong>20–30 second</strong> social media clips</li>
+            <li><strong>5</strong> high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li>Delivery within <strong>30 days</strong> post-filming</li>
+          </ul>
+        </div>
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Accommodation — 4+ Night Stay-for-Free Exchange Enquiry">Express Interest</a>
+        </div>
+      </div>
+
+    </div><!-- /exchange-grid -->
+
+    <div class="final-cta">
+      <h3>Want to lock in a suitable filming time?</h3>
+      <p>
+        Filming availability in each town is limited. To view available appointment times while we are in your region, visit our
+        <strong><a href="/calendar.html">Calendar</a></strong> page.
+        If you have questions first, send an enquiry below.
+      </p>
+      <a class="cta-button open-modal" href="#" data-title="Accommodation — General Enquiry">Send an Enquiry</a>
+    </div>
+
+    <p class="note">
+      <strong>Note:</strong> Prices listed are <strong>exclusive of GST</strong>. GST will be added once ShowcasingOz TV becomes GST-registered.
     </p>
+
+  </main><!-- ✅ IMPORTANT: close main properly -->
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBack">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-btn" id="modalClose" aria-label="Close modal">&times;</button>
+
+      <div id="formContainer">
+        <h3 id="modalTitle">Filming Booking Enquiry</h3>
+
+        <form id="interestForm" action="https://formspree.io/f/movynnqj" method="POST">
+          <input type="hidden" name="subject" id="formSubject" value="Accommodation Enquiry">
+
+          <div class="form-row">
+            <label for="accomName">Accommodation name <span style="color:#b00020">*</span></label>
+            <input id="accomName" name="accommodation_name" type="text" required placeholder="Business name">
+          </div>
+
+          <div class="form-row">
+            <label for="contactName">Your name <span style="color:#b00020">*</span></label>
+            <input id="contactName" name="contact_name" type="text" required placeholder="Your full name">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email address <span style="color:#b00020">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <label for="town">Town / location <span style="color:#b00020">*</span></label>
+            <input id="town" name="town" type="text" required placeholder="Town / region name">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message / details <span style="color:#b00020">*</span></label>
+            <textarea id="message" name="message" required placeholder="Tell us what package you’re interested in, and which dates you’re considering (you can reference the Calendar page)."></textarea>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button type="submit" class="btn-submit">Send enquiry</button>
+            <div id="formStatus" style="font-size:0.95rem;color:var(--muted)"></div>
+          </div>
+
+          <div class="error" id="formError" role="alert" aria-live="polite" style="display:none"></div>
+        </form>
+      </div>
+
+      <div class="thank-you" id="thankYou">
+        <h3>Thank you — your enquiry has been received</h3>
+        <p>We’ll get back to you as soon as possible.</p>
+        <button class="btn-submit" id="thankClose">Close</button>
+      </div>
+
+    </div>
   </div>
-
-  <div class="exchange-grid">
-
-    <div class="exchange-card">
-      <h4>Exchange Option 1</h4>
-      <ul>
-        <li>1 night accommodation</li>
-        <li>Basic property coverage during filming window</li>
-        <li>Episode inclusion (where relevant)</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire</a>
-      </div>
-    </div>
-
-    <div class="exchange-card">
-      <h4>Exchange Option 2</h4>
-      <ul>
-        <li>2 nights accommodation</li>
-        <li>Extended property feature</li>
-        <li>Episode inclusion (where relevant)</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire</a>
-      </div>
-    </div>
-
-    <div class="exchange-card">
-      <h4>Exchange Option 3</h4>
-      <ul>
-        <li>2–3 nights accommodation</li>
-        <li>Expanded filming coverage</li>
-        <li>Social promotion inclusion</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire</a>
-      </div>
-    </div>
-
-    <div class="exchange-card">
-      <h4>Exchange Option 4</h4>
-      <ul>
-        <li>3+ nights accommodation</li>
-        <li>Priority filming opportunity (where possible)</li>
-        <li>Extended promotional coverage</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="/contact.html">Enquire</a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="final-cta">
-    <h3>Want to lock in a suitable filming time?</h3>
-    <p>
-      Filming availability is limited. Check available dates and locations on our Filming Calendar, then submit an enquiry to reserve your slot.
-    </p>
-    <a class="btn-secondary" href="/calendar.html"><i class="fa-regular fa-calendar"></i> View Filming Calendar</a>
-  </div>
-
-  <p class="note">
-    Note: All prices shown are AUD. Introductory prices apply to Season 1 only.
-  </p>
-
-</main>
 
   <!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/towns/index.html">Towns</a> |
-    <a href="/partner.html">Partner With Us</a> |
-    <a href="/sponsorship.html">Sponsorship</a> |
-    <a href="/filming-map.html">Filming Map</a> |
-    <a href="/calendar.html">Calendar</a> |
-    <a href="/press.html">Press</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/legal.html">Legal</a>
-  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="/index.html">Home</a> |
+      <a href="/about.html">About Us</a> |
+      <a href="/towns/index.html">Towns</a> |
+      <a href="/partner.html">Partner With Us</a> |
+      <a href="/sponsorship.html">Sponsorship</a> |
+      <a href="/filming-map.html">Filming Map</a> |
+      <a href="/calendar.html">Calendar</a> |
+      <a href="/press.html">Press</a> |
+      <a href="/contact.html">Contact</a> |
+      <a href="/legal.html">Legal</a>
+    </div>
 
-  <p>
-    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">
-      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
-    </span><br>
-    © 2026 ShowcasingOz TV · Discover. Capture. Share.
-  </p>
-</footer>
+    <p>
+      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+      </span><br>
+      © 2026 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+  </footer>
+
+  <script>
+    (function(){
+      const modalBack = document.getElementById('modalBack');
+      const modalClose = document.getElementById('modalClose');
+      const openButtons = document.querySelectorAll('.open-modal');
+      const form = document.getElementById('interestForm');
+      const subjectInput = document.getElementById('formSubject');
+      const formStatus = document.getElementById('formStatus');
+      const formError = document.getElementById('formError');
+      const thankYou = document.getElementById('thankYou');
+      const formContainer = document.getElementById('formContainer');
+      const thankClose = document.getElementById('thankClose');
+
+      function openModal(title){
+        subjectInput.value = title || 'Accommodation Enquiry';
+        document.getElementById('modalTitle').textContent = 'Filming Booking Enquiry';
+        formStatus.textContent = '';
+        formError.style.display = 'none';
+        formError.textContent = '';
+        formContainer.style.display = 'block';
+        thankYou.style.display = 'none';
+        modalBack.style.display = 'flex';
+        setTimeout(()=>document.getElementById('accomName').focus(),140);
+      }
+
+      function closeModal(){
+        modalBack.style.display = 'none';
+      }
+
+      openButtons.forEach(btn=>{
+        btn.addEventListener('click',function(e){
+          e.preventDefault();
+          const title = this.dataset.title || 'Accommodation Enquiry';
+          openModal(title);
+        });
+      });
+
+      modalClose.addEventListener('click',closeModal);
+      modalBack.addEventListener('click',e=>{
+        if(e.target === modalBack){ closeModal(); }
+      });
+      thankClose.addEventListener('click',closeModal);
+
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        formError.style.display = 'none';
+        formError.textContent = '';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        formStatus.textContent = 'Sending...';
+
+        const data = new FormData(form);
+
+        fetch(form.action,{
+          method:'POST',
+          body:data,
+          headers:{'Accept':'application/json'}
+        })
+        .then(response=>{
+          submitBtn.disabled = false;
+          if(response.ok){
+            form.reset();
+            formContainer.style.display = 'none';
+            thankYou.style.display = 'block';
+            formStatus.textContent = '';
+          } else {
+            throw new Error('There was a problem submitting the form. Please try again.');
+          }
+        })
+        .catch(err=>{
+          submitBtn.disabled = false;
+          formStatus.textContent = '';
+          formError.style.display = 'block';
+          formError.textContent = err.message || 'Submission failed — please try again.';
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
