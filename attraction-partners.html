@@ -12,13 +12,13 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Attraction Partnerships | ShowcasingOz TV</title>
-  <meta name="description" content="Feature your attraction on ShowcasingOz TV — visitor experiences, walk-throughs, drone footage and social bundles to grow visitation." />
-  <link rel="canonical" href="https://www.showcasingoztv.com.au/attraction-partners.html" />
+  <title>Attraction Marketing & Filming Packages | ShowcasingOz TV</title>
+  <meta name="description" content="Attraction marketing and filming packages for museums, galleries, wildlife parks, adventure experiences, tours and regional visitor attractions — built to increase visibility, drive visitation, and support ticket sales." />
+  <link rel="canonical" href="https://www.showcasingoztv.com.au/attractions-partners.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Attraction Partnerships | ShowcasingOz TV" />
-  <meta property="og:description" content="Showcase your attraction with cinematic videos, photography, promotional ads and social assets from ShowcasingOz TV." />
+  <meta property="og:title" content="Attraction Marketing & Filming Packages | ShowcasingOz TV" />
+  <meta property="og:description" content="Professional attraction filming packages designed to help tourism operators increase visibility, strengthen promotion, and drive visitor enquiries and ticket sales." />
   <meta property="og:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ShowcasingOz TV" />
@@ -26,20 +26,9 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Attraction Partnerships | ShowcasingOz TV" />
-  <meta name="twitter:description" content="Video and promotional marketing packages for attractions — tours, theme parks, museums, wildlife experiences and adventure operators." />
+  <meta name="twitter:title" content="Attraction Marketing & Filming Packages | ShowcasingOz TV" />
+  <meta name="twitter:description" content="Promotional filming packages for attractions and visitor experiences across regional Australia." />
   <meta name="twitter:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Attraction Partnerships | ShowcasingOz TV",
-    "url":"https://www.showcasingoztv.com.au/attraction-partners.html",
-    "description":"Attraction partner packages for tours, theme parks, museums, wildlife experiences and adventure operators. Filming, photography and social content."
-  }
-  </script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
@@ -52,9 +41,14 @@
       --muted:#6b7280;
       --card:#ffffff;
       --intro-bg:#fff6ef;
+      --soft:#f4f6f8;
+      --soft-blue:#f7fbff;
+      --success:#eaf7ef;
     }
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
+
+    /* Header */
     header.navbar{background:var(--nav); color:#fff; padding:12px 0; position:sticky; top:0; z-index:1000;}
     header .container{max-width:1200px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;}
     header img{height:52px;}
@@ -80,127 +74,248 @@
       }
     }
 
-    .hero{background:#808386;padding:78px 20px;text-align:center;color:#fff}
-    .hero h1{font-size:34px;margin:0 0 10px;text-shadow:0 2px 6px rgba(0,0,0,0.35)}
-    .hero p{margin:0;opacity:0.95}
+    /* Page */
+    .wrap{max-width:1200px;margin:34px auto;padding:0 18px}
+    h1{margin:0 0 12px; text-align:center; color:var(--nav)}
+    .subhead{max-width:980px;margin:0 auto 18px;text-align:center;color:#333;line-height:1.65}
 
-    .wrap{max-width:1100px;margin:34px auto;padding:0 18px}
-    h2{color:var(--nav); margin:0 0 12px; border-bottom:3px solid var(--accent); display:inline-block; padding-bottom:6px}
-    p.lead{color:#333;line-height:1.7;margin-top:6px}
+    .info-box{
+      margin:22px auto 0;
+      background:var(--soft);
+      border:1px solid #e9edf2;
+      border-radius:12px;
+      padding:18px 18px;
+    }
+    .info-box h2{
+      margin:0 0 10px;
+      color:var(--nav);
+      font-size:1.15rem;
+    }
+    .info-box p{margin:0 0 10px; color:#333; line-height:1.7}
+    .info-box p:last-child{margin-bottom:0}
 
-    .note{font-size:0.95rem;color:var(--muted);margin-top:12px}
+    .pill{
+      display:inline-block;
+      font-weight:800;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--intro-bg);
+      border-left:6px solid var(--accent);
+      color:var(--accent);
+      margin-top:8px;
+    }
 
-    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-    @media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){.packages{grid-template-columns:1fr}}
+    h2.section-title{
+      color:var(--nav);
+      margin:32px 0 12px;
+      border-bottom:3px solid var(--accent);
+      display:inline-block;
+      padding-bottom:6px;
+    }
+
+    .use-grid,
+    .benefit-grid,
+    .proof-grid,
+    .faq-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .mini-card{
+      background:#fff;
+      border:1px solid #e9edf2;
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 4px 14px rgba(14,53,87,0.04);
+    }
+    .mini-card h3{
+      margin:0 0 8px;
+      color:var(--nav);
+      font-size:1.02rem;
+    }
+    .mini-card p{
+      margin:0;
+      color:#333;
+      line-height:1.65;
+      font-size:0.97rem;
+    }
+
+    /* Packages grid */
+    .packages{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:18px;margin-top:18px}
 
     .package-card{
       background:var(--card);
       padding:18px;
-      border-radius:10px;
+      border-radius:12px;
       box-shadow:0 6px 18px rgba(14,53,87,0.06);
-      text-align:center;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
+      position:relative;
+      border:1px solid #edf1f5;
+    }
+    .package-card.featured{
+      border:2px solid var(--accent);
+      box-shadow:0 10px 24px rgba(232,119,34,0.14);
+    }
+    .badge{
+      position:absolute;
+      top:-12px;
+      right:14px;
+      background:var(--accent);
+      color:#fff;
+      padding:7px 11px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:0.2px;
+    }
+    .package-top{text-align:center}
+    .package-card h3{margin:6px 0 4px;color:var(--nav);font-size:1.15rem}
+    .package-desc{margin:0 auto 8px; color:#333; line-height:1.6; text-align:center; max-width:360px}
+
+    .price-stack{margin-top:10px;text-align:center}
+    .intro-price{
+      display:inline-block;
+      background:var(--intro-bg);
+      border-left:6px solid var(--accent);
+      padding:10px 12px;
+      border-radius:8px;
+      font-weight:900;
+      color:var(--accent);
+      font-size:22px;
+      line-height:1.2;
+    }
+    .intro-note{display:block;font-size:13px;color:var(--muted);font-weight:700;margin-top:6px}
+    .std-price{margin-top:10px;font-weight:800;color:var(--text);opacity:0.92}
+
+    .deliverables{
+      margin-top:14px;
+      padding-top:12px;
+      border-top:1px solid #eef1f4;
+      color:#1f2a37;
+      line-height:1.6;
+      font-size:14px;
+    }
+    .deliverables ul{margin:8px 0 0 18px}
+    .deliverables li{margin:6px 0}
+
+    .best-for{
+      margin-top:12px;
+      background:var(--soft-blue);
+      border:1px solid #dbeaf8;
+      border-radius:10px;
+      padding:12px;
+      font-size:0.95rem;
+      line-height:1.6;
+      color:#234;
     }
 
-    .package-card h4{margin:8px 0;color:var(--nav)}
-    .std-price{font-weight:800;color:var(--text);font-size:18px}
-    .intro-price{display:inline-block;background:var(--intro-bg);border-left:6px solid var(--accent);padding:8px 12px;border-radius:6px;font-weight:900;color:var(--accent);font-size:20px;margin-top:8px}
-    .price-note{font-size:13px;color:var(--muted);margin-left:6px}
-    .includes{margin-top:12px;text-align:left;font-size:14px}
-    .package-card .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
-    .package-card .btn:hover{background:#c45e15}
+    .btn-row{margin-top:16px;text-align:center}
+    .cta-button{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:900;
+      border:0;
+      cursor:pointer;
+    }
+    .cta-button:hover{background:#c45e15}
 
-    .service-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:26px}
-    .service{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(14,53,87,0.06)}
-    .service h3{margin:0 0 8px;color:var(--nav);display:flex;align-items:center;gap:10px;font-size:1.1rem}
-    .service h3 i{color:var(--accent);font-size:1.05em}
-    .service .what,.service .receive{margin:6px 0;padding-left:14px}
-    .service ul{margin:6px 0 0 18px}
-
-    .price-block{margin-top:10px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
-    .price-block .intro{font-size:22px;color:var(--accent);font-weight:900;background:var(--intro-bg);padding:6px 10px;border-left:5px solid var(--accent);border-radius:6px}
-    .price-block .std{font-size:16px;color:var(--text);opacity:0.9}
-
-    @media(max-width:640px){
-      .service .price-block{
-        justify-content:center;
-        text-align:center;
-      }
-      .service .btn{
-        margin-left:auto;
-        margin-right:auto;
-        display:inline-block;
-      }
+    .secondary-button{
+      display:inline-block;
+      background:#fff;
+      color:var(--nav);
+      border:2px solid var(--nav);
+      padding:11px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:900;
+    }
+    .secondary-button:hover{
+      background:var(--nav);
+      color:#fff;
     }
 
-    footer{background:var(--nav); color:#fff; padding:26px 18px; text-align:center;margin-top:40px}
+    .final-cta{
+      margin:28px auto 0;
+      border:1px solid #e9edf2;
+      background:#fbfcfe;
+      border-radius:12px;
+      padding:20px;
+      text-align:center;
+    }
+    .final-cta h3{margin:0 0 10px;color:var(--nav)}
+    .final-cta p{margin:0 0 14px;color:#333;line-height:1.7}
+
+    .note{font-size:0.95rem;color:var(--muted);margin-top:16px;text-align:center}
+
+    .faq-item{
+      background:#fff;
+      border:1px solid #e9edf2;
+      border-radius:12px;
+      padding:16px;
+    }
+    .faq-item h3{
+      margin:0 0 8px;
+      color:var(--nav);
+      font-size:1rem;
+    }
+    .faq-item p{
+      margin:0;
+      color:#333;
+      line-height:1.65;
+    }
+
+    /* Footer */
+    footer{background:var(--nav); color:#fff; padding:26px 18px; text-align:center; margin-top:44px}
+    footer .footer-links{margin-bottom:8px}
     footer a{color:var(--accent); text-decoration:none; margin:0 8px}
     footer a:hover{text-decoration:underline}
-    .legal{color:#fff;opacity:0.9;margin-top:8px}
+    .gst-disclaimer{opacity:0.9}
 
-    /* Modal styles */
+    /* Modal */
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:2000}
-    .modal{background:#fff;padding:20px;border-radius:10px;max-width:520px;width:95%;box-shadow:0 8px 30px rgba(0,0,0,0.25);position:relative}
+    .modal{background:#fff;padding:20px;border-radius:12px;max-width:560px;width:95%;box-shadow:0 8px 30px rgba(0,0,0,0.25);position:relative}
     .modal h3{margin:0 0 12px;color:var(--nav)}
     .modal .close-btn{position:absolute;right:12px;top:10px;background:transparent;border:0;font-size:18px;cursor:pointer;color:var(--muted)}
     .form-row{margin-bottom:10px}
-    label{display:block;font-weight:700;margin-bottom:6px;color:var(--text)}
-    input[type="text"], input[type="email"], textarea, select{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:15px}
+    label{display:block;font-weight:800;margin-bottom:6px;color:var(--text)}
+    input[type="text"], input[type="email"], textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px}
     textarea{min-height:110px;resize:vertical}
-    .modal .btn-submit{background:var(--nav);color:#fff;border:0;padding:10px 14px;border-radius:8px;font-weight:800;cursor:pointer}
+    .modal .btn-submit{background:var(--nav);color:#fff;border:0;padding:11px 14px;border-radius:8px;font-weight:900;cursor:pointer}
     .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
     .thank-you{display:none;text-align:center;padding:20px}
     .error{color:#b00020;margin-top:8px}
 
-    /* Force orange Express Interest buttons in Services to match package buttons */
-    .service .btn {
-      display: inline-block !important;
-      padding: 10px 18px !important;
-      background: var(--accent) !important;
-      color: #fff !important;
-      text-decoration: none !important;
-      border-radius: 8px !important;
-      font-weight: 700 !important;
-      margin-top: 14px !important;
-      text-align: center !important;
+    @media(max-width:768px){
+      .wrap{margin:26px auto}
+      .badge{position:static;display:inline-block;margin-bottom:8px}
     }
-
-    .service .btn:hover {
-      background: #c45e15 !important;
-    }
-    /* Force centre alignment of Service buttons on mobile */
-@media (max-width: 640px) {
-  .service {
-    text-align: center !important;
-  }
-
-  .service .btn {
-    display: inline-block !important;
-    margin: 12px auto 0 auto !important;
-    text-align: center !important;
-  }
-}
   </style>
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="navbar">
     <div class="container">
-      <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+      <a href="/index.html"><img src="/images/logo.png" alt="ShowcasingOz TV Logo"></a>
       <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
       <nav id="menu" class="primary">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About Us</a>
-        <a href="../towns/index.html">Towns</a>
-        <a href="../partner.html">Partner With Us</a>
-        <a href="../sponsorship.html">Sponsorship</a>
-        <a href="../filming-map.html">Filming Map</a>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/towns/index.html">Towns</a>
+        <a href="/partner.html">Partner With Us</a>
+        <a href="/sponsorship.html">Sponsorship</a>
+        <a href="/filming-map.html">Filming Map</a>
         <a href="/calendar.html">Calendar</a>
-        <a href="../press.html">Press</a>
-        <a href="../contact.html">Contact</a>
+        <a href="/press.html">Press</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -211,380 +326,290 @@
     });
   </script>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Partner with ShowcasingOz TV — Attraction Owners</h1>
-    <p>Showcase your experience to travellers across Australia through cinematic storytelling and ready-to-use marketing content.</p>
-  </section>
-
   <main class="wrap">
-    <h2>ShowcasingOz TV — Our Mission &amp; How Your Attraction Can Be Featured</h2>
-
-    <p class="lead">
-      ShowcasingOz TV is a national tourism, storytelling and regional promotion project travelling across
-      Australia’s vast network of <strong>13,000+ towns and cities</strong>. Our mission is simple:
-      to champion Australian tourism by showcasing the people, places, attractions and experiences that make each region unique.
+    <h1>Attraction Marketing &amp; Filming Packages</h1>
+    <p class="subhead">
+      ShowcasingOz TV is filming across Australia from June–December 2026.
+      If your attraction, tour, gallery, wildlife park, museum, cultural experience, or visitor destination
+      is on our route, we can create powerful visual marketing assets designed to increase visibility,
+      strengthen visitor appeal, and help convert interest into ticket sales and visitation.
     </p>
 
-    <p class="lead">
-      From June to December 2026, our Season 1 filming journey will visit over <strong>200 destinations</strong>
-      across NT, NSW, VIC, SA, WA and QLD — capturing authentic stories, highlighting local operators, and creating
-      high-quality visual content that helps attractions increase visibility, grow visitation and strengthen their digital presence.
-    </p>
-
-    <p class="lead">
-      As a featured attraction, your business can benefit from <strong>cinematic video coverage, professional photography, social content</strong>
-      and presenter-led storytelling that showcases what makes your experience special — whether it’s wildlife, heritage, adventure, art, culture or local stories.
-    </p>
-
-    <p class="lead">
-      <strong>Complimentary entry for filming:</strong> As part of our standard tourism media practice, we kindly request complimentary entry
-      for our small film crew (usually 3–4 people) so we can properly experience and capture your attraction for the local episode.
-      This ensures we can film smoothly without adding operational cost to your business.
-    </p>
-
-    <div class="note">
-      <strong>Important filming &amp; usage notes:</strong> Your attraction will naturally appear within the town's ShowcasingOz TV episode as part of our storytelling.
-      This appearance is <strong>not</strong> a dedicated commercial advertisement and does not include branding, logo placement, ownership of footage or rights to reuse episode material.
-      Attractions wanting tailored marketing content (such as standalone promo videos, photo libraries, social media clips or website-ready assets) can access these through our optional paid packages and services below.
+    <div class="info-box">
+      <h2>What you’re actually investing in</h2>
+      <p>
+        These packages are built for tourism operators — not for people in the film industry.
+        Everything is structured in plain language, with clear marketing outcomes you can actually use
+        across your website, social media, tourism listings, ticketing pages, trade presentations, and advertising.
+      </p>
+      <p>
+        <strong>Introductory Price – Valid until December 31st, 2026.</strong>
+        After this date, pricing reverts to Standard rates.
+      </p>
+      <p style="margin-top:10px;">
+        To view available appointment times while we are in your region, visit our
+        <strong><a href="/calendar.html">Calendar</a></strong> page.
+        The buttons below are for enquiries only.
+      </p>
+      <span class="pill">Limited filming allocations per town</span>
     </div>
 
-    <div class="note"><strong>Note:</strong> <p class="gst-note">Prices shown are <strong>exclusive of GST</strong>. GST will be added once ShowcasingOz TV becomes GST-registered.</p>
-</div>
-    <!-- PACKAGES -->
-    <h2 style="margin-top:26px">Season 1 — Packages (Introductory prices are highlighted)</h2>
+    <div class="info-box" style="margin-top:18px;">
+      <h2>How you can use your content</h2>
+      <p>
+        All videos and images produced through ShowcasingOz TV are delivered ready for practical marketing use.
+        This means your attraction receives content that can continue working for you long after filming day.
+      </p>
 
-    <div class="packages" aria-label="Attraction packages">
-      <!-- Bronze -->
-      <div class="package-card">
-        <h4>🟫 BRONZE — Starter Visibility</h4>
-        <div class="intro-price">$276<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-        <div style="margin-top:8px" class="std-price">Standard Price: $345</div>
-        <div class="includes">
-          <strong>Includes:</strong>
-          <ul>
-            <li>Drone aerial package</li>
-            <li>Short social bundle</li>
-            <li>6–10 edited marketing photos for your website, Google listing and social media</li>
-          </ul>
+      <div class="use-grid">
+        <div class="mini-card">
+          <h3>🌐 Website &amp; Landing Pages</h3>
+          <p>Use your video and images across your homepage, attraction page, booking page, and seasonal campaign pages.</p>
         </div>
-        <a class="btn" id="attrBronzeBtn"
-           href="#"
-           onclick="openForm('Attraction Bronze Package Enquiry','Attr_Bronze'); return false;">
-          Express Interest
-        </a>
-      </div>
-
-      <!-- Silver -->
-      <div class="package-card">
-        <h4>🟪 SILVER — Visitor Conversion</h4>
-        <div class="intro-price">$436<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-        <div style="margin-top:8px" class="std-price">Standard Price: $545</div>
-        <div class="includes">
-          <strong>Includes:</strong>
-          <ul>
-            <li>Core promotional video (30–60s)</li>
-            <li>Professional photo set</li>
-            <li>Google Business optimisation</li>
-          </ul>
+        <div class="mini-card">
+          <h3>📱 Social Media &amp; Ads</h3>
+          <p>Use short clips and imagery for reels, posts, paid campaigns, boosted content, and ongoing visitor engagement.</p>
         </div>
-        <a class="btn" id="attrSilverBtn"
-           href="#"
-           onclick="openForm('Attraction Silver Package Enquiry','Attr_Silver'); return false;">
-          Express Interest
-        </a>
-      </div>
-
-      <!-- Gold -->
-      <div class="package-card">
-        <h4>🟨 GOLD — Full Experience</h4>
-        <div class="intro-price">$676<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-        <div style="margin-top:8px" class="std-price">Standard Price: $845</div>
-        <div class="includes">
-          <strong>Includes:</strong>
-          <ul>
-            <li>Hero experience film (60–90s)</li>
-            <li>Drone + on-the-ground footage</li>
-            <li>Extended photo library &amp; social cut-downs</li>
-          </ul>
+        <div class="mini-card">
+          <h3>🎟️ Ticketing &amp; Tourism Listings</h3>
+          <p>Strengthen your tourism profile and help potential visitors understand the experience before they book.</p>
         </div>
-        <a class="btn" id="attrGoldBtn"
-           href="#"
-           onclick="openForm('Attraction Gold Package Enquiry','Attr_Gold'); return false;">
-          Express Interest
-        </a>
-      </div>
-
-      <!-- Platinum -->
-      <div class="package-card">
-        <h4>🟦 PLATINUM — Destination Storyteller</h4>
-        <div class="intro-price">$1,196<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-        <div style="margin-top:8px" class="std-price">Standard Price: $1,495</div>
-        <div class="includes">
-          <strong>Includes:</strong>
-          <ul>
-            <li>Presenter-led brand story film</li>
-            <li>Full photo + social bundle</li>
-            <li>Google Business + website homepage assets</li>
-          </ul>
+        <div class="mini-card">
+          <h3>🤝 Trade &amp; Visitor Promotion</h3>
+          <p>Support travel trade presentations, visitor information centre promotion, email campaigns, and partnership marketing.</p>
         </div>
-        <a class="btn" id="attrPlatinumBtn"
-           href="#"
-           onclick="openForm('Attraction Platinum Package Enquiry','Attr_Platinum'); return false;">
-          Express Interest
-        </a>
-      </div>
-
-      <!-- Diamond -->
-      <div class="package-card">
-        <h4>💎 DIAMOND — Signature Tourism Partner</h4>
-        <div class="intro-price">$1,836<span class="price-note" style="display:block;font-size:13px;color:var(--muted)">Introductory Price (20% off)</span></div>
-        <div style="margin-top:8px" class="std-price">Standard Price: $2,295</div>
-        <div class="includes">
-          <strong>Includes:</strong>
-          <ul>
-            <li>Flagship attraction film (multi-angle, presenter-led)</li>
-            <li>Comprehensive media kit (photos, reels, website video)</li>
-            <li>Priority marketing support &amp; seasonal promo clip</li>
-          </ul>
-        </div>
-        <a class="btn" id="attrDiamondBtn"
-           href="#"
-           onclick="openForm('Attraction Diamond Package Enquiry','Attr_Diamond'); return false;">
-          Express Interest
-        </a>
       </div>
     </div>
 
-    <!-- SERVICES -->
-    <h2 style="margin-top:32px">Attraction Services — Detailed (Introductory &amp; Standard Prices)</h2>
-
-    <div class="service-list">
-      <!-- T1 -->
-      <div class="service">
-        <h3><i class="fa fa-camera" aria-hidden="true"></i> T1. Core Attraction Highlight Video (30–60s)</h3>
-        <div class="what"><strong>What we do:</strong> Capture the essence of your attraction with a tightly edited, engaging highlight video.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>30–60 second promotional video, optimised for web &amp; social</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $520</div>
-          <div class="std">Standard Price: $650</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T1 Core Attraction Highlight Video','Attr_T1'); return false;">
-          Express Interest
-        </button>
+    <h2 class="section-title">Why visual content matters for attractions</h2>
+    <div class="benefit-grid">
+      <div class="mini-card">
+        <h3>Help visitors picture the experience</h3>
+        <p>People are far more likely to book or visit when they can clearly see what the experience looks and feels like.</p>
       </div>
-
-      <!-- T2 -->
-      <div class="service">
-        <h3><i class="fa fa-photo-film" aria-hidden="true"></i> T2. Extended Feature Video (60–120s)</h3>
-        <div class="what"><strong>What we do:</strong> Produce a longer-form story that explores more of your experience, facilities and key selling points.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>60–120 second feature video suitable for websites, visitor centres &amp; campaigns</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $680</div>
-          <div class="std">Standard Price: $850</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T2 Extended Feature Video','Attr_T2'); return false;">
-          Express Interest
-        </button>
+      <div class="mini-card">
+        <h3>Build confidence before arrival</h3>
+        <p>Professional visuals reduce uncertainty, show quality, and help visitors feel more comfortable purchasing tickets.</p>
       </div>
-
-      <!-- T3 -->
-      <div class="service">
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> T3. Professional Photography Package</h3>
-        <div class="what"><strong>What we do:</strong> Capture bright, sharp and inviting images of your attraction, key features and visitor experience.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Curated gallery of edited photos for web, print &amp; social media</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $440</div>
-          <div class="std">Standard Price: $550</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T3 Professional Photography Package','Attr_T3'); return false;">
-          Express Interest
-        </button>
+      <div class="mini-card">
+        <h3>Strengthen emotional appeal</h3>
+        <p>Attractions sell experience, atmosphere, and memory. Strong visual storytelling helps create that emotional pull.</p>
       </div>
-
-      <!-- T4 -->
-      <div class="service">
-        <h3><i class="fa fa-drone" aria-hidden="true"></i> T4. Drone Exterior &amp; Surrounds Package</h3>
-        <div class="what"><strong>What we do:</strong> Film and photograph your attraction and its surroundings from the air (subject to approvals &amp; weather).</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>4K aerial footage and stills package for integration across your marketing</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $520</div>
-          <div class="std">Standard Price: $650</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T4 Drone Exterior & Surrounds Package','Attr_T4'); return false;">
-          Express Interest
-        </button>
-      </div>
-
-      <!-- T5 -->
-      <div class="service">
-        <h3><i class="fa fa-clock" aria-hidden="true"></i> T5. Visitor Experience Walkthrough</h3>
-        <div class="what"><strong>What we do:</strong> Film the journey from arrival to departure to set expectations and reduce friction for new visitors.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Step-by-step visitor walkthrough video</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $920</div>
-          <div class="std">Standard Price: $1,150</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T5 Visitor Experience Walkthrough','Attr_T5'); return false;">
-          Express Interest
-        </button>
-      </div>
-
-      <!-- T6 -->
-      <div class="service">
-        <h3><i class="fa fa-users" aria-hidden="true"></i> T6. Staff or Guide Introduction Video</h3>
-        <div class="what"><strong>What we do:</strong> Record a warm, welcoming introduction from key staff or guides to humanise your attraction.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Short welcome or guide-introduction video for web &amp; social</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $319</div>
-          <div class="std">Standard Price: $399</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T6 Staff or Guide Introduction Video','Attr_T6'); return false;">
-          Express Interest
-        </button>
-      </div>
-
-      <!-- T7 -->
-      <div class="service">
-        <h3><i class="fa fa-map-marker-alt" aria-hidden="true"></i> T7. Google Business Profile Enhancement</h3>
-        <div class="what"><strong>What we do:</strong> Update, optimise and enhance your Google Business listing with new photos, videos &amp; description tweaks.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Refreshed listing with new media &amp; optimised copy to help visitors find you more easily</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $319</div>
-          <div class="std">Standard Price: $399</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T7 Google Business Profile Enhancement','Attr_T7'); return false;">
-          Express Interest
-        </button>
-      </div>
-
-      <!-- T8 -->
-      <div class="service">
-        <h3><i class="fa fa-share-alt" aria-hidden="true"></i> T8. Social Media Content Bundle (10–20 assets)</h3>
-        <div class="what"><strong>What we do:</strong> Build a bank of short-form clips, stills and formatted posts using footage captured on-site.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>10–20 ready-to-use social assets plus caption suggestions</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $360</div>
-          <div class="std">Standard Price: $450</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T8 Social Media Content Bundle','Attr_T8'); return false;">
-          Express Interest
-        </button>
-      </div>
-
-      <!-- T9 -->
-      <div class="service">
-        <h3><i class="fa fa-edit" aria-hidden="true"></i> T9. Ticket-Sales Optimisation (Copy + Short Video)</h3>
-        <div class="what"><strong>What we do:</strong> Re-write and refine your key sales page or ticketing message and provide a conversion-focused short video to boost ticket sales.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Landing page copy + promo video + CTAs</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $360</div>
-          <div class="std">Standard Price: $450</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T9 Ticket-Sales Optimisation','Attr_T9'); return false;">
-          Express Interest
-        </button>
-      </div>
-
-      <!-- T10 -->
-      <div class="service">
-        <h3><i class="fa fa-tv" aria-hidden="true"></i> T10. ShowcasingOz TV Feature Spot</h3>
-        <div class="what"><strong>What we do:</strong> Create a dedicated presenter-led spotlight segment for your attraction, filmed and edited as a standalone promotional piece that focuses entirely on your story, experience and visitor appeal.</div>
-        <div class="receive"><strong>What you receive:</strong>
-          <ul><li>Presenter-led promotional video with your attraction as the hero, suitable for your website, social channels and tourism marketing</li></ul>
-        </div>
-        <div class="price-block">
-          <div class="intro">Introductory Price: $440</div>
-          <div class="std">Standard Price: $550</div>
-        </div>
-        <button class="btn" type="button"
-           onclick="openForm('Attraction Service - T10 ShowcasingOz TV Feature Spot','Attr_T10'); return false;">
-          Express Interest
-        </button>
+      <div class="mini-card">
+        <h3>Give your team reusable assets</h3>
+        <p>Instead of relying on outdated photos, you receive current professional content your business can keep using.</p>
       </div>
     </div>
 
-    <!-- PARTICIPATION CTA (replaces Reserve Your Allocation) -->
-    <div style="margin:32px 0;">
-      <div style="max-width:780px;margin:0 auto;background:#f9fafb;border-radius:12px;padding:22px 18px;box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-        <h3 style="margin-top:0;margin-bottom:10px;color:var(--nav);text-align:center;">
-          Ready to Participate in ShowcasingOz TV?
-        </h3>
-        <p style="margin:8px 0;line-height:1.6;">
-          As we prepare our filming schedule for your region, we invite local attractions to confirm that they would like to be included in the
-          ShowcasingOz TV episode for their town.
-        </p>
-        <p style="margin:8px 0;line-height:1.6;">
-          This confirmation simply lets us know that you’re happy for us to film your attraction as part of our tourism storytelling project.
-          <strong>There is no cost or obligation attached</strong>—all marketing packages and optional upgrades remain completely optional.
-        </p>
-        <p style="margin:8px 0;line-height:1.6;">
-          This step helps us coordinate access, filming times and on-site logistics, and ensures your attraction is included in the regional story we share.
-        </p>
-<div style="
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-">
-  <button
-    type="button"
-    onclick="openForm('Attraction Filming Participation','Attraction_Filming');"
-    style="
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 26px;
-      border: none;
-      border-radius: 10px;
-      font-size: 18px;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-      transition: background 0.2s ease;
-      display: inline-block;
-      text-align: center;
-    "
-    onmouseover="this.style.background='#c45e15'"
-    onmouseout="this.style.background='var(--accent)'"
-  >
-    Confirm Your Participation in Filming
-  </button>
-</div>
+    <h2 class="section-title">Season 1 Attraction Packages</h2>
+
+    <div class="packages">
+      <!-- PACKAGE 1 -->
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟫 Attraction Feature Showcase Package</h3>
+          <p class="package-desc">
+            A strong entry package for attractions wanting professional promotion that clearly introduces the visitor experience.
+          </p>
+
+          <div class="price-stack">
+            <div class="intro-price">$1,452</div>
+            <span class="intro-note">Introductory Price – Valid until Dec 31, 2026</span>
+            <div class="std-price">Standard Price: $1,650</div>
+          </div>
+        </div>
+
+        <div class="deliverables">
+          <strong>Onsite filming session (up to 45 minutes):</strong>
+          <ul>
+            <li>Entrance and signage</li>
+            <li>Key visitor highlights or experiences</li>
+            <li>Demonstrations, exhibits, or guided elements (where applicable)</li>
+            <li>Visitor interaction and atmosphere (where appropriate)</li>
+            <li>Short operator introduction (optional)</li>
+          </ul>
+
+          <strong>What you receive:</strong>
+          <ul>
+            <li>1 x professionally edited 45–60 second attraction promotional video</li>
+            <li>2 x short 20–30 second social media clips</li>
+            <li>5 high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li>Delivery within 30 days post-filming</li>
+          </ul>
+
+          <div class="best-for">
+            <strong>Best for:</strong> museums, galleries, wildlife parks, local experiences, niche attractions,
+            and operators wanting a professional promotional asset without committing to a larger campaign.
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Attraction — Attraction Feature Showcase Package Enquiry">
+            Enquire Now
+          </a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 2 -->
+      <div class="package-card featured">
+        <div class="badge">Most versatile option</div>
+        <div class="package-top">
+          <h3>🟦 Attraction Growth Showcase Package</h3>
+          <p class="package-desc">
+            A stronger package for attractions wanting deeper storytelling, stronger visitor appeal, and more flexible marketing content.
+          </p>
+
+          <div class="price-stack">
+            <div class="intro-price">$2,156</div>
+            <span class="intro-note">Introductory Price – Valid until Dec 31, 2026</span>
+            <div class="std-price">Standard Price: $2,450</div>
+          </div>
+        </div>
+
+        <div class="deliverables">
+          <strong>Onsite filming session (up to 90 minutes):</strong>
+          <ul>
+            <li>Entrance and branding elements</li>
+            <li>Key visitor experiences in action</li>
+            <li>Demonstrations, guided tours, or interactive elements</li>
+            <li>Visitor atmosphere and engagement</li>
+            <li>Behind-the-scenes moments (where appropriate)</li>
+            <li>Guided operator introduction</li>
+          </ul>
+
+          <strong>What you receive:</strong>
+          <ul>
+            <li>1 x professionally edited 90–120 second promotional video</li>
+            <li>3 x short 20–30 second social media clips</li>
+            <li>10 high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li>Delivery within 21 days post-filming</li>
+          </ul>
+
+          <div class="best-for">
+            <strong>Best for:</strong> attractions wanting a fuller story, operators with multiple experience elements,
+            or businesses needing stronger campaign content across website, ads, and social media.
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Attraction — Attraction Growth Showcase Package Enquiry">
+            Enquire Now
+          </a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 3 -->
+      <div class="package-card">
+        <div class="package-top">
+          <h3>🟪 Attraction Premier Destination Showcase Package</h3>
+          <p class="package-desc">
+            The premium option for flagship attractions wanting high-impact cinematic content that positions them as a must-visit destination.
+          </p>
+
+          <div class="price-stack">
+            <div class="intro-price">$2,860</div>
+            <span class="intro-note">Introductory Price – Valid until Dec 31, 2026</span>
+            <div class="std-price">Standard Price: $3,250</div>
+          </div>
+        </div>
+
+        <div class="deliverables">
+          <strong>Onsite filming session (up to 90 minutes):</strong>
+          <ul>
+            <li>Entrance and branding elements</li>
+            <li>Signature visitor experiences in action</li>
+            <li>Demonstrations, guided elements, or performances</li>
+            <li>Visitor atmosphere and engagement</li>
+            <li>Behind-the-scenes highlights (where appropriate)</li>
+            <li>Guided operator introduction</li>
+            <li>Cinematic aerial footage captured via licensed drone pilot (subject to weather and airspace regulations)</li>
+          </ul>
+
+          <strong>What you receive:</strong>
+          <ul>
+            <li>1 x professionally edited 2–3 minute cinematic promotional film</li>
+            <li>4 x short 20–30 second social media clips</li>
+            <li>15 high-quality still images captured during filming</li>
+            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+            <li>Priority delivery within 14 days post-filming</li>
+          </ul>
+
+          <div class="best-for">
+            <strong>Best for:</strong> major attractions, destination experiences, larger tourism operators,
+            and attractions needing premium assets for campaigns, partnerships, tourism trade, and long-term brand positioning.
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a class="cta-button open-modal" href="#" data-title="Attraction — Attraction Premier Destination Showcase Package Enquiry">
+            Enquire Now
+          </a>
+        </div>
+      </div>
     </div>
 
-    <!-- Pricing clause -->
-    <p style="font-size:0.95rem;color:var(--muted);text-align:center;margin-top:18px;">
-      <strong>Note:</strong> The Introductory prices are strictly valid until the <strong>22nd of December, 2026</strong>
-      and will revert to Standard prices thereafter. All services and packages must be booked prior to this date
-      to receive Introductory pricing.
+    <h2 class="section-title">What operators value most</h2>
+    <div class="proof-grid">
+      <div class="mini-card">
+        <h3>Clear deliverables</h3>
+        <p>You know exactly what is being filmed, what content is included, and when it will be delivered.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Minimal disruption</h3>
+        <p>Filming is structured to work around your operations and visitor flow while still capturing strong coverage.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Regional episode inclusion</h3>
+        <p>Your attraction is not only supported by standalone content, but also forms part of the wider town and regional story.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Ongoing marketing value</h3>
+        <p>These assets continue to support your marketing after filming day, giving your business longer-term promotional value.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Do I need to book directly through this page?</h3>
+        <p>No. This page is for enquiries only. To see when we are in your area and what filming times may be available, visit the <a href="/calendar.html">Calendar</a> page first.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What types of attractions are suitable?</h3>
+        <p>These packages suit museums, galleries, wildlife parks, cultural experiences, guided tours, visitor experiences, adventure providers, and other tourism attractions along our filming route.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can staff or guides be involved in the filming?</h3>
+        <p>Yes. Operator or guide involvement can strengthen the storytelling and help visitors connect more personally with the experience.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if weather or operational factors affect filming?</h3>
+        <p>We work with you on the day to capture the strongest possible content within practical conditions. Drone footage is always subject to weather and airspace regulations.</p>
+      </div>
+    </div>
+
+    <div class="final-cta">
+      <h3>Want to secure a suitable filming time?</h3>
+      <p>
+        Filming availability in each town is limited. To view available appointment times while we are in your region, visit our
+        <strong><a href="/calendar.html">Calendar</a></strong> page.
+        If you have questions first, send an enquiry below.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a class="secondary-button" href="/calendar.html">View Calendar</a>
+        <a class="cta-button open-modal" href="#" data-title="Attraction — General Enquiry">Send an Enquiry</a>
+      </div>
+    </div>
+
+    <p class="note">
+      <strong>Note:</strong> Prices listed are <strong>exclusive of GST</strong>. GST will be added once ShowcasingOz TV becomes GST-registered.
     </p>
+
   </main>
 
   <!-- MODAL -->
@@ -592,16 +617,15 @@
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="close-btn" id="modalClose" aria-label="Close modal">&times;</button>
 
-      <!-- Form container -->
       <div id="formContainer">
-        <h3 id="modalTitle">Express Interest</h3>
+        <h3 id="modalTitle">Filming Booking Enquiry</h3>
 
         <form id="interestForm" action="https://formspree.io/f/movynnqj" method="POST">
           <input type="hidden" name="subject" id="formSubject" value="Attraction Enquiry">
 
           <div class="form-row">
             <label for="businessName">Attraction name <span style="color:#b00020">*</span></label>
-            <input id="businessName" name="business_name" type="text" required placeholder="Business name">
+            <input id="businessName" name="attraction_name" type="text" required placeholder="Business / attraction name">
           </div>
 
           <div class="form-row">
@@ -615,75 +639,13 @@
           </div>
 
           <div class="form-row">
-            <label for="town">Filming town / location <span style="color:#b00020">*</span></label>
-            <select id="town" name="town" required>
-              <option value="">Please select…</option>
-              <option>Alice Springs1</option>
-              <option>Uluru / Yulara</option>
-              <option>Kings Canyon</option>
-              <option>Timouth Well</option>
-              <option>Rabbit Flat</option>
-              <option>Barkly Roadhouse</option>
-              <option>Halls Creek</option>
-              <option>Borroloola</option>
-              <option>Top Springs</option>
-              <option>Daly Waters</option>
-              <option>Tennant Creek</option>
-              <option>Alice Springs2</option>
-              <option>Coober Pedy</option>
-              <option>Roxby Downs1</option>
-              <option>Andamooka</option>
-              <option>Roxby Downs2</option>
-              <option>Quorn</option>
-              <option>Laura</option>
-              <option>Broken Hill</option>
-              <option>Silverton</option>
-              <option>Tibooburra</option>
-              <option>Eromanga</option>
-              <option>Quilpie</option>
-              <option>Charleville</option>
-              <option>Cunnamulla</option>
-              <option>Thargomindah</option>
-              <option>Bourke</option>
-              <option>Nyngan</option>
-              <option>Cobar</option>
-              <option>Hillston</option>
-              <option>Griffith</option>
-              <option>Jerilderie</option>
-              <option>Deniliquin</option>
-              <option>Moulamein</option>
-              <option>Balranald</option>
-              <option>Hay</option>
-              <option>Ivanhoe</option>
-              <option>White Cliffs</option>
-              <option>Menindee</option>
-              <option>Mungo</option>
-              <option>Euston</option>
-              <option>Swan Hill</option>
-              <option>Hopetoun</option>
-              <option>Horsham</option>
-              <option>Nhill</option>
-              <option>Edenhope</option>
-              <option>Portland</option>
-              <option>Warrnambool</option>
-              <option>Hamilton</option>
-              <option>Dunkeld</option>
-              <option>Halls Gap</option>
-              <option>Stawell</option>
-              <option>St Arnaud</option>
-              <option>Donald</option>
-              <option>Birchip</option>
-              <option>Barham</option>
-              <option>Kerang</option>
-              <option>Charlton</option>
-              <option>Wedderburn</option>
-              <option>Bendigo</option>
-            </select>
+            <label for="town">Town / location <span style="color:#b00020">*</span></label>
+            <input id="town" name="town" type="text" required placeholder="Town / region name">
           </div>
 
           <div class="form-row">
             <label for="message">Message / details <span style="color:#b00020">*</span></label>
-            <textarea id="message" name="message" required placeholder="Tell us any dates, details about your attraction, or questions you have..."></textarea>
+            <textarea id="message" name="message" required placeholder="Tell us what package you’re interested in, and which dates you’re considering (you can reference the Calendar page)."></textarea>
           </div>
 
           <div style="display:flex;gap:10px;align-items:center;">
@@ -695,11 +657,9 @@
         </form>
       </div>
 
-      <!-- Thank you screen -->
       <div class="thank-you" id="thankYou">
         <h3>Thank you — your enquiry has been received</h3>
-        <p>We’ll get back to you as soon as possible.  
-        For urgent enquiries, email <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a>.</p>
+        <p>We’ll get back to you as soon as possible.</p>
         <button class="btn-submit" id="thankClose">Close</button>
       </div>
 
@@ -707,70 +667,65 @@
   </div>
 
   <!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/towns/index.html">Towns</a> |
-    <a href="/partner.html">Partner With Us</a> |
-    <a href="/sponsorship.html">Sponsorship</a> |
-    <a href="/filming-map.html">Filming Map</a> |
-    <a href="/calendar.html">Calendar</a> |
-    <a href="/press.html">Press</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/legal.html">Legal</a>
-  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="/index.html">Home</a> |
+      <a href="/about.html">About Us</a> |
+      <a href="/towns/index.html">Towns</a> |
+      <a href="/partner.html">Partner With Us</a> |
+      <a href="/sponsorship.html">Sponsorship</a> |
+      <a href="/filming-map.html">Filming Map</a> |
+      <a href="/calendar.html">Calendar</a> |
+      <a href="/press.html">Press</a> |
+      <a href="/contact.html">Contact</a> |
+      <a href="/legal.html">Legal</a>
+    </div>
 
-  <p>
-    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">
-      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
-    </span><br>
-    © 2026 ShowcasingOz TV · Discover. Capture. Share.
-  </p>
-</footer>
+    <p>
+      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+      </span><br>
+      © 2026 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+  </footer>
 
-  <!-- SCRIPTS -->
   <script>
-    function openForm(title, subjectValue){
-      const modalBack = document.getElementById('modalBack');
-      const subjectInput = document.getElementById('formSubject');
-      const formStatus = document.getElementById('formStatus');
-      const formError = document.getElementById('formError');
-      const formContainer = document.getElementById('formContainer');
-      const thankYou = document.getElementById('thankYou');
-
-      subjectInput.value = subjectValue || 'Attraction Enquiry';
-      document.getElementById('modalTitle').textContent = title || 'Express Interest';
-
-      formStatus.textContent = '';
-      formError.style.display = 'none';
-      formError.textContent = '';
-      formContainer.style.display = 'block';
-      thankYou.style.display = 'none';
-      modalBack.style.display = 'flex';
-
-      setTimeout(()=>document.getElementById('businessName').focus(),140);
-
-      if(typeof gtag === 'function'){
-        gtag('event','modal_open',{event_category:'Engagement', event_label:subjectValue || title});
-      }
-    }
-
     (function(){
       const modalBack = document.getElementById('modalBack');
       const modalClose = document.getElementById('modalClose');
-      const thankClose = document.getElementById('thankClose');
+      const openButtons = document.querySelectorAll('.open-modal');
       const form = document.getElementById('interestForm');
+      const subjectInput = document.getElementById('formSubject');
       const formStatus = document.getElementById('formStatus');
       const formError = document.getElementById('formError');
-      const subjectInput = document.getElementById('formSubject');
-      const formContainer = document.getElementById('formContainer');
       const thankYou = document.getElementById('thankYou');
+      const formContainer = document.getElementById('formContainer');
+      const thankClose = document.getElementById('thankClose');
+
+      function openModal(title){
+        subjectInput.value = title || 'Attraction Enquiry';
+        document.getElementById('modalTitle').textContent = 'Filming Booking Enquiry';
+        formStatus.textContent = '';
+        formError.style.display = 'none';
+        formError.textContent = '';
+        formContainer.style.display = 'block';
+        thankYou.style.display = 'none';
+        modalBack.style.display = 'flex';
+        setTimeout(()=>document.getElementById('businessName').focus(),140);
+      }
 
       function closeModal(){
         modalBack.style.display = 'none';
       }
+
+      openButtons.forEach(btn=>{
+        btn.addEventListener('click',function(e){
+          e.preventDefault();
+          const title = this.dataset.title || 'Attraction Enquiry';
+          openModal(title);
+        });
+      });
 
       modalClose.addEventListener('click',closeModal);
       modalBack.addEventListener('click',e=>{
@@ -793,42 +748,27 @@
           body:data,
           headers:{'Accept':'application/json'}
         })
-        .then(response=>response.json())
-        .then(data=>{
+        .then(response=>{
           submitBtn.disabled = false;
-          if(data.ok || !data.error){
+          if(response.ok){
             form.reset();
             formContainer.style.display = 'none';
             thankYou.style.display = 'block';
             formStatus.textContent = '';
-
-            if(typeof gtag === 'function'){
-              gtag('event','form_submit',{event_category:'Engagement',event_label:subjectInput.value});
-            }
           } else {
-            const msg = (data && data.error) ? data.error : 'There was a problem submitting your enquiry. Please try again or email showcasingoztv@gmail.com';
-            formStatus.textContent = '';
-            formError.style.display = 'block';
-            formError.textContent = msg;
-
-            if(typeof gtag === 'function'){
-              gtag('event','form_error',{event_category:'Engagement',event_label:subjectInput.value});
-            }
+            throw new Error('There was a problem submitting the form. Please try again.');
           }
         })
         .catch(err=>{
           submitBtn.disabled = false;
           formStatus.textContent = '';
           formError.style.display = 'block';
-          formError.textContent = 'Unable to send enquiry right now. Please try again or email showcasingoztv@gmail.com';
-
-          if(typeof gtag === 'function'){
-            gtag('event','form_error',{event_category:'Engagement',event_label:subjectInput.value});
-          }
+          formError.textContent = err.message || 'Submission failed — please try again.';
         });
       });
     })();
   </script>
+
 </body>
 </html>
 
