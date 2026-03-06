@@ -254,6 +254,78 @@
   color:#234;
 }
 
+    /* Paid package alignment fix */
+.packages .deliverables{
+  display:grid;
+  grid-template-rows:auto 1fr auto 1fr auto;
+  row-gap:12px;
+}
+
+.packages .package-block{
+  min-width:0;
+}
+
+.packages .package-block strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+.packages .package-block ul{
+  margin:0 0 0 18px;
+}
+
+.packages .package-block ul li{
+  margin:6px 0;
+}
+
+/* Exchange card alignment fix */
+.exchange-grid .deliverables{
+  display:grid;
+  grid-template-rows:auto 1fr auto 1fr auto;
+  row-gap:12px;
+}
+
+.exchange-grid .exchange-block{
+  min-width:0;
+}
+
+.exchange-grid .exchange-block strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+.exchange-grid .exchange-block ul{
+  margin:0 0 0 18px;
+}
+
+.exchange-grid .exchange-block ul li{
+  margin:6px 0;
+}
+
+    /* Exchange card alignment fix */
+.exchange-grid .deliverables{
+  display:grid;
+  grid-template-rows:auto 1fr auto 1fr;
+  row-gap:12px;
+}
+
+.exchange-grid .exchange-block{
+  min-width:0;
+}
+
+.exchange-grid .exchange-block strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+.exchange-grid .exchange-block ul{
+  margin:0 0 0 18px;
+}
+
+.exchange-grid .exchange-block ul li{
+  margin:6px 0;
+}
+
     .cta-button{
       display:inline-block;
       background:var(--accent);
@@ -443,30 +515,35 @@
         </div>
 
         <div class="deliverables">
-          <strong>Onsite filming session (up to 60 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>Reception and common areas</li>
-            <li>Selected room types (up to 2 room styles)</li>
-            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
-            <li>Surroundings and location context</li>
-            <li>Short guided owner/manager introduction (optional)</li>
-          </ul>
-          <strong>What you receive:</strong>
-          <ul>
-            <li>1 x professionally edited 45–60 second property showcase video</li>
-            <li>2 x short 20–30 second social media clips</li>
-            <li>5 high-quality still images captured during filming</li>
-            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
-            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
-            <li>Delivery within 30 days post-filming</li>
-          </ul>
+  <div class="package-block">
+    <strong>Onsite filming session (up to 60 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>Reception and common areas</li>
+      <li>Selected room types (up to 2 room styles)</li>
+      <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+      <li>Surroundings and location context</li>
+      <li>Short guided owner/manager introduction (optional)</li>
+    </ul>
+  </div>
 
-          <div class="best-for">
-            <strong>Best for:</strong> motels, caravan parks, lodges, boutique stays, B&amp;Bs,
-            and operators wanting a professional promotional asset without stepping up to a larger campaign.
-          </div>
-        </div>
+  <div class="package-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 45–60 second property showcase video</li>
+      <li>2 x short 20–30 second social media clips</li>
+      <li>5 high-quality still images captured during filming</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+      <li>Delivery within 30 days post-filming</li>
+    </ul>
+  </div>
+
+  <div class="best-for">
+    <strong>Best for:</strong> motels, caravan parks, lodges, boutique stays, B&amp;Bs,
+    and operators wanting a professional promotional asset without stepping up to a larger campaign.
+  </div>
+</div>
 
         <div class="btn-row">
           <a class="cta-button open-modal" href="#" data-title="Accommodation — Professional Property Showcase Package Enquiry">
@@ -492,33 +569,38 @@
         </div>
 
         <div class="deliverables">
-          <strong>Onsite filming session (up to 75 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>Reception and common areas</li>
-            <li>Up to 3 room types (where available)</li>
-            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
-            <li>Surroundings and location context</li>
-            <li>Guest experience highlights (where appropriate)</li>
-            <li>Guided owner/manager introduction</li>
-          </ul>
-          <strong>What you receive:</strong>
-          <ul>
-            <li>1 x professionally edited 90–120 second promotional video</li>
-            <li>Aerial footage via licensed drone pilot (subject to weather &amp; airspace regulations)</li>
-            <li>2 x short 20–30 second social media clips</li>
-            <li>10 high-quality still images captured during filming</li>
-            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
-            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
-            <li>Priority positioning in online release scheduling</li>
-            <li>Delivery within 21 days post-filming</li>
-          </ul>
+  <div class="package-block">
+    <strong>Onsite filming session (up to 75 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>Reception and common areas</li>
+      <li>Up to 3 room types (where available)</li>
+      <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+      <li>Surroundings and location context</li>
+      <li>Guest experience highlights (where appropriate)</li>
+      <li>Guided owner/manager introduction</li>
+    </ul>
+  </div>
 
-          <div class="best-for">
-            <strong>Best for:</strong> properties wanting a fuller showcase, operators with several room types or facilities,
-            and businesses wanting stronger assets for conversion-focused marketing.
-          </div>
-        </div>
+  <div class="package-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 90–120 second promotional video</li>
+      <li>Aerial footage via licensed drone pilot (subject to weather &amp; airspace regulations)</li>
+      <li>2 x short 20–30 second social media clips</li>
+      <li>10 high-quality still images captured during filming</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+      <li>Priority positioning in online release scheduling</li>
+      <li>Delivery within 21 days post-filming</li>
+    </ul>
+  </div>
+
+  <div class="best-for">
+    <strong>Best for:</strong> properties wanting a fuller showcase, operators with several room types or facilities,
+    and businesses wanting stronger assets for conversion-focused marketing.
+  </div>
+</div>
 
         <div class="btn-row">
           <a class="cta-button open-modal" href="#" data-title="Accommodation — Extended Promotional Package Enquiry">
@@ -543,32 +625,37 @@
         </div>
 
         <div class="deliverables">
-          <strong>Onsite filming session (up to 90 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>Reception and common areas</li>
-            <li>Multiple room types (where available)</li>
-            <li>Key facilities and standout features (pool, gardens, dining areas, camp kitchens, etc.)</li>
-            <li>Surroundings and location context</li>
-            <li>Guest experience highlights (where appropriate)</li>
-            <li>Guided owner/manager introduction</li>
-            <li>Additional detailed feature shots to enhance storytelling</li>
-          </ul>
-          <strong>What you receive:</strong>
-          <ul>
-            <li>1 x professionally edited 2–3 minute promotional video</li>
-            <li>4 x short 20–30 second social media clips</li>
-            <li>15 high-quality still images captured during filming</li>
-            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
-            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
-            <li>Priority delivery within 14 days post-filming</li>
-          </ul>
+  <div class="package-block">
+    <strong>Onsite filming session (up to 90 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>Reception and common areas</li>
+      <li>Multiple room types (where available)</li>
+      <li>Key facilities and standout features (pool, gardens, dining areas, camp kitchens, etc.)</li>
+      <li>Surroundings and location context</li>
+      <li>Guest experience highlights (where appropriate)</li>
+      <li>Guided owner/manager introduction</li>
+      <li>Additional detailed feature shots to enhance storytelling</li>
+    </ul>
+  </div>
 
-          <div class="best-for">
-            <strong>Best for:</strong> premium accommodation, destination stays, larger regional properties,
-            and operators who want a stronger long-term marketing library with higher-end promotional impact.
-          </div>
-        </div>
+  <div class="package-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 2–3 minute promotional video</li>
+      <li>4 x short 20–30 second social media clips</li>
+      <li>15 high-quality still images captured during filming</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+      <li>Priority delivery within 14 days post-filming</li>
+    </ul>
+  </div>
+
+  <div class="best-for">
+    <strong>Best for:</strong> premium accommodation, destination stays, larger regional properties,
+    and operators who want a stronger long-term marketing library with higher-end promotional impact.
+  </div>
+</div>
 
         <div class="btn-row">
           <a class="cta-button open-modal" href="#" data-title="Accommodation — Premier Showcase Package Enquiry">
@@ -601,17 +688,36 @@
           <h3>🟩 1 Night Exchange</h3>
           <p class="package-desc">Ideal for overnight stopovers, roadhouses, and single-night hosts.</p>
         </div>
-        <div class="deliverables">
-          <strong>Typical requirement:</strong>
-          <ul>
-            <li>Accommodation for our crew for 1 night (rooms/configuration confirmed during enquiry)</li>
-          </ul>
-          <strong>Onsite filming session (up to 30 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>One selected room type</li>
-            <li>Key common area</li>
-            <li>Property access, parking areas &amp; street presence</li>
+<div class="deliverables">
+  <div class="exchange-block">
+    <strong>Typical requirement:</strong>
+    <ul>
+      <li>Accommodation for our crew for 1 night (rooms/configuration confirmed during enquiry)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>Onsite filming session (up to 30 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>One selected room type</li>
+      <li>Key common area</li>
+      <li>Property access, parking areas &amp; street presence</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 30–45 second property showcase video</li>
+      <li>1 x short social media clip</li>
+      <li>2 high-quality still images</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Delivery within 30 days post-filming</li>
+    </ul>
+  </div>
+</div>
+        
           </ul>
           <strong>What you receive:</strong>
           <ul>
@@ -633,26 +739,35 @@
           <p class="package-desc">Enhanced coverage for properties hosting us for two nights.</p>
         </div>
         <div class="deliverables">
-          <strong>Typical requirement:</strong>
-          <ul>
-            <li>Accommodation for our crew for 2 nights (rooms/configuration confirmed during enquiry)</li>
-          </ul>
-          <strong>Onsite filming session (up to 45 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>Two room types (where available)</li>
-            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
-            <li>Short owner introduction (optional)</li>
-          </ul>
-          <strong>What you receive:</strong>
-          <ul>
-            <li>1 x professionally edited 45–60 second property showcase video</li>
-            <li>2 x short social media clips</li>
-            <li>5 high-quality still images</li>
-            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
-            <li>Delivery within 30 days post-filming</li>
-          </ul>
-        </div>
+  <div class="exchange-block">
+    <strong>Typical requirement:</strong>
+    <ul>
+      <li>Accommodation for our crew for 2 nights (rooms/configuration confirmed during enquiry)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>Onsite filming session (up to 45 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>Two room types (where available)</li>
+      <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+      <li>Short owner introduction (optional)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 45–60 second property showcase video</li>
+      <li>2 x short social media clips</li>
+      <li>5 high-quality still images</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Delivery within 30 days post-filming</li>
+    </ul>
+  </div>
+</div>
+        
         <div class="btn-row">
           <a class="cta-button open-modal" href="#" data-title="Accommodation — 2 Night Stay-for-Free Exchange Enquiry">Express Interest</a>
         </div>
@@ -663,28 +778,37 @@
           <h3>🟧 3 Night Exchange</h3>
           <p class="package-desc">Comprehensive visual coverage for key regional base properties.</p>
         </div>
-        <div class="deliverables">
-          <strong>Typical requirement:</strong>
-          <ul>
-            <li>Accommodation for our crew for 3 nights (rooms/configuration confirmed during enquiry)</li>
-          </ul>
-          <strong>Onsite filming session (up to 60 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>Multiple room types</li>
-            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
-            <li>Surroundings</li>
-            <li>Short owner introduction (optional)</li>
-          </ul>
-          <strong>What you receive:</strong>
-          <ul>
-            <li>1 x professionally edited 60–75 second property showcase video</li>
-            <li>2 x short social media clips</li>
-            <li>5 high-quality still images</li>
-            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
-            <li>Delivery within 30 days post-filming</li>
-          </ul>
-        </div>
+       <div class="deliverables">
+  <div class="exchange-block">
+    <strong>Typical requirement:</strong>
+    <ul>
+      <li>Accommodation for our crew for 3 nights (rooms/configuration confirmed during enquiry)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>Onsite filming session (up to 60 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>Multiple room types</li>
+      <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+      <li>Surroundings</li>
+      <li>Short owner introduction (optional)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 60–75 second property showcase video</li>
+      <li>2 x short social media clips</li>
+      <li>5 high-quality still images</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Delivery within 30 days post-filming</li>
+    </ul>
+  </div>
+</div>
+        
         <div class="btn-row">
           <a class="cta-button open-modal" href="#" data-title="Accommodation — 3 Night Stay-for-Free Exchange Enquiry">Express Interest</a>
         </div>
@@ -696,29 +820,38 @@
           <p class="package-desc">For long-term hosts — receive the full Professional Property Showcase content package.</p>
         </div>
         <div class="deliverables">
-          <strong>Typical requirement:</strong>
-          <ul>
-            <li>Accommodation for our crew for 4+ nights (by agreement)</li>
-          </ul>
-          <strong>Onsite filming session (up to 60 minutes):</strong>
-          <ul>
-            <li>Exterior frontage &amp; signage</li>
-            <li>Reception and common areas</li>
-            <li>Selected room types (up to 2 room styles)</li>
-            <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
-            <li>Surroundings and location context</li>
-            <li>Short guided owner/manager introduction (optional)</li>
-          </ul>
-          <strong>What you receive:</strong>
-          <ul>
-            <li>1 x professionally edited 60–75 second property showcase video</li>
-            <li>2 x short 20–30 second social media clips</li>
-            <li>5 high-quality still images captured during filming</li>
-            <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
-            <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
-            <li>Delivery within 30 days post-filming</li>
-          </ul>
-        </div>
+  <div class="exchange-block">
+    <strong>Typical requirement:</strong>
+    <ul>
+      <li>Accommodation for our crew for 4+ nights (by agreement)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>Onsite filming session (up to 60 minutes):</strong>
+    <ul>
+      <li>Exterior frontage &amp; signage</li>
+      <li>Reception and common areas</li>
+      <li>Selected room types (up to 2 room styles)</li>
+      <li>Key facilities (pool, gardens, dining areas, camp kitchens, etc.)</li>
+      <li>Surroundings and location context</li>
+      <li>Short guided owner/manager introduction (optional)</li>
+    </ul>
+  </div>
+
+  <div class="exchange-block">
+    <strong>What you receive:</strong>
+    <ul>
+      <li>1 x professionally edited 60–75 second property showcase video</li>
+      <li>2 x short 20–30 second social media clips</li>
+      <li>5 high-quality still images captured during filming</li>
+      <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
+      <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
+      <li>Delivery within 30 days post-filming</li>
+    </ul>
+  </div>
+</div>
+        
         <div class="btn-row">
           <a class="cta-button open-modal" href="#" data-title="Accommodation — 4+ Night Stay-for-Free Exchange Enquiry">Express Interest</a>
         </div>
