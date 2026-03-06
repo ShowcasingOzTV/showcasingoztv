@@ -12,12 +12,12 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Accommodation Packages | ShowcasingOz TV</title>
-  <meta name="description" content="Accommodation filming packages for motels, caravan parks, B&Bs, lodges and resorts — built to increase visibility and drive bookings." />
+  <title>Accommodation Marketing & Filming Packages | ShowcasingOz TV</title>
+  <meta name="description" content="Accommodation marketing and filming packages for motels, caravan parks, B&Bs, lodges and resorts — built to increase visibility, strengthen trust, and drive bookings." />
   <link rel="canonical" href="https://www.showcasingoztv.com.au/accommodation-partners.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Accommodation Packages | ShowcasingOz TV" />
+  <meta property="og:title" content="Accommodation Marketing & Filming Packages | ShowcasingOz TV" />
   <meta property="og:description" content="Feature your accommodation with ShowcasingOz TV and receive clear, reusable marketing assets that help drive enquiries and bookings." />
   <meta property="og:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
   <meta property="og:type" content="website" />
@@ -26,7 +26,7 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Accommodation Packages | ShowcasingOz TV" />
+  <meta name="twitter:title" content="Accommodation Marketing & Filming Packages | ShowcasingOz TV" />
   <meta name="twitter:description" content="Accommodation packages designed to showcase your property and help convert travellers into bookings." />
   <meta name="twitter:image" content="https://www.showcasingoztv.com.au/images/showcasingoz-tv-cover.jpg" />
 
@@ -42,6 +42,7 @@
       --card:#ffffff;
       --intro-bg:#fff6ef;
       --soft:#f4f6f8;
+      --soft-blue:#f7fbff;
     }
     *{box-sizing:border-box}
     body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; color:var(--text); background:#fff;}
@@ -111,6 +112,33 @@
       padding-bottom:6px;
     }
 
+    .use-grid,
+    .benefit-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .mini-card{
+      background:#fff;
+      border:1px solid #e9edf2;
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 4px 14px rgba(14,53,87,0.04);
+    }
+    .mini-card h3{
+      margin:0 0 8px;
+      color:var(--nav);
+      font-size:1.02rem;
+    }
+    .mini-card p{
+      margin:0;
+      color:#333;
+      line-height:1.65;
+      font-size:0.97rem;
+    }
+
     /* Packages grid */
     .packages{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:18px;margin-top:18px}
 
@@ -122,6 +150,24 @@
       display:flex;
       flex-direction:column;
       justify-content:space-between;
+      position:relative;
+      border:1px solid #edf1f5;
+    }
+    .package-card.featured{
+      border:2px solid var(--accent);
+      box-shadow:0 10px 24px rgba(232,119,34,0.14);
+    }
+    .badge{
+      position:absolute;
+      top:-12px;
+      right:14px;
+      background:var(--accent);
+      color:#fff;
+      padding:7px 11px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:0.2px;
     }
     .package-top{text-align:center}
     .package-card h3{margin:6px 0 4px;color:var(--nav);font-size:1.15rem}
@@ -153,6 +199,17 @@
     .deliverables ul{margin:8px 0 0 18px}
     .deliverables li{margin:6px 0}
 
+    .best-for{
+      margin-top:12px;
+      background:var(--soft-blue);
+      border:1px solid #dbeaf8;
+      border-radius:10px;
+      padding:12px;
+      font-size:0.95rem;
+      line-height:1.6;
+      color:#234;
+    }
+
     .btn-row{margin-top:16px;text-align:center}
     .cta-button{
       display:inline-block;
@@ -166,6 +223,21 @@
       cursor:pointer;
     }
     .cta-button:hover{background:#c45e15}
+
+    .secondary-button{
+      display:inline-block;
+      background:#fff;
+      color:var(--nav);
+      border:2px solid var(--nav);
+      padding:11px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:900;
+    }
+    .secondary-button:hover{
+      background:var(--nav);
+      color:#fff;
+    }
 
     /* Exchange section */
     .exchange-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px,1fr));gap:18px;margin-top:18px}
@@ -204,6 +276,11 @@
     .modal .btn-submit:disabled{opacity:0.6;cursor:not-allowed}
     .thank-you{display:none;text-align:center;padding:20px}
     .error{color:#b00020;margin-top:8px}
+
+    @media(max-width:768px){
+      .wrap{margin:26px auto}
+      .badge{position:static;display:inline-block;margin-bottom:8px}
+    }
   </style>
 </head>
 
@@ -234,11 +311,11 @@
   </script>
 
   <main class="wrap">
-    <h1>Accommodation Packages</h1>
+    <h1>Accommodation Marketing &amp; Filming Packages</h1>
     <p class="subhead">
       ShowcasingOz TV is filming across Australia from June–December 2026.
       If your accommodation is on our route, we can showcase your property and supply clear marketing assets designed
-      to increase visibility and help convert travellers into enquiries and bookings.
+      to increase visibility, strengthen booking confidence, and help convert travellers into enquiries and bookings.
     </p>
 
     <div class="info-box">
@@ -259,6 +336,53 @@
       <span class="pill">Limited filming allocations per town</span>
     </div>
 
+    <div class="info-box" style="margin-top:18px;">
+      <h2>How you can use your content</h2>
+      <p>
+        All videos and images produced through ShowcasingOz TV are delivered ready for practical marketing use.
+        This means your property receives content that can continue working for you long after filming day.
+      </p>
+
+      <div class="use-grid">
+        <div class="mini-card">
+          <h3>🌐 Website &amp; Booking Pages</h3>
+          <p>Use your video and imagery on your homepage, room pages, accommodation pages, and direct booking pages.</p>
+        </div>
+        <div class="mini-card">
+          <h3>📱 Social Media &amp; Advertising</h3>
+          <p>Use short clips and still images for reels, boosted posts, ongoing social campaigns, and paid ads.</p>
+        </div>
+        <div class="mini-card">
+          <h3>🛎️ OTA &amp; Listing Profiles</h3>
+          <p>Support your presence across Google Business, tourism listings, booking platforms, and other online directories.</p>
+        </div>
+        <div class="mini-card">
+          <h3>📧 Email &amp; Trade Promotion</h3>
+          <p>Strengthen email campaigns, visitor information promotions, travel trade presentations, and partnership marketing.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Why accommodation owners choose this</h2>
+    <div class="benefit-grid">
+      <div class="mini-card">
+        <h3>Increase booking confidence</h3>
+        <p>Travellers often book accommodation based on visuals. Video helps guests understand the property before they arrive.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Show more than photos</h3>
+        <p>Video allows potential guests to experience the layout, atmosphere, and surroundings of your property.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Stand out from competitors</h3>
+        <p>Many properties rely on outdated or limited images. Professional visual content helps your accommodation stand out online.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Reusable marketing assets</h3>
+        <p>Your business receives content that can be reused across multiple campaigns rather than being limited to one release.</p>
+      </div>
+    </div>
+
     <h2 class="section-title">Season 1 Accommodation Packages</h2>
 
     <div class="packages">
@@ -268,7 +392,7 @@
         <div class="package-top">
           <h3>🟫 Professional Property Showcase Package</h3>
           <p class="package-desc">
-            A strong “starter” package designed to help travellers understand your property quickly and confidently.
+            A strong entry package designed to help travellers understand your property quickly and confidently.
           </p>
 
           <div class="price-stack">
@@ -297,6 +421,11 @@
             <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
             <li>Delivery within 30 days post-filming</li>
           </ul>
+
+          <div class="best-for">
+            <strong>Best for:</strong> motels, caravan parks, lodges, boutique stays, B&amp;Bs,
+            and operators wanting a professional promotional asset without stepping up to a larger campaign.
+          </div>
         </div>
 
         <div class="btn-row">
@@ -307,11 +436,12 @@
       </div>
 
       <!-- PACKAGE 2 -->
-      <div class="package-card">
+      <div class="package-card featured">
+        <div class="badge">Most popular option</div>
         <div class="package-top">
           <h3>🟪 Extended Promotional Package</h3>
           <p class="package-desc">
-            For properties that want stronger conversion — more content coverage and more promotional flexibility.
+            For properties that want stronger conversion, broader coverage, and more flexibility across website, social, and advertising.
           </p>
 
           <div class="price-stack">
@@ -334,7 +464,7 @@
           </ul>
           <strong>What you receive:</strong>
           <ul>
-            <li> x professionally edited 90–120 second promotional video</li>
+            <li>1 x professionally edited 90–120 second promotional video</li>
             <li>Aerial footage via licensed drone pilot (subject to weather &amp; airspace regulations)</li>
             <li>2 x short 20–30 second social media clips</li>
             <li>10 high-quality still images captured during filming</li>
@@ -343,6 +473,11 @@
             <li>Priority positioning in online release scheduling</li>
             <li>Delivery within 21 days post-filming</li>
           </ul>
+
+          <div class="best-for">
+            <strong>Best for:</strong> properties wanting a fuller showcase, operators with several room types or facilities,
+            and businesses wanting stronger assets for conversion-focused marketing.
+          </div>
         </div>
 
         <div class="btn-row">
@@ -357,7 +492,7 @@
         <div class="package-top">
           <h3>🟨 Premier Showcase Package</h3>
           <p class="package-desc">
-            The premium option for operators who want the strongest showcase and a full suite of reusable assets.
+            The premium option for operators who want the strongest showcase, maximum content output, and a full suite of reusable assets.
           </p>
 
           <div class="price-stack">
@@ -382,12 +517,17 @@
           <strong>What you receive:</strong>
           <ul>
             <li>1 x professionally edited 2–3 minute promotional video</li>
-            <li>4 xshort 20–30 second social media clips</li>
+            <li>4 x short 20–30 second social media clips</li>
             <li>15 high-quality still images captured during filming</li>
             <li>Inclusion within the relevant regional ShowcasingOz TV episode</li>
             <li>Standalone feature upload across ShowcasingOz TV digital platforms</li>
             <li>Priority delivery within 14 days post-filming</li>
           </ul>
+
+          <div class="best-for">
+            <strong>Best for:</strong> premium accommodation, destination stays, larger regional properties,
+            and operators who want a stronger long-term marketing library with higher-end promotional impact.
+          </div>
         </div>
 
         <div class="btn-row">
@@ -406,7 +546,7 @@
       <p style="margin:0;">
         If a paid package isn’t suitable, we offer a limited number of <strong>Stay-for-Free Exchange Packages</strong>.
         Your accommodation supports our crew stay during filming, and in return we deliver an equivalent content package.
-        Availability is limited and depends on the route schedule and town-by-town capacity. To sufficiently accommodate our crew, we are seeking Triple Share, however we are open to other options if this is not available. 
+        Availability is limited and depends on the route schedule and town-by-town capacity. To sufficiently accommodate our crew, we are seeking Triple Share, however we are open to other options if this is not available.
       </p>
       <p style="margin:10px 0 0;">
         To check when we are in your town and what slots are available, visit our
@@ -553,14 +693,17 @@
         <strong><a href="/calendar.html">Calendar</a></strong> page.
         If you have questions first, send an enquiry below.
       </p>
-      <a class="cta-button open-modal" href="#" data-title="Accommodation — General Enquiry">Send an Enquiry</a>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a class="secondary-button" href="/calendar.html">View Calendar</a>
+        <a class="cta-button open-modal" href="#" data-title="Accommodation — General Enquiry">Send an Enquiry</a>
+      </div>
     </div>
 
     <p class="note">
       <strong>Note:</strong> Prices listed are <strong>exclusive of GST</strong>. GST will be added once ShowcasingOz TV becomes GST-registered.
     </p>
 
-  </main><!-- ✅ IMPORTANT: close main properly -->
+  </main>
 
   <!-- MODAL -->
   <div class="modal-backdrop" id="modalBack">
