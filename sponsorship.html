@@ -523,24 +523,63 @@
         grid-template-columns: 1fr;
       }
 
-      .premium-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+      .premium {
+  margin-top: 24px;
+  padding: 24px;
+  background: linear-gradient(180deg,#fff,#fff);
+  border-radius: 14px;
+  border: 2px solid rgba(232,119,34,0.10);
+  box-shadow: 0 12px 30px rgba(14,53,87,0.05);
+}
 
-      .premium-right {
-        text-align: center !important;
-      }
+.premium-inner {
+  display: block;
+}
 
-      .premium-right .price {
-        text-align: center !important;
-      }
+.premium .left {
+  width: 100%;
+}
 
-      .premium-ctas {
-        justify-content: center;
-      }
+.premium h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
 
+.premium p {
+  color: #444;
+  margin-top: 0;
+}
+
+.premium ul {
+  margin: 10px 0 0 0;
+  padding-left: 22px;
+  color: #333;
+}
+
+.premium ul li {
+  margin-bottom: 8px;
+}
+
+.premium-bottom {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.premium-bottom .price {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+
+.premium-ctas {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
       .hero h1 {
         font-size: 1.95rem;
       }
@@ -749,33 +788,33 @@
     </p>
 
     <div class="premium" role="region" aria-label="Major sponsorship options">
-      <div class="premium-inner">
-        <div class="left">
-          <h3>Major Sponsor - Exclusive</h3>
-          <p>
-            This is the highest-profile sponsorship opportunity available with ShowcasingOz TV.
-            Only <strong>one</strong> Major Sponsor position is available for Season 1.
-          </p>
-          <ul>
-            <li><strong>Option 1:</strong> $15,000 cash sponsorship</li>
-            <li><strong>Option 2:</strong> Provide a near-new or demo 4WD vehicle for the duration of filming with no payments required from ShowcasingOz TV</li>
-            <li><strong>Vehicle providers automatically receive Major Sponsor rights</strong></li>
-            <li>Brand integration across the Season 1 journey</li>
-            <li>Featured recognition across episodes, socials, website, and promotional material</li>
-            <li>Vehicle branding opportunity if applicable</li>
-            <li>High-value alignment with regional Australian tourism and travel content</li>
-          </ul>
-        </div>
+  <div class="premium-inner premium-stacked">
+    <div class="left">
+      <h3>Major Sponsor - Exclusive</h3>
+      <p>
+        This is the highest-profile sponsorship opportunity available with ShowcasingOz TV.
+        Only <strong>one</strong> Major Sponsor position is available for Season 1.
+      </p>
+      <ul>
+        <li><strong>Option 1:</strong> $15,000 cash sponsorship</li>
+        <li><strong>Option 2:</strong> Provide a near-new or demo 4WD vehicle for the duration of filming with no payments required from ShowcasingOz TV</li>
+        <li>Vehicle providers automatically receive Major Sponsor rights</li>
+        <li>Brand integration across the Season 1 journey</li>
+        <li>Featured recognition across episodes, socials, website, and promotional material</li>
+        <li>Vehicle branding opportunity if applicable</li>
+        <li>High-value alignment with regional Australian tourism and travel content</li>
+      </ul>
+    </div>
 
-        <div class="premium-right">
-          <div class="price">$15,000<br>or Vehicle Partnership</div>
-          <div class="premium-ctas">
-            <button type="button" class="button" onclick="openForm('Major Sponsor - $15,000 or Vehicle Partnership')">Send Enquiry</button>
-            <button type="button" class="secondary" onclick="window.open('ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf','_blank')">View Prospectus</button>
-          </div>
-        </div>
+    <div class="premium-bottom">
+      <div class="price">$15,000 or Vehicle Partnership</div>
+      <div class="premium-ctas">
+        <button type="button" class="button" onclick="openForm('Major Sponsor - $15,000 or Vehicle Partnership')">Send Enquiry</button>
+        <button type="button" class="secondary" onclick="window.open('ShowcasingOzTV_Sponsorship_Prospectus_2026.pdf','_blank')">View Prospectus</button>
       </div>
     </div>
+  </div>
+</div>
 
     <p class="limited-note">
       Limited opportunities are available across each town and sponsorship level. Once positions are filled, they close.
