@@ -156,6 +156,7 @@ footer {
   color:white;
   padding:20px 0;
   margin-top:40px;
+  text-align: center !important;
 }
 footer .container {
   text-align:center;
@@ -170,14 +171,9 @@ footer a:hover {
 .footer-links {
   font-size:0.95rem;
 }
-  footer p[style] {
-  text-align: center !important;
-}
-  footer {
-  text-align: center !important;
-}
 footer .footer-links,
-footer p {
+footer p,
+footer p[style] {
   text-align: center !important;
 }
 </style>
@@ -263,27 +259,60 @@ if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('acti
 const csvUrl =
   "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&gid=0";
 
-// === 2. LOAD CSV ===
+// === 2. SIMPLE CSV ROW PARSER (handles quoted commas) ===
+function splitCSVRow(row) {
+  const result = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < row.length; i++) {
+    const char = row[i];
+    const next = row[i + 1];
+
+    if (char === '"') {
+      if (inQuotes && next === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (char === "," && !inQuotes) {
+      result.push(current);
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  result.push(current);
+  return result.map(v => v.trim());
+}
+
+// === 3. LOAD CSV ===
 async function loadCSV() {
   const response = await fetch(csvUrl);
   const text = await response.text();
   return parseCSV(text);
 }
 
-// === 3. BASIC CSV PARSER ===
+// === 4. BASIC CSV PARSER ===
 function parseCSV(text) {
-  const lines = text.trim().split("\n");
-  const header = lines.shift().split(",").map(h => h.trim());
+  const lines = text
+    .replace(/\r/g, "")
+    .split("\n")
+    .filter(line => line.trim() !== "");
+
+  const header = splitCSVRow(lines.shift());
 
   const dateIndex = header.findIndex(h => h.toLowerCase() === "date");
   const townIndex = header.findIndex(h => h.toLowerCase() === "town");
   const attrIndex = header.findIndex(h => h.toLowerCase().includes("attraction"));
 
   const entries = lines.map(line => {
-    const cols = line.split(",");
+    const cols = splitCSVRow(line);
     return {
-      date: cols[dateIndex]?.trim(),
-      town: cols[townIndex]?.trim(),
+      date: cols[dateIndex]?.trim() || "",
+      town: cols[townIndex]?.trim() || "",
       attraction: cols[attrIndex]?.trim() || ""
     };
   });
@@ -291,7 +320,23 @@ function parseCSV(text) {
   return entries;
 }
 
-// === 4. GROUP INTO DATE RANGES ===
+// === 5. AU DATE PARSER ===
+function parseAUDate(dateStr) {
+  if (!dateStr) return null;
+
+  const cleaned = dateStr
+    .trim()
+    .replace(/^[A-Za-z]{3}\s+/, ""); // removes Sat / Sun / Mon etc
+
+  const parts = cleaned.split("/");
+  if (parts.length !== 3) return null;
+
+  const [day, month, year] = parts;
+  const parsed = new Date(`${year}-${month}-${day}T00:00:00`);
+  return isNaN(parsed.getTime()) ? null : parsed;
+}
+
+// === 6. GROUP INTO DATE RANGES ===
 function groupDateRanges(entries) {
   const ranges = [];
   if (entries.length === 0) return ranges;
@@ -317,7 +362,7 @@ function groupDateRanges(entries) {
   return ranges;
 }
 
-// === 5. POPULATE TABLE ===
+// === 7. POPULATE TABLE ===
 function populateTable(ranges) {
   const tbody = document.querySelector("#itinerary-table tbody");
   tbody.innerHTML = "";
@@ -333,37 +378,57 @@ function populateTable(ranges) {
   });
 }
 
-// === 6. GEOCODER ===
-// Optional overrides for ambiguous town names (force correct state)
+// === 8. GEOCODER ===
 const geocodeOverrides = {
   "hopetoun": "Hopetoun, Victoria, Australia",
   "ivanhoe": "Ivanhoe, New South Wales, Australia",
   "rabbit flat": "Rabbit Flat, Northern Territory, Australia",
-  "laura": "Laura, South Australia, Australia"
+  "laura": "Laura, South Australia, Australia",
+  "quorn": "Quorn, South Australia, Australia",
+  "woomera": "Woomera, South Australia, Australia",
+  "coober pedy": "Coober Pedy, South Australia, Australia"
 };
 
 async function geocodeTown(town) {
-  const lower = (town || "").toLowerCase();
-  const searchName = geocodeOverrides[lower] || (town + ", Australia");
+  const lower = (town || "").toLowerCase().trim();
+  const searchName = geocodeOverrides[lower] || `${town}, Australia`;
 
   const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(searchName)}`;
+
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
     const json = await response.json();
-    if (json.length > 0) {
-      return { lat: parseFloat(json[0].lat), lon: parseFloat(json[0].lon) };
+
+    if (Array.isArray(json) && json.length > 0) {
+      return {
+        lat: parseFloat(json[0].lat),
+        lon: parseFloat(json[0].lon)
+      };
     }
-  } catch (e) { console.error("Geocoding error:", e); }
+
+    console.log("Geocode failed for:", town);
+  } catch (e) {
+    console.error("Geocoding error for town:", town, e);
+  }
+
   return null;
 }
 
-// === 7. MAP INITIALISATION ===
+// === 9. MAP INITIALISATION ===
 const map = L.map("map").setView([-25.0, 133.0], 5);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
 
-// === 8. ADD MARKERS + POLYLINE ===
+// === 10. ADD MARKERS + POLYLINE ===
 async function buildMap(ranges) {
   const points = [];
+
   for (const r of ranges) {
     const coords = await geocodeTown(r.town);
     if (!coords) continue;
@@ -376,6 +441,7 @@ async function buildMap(ranges) {
         <span>${r.start} → ${r.end}</span>
       </div>
     `;
+
     L.marker([coords.lat, coords.lon]).addTo(map).bindPopup(popupHtml);
   }
 
@@ -385,48 +451,52 @@ async function buildMap(ranges) {
   }
 }
 
-// === 9. MASTER FUNCTION ===
+// === 11. MASTER FUNCTION ===
 async function init() {
   try {
     const raw = await loadCSV();
     const statusEl = document.getElementById("status");
     if (statusEl) statusEl.innerText = "Building itinerary...";
 
-    // Sort by date (assuming dd/mm/yyyy)
-    const sorted = raw.sort((a, b) =>
-      new Date(a.date.split("/").reverse().join("-")) -
-      new Date(b.date.split("/").reverse().join("-"))
-    );
+    const sorted = raw.sort((a, b) => {
+      const da = parseAUDate(a.date);
+      const db = parseAUDate(b.date);
 
-    // === HIDE NON-FILMING ENTRIES & BLANKS ===
-const filtered = sorted.filter(entry => {
+      if (!da && !db) return 0;
+      if (!da) return 1;
+      if (!db) return -1;
 
-  // Skip blank rows
-  if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
-      return false;
-  }
+      return da - db;
+    });
 
-  const town = entry.town.trim().toLowerCase();
+    const filtered = sorted.filter(entry => {
+      if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
+        return false;
+      }
 
-// Remove ONLY the pre-filming Coober Pedy date (as it appears in the CSV)
-if (entry.date.trim() === "Sat 30/05/2026" && entry.town.trim() === "Coober Pedy") {
-    return false;
-}
+      const town = entry.town.trim().toLowerCase();
 
-  // Pre-filming travel we must hide
-  if (["hobart","spirit of tasmania","mt gambier","adelaide"].includes(town)) {
-      return false;
-  }
+      // Remove ONLY the pre-filming Coober Pedy row
+      if (entry.date.trim() === "Sat 30/05/2026" && entry.town.trim() === "Coober Pedy") {
+        return false;
+      }
 
-  // Hide annual leave
-  if (town.includes("annual leave")) return false;
+      // Pre-filming travel to hide
+      if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town)) {
+        return false;
+      }
 
-  // Hide pause period
-  const d = new Date(entry.date.split("/").reverse().join("-"));
-  if (d >= new Date("2026-09-26") && d <= new Date("2026-10-05")) return false;
+      // Hide annual leave rows
+      if (town.includes("annual leave")) return false;
 
-  return true;
-});
+      // Hide pause period
+      const d = parseAUDate(entry.date);
+      if (d && d >= new Date("2026-09-26T00:00:00") && d <= new Date("2026-10-05T23:59:59")) {
+        return false;
+      }
+
+      return true;
+    });
 
     const ranges = groupDateRanges(filtered);
     populateTable(ranges);
