@@ -14,7 +14,6 @@ gtag('config', 'G-RB6N742VZW');
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<!-- SEO META TAGS -->
 <title>Filming Map | ShowcasingOz TV – Discover Our Australian Travel Itinerary</title>
 <meta name="description" content="Explore the ShowcasingOz TV filming map to see each Australian town we visit and film. Discover dates and our 2026 travel route across Australia." />
 <meta name="keywords" content="ShowcasingOz TV, filming map, Australian travel series, travel itinerary, TV filming locations, Australia travel, regional tourism" />
@@ -27,10 +26,7 @@ gtag('config', 'G-RB6N742VZW');
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://showcasingoztv.com.au/filming-map.html" />
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
-
-<!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
@@ -98,7 +94,6 @@ nav a:hover {
   }
 }
 
-/* Banner */
 .banner {
   display: block;
   width: 100%;
@@ -113,7 +108,7 @@ nav a:hover {
   padding: 18px;
   background: linear-gradient(180deg,#0f172a,#0b1220);
   color: white;
-  text-align:center;
+  text-align: center;
 }
 
 #map {
@@ -142,43 +137,38 @@ th {
   background: #f4f4f4;
 }
 .note {
-  font-size:0.95rem;
-  color:#444;
+  font-size: 0.95rem;
+  color: #444;
 }
-
 .popup-content {
   max-width: 320px;
 }
 
-/* Footer */
 footer {
-  background:#0E3557;
-  color:white;
-  padding:20px 0;
-  margin-top:40px;
+  background: #0E3557;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
   text-align: center !important;
 }
 footer .container {
-  text-align:center;
+  text-align: center;
 }
 footer a {
-  color:#E87722;
-  text-decoration:none;
+  color: #E87722;
+  text-decoration: none;
 }
 footer a:hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
-.footer-links {
-  font-size:0.95rem;
-}
-footer .footer-links,
+.footer-links,
 footer p,
 footer p[style] {
   text-align: center !important;
+  font-size: 0.95rem;
 }
 </style>
 
-<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -196,10 +186,8 @@ footer p[style] {
 </script>
 
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header class="navbar">
   <div class="container">
     <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
@@ -219,12 +207,11 @@ footer p[style] {
 </header>
 
 <script>
-const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu');
-if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+if (menuBtn) menuBtn.addEventListener("click", () => menu.classList.toggle("active"));
 </script>
 
-<!-- Banner -->
 <section class="banner"></section>
 
 <div class="hero">
@@ -232,7 +219,6 @@ if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('acti
   <p>Live itinerary displayed using our 2026 filming schedule in Google Sheets. Click pins for date ranges.</p>
 </div>
 
-<!-- Map -->
 <div id="map"></div>
 
 <div class="container">
@@ -251,15 +237,11 @@ if (menuBtn) menuBtn.addEventListener('click', () => menu.classList.toggle('acti
   </table>
 </div>
 
-<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-// === 1. GOOGLE SHEETS CSV URL ===
-const csvUrl =
-  "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&gid=0";
+const csvUrl = "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&gid=0";
 
-// === 2. SIMPLE CSV ROW PARSER (handles quoted commas) ===
 function splitCSVRow(row) {
   const result = [];
   let current = "";
@@ -288,14 +270,12 @@ function splitCSVRow(row) {
   return result.map(v => v.trim());
 }
 
-// === 3. LOAD CSV ===
 async function loadCSV() {
   const response = await fetch(csvUrl);
   const text = await response.text();
   return parseCSV(text);
 }
 
-// === 4. BASIC CSV PARSER ===
 function parseCSV(text) {
   const lines = text
     .replace(/\r/g, "")
@@ -320,15 +300,12 @@ function parseCSV(text) {
   return entries;
 }
 
-// === 5. AU DATE PARSER ===
 function parseAUDate(dateStr) {
   if (!dateStr) return null;
 
-  const cleaned = dateStr
-    .trim()
-    .replace(/^[A-Za-z]{3}\s+/, ""); // removes Sat / Sun / Mon etc
-
+  const cleaned = dateStr.trim().replace(/^[A-Za-z]{3}\s+/, "");
   const parts = cleaned.split("/");
+
   if (parts.length !== 3) return null;
 
   const [day, month, year] = parts;
@@ -336,7 +313,6 @@ function parseAUDate(dateStr) {
   return isNaN(parsed.getTime()) ? null : parsed;
 }
 
-// === 6. GROUP INTO DATE RANGES ===
 function groupDateRanges(entries) {
   const ranges = [];
   if (entries.length === 0) return ranges;
@@ -362,44 +338,45 @@ function groupDateRanges(entries) {
   return ranges;
 }
 
-// === 7. POPULATE TABLE ===
 function populateTable(ranges) {
   const tbody = document.querySelector("#itinerary-table tbody");
   tbody.innerHTML = "";
 
   ranges.forEach(r => {
     const tr = document.createElement("tr");
-    const rangeText = `${r.start} → ${r.end}`;
     tr.innerHTML = `
-      <td>${rangeText}</td>
+      <td>${r.start} → ${r.end}</td>
       <td>${r.town}</td>
     `;
     tbody.appendChild(tr);
   });
 }
 
-// === 8. GEOCODER ===
 const geocodeOverrides = {
-  "hopetoun": "Hopetoun, Victoria, Australia",
-  "ivanhoe": "Ivanhoe, New South Wales, Australia",
-  "rabbit flat": "Rabbit Flat, Northern Territory, Australia",
-  "laura": "Laura, South Australia, Australia",
-  "quorn": "Quorn, South Australia, Australia",
-  "woomera": "Woomera, South Australia, Australia",
-  "coober pedy": "Coober Pedy, South Australia, Australia"
+  "hopetoun": { lat: -35.7283, lon: 142.3609 },
+  "ivanhoe": { lat: -32.9004, lon: 144.3098 },
+  "rabbit flat": { lat: -20.1849, lon: 130.0096 },
+  "laura": { lat: -33.1832, lon: 138.3028 },
+  "quorn": { lat: -32.3467, lon: 138.0410 },
+  "woomera": { lat: -31.1999, lon: 136.8253 },
+  "coober pedy": { lat: -29.0141, lon: 134.7546 },
+  "alice springs": { lat: -23.6980, lon: 133.8807 },
+  "tilmouth well": { lat: -22.9236, lon: 131.3839 }
 };
 
 async function geocodeTown(town) {
   const lower = (town || "").toLowerCase().trim();
-  const searchName = geocodeOverrides[lower] || `${town}, Australia`;
 
+  if (geocodeOverrides[lower]) {
+    return geocodeOverrides[lower];
+  }
+
+  const searchName = `${town}, Australia`;
   const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(searchName)}`;
 
   try {
     const response = await fetch(url, {
-      headers: {
-        "Accept": "application/json"
-      }
+      headers: { "Accept": "application/json" }
     });
 
     const json = await response.json();
@@ -419,13 +396,12 @@ async function geocodeTown(town) {
   return null;
 }
 
-// === 9. MAP INITIALISATION ===
 const map = L.map("map").setView([-25.0, 133.0], 5);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// === 10. ADD MARKERS + POLYLINE ===
 async function buildMap(ranges) {
   const points = [];
 
@@ -437,7 +413,7 @@ async function buildMap(ranges) {
 
     const popupHtml = `
       <div class="popup-content">
-        <strong>${r.town}</strong><br/>
+        <strong>${r.town}</strong><br>
         <span>${r.start} → ${r.end}</span>
       </div>
     `;
@@ -451,7 +427,6 @@ async function buildMap(ranges) {
   }
 }
 
-// === 11. MASTER FUNCTION ===
 async function init() {
   try {
     const raw = await loadCSV();
@@ -476,20 +451,16 @@ async function init() {
 
       const town = entry.town.trim().toLowerCase();
 
-      // Remove ONLY the pre-filming Coober Pedy row
       if (entry.date.trim() === "Sat 30/05/2026" && entry.town.trim() === "Coober Pedy") {
         return false;
       }
 
-      // Pre-filming travel to hide
       if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town)) {
         return false;
       }
 
-      // Hide annual leave rows
       if (town.includes("annual leave")) return false;
 
-      // Hide pause period
       const d = parseAUDate(entry.date);
       if (d && d >= new Date("2026-09-26T00:00:00") && d <= new Date("2026-10-05T23:59:59")) {
         return false;
@@ -513,7 +484,6 @@ async function init() {
 document.addEventListener("DOMContentLoaded", init);
 </script>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-links">
     <a href="/index.html">Home</a> |
