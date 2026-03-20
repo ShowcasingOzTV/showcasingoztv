@@ -277,18 +277,14 @@ async function loadCSV() {
 }
 
 function parseCSV(text) {
-  const lines = text
-    .replace(/\r/g, "")
-    .split("\n")
-    .filter(line => line.trim() !== "");
-
+  const lines = text.replace(/\r/g, "").split("\n").filter(line => line.trim() !== "");
   const header = splitCSVRow(lines.shift());
 
   const dateIndex = header.findIndex(h => h.toLowerCase() === "date");
   const townIndex = header.findIndex(h => h.toLowerCase() === "town");
   const attrIndex = header.findIndex(h => h.toLowerCase().includes("attraction"));
 
-  const entries = lines.map(line => {
+  return lines.map(line => {
     const cols = splitCSVRow(line);
     return {
       date: cols[dateIndex]?.trim() || "",
@@ -296,8 +292,6 @@ function parseCSV(text) {
       attraction: cols[attrIndex]?.trim() || ""
     };
   });
-
-  return entries;
 }
 
 function parseAUDate(dateStr) {
@@ -305,7 +299,6 @@ function parseAUDate(dateStr) {
 
   const cleaned = dateStr.trim().replace(/^[A-Za-z]{3}\s+/, "");
   const parts = cleaned.split("/");
-
   if (parts.length !== 3) return null;
 
   const [day, month, year] = parts;
@@ -315,7 +308,7 @@ function parseAUDate(dateStr) {
 
 function groupDateRanges(entries) {
   const ranges = [];
-  if (entries.length === 0) return ranges;
+  if (!entries.length) return ranges;
 
   let start = entries[0].date;
   let end = entries[0].date;
@@ -323,7 +316,6 @@ function groupDateRanges(entries) {
 
   for (let i = 1; i < entries.length; i++) {
     const e = entries[i];
-
     if (e.town === town) {
       end = e.date;
     } else {
@@ -352,48 +344,78 @@ function populateTable(ranges) {
   });
 }
 
-const geocodeOverrides = {
-  "hopetoun": { lat: -35.7283, lon: 142.3609 },
-  "ivanhoe": { lat: -32.9004, lon: 144.3098 },
-  "rabbit flat": { lat: -20.1849, lon: 130.0096 },
-  "laura": { lat: -33.1832, lon: 138.3028 },
-  "quorn": { lat: -32.3467, lon: 138.0410 },
-  "woomera": { lat: -31.1999, lon: 136.8253 },
-  "coober pedy": { lat: -29.0141, lon: 134.7546 },
-  "alice springs": { lat: -23.6980, lon: 133.8807 },
-  "tilmouth well": { lat: -22.9236, lon: 131.3839 }
+/* Static coordinates so the map does NOT depend on live geocoding */
+const townCoords = {
+  "coober pedy": [-29.0137, 134.7547],
+  "alice springs": [-23.6980, 133.8807],
+  "timouth well": [-22.9130, 131.3860],
+  "rabbit flat": [-20.1849, 130.0096],
+  "halls creek": [-18.2294, 127.6642],
+  "kalkarindji": [-17.4390, 130.8340],
+  "daly waters": [-16.2613, 133.3718],
+  "borroloola": [-16.0695, 136.3064],
+  "barkly roadhouse": [-19.7000, 135.8167],
+  "tenant creek": [-19.6484, 134.1916],
+  "tennant creek": [-19.6484, 134.1916],
+  "kings canyon": [-24.2553, 131.4857],
+  "uluru (curtin springs)": [-25.3144, 131.7567],
+  "uluru (yulara)": [-25.2406, 130.9889],
+  "erldunda": [-25.2050, 133.1980],
+  "roxby downs": [-30.5591, 136.8952],
+  "andamooka": [-30.4512, 137.1665],
+  "woomera": [-31.1999, 136.8253],
+  "quorn": [-32.3467, 138.0410],
+  "melrose": [-32.8235, 138.1868],
+  "jamestown": [-33.2062, 138.6037],
+  "broken hill": [-31.9539, 141.4539],
+  "silverton": [-31.8830, 141.2250],
+  "tibooburra": [-29.4376, 142.0102],
+  "cameron corner": [-28.9980, 141.0020],
+  "noccundra": [-27.7423, 142.6697],
+  "eromanga": [-26.6694, 143.2674],
+  "quilpie": [-26.6171, 144.2605],
+  "adavale": [-25.9054, 144.5909],
+  "charleville": [-26.4043, 146.2414],
+  "cunnamulla": [-28.0670, 145.6840],
+  "thargomindah": [-27.9947, 143.8181],
+  "bourke": [-30.0896, 145.9380],
+  "nyngan": [-31.5630, 147.1935],
+  "cobar": [-31.4950, 145.8380],
+  "hillston": [-33.4830, 145.5360],
+  "griffith": [-34.2903, 146.0405],
+  "jerilderie": [-35.3570, 145.7290],
+  "finley": [-35.6540, 145.5710],
+  "deniliquin": [-35.5309, 144.9631],
+  "moulamein": [-35.0827, 144.0333],
+  "balranald": [-34.6372, 143.5608],
+  "hay": [-34.5097, 144.8430],
+  "white cliffs": [-30.8510, 143.0890],
+  "wilcannia": [-31.5650, 143.3780],
+  "menindee": [-32.3976, 142.4120],
+  "mungo": [-33.7470, 143.0860],
+  "euston": [-34.5740, 142.7340],
+  "tooleybuc": [-35.0430, 143.3450],
+  "swan hill": [-35.3370, 143.5540],
+  "sea lake": [-35.5040, 142.8490],
+  "hopetoun": [-35.7283, 142.3609],
+  "warracknabeal": [-36.2500, 142.3980],
+  "horsham": [-36.7110, 142.1990],
+  "dimboola": [-36.4550, 142.0320],
+  "nhill": [-36.3330, 141.6490],
+  "edenhope": [-37.0370, 141.2960],
+  "casterton": [-37.5840, 141.4020],
+  "portland": [-38.3462, 141.6041],
+  "port fairy": [-38.3854, 142.2350],
+  "warrnambool": [-38.3818, 142.4878],
+  "hamilton": [-37.7420, 142.0220],
+  "dunkeld": [-37.6490, 142.3450],
+  "halls gap": [-37.1390, 142.5190]
 };
 
-async function geocodeTown(town) {
-  const lower = (town || "").toLowerCase().trim();
-
-  if (geocodeOverrides[lower]) {
-    return geocodeOverrides[lower];
-  }
-
-  const searchName = `${town}, Australia`;
-  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(searchName)}`;
-
-  try {
-    const response = await fetch(url, {
-      headers: { "Accept": "application/json" }
-    });
-
-    const json = await response.json();
-
-    if (Array.isArray(json) && json.length > 0) {
-      return {
-        lat: parseFloat(json[0].lat),
-        lon: parseFloat(json[0].lon)
-      };
-    }
-
-    console.log("Geocode failed for:", town);
-  } catch (e) {
-    console.error("Geocoding error for town:", town, e);
-  }
-
-  return null;
+function getTownCoords(town) {
+  if (!town) return null;
+  const key = town.trim().toLowerCase();
+  return townCoords[key] || null;
 }
 
 const map = L.map("map").setView([-25.0, 133.0], 5);
@@ -406,10 +428,14 @@ async function buildMap(ranges) {
   const points = [];
 
   for (const r of ranges) {
-    const coords = await geocodeTown(r.town);
-    if (!coords) continue;
+    const coords = getTownCoords(r.town);
 
-    points.push([coords.lat, coords.lon]);
+    if (!coords) {
+      console.log("Missing coordinates for:", r.town);
+      continue;
+    }
+
+    points.push(coords);
 
     const popupHtml = `
       <div class="popup-content">
@@ -418,7 +444,7 @@ async function buildMap(ranges) {
       </div>
     `;
 
-    L.marker([coords.lat, coords.lon]).addTo(map).bindPopup(popupHtml);
+    L.marker(coords).addTo(map).bindPopup(popupHtml);
   }
 
   if (points.length > 1) {
@@ -455,11 +481,9 @@ async function init() {
         return false;
       }
 
-      if (["hobart", "spirit of tasmania", "mt gambier", "adelaide"].includes(town)) {
+      if (["hobart", "spirit of tasmania", "mt gambier", "adelaide", "mid season break", "annual leave"].includes(town)) {
         return false;
       }
-
-      if (town.includes("annual leave")) return false;
 
       const d = parseAUDate(entry.date);
       if (d && d >= new Date("2026-09-26T00:00:00") && d <= new Date("2026-10-05T23:59:59")) {
