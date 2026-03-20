@@ -344,11 +344,11 @@ function populateTable(ranges) {
   });
 }
 
-/* Static coordinates so the map does NOT depend on live geocoding */
 const townCoords = {
   "coober pedy": [-29.0137, 134.7547],
   "alice springs": [-23.6980, 133.8807],
   "timouth well": [-22.9130, 131.3860],
+  "tilmouth well": [-22.9130, 131.3860],
   "rabbit flat": [-20.1849, 130.0096],
   "halls creek": [-18.2294, 127.6642],
   "kalkarindji": [-17.4390, 130.8340],
@@ -424,8 +424,19 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function buildMap(ranges) {
   const points = [];
+  const polyline = L.polyline([], {
+    color: "#E87722",
+    weight: 4,
+    opacity: 0.9
+  }).addTo(map);
+
+  let firstPoint = true;
 
   for (const r of ranges) {
     const coords = getTownCoords(r.town);
@@ -436,6 +447,7 @@ async function buildMap(ranges) {
     }
 
     points.push(coords);
+    polyline.addLatLng(coords);
 
     const popupHtml = `
       <div class="popup-content">
@@ -445,11 +457,22 @@ async function buildMap(ranges) {
     `;
 
     L.marker(coords).addTo(map).bindPopup(popupHtml);
+
+    if (firstPoint) {
+      map.setView(coords, 6);
+      firstPoint = false;
+    } else {
+      map.panTo(coords, {
+        animate: true,
+        duration: 1.2
+      });
+    }
+
+    await sleep(700);
   }
 
   if (points.length > 1) {
-    const poly = L.polyline(points, { color: "#E87722", weight: 4 }).addTo(map);
-    map.fitBounds(poly.getBounds(), { padding: [40, 40] });
+    map.fitBounds(polyline.getBounds(), { padding: [40, 40] });
   }
 }
 
@@ -484,6 +507,8 @@ async function init() {
       if (["hobart", "spirit of tasmania", "mt gambier", "adelaide", "mid season break", "annual leave"].includes(town)) {
         return false;
       }
+
+      if (town.includes("annual leave")) return false;
 
       const d = parseAUDate(entry.date);
       if (d && d >= new Date("2026-09-26T00:00:00") && d <= new Date("2026-10-05T23:59:59")) {
