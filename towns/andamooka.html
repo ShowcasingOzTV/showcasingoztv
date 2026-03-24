@@ -331,6 +331,33 @@ footer p a:hover {
 footer .gst-disclaimer {
   color: #ffffff !important;
 }
+
+    .other-accommodation-bookings {
+  max-width: 700px;
+  margin: 25px auto 0;
+}
+
+.other-stay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.other-stay-item span {
+  color: #0E3557;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .other-stay-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
   </style>
 </head>
 
@@ -498,9 +525,9 @@ footer .gst-disclaimer {
   </div>
 
   <h3 class="other-accommodation-heading">Other Accommodation In And Around Andamooka</h3>
-  <ul class="other-accommodation-list">
-    <li>Dukes Bottlehouse Motel</li>
-  </ul>
+<div class="other-accommodation-bookings">
+
+  <div class="other-stay-item"><span>Dukes Bottlehouse Motel</span><a href="https://www.booking.com/searchresults.html?ss=Andamooka" target="_blank" class="accommodation-link">View / Book</a></div>
 
   <p class="accommodation-disclaimer">
     This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links. We may earn a small commission if you make a booking, at no extra cost to you.
