@@ -3,23 +3,22 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Griffith (NSW) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Griffith (NSW) — a vibrant regional city known for its Italian heritage, wineries, fresh produce, festivals and Riverina culture. Featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Griffith, NSW, Riverina, wineries, Italian heritage, food and wine, ShowcasingOz TV" />
+<meta name="description" content="Discover Griffith, NSW — a vibrant Riverina city known for its Italian heritage, irrigation farming, wineries, and rich agricultural production in southern New South Wales." />
+<meta name="keywords" content="Griffith NSW, Griffith Riverina, Murrumbidgee Irrigation Area, Griffith wineries, Riverina agriculture, Griffith attractions, Griffith accommodation, NSW food and wine region, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -29,7 +28,7 @@
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -39,6 +38,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -47,68 +47,61 @@
       align-items: center;
       padding: 0 20px;
     }
+
     header img { height: 65px; }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { color: #E87722; }
+
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    /* Hero Banner */
+    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/griffith.jpg') center center / cover no-repeat;
+      background-color: #ddd;
     }
 
-    /* Content */
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
     p { line-height:1.6; color:#333; }
 
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
-    }
-
-    /* Video Placeholder */
-    .video-placeholder {
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
       width:100%;
       height:350px;
       background:#e1e1e1;
@@ -117,19 +110,214 @@
       justify-content:center;
       align-items:center;
       color:#666;
-      font-size:1.3rem;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
-    }
-
-    footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
       text-align:center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+/* ================= CENTER ALIGN – GRIFFITH ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
 footer .footer-links a,
 footer p a {
   color: #E87722 !important;
@@ -139,6 +327,36 @@ footer .footer-links a:hover,
 footer p a:hover {
   color: #ffffff !important;
 }
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+
+            .other-accommodation-bookings {
+  max-width: 700px;
+  margin: 25px auto 0;
+}
+
+.other-stay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.other-stay-item span {
+  color: #0E3557;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .other-stay-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   </style>
 </head>
 
@@ -147,7 +365,7 @@ footer p a:hover {
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
     <nav id="menu">
       <a href="../index.html">Home</a>
@@ -156,54 +374,392 @@ footer p a:hover {
       <a href="../partner.html">Partner With Us</a>
       <a href="../sponsorship.html">Sponsorship</a>
       <a href="../filming-map.html">Filming Map</a>
+      <a href="/calendar.html">Calendar</a>
       <a href="../press.html">Press</a>
       <a href="../contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<script>
+<script defer>
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+  <img src="../images/towns/griffith.jpg"
+       alt="Griffith New South Wales"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
-  <h1>Griffith (NSW)</h1>
+<h1>Griffith (NSW)</h1>
 
-  <p>
-    Griffith is one of the Riverina’s most vibrant and culturally rich cities, famous for 
-    its Italian heritage, world-class wineries, fresh produce and thriving food scene.  
-    Designed by Walter Burley Griffin, the city features wide leafy streets, a strong café 
-    culture and a warm community atmosphere.
-    <br><br>
-    Surrounded by irrigated farmland, orchards and vineyards, Griffith is a major hub for 
-    agriculture, winemaking and gourmet experiences. With festivals, history, scenic lookouts 
-    and a welcoming lifestyle, Griffith is a regional standout. ShowcasingOz TV will be 
-    capturing its flavours, stories and character during our 2026 filming.
-  </p>
+<p>
+Griffith is a vibrant regional city in the Riverina district of southern New South Wales, known for its strong agricultural base, multicultural heritage, and reputation as a major food and wine destination. Positioned within the Murrumbidgee Irrigation Area, Griffith plays a key role in one of Australia’s most productive farming regions.
+</p>
 
+<p>
+Established in the early 20th century as part of an irrigation scheme, Griffith was designed to support intensive agriculture through a network of canals and water management systems. This transformation turned semi-arid land into fertile farmland, enabling large-scale production of fruit, vegetables, rice, and wine grapes.
+</p>
+
+<p>
+The city is particularly known for its Italian influence, with many families settling in the region and contributing to its food, wine, and cultural identity. Wineries, cafés, and restaurants reflect this heritage, making Griffith a recognised destination for regional cuisine and hospitality.
+</p>
+
+<p>
+Agriculture remains central to Griffith’s economy, supported by food processing, packaging, and export industries. The surrounding farmland and irrigation infrastructure continue to define both the landscape and the livelihoods of the community.
+</p>
+
+<p>
+Today, Griffith offers a wide range of services, retail, accommodation, and visitor attractions, with a vibrant town centre and strong community culture. Parks, walking tracks, public art, and cultural landmarks contribute to a dynamic and welcoming regional city.
+</p>
+
+<p>
+Surrounded by vineyards, orchards, and open plains, Griffith captures the innovation and productivity of the Riverina. The city blends agricultural success with cultural diversity, creating a unique and engaging destination in southern New South Wales.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Griffith as part of our national filming journey — highlighting its irrigation heritage, food and wine culture, agricultural strength, and the diverse community that continues to shape this thriving Riverina city.
+</p>
+
+  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">
-    Documentary Coming Soon
-  </div>
+  <div class="video-placeholder">Documentary Coming Soon</div>
 
+  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p>
-    We’ll be showcasing Griffith’s wineries, produce, culture and stunning landscapes during our Series 1 visit in September 2026.
-  </p>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon">
-      <p>Attractions Coming Soon</p>
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
     </div>
   </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Griffith</h3>
+  <ul class="other-accommodation-list">
+    <li>Wallys Junk Art Gallery - Rankins Springs</li>
+    <li>Binya Hall - Binya</li>
+    <li>De Bortoli Wines</li>
+    <li>Griffith Pioneer Park Museum</li>
+    <li>Griffith Tourism Hub</li>
+    <li>Yarran Wines</li>
+    <li>Berton Vineyards</li>
+    <li>Griffith Regional Art Gallery</li>
+    <li>Made To Thrive</li>
+    <li>Calabria Family Wines</li>
+    <li>Griffith Italian Museum and Cultural Centre</li>
+    <li>Griffith War Memorial Museum</li>
+    <li>Catania Fruit Salad Farm</li>
+    <li>The Aisling Distillery</li>
+    <li>Darlington Point Museum - Darlington Point</li>
+    <li>Southern Cotton Gin Tour - Whitton</li>
+    <li>Whitton Malt House - Whitton</li>
+    <li>Altina Wildlife Park</li>
+    <li>Yarrow Park Award Winning Cellar Door - Coleambally</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Griffith’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Goolgowi</h3>
+      <p>Goolgowi is a small Riverina service town located along the Mid-Western Highway, supporting surrounding agricultural districts. It functions as a convenient stop for travellers and a hub for local farming communities.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Old Rankins Springs Turntable</h3>
+      <p>The Old Rankins Springs Turntable is a historic railway feature once used to rotate locomotives. It reflects the importance of rail transport in supporting agricultural production and regional connectivity.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Rankins Springs</h3>
+      <p>Rankins Springs is a small rural locality surrounded by farming country, representing the dispersed agricultural settlements that characterise the Riverina region.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Picnic Train Historical Site</h3>
+      <p>Binya is a quiet agricultural locality near Griffith, reflecting the irrigation-based farming landscape that supports cropping and horticulture across the region.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Woolshed Falls Walking Track</h3>
+      <p>Woolshed Falls Walking Track provides access to a small cascade and natural bushland setting, offering a short walk through native vegetation and a peaceful outdoor experience.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Falcon Falls Walking Track</h3>
+      <p>Falcon Falls Walking Track leads to a minor waterfall and lookout area, showcasing local bushland and offering a quiet natural escape within the broader agricultural landscape.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Lake Wyangan</h3>
+      <p>Lake Wyangan is a popular recreational lake offering fishing, boating, and picnic areas. The lake is an important local attraction, providing a contrast to the surrounding farmland.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Hermit’s Cave</h3>
+      <p>Hermit’s Cave is a unique historic site featuring hand-carved caves, rock walls, and gardens created by an Italian hermit in the early 20th century. The site reflects cultural history and individual craftsmanship.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Heesco Mural</h3>
+      <p>The Heesco Mural is a large-scale artwork by artist Heesco, depicting local themes and contributing to Griffith’s growing public art scene.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Big Wine Bottles</h3>
+      <p>The Big Wine Bottles are a roadside attraction celebrating Griffith’s status as a major wine-producing region, reflecting its strong viticulture industry.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Mount Brogden Walking Track</h3>
+      <p>Mount Brogden Walking Track offers elevated views across Griffith and the surrounding farmland, providing perspective on the scale of the irrigation landscape.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>MIA Pioneers Memorial</h3>
+      <p>The MIA Pioneers Memorial commemorates the individuals who established the Murrumbidgee Irrigation Area, recognising their role in transforming the region.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>I.O.O.F Park</h3>
+      <p>I.O.O.F Park is a central recreational space featuring open lawns, playgrounds, and community facilities, supporting outdoor activities and gatherings.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Nancy Blumer Memorial</h3>
+      <p>The Nancy Blumer Memorial honours a local community figure, reflecting the contributions of individuals who have shaped Griffith’s social and cultural life.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Pioneer Women Of Griffith District Statue</h3>
+      <p>This statue recognises the role of women in developing the Griffith district, highlighting their contributions to agriculture, family life, and community building.</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Fairey Firefly Monument</h3>
+      <p>The Fairey Firefly Monument commemorates a naval aircraft and its connection to the region, serving as a unique historical landmark.</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Bucyrus Erie - Coleambally</h3>
+      <p>The Bucyrus Erie machine in Coleambally is a large piece of earthmoving equipment displayed as a monument to the engineering efforts behind irrigation development
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Coleambally Water Tower</h3>
+      <p>The Coleambally Water Tower features artwork that reflects the town’s irrigation heritage and agricultural identity.</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Coleambally</h3>
+      <p>Coleambally is a purpose-built irrigation town developed as part of the Murrumbidgee Irrigation Area, supporting intensive agriculture and modern farming practices.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+  <!-- ACCOMMODATION -->
+  <h2>🏨 Featured Accommodation In And Around Griffith</h2>
+
+<p class="accommodation-intro">
+  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
+  Selected partners receive cinematic 4K video coverage and professional photography that captures
+  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
+  presented as part of a nationally filmed travel series.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Accommodation In And Around Griffith</h3>
+  <div class="other-accommodation-bookings">
+
+  <div class="other-stay-item"><span>Quest Apartments Griffith</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Citrus Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Gem Hotel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>The Grand Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Econo Lodge Griffith Motor Inn</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>The Griff Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Acacia Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Comfort Inn Gemini</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Yambil Inn Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>The Kidman Wayside Inn</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hotel Victoria</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Aline Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Griffith Tourist Caravan Park</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Griffith Prestige Apartments</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Jen's Garden Pods</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Mia Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Banna Suites</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Coro Club Motel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Le Grange Griffith</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Exies Bagtown Motel & Function Centre</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>The Area Hotel & Bistro</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Yenda Hotel - Yenda</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Ingleden Park Farmstay Cottages</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Griffith Working Hostels</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Explorers Hostel</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Village Stay Bilbul</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Abode on Sidlow</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Catania Fruit Salad Farm</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Tony's Tiny Home</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Griffith Prestige Apartments - Deluxe Apartment</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Paris's Place - Four-Bedroom House</span><a href="https://www.booking.com/searchresults.html?ss=Griffith" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Rankins Springs Motel - Rankins Springs</span><a href="https://www.booking.com/searchresults.html?ss=Rankins+Springs" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Goolgowi Highway Motel - Goolgowi</span><a href="https://www.booking.com/searchresults.html?ss=Goolgowi" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Goolgowi Motor Inn - Goolgowi</span><a href="https://www.booking.com/searchresults.html?ss=Goolgowi" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Coleambally Motel - Coleambally</span><a href="https://www.booking.com/searchresults.html?ss=Coleambally" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <p class="accommodation-disclaimer">
+This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links. We may earn a small commission if you make a booking, at no extra cost to you.
+  </p>
 
 </section>
 
@@ -216,6 +772,7 @@ footer p a:hover {
     <a href="/partner.html">Partner With Us</a> |
     <a href="/sponsorship.html">Sponsorship</a> |
     <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
     <a href="/press.html">Press</a> |
     <a href="/contact.html">Contact</a> |
     <a href="/legal.html">Legal</a>
@@ -223,8 +780,10 @@ footer p a:hover {
 
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
