@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Stawell (VIC) | ShowcasingOz TV</title>
+<meta name="description" content="Discover Stawell, VIC — a historic gold mining town at the gateway to the Grampians, known for its heritage, Stawell Gift, and scenic regional setting in western Victoria." />
+<meta name="keywords" content="Stawell VIC, Stawell Victoria, Stawell Gift, gold mining town Victoria, Grampians gateway town, Stawell attractions, Stawell accommodation, western Victoria travel, ShowcasingOz TV" />
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #0E3557;
+    }
+
+    /* ================= HEADER ================= */
+    header.navbar {
+      background: #0E3557;
+      color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    header img { height: 65px; }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #E87722; }
+
+    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+
+    @media (max-width:768px){
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
+      nav.active { display:flex; }
+      .menu-btn { display:block; }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      width: 100%;
+      height: 320px;
+      background-color: #ddd;
+    }
+
+    /* ================= CONTENT ================= */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
+
+    p { line-height:1.6; color:#333; }
+
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      width:100%;
+      height:350px;
+      background:#e1e1e1;
+      border-radius:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#666;
+      font-size:1.2rem;
+      font-weight:500;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – STAWELL ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
+footer .footer-links a,
+footer p a {
+  color: #E87722 !important;
+}
+
+footer .footer-links a:hover,
+footer p a:hover {
+  color: #ffffff !important;
+}
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+
+        .other-accommodation-bookings {
+  max-width: 700px;
+  margin: 25px auto 0;
+}
+
+.other-stay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.other-stay-item span {
+  color: #0E3557;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .other-stay-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
+    <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+    <nav id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../towns/index.html" style="color:#E87722;">Towns</a>
+      <a href="../partner.html">Partner With Us</a>
+      <a href="../sponsorship.html">Sponsorship</a>
+      <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
+      <a href="../press.html">Press</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script defer>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="../images/towns/stawell.jpg"
+       alt="Stawell Victoria"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+<h1>Stawell (VIC)</h1>
+
+<p>
+Stawell is a historic regional town in western Victoria, located at the northern gateway to the Grampians National Park. Known for its gold mining heritage and strong community identity, Stawell plays an important role within the Wimmera region.
+</p>
+
+<p>
+Established during the Victorian gold rush of the mid-19th century, Stawell developed as a major gold mining centre, with rich deposits driving rapid growth and shaping the town’s early economy. Mining remains a defining part of its history, with both historic sites and ongoing operations reflecting its long-standing connection to the industry.
+</p>
+
+<p>
+The town is widely recognised for hosting the Stawell Gift, one of Australia’s most prestigious professional foot races. Held annually, the event attracts athletes and spectators from across the country and has become a key part of Stawell’s identity and cultural calendar.
+</p>
+
+<p>
+Stawell’s location provides easy access to the Grampians, with nearby mountains, bushland, and walking trails offering opportunities for outdoor recreation. This proximity allows the town to serve as both a service centre and a base for exploring the surrounding natural attractions.
+</p>
+
+<p>
+Today, Stawell offers a range of services, retail, accommodation, and community facilities, with a welcoming atmosphere and strong regional character. Heritage buildings, parks, and public spaces contribute to its appeal for both residents and visitors.
+</p>
+
+<p>
+Surrounded by farmland, bushland, and mountain ranges, Stawell reflects the transition between Victoria’s agricultural plains and the rugged Grampians landscape. The town blends history, sport, and natural access in a distinctly regional setting.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Stawell as part of our national filming journey — highlighting its gold mining heritage, connection to the Grampians, sporting culture, and the community spirit that continues to shape this western Victorian town.
+</p>
+  
+  <!-- DOCUMENTARY -->
+  <h2>🎥 Town Documentary</h2>
+  <div class="video-placeholder">Documentary Coming Soon</div>
+
+  <!-- ATTRACTIONS -->
+  <h2>📍 Attractions & Points of Interest</h2>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
+
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    </div>
+  </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Stawell</h3>
+  <ul class="other-accommodation-list">
+    <li>Grampians Estate Winery - Great Western</li>
+    <li>Seppelt Winery - Great Western</li>
+    <li>Best's Wines Winery - Great Western</li>
+    <li>Stawell Gift Hall of Fame</li>
+    <li>Stawell Railway Station Gallery</li>
+    <li>Stawell Gold Mine</li>
+    <li>Grampians Time Gallery</li>
+    <li>Stawell Historical Society</li>
+    <li>St Josephs Catholic Church - Glenorchy</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Stawell’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Bunjil’s Shelter</h3>
+      <p>
+     Bunjil’s Shelter is a culturally significant Aboriginal rock art site depicting Bunjil, a creator figure in local Indigenous culture. The shelter provides insight into the deep cultural heritage of the region.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Sister Rocks</h3>
+      <p>
+      Sister Rocks features natural rock formations set within bushland, offering scenic views and a quiet outdoor experience reflective of the surrounding landscape.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Central Park</h3>
+      <p>
+     Central Park is a key recreational space in Stawell, featuring lawns, sporting facilities, and areas for community events and relaxation.
+      </p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Deep Lead Picnic Area</h3>
+      <p>
+      Deep Lead Picnic Area offers a quiet bushland setting for picnics and relaxation, reflecting the natural environment and historical mining areas of the region.
+      </p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Original Glenorchy School Site</h3>
+      <p>
+      The Original Glenorchy School Site marks an early education facility in the district, reflecting the development of rural communities in western Victoria.
+      </p>
+    </div>
+  </div>
+
+        <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Shipping Container Art</h3>
+      <p>
+      The Shipping Container Art installation showcases creative public artwork, adding a modern visual element to Stawell and highlighting local artistic expression.
+      </p>
+    </div>
+  </div>
+
+        <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Cato Park</h3>
+      <p>
+     Cato Park is a scenic reserve on the outskirts of Stawell, featuring open green spaces, picnic areas, and bushland surroundings. The park provides a relaxed environment for outdoor recreation and is a popular spot for locals and visitors.
+      </p>
+    </div>
+  </div>
+
+        <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Big Hill Lookout</h3>
+      <p>
+      Big Hill Lookout offers elevated panoramic views over Stawell and the surrounding Wimmera landscape. The lookout highlights the town’s position between agricultural plains and nearby ranges, making it a key vantage point in the area.
+      </p>
+    </div>
+  </div>
+  </div>
+
+   <!-- ACCOMMODATION -->
+<h2>🏨 Stay Where We Showcase — Stawell</h2>
+
+<p class="accommodation-intro">
+  Planning a stay in Stawell? Explore accommodation options in and around this historic goldfields town while discovering
+  the rich mining heritage, nearby Grampians access, and relaxed regional character that make Stawell a key western Victorian destination.
+</p>
+
+<p class="accommodation-intro">
+  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
+  people discover where to go, what to experience, and where to base themselves as they explore
+  Australia’s cities, towns, and hidden gems.
+</p>
+
+<p style="text-align:center;">
+  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC"
+     target="_blank"
+     class="accommodation-link">
+    View All Stawell Accommodation
+  </a>
+</p>
+
+<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Stawell</h3>
+
+<p class="accommodation-intro">
+  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
+  produced video, photography, and destination-led storytelling that places their property in front
+  of travellers actively planning where to stay.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+<div class="accommodation-grid">
+  <div class="accommodation-card">
+    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+  </div>
+</div>
+
+<h3 class="other-accommodation-heading">Other Accommodation In And Around Stawell</h3>
+<div class="other-accommodation-bookings">
+
+  <!-- Stawell -->
+  <div class="other-stay-item"><span>Motel Stawell</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Goldfields Motel Stawell</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Diamond House Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Stawell Park Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Magdala Motor Lodge & Lakeside Restaurant</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hi-Way Eight Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Stawell Grampians Gate C&C Cabin & Caravan Park Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Coorrabin Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Stawell Holiday Cottages</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Gift Hotel Stawell</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Langsford Luxury</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>The Corner Store B&B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Grampians Motel Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStawell%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <!-- Great Western -->
+  <div class="other-stay-item"><span>Great Western Hotel - Great Western</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGreat%2BWestern%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hounds Run Vineyard - Great Western</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGreat%2BWestern%252C%2BVIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+</div>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+    Some links on this page are affiliate links, which means we may earn a small commission if you make
+    a booking, at no extra cost to you.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About Us</a> |
+    <a href="/towns/index.html">Towns</a> |
+    <a href="/partner.html">Partner With Us</a> |
+    <a href="/sponsorship.html">Sponsorship</a> |
+    <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
+    <a href="/press.html">Press</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/legal.html">Legal</a>
+  </div>
+
+  <p>
+    📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
+  </p>
+</footer>
+
+</body>
+</html>
