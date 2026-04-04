@@ -3,23 +3,22 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Hamilton (VIC) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Hamilton (VIC) — a vibrant regional centre known for its art galleries, gardens, volcanic lakes, rich history and country charm. Featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Hamilton, Victoria, Western District, Hamilton Gallery, Hamilton Botanic Gardens, ShowcasingOz TV" />
+<title>Hamilton (VIC) | ShowcasingOz TV</title>
+<meta name="description" content="Discover Hamilton, VIC — a major regional centre in Victoria’s Western District, known for its wool industry heritage, historic streetscapes, and proximity to natural attractions." />
+<meta name="keywords" content="Hamilton VIC, Hamilton Victoria, Western District Victoria, wool capital Australia, Hamilton attractions, Hamilton accommodation, Grampians region towns, western Victoria travel, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -29,7 +28,7 @@
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -39,6 +38,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -47,68 +47,61 @@
       align-items: center;
       padding: 0 20px;
     }
+
     header img { height: 65px; }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { color: #E87722; }
+
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    /* Hero Banner */
+    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/hamilton.jpg') center center / cover no-repeat;
+      background-color: #ddd;
     }
 
-    /* Content */
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
     p { line-height:1.6; color:#333; }
 
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
-    }
-
-    /* Video Placeholder */
-    .video-placeholder {
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
       width:100%;
       height:350px;
       background:#e1e1e1;
@@ -117,19 +110,214 @@
       justify-content:center;
       align-items:center;
       color:#666;
-      font-size:1.3rem;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
-    }
-
-    footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
       text-align:center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+/* ================= CENTER ALIGN – HAMILTON ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
 footer .footer-links a,
 footer p a {
   color: #E87722 !important;
@@ -139,6 +327,37 @@ footer .footer-links a:hover,
 footer p a:hover {
   color: #ffffff !important;
 }
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+
+            .other-accommodation-bookings {
+  max-width: 700px;
+  margin: 25px auto 0;
+}
+
+.other-stay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.other-stay-item span {
+  color: #0E3557;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .other-stay-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  }
   </style>
 </head>
 
@@ -147,7 +366,7 @@ footer p a:hover {
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
     <nav id="menu">
       <a href="../index.html">Home</a>
@@ -156,54 +375,328 @@ footer p a:hover {
       <a href="../partner.html">Partner With Us</a>
       <a href="../sponsorship.html">Sponsorship</a>
       <a href="../filming-map.html">Filming Map</a>
+      <a href="/calendar.html">Calendar</a>
       <a href="../press.html">Press</a>
       <a href="../contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<script>
+<script defer>
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+  <img src="../images/towns/hamilton.jpg"
+       alt="Hamilton Victoria"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
-  <h1>Hamilton (VIC)</h1>
+<h1>Hamilton (VIC)</h1>
 
-  <p>
-    Hamilton is a thriving regional centre in Victoria’s Western District, known for its rich 
-    agricultural heritage, cultural attractions and stunning natural landscapes. With volcanic 
-    lakes, rolling farmland, charming streetscapes and a strong arts community, Hamilton offers 
-    a classic and welcoming country experience.
-    <br><br>
-    The town is home to the renowned Hamilton Gallery, the historic Hamilton Botanic Gardens 
-    designed by Ferdinand von Mueller, and close to the region’s volcanic plains and waterfalls.  
-    ShowcasingOz TV will be capturing Hamilton’s stories, scenery and vibrant regional culture 
-    during our 2026 filming journey.
-  </p>
+<p>
+Hamilton is a major regional centre in Victoria’s Western District, known for its strong agricultural foundation, historic character, and role as a service hub for the surrounding region. Positioned among rolling farmland and volcanic landscapes, Hamilton is often referred to as the wool capital of the world.
+</p>
 
+<p>
+Established in the 19th century, Hamilton developed as a key centre for pastoral activity, particularly sheep grazing and wool production. The fertile plains of the Western District, combined with reliable rainfall, supported the growth of large-scale farming enterprises that continue to shape the region today.
+</p>
+
+<p>
+The town’s streetscape reflects its prosperity during the pastoral era, with grand historic buildings, wide streets, and well-maintained public spaces contributing to its character. Hamilton has long served as a commercial and administrative hub for nearby towns and rural communities.
+</p>
+
+<p>
+Hamilton is also known for its cultural and recreational offerings, including gardens, lakes, and walking tracks that provide opportunities for relaxation and outdoor activity. Its location places it within reach of the Grampians National Park and other natural attractions across western Victoria.
+</p>
+
+<p>
+Today, Hamilton offers a broad range of services, retail, accommodation, and community facilities, supporting both residents and visitors. The town continues to evolve while maintaining a strong connection to its agricultural heritage.
+</p>
+
+<p>
+Surrounded by volcanic plains, farmland, and waterways, Hamilton represents the balance between rural productivity and regional lifestyle that defines Victoria’s Western District.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Hamilton as part of our national filming journey — highlighting its wool industry heritage, regional importance, natural surroundings, and the community spirit that continues to shape this western Victorian centre.
+</p>
+
+  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">
-    Documentary Coming Soon
-  </div>
+  <div class="video-placeholder">Documentary Coming Soon</div>
 
+  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p>
-    We’ll be showcasing Hamilton’s art, gardens, landscapes and strong community spirit during our Series 1 visit in November 2026.
-  </p>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon">
-      <p>Attractions Coming Soon</p>
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
     </div>
   </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Hamilton</h3>
+  <ul class="other-accommodation-list">
+    <li>Penshurst Volcanoes Discovery Centre</li>
+    <li>Hamilton Gallery</li>
+    <li>Sir Reginald Ansett Transport Museum</li>
+    <li>Hamilton Pastoral Museum</li>
+    <li>HIRL Bandicoot Enclosure</li>
+    <li>Campe's Motor Museum</li>
+    <li>Bochara Wines</li>
+    <li>Jack's Daughter Clothing - Cavendish</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Hamilton’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Caramut</h3>
+      <p>Caramut is a small rural locality surrounded by productive farmland, reflecting the agricultural strength and pastoral heritage of Victoria’s Western District.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Mount Rouse</h3>
+      <p>Mount Rouse is a dormant volcanic cone offering panoramic views across the Western District, highlighting the region’s volcanic geology and open landscapes.
+      </p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Penshurst</h3>
+      <p>Penshurst is a historic rural town known for its heritage buildings and proximity to volcanic features, serving as a quiet gateway to the surrounding countryside.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Hamilton Botanic Gardens</h3>
+      <p>The Hamilton Botanic Gardens are heritage-listed gardens featuring landscaped lawns, ornamental plantings, and walking paths, offering a tranquil setting in the heart of town.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Lake Hamilton (incl Lakes Edge Adventure Playground)</h3>
+      <p>Lake Hamilton is a central recreational area featuring walking tracks, picnic facilities, and the Lakes Edge Adventure Playground, making it a popular destination for families and visitors.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Nigretta Falls</h3>
+      <p>Nigretta Falls is a scenic waterfall set within basalt rock formations, showcasing the natural beauty and volcanic landscape of the region.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Old Wannon River Rail Bridge</h3>
+      <p>The Old Wannon River Rail Bridge is a historic structure reflecting the development of rail infrastructure and transport links in western Victoria.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Wannon Falls</h3>
+      <p>Wannon Falls is one of Victoria’s most impressive waterfalls, featuring a wide cascade over basalt cliffs and offering scenic viewing platforms.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Mount Baimbridge Lookout</h3>
+      <p>Mount Baimbridge Lookout provides elevated views over Hamilton and the surrounding plains, highlighting the town’s position within the Western District.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Settler’s Walk</h3>
+      <p>Settler’s Walk is a heritage trail that tells the story of Hamilton’s early European settlement through interpretive signage and landmarks.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Cavendish War Memorial</h3>
+      <p>The Cavendish War Memorial honours local service members and reflects the strong community ties within this small rural township.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Bluestone Gaol</h3>
+      <p>The Bluestone Gaol is a historic building constructed from local stone, representing early law enforcement and colonial architecture in the region.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Cavendish</h3>
+      <p>Cavendish is a small town on the Wannon River known for its peaceful setting, rural character, and access to nearby natural attractions.
+      </p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Mooralla Gemstone Reserve</h3>
+      <p>Mooralla Gemstone Reserve is a fossicking area where visitors can search for gemstones, offering a unique hands-on experience within a natural bushland setting.
+      </p>
+    </div>
+  </div>
+</div>
+
+    <!-- ACCOMMODATION -->
+<h2>🏨 Stay Where We Showcase — Hamilton</h2>
+
+<p class="accommodation-intro">
+  Planning a stay in Hamilton? Explore accommodation options in and around this major Western District centre while discovering
+  its wool industry heritage, historic streetscapes, and proximity to natural attractions across western Victoria.
+</p>
+
+<p class="accommodation-intro">
+  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
+  people discover where to go, what to experience, and where to base themselves as they explore
+  Australia’s cities, towns, and hidden gems.
+</p>
+
+<p style="text-align:center;">
+  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC"
+     target="_blank"
+     class="accommodation-link">
+    View All Hamilton Accommodation
+  </a>
+</p>
+
+<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Hamilton</h3>
+
+<p class="accommodation-intro">
+  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
+  produced video, photography, and destination-led storytelling that places their property in front
+  of travellers actively planning where to stay.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+<div class="accommodation-grid">
+  <div class="accommodation-card">
+    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+  </div>
+</div>
+
+<h3 class="other-accommodation-heading">Other Accommodation In And Around Hamilton</h3>
+<div class="other-accommodation-bookings">
+
+  <div class="other-stay-item"><span>AAt 28 Goldsmith Motel Hamilton</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Ashwick House</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Bandicoot Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Botanical Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Boomers Guest House Hamilton</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Budget on the Lake</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Caledonian Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Comfort Inn Grange Burn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Grange Burn Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hamilton Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hamilton Lakeside Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hamilton Lonsdale Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hamilton Townhouse Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Hamilton Vic</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Lake Hamilton Motor Village and Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Pierrepoint Wines Cellar Door & Accommodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Stillwater Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>“The Cally” - Caledonian Hotel Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHamilton+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+
+</div>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+    Some links on this page are affiliate links, which means we may earn a small commission if you make
+    a booking, at no extra cost to you.
+  </p>
 
 </section>
 
@@ -216,6 +709,7 @@ footer p a:hover {
     <a href="/partner.html">Partner With Us</a> |
     <a href="/sponsorship.html">Sponsorship</a> |
     <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
     <a href="/press.html">Press</a> |
     <a href="/contact.html">Contact</a> |
     <a href="/legal.html">Legal</a>
@@ -223,8 +717,10 @@ footer p a:hover {
 
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
