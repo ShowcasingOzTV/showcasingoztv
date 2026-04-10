@@ -3,23 +3,22 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Mungo (NSW) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Mungo (NSW) — home to Lake Mungo, ancient landscapes, the Walls of China and some of the oldest human history on Earth. Featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Mungo, Lake Mungo, Mungo National Park, Walls of China, Willandra Lakes, Aboriginal history, Mungo Man, Mungo Lady, ShowcasingOz TV" />
+<title>Mungo (NSW) | ShowcasingOz TV</title>
+<meta name="description" content="Discover Mungo, NSW — a remote outback destination within Mungo National Park, known for its ancient landscapes, the Walls of China, and rich Aboriginal heritage." />
+<meta name="keywords" content="Mungo NSW, Mungo National Park, Walls of China NSW, Willandra Lakes, outback NSW travel, Aboriginal heritage Australia, Mungo attractions, Far West NSW, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -29,7 +28,7 @@
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #fff;
@@ -39,6 +38,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -47,68 +47,61 @@
       align-items: center;
       padding: 0 20px;
     }
+
     header img { height: 65px; }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { color: #E87722; }
+
     .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
     @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
+      nav {
+        display:none;
+        flex-direction:column;
+        background:#0E3557;
+        width:100%;
+        position:absolute;
+        top:70px;
+        right:0;
+      }
       nav.active { display:flex; }
       .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+      nav a {
+        padding:15px;
+        border-top:1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    /* Hero Banner */
+    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/mungo.png') center center / cover no-repeat;
+      background-color: #ddd;
     }
 
-    /* Content */
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
+    h1 { text-align:center; margin-bottom:10px; }
+    h2 { text-align:center; color:#E87722; margin-top:50px; }
 
     p { line-height:1.6; color:#333; }
 
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
-    }
-
-    /* Video Placeholder */
-    .video-placeholder {
+    /* ================= PLACEHOLDERS ================= */
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder {
       width:100%;
       height:350px;
       background:#e1e1e1;
@@ -117,19 +110,215 @@
       justify-content:center;
       align-items:center;
       color:#666;
-      font-size:1.3rem;
+      font-size:1.2rem;
+      font-weight:500;
       margin-top:20px;
-    }
-
-    footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
       text-align:center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
+
+    .accommodation-placeholder,
+    .attraction-placeholder {
+      height:200px;
+      font-size:1.1rem;
+    }
+
+    /* ================= SHARED GRID ================= */
+    .accommodation-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+      margin-top:25px;
+    }
+
+    .accommodation-card {
+      background:#f9f9f9;
+      border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
+
+    .accommodation-content {
+      padding:15px;
+    }
+
+    .featured-badge {
+      display:inline-block;
+      background:#E87722;
+      color:#fff;
+      font-size:0.75rem;
+      padding:5px 10px;
+      border-radius:4px;
+      margin:10px 0;
+    }
+
+    .accommodation-link {
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+      color:#0E3557;
+      text-decoration:none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration:underline;
+    }
+
+    .accommodation-intro {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top:50px;
+    }
+
+    .other-accommodation-list {
+      list-style:none;
+      padding-left:0;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom:6px;
+    }
+
+    .accommodation-disclaimer {
+      font-size:0.8rem;
+      color:#777;
+      margin-top:15px;
+    }
+    /* ================= POINTS OF INTEREST ================= */
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.poi-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.poi-placeholder {
+  height: 160px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.poi-content {
+  padding: 15px;
+}
+
+.poi-content h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0E3557;
+}
+
+.poi-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+    /* ================= CENTER ALIGN – MUNGO ================= */
+
+/* Centre section headings like "Other Attractions" & "Other Accommodation" */
+.other-accommodation-heading {
+  text-align: center;
+}
+
+/* Centre list items (attractions & accommodation lists) */
+.other-accommodation-list {
+  text-align: center;
+}
+
+.other-accommodation-list li {
+  text-align: center;
+}
+
+/* Centre disclaimer text */
+.accommodation-disclaimer {
+  text-align: center;
+}
+
+/* Centre Points of Interest cards */
+.poi-content {
+  text-align: center;
+}
+
+.poi-content h3 {
+  text-align: center;
+}
+
+.poi-content p {
+  text-align: center;
+}
+
+  /* ================= FOOTER ================= */
+footer {
+  background: #0E3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+}
+
+footer .footer-links a {
+  color: #E87722;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer p a {
+  color: #E87722;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffffff;
+}
+
+.gst-disclaimer {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+    /* FORCE footer colours to match homepage */
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+footer {
+  background-color: #0E3557 !important;
+}
+
 footer .footer-links a,
 footer p a {
   color: #E87722 !important;
@@ -139,6 +328,37 @@ footer .footer-links a:hover,
 footer p a:hover {
   color: #ffffff !important;
 }
+
+footer .gst-disclaimer {
+  color: #ffffff !important;
+}
+
+    .other-accommodation-bookings {
+  max-width: 700px;
+  margin: 25px auto 0;
+}
+
+.other-stay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.other-stay-item span {
+  color: #0E3557;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .other-stay-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
   </style>
 </head>
 
@@ -147,7 +367,7 @@ footer p a:hover {
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container">
-    <a href="../index.html"><img src="../images/logo.png" alt="ShowcasingOz TV Logo"></a>
+    <a href="../index.html"><img src="../images/logo.jpg" alt="ShowcasingOz TV Logo"></a>
     <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
     <nav id="menu">
       <a href="../index.html">Home</a>
@@ -156,59 +376,235 @@ footer p a:hover {
       <a href="../partner.html">Partner With Us</a>
       <a href="../sponsorship.html">Sponsorship</a>
       <a href="../filming-map.html">Filming Map</a>
+      <a href="../calendar.html">Calendar</a>
       <a href="../press.html">Press</a>
       <a href="../contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<script>
+<script defer>
   const menuBtn = document.getElementById('menu-btn');
   const menu = document.getElementById('menu');
   menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
 </script>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+  <img src="../images/towns/mungo.jpg"
+       alt="Mungo New South Wales"
+       width="1600"
+       height="320"
+       fetchpriority="high"
+       decoding="async"
+       style="width:100%;height:100%;object-fit:cover;">
+</section>
 
 <!-- MAIN CONTENT -->
 <section class="content">
 
-  <h1>Mungo (NSW)</h1>
+<h1>Mungo (NSW)</h1>
 
-  <p>
-    Mungo is one of Australia’s most extraordinary ancient landscapes, located within  
-    the Willandra Lakes World Heritage Area. Best known for **Lake Mungo**, the  
-    **Walls of China**, and the discoveries of **Mungo Man and Mungo Lady**, this  
-    region holds over 40,000 years of continuous cultural history — making it one of  
-    the most significant archaeological sites in the world.
-    <br><br>
-    With vast dry lakebeds, sculpted lunette formations, desert horizons and deep  
-    cultural stories, Mungo offers travellers a powerful connection to Australia's  
-    first peoples and the continent’s ancient past.
-    <br><br>
-    ShowcasingOz TV will be exploring the iconic landscapes, traditional stories,  
-    wildlife, and the incredible heritage that makes Mungo one of the most important  
-    places in Australia.
-  </p>
+<p>
+Mungo is a remote outback locality in far western New South Wales, best known as the gateway to Mungo National Park and the World Heritage-listed Willandra Lakes Region. Defined by its ancient landscapes, cultural significance, and isolation, Mungo offers one of Australia’s most unique inland experiences.
+</p>
 
+<p>
+Rather than a traditional town, Mungo is centred around the national park and surrounding pastoral properties. The area holds deep significance as one of the oldest known sites of human habitation in Australia, with archaeological discoveries providing insight into Aboriginal life dating back tens of thousands of years.
+</p>
+
+<p>
+Mungo National Park is home to the iconic Walls of China, a series of eroded sand and clay formations that stretch along the edge of a former lakebed. These striking landforms, combined with the vast open plains, create a landscape that is both visually dramatic and historically important.
+</p>
+
+<p>
+The surrounding environment is characterised by dry lakebeds, red earth, and sparse vegetation, reflecting the harsh yet captivating conditions of the Australian outback. Despite its arid appearance, the region supports a range of wildlife and offers opportunities for walking, photography, and exploration.
+</p>
+
+<p>
+Visitors to Mungo can experience guided tours, self-drive routes, and designated walking tracks that provide access to key sites while preserving the integrity of this culturally sensitive landscape. The sense of scale and remoteness is a defining feature of the area.
+</p>
+
+<p>
+Mungo offers limited accommodation and services, reinforcing its appeal as a destination for those seeking a genuine outback experience connected to history, nature, and culture.
+</p>
+
+<p>
+ShowcasingOz TV will be capturing the landscapes, stories, and experiences that define Mungo as part of our national filming journey — highlighting its World Heritage significance, ancient environments, Aboriginal heritage, and the raw beauty of this remarkable outback destination.
+</p>
+  
+  <!-- DOCUMENTARY -->
   <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">
-    Documentary Coming Soon
-  </div>
+  <div class="video-placeholder">Documentary Coming Soon</div>
 
+  <!-- ATTRACTIONS -->
   <h2>📍 Attractions & Points of Interest</h2>
-  <p>
-    We’ll be showcasing Lake Mungo, the Walls of China, Aboriginal cultural history  
-    and the region’s breathtaking ancient landscapes in October 2026 during Series 1.
-  </p>
+  <p class="attractions-intro">
+  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
+  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
+  in a way that static listings simply cannot achieve.
+</p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon">
-      <p>Attractions Coming Soon</p>
+<p style="text-align:center;">
+<a href="../attraction-partners.html" class="accommodation-link">
+  Explore attractions filming & feature options
+</a>
+</p>
+
+  <div class="accommodation-grid">
+    <div class="accommodation-card">
+      <div class="attraction-placeholder">Attractions Coming Soon</div>
     </div>
   </div>
+
+  <h3 class="other-accommodation-heading">Other Attractions In And Around Mungo</h3>
+  <ul class="other-accommodation-list">
+    <li>Mungo Guided Tours - Sunset Tour</li>
+    <li>Mungo Guided Tours - Walls Of China Morning Guide Tour</li>
+  </ul>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+  </p>
+  <h2>🗺️ Points of Interest & Landmarks</h2>
+
+<p class="accommodation-intro">
+  These natural landmarks and local points of interest form an important part of Mungo’s landscape,
+  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
+  tell the broader story of the region.
+</p>
+
+<div class="poi-grid">
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Pooncarie Park</h3>
+      <p>
+Pooncarie Park is a riverside recreation area along the Darling River, offering picnic facilities and a relaxed setting in this small outback community.
+</p>
+    </div>
+  </div>
+
+  <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Pooncarie</h3>
+      <p>
+Pooncarie is a small settlement on the Darling River, serving as a gateway to Mungo National Park and reflecting the character of remote outback communities.
+</p>
+    </div>
+  </div>
+
+    <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Zanci Homestead Site</h3>
+      <p>
+The Zanci Homestead Site preserves remnants of early pastoral life, offering insight into the challenges and history of station living in the region.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Mungo Foreshore Track</h3>
+      <p>
+The Mungo Foreshore Track follows the edge of the ancient lakebed, providing views across the landscape and access to key features within the park.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Vigars Well Picnic Area</h3>
+      <p>
+Vigars Well Picnic Area is a designated rest stop offering basic facilities and a convenient place to pause while exploring the park.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Red Top Lookout and Boardwalk</h3>
+      <p>
+Red Top Lookout and Boardwalk provides elevated views over the Walls of China and surrounding landscape, offering one of the park’s most striking vantage points.
+</p>
+    </div>
+  </div>
+
+      <div class="poi-card">
+    <div class="poi-placeholder">Image Coming Soon</div>
+    <div class="poi-content">
+      <h3>Rosewood Picnic Area</h3>
+      <p>
+Rosewood Picnic Area offers a quiet bush setting with picnic facilities, allowing visitors to experience the natural environment in a relaxed setting.
+</p>
+    </div>
+  </div>
+</div>
+
+    <!-- ACCOMMODATION -->
+<h2>🏨 Stay Where We Showcase — Mungo</h2>
+
+<p class="accommodation-intro">
+  Planning a stay in Mungo? Explore accommodation options in and around this remote outback destination while discovering
+  the ancient landscapes of Mungo National Park, the World Heritage-listed Willandra Lakes Region, and the unique character of far western New South Wales.
+</p>
+
+<p class="accommodation-intro">
+  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
+  people discover where to go, what to experience, and where to base themselves as they explore
+  Australia’s cities, towns, and hidden gems.
+</p>
+
+<p style="text-align:center;">
+  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMungo+National+Park%2C+New+South+Wales"
+     target="_blank"
+     class="accommodation-link">
+    View All Mungo Accommodation
+  </a>
+</p>
+
+<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Mungo</h3>
+
+<p class="accommodation-intro">
+  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
+  produced video, photography, and destination-led storytelling that places their property in front
+  of travellers actively planning where to stay.
+</p>
+
+<p style="text-align:center;">
+  <a href="../accommodation-partners.html" class="accommodation-link">
+    Explore accommodation filming & feature options
+  </a>
+</p>
+
+<div class="accommodation-grid">
+  <div class="accommodation-card">
+    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+  </div>
+</div>
+
+<h3 class="other-accommodation-heading">Other Accommodation In And Around Mungo</h3>
+<div class="other-accommodation-bookings">
+
+  <div class="other-stay-item"><span>Mungo Lodge</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMungo+National+Park%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Mungo Shearers' Quarters</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMungo+National+Park%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+
+  <div class="other-stay-item"><span>Pooncarie Hotel Motel - Pooncarie</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPooncarie%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+
+</div>
+
+  <p class="accommodation-disclaimer">
+    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+    Some links on this page are affiliate links, which means we may earn a small commission if you make
+    a booking, at no extra cost to you.
+  </p>
 
 </section>
 
@@ -221,6 +617,7 @@ footer p a:hover {
     <a href="/partner.html">Partner With Us</a> |
     <a href="/sponsorship.html">Sponsorship</a> |
     <a href="/filming-map.html">Filming Map</a> |
+    <a href="/calendar.html">Calendar</a> |
     <a href="/press.html">Press</a> |
     <a href="/contact.html">Contact</a> |
     <a href="/legal.html">Legal</a>
@@ -228,8 +625,10 @@ footer p a:hover {
 
   <p>
     📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-    <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-    © 2025 ShowcassingOz TV · Discover. Capture. Share.
+    <span class="gst-disclaimer">
+      All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+    </span><br>
+    © 2026 ShowcasingOz TV · Discover. Capture. Share.
   </p>
 </footer>
 
