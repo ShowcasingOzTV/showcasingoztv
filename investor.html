@@ -61,6 +61,46 @@
     transition: color 0.3s ease;
   }
 
+   .menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0E3557;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 100%;
+    text-align: left;
+    z-index: 1001;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    padding: 15px 20px;
+    margin-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  header.navbar .container {
+    position: relative;
+  }
+}
+
   /* MAIN CONTENT */
   .content {
     max-width: 900px;
@@ -196,6 +236,23 @@
     color: #777;
   }
 </style>
+
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+function openModal() {
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+}
+</script>
 
 </head>
 <body>
