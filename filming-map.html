@@ -225,6 +225,47 @@ if (menuBtn) menuBtn.addEventListener("click", () => menu.classList.toggle("acti
   <p>Live itinerary displayed using our Season 1 filming schedule in Google Sheets. Click pins for date ranges.</p>
 </div>
 
+<div id="filming-map-controls" style="text-align:center; padding:12px 10px; background:#fff; border-bottom:1px solid #ddd;">
+  <button id="season1-tab" type="button" style="
+    padding:10px 22px;
+    margin:0 4px;
+    border:1px solid #0E3557;
+    background:#0E3557;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:4px;
+  ">
+    Season 1
+  </button>
+
+  <button id="season2-tab" type="button" style="
+    padding:10px 22px;
+    margin:0 4px;
+    border:1px solid #0E3557;
+    background:#fff;
+    color:#0E3557;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:4px;
+  ">
+    Season 2
+  </button>
+
+  <button id="replay-route" type="button" style="
+    padding:10px 18px;
+    margin:0 4px;
+    border:1px solid #777;
+    background:#fff;
+    color:#333;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:4px;
+  ">
+    Replay Route
+  </button>
+</div>
+
 <div id="map"></div>
 
 <div class="container">
@@ -340,11 +381,7 @@ function groupDateRanges(entries) {
     if (e.town === town) {
       end = e.date;
     } else {
-      ranges.push({
-        start,
-        end,
-        town
-      });
+      ranges.push({ start, end, town });
 
       start = e.date;
       end = e.date;
@@ -352,19 +389,21 @@ function groupDateRanges(entries) {
     }
   }
 
-  ranges.push({
-    start,
-    end,
-    town
-  });
+  ranges.push({ start, end, town });
 
   return ranges;
 }
 
-function populateTable(ranges) {
+function populateTable(ranges, seasonNumber) {
   const tbody = document.querySelector("#itinerary-table tbody");
+  const heading = document.querySelector(".container h2");
 
   tbody.innerHTML = "";
+
+  if (heading) {
+    heading.innerText =
+      `Planned Filming Schedule — Season ${seasonNumber}`;
+  }
 
   ranges.forEach(r => {
     const tr = document.createElement("tr");
@@ -467,29 +506,24 @@ const townCoords = {
 function getTownCoords(town) {
   if (!town) return null;
 
-  const key = town
-    .trim()
-    .toLowerCase();
-
-  return townCoords[key] || null;
+  return townCoords[
+    town.trim().toLowerCase()
+  ] || null;
 }
 
 
 /* =========================================================
-   ROUTE SEQUENCES
+   SEASON ROUTES
 
-   These are deliberately separate from the public table.
-
-   This lets the line remain continuous through travel
-   between destinations without showing breaks/RDOs/etc.
+   Route lines are separate from the public schedule.
+   This preserves travel continuity while hiding breaks,
+   RDOs, public holidays and administration days.
    ========================================================= */
 
 const season1Route = [
-
   "Adelaide (Glenelg)",
   "Adelaide (Eastern Suburbs)",
   "Adelaide (Southern Suburbs)",
-
   "McLaren Vale",
   "Myponga Beach",
   "Normanville",
@@ -502,7 +536,6 @@ const season1Route = [
   "Karatta",
   "Vivonne Bay",
 
-  /* Return from Kangaroo Island */
   "Penneshaw",
   "Cape Jervis",
 
@@ -517,15 +550,11 @@ const season1Route = [
 
   "Adelaide (CBD)",
   "Adelaide (Northern Suburbs)",
-
   "Port Augusta"
 ];
 
 
 const season2Route = [
-
-  /* NEW SEASON - intentionally NOT connected to Port Augusta */
-
   "Alice Springs",
   "Curtin Springs",
   "Erldunda",
@@ -546,9 +575,6 @@ const season2Route = [
   "Mungo",
   "Balranald",
   "Hay",
-
-  /* Mid-season break is hidden,
-     but route continues from Hay */
 
   "White Cliffs",
   "Wilcannia",
@@ -585,8 +611,8 @@ const season2Route = [
    ========================================================= */
 
 const map = L.map("map").setView(
-  [-29.0, 138.0],
-  5
+  [-34.5, 138.2],
+  6
 );
 
 L.tileLayer(
@@ -597,56 +623,162 @@ L.tileLayer(
 ).addTo(map);
 
 
+let activeSeason = 1;
+
+let season1Completed = false;
+let season2Completed = false;
+
+let activePolyline = null;
+let activeMarkers = [];
+let animationTimer = null;
+
+let season1Ranges = [];
+let season2Ranges = [];
+
+
 /* =========================================================
-   ROUTE DRAWING
+   MAP UTILITIES
    ========================================================= */
 
-function routeCoords(route) {
-  return route
-    .map(name => getTownCoords(name))
-    .filter(Boolean);
+function clearMapLayers() {
+  if (animationTimer) {
+    clearTimeout(animationTimer);
+    animationTimer = null;
+  }
+
+  if (activePolyline) {
+    map.removeLayer(activePolyline);
+    activePolyline = null;
+  }
+
+  activeMarkers.forEach(marker => {
+    map.removeLayer(marker);
+  });
+
+  activeMarkers = [];
 }
 
 
-function drawSeasonRoutes() {
+function getRoute(season) {
+  return season === 1
+    ? season1Route
+    : season2Route;
+}
 
-  const season1Points = routeCoords(season1Route);
-  const season2Points = routeCoords(season2Route);
 
-  /* SEASON 1 - ORANGE */
+function getRouteColour(season) {
+  return season === 1
+    ? "#E87722"
+    : "#1769AA";
+}
 
-  const season1Line = L.polyline(
-    season1Points,
+
+function getRanges(season) {
+  return season === 1
+    ? season1Ranges
+    : season2Ranges;
+}
+
+
+function getMarkerRangeForTown(town, season) {
+  const ranges = getRanges(season);
+
+  return ranges.find(
+    r =>
+      r.town.trim().toLowerCase() ===
+      town.trim().toLowerCase()
+  ) || null;
+}
+
+
+function createMarker(town, coords, season) {
+  const range =
+    getMarkerRangeForTown(town, season);
+
+  let popupHtml;
+
+  if (range) {
+    popupHtml = `
+      <div class="popup-content">
+        <strong>${town}</strong><br>
+        <span>${range.start} → ${range.end}</span>
+      </div>
+    `;
+  } else {
+    popupHtml = `
+      <div class="popup-content">
+        <strong>${town}</strong>
+      </div>
+    `;
+  }
+
+  const marker =
+    L.marker(coords)
+      .addTo(map)
+      .bindPopup(popupHtml);
+
+  activeMarkers.push(marker);
+}
+
+
+/* =========================================================
+   COMPLETE ROUTE DISPLAY
+   ========================================================= */
+
+function showCompletedRoute(season) {
+  clearMapLayers();
+
+  const route = getRoute(season);
+  const colour = getRouteColour(season);
+
+  const points = [];
+
+  route.forEach(town => {
+    const coords = getTownCoords(town);
+
+    if (!coords) return;
+
+    points.push(coords);
+  });
+
+  activePolyline = L.polyline(
+    points,
     {
-      color: "#E87722",
+      color: colour,
       weight: 5,
       opacity: 0.9
     }
   ).addTo(map);
 
 
-  /* SEASON 2 - BLUE */
+  const markerTowns = new Set();
 
-  const season2Line = L.polyline(
-    season2Points,
-    {
-      color: "#1769AA",
-      weight: 5,
-      opacity: 0.9
+  route.forEach(town => {
+    const key = town.toLowerCase();
+
+    if (markerTowns.has(key)) {
+      return;
     }
-  ).addTo(map);
+
+    markerTowns.add(key);
+
+    const coords = getTownCoords(town);
+
+    if (!coords) return;
+
+    createMarker(
+      town,
+      coords,
+      season
+    );
+  });
 
 
-  const allPoints = [
-    ...season1Points,
-    ...season2Points
-  ];
-
-  if (allPoints.length > 1) {
+  if (points.length > 1) {
     map.fitBounds(
-      L.latLngBounds(allPoints),
+      L.latLngBounds(points),
       {
-        padding: [35, 35]
+        padding: [40, 40]
       }
     );
   }
@@ -654,107 +786,352 @@ function drawSeasonRoutes() {
 
 
 /* =========================================================
-   MAP LEGEND
+   ANIMATED ROUTE
    ========================================================= */
 
-function addLegend() {
+function animateRoute(season) {
+  clearMapLayers();
 
-  const legend = L.control({
-    position: "bottomleft"
-  });
+  const route = getRoute(season);
+  const colour = getRouteColour(season);
 
-  legend.onAdd = function () {
-
-    const div = L.DomUtil.create(
-      "div",
-      "map-legend"
-    );
-
-    div.style.background = "white";
-    div.style.padding = "9px 12px";
-    div.style.borderRadius = "5px";
-    div.style.boxShadow =
-      "0 1px 6px rgba(0,0,0,0.35)";
-    div.style.fontSize = "14px";
-    div.style.lineHeight = "1.7";
-
-    div.innerHTML = `
-      <strong>Filming Routes</strong><br>
-
-      <span style="
-        display:inline-block;
-        width:22px;
-        height:4px;
-        background:#E87722;
-        margin-right:7px;
-        vertical-align:middle;
-      "></span>
-      Season 1
-
-      <br>
-
-      <span style="
-        display:inline-block;
-        width:22px;
-        height:4px;
-        background:#1769AA;
-        margin-right:7px;
-        vertical-align:middle;
-      "></span>
-      Season 2
-    `;
-
-    return div;
-  };
-
-  legend.addTo(map);
-}
+  const validStops = route
+    .map(town => ({
+      town,
+      coords: getTownCoords(town)
+    }))
+    .filter(stop => stop.coords);
 
 
-/* =========================================================
-   PUBLIC MAP MARKERS
-   ========================================================= */
+  if (!validStops.length) return;
 
-function buildMarkers(ranges) {
 
-  ranges.forEach(r => {
+  activePolyline = L.polyline(
+    [],
+    {
+      color: colour,
+      weight: 5,
+      opacity: 0.9
+    }
+  ).addTo(map);
 
-    const coords = getTownCoords(r.town);
 
-    if (!coords) {
-      console.log(
-        "Missing coordinates for:",
-        r.town
-      );
+  const markerTowns = new Set();
+
+  let index = 0;
+
+
+  function addNextStop() {
+    if (
+      activeSeason !== season ||
+      index >= validStops.length
+    ) {
+      if (index >= validStops.length) {
+        if (season === 1) {
+          season1Completed = true;
+        } else {
+          season2Completed = true;
+        }
+      }
+
       return;
     }
 
-    const popupHtml = `
-      <div class="popup-content">
-        <strong>${r.town}</strong><br>
-        <span>${r.start} → ${r.end}</span>
-      </div>
-    `;
 
-    L.marker(coords)
-      .addTo(map)
-      .bindPopup(popupHtml);
-  });
+    const stop = validStops[index];
+
+    activePolyline.addLatLng(
+      stop.coords
+    );
+
+
+    const markerKey =
+      stop.town.toLowerCase();
+
+
+    if (!markerTowns.has(markerKey)) {
+      markerTowns.add(markerKey);
+
+      createMarker(
+        stop.town,
+        stop.coords,
+        season
+      );
+    }
+
+
+    if (index === 0) {
+      map.setView(
+        stop.coords,
+        season === 1 ? 7 : 6
+      );
+    } else {
+      map.panTo(
+        stop.coords,
+        {
+          animate: true,
+          duration: 0.8
+        }
+      );
+    }
+
+
+    index++;
+
+
+    if (index < validStops.length) {
+      animationTimer =
+        setTimeout(
+          addNextStop,
+          700
+        );
+    } else {
+      if (season === 1) {
+        season1Completed = true;
+      } else {
+        season2Completed = true;
+      }
+
+      animationTimer =
+        setTimeout(() => {
+          const allPoints =
+            validStops.map(
+              stop => stop.coords
+            );
+
+          map.fitBounds(
+            L.latLngBounds(allPoints),
+            {
+              padding: [40, 40]
+            }
+          );
+
+          animationTimer = null;
+
+        }, 900);
+    }
+  }
+
+
+  addNextStop();
 }
 
 
 /* =========================================================
-   INITIALISE PAGE
+   SEASON TAB DISPLAY
+   ========================================================= */
+
+function updateSeasonButtons() {
+  const season1Button =
+    document.getElementById("season1-tab");
+
+  const season2Button =
+    document.getElementById("season2-tab");
+
+
+  if (activeSeason === 1) {
+    season1Button.style.background =
+      "#0E3557";
+
+    season1Button.style.color =
+      "#fff";
+
+    season2Button.style.background =
+      "#fff";
+
+    season2Button.style.color =
+      "#0E3557";
+  } else {
+    season2Button.style.background =
+      "#0E3557";
+
+    season2Button.style.color =
+      "#fff";
+
+    season1Button.style.background =
+      "#fff";
+
+    season1Button.style.color =
+      "#0E3557";
+  }
+}
+
+
+function switchSeason(season) {
+  if (activeSeason === season) {
+    return;
+  }
+
+  activeSeason = season;
+
+  updateSeasonButtons();
+
+  const ranges =
+    getRanges(season);
+
+  populateTable(
+    ranges,
+    season
+  );
+
+
+  const completed =
+    season === 1
+      ? season1Completed
+      : season2Completed;
+
+
+  if (completed) {
+    showCompletedRoute(season);
+  } else {
+    animateRoute(season);
+  }
+}
+
+
+function replayActiveSeason() {
+  if (activeSeason === 1) {
+    season1Completed = false;
+  } else {
+    season2Completed = false;
+  }
+
+  animateRoute(activeSeason);
+}
+
+
+/* =========================================================
+   PUBLIC SCHEDULE FILTERING
+   ========================================================= */
+
+function isNonFilmingEntry(entry) {
+  const activity =
+    entry.attraction
+      .trim()
+      .toLowerCase();
+
+
+  const hiddenActivities = [
+    "rdo",
+    "administration/video editing/website maintenance",
+    "administration",
+    "video editing",
+    "website maintenance",
+    "public holiday",
+    "no filming",
+    "pre-filming catch-up",
+    "pre-season break",
+    "mid-season break",
+    "end-season break",
+    "annual leave",
+    "travel home day"
+  ];
+
+
+  return hiddenActivities.some(
+    label =>
+      activity === label ||
+      activity.includes(label)
+  );
+}
+
+
+function publicScheduleEntry(entry) {
+  if (
+    !entry.date ||
+    !entry.date.trim() ||
+    !entry.town ||
+    !entry.town.trim()
+  ) {
+    return false;
+  }
+
+
+  const town =
+    entry.town.trim().toLowerCase();
+
+  const d =
+    parseAUDate(entry.date);
+
+
+  if (!d) {
+    return false;
+  }
+
+
+  if (
+    d <
+    new Date("2027-01-27T00:00:00")
+  ) {
+    return false;
+  }
+
+
+  const hiddenTownLabels = [
+    "pre-season break",
+    "pre season break",
+    "mid-season break",
+    "mid season break",
+    "end-season break",
+    "end season break",
+    "annual leave"
+  ];
+
+
+  if (
+    hiddenTownLabels.some(
+      label =>
+        town === label ||
+        town.includes(label)
+    )
+  ) {
+    return false;
+  }
+
+
+  if (isNonFilmingEntry(entry)) {
+    return false;
+  }
+
+
+  /* Adelaide 23 March is not a public Adelaide filming day */
+
+  if (
+    entry.date.trim() ===
+      "Tue 23/03/2027" &&
+    town === "adelaide (cbd)"
+  ) {
+    return false;
+  }
+
+
+  /* 21 December is travel-home only */
+
+  if (
+    entry.date.trim() ===
+      "Tue 21/12/2027" &&
+    town === "adelaide"
+  ) {
+    return false;
+  }
+
+
+  return true;
+}
+
+
+/* =========================================================
+   INITIALISE
    ========================================================= */
 
 async function init() {
-
   try {
-
-    const raw = await loadCSV();
+    const raw =
+      await loadCSV();
 
     const statusEl =
       document.getElementById("status");
+
 
     if (statusEl) {
       statusEl.innerText =
@@ -762,151 +1139,105 @@ async function init() {
     }
 
 
-    /* Sort spreadsheet chronologically */
+    const sorted = raw.sort(
+      (a, b) => {
+        const da =
+          parseAUDate(a.date);
 
-    const sorted = raw.sort((a, b) => {
-
-      const da = parseAUDate(a.date);
-      const db = parseAUDate(b.date);
-
-      if (!da && !db) return 0;
-      if (!da) return 1;
-      if (!db) return -1;
-
-      return da - db;
-    });
+        const db =
+          parseAUDate(b.date);
 
 
-    /* =====================================================
-       PUBLIC SCHEDULE FILTER
-       ===================================================== */
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
 
-    const filtered = sorted.filter(entry => {
-
-      if (
-        !entry.date ||
-        !entry.date.trim() ||
-        !entry.town ||
-        !entry.town.trim()
-      ) {
-        return false;
+        return da - db;
       }
+    );
 
 
-      const town =
-        entry.town.trim().toLowerCase();
-
-      const d =
-        parseAUDate(entry.date);
-
-
-      /* Public schedule begins 27 January 2027 */
-
-      if (
-        d &&
-        d < new Date("2027-01-27T00:00:00")
-      ) {
-        return false;
-      }
+    const publicEntries =
+      sorted.filter(
+        publicScheduleEntry
+      );
 
 
-      /* Hide internal schedule labels */
+    const season1Entries =
+      publicEntries.filter(entry => {
+        const d =
+          parseAUDate(entry.date);
 
-      const hiddenTownLabels = [
-
-        "pre-season break",
-        "pre season break",
-
-        "mid-season break",
-        "mid season break",
-
-        "end-season break",
-        "end season break",
-
-        "annual leave"
-      ];
+        return (
+          d >=
+            new Date("2027-01-27T00:00:00") &&
+          d <=
+            new Date("2027-06-30T23:59:59")
+        );
+      });
 
 
-      if (
-        hiddenTownLabels.some(
-          label =>
-            town === label ||
-            town.includes(label)
-        )
-      ) {
-        return false;
-      }
+    const season2Entries =
+      publicEntries.filter(entry => {
+        const d =
+          parseAUDate(entry.date);
+
+        return (
+          d >=
+            new Date("2027-07-18T00:00:00") &&
+          d <=
+            new Date("2027-12-20T23:59:59")
+        );
+      });
 
 
-      /* -------------------------------------------------
-         SPECIFIC PUBLIC-SCHEDULE EXCLUSIONS
-         ------------------------------------------------- */
+    season1Ranges =
+      groupDateRanges(
+        season1Entries
+      );
 
 
-      /* 23 March is Kangaroo Island departure/travel.
-         Do not advertise Adelaide as a filming location. */
-
-      if (
-        entry.date.trim() ===
-          "Tue 23/03/2027" &&
-        town === "adelaide (cbd)"
-      ) {
-        return false;
-      }
+    season2Ranges =
+      groupDateRanges(
+        season2Entries
+      );
 
 
-      /* Hay ends on 23 September.
-         4 October is a public holiday, not part of
-         the public Hay filming visit. */
-
-      if (
-        entry.date.trim() ===
-          "Mon 04/10/2027" &&
-        town === "hay"
-      ) {
-        return false;
-      }
+    document
+      .getElementById("season1-tab")
+      .addEventListener(
+        "click",
+        () => switchSeason(1)
+      );
 
 
-      /* 21 December is travel home only. */
-
-      if (
-        entry.date.trim() ===
-          "Tue 21/12/2027" &&
-        town === "adelaide"
-      ) {
-        return false;
-      }
+    document
+      .getElementById("season2-tab")
+      .addEventListener(
+        "click",
+        () => switchSeason(2)
+      );
 
 
-      return true;
-    });
+    document
+      .getElementById("replay-route")
+      .addEventListener(
+        "click",
+        replayActiveSeason
+      );
 
 
-    /* Turn individual dates into town date ranges */
+    activeSeason = 1;
 
-    const ranges =
-      groupDateRanges(filtered);
+    updateSeasonButtons();
 
-
-    /* Public table */
-
-    populateTable(ranges);
-
-
-    /* Draw two independent season routes */
-
-    drawSeasonRoutes();
+    populateTable(
+      season1Ranges,
+      1
+    );
 
 
-    /* Add markers for public town/date ranges */
-
-    buildMarkers(ranges);
-
-
-    /* Add route legend */
-
-    addLegend();
+    animateRoute(1);
 
 
     if (statusEl) {
@@ -915,7 +1246,6 @@ async function init() {
     }
 
   } catch (e) {
-
     console.error(e);
 
     const statusEl =
