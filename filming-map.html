@@ -246,6 +246,7 @@ if (menuBtn) menuBtn.addEventListener("click", () => menu.classList.toggle("acti
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
+<script>
 const csvUrl = "https://docs.google.com/spreadsheets/d/1_wnj3asdBnt5DJph9jXngB-Y2nNxbNO_4IcnfEJgO38/export?format=csv&gid=0";
 
 function splitCSVRow(row) {
@@ -283,7 +284,11 @@ async function loadCSV() {
 }
 
 function parseCSV(text) {
-  const lines = text.replace(/\r/g, "").split("\n").filter(line => line.trim() !== "");
+  const lines = text
+    .replace(/\r/g, "")
+    .split("\n")
+    .filter(line => line.trim() !== "");
+
   const header = splitCSVRow(lines.shift());
 
   const dateIndex = header.findIndex(h => h.toLowerCase() === "date");
@@ -292,6 +297,7 @@ function parseCSV(text) {
 
   return lines.map(line => {
     const cols = splitCSVRow(line);
+
     return {
       date: cols[dateIndex]?.trim() || "",
       town: cols[townIndex]?.trim() || "",
@@ -303,17 +309,26 @@ function parseCSV(text) {
 function parseAUDate(dateStr) {
   if (!dateStr) return null;
 
-  const cleaned = dateStr.trim().replace(/^[A-Za-z]{3}\s+/, "");
+  const cleaned = dateStr
+    .trim()
+    .replace(/^[A-Za-z]{3}\s+/, "");
+
   const parts = cleaned.split("/");
+
   if (parts.length !== 3) return null;
 
   const [day, month, year] = parts;
-  const parsed = new Date(`${year}-${month}-${day}T00:00:00`);
+
+  const parsed = new Date(
+    `${year}-${month}-${day}T00:00:00`
+  );
+
   return isNaN(parsed.getTime()) ? null : parsed;
 }
 
 function groupDateRanges(entries) {
   const ranges = [];
+
   if (!entries.length) return ranges;
 
   let start = entries[0].date;
@@ -322,139 +337,398 @@ function groupDateRanges(entries) {
 
   for (let i = 1; i < entries.length; i++) {
     const e = entries[i];
+
     if (e.town === town) {
       end = e.date;
     } else {
-      ranges.push({ start, end, town });
+      ranges.push({
+        start,
+        end,
+        town
+      });
+
       start = e.date;
       end = e.date;
       town = e.town;
     }
   }
 
-  ranges.push({ start, end, town });
+  ranges.push({
+    start,
+    end,
+    town
+  });
+
   return ranges;
 }
 
 function populateTable(ranges) {
   const tbody = document.querySelector("#itinerary-table tbody");
+
   tbody.innerHTML = "";
 
   ranges.forEach(r => {
     const tr = document.createElement("tr");
+
     tr.innerHTML = `
       <td>${r.start} → ${r.end}</td>
       <td>${r.town}</td>
     `;
+
     tbody.appendChild(tr);
   });
 }
 
+
+/* =========================================================
+   TOWN COORDINATES
+   ========================================================= */
+
 const townCoords = {
-  "coober pedy": [-29.0137, 134.7547],
+
+  /* SEASON 1 */
+
+  "adelaide (glenelg)": [-34.9804, 138.5129],
+  "adelaide (eastern suburbs)": [-34.9250, 138.6500],
+  "adelaide (southern suburbs)": [-35.0500, 138.6000],
+  "adelaide (cbd)": [-34.9285, 138.6007],
+  "adelaide (northern suburbs)": [-34.8400, 138.5900],
+
+  "mclaren vale": [-35.2180, 138.5430],
+  "myponga beach": [-35.3730, 138.3910],
+  "normanville": [-35.4460, 138.3180],
+  "cape jervis": [-35.6060, 138.0970],
+
+  "penneshaw": [-35.7180, 137.9390],
+  "american river": [-35.7760, 137.7750],
+  "kingscote": [-35.6540, 137.6390],
+  "parndana": [-35.7900, 137.2630],
+  "karatta": [-35.9680, 136.9970],
+  "vivonne bay": [-36.0000, 137.1800],
+
+  "victor harbor": [-35.5500, 138.6200],
+  "goolwa": [-35.5000, 138.7800],
+  "strathalbyn": [-35.2600, 138.8900],
+  "milang": [-35.4100, 138.9700],
+  "macclesfield": [-35.1700, 138.8400],
+  "hahndorf": [-35.0300, 138.8100],
+  "birdwood": [-34.8200, 138.9600],
+  "port augusta": [-32.4900, 137.7700],
+
+
+  /* SEASON 2 */
+
   "alice springs": [-23.6980, 133.8807],
-  "timouth well": [-22.9130, 131.3860],
-  "tilmouth well": [-22.9130, 131.3860],
-  "rabbit flat": [-20.1849, 130.0096],
-  "halls creek": [-18.2294, 127.6642],
-  "kalkarindji": [-17.4390, 130.8340],
-  "daly waters": [-16.2613, 133.3718],
-  "borroloola": [-16.0695, 136.3064],
-  "barkly roadhouse": [-19.7000, 135.8167],
-  "tenant creek": [-19.6484, 134.1916],
-  "tennant creek": [-19.6484, 134.1916],
-  "kings canyon": [-24.2553, 131.4857],
-  "uluru (curtin springs)": [-25.3144, 131.7567],
-  "uluru (yulara)": [-25.2406, 130.9889],
+  "curtin springs": [-25.3144, 131.7567],
   "erldunda": [-25.2050, 133.1980],
+  "coober pedy": [-29.0137, 134.7547],
+
   "roxby downs": [-30.5591, 136.8952],
   "andamooka": [-30.4512, 137.1665],
   "woomera": [-31.1999, 136.8253],
   "quorn": [-32.3467, 138.0410],
-  "melrose": [-32.8235, 138.1868],
-  "jamestown": [-33.2062, 138.6037],
+  "peterborough": [-32.9730, 138.8400],
+
   "broken hill": [-31.9539, 141.4539],
   "silverton": [-31.8830, 141.2250],
-  "tibooburra": [-29.4376, 142.0102],
-  "cameron corner": [-28.9980, 141.0020],
-  "noccundra": [-27.7423, 142.6697],
-  "eromanga": [-26.6694, 143.2674],
-  "quilpie": [-26.6171, 144.2605],
-  "adavale": [-25.9054, 144.5909],
-  "charleville": [-26.4043, 146.2414],
-  "cunnamulla": [-28.0670, 145.6840],
-  "thargomindah": [-27.9947, 143.8181],
-  "bourke": [-30.0896, 145.9380],
-  "nyngan": [-31.5630, 147.1935],
+  "menindee": [-32.3976, 142.4120],
+  "mungo": [-33.7470, 143.0860],
+  "balranald": [-34.6372, 143.5608],
+  "hay": [-34.5097, 144.8430],
+
+  "white cliffs": [-30.8510, 143.0890],
+  "wilcannia": [-31.5650, 143.3780],
   "cobar": [-31.4950, 145.8380],
+  "nyngan": [-31.5630, 147.1935],
+  "bourke": [-30.0896, 145.9380],
+  "louth": [-30.5350, 145.1160],
+  "brewarrina": [-29.9600, 146.8600],
+
   "hillston": [-33.4830, 145.5360],
   "griffith": [-34.2903, 146.0405],
   "jerilderie": [-35.3570, 145.7290],
   "finley": [-35.6540, 145.5710],
   "deniliquin": [-35.5309, 144.9631],
   "moulamein": [-35.0827, 144.0333],
-  "balranald": [-34.6372, 143.5608],
-  "hay": [-34.5097, 144.8430],
-  "white cliffs": [-30.8510, 143.0890],
-  "wilcannia": [-31.5650, 143.3780],
-  "menindee": [-32.3976, 142.4120],
-  "mungo": [-33.7470, 143.0860],
-  "euston": [-34.5740, 142.7340],
+
+  "robinvale": [-34.5830, 142.7720],
   "tooleybuc": [-35.0430, 143.3450],
   "swan hill": [-35.3370, 143.5540],
   "sea lake": [-35.5040, 142.8490],
   "hopetoun": [-35.7283, 142.3609],
   "warracknabeal": [-36.2500, 142.3980],
-  "horsham": [-36.7110, 142.1990],
+  "jeparit": [-36.1410, 141.9880],
   "dimboola": [-36.4550, 142.0320],
-  "nhill": [-36.3330, 141.6490],
-  "edenhope": [-37.0370, 141.2960],
-  "casterton": [-37.5840, 141.4020],
-  "portland": [-38.3462, 141.6041],
-  "port fairy": [-38.3854, 142.2350],
-  "warrnambool": [-38.3818, 142.4878],
-  "hamilton": [-37.7420, 142.0220],
-  "dunkeld": [-37.6490, 142.3450],
-  "halls gap": [-37.1390, 142.5190],
-  "stawell": [-37.0569, 142.7754]
+  "horsham": [-36.7110, 142.1990],
+  "stawell": [-37.0569, 142.7754],
+  "halls gap": [-37.1390, 142.5190]
 };
+
 
 function getTownCoords(town) {
   if (!town) return null;
-  const key = town.trim().toLowerCase();
+
+  const key = town
+    .trim()
+    .toLowerCase();
+
   return townCoords[key] || null;
 }
 
-const map = L.map("map").setView([-25.0, 133.0], 5);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+/* =========================================================
+   ROUTE SEQUENCES
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+   These are deliberately separate from the public table.
+
+   This lets the line remain continuous through travel
+   between destinations without showing breaks/RDOs/etc.
+   ========================================================= */
+
+const season1Route = [
+
+  "Adelaide (Glenelg)",
+  "Adelaide (Eastern Suburbs)",
+  "Adelaide (Southern Suburbs)",
+
+  "McLaren Vale",
+  "Myponga Beach",
+  "Normanville",
+  "Cape Jervis",
+
+  "Penneshaw",
+  "American River",
+  "Kingscote",
+  "Parndana",
+  "Karatta",
+  "Vivonne Bay",
+
+  /* Return from Kangaroo Island */
+  "Penneshaw",
+  "Cape Jervis",
+
+  "Victor Harbor",
+  "Goolwa",
+  "Strathalbyn",
+  "Milang",
+  "Strathalbyn",
+  "Macclesfield",
+  "Hahndorf",
+  "Birdwood",
+
+  "Adelaide (CBD)",
+  "Adelaide (Northern Suburbs)",
+
+  "Port Augusta"
+];
+
+
+const season2Route = [
+
+  /* NEW SEASON - intentionally NOT connected to Port Augusta */
+
+  "Alice Springs",
+  "Curtin Springs",
+  "Erldunda",
+  "Coober Pedy",
+
+  "Roxby Downs",
+  "Andamooka",
+  "Roxby Downs",
+  "Woomera",
+  "Quorn",
+  "Peterborough",
+
+  "Broken Hill",
+  "Silverton",
+  "Broken Hill",
+
+  "Menindee",
+  "Mungo",
+  "Balranald",
+  "Hay",
+
+  /* Mid-season break is hidden,
+     but route continues from Hay */
+
+  "White Cliffs",
+  "Wilcannia",
+  "Cobar",
+  "Nyngan",
+  "Bourke",
+  "Louth",
+  "Brewarrina",
+  "Bourke",
+
+  "Hillston",
+  "Griffith",
+  "Jerilderie",
+  "Finley",
+  "Deniliquin",
+  "Moulamein",
+
+  "Robinvale",
+  "Tooleybuc",
+  "Swan Hill",
+  "Sea Lake",
+  "Hopetoun",
+  "Warracknabeal",
+  "Jeparit",
+  "Dimboola",
+  "Horsham",
+  "Stawell",
+  "Halls Gap"
+];
+
+
+/* =========================================================
+   MAP SETUP
+   ========================================================= */
+
+const map = L.map("map").setView(
+  [-29.0, 138.0],
+  5
+);
+
+L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    attribution: '&copy; OpenStreetMap contributors'
+  }
+).addTo(map);
+
+
+/* =========================================================
+   ROUTE DRAWING
+   ========================================================= */
+
+function routeCoords(route) {
+  return route
+    .map(name => getTownCoords(name))
+    .filter(Boolean);
 }
 
-async function buildMap(ranges) {
-  const points = [];
-  const polyline = L.polyline([], {
-    color: "#E87722",
-    weight: 4,
-    opacity: 0.9
-  }).addTo(map);
 
-  let firstPoint = true;
+function drawSeasonRoutes() {
 
-  for (const r of ranges) {
+  const season1Points = routeCoords(season1Route);
+  const season2Points = routeCoords(season2Route);
+
+  /* SEASON 1 - ORANGE */
+
+  const season1Line = L.polyline(
+    season1Points,
+    {
+      color: "#E87722",
+      weight: 5,
+      opacity: 0.9
+    }
+  ).addTo(map);
+
+
+  /* SEASON 2 - BLUE */
+
+  const season2Line = L.polyline(
+    season2Points,
+    {
+      color: "#1769AA",
+      weight: 5,
+      opacity: 0.9
+    }
+  ).addTo(map);
+
+
+  const allPoints = [
+    ...season1Points,
+    ...season2Points
+  ];
+
+  if (allPoints.length > 1) {
+    map.fitBounds(
+      L.latLngBounds(allPoints),
+      {
+        padding: [35, 35]
+      }
+    );
+  }
+}
+
+
+/* =========================================================
+   MAP LEGEND
+   ========================================================= */
+
+function addLegend() {
+
+  const legend = L.control({
+    position: "bottomleft"
+  });
+
+  legend.onAdd = function () {
+
+    const div = L.DomUtil.create(
+      "div",
+      "map-legend"
+    );
+
+    div.style.background = "white";
+    div.style.padding = "9px 12px";
+    div.style.borderRadius = "5px";
+    div.style.boxShadow =
+      "0 1px 6px rgba(0,0,0,0.35)";
+    div.style.fontSize = "14px";
+    div.style.lineHeight = "1.7";
+
+    div.innerHTML = `
+      <strong>Filming Routes</strong><br>
+
+      <span style="
+        display:inline-block;
+        width:22px;
+        height:4px;
+        background:#E87722;
+        margin-right:7px;
+        vertical-align:middle;
+      "></span>
+      Season 1
+
+      <br>
+
+      <span style="
+        display:inline-block;
+        width:22px;
+        height:4px;
+        background:#1769AA;
+        margin-right:7px;
+        vertical-align:middle;
+      "></span>
+      Season 2
+    `;
+
+    return div;
+  };
+
+  legend.addTo(map);
+}
+
+
+/* =========================================================
+   PUBLIC MAP MARKERS
+   ========================================================= */
+
+function buildMarkers(ranges) {
+
+  ranges.forEach(r => {
+
     const coords = getTownCoords(r.town);
 
     if (!coords) {
-      console.log("Missing coordinates for:", r.town);
-      continue;
+      console.log(
+        "Missing coordinates for:",
+        r.town
+      );
+      return;
     }
-
-    points.push(coords);
-    polyline.addLatLng(coords);
 
     const popupHtml = `
       <div class="popup-content">
@@ -463,33 +737,36 @@ async function buildMap(ranges) {
       </div>
     `;
 
-    L.marker(coords).addTo(map).bindPopup(popupHtml);
-
-    if (firstPoint) {
-      map.setView(coords, 6);
-      firstPoint = false;
-    } else {
-      map.panTo(coords, {
-        animate: true,
-        duration: 1.2
-      });
-    }
-
-    await sleep(700);
-  }
-
-  if (points.length > 1) {
-    map.fitBounds(polyline.getBounds(), { padding: [40, 40] });
-  }
+    L.marker(coords)
+      .addTo(map)
+      .bindPopup(popupHtml);
+  });
 }
 
+
+/* =========================================================
+   INITIALISE PAGE
+   ========================================================= */
+
 async function init() {
+
   try {
+
     const raw = await loadCSV();
-    const statusEl = document.getElementById("status");
-    if (statusEl) statusEl.innerText = "Building itinerary...";
+
+    const statusEl =
+      document.getElementById("status");
+
+    if (statusEl) {
+      statusEl.innerText =
+        "Building itinerary...";
+    }
+
+
+    /* Sort spreadsheet chronologically */
 
     const sorted = raw.sort((a, b) => {
+
       const da = parseAUDate(a.date);
       const db = parseAUDate(b.date);
 
@@ -500,74 +777,163 @@ async function init() {
       return da - db;
     });
 
-const filtered = sorted.filter(entry => {
-  if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
-    return false;
-  }
 
-  const town = entry.town.trim().toLowerCase();
-  const d = parseAUDate(entry.date);
+    /* =====================================================
+       PUBLIC SCHEDULE FILTER
+       ===================================================== */
 
-  // Hide Adelaide entries that are not public filming dates.
-if (
-  (entry.date.trim() === "Tue 23/03/2027" && town === "adelaide (cbd)") ||
-  (entry.date.trim() === "Tue 21/12/2027" && town === "adelaide")
-) {
-  return false;
-}
+    const filtered = sorted.filter(entry => {
 
-// Hay filming is only 20/09/2027 to 23/09/2027.
-if (
-  town === "hay" &&
-  d &&
-  (d < new Date("2027-09-20T00:00:00") ||
-   d > new Date("2027-09-23T23:59:59"))
-) {
-  return false;
-}
+      if (
+        !entry.date ||
+        !entry.date.trim() ||
+        !entry.town ||
+        !entry.town.trim()
+      ) {
+        return false;
+      }
 
-  // Only display the public filming schedule from 27 January 2027 onwards.
-  if (d && d < new Date("2027-01-27T00:00:00")) {
-    return false;
-  }
 
-  // Hide internal/non-filming schedule entries from public view.
-  const hiddenLabels = [
-    "mid season break",
-    "mid-season break",
-    "pre season break",
-    "pre-season break",
-    "season break",
-    "rdo",
-    "public holiday",
-    "annual leave",
-    "admin",
-    "administration",
-    "editing",
-    "travel day",
-    "day off",
-    "rest day"
-  ];
+      const town =
+        entry.town.trim().toLowerCase();
 
-  if (hiddenLabels.some(label => town.includes(label))) {
-    return false;
-  }
+      const d =
+        parseAUDate(entry.date);
 
-  return true;
-});
-    const ranges = groupDateRanges(filtered);
+
+      /* Public schedule begins 27 January 2027 */
+
+      if (
+        d &&
+        d < new Date("2027-01-27T00:00:00")
+      ) {
+        return false;
+      }
+
+
+      /* Hide internal schedule labels */
+
+      const hiddenTownLabels = [
+
+        "pre-season break",
+        "pre season break",
+
+        "mid-season break",
+        "mid season break",
+
+        "end-season break",
+        "end season break",
+
+        "annual leave"
+      ];
+
+
+      if (
+        hiddenTownLabels.some(
+          label =>
+            town === label ||
+            town.includes(label)
+        )
+      ) {
+        return false;
+      }
+
+
+      /* -------------------------------------------------
+         SPECIFIC PUBLIC-SCHEDULE EXCLUSIONS
+         ------------------------------------------------- */
+
+
+      /* 23 March is Kangaroo Island departure/travel.
+         Do not advertise Adelaide as a filming location. */
+
+      if (
+        entry.date.trim() ===
+          "Tue 23/03/2027" &&
+        town === "adelaide (cbd)"
+      ) {
+        return false;
+      }
+
+
+      /* Hay ends on 23 September.
+         4 October is a public holiday, not part of
+         the public Hay filming visit. */
+
+      if (
+        entry.date.trim() ===
+          "Mon 04/10/2027" &&
+        town === "hay"
+      ) {
+        return false;
+      }
+
+
+      /* 21 December is travel home only. */
+
+      if (
+        entry.date.trim() ===
+          "Tue 21/12/2027" &&
+        town === "adelaide"
+      ) {
+        return false;
+      }
+
+
+      return true;
+    });
+
+
+    /* Turn individual dates into town date ranges */
+
+    const ranges =
+      groupDateRanges(filtered);
+
+
+    /* Public table */
+
     populateTable(ranges);
-    await buildMap(ranges);
 
-    if (statusEl) statusEl.innerText = "Itinerary loaded successfully.";
+
+    /* Draw two independent season routes */
+
+    drawSeasonRoutes();
+
+
+    /* Add markers for public town/date ranges */
+
+    buildMarkers(ranges);
+
+
+    /* Add route legend */
+
+    addLegend();
+
+
+    if (statusEl) {
+      statusEl.innerText =
+        "Itinerary loaded successfully.";
+    }
+
   } catch (e) {
+
     console.error(e);
-    const statusEl = document.getElementById("status");
-    if (statusEl) statusEl.innerText = "Error loading itinerary from Google Sheets.";
+
+    const statusEl =
+      document.getElementById("status");
+
+    if (statusEl) {
+      statusEl.innerText =
+        "Error loading itinerary from Google Sheets.";
+    }
   }
 }
 
-document.addEventListener("DOMContentLoaded", init);
+
+document.addEventListener(
+  "DOMContentLoaded",
+  init
+);
 </script>
 
   <!-- FOOTER -->
