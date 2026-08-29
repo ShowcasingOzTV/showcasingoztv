@@ -500,36 +500,43 @@ async function init() {
       return da - db;
     });
 
-    const filtered = sorted.filter(entry => {
-      if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
-        return false;
-      }
+const filtered = sorted.filter(entry => {
+  if (!entry.date || !entry.date.trim() || !entry.town || !entry.town.trim()) {
+    return false;
+  }
 
-      const town = entry.town.trim().toLowerCase();
+  const town = entry.town.trim().toLowerCase();
+  const d = parseAUDate(entry.date);
 
-      if (entry.date.trim() === "Sat 30/05/2026" && entry.town.trim() === "Coober Pedy") {
-        return false;
-      }
+  // Only display the public filming schedule from 27 January 2027 onwards.
+  if (d && d < new Date("2027-01-27T00:00:00")) {
+    return false;
+  }
 
-      if (["hobart", "spirit of tasmania", "mt gambier", "adelaide", "mid season break", "annual leave"].includes(town)) {
-        return false;
-      }
+  // Hide internal/non-filming schedule entries from public view.
+  const hiddenLabels = [
+    "mid season break",
+    "mid-season break",
+    "pre season break",
+    "pre-season break",
+    "season break",
+    "rdo",
+    "public holiday",
+    "annual leave",
+    "admin",
+    "administration",
+    "editing",
+    "travel day",
+    "day off",
+    "rest day"
+  ];
 
-      if (town.includes("annual leave")) return false;
+  if (hiddenLabels.some(label => town.includes(label))) {
+    return false;
+  }
 
-      const d = parseAUDate(entry.date);
-      if (d && d >= new Date("2026-09-26T00:00:00") && d <= new Date("2026-10-05T23:59:59")) {
-        return false;
-      }
-
-      if (d && d >= new Date("2027-01-01T00:00:00") && d <= new Date("2027-07-17T23:59:59")) {
-  return false;
-}
-
-      return true;
-    });
-
-    const ranges = groupDateRanges(filtered);
+  return true;
+});
     populateTable(ranges);
     await buildMap(ranges);
 
