@@ -508,6 +508,24 @@ const filtered = sorted.filter(entry => {
   const town = entry.town.trim().toLowerCase();
   const d = parseAUDate(entry.date);
 
+  // Hide Adelaide entries that are not public filming dates.
+if (
+  (entry.date.trim() === "Tue 23/03/2027" && town === "adelaide (cbd)") ||
+  (entry.date.trim() === "Tue 21/12/2027" && town === "adelaide")
+) {
+  return false;
+}
+
+// Hay filming is only 20/09/2027 to 23/09/2027.
+if (
+  town === "hay" &&
+  d &&
+  (d < new Date("2027-09-20T00:00:00") ||
+   d > new Date("2027-09-23T23:59:59"))
+) {
+  return false;
+}
+
   // Only display the public filming schedule from 27 January 2027 onwards.
   if (d && d < new Date("2027-01-27T00:00:00")) {
     return false;
