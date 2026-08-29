@@ -537,6 +537,7 @@ const filtered = sorted.filter(entry => {
 
   return true;
 });
+    const ranges = groupDateRanges(filtered);
     populateTable(ranges);
     await buildMap(ranges);
 
