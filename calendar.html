@@ -732,6 +732,49 @@ function updateActiveMonth() {
   <script>
 const calendarData = {};
 
+    "2027-01-27": {
+  route: "Adelaide CBD → Glenelg",
+  html: `
+    <h3>Wednesday 27 January 2027 — Adelaide CBD → Glenelg</h3>
+
+    <h4>🎥 Filming Schedule</h4>
+    <ul>
+      <li><strong>8:30am – 9:30am</strong> — Accommodation Filming (Adelaide CBD) <span class="tag tag-available">Appointment Available</span></li>
+      <li><strong>9:45am – 10:45am</strong> — Rundle Mall <span class="tag tag-landmark">Landmark / POI</span></li>
+      <li><strong>10:50am – 11:35am</strong> — Adelaide Arcade <span class="tag tag-landmark">Landmark / POI</span></li>
+      <li><strong>12:30pm – 1:45pm</strong> — Beehive Corner & Haigh’s Chocolates <span class="tag tag-landmark">Landmark / POI</span></li>
+      <li><strong>1:50pm – 3:10pm</strong> — Parliament of South Australia <span class="tag tag-landmark">Landmark / POI</span></li>
+      <li><strong>3:15pm – 4:30pm</strong> — Government House <span class="tag tag-landmark">Landmark / POI</span></li>
+    </ul>
+
+    <h4>🏨 Accommodation</h4>
+    <p>
+      <strong>Accommodation Required — Wednesday 27 January 2027</strong><br>
+      We are seeking accommodation for our filming crew in Glenelg.
+    </p>
+
+    <p class="note">
+      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
+      professional photography, videography, and social media exposure.
+      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
+      it is not mandatory, and we welcome all offers for accommodation arrangements.
+    </p>
+
+    <p class="note">
+      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
+    </p>
+
+    <div style="margin-bottom:12px;"></div>
+
+    <a href="javascript:void(0)" class="tag tag-available"
+       onclick="openBookingModal('Accommodation Opportunity — Wednesday 27 January 2027 — Glenelg')">
+      Offer Accommodation
+    </a>
+
+    <div style="margin-bottom:72px;"></div>
+  `
+},
+
 const modal = document.getElementById("calendarModal");
 const modalBody = document.getElementById("calendarModalBody");
 const closeBtn = document.querySelector(".calendar-modal-close");
