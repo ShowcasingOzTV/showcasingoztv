@@ -634,6 +634,9 @@ partnerships, and production logistics are finalised.
   <script>
 let currentYear = 2027;
 let currentMonth = 0; // January
+    function isNoFilmingDate(dateKey) {
+  return dateKey >= "2027-01-01" && dateKey <= "2027-01-26";
+}
 function renderCalendar() {
   const grid = document.getElementById("calendarGrid");
   grid.innerHTML = "";
@@ -671,11 +674,18 @@ const month = currentMonth;
     cell.innerHTML = `
       <div class="date-number">${date.getDate()}</div>
 <div class="route">
-  ${calendarData[key]?.route || (date.getFullYear() === 2027 ? "Schedule In Development" : "")}
+  ${
+    calendarData[key]?.route ||
+    (isNoFilmingDate(key)
+      ? "No Filming Scheduled"
+      : date.getFullYear() === 2027
+        ? "Schedule In Development"
+        : "")
+  }
 </div>
     `;
 
-if (date.getFullYear() === 2027) {
+if (date.getFullYear() === 2027 && !isNoFilmingDate(key)) {
   cell.addEventListener("click", () => {
     openCalendarModal(key);
   });
