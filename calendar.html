@@ -670,8 +670,8 @@ const month = currentMonth;
 
     cell.innerHTML = `
       <div class="date-number">${date.getDate()}</div>
-      <div class="route">
-  ${date.getFullYear() === 2027 ? "Schedule In Development" : ""}
+<div class="route">
+  ${calendarData[key]?.route || (date.getFullYear() === 2027 ? "Schedule In Development" : "")}
 </div>
     `;
 
@@ -730,65 +730,81 @@ function updateActiveMonth() {
 </script>
 
   <script>
-const calendarData = {};
+const calendarData = {
+  "2027-01-27": {
+    route: "Adelaide CBD → Glenelg",
+    html: `
+      <h3>Wednesday 27 January 2027 — Adelaide CBD → Glenelg</h3>
 
-    "2027-01-27": {
-  route: "Adelaide CBD → Glenelg",
-  html: `
-    <h3>Wednesday 27 January 2027 — Adelaide CBD → Glenelg</h3>
+      <h4>🎥 Filming Schedule</h4>
+      <ul>
+        <li><strong>8:30am – 9:30am</strong> — Accommodation Filming (Adelaide CBD) <span class="tag tag-available">Appointment Available</span></li>
+        <li><strong>9:45am – 10:45am</strong> — Rundle Mall <span class="tag tag-landmark">Landmark / POI</span></li>
+        <li><strong>10:50am – 11:35am</strong> — Adelaide Arcade <span class="tag tag-landmark">Landmark / POI</span></li>
+        <li><strong>12:30pm – 1:45pm</strong> — Beehive Corner & Haigh’s Chocolates <span class="tag tag-landmark">Landmark / POI</span></li>
+        <li><strong>1:50pm – 3:10pm</strong> — Parliament of South Australia <span class="tag tag-landmark">Landmark / POI</span></li>
+        <li><strong>3:15pm – 4:30pm</strong> — Government House <span class="tag tag-landmark">Landmark / POI</span></li>
+      </ul>
 
-    <h4>🎥 Filming Schedule</h4>
-    <ul>
-      <li><strong>8:30am – 9:30am</strong> — Accommodation Filming (Adelaide CBD) <span class="tag tag-available">Appointment Available</span></li>
-      <li><strong>9:45am – 10:45am</strong> — Rundle Mall <span class="tag tag-landmark">Landmark / POI</span></li>
-      <li><strong>10:50am – 11:35am</strong> — Adelaide Arcade <span class="tag tag-landmark">Landmark / POI</span></li>
-      <li><strong>12:30pm – 1:45pm</strong> — Beehive Corner & Haigh’s Chocolates <span class="tag tag-landmark">Landmark / POI</span></li>
-      <li><strong>1:50pm – 3:10pm</strong> — Parliament of South Australia <span class="tag tag-landmark">Landmark / POI</span></li>
-      <li><strong>3:15pm – 4:30pm</strong> — Government House <span class="tag tag-landmark">Landmark / POI</span></li>
-    </ul>
+      <h4>🏨 Accommodation</h4>
+      <p>
+        <strong>Accommodation Required — Wednesday 27 January 2027</strong><br>
+        We are seeking accommodation for our filming crew in Glenelg.
+      </p>
 
-    <h4>🏨 Accommodation</h4>
-    <p>
-      <strong>Accommodation Required — Wednesday 27 January 2027</strong><br>
-      We are seeking accommodation for our filming crew in Glenelg.
-    </p>
+      <p class="note">
+        A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
+        professional photography, videography, and social media exposure.
+        The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
+        it is not mandatory, and we welcome all offers for accommodation arrangements.
+      </p>
 
-    <p class="note">
-      A <strong>Stay-for-Free Exchange</strong> is recommended where possible and includes
-      professional photography, videography, and social media exposure.
-      The Stay-for-Free Exchange Package is our preferred option to secure accommodation; however,
-      it is not mandatory, and we welcome all offers for accommodation arrangements.
-    </p>
+      <p class="note">
+        <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
+      </p>
 
-    <p class="note">
-      <a href="/accommodation-partners.html">View our Stay-for-Free Exchange Package</a>
-    </p>
+      <div style="margin-bottom:12px;"></div>
 
-    <div style="margin-bottom:12px;"></div>
+      <a href="javascript:void(0)" class="tag tag-available"
+         onclick="openBookingModal('Accommodation Opportunity — Wednesday 27 January 2027 — Glenelg')">
+        Offer Accommodation
+      </a>
 
-    <a href="javascript:void(0)" class="tag tag-available"
-       onclick="openBookingModal('Accommodation Opportunity — Wednesday 27 January 2027 — Glenelg')">
-      Offer Accommodation
-    </a>
-
-    <div style="margin-bottom:72px;"></div>
-  `
-},
+      <div style="margin-bottom:72px;"></div>
+    `
+  }
+};
 
 const modal = document.getElementById("calendarModal");
 const modalBody = document.getElementById("calendarModalBody");
 const closeBtn = document.querySelector(".calendar-modal-close");
 
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = event => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
 
 function openCalendarModal(dateKey) {
+  if (calendarData[dateKey]) {
+    modalBody.innerHTML = calendarData[dateKey].html;
+    modal.style.display = "block";
+    return;
+  }
+
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const selectedDate = new Date(year, month - 1, day);
+
   modalBody.innerHTML = `
-    <h3>${new Date(dateKey).toLocaleDateString('en-AU', {
-      weekday: 'long',
-      day: '2-digit',
-      month: 'long',
-      year: 'numeric'
+    <h3>${selectedDate.toLocaleDateString("en-AU", {
+      weekday: "long",
+      day: "2-digit",
+      month: "long",
+      year: "numeric"
     })}</h3>
 
     <h2>📅 2027 Filming Calendar (In Development)</h2>
@@ -807,6 +823,7 @@ function openCalendarModal(dateKey) {
       and regional partnership opportunities will be progressively added as scheduling is confirmed.
     </p>
   `;
+
   modal.style.display = "block";
 }
     function openBookingModal(dateText) {
