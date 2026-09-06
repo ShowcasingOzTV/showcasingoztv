@@ -701,7 +701,7 @@ const month = currentMonth;
 </div>
     `;
 
-if (date.getFullYear() === 2027 && !isNoFilmingDate(key)) {
+if (date.getFullYear() === 2027) {
   cell.addEventListener("click", () => {
     openCalendarModal(key);
   });
@@ -16652,11 +16652,36 @@ window.onclick = event => {
 };
 
 function openCalendarModal(dateKey) {
-  if (calendarData[dateKey]) {
-    modalBody.innerHTML = calendarData[dateKey].html;
-    modal.style.display = "block";
-    return;
+if (isNoFilmingDate(dateKey)) {
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const selectedDate = new Date(year, month - 1, day);
+
+  const formattedDate = selectedDate.toLocaleDateString("en-AU", {
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+  });
+
+  let status = "Pre Season - No Filming Scheduled";
+
+  if (dateKey === "2027-01-01") {
+    status = "New Year's Day - No Filming Scheduled";
   }
+
+  if (dateKey === "2027-01-26") {
+    status = "Australia Day - No Filming Scheduled";
+  }
+
+  modalBody.innerHTML = `
+    <h3>${formattedDate}</h3>
+    <h4>${status}</h4>
+    <div style="margin-bottom: 72px;"></div>
+  `;
+
+  modal.style.display = "block";
+  return;
+}
 
   const [year, month, day] = dateKey.split("-").map(Number);
   const selectedDate = new Date(year, month - 1, day);
