@@ -634,8 +634,24 @@ partnerships, and production logistics are finalised.
   <script>
 let currentYear = 2027;
 let currentMonth = 0; // January
-    function isNoFilmingDate(dateKey) {
+function isNoFilmingDate(dateKey) {
   return dateKey >= "2027-01-01" && dateKey <= "2027-01-26";
+}
+
+function getPreSeasonLabel(dateKey) {
+  if (dateKey === "2027-01-01") {
+    return "New Year's Day - No Filming Scheduled";
+  }
+
+  if (dateKey === "2027-01-26") {
+    return "Australia Day - No Filming Scheduled";
+  }
+
+  if (dateKey >= "2027-01-02" && dateKey <= "2027-01-25") {
+    return "Pre Season - No Filming Scheduled";
+  }
+
+  return "";
 }
 function renderCalendar() {
   const grid = document.getElementById("calendarGrid");
@@ -677,7 +693,7 @@ const month = currentMonth;
   ${
     calendarData[key]?.route ||
     (isNoFilmingDate(key)
-      ? "No Filming Scheduled"
+      ? getPreSeasonLabel(key)
       : date.getFullYear() === 2027
         ? "Schedule In Development"
         : "")
