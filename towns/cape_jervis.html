@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cape Jervis (SA) | ShowcasingOz TV</title>
+
+  <meta
+    name="description"
+    content="Discover Cape Jervis on South Australia’s Fleurieu Peninsula with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+  >
+
+  <meta
+    name="keywords"
+    content="Cape Jervis SA, Cape Jervis Fleurieu Peninsula, Kangaroo Island ferry, Cape Jervis attractions, Cape Jervis accommodation, South Australia travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
+
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #0E3557;
+    }
+
+    header.navbar {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #E87722;
+    }
+
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
+    }
+
+    .hero {
+      width: 100%;
+      height: 320px;
+      background: #dddddd;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
+      <nav id="menu">
+        <a href="/">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/towns/index.html">Towns</a>
+        <a href="/partner.html">Partner With Us</a>
+        <a href="/sponsorship.html">Sponsorship</a>
+        <a href="/filming-map.html">Filming Map</a>
+        <a href="/calendar.html">Calendar</a>
+        <a href="/press.html">Press</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/cape_jervis.jpg"
+      alt="Cape Jervis Fleurieu Peninsula South Australia"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+
+    <h1>Cape Jervis (SA)</h1>
+
+    <p>
+      Cape Jervis is a coastal community at the south-western tip of
+      South Australia’s Fleurieu Peninsula. Set against rugged coastline
+      and open rural landscapes, it is best known as the mainland
+      departure point for ferry services travelling across Backstairs
+      Passage to Kangaroo Island.
+    </p>
+
+    <p>
+      Beyond its role as a transport gateway, Cape Jervis offers sweeping
+      ocean views, opportunities for fishing and coastal exploration, and
+      access to walking experiences along the Fleurieu coast. Its setting
+      makes it both a destination in its own right and a natural link to
+      Kangaroo Island.
+    </p>
+
+    <div class="page-update-notice">
+
+      <h2>🚧 Our Complete Cape Jervis Guide Is Coming Soon</h2>
+
+      <p>
+        This destination page is currently being developed ahead of
+        ShowcasingOz TV’s visit to Cape Jervis. Following filming, it
+        will be expanded with our full town documentary, original
+        photography, featured attractions, local landmarks,
+        accommodation options, businesses and practical information
+        to help visitors explore the town and the surrounding
+        Fleurieu Peninsula.
+      </p>
+
+    </div>
+
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Cape Jervis Documentary Coming Soon
+    </div>
+
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
+
+    <p class="accommodation-intro">
+      Cape Jervis’s featured attractions will be added as filming
+      arrangements are confirmed and our destination coverage
+      is completed.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="attraction-placeholder">
+          Featured Cape Jervis Attractions Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Cape Jervis’s coastal landmarks, walking areas and other points
+      of interest will be documented and added to this page following
+      our visit.
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="poi-placeholder">
+          Cape Jervis Points of Interest Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Cape Jervis</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Cape Jervis? Explore available accommodation
+      in and around the town while we continue developing our complete
+      Cape Jervis destination guide.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find
+      a place to stay. We help people discover where to go, what to
+      experience and where to base themselves as they explore
+      Australia’s cities, towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.booking.com/searchresults.html?ss=Cape+Jervis%2C+South+Australia%2C+Australia"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="accommodation-link"
+      >
+        View All Cape Jervis Accommodation
+      </a>
+    </p>
+
+    <h3 style="text-align:center; margin-top:50px;">
+      Featured Accommodation Opportunities In And Around Cape Jervis
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive
+      premium exposure through professionally produced video,
+      photography and destination-led storytelling that places
+      their property in front of travellers actively planning
+      where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Cape Jervis Accommodation Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-links">
+      <a href="/">Home</a> |
+      <a href="/about.html">About Us</a> |
+      <a href="/towns/index.html">Towns</a> |
+      <a href="/partner.html">Partner With Us</a> |
+      <a href="/sponsorship.html">Sponsorship</a> |
+      <a href="/filming-map.html">Filming Map</a> |
+      <a href="/calendar.html">Calendar</a> |
+      <a href="/press.html">Press</a> |
+      <a href="/contact.html">Contact</a> |
+      <a href="/legal.html">Legal</a>
+    </div>
+
+    <p>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied
+        once ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
+      © 2026 ShowcasingOz TV · Discover. Capture. Share.
+    </p>
+
+  </footer>
+
+</body>
+</html>
