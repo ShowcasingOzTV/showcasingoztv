@@ -247,120 +247,144 @@
     </div>
   </header>
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
+ <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-  </script>
+  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+</script>
 
-  <!-- AUSTRALIA-WIDE ACCOMMODATION BOOKING -->
-  <section style="background:#f5f7fa; padding:60px 20px; text-align:center;">
-    <div style="max-width:1000px; margin:0 auto;">
+<!-- AUSTRALIA-WIDE ACCOMMODATION BOOKING -->
+<section style="background:#f5f7fa; padding:60px 20px; text-align:center;">
+  <div style="max-width:1000px; margin:0 auto;">
 
-      <h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
-        Stay Where We Showcase
-      </h2>
+    <h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
+      Stay Where We Showcase
+    </h2>
 
-      <p style="font-size:1.1rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 18px;">
-        Discover and book accommodation across Australia through the destinations,
-        towns, and regions featured in ShowcasingOz TV.
-      </p>
+    <p style="font-size:1.1rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 18px;">
+      Discover and book accommodation across Australia through the destinations,
+      towns, and regions featured in ShowcasingOz TV.
+    </p>
 
-      <p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
-        From iconic locations to hidden gems we uncover on the road, this is your
-        gateway to staying in the places we bring to life — all in one place.
-      </p>
+    <p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
+      From iconic locations to hidden gems we uncover on the road, search for
+      accommodation wherever your next Australian journey takes you.
+    </p>
 
-      <form id="booking-search-form" style="max-width:900px; margin:0 auto;">
-        <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; align-items:end;">
+    <form id="booking-search-form" style="max-width:900px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; align-items:end;">
 
-          <div style="flex:1 1 260px; min-width:220px; text-align:left;">
-            <label for="booking-destination" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
-              Destination
-            </label>
+        <div style="flex:1 1 260px; min-width:220px; text-align:left;">
+          <label
+            for="booking-destination"
+            style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
+          >
+            Destination
+          </label>
 
-            <input
-              type="text"
-              id="booking-destination"
-              placeholder="Enter a town, city, or region"
-              required
-              style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-            />
-          </div>
-
-          <div style="flex:1 1 180px; min-width:180px; text-align:left;">
-            <label for="booking-checkin" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
-              Check-in
-            </label>
-
-            <input
-              type="date"
-              id="booking-checkin"
-              style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-            />
-          </div>
-
-          <div style="flex:1 1 180px; min-width:180px; text-align:left;">
-            <label for="booking-checkout" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
-              Check-out
-            </label>
-
-            <input
-              type="date"
-              id="booking-checkout"
-              style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-            />
-          </div>
-
-          <div style="flex:0 1 220px; min-width:200px;">
-            <button
-              type="submit"
-              style="width:100%; background:#E87722; color:#ffffff; padding:14px 24px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;"
-            >
-              Check Availability
-            </button>
-          </div>
-
+          <input
+            type="text"
+            id="booking-destination"
+            placeholder="Enter a town, city, or region"
+            required
+            style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+          />
         </div>
-      </form>
 
-      <p style="font-size:0.95rem; line-height:1.5; color:#666; margin-top:20px;">
-        Looking for a featured destination? You can also explore our
-        <a href="/towns/index.html" style="color:#E87722; text-decoration:none; font-weight:600;">Towns pages</a>
-        for location-specific accommodation, attractions, and travel inspiration.
-      </p>
+        <div style="flex:1 1 180px; min-width:180px; text-align:left;">
+          <label
+            for="booking-checkin"
+            style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
+          >
+            Check-in
+          </label>
 
-      <script>
-        document.getElementById('booking-search-form').addEventListener('submit', function (e) {
-          e.preventDefault();
+          <input
+            type="date"
+            id="booking-checkin"
+            style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+          />
+        </div>
 
-          const destination = document.getElementById('booking-destination').value.trim();
-          const checkin = document.getElementById('booking-checkin').value;
-          const checkout = document.getElementById('booking-checkout').value;
+        <div style="flex:1 1 180px; min-width:180px; text-align:left;">
+          <label
+            for="booking-checkout"
+            style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
+          >
+            Check-out
+          </label>
 
-          if (!destination) return;
+          <input
+            type="date"
+            id="booking-checkout"
+            style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+          />
+        </div>
 
-          let bookingUrl =
-            'https://www.booking.com/searchresults.html?ss=' +
-            encodeURIComponent(destination);
+        <div style="flex:0 1 220px; min-width:200px;">
+          <button
+            type="submit"
+            style="width:100%; background:#E87722; color:#ffffff; padding:14px 24px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;"
+          >
+            Check Availability
+          </button>
+        </div>
 
-          if (checkin) {
-            bookingUrl += '&checkin=' + encodeURIComponent(checkin);
-          }
+      </div>
+    </form>
 
-          if (checkout) {
-            bookingUrl += '&checkout=' + encodeURIComponent(checkout);
-          }
+    <p style="font-size:0.9rem; line-height:1.5; color:#666; max-width:780px; margin:20px auto 0;">
+      Accommodation searches and bookings are provided through Booking.com.
+      ShowcasingOz TV may earn a commission from eligible bookings at no additional
+      cost to you.
+    </p>
 
-          bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
+    <!-- CJ Booking.com impression tracking -->
+    <img
+      src="https://www.awltovhc.com/image-101877738-17293136"
+      width="1"
+      height="1"
+      alt=""
+      style="display:none;"
+    />
 
-          window.open(bookingUrl, '_blank');
-        });
-      </script>
+    <script>
+      document.getElementById('booking-search-form').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    </div>
-  </section>
+        const destination = document.getElementById('booking-destination').value.trim();
+        const checkin = document.getElementById('booking-checkin').value;
+        const checkout = document.getElementById('booking-checkout').value;
+
+        if (!destination) {
+          return;
+        }
+
+        let bookingUrl =
+          'https://www.booking.com/searchresults.html?ss=' +
+          encodeURIComponent(destination);
+
+        if (checkin) {
+          bookingUrl += '&checkin=' + encodeURIComponent(checkin);
+        }
+
+        if (checkout) {
+          bookingUrl += '&checkout=' + encodeURIComponent(checkout);
+        }
+
+        bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
+
+        const cjAffiliateUrl =
+          'https://www.dpbolvw.net/click-101877738-17293136?url=' +
+          encodeURIComponent(bookingUrl);
+
+        window.open(cjAffiliateUrl, '_blank', 'noopener,noreferrer');
+      });
+    </script>
+
+  </div>
+</section>
 
   <!-- PAGE HEADER -->
   <section class="page-header" style="padding:0 20px;">
