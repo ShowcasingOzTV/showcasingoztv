@@ -584,7 +584,7 @@
 </p>
 
 <p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
-  From iconic locations to hidden gems we uncover on the road, this is your gateway to staying in the places we bring to life — all in one place.
+  From iconic locations to hidden gems we uncover on the road, this is your gateway to staying in the places we bring to life, all in one place.
 </p>
 
 <form id="booking-search-form" style="max-width:900px; margin:0 auto;">
@@ -594,6 +594,7 @@
       <label for="booking-destination" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
         Destination
       </label>
+
       <input
         type="text"
         id="booking-destination"
@@ -607,6 +608,7 @@
       <label for="booking-checkin" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
         Check-in
       </label>
+
       <input
         type="date"
         id="booking-checkin"
@@ -618,6 +620,7 @@
       <label for="booking-checkout" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
         Check-out
       </label>
+
       <input
         type="date"
         id="booking-checkout"
@@ -639,9 +642,19 @@
 
 <p style="font-size:0.95rem; line-height:1.5; color:#666; margin-top:20px;">
   Looking for a featured destination? You can also explore our
-  <a href="/towns/index.html" style="color:#E87722; text-decoration:none; font-weight:600;">Towns pages</a>
+  <a href="/towns/index.html" style="color:#E87722; text-decoration:none; font-weight:600;">
+    Towns pages
+  </a>
   for location-specific accommodation, attractions, and travel inspiration.
 </p>
+
+<img
+  src="https://www.awltovhc.com/image-101877738-17293136"
+  width="1"
+  height="1"
+  alt=""
+  style="display:none;"
+/>
 
 <script>
   document.getElementById('booking-search-form').addEventListener('submit', function (e) {
@@ -651,9 +664,13 @@
     const checkin = document.getElementById('booking-checkin').value;
     const checkout = document.getElementById('booking-checkout').value;
 
-    if (!destination) return;
+    if (!destination) {
+      return;
+    }
 
-    let bookingUrl = 'https://www.booking.com/searchresults.html?ss=' + encodeURIComponent(destination);
+    let bookingUrl =
+      'https://www.booking.com/searchresults.html?ss=' +
+      encodeURIComponent(destination);
 
     if (checkin) {
       bookingUrl += '&checkin=' + encodeURIComponent(checkin);
@@ -665,11 +682,11 @@
 
     bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
 
-    const awinUrl =
-      'https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=' +
+    const cjAffiliateUrl =
+      'https://www.dpbolvw.net/click-101877738-17293136?url=' +
       encodeURIComponent(bookingUrl);
 
-    window.open(awinUrl, '_blank');
+    window.open(cjAffiliateUrl, '_blank', 'noopener,noreferrer');
   });
 </script>
 
