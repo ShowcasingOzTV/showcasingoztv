@@ -4,50 +4,34 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB6N742VZW');
-  </script>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>American River (SA) | ShowcasingOz TV</title>
+  <meta name="description" content="Discover American River on Kangaroo Island, including coastal walks, maritime heritage, local food experiences, natural landmarks and accommodation." />
+  <meta name="keywords" content="American River SA, American River Kangaroo Island, Pelican Lagoon, Prospect Hill, Pennington Bay, American River attractions, American River accommodation, ShowcasingOz TV" />
 
-  <meta
-    name="description"
-    content="Discover American River on Kangaroo Island with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
-  >
-
-  <meta
-    name="keywords"
-    content="American River SA, American River Kangaroo Island, Kangaroo Island travel, American River attractions, American River accommodation, South Australia travel, ShowcasingOz TV"
-  >
-
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    crossorigin="anonymous"
-    media="print"
-    onload="this.media='all'"
-  >
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
+    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #ffffff;
+      color: #fff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -70,7 +54,7 @@
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
@@ -86,7 +70,7 @@
       font-size: 1.5rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
       nav {
         display: none;
         flex-direction: column;
@@ -111,12 +95,14 @@
       }
     }
 
+    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background: #dddddd;
+      background-color: #ddd;
     }
 
+    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
@@ -136,58 +122,35 @@
 
     p {
       line-height: 1.6;
-      color: #333333;
+      color: #333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
+    /* ================= PLACEHOLDERS ================= */
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .attraction-placeholder {
       width: 100%;
+      height: 350px;
       background: #e1e1e1;
       border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #666666;
+      color: #666;
+      font-size: 1.2rem;
       font-weight: 500;
+      margin-top: 20px;
       text-align: center;
       box-sizing: border-box;
     }
 
-    .video-placeholder {
-      height: 350px;
-      margin-top: 20px;
-      font-size: 1.2rem;
-    }
-
     .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .attraction-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
 
+    /* ================= SHARED GRID ================= */
     .accommodation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -202,10 +165,18 @@
       overflow: hidden;
     }
 
-    .accommodation-intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 20px;
+    .accommodation-content {
+      padding: 15px;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      background: #E87722;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin: 10px 0;
     }
 
     .accommodation-link {
@@ -220,6 +191,111 @@
       text-decoration: underline;
     }
 
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .other-accommodation-heading {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .other-accommodation-list {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .other-accommodation-list li {
+      margin-bottom: 16px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .accommodation-disclaimer {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .poi-placeholder {
+      height: 160px;
+      background: #e1e1e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      color: #0E3557;
+      text-align: center;
+    }
+
+    .poi-content p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+      text-align: center;
+    }
+
+    /* ================= ACCOMMODATION LIST ================= */
+    .other-accommodation-bookings {
+      max-width: 700px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .other-stay-item span {
+      color: #0E3557;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    /* ================= FOOTER ================= */
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -232,16 +308,14 @@
       margin-bottom: 15px;
     }
 
-    footer .footer-links a,
-    footer p a {
+    footer .footer-links a {
       color: #E87722;
       text-decoration: none;
       font-weight: 500;
       margin: 0 6px;
     }
 
-    footer .footer-links a:hover,
-    footer p a:hover {
+    footer .footer-links a:hover {
       color: #ffffff;
     }
 
@@ -251,11 +325,43 @@
       line-height: 1.6;
     }
 
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
+
+    footer p a:hover {
+      color: #ffffff;
+    }
+
     .gst-disclaimer {
       display: block;
       margin-top: 8px;
       font-size: 0.8rem;
       color: #ffffff;
+    }
+
+    footer,
+    footer * {
+      color: #ffffff !important;
+    }
+
+    footer {
+      background-color: #0E3557 !important;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722 !important;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff !important;
+    }
+
+    footer .gst-disclaimer {
+      color: #ffffff !important;
     }
   </style>
 </head>
@@ -265,14 +371,11 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-
       <a href="/">
-        <img
-          src="/images/logo.jpg"
-          alt="ShowcasingOz TV Logo"
-          width="170"
-          height="65"
-        >
+        <img src="/images/logo.jpg"
+             alt="ShowcasingOz TV Logo"
+             width="170"
+             height="65">
       </a>
 
       <span class="menu-btn" id="menu-btn">
@@ -290,11 +393,10 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
-  <script>
+  <script defer>
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
@@ -305,15 +407,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img
-      src="../images/towns/american_river.jpg"
-      alt="American River Kangaroo Island South Australia"
-      width="1600"
-      height="320"
-      fetchpriority="high"
-      decoding="async"
-      style="width:100%; height:100%; object-fit:cover;"
-    >
+    <img src="../images/towns/american_river.jpg"
+         alt="American River Kangaroo Island South Australia"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
   </section>
 
   <!-- MAIN CONTENT -->
@@ -322,147 +422,440 @@
     <h1>American River (SA)</h1>
 
     <p>
-      American River is a peaceful coastal community on Kangaroo Island,
-      overlooking the sheltered waters of Eastern Cove. Its natural setting,
-      boating heritage and abundant birdlife make it a distinctive base for
-      exploring the island.
+      American River is a peaceful coastal township on the western shore of
+      Eastern Cove on Kangaroo Island. Known locally as “The River”, the town
+      overlooks sheltered waters and Pelican Lagoon, creating an environment
+      recognised for birdlife, boating, fishing and relaxed coastal living.
     </p>
 
     <p>
-      The town offers a quieter Kangaroo Island experience, with coastal
-      scenery, walking areas, local seafood and convenient access to
-      destinations across the eastern and central parts of the island.
+      The town takes its name from American sealers who stayed in the area in
+      1803 and built the schooner <em>Independence</em>, recognised as the
+      first vessel built in South Australia. This maritime history remains an
+      important part of the community’s identity and is being preserved
+      through the Rebuild Independence Project.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      American River provides access to coastal walking trails, scenic
+      lookouts, sheltered waterways and local food producers. Its position
+      between Penneshaw and Kingscote also makes it a convenient base for
+      exploring the eastern and central areas of Kangaroo Island.
+    </p>
 
-      <h2>🚧 Our Complete American River Guide Is Coming Soon</h2>
-
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to American River. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        town and its surrounding areas on Kangaroo Island.
-      </p>
-
-    </div>
+    <p>
+      ShowcasingOz TV will capture the places, businesses and stories that
+      define American River, highlighting its maritime heritage, natural
+      environment, local produce and enduring connection to the waters of
+      Eastern Cove and Pelican Lagoon.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
 
     <div class="video-placeholder">
-      American River Documentary Coming Soon
+      Documentary Coming Soon
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions</h2>
+    <h2>📍 Attractions &amp; Points of Interest</h2>
 
     <p class="accommodation-intro">
-      American River’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage is completed.
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing
+      experiences, landscapes, culture and visitor engagement in a way that
+      static listings simply cannot achieve.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../attraction-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="attraction-placeholder">
-          Featured American River Attractions Coming Soon
+          Attractions Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around American River
+    </h3>
+
+    <ul class="other-accommodation-list">
+      <li>
+        <strong>Flavours of Petite Provence</strong><br>
+        A local farm-gate experience offering Kangaroo Island-grown produce
+        and a range of preserves, sauces, olive products and seasonal
+        specialties.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Oysters Farm Gate</strong><br>
+        A farm-gate outlet where visitors can purchase locally grown oysters
+        alongside a selection of fresh and frozen Kangaroo Island seafood.
+      </li>
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      American River’s coastal landmarks, walking areas and other points of
-      interest will be documented and added to this page following our visit.
+      These coastal landmarks, walking trails and heritage sites form an
+      important part of American River’s landscape, history and sense of
+      place. ShowcasingOz TV will capture these locations during filming to
+      help tell the broader story of the town and surrounding region.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
-        <div class="poi-placeholder">
-          American River Points of Interest Coming Soon
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>American River Maritime Enclave</h3>
+
+          <p>
+            The waterfront precinct brings together the American River jetty,
+            wharf and The Deck Café. It is a focal point for boating, fishing,
+            local dining and views across the sheltered waters of Eastern
+            Cove.
+          </p>
         </div>
-
       </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Fish Cannery Walking Trail</h3>
+
+          <p>
+            This coastal trail follows part of American River’s shoreline
+            towards the site associated with the former fish cannery. The walk
+            combines local history with water views, coastal vegetation and
+            opportunities to observe birdlife.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Independence Point</h3>
+
+          <p>
+            Reached via the Independence Trail, this quiet coastal point looks
+            across American River’s sheltered waters. The route follows the
+            lagoon shoreline through an area valued for its scenery, birdlife
+            and maritime associations.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Mercure Kangaroo Island Lodge Interpretive Trail</h3>
+
+          <p>
+            This short interpretive trail passes through bushland near the
+            lodge and introduces visitors to the local environment. It
+            provides an accessible opportunity to experience native
+            vegetation, wildlife habitat and views around American River Bay.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Pelican Lagoon Marine Sanctuary</h3>
+
+          <p>
+            Pelican Lagoon is a protected tidal lagoon connected to Eastern
+            Cove. Its sheltered waters, islands, seagrass habitat and abundant
+            birdlife make it one of the area’s most important natural
+            environments. Visitors should observe sanctuary rules and protect
+            its sensitive habitat.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Pennington Bay Beach</h3>
+
+          <p>
+            Pennington Bay is a striking south-coast beach known for its
+            turquoise water, powerful surf, rocky headlands and elevated
+            coastal views. Conditions can be strong, so visitors should take
+            care around the water and enjoy the scenery from designated access
+            areas.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Prospect Hill Lookout &amp; Matthew Flinders Monument</h3>
+
+          <p>
+            A steep stair climb leads to panoramic views over Pelican Lagoon
+            and Pennington Bay. The site commemorates Matthew Flinders’ 1802
+            ascent of the hill while surveying the Kangaroo Island coastline.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Rebuild Independence Project Boathouse</h3>
+
+          <p>
+            Located near the entrance to the American River wharf, the
+            community-run boathouse preserves local maritime history and
+            documents the construction of a replica of the 1803 schooner
+            <em>Independence</em>.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Red Banks</h3>
+
+          <p>
+            Red Banks is a secluded coastal location distinguished by its red
+            cliffs, pale sand and views across the water. The contrast between
+            the eroded shoreline and surrounding coastal landscape makes it a
+            memorable scenic stop near American River.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — American River</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in American River? Explore available accommodation in
-      and around the town while we continue developing our complete American
-      River destination guide.
+      Planning a stay in American River? Explore accommodation overlooking
+      Eastern Cove or within easy reach of Pelican Lagoon, local walking trails
+      and the town’s waterfront precinct.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a
-      place to stay. We help people discover where to go, what to experience
-      and where to base themselves as they explore Australia’s cities, towns
-      and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="https://www.booking.com/searchresults.html?ss=American+River%2C+Kangaroo+Island%2C+South+Australia%2C+Australia"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="accommodation-link"
-      >
+      <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAmerican%2BRiver%252C%2BKangaroo%2BIsland%252C%2BSouth%2BAustralia"
+         target="_blank"
+         rel="noopener sponsored"
+         class="accommodation-link">
         View All American River Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around American River
     </h3>
 
     <p class="accommodation-intro">
       Accommodation partners featured on ShowcasingOz TV receive premium
       exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front
-      of travellers actively planning where to stay.
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../accommodation-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
-          Featured American River Accommodation Coming Soon
+          Featured Accommodation Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around American River
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <span>American River Camp Ground</span>
+
+        <a href="https://www.kangarooisland.sa.gov.au/community/recreation/camping-facilities/american-river-campground"
+           target="_blank"
+           rel="noopener"
+           class="accommodation-link">
+          View Details
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Bayview Cabins Kangaroo Island</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBayview%2BCabins%2BKangaroo%2BIsland%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Coastal Nature Escape on Kangaroo Island</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoastal%2BNature%2BEscape%2Bon%2BKangaroo%2BIsland%252C%2BPelican%2BLagoon"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Kangaroo Island Coastal Villas</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKangaroo%2BIsland%2BCoastal%2BVillas%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Kangaroo Island Sugar Shack</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKangaroo%2BIsland%2BSugar%2BShack%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Lazy Shanty</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLazy%2BShanty%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Mercure Kangaroo Island Lodge</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMercure%2BKangaroo%2BIsland%2BLodge%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>River Retreat</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRiver%2BRetreat%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Schoolhouse Cottage</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSchoolhouse%2BCottage%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Sunrise on Falie</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSunrise%2Bon%2BFalie%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>The River Suites, Kangaroo Island</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2BRiver%2BSuites%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>The View at Kurrara, American River</span>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2BView%2Bat%2BKurrara%252C%2BAmerican%2BRiver"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Some links on this page are affiliate
+      links, which means we may earn a small commission if you make a booking,
+      at no extra cost to you.
+    </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -480,16 +873,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a><br>
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span><br>
+      </span>
+      <br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-
   </footer>
 
 </body>
