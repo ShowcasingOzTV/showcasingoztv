@@ -18,7 +18,7 @@
 
   <meta
     name="description"
-    content="Discover Birdwood in the Adelaide Hills with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Birdwood and the surrounding Adelaide Hills with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
   >
 
   <meta
@@ -220,6 +220,128 @@
       text-decoration: underline;
     }
 
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -361,8 +483,9 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Birdwood’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Birdwood makes a convenient base for exploring motoring history, wildlife,
+      gardens, local heritage and food-and-drink experiences throughout this part
+      of the Adelaide Hills.
     </p>
 
     <p style="text-align:center;">
@@ -374,33 +497,174 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
+      <li>
+        <strong>Big Rocking Horse</strong>
+        A much-loved Gumeracha landmark and family stop associated with the local
+        wooden toy-making tradition.
+      </li>
 
-        <div class="attraction-placeholder">
-          Featured Birdwood Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Gorge Wildlife Park</strong>
+        A wildlife park at Cudlee Creek showcasing Australian animals alongside
+        a range of other species in a leafy Adelaide Hills setting.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Highcroft Garden</strong>
+        A local garden attraction offering visitors a peaceful setting shaped by
+        established plantings and the changing Adelaide Hills seasons.
+      </li>
+
+      <li>
+        <strong>Lobethal Archives &amp; Historical Museum</strong>
+        A community museum and archive preserving stories, photographs and objects
+        connected with Lobethal and its distinctive local heritage.
+      </li>
+
+      <li>
+        <strong>National Motor Museum</strong>
+        Birdwood’s signature attraction, presenting Australia’s motoring history
+        through an extensive collection of vehicles, displays and exhibitions.
+      </li>
+
+      <li>
+        <strong>Union Bridge Brewery &amp; Distillery</strong>
+        A regional craft beverage destination celebrating locally produced beer
+        and spirits within the wider Adelaide Hills food-and-drink scene.
+      </li>
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Birdwood’s heritage landmarks, local streetscapes and other points
-      of interest will be documented and added to this page following
-      our visit.
+      Explore Birdwood’s town centre and the nearby villages, bushland and scenic
+      viewpoints that reveal the heritage and landscape of the northern Adelaide Hills.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Birdwood Points of Interest Coming Soon
+          Birdwood Town Centre Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Birdwood Town Centre</h3>
+
+          <p>
+            A compact heritage township with local businesses, historic buildings
+            and the National Motor Museum at the centre of its visitor appeal.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Charleston Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Charleston</h3>
+
+          <p>
+            A small Adelaide Hills locality surrounded by productive countryside
+            and connected to the region’s early settlement and agricultural history.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cudlee Creek Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cudlee Creek</h3>
+
+          <p>
+            A scenic rural community set among creek valleys and wooded hills,
+            and a useful stop when exploring the road network around Birdwood.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Gumeracha Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Gumeracha</h3>
+
+          <p>
+            A historic township known for its friendly main-street character,
+            local heritage and proximity to the Big Rocking Horse.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kangaroo Creek Reservoir Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kangaroo Creek Reservoir Lookout</h3>
+
+          <p>
+            A scenic viewing point overlooking the reservoir and the steep,
+            forested country of the Adelaide Hills.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lobethal Bushland Park Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lobethal Bushland Park</h3>
+
+          <p>
+            A protected area of native bushland near Lobethal, offering walking
+            opportunities and a closer look at local vegetation and wildlife habitat.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lobethal Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lobethal Town Centre</h3>
+
+          <p>
+            A heritage-rich town centre shaped by early settlement, community
+            life and the district’s former textile-manufacturing history.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mount Torrens Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mount Torrens</h3>
+
+          <p>
+            A picturesque rural village with a notably intact historic
+            streetscape and strong links to the surrounding farming district.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
@@ -421,16 +685,16 @@
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Birdwood%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBirdwood%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Birdwood Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Birdwood
     </h3>
 
@@ -459,6 +723,230 @@
 
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Birdwood
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>1860 Wine Country Cottages</span>
+          <small>Cottage / B&amp;B · Springton · 10–15 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3D1860%2520Wine%2520Country%2520Cottages%252C%2520Springton%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Aberdeen Lane</span>
+          <small>Boutique Hotel · Woodside · 15–20 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAberdeen%2520Lane%252C%2520Woodside%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Birdwood Motel</span>
+          <small>Motel · Birdwood · Within town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBirdwood%2520Motel%252C%2520Birdwood%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bonney Berg B&amp;B</span>
+          <small>B&amp;B · Birdwood · Within town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBonney%2520Berg%2520B%2526B%252C%2520Birdwood%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Cudlee Creek Caravan Park</span>
+          <small>Caravan Park · Cudlee Creek · 10–15 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCudlee%2520Creek%2520Caravan%2520Park%252C%2520Cudlee%2520Creek%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Grand Cru Estate</span>
+          <small>B&amp;B / Homestead · Springton · 10–15 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGrand%2520Cru%2520Estate%252C%2520Springton%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mount Pleasant Caravan Park</span>
+          <small>Caravan Park · Mount Pleasant · 10–15 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMount%2520Pleasant%2520Caravan%2520Park%252C%2520Mount%2520Pleasant%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mount Pleasant Hotel Motel</span>
+          <small>Hotel / Motel · Mount Pleasant · 10–15 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMount%2520Pleasant%2520Hotel%2520Motel%252C%2520Mount%2520Pleasant%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mt Bera Vineyard Cottage</span>
+          <small>B&amp;B · Gumeracha · Under 10 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMt%2520Bera%2520Vineyard%2520Cottage%252C%2520Gumeracha%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Queen Victoria Jubilee Park</span>
+          <small>Caravan Park · Williamstown · 15–20 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DQueen%2520Victoria%2520Jubilee%2520Park%252C%2520Williamstown%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Rabbiters Hut</span>
+          <small>B&amp;B · Mount Torrens · Under 10 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRabbiters%2520Hut%252C%2520Mount%2520Torrens%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Randells Mill Lofts</span>
+          <small>B&amp;B / Lofts · Gumeracha · Under 10 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRandells%2520Mill%2520Lofts%252C%2520Gumeracha%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tesses Retreat</span>
+          <small>B&amp;B / Cabin · Birdwood · Within town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTesses%2520Retreat%252C%2520Birdwood%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
   </section>
 
