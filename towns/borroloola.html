@@ -8,30 +8,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Borroloola (NT) | ShowcasingOz TV</title>
-  <meta name="description" content="Explore Borroloola (NT) — a remote Gulf of Carpentaria town and gateway to fishing, river systems, and Indigenous culture, featured on ShowcasingOz TV." />
-  <meta name="keywords" content="Borroloola, Northern Territory, Gulf of Carpentaria, McArthur River, outback town, remote travel, fishing destination, Aboriginal culture, regional Australia, ShowcasingOz TV" />
+
+  <meta
+    name="description"
+    content="Explore Borroloola (NT), a remote Gulf of Carpentaria town and gateway to fishing, river systems and Indigenous culture, featured on ShowcasingOz TV."
+  />
+
+  <meta
+    name="keywords"
+    content="Borroloola, Northern Territory, Gulf of Carpentaria, McArthur River, outback town, remote travel, fishing destination, Aboriginal culture, regional Australia, ShowcasingOz TV"
+  />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,328 +50,336 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background-color: #dddddd;
     }
 
     /* ================= CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+      width: 100%;
+      height: 350px;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 20px;
+      text-align: center;
+      box-sizing: border-box;
     }
 
     .accommodation-placeholder,
     .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+      height: 200px;
+      font-size: 1.1rem;
     }
 
     /* ================= SHARED GRID ================= */
+
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-content {
-      padding:15px;
+      padding: 15px;
     }
 
     .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
+      display: inline-block;
+      background: #E87722;
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin: 10px 0;
     }
 
     .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
     }
 
     .accommodation-link:hover {
-      text-decoration:underline;
+      text-decoration: underline;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      text-align: center;
     }
 
     .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
     }
 
     .other-accommodation-list li {
-      margin-bottom:6px;
+      margin-bottom: 6px;
+      text-align: center;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      font-size: 0.8rem;
+      color: #777777;
+      margin-top: 15px;
+      text-align: center;
     }
+
     /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    .poi-placeholder {
+      height: 160px;
+      background: #e1e1e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    .poi-content {
+      padding: 15px;
+      text-align: center;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    .poi-content h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      color: #0E3557;
+      text-align: center;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – BORROLOOLA ================= */
+    .poi-content p {
+      font-size: 0.9rem;
+      color: #555555;
+      margin: 0;
+      text-align: center;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    /* ================= ACCOMMODATION BOOKINGS ================= */
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    .other-accommodation-bookings {
+      max-width: 700px;
+      margin: 25px auto 0;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    .other-stay-item span {
+      color: #0E3557;
+      font-weight: 500;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-.poi-content p {
-  text-align: center;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+    footer .footer-links a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+    footer .footer-links a:hover {
+      color: #ffffff;
+    }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-footer p a:hover {
-  color: #ffffff;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
 
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
+    footer,
+    footer * {
+      color: #ffffff !important;
+    }
 
-footer {
-  background-color: #0E3557 !important;
-}
+    footer {
+      background-color: #0E3557 !important;
+    }
 
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722 !important;
+    }
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff !important;
+    }
 
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    footer .gst-disclaimer {
+      color: #ffffff !important;
+    }
   </style>
 </head>
 
@@ -369,10 +388,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -384,218 +413,384 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script defer>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/borroloola.jpg"
-       alt="Borroloola Northern Territory"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/borroloola.jpg"
+      alt="Borroloola Northern Territory"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Borroloola (NT)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Borroloola is a remote outback town located in the Northern Territory’s Gulf of Carpentaria region, situated along the McArthur River and serving as an important service centre for surrounding pastoral stations and remote communities. The town has a long history as a frontier settlement and continues to play a key role in supporting travel and industry in one of Australia’s most isolated regions.
-</p>
+    <h1>Borroloola (NT)</h1>
 
-<p>
-Today, Borroloola is best known as a gateway to the Gulf country, offering access to renowned fishing destinations, river systems, and vast savannah landscapes. The town provides essential services, accommodation, fuel, and supplies for travellers, four-wheel-drive enthusiasts, and workers navigating the remote southern Gulf region.
-</p>
+    <p>
+      Borroloola is a remote outback town located in the Northern Territory’s
+      Gulf of Carpentaria region, situated along the McArthur River and serving
+      as an important service centre for surrounding pastoral stations and
+      remote communities. The town has a long history as a frontier settlement
+      and continues to play a key role in supporting travel and industry in one
+      of Australia’s most isolated regions.
+    </p>
 
-<p>
-Surrounded by expansive floodplains, river systems, and coastal environments, Borroloola offers visitors a unique outback experience shaped by seasonal change and natural diversity. The area holds deep cultural significance for local Aboriginal communities, whose connection to Country continues to define the region’s identity and traditions.
-</p>
+    <p>
+      Today, Borroloola is best known as a gateway to the Gulf country,
+      offering access to renowned fishing destinations, river systems and
+      vast savannah landscapes. The town provides essential services,
+      accommodation, fuel and supplies for travellers, four-wheel-drive
+      enthusiasts and workers navigating the remote southern Gulf region.
+    </p>
 
-<p>
-ShowcasingOz TV will feature Borroloola as part of its national filming journey, capturing the town’s role as a remote outback hub, its connection to the Gulf of Carpentaria, and the landscapes and cultures that make this part of the Northern Territory distinct.
-</p>
+    <p>
+      Surrounded by expansive floodplains, river systems and coastal
+      environments, Borroloola offers visitors a unique outback experience
+      shaped by seasonal change and natural diversity. The area holds deep
+      cultural significance for local Aboriginal communities, whose connection
+      to Country continues to define the region’s identity and traditions.
+    </p>
 
+    <p>
+      ShowcasingOz TV will feature Borroloola as part of its national filming
+      journey, capturing the town’s role as a remote outback hub, its connection
+      to the Gulf of Carpentaria and the landscapes and cultures that make this
+      part of the Northern Territory distinct.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Borroloola</h3>
-  <ul class="other-accommodation-list">
-    <li>Old Borroloola Police Station Museum</li>
-    <li>Waralungku Art Centre</li>
-    <li>Heartbreak Hotel</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions &amp; Points of Interest</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing
+      experiences, landscapes, culture and visitor engagement in a way that
+      static listings simply cannot achieve.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Borroloola’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>King Ash Bay</h3>
-<p>
-King Ash Bay is a popular fishing and camping destination located near Borroloola on the McArthur River. Known for its relaxed atmosphere and access to productive river systems, the area attracts anglers and travellers seeking a remote Gulf Country experience.
-</p>
+        <div class="attraction-placeholder">
+          Attractions Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Southern Lost City</h3>
-<p>
-The Southern Lost City features striking sandstone formations shaped into towering columns and clustered “city-like” structures. These natural formations highlight the unique geology of Limmen National Park and create one of the Northern Territory’s most visually distinctive landscapes.
- </p>
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around Borroloola
+    </h3>
+
+    <ul class="other-accommodation-list">
+      <li>Old Borroloola Police Station Museum</li>
+      <li>Waralungku Art Centre</li>
+      <li>Heartbreak Hotel</li>
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These natural landmarks and local points of interest form an important
+      part of Borroloola’s landscape, history and sense of place. ShowcasingOz
+      TV will capture these locations during filming to help tell the broader
+      story of the region.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>King Ash Bay</h3>
+
+          <p>
+            King Ash Bay is a popular fishing and camping destination located
+            near Borroloola on the McArthur River. Known for its relaxed
+            atmosphere and access to productive river systems, the area
+            attracts anglers and travellers seeking a remote Gulf Country
+            experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Southern Lost City</h3>
+
+          <p>
+            The Southern Lost City features striking sandstone formations
+            shaped into towering columns and clustered city-like structures.
+            These natural formations highlight the unique geology of Limmen
+            National Park and create one of the Northern Territory’s most
+            visually distinctive landscapes.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Butterfly Falls</h3>
+
+          <p>
+            Butterfly Falls is a seasonal waterfall set within rugged
+            escarpment country in Limmen National Park. Surrounded by rocky
+            terrain and native vegetation, the falls offer a remote and scenic
+            natural feature within this vast outback environment.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Western Lost City</h3>
+
+          <p>
+            The Western Lost City is another remarkable collection of
+            sandstone pillars and formations resembling ancient ruins
+            scattered across the landscape. The site showcases the scale and
+            geological diversity of Limmen National Park’s remote terrain.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Caranbirini Waterhole</h3>
+
+          <p>
+            Caranbirini Waterhole is a permanent water source set among rocky
+            outcrops and escarpment features. The waterhole supports local
+            wildlife and offers a tranquil setting for visitors to experience
+            the natural beauty of the conservation reserve.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Barrawulla Loop Walk</h3>
+
+          <p>
+            The Barrawulla Loop Walk is a marked trail that guides visitors
+            through sandstone formations, woodlands and around the waterhole.
+            The walk provides an accessible way to explore the area’s geology,
+            vegetation and cultural landscape within Caranbirini Conservation
+            Reserve.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Butterfly Falls</h3>
-<p>
-Butterfly Falls is a seasonal waterfall set within rugged escarpment country in Limmen National Park. Surrounded by rocky terrain and native vegetation, the falls offer a remote and scenic natural feature within this vast outback environment.
- </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Western Lost City</h3>
-<p>
-The Western Lost City is another remarkable collection of sandstone pillars and formations, resembling ancient ruins scattered across the landscape. The site showcases the scale and geological diversity of Limmen National Park’s remote terrain.
- </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Caranbirini Waterhole</h3>
-<p>
-Caranbirini Waterhole is a permanent water source set among rocky outcrops and escarpment features. The waterhole supports local wildlife and offers a tranquil setting for visitors to experience the natural beauty of the conservation reserve.
- </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Barrawulla Loop Walk</h3>
-  <p>
-  The Barrawulla Loop Walk is a marked trail that guides visitors through sandstone formations, woodlands, and around the waterhole. The walk provides an accessible way to explore the area’s geology, vegetation, and cultural landscape within Caranbirini Conservation Reserve.
-  </p>
-    </div>
-</div>
-
-</div>
 
     <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Borroloola</h2>
+    <h2>🏨 Stay Where We Showcase — Borroloola</h2>
 
-  <p class="accommodation-intro">
-    Planning a stay in Borroloola? Explore accommodation options in and around this remote Gulf Country town while discovering
-    the river systems, fishing destinations, outback landscapes, and cultural significance that make Borroloola a unique Northern Territory destination.
-  </p>
+    <p class="accommodation-intro">
+      Planning a stay in Borroloola? Explore accommodation options in and
+      around this remote Gulf Country town while discovering the river
+      systems, fishing destinations, outback landscapes and cultural
+      significance that make Borroloola a unique Northern Territory
+      destination.
+    </p>
 
-  <p class="accommodation-intro">
-    ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-    people discover where to go, what to experience, and where to base themselves as they explore
-    Australia’s cities, towns, and hidden gems.
-  </p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="https://www.booking.com/searchresults.html?ss=Borroloola" target="_blank" class="accommodation-link">
-      View All Borroloola Accommodation
-    </a>
-  </p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBorroloola%252C%2520Northern%2520Territory%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Borroloola Accommodation
+      </a>
+    </p>
 
-  <h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Borroloola</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Borroloola
+    </h3>
 
-  <p class="accommodation-intro">
-    Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-    produced video, photography, and destination-led storytelling that places their property in front
-    of travellers actively planning where to stay.
-  </p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="../accommodation-partners.html" class="accommodation-link">
-      Explore accommodation filming & feature options
-    </a>
-  </p>
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Borroloola</h3>
-  <div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Borroloola
+    </h3>
 
-    <div class="other-stay-item"><span>Savannah Way Motel Borroloola</span><a href="https://www.booking.com/searchresults.html?ss=Borroloola" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-    <div class="other-stay-item"><span>Borroloola Hotel Motel</span><a href="https://www.booking.com/searchresults.html?ss=Borroloola" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Savannah Way Motel Borroloola</span>
 
-    <div class="other-stay-item"><span>McArthur River Caravan Park</span><a href="https://www.booking.com/searchresults.html?ss=Borroloola" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSavannah%2520Way%2520Motel%252C%2520Borroloola%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-    <div class="other-stay-item"><span>King Ash Bay Lodge</span><a href="https://www.booking.com/searchresults.html?ss=Borroloola" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Borroloola Hotel Motel</span>
 
-    <div class="other-stay-item"><span>Lorella Springs Wilderness Park</span><a href="https://www.booking.com/searchresults.html?ss=Borroloola" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBorroloola%2520Hotel%2520Motel%252C%2520Borroloola%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  </div>
+      <div class="other-stay-item">
+        <span>McArthur River Caravan Park</span>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMcArthur%2520River%2520Caravan%2520Park%252C%2520Borroloola%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>King Ash Bay Lodge</span>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKing%2520Ash%2520Bay%2520Lodge%252C%2520Borroloola%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <span>Lorella Springs Wilderness Park</span>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLorella%2520Springs%2520Wilderness%2520Park%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -610,14 +805,20 @@ Caranbirini Waterhole is a permanent water source set among rocky outcrops and e
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-  </footer>
 
-</body>
-</html>
+  </footer>
 
 </body>
 </html>
