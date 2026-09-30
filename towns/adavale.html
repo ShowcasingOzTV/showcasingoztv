@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Adavale (QLD) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Adavale, QLD — a remote Channel Country settlement on the upper Cooper Creek system, known for its pastoral heritage, isolation, and classic outback character." />
-  <meta name="keywords" content="Adavale QLD, Adavale outback, Channel Country Queensland, Cooper Creek system, Adavale pastoral history, remote Queensland towns, outback Queensland travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Adavale in Queensland's Channel Country with ShowcasingOz TV, including its history, attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Adavale QLD, Adavale Queensland, Channel Country, Hell Hole Gorge National Park, Adavale attractions, Adavale accommodation, outback Queensland travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-     /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +55,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – ADAVALE ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-    .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +367,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,228 +392,303 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/adavale.jpg"
-       alt="Adavale Queensland"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/adavale.jpg"
+      alt="Adavale Channel Country Queensland"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Adavale (QLD)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Adavale is a remote outback settlement in south-west Queensland, located within the Channel Country and connected to the upper reaches of the Cooper Creek system. Small in size and population, Adavale offers a quiet and authentic glimpse into life in one of Australia’s most isolated inland regions.
-</p>
+    <h1>Adavale (QLD)</h1>
 
-<p>
-Adavale developed in the late 19th century as pastoral activity expanded across western Queensland. The settlement supported surrounding cattle and sheep stations, providing essential services and acting as a focal point for people working across vast grazing properties shaped by seasonal flooding and long dry periods.
-</p>
+    <p>
+      Adavale is a small and remote settlement in Queensland’s Channel Country,
+      approximately 98 kilometres north of Quilpie. Surrounded by open plains,
+      mulga country, seasonal waterways and extensive pastoral properties, the
+      town provides visitors with an authentic experience of life in one of
+      Australia’s least densely populated inland regions.
+    </p>
 
-<p>
-The town’s history is closely linked to early inland exploration and pastoral settlement, with its location influenced by access to watercourses that form part of the broader Lake Eyre Basin. These waterways are central to life in the Channel Country, transforming the landscape during wet years and sustaining grazing operations across otherwise arid country.
-</p>
+    <p>
+      Established during the expansion of pastoral settlement across western
+      Queensland, Adavale grew as a service centre for surrounding cattle and
+      sheep stations. The town once supported hotels, stores, government services
+      and transport connections, but its development declined after the railway
+      was routed through Quilpie instead. Remnants of its former buildings and
+      community infrastructure continue to tell the story of this earlier period.
+    </p>
 
-<p>
-Today, Adavale remains a very small and quiet settlement, characterised by minimal infrastructure, open spaces, and a strong sense of remoteness. Its isolation highlights the resilience required to live and work in far south-west Queensland, where distances between towns are vast and self-sufficiency is essential.
-</p>
+    <p>
+      Adavale lies within the broader Lake Eyre Basin and is connected to the
+      upper Cooper Creek catchment. Waterholes, channels and floodplains are
+      defining features of the surrounding landscape. During wet periods these
+      systems spread water across the normally dry country, supporting wildlife,
+      vegetation and pastoral activity throughout the region.
+    </p>
 
-<p>
-Surrounded by flat plains, wide skies, and classic red-earth landscapes, Adavale embodies the understated character of the Channel Country. It appeals to travellers seeking solitude, history, and a deeper understanding of Australia’s pastoral heartland away from more frequented routes.
-</p>
+    <p>
+      The settlement is also recognised as the principal gateway to Hell Hole
+      Gorge National Park, where rugged gorges, permanent waterholes and remote
+      walking country contrast with the surrounding plains. Within Adavale,
+      museums, historic relics, local businesses and the town’s interpretive
+      features provide insight into more than a century of outback community life.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, and environments that define Adavale as part of our national filming journey — highlighting its pastoral heritage, connection to the Channel Country waterways, and the quiet resilience that continues to shape life in this remote Queensland settlement.
-</p>
+    <p>
+      Today, Adavale appeals to travellers seeking history, solitude and a deeper
+      understanding of Queensland’s pastoral heartland. ShowcasingOz TV will add
+      original photography, professionally produced video and further information
+      gathered during its visit to the town and surrounding district.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Adavale Documentary Coming Soon
     </div>
-  </div>
 
- <h3 class="other-accommodation-heading">Other Attractions in and around Adavale</h3>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-<ul class="other-accommodation-list">
-  <li>Adavale Mini Museum</li>
-  <li>Adavale Pub</li>
-  <li>Elegant Emu</li>
-  <li>The Hut (aka The Elliots)</li>
-</ul>
+    <p class="accommodation-intro">
+      Adavale’s visitor experiences reflect its pastoral history, community
+      character and enduring connection with Queensland’s remote Channel
+      Country landscape.
+    </p>
 
-<p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<h2>🗺️ Points of Interest &amp; Landmarks</h2>
+    <ul class="attractions-list">
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Adavale’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+      <li>
+        <strong>Adavale Mini Museum</strong>
+        Housed in the town’s historic former butcher shop, the mini museum
+        displays local relics and objects connected with more than a century
+        of Adavale history.
+      </li>
 
-<div class="poi-grid">
+      <li>
+        <strong>Adavale Pub</strong>
+        A local gathering place incorporating the town’s pub, general store
+        and post office services, and an important part of community life in
+        remote Adavale.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Adavale Town Centre</h3>
-      <p>
-        The small town centre of Adavale reflects classic outback life, featuring historic buildings
-        and a quiet rural atmosphere that showcases the enduring character of remote Channel Country communities.
-      </p>
+      <li>
+        <strong>Elegant Emu</strong>
+        A distinctive local hospitality experience known for bringing country
+        character and traditional high tea to the heart of the outback.
+      </li>
+
+      <li>
+        <strong>The Hut (also known as The Elliots)</strong>
+        A local heritage stop that contributes to Adavale’s collection of
+        historic places and stories from the settlement’s earlier years.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Adavale’s landmarks combine historic town features with waterholes and
+      rugged protected country that demonstrate the environmental character
+      of the region.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Adavale Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Adavale Town Centre</h3>
+
+          <p>
+            The small town centre reflects classic outback life through its
+            historic buildings, community facilities and quiet Channel
+            Country atmosphere.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Hell Hole Gorge National Park &amp; Hell Hole Waterhole Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Hell Hole Gorge National Park &amp; Hell Hole Waterhole</h3>
+
+          <p>
+            A remote protected landscape of rocky gorges, channels and native
+            vegetation. Hell Hole Waterhole is an important permanent water
+            source supporting wildlife within this otherwise dry region.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Spencers Waterhole Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Spencers Waterhole</h3>
+
+          <p>
+            A natural waterhole within Hell Hole Gorge National Park that
+            illustrates the importance of reliable water sources to wildlife,
+            vegetation and travel through the Channel Country.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Hell Hole Gorge National Park &amp; Hell Hole Waterhole</h3>
-      <p>
-        Hell Hole Gorge National Park protects a rugged section of Channel Country landscape near Adavale,
-        featuring rocky gorges, native vegetation and remote outback scenery. Hell Hole Waterhole is a
-        permanent water source within the gorge system and an important feature of the surrounding landscape.
-        The waterhole has long supported wildlife and pastoral activity, demonstrating the critical role
-        reliable water plays in sustaining life across the Channel Country.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Spencers Waterhole</h3>
-      <p>
-        Spencers Waterhole is a natural outback waterhole in Hell Hole Gorge National Park that reflects
-        the importance of permanent and semi-permanent water sources in the Channel Country. The site
-        highlights the role these waterholes have played in supporting pastoral activity, wildlife and
-        early travel across south-west Queensland’s arid landscapes.
-      </p>
-    </div>
-  </div>
-
-</div>
 
     <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Adavale</h2>
+    <h2>🏨 Stay Where We Showcase — Adavale</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Adavale? Explore accommodation options in and around this remote Channel Country settlement
-  while discovering the pastoral heritage, outback landscapes, and quiet resilience that define one of
-  south-west Queensland’s most isolated destinations.
-</p>
+    <p class="accommodation-intro">
+      Planning a stay in Adavale? Explore accommodation searches for this
+      remote Channel Country settlement while discovering its history,
+      waterways and surrounding outback landscapes.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdavale"
-     target="_blank"
-     rel="noopener sponsored"
-     class="accommodation-link">
-    View All Adavale Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdavale%252C%2520Queensland%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Adavale Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">
-  Featured Accommodation Opportunities In And Around Adavale
-</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Adavale
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming &amp; feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">
-      Featured Accommodation Coming Soon
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Adavale Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
-</div>
 
-<h3 class="other-accommodation-heading">
-  Other Accommodation In And Around Adavale
-</h3>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Adavale
+    </h3>
 
-<div class="other-accommodation-bookings">
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item">
-    <span>Adavale Way Farm Stay</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdavale"
-       target="_blank"
-       rel="noopener sponsored"
-       class="accommodation-link">
-      View / Book
-    </a>
-  </div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Adavale Veterans Retreat</span>
+          <small>Specialist retreat accommodation · Adavale</small>
+        </div>
 
-  <div class="other-stay-item">
-    <span>Adavale Veterans Retreat</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdavale"
-       target="_blank"
-       rel="noopener sponsored"
-       class="accommodation-link">
-      View / Book
-    </a>
-  </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdavale%2520Veterans%2520Retreat%252C%2520Adavale%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-</div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Adavale Way Farm Stay</span>
+          <small>Farm stay / camping accommodation · Adavale Road</small>
+        </div>
 
-<p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  Some links on this page are affiliate links, which means we may earn a small commission if you make
-  a booking, at no extra cost to you.
-</p>
-  
-</section>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdavale%2520Way%2520Farm%2520Stay%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -621,10 +703,19 @@ ShowcasingOz TV will be capturing the stories, people, and environments that def
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
