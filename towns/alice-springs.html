@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Alice Springs (NT) | ShowcasingOz TV</title>
-  <meta name="description" content="Explore Alice Springs (NT) — the beating heart of Central Australia, featured in ShowcasingOz TV’s upcoming documentary series." />
-  <meta name="keywords" content="Alice Springs, Northern Territory, Red Centre, Outback Australia, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Alice Springs in Australia’s Red Centre with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Alice Springs NT, Mparntwe, Red Centre, MacDonnell Ranges, Alice Springs attractions, Alice Springs accommodation, Central Australia travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-     /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +55,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – ALICE SPRINGS ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-    .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +367,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,776 +392,1194 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/alice-springs.jpg"
-       alt="Alice Springs Northern Territory"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/alice-springs.jpg"
+      alt="Alice Springs and the MacDonnell Ranges in the Northern Territory"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Alice Springs (NT)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-  Alice Springs sits at the geographic and cultural heart of Australia’s Red Centre — a town shaped by ancient landscapes,
-  rich Aboriginal heritage, and a strong sense of outback identity. Surrounded by the West and East MacDonnell Ranges,
-  Alice Springs is a gateway to some of the country’s most iconic desert scenery, walking trails, cultural institutions,
-  and wildlife experiences.
-</p>
+    <h1>Alice Springs (NT)</h1>
 
-<p>
-  As a regional hub, Alice Springs plays a vital role in Central Australia’s tourism economy, offering visitors a blend
-  of natural beauty, cultural storytelling, adventure, and modern hospitality. From local art and history to
-  world-renowned attractions and events, the town provides a diverse and compelling experience for travellers exploring
-  the Northern Territory.
-</p>
+    <p>
+      Alice Springs, known as Mparntwe to its Traditional Owners, is the principal
+      service centre of Central Australia and one of the country’s most distinctive
+      inland destinations. The town sits between the East and West MacDonnell Ranges,
+      where the usually dry Todd River passes through a landscape of red rock, spinifex,
+      river red gums and wide desert skies.
+    </p>
 
-<p>
-  ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Alice Springs as part
-  of our national filming journey — highlighting what makes the region unique, welcoming, and worthy of discovery.
-</p>
+    <p>
+      The area is part of the traditional lands of the Central Arrernte people, whose
+      continuing cultural connections, stories and knowledge are fundamental to the
+      identity of Alice Springs. Aboriginal art, language and culture remain central
+      to the town, reflected in its galleries, cultural organisations, public places
+      and the communities of the wider region.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      European settlement developed around the Overland Telegraph Station established
+      in the early 1870s. The telegraph line connected Adelaide with Darwin and the
+      wider world, while the later arrival of the railway strengthened the town’s role
+      as a transport, government and commercial hub. Historic buildings, museums and
+      preserved transport collections now interpret these important chapters of inland
+      Australian history.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      Modern Alice Springs supports communities across an enormous area of the Northern
+      Territory. It is a centre for health, education, aviation, pastoral services,
+      Aboriginal organisations, arts and tourism, and a base for exploring the
+      MacDonnell Ranges, Larapinta Trail, desert waterholes, historic reserves and
+      remote settlements of the Red Centre.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <p>
+      Visitors can experience desert wildlife, aviation and medical history, Aboriginal
+      art, astronomy, walking trails and panoramic lookouts within and around the town.
+      ShowcasingOz TV will add original photography and professionally produced video as
+      its Alice Springs visit documents the people, places and experiences that give this
+      remarkable Central Australian community its character.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Alice Springs Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions in Alice Springs</h3>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-<ul class="other-accommodation-list">
-  <li>Adelaide House Museum</li>
-  <li>Alice Springs Desert Park (Day &amp; Nocturnal Tour)</li>
-  <li>Alice Springs Reptile Centre</li>
-  <li>Alice Springs School of the Air</li>
-  <li>Alice Springs Telegraph Station Historical Reserve</li>
-  <li>Araluen Cultural Precinct</li>
-  <li>Boomerang Art – Aboriginal Art Gallery</li>
-  <li>Central Australian Aviation Museum</li>
-  <li>Earth Sanctuary Astronomy Dinner &amp; Star Tour</li>
-  <li>Megafauna Central</li>
-  <li>Museum of Central Australia</li>
-  <li>National Road Transport Hall of Fame &amp; Old Ghan Train Museum</li>
-  <li>Royal Flying Doctor Service Museum</li>
-  <li>The Kangaroo Sanctuary (Outside Only)</li>
-  <li>This Is Aboriginal Art Centre</li>
-  <li>Yubu Napa Art Gallery</li>
-</ul>
+    <p class="accommodation-intro">
+      Alice Springs offers an exceptional concentration of cultural, historical,
+      wildlife and desert experiences that introduce visitors to the stories and
+      environments of Central Australia.
+    </p>
 
-<p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-</p>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<h2>🗺️ Points of Interest &amp; Landmarks</h2>
+    <ul class="attractions-list">
+      <li>
+        <strong>Adelaide House Museum</strong>
+        A heritage building designed by Reverend John Flynn that interprets early
+        health care, communication and community life in Central Australia.
+      </li>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Alice Springs’ landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+      <li>
+        <strong>Alice Springs Desert Park (Day &amp; Nocturnal Tour)</strong>
+        A major desert wildlife and cultural attraction presenting the plants,
+        animals and living landscapes of Central Australia through habitat exhibits
+        and guided experiences.
+      </li>
 
-<div class="poi-grid">
+      <li>
+        <strong>Alice Springs Reptile Centre</strong>
+        A specialist wildlife attraction featuring Central Australian reptiles,
+        including snakes, lizards and crocodiles, with informative presentations
+        and supervised encounters.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Alice Springs Viewpoint from MacDonnell Ranges</h3>
-      <p>
-        This viewpoint provides sweeping vistas of Alice Springs framed by the MacDonnell Ranges, offering
-        a strong sense of the town’s setting within the surrounding desert landscape.
-      </p>
+      <li>
+        <strong>Alice Springs School of the Air</strong>
+        A visitor experience explaining how distance education connects teachers
+        with students living across the vast and isolated communities of Central
+        Australia.
+      </li>
+
+      <li>
+        <strong>Alice Springs Telegraph Station Historical Reserve</strong>
+        The site of the original overland telegraph station and early township,
+        with restored buildings, interpretation, walking trails and important
+        local history.
+      </li>
+
+      <li>
+        <strong>Araluen Cultural Precinct</strong>
+        A cultural hub bringing together galleries, museums, performing arts and
+        collections that explore the art, history, geology and communities of
+        Central Australia.
+      </li>
+
+      <li>
+        <strong>Boomerang Art – Aboriginal Art Gallery</strong>
+        A local gallery presenting Aboriginal artworks and offering visitors an
+        opportunity to learn more about Central Australian artistic traditions
+        and contemporary practice.
+      </li>
+
+      <li>
+        <strong>Central Australian Aviation Museum</strong>
+        A museum preserving aircraft, photographs and memorabilia connected with
+        the pioneers and services that shaped aviation across Australia’s remote
+        interior.
+      </li>
+
+      <li>
+        <strong>Earth Sanctuary Astronomy Dinner &amp; Star Tour</strong>
+        A guided evening experience combining dark-sky astronomy, desert
+        surroundings and storytelling beneath Central Australia’s expansive
+        night sky.
+      </li>
+
+      <li>
+        <strong>Megafauna Central</strong>
+        An interpretive exhibition exploring the giant prehistoric animals once
+        found in Central Australia and the significant fossil discoveries made
+        at nearby Alcoota.
+      </li>
+
+      <li>
+        <strong>Museum of Central Australia</strong>
+        A natural-history collection within the Araluen Cultural Precinct
+        documenting the region’s geology, fossils, biodiversity and distinctive
+        desert environments.
+      </li>
+
+      <li>
+        <strong>National Road Transport Hall of Fame &amp; Old Ghan Train Museum</strong>
+        A large transport heritage collection celebrating the road trains,
+        commercial vehicles, machinery and railway history that helped connect
+        remote Australia.
+      </li>
+
+      <li>
+        <strong>Royal Flying Doctor Service Museum</strong>
+        An interactive visitor centre sharing the history and continuing
+        importance of aeromedical care and communications across rural and
+        remote Australia.
+      </li>
+
+      <li>
+        <strong>The Kangaroo Sanctuary (Outside Only)</strong>
+        A wildlife sanctuary dedicated to rescuing and rehabilitating orphaned
+        kangaroos. Access and tour arrangements should be confirmed directly
+        before visiting.
+      </li>
+
+      <li>
+        <strong>This Is Aboriginal Art Centre</strong>
+        A locally based art centre and gallery showcasing Aboriginal artworks
+        while helping visitors engage with the artists, stories and cultural
+        context behind the work.
+      </li>
+
+      <li>
+        <strong>Yubu Napa Art Gallery</strong>
+        A contemporary gallery displaying Aboriginal art, sculpture and gifts,
+        with a focus on work connected to Central Australia and the wider desert
+        region.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These lookouts, gorges, historic sites and local landmarks show how Alice
+      Springs is connected with the ranges, waterways, transport routes and
+      communities of the wider Central Australian landscape.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Alice Springs Viewpoint from MacDonnell Ranges Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Alice Springs Viewpoint from MacDonnell Ranges</h3>
+
+          <p>
+            This viewpoint provides sweeping vistas of Alice Springs framed by
+            the MacDonnell Ranges, offering a strong sense of the town’s setting
+            within the surrounding desert landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Anzac Hill Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Anzac Hill</h3>
+
+          <p>
+            Anzac Hill is a central lookout and memorial site in Alice Springs,
+            offering panoramic town views and serving as an important place of
+            remembrance and reflection.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Arltunga Bush Pub &amp; Eco Retreat Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Arltunga Bush Pub &amp; Eco Retreat</h3>
+
+          <p>
+            Arltunga Bush Pub &amp; Eco Retreat provides a remote outback
+            stopping point near the historic reserve, reflecting the character,
+            hospitality and rugged setting of the wider Arltunga district.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Arltunga Historical Reserve Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Arltunga Historical Reserve</h3>
+
+          <p>
+            Arltunga Historical Reserve preserves the remains of Central
+            Australia’s first major European settlement, established following
+            the discovery of gold in the late nineteenth century. Its historic
+            buildings, mining sites and walking trails reveal the difficult
+            conditions faced by the district’s early residents.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Arltunga Open Air Museum Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Arltunga Open Air Museum</h3>
+
+          <p>
+            Arltunga Open Air Museum brings together historic ruins, mining
+            relics and interpretive sites across the former settlement, allowing
+            visitors to explore the district’s gold-mining heritage in its
+            original landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cassia Hill Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cassia Hill</h3>
+
+          <p>
+            Cassia Hill offers panoramic views over Alice Springs and the
+            surrounding ranges, providing a quieter alternative for scenic
+            appreciation and sunset viewing.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Central Mount Stuart Historical Reserve Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Central Mount Stuart Historical Reserve</h3>
+
+          <p>
+            Central Mount Stuart Historical Reserve marks the geographic centre
+            of Australia and is a site of historical significance linked to early
+            exploration, including the Overland Telegraph Line. The reserve
+            highlights the challenges faced by early explorers in traversing
+            Central Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Clay Pans Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Clay Pans</h3>
+
+          <p>
+            The Clay Pans are open, flat landscapes that transform dramatically
+            after rainfall, offering a striking example of Central Australia’s
+            unique desert environment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Conlon’s Lagoon Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Conlon’s Lagoon</h3>
+
+          <p>
+            Conlon’s Lagoon is a peaceful wetland area that attracts birdlife
+            and provides a contrast to the surrounding arid landscape, valued
+            for its tranquillity and ecological importance.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ellery Creek Big Hole Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ellery Creek Big Hole</h3>
+
+          <p>
+            Ellery Creek Big Hole is one of the most recognisable natural
+            attractions in the West MacDonnell Ranges, featuring a deep waterhole
+            carved through towering quartzite cliffs. It is a popular place for
+            swimming, picnicking and bushwalking.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Emily Gap Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Emily Gap</h3>
+
+          <p>
+            Emily Gap is a culturally important site featuring rock art and a
+            natural gap through the ranges, offering visitors insight into the
+            region’s Aboriginal heritage and landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ghan Pans Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ghan Pans</h3>
+
+          <p>
+            Ghan Pans are expansive claypan landscapes near Alice Springs, known
+            for their stark beauty, changing colours and significance to the
+            natural and cultural history of the region.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Government Works &amp; Old Police Station Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Government Works &amp; Old Police Station</h3>
+
+          <p>
+            The Government Works and Old Police Station are surviving elements
+            of the former Arltunga settlement, illustrating how public
+            administration and law enforcement operated in one of Central
+            Australia’s earliest towns.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Great Western Mine Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Great Western Mine</h3>
+
+          <p>
+            Great Western Mine is one of the historic mining sites associated
+            with the Arltunga gold rush. Surviving workings and surrounding
+            ruins help tell the story of early mineral exploration in Central
+            Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Hendrick Gerrit Guth Grave Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Hendrick Gerrit Guth Grave</h3>
+
+          <p>
+            This historic grave site marks one of Central Australia’s early
+            European settlers, offering insight into the hardships and history
+            of life in the region’s early pastoral era.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Highest Point Between Adelaide &amp; Darwin Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Highest Point Between Adelaide &amp; Darwin</h3>
+
+          <p>
+            This location marks the highest elevation along the Stuart Highway
+            between Adelaide and Darwin. It represents a subtle but significant
+            geographic feature within the landscapes of Central Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ilwempe Ilwempe (Whitegums) Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ilwempe Ilwempe (Whitegums)</h3>
+
+          <p>
+            Ilwempe Ilwempe, also known as Whitegums, is a culturally significant
+            site featuring a picturesque gap and waterhole valued for its natural
+            beauty and Aboriginal heritage.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Jessie Gap Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Jessie Gap</h3>
+
+          <p>
+            Jessie Gap is a scenic gorge with cultural significance, known for
+            its rock formations, walking paths and connection to local Aboriginal
+            stories and traditions.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          John Flynn’s Grave Historical Reserve Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>John Flynn’s Grave Historical Reserve</h3>
+
+          <p>
+            John Flynn’s Grave Historical Reserve commemorates the Presbyterian
+            minister who founded the Royal Flying Doctor Service. The memorial
+            recognises his contribution to health care and communication across
+            remote Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Larapinta Trail Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Larapinta Trail</h3>
+
+          <p>
+            The Larapinta Trail is a renowned long-distance walking track
+            stretching across the MacDonnell Ranges, celebrated for its diverse
+            landscapes, cultural significance and remote beauty.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Meyers Hill &amp; Olive Pink Botanic Garden Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Meyers Hill &amp; Olive Pink Botanic Garden</h3>
+
+          <p>
+            Meyers Hill offers elevated views near the Olive Pink Botanic Garden,
+            which showcases native Central Australian plants and highlights the
+            region’s distinctive desert flora.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mount Sonder Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mount Sonder Lookout</h3>
+
+          <p>
+            Mount Sonder Lookout showcases views of one of the highest peaks in
+            the MacDonnell Ranges, renowned for its dramatic ridgelines and
+            sunrise and sunset scenery.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Neil Hargrave Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Neil Hargrave Lookout</h3>
+
+          <p>
+            Neil Hargrave Lookout offers elevated views across Alice Springs and
+            the surrounding MacDonnell Ranges, providing a popular vantage point
+            for photography and scenic appreciation.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ochre Pits Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ochre Pits</h3>
+
+          <p>
+            The Ochre Pits are a culturally significant site where natural
+            ochres have been traditionally sourced for thousands of years,
+            reflecting the deep Aboriginal heritage of the West MacDonnell
+            Ranges.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Old Arltunga Bakery &amp; Historic Mines Walk Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Old Arltunga Bakery &amp; Historic Mines Walk</h3>
+
+          <p>
+            The remains of the Old Arltunga Bakery and nearby historic mines
+            walk offer a glimpse into daily life on the isolated goldfield and
+            the mining activity that led to Arltunga’s establishment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Old Telegraph Station Cemetery Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Old Telegraph Station Cemetery</h3>
+
+          <p>
+            The Old Telegraph Station Cemetery marks the resting place of early
+            settlers and workers, offering insight into the hardships of life
+            during Central Australia’s early colonial period.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ormiston Pound Lookout &amp; Gorge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ormiston Pound Lookout &amp; Gorge</h3>
+
+          <p>
+            Ormiston Pound Lookout provides sweeping views into a natural
+            amphitheatre of rugged ranges, while Ormiston Gorge is known for
+            its waterhole, walking trails and native wildlife.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Point Howard Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Point Howard Lookout</h3>
+
+          <p>
+            Point Howard Lookout offers panoramic views across the West
+            MacDonnell Ranges, providing a sweeping perspective of Central
+            Australia’s rugged landscapes and changing desert colours.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Red Centre Farm Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Red Centre Farm</h3>
+
+          <p>
+            Red Centre Farm is a remote working property near the Stuart Highway,
+            reflecting the agricultural and pastoral activity that supports
+            regional communities in Central Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Redbank Gorge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Redbank Gorge</h3>
+
+          <p>
+            Redbank Gorge is a narrow and striking gorge featuring steep rock
+            walls and a permanent waterhole, offering a rewarding destination
+            for experienced swimmers and walkers.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ryan Well Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ryan Well</h3>
+
+          <p>
+            Ryan Well is a historic water source associated with the Overland
+            Telegraph Line. It once provided a vital supply point for travellers,
+            stock and telegraph workers moving through Central Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Serpentine Gorge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Serpentine Gorge</h3>
+
+          <p>
+            Serpentine Gorge is a narrow gorge known for its striking rock
+            formations and tranquil waterhole. The surrounding area is valued
+            for its scenic walks, cultural significance and quiet atmosphere.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Simpsons Gap Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Simpsons Gap</h3>
+
+          <p>
+            Simpsons Gap is a prominent gorge featuring towering rock walls, a
+            waterhole and important cultural significance. It is also known for
+            occasional black-footed rock-wallaby sightings.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Standley Chasm Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Standley Chasm</h3>
+
+          <p>
+            Standley Chasm is a narrow rock formation known for its dramatic
+            lighting effects as sunlight filters into the chasm and illuminates
+            its ancient rock walls.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Gap (Traeger Park) Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Gap (Traeger Park)</h3>
+
+          <p>
+            The Gap is a prominent natural corridor between the East and West
+            MacDonnell Ranges. It has long been an important travel route and is
+            now a key scenic gateway to Alice Springs.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Old Ghan Train Locomotive Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Old Ghan Train Locomotive</h3>
+
+          <p>
+            This preserved locomotive recalls the historic Ghan railway, which
+            played a vital role in opening Central Australia and shaping the
+            region’s transport and settlement history.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Todd Mall Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Todd Mall</h3>
+
+          <p>
+            Todd Mall is the main pedestrian precinct in Alice Springs, featuring
+            local shops, galleries, cafés and public art reflecting the town’s
+            cultural and creative identity.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tropic of Capricorn Line (Stuart Highway) Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tropic of Capricorn Line (Stuart Highway)</h3>
+
+          <p>
+            The roadside marker identifies the Tropic of Capricorn and provides
+            travellers with a notable geographic stopping point while crossing
+            Central Australia on the Stuart Highway.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Welcome to Alice Springs Sign Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Welcome to Alice Springs Sign</h3>
+
+          <p>
+            An identifiable roadside landmark marking arrival in Alice Springs,
+            frequently photographed by visitors beginning or completing their
+            journey through Central Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          White Range Cemetery Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>White Range Cemetery</h3>
+
+          <p>
+            White Range Cemetery contains graves connected with the Arltunga
+            goldfields and provides a record of the isolation and hardship
+            experienced by the area’s early mining community.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Anzac Hill</h3>
-      <p>
-        Anzac Hill is a central lookout and memorial site in Alice Springs, offering panoramic town views
-        and serving as an important place of remembrance and reflection.
-      </p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Alice Springs</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Alice Springs? Explore hotels, motels, caravan parks
+      and bed-and-breakfast accommodation while discovering the culture,
+      history and desert landscapes of Central Australia.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Alice Springs Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Alice Springs
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Alice Springs Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Arltunga Bush Pub &amp; Eco Retreat</h3>
-      <p>
-        Arltunga Bush Pub &amp; Eco Retreat provides a remote outback stopping point near the historic reserve,
-        reflecting the character, hospitality and rugged setting of the wider Arltunga district.
-      </p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Alice Springs
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>A Good Rest B&amp;B</span>
+          <small>Bed &amp; breakfast · Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DA%2520Good%2520Rest%2520B%2526B%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Alice Motor Inn</span>
+          <small>Motel · East Side, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Motor%2520Inn%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Alice Springs Tourist Park</span>
+          <small>Tourist / caravan park · Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs%2520Tourist%2520Park%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Cavenagh Lodge B&amp;B</span>
+          <small>Bed &amp; breakfast · East Side, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCavenagh%2520Lodge%2520B%2526B%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Crowne Plaza Alice Springs Lasseters</span>
+          <small>Hotel · Desert Springs, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCrowne%2520Plaza%2520Alice%2520Springs%2520Lasseters%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Desert Palms Alice Springs</span>
+          <small>Resort hotel · Desert Springs, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDesert%2520Palms%2520Alice%2520Springs%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Diplomat Hotel Alice Springs</span>
+          <small>Hotel · Alice Springs town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDiplomat%2520Hotel%2520Alice%2520Springs%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Discovery Parks – Alice Springs</span>
+          <small>Holiday / caravan park · Arumbera, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDiscovery%2520Parks%2520%25E2%2580%2593%2520Alice%2520Springs%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>DoubleTree by Hilton Alice Springs</span>
+          <small>Hotel · Desert Springs, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDoubleTree%2520by%2520Hilton%2520Alice%2520Springs%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Elkira Court Motel</span>
+          <small>Motel · Alice Springs town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DElkira%2520Court%2520Motel%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>G’Day Mate Tourist Park</span>
+          <small>Tourist / caravan park · Arumbera, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DG%25E2%2580%2599Day%2520Mate%2520Tourist%2520Park%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Heritage Caravan Park</span>
+          <small>Caravan park · Arumbera, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHeritage%2520Caravan%2520Park%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mercure Alice Springs Resort</span>
+          <small>Resort hotel · Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMercure%2520Alice%2520Springs%2520Resort%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Stay at Alice Springs Hotel</span>
+          <small>Hotel · Alice Springs town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStay%2520at%2520Alice%2520Springs%2520Hotel%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Wintersun Cabin &amp; Caravan Park</span>
+          <small>Cabin / caravan park · Braitling, Alice Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWintersun%2520Cabin%2520%2526%2520Caravan%2520Park%252C%2520Alice%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Arltunga Historical Reserve</h3>
-      <p>
-        Arltunga Historical Reserve preserves the remains of Central Australia’s first major European settlement,
-        established following the discovery of gold in the late nineteenth century. Its historic buildings,
-        mining sites and walking trails reveal the difficult conditions faced by the district’s early residents.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Arltunga Open Air Museum</h3>
-      <p>
-        Arltunga Open Air Museum brings together historic ruins, mining relics and interpretive sites across
-        the former settlement, allowing visitors to explore the district’s gold-mining heritage in its original landscape.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Cassia Hill</h3>
-      <p>
-        Cassia Hill offers panoramic views over Alice Springs and the surrounding ranges, providing a quieter
-        alternative for scenic appreciation and sunset viewing.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Central Mount Stuart Historical Reserve</h3>
-      <p>
-        Central Mount Stuart Historical Reserve marks the geographic centre of Australia and is a site of
-        historical significance linked to early exploration, including the Overland Telegraph Line. The reserve
-        highlights the challenges faced by early explorers in traversing Central Australia.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Clay Pans</h3>
-      <p>
-        The Clay Pans are open, flat landscapes that transform dramatically after rainfall, offering a
-        striking example of Central Australia’s unique desert environment.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Conlon’s Lagoon</h3>
-      <p>
-        Conlon’s Lagoon is a peaceful wetland area that attracts birdlife and provides a contrast to the
-        surrounding arid landscape, valued for its tranquillity and ecological importance.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ellery Creek Big Hole</h3>
-      <p>
-        Ellery Creek Big Hole is one of the most iconic natural attractions in the West MacDonnell Ranges,
-        featuring a deep, permanent waterhole carved through towering quartzite cliffs. A popular spot for
-        swimming, picnicking and bushwalking, it showcases the geological history and natural beauty of the region.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Emily Gap</h3>
-      <p>
-        Emily Gap is a culturally important site featuring ancient rock art and a natural gap through the
-        ranges, offering visitors insight into the region’s Aboriginal heritage and landscape.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ghan Pans</h3>
-      <p>
-        Ghan Pans are expansive claypan landscapes near Alice Springs, known for their stark beauty,
-        changing colours and significance to both natural and cultural history.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Government Works &amp; Old Police Station</h3>
-      <p>
-        The Government Works and Old Police Station are surviving elements of the former Arltunga settlement,
-        illustrating how public administration and law enforcement operated in one of Central Australia’s earliest towns.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Great Western Mine</h3>
-      <p>
-        Great Western Mine is one of the historic mining sites associated with the Arltunga gold rush,
-        where surviving workings and surrounding ruins help tell the story of early mineral exploration
-        in Central Australia.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Hendrick Gerrit Guth Grave</h3>
-      <p>
-        This historic grave site marks one of Central Australia’s early European settlers, offering insight
-        into the hardships and history of life in the region’s early pastoral era.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Highest Point Between Adelaide &amp; Darwin</h3>
-      <p>
-        This location marks the highest elevation along the Stuart Highway between Adelaide and Darwin.
-        It represents a subtle but significant geographic feature within the vast and often flat landscapes
-        of Central Australia.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ilwempe Ilwempe (Whitegums)</h3>
-      <p>
-        Ilwempe Ilwempe, also known as Whitegums, is a culturally significant site featuring a picturesque
-        gap and waterhole valued for its natural beauty and Aboriginal heritage.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Jessie Gap</h3>
-      <p>
-        Jessie Gap is a scenic gorge with cultural significance, known for its rock formations, walking paths
-        and connection to local Aboriginal stories and traditions.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>John Flynn’s Grave Historical Reserve</h3>
-      <p>
-        John Flynn’s Grave Historical Reserve commemorates the Presbyterian minister who founded the
-        Royal Flying Doctor Service. The memorial stands near the MacDonnell Ranges and recognises his
-        contribution to health care and communication across remote Australia.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Larapinta Trail</h3>
-      <p>
-        The Larapinta Trail is a world-renowned long-distance walking track stretching across the MacDonnell
-        Ranges, celebrated for its diverse landscapes, cultural significance and remote beauty.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Meyers Hill &amp; Olive Pink Botanic Garden</h3>
-      <p>
-        Meyers Hill offers elevated views near the Olive Pink Botanic Garden, which showcases native Central
-        Australian plants and highlights the region’s unique desert flora.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mount Sonder Lookout</h3>
-      <p>
-        Mount Sonder Lookout showcases views of one of the highest peaks in the MacDonnell Ranges, renowned
-        for its dramatic ridgelines and spectacular sunrise and sunset scenery.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Neil Hargrave Lookout</h3>
-      <p>
-        Neil Hargrave Lookout offers elevated views across Alice Springs and the surrounding MacDonnell Ranges,
-        providing a popular vantage point for photography and scenic appreciation of Central Australia’s landscapes.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ochre Pits</h3>
-      <p>
-        The Ochre Pits are a culturally significant site where natural ochres have been traditionally sourced
-        for thousands of years, reflecting the deep Aboriginal heritage of the West MacDonnell Ranges.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Arltunga Bakery &amp; Historic Mines Walk</h3>
-      <p>
-        The remains of the Old Arltunga Bakery and the nearby historic mines walk offer a glimpse into
-        daily life on the isolated goldfield and the mining activity that led to Arltunga’s establishment.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Telegraph Station Cemetery</h3>
-      <p>
-        The Old Telegraph Station Cemetery marks the resting place of early settlers and workers, offering
-        insight into the hardships of life in Central Australia’s early colonial period.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ormiston Pound Lookout &amp; Gorge</h3>
-      <p>
-        Ormiston Pound Lookout provides sweeping views into a natural amphitheatre of rugged ranges, while
-        Ormiston Gorge below is known for its waterhole, walking trails and native wildlife.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Point Howard Lookout</h3>
-      <p>
-        Point Howard Lookout offers panoramic views across the West MacDonnell Ranges, providing visitors with
-        a sweeping perspective of Central Australia’s rugged landscapes and changing desert colours. The lookout
-        is a popular stop for photography and scenic appreciation, particularly during sunrise and late afternoon.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Red Centre Farm</h3>
-      <p>
-        Red Centre Farm is a remote working property near the Stuart Highway, reflecting the agricultural and
-        pastoral activity that supports regional communities in Central Australia. The site offers insight into
-        life and production in the arid interior.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Redbank Gorge</h3>
-      <p>
-        Redbank Gorge is a narrow and striking gorge featuring steep rock walls and a permanent waterhole,
-        offering a rewarding destination for confident swimmers and adventurous walkers.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ryan Well</h3>
-      <p>
-        Ryan Well is a historic water source associated with the Overland Telegraph Line, once providing a
-        vital supply point for travellers, stock and telegraph workers moving through Central Australia.
-        It illustrates the importance of wells in sustaining inland travel.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Serpentine Gorge</h3>
-      <p>
-        Serpentine Gorge is a narrow, dramatic gorge known for its striking rock formations and tranquil
-        waterhole, set among the ancient landscapes of the West MacDonnell Ranges. The gorge is valued for
-        its scenic walks, cultural significance and peaceful atmosphere away from the main tourist routes.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Simpsons Gap</h3>
-      <p>
-        Simpsons Gap is a prominent gorge featuring towering rock walls, a permanent waterhole and important
-        cultural significance, often visited for its scenic beauty and rock-wallaby sightings.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Standley Chasm</h3>
-      <p>
-        Standley Chasm is a narrow rock formation known for its dramatic lighting effects as sunlight filters
-        into the chasm, creating vivid colours against ancient rock walls.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Gap (Traeger Park)</h3>
-      <p>
-        The Gap is a prominent natural corridor between the East and West MacDonnell Ranges, historically
-        significant as a travel route and now a key scenic gateway to Alice Springs.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Old Ghan Train Locomotive</h3>
-      <p>
-        This preserved locomotive is a reminder of the historic Ghan railway, which played a vital role
-        in opening up Central Australia and shaping the region’s transport and settlement history.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Todd Mall</h3>
-      <p>
-        Todd Mall is the main pedestrian precinct in Alice Springs, featuring local shops, galleries, cafés
-        and public art that reflect the town’s cultural and creative identity.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Tropic of Capricorn Line (Stuart Highway)</h3>
-      <p>
-        The Tropic of Capricorn Line marks the latitude at which the sun can be directly overhead at noon
-        during the southern summer solstice. The marker along the Stuart Highway is a notable geographic
-        point for travellers crossing Central Australia.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Welcome to Alice Springs Sign</h3>
-      <p>
-        An iconic roadside landmark marking arrival in Alice Springs, frequently photographed by visitors
-        beginning or ending their journey through Central Australia.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>White Range Cemetery</h3>
-      <p>
-        White Range Cemetery contains the graves of people connected with the Arltunga goldfields and provides
-        a sobering record of the isolation and hardship experienced by the area’s early mining community.
-      </p>
-    </div>
-  </div>
-
-</div>
-
- <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Alice Springs</h2>
-
-<p class="accommodation-intro">
-  Planning a stay in Alice Springs? Explore accommodation options across the heart of Central Australia while discovering
-  the landscapes, culture, and outback experiences that make Alice Springs one of the Northern Territory’s most iconic destinations.
-</p>
-
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
-
-<p style="text-align:center;">
-  <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-     target="_blank"
-     rel="noopener sponsored"
-     class="accommodation-link">
-    View All Alice Springs Accommodation
-  </a>
-</p>
-
-<h3 class="other-accommodation-heading">
-  Featured Accommodation Opportunities In And Around Alice Springs
-</h3>
-
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming &amp; feature options
-  </a>
-</p>
-
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">
-      Featured Accommodation Coming Soon
-    </div>
-  </div>
-</div>
-
-<h3 class="other-accommodation-heading">
-  Other Accommodation In And Around Alice Springs
-</h3>
-
-<div class="other-accommodation-bookings">
-
-  <div class="other-stay-item">
-    <span>A Good Rest B&amp;B</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Alice Lodge</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Alice Motor Inn</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Alice on Todd Apartments</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Alice Springs Tourist Park</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Alice’s Secret Travellers Inn</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>BIG4 MacDonnell Range Holiday Park</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Cavenagh Lodge</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Crowne Plaza Alice Springs Lasseters</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Desert Palms Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Diplomat Hotel Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Discovery Parks – Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>DoubleTree by Hilton Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Elkira Court Motel</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>G’Day Mate Tourist Park</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Heritage Caravan Park</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Jump Inn Alice Budget Accommodation</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Mercure Alice Springs Resort</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Quest Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Stay at Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Stay at Alice Springs Hotel</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Stay at Alice Springs Hotel Motel</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Sturt Desert Pea House</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>Wintersun Cabin &amp; Caravan Park</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-  <div class="other-stay-item">
-    <span>YHA Alice Springs</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlice%2520Springs"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-</div>
-
-<p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  Some links on this page are affiliate links, which means we may earn a small commission if you make
-  a booking, at no extra cost to you.
-</p>
-</section>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -1169,10 +1594,19 @@ footer .gst-disclaimer {
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
