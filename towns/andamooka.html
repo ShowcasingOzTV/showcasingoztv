@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Andamooka (SA) | ShowcasingOz TV</title>
-<meta name="description" content="Explore Andamooka (SA) — a unique outback opal mining town near Coober Pedy, featured in ShowcasingOz TV’s upcoming documentary series." />
-<meta name="keywords" content="Andamooka, South Australia, opal mining town, outback South Australia, Coober Pedy region, regional travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Andamooka in outback South Australia, including its opal-mining heritage, attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Andamooka SA, Andamooka attractions, Andamooka accommodation, Andamooka opal fields, Andamooka Observatory, Duke's Bottlehouse Motel, outback South Australia, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,328 +59,308 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-/* ================= CENTER ALIGN – ANDAMOOKA ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-    .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -369,10 +369,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -384,194 +394,371 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/andamooka.jpg"
-       alt="Andamooka South Australia"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/andamooka.jpg"
+      alt="Andamooka in outback South Australia"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Andamooka (SA)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-  Andamooka is a distinctive outback settlement in South Australia, renowned for its rich opal mining history,
-  rugged desert landscapes, and strong sense of community. Established in the late 1930s following the discovery
-  of opals, the town has long been shaped by prospectors, miners, and creatives drawn to the promise and
-  unpredictability of life in the Australian outback.
-</p>
+    <h1>Andamooka (SA)</h1>
 
-<p>
-  Located approximately 600 kilometres north of Adelaide, Andamooka offers visitors a raw and authentic glimpse into Australia’s opal fields. 
-  The town is famous for its unique architecture, including underground dwellings and homes constructed from local stone, 
-  reflecting both ingenuity and adaptation to the harsh desert environment.
-</p>
+    <p>
+      Andamooka is a distinctive opal-mining town in outback South Australia,
+      located approximately 30 kilometres east of Roxby Downs and about 600
+      kilometres north of Adelaide. Surrounded by arid plains, low hills and
+      opal workings, the settlement has retained an unconventional character
+      shaped by generations of miners, prospectors, artists and independent
+      residents.
+    </p>
 
-<p>
-  Beyond its mining heritage, Andamooka provides a quiet and reflective outback experience, attracting travellers
-  interested in history, geology, art, and remote landscapes. Its proximity to Lake Torrens and the northern
-  Flinders Ranges also makes it a compelling stop for those exploring South Australia’s vast interior.
-</p>
+    <p>
+      Opal was discovered in the district in 1930, leading miners to establish
+      camps across what became the Andamooka Precious Stones Field. The town
+      developed gradually rather than according to a formal town plan. Early
+      residents constructed practical homes and workspaces using stone, earth,
+      timber and salvaged materials that could withstand the region’s demanding
+      climate.
+    </p>
 
-<p>
-  ShowcasingOz TV will be capturing the stories, people, and places that define Andamooka — highlighting its
-  enduring character, creative spirit, and the unique way of life that continues to thrive in one of Australia’s
-  most iconic opal mining communities.
-</p>
+    <p>
+      Several of Andamooka’s early semi-dugout cottages remain within the
+      heritage-listed historic precinct. These modest buildings demonstrate how
+      miners adapted to extreme summer heat and cold desert nights by building
+      into hillsides and using thick earth and stone walls for insulation.
+      Historic mining machinery displayed around the town provides another
+      reminder of the ingenuity required to work remote opal fields.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Andamooka opal is particularly recognised for its matrix material, in
+      which precious colour occurs within the surrounding host rock. The fields
+      have also produced opalised marine fossils dating from the Early
+      Cretaceous period, when the region lay beneath the ancient Eromanga Sea.
+      This geological history gives the district significance beyond its
+      mining heritage.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      Today, visitors can explore opal-related displays, join mining and
+      fossicking experiences, visit the town’s historic sites and meet local
+      artists. Andamooka’s low level of light pollution has also supported the
+      development of astronomy and stargazing experiences, adding another
+      dimension to the town’s visitor offering.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <p>
+      The surrounding country extends towards Lake Torrens and contains stark
+      salt-lake scenery, mining landscapes and expansive desert horizons.
+      Visitors travelling beyond the town should check current road conditions,
+      carry adequate water and supplies, and avoid entering active mining
+      claims or restricted areas without permission.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Andamooka Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Andamooka</h3>
-  <ul class="other-accommodation-list">
-    <li>Cal the Stoner</li>
-    <li>Andamooka Observatory</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="accommodation-intro">
+      Andamooka’s attractions introduce visitors to the town’s opal-mining
+      heritage, underground geology, creative community and exceptionally dark
+      outback skies.
+    </p>
 
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Andamooka and the surrounding region's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <ul class="attractions-list">
 
-<div class="poi-grid">
+      <li>
+        <strong>Andamooka Observatory</strong>
+        A locally operated astronomy and visitor-experience business offering
+        opportunities to explore Andamooka’s dark skies, opal fields and
+        geological history through organised tours and activities.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Blue Dam</h3>
-      <p>A popular local swimming spot and historic water source, known for its striking blue colour
-         and significance to the Andamooka community.</p>
+      <li>
+        <strong>Cal the Stoner’s Outdoor Intricarved Stone Sculpture Studio</strong>
+        An open-air working studio displaying the distinctive stone sculptures
+        created by local artist Cal Prohasky. The collection includes detailed
+        works produced from carved sandstone and incorporating Andamooka opal.
+        Visitors should contact the studio before attending.
+      </li>
+
+      <li>
+        <strong>Opal Mining 101 Tours</strong>
+        A guided introduction to Andamooka’s opal fields and mining traditions.
+        The experience examines local geology, mining methods, opalised fossils
+        and the skills involved in searching for opal in this remote environment.
+      </li>
+
+      <li>
+        <strong>Stargazing &amp; Opal Noodling Nocturnal Tour</strong>
+        An evening experience combining an introduction to opal noodling with
+        guided observation of the outback night sky. Tour availability and
+        departure times should be confirmed directly with the operator.
+      </li>
+
+      <li>
+        <strong>Underground Opal &amp; Mineral Museum</strong>
+        Located beneath the Andamooka Post Office and Bottlehouse precinct, the
+        museum presents opal, minerals, mining equipment, historic photographs
+        and displays explaining the geological and social history of the
+        Andamooka fields.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      Attraction opening hours and tour availability can change. Visitors
+      should contact individual operators before travelling.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Andamooka’s landmarks reflect the town’s early mining history, improvised
+      architecture, desert environment and enduring relationship with the
+      surrounding opal fields.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Andamooka Historic Cottages Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Andamooka Historic Cottages</h3>
+
+          <p>
+            These heritage-listed cottages date from the town’s early
+            development during the 1930s. Built partly into the hillside using
+            local stone, earth and salvaged materials, they demonstrate how
+            early miners adapted their homes to Andamooka’s severe climate and
+            isolated conditions.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Andamooka Opal Fields Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Andamooka Opal Fields</h3>
+
+          <p>
+            The opal fields surrounding the township contain shafts, mullock
+            heaps and mining tracks that document almost a century of
+            prospecting. Visitors should remain within permitted fossicking
+            areas and must not enter active claims, shafts or mining equipment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Blue Dam Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Blue Dam</h3>
+
+          <p>
+            A local waterhole associated with Andamooka’s history and desert
+            environment. Water levels and access conditions can vary
+            considerably, particularly after periods of prolonged dry weather
+            or heavy rainfall.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Dunstan’s Dam Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Dunstan’s Dam</h3>
+
+          <p>
+            A historic outback dam linked with the settlement and development
+            of the Andamooka district. The site illustrates the importance of
+            reliable water collection in supporting residents, pastoral
+            activity and mining operations in an arid landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Historic Machinery Display Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Historic Machinery Display</h3>
+
+          <p>
+            Located near Opal Creek Boulevard, this outdoor display preserves
+            machinery adapted and constructed by local miners. The equipment
+            demonstrates the practical engineering and improvisation used to
+            extract opal from the Andamooka fields.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lake Torrens Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lake Torrens</h3>
+
+          <p>
+            Lake Torrens is an immense, normally dry salt lake east of
+            Andamooka. Its salt surface, islands and surrounding desert create
+            a dramatic landscape, but access can be remote and restricted.
+            Travellers should confirm road and access conditions before
+            attempting to visit.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Torrens</h3>
-      <p>A vast salt lake and geological landmark on the edge of the outback, offering dramatic
-         desert landscapes and a sense of scale unique to South Australia.</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Andamooka</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Andamooka? The town has a very limited number of
+      conventional accommodation businesses. The listing below is restricted
+      to eligible motel, hotel, caravan-park, bed-and-breakfast and
+      hotel-operated accommodation located within Andamooka and its immediate
+      surrounds.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAndamooka%252C%2520South%2520Australia%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Andamooka Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Andamooka
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Andamooka Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dunstan’s Dam</h3>
-      <p>A historic outback dam closely tied to Andamooka’s mining history and early settlement,
-         reflecting the ingenuity required to survive in the region.</p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Andamooka
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Andamooka Duke’s Bottlehouse Motel</span>
+          <small>Motel · Andamooka</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAndamooka%2520Duke%2527s%2520Bottlehouse%2520Motel%252C%2520Andamooka%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-</div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Andamooka</h2>
-
-<p class="accommodation-intro">
-  Planning a stay in Andamooka? Explore accommodation options in and around this distinctive opal mining town while discovering
-  the outback character, mining heritage, and desert landscapes that make Andamooka one of South Australia’s most unique destinations.
-</p>
-
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
-
-<p style="text-align:center;">
-<a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAndamooka%252C%2BSouth%2BAustralia%252C%2BAustralia"
-   target="_blank"
-   rel="noopener sponsored"
-   class="accommodation-link">
-  View All Andamooka Accommodation
-</a>
-</p>
-
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Andamooka</h3>
-
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
-
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Andamooka</h3>
-<div class="other-accommodation-bookings">
-
-  <div class="other-stay-item">
-  <span>Dukes Bottlehouse Motel</span>
-  <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDukes%2BBottlehouse%2BMotel%252C%2BAndamooka"
-     target="_blank"
-     rel="noopener sponsored"
-     class="accommodation-link">
-    View / Book
-  </a>
-</div>
-  
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -586,10 +773,19 @@ footer .gst-disclaimer {
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
