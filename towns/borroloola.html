@@ -4,22 +4,29 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Borroloola (NT) | ShowcasingOz TV</title>
 
   <meta
     name="description"
-    content="Explore Borroloola (NT), a remote Gulf of Carpentaria town and gateway to fishing, river systems and Indigenous culture, featured on ShowcasingOz TV."
-  />
+    content="Discover Borroloola and the surrounding Gulf region with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
 
   <meta
     name="keywords"
-    content="Borroloola, Northern Territory, Gulf of Carpentaria, McArthur River, outback town, remote travel, fishing destination, Aboriginal culture, regional Australia, ShowcasingOz TV"
-  />
+    content="Borroloola NT, Gulf of Carpentaria, McArthur River, King Ash Bay, Caranbirini Conservation Reserve, Borroloola attractions, Borroloola accommodation, Northern Territory travel, ShowcasingOz TV"
+  >
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
   <link
@@ -37,8 +44,6 @@
       background: #ffffff;
       color: #0E3557;
     }
-
-    /* ================= HEADER ================= */
 
     header.navbar {
       background: #0E3557;
@@ -106,15 +111,11 @@
       }
     }
 
-    /* ================= HERO ================= */
-
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #dddddd;
+      background: #dddddd;
     }
-
-    /* ================= CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -138,33 +139,34 @@
       color: #333333;
     }
 
-    /* ================= PLACEHOLDERS ================= */
-
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .poi-placeholder {
       width: 100%;
-      height: 350px;
       background: #e1e1e1;
       border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
       color: #666666;
-      font-size: 1.2rem;
       font-weight: 500;
-      margin-top: 20px;
       text-align: center;
       box-sizing: border-box;
     }
 
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
     .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .poi-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
-
-    /* ================= SHARED GRID ================= */
 
     .accommodation-grid {
       display: grid;
@@ -180,18 +182,10 @@
       overflow: hidden;
     }
 
-    .accommodation-content {
-      padding: 15px;
-    }
-
-    .featured-badge {
-      display: inline-block;
-      background: #E87722;
-      color: #ffffff;
-      font-size: 0.75rem;
-      padding: 5px 10px;
-      border-radius: 4px;
-      margin: 10px 0;
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
 
     .accommodation-link {
@@ -206,112 +200,127 @@
       text-decoration: underline;
     }
 
-    .accommodation-intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .other-accommodation-heading {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .other-accommodation-list {
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
       list-style: none;
-      padding-left: 0;
-      text-align: center;
     }
 
-    .other-accommodation-list li {
-      margin-bottom: 6px;
-      text-align: center;
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
     }
 
-    .accommodation-disclaimer {
-      font-size: 0.8rem;
-      color: #777777;
-      margin-top: 15px;
-      text-align: center;
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
     }
-
-    /* ================= POINTS OF INTEREST ================= */
 
     .poi-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
       margin-top: 25px;
     }
 
     .poi-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
       overflow: hidden;
     }
 
-    .poi-placeholder {
+    .poi-card .poi-placeholder {
       height: 160px;
-      background: #e1e1e1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666666;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-align: center;
+      border-radius: 0;
+      padding: 20px;
     }
 
     .poi-content {
-      padding: 15px;
-      text-align: center;
+      padding: 20px;
     }
 
     .poi-content h3 {
-      margin-top: 0;
-      margin-bottom: 6px;
       color: #0E3557;
-      text-align: center;
+      margin: 0 0 10px;
     }
 
     .poi-content p {
-      font-size: 0.9rem;
-      color: #555555;
       margin: 0;
-      text-align: center;
     }
 
-    /* ================= ACCOMMODATION BOOKINGS ================= */
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
 
     .other-accommodation-bookings {
-      max-width: 700px;
+      max-width: 780px;
       margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
     .other-stay-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e5e5;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
     }
 
-    .other-stay-item span {
+    .stay-details span {
+      display: block;
       color: #0E3557;
-      font-weight: 500;
+      font-weight: 700;
     }
 
-    @media (max-width: 768px) {
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
       .other-stay-item {
+        align-items: flex-start;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
       }
     }
-
-    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -325,14 +334,16 @@
       margin-bottom: 15px;
     }
 
-    footer .footer-links a {
+    footer .footer-links a,
+    footer p a {
       color: #E87722;
       text-decoration: none;
       font-weight: 500;
       margin: 0 6px;
     }
 
-    footer .footer-links a:hover {
+    footer .footer-links a:hover,
+    footer p a:hover {
       color: #ffffff;
     }
 
@@ -342,43 +353,11 @@
       line-height: 1.6;
     }
 
-    footer p a {
-      color: #E87722;
-      text-decoration: none;
-    }
-
-    footer p a:hover {
-      color: #ffffff;
-    }
-
     .gst-disclaimer {
       display: block;
       margin-top: 8px;
       font-size: 0.8rem;
       color: #ffffff;
-    }
-
-    footer,
-    footer * {
-      color: #ffffff !important;
-    }
-
-    footer {
-      background-color: #0E3557 !important;
-    }
-
-    footer .footer-links a,
-    footer p a {
-      color: #E87722 !important;
-    }
-
-    footer .footer-links a:hover,
-    footer p a:hover {
-      color: #ffffff !important;
-    }
-
-    footer .gst-disclaimer {
-      color: #ffffff !important;
     }
   </style>
 </head>
@@ -417,7 +396,7 @@
     </div>
   </header>
 
-  <script defer>
+  <script>
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
@@ -445,52 +424,69 @@
     <h1>Borroloola (NT)</h1>
 
     <p>
-      Borroloola is a remote outback town located in the Northern Territory’s
-      Gulf of Carpentaria region, situated along the McArthur River and serving
-      as an important service centre for surrounding pastoral stations and
-      remote communities. The town has a long history as a frontier settlement
-      and continues to play a key role in supporting travel and industry in one
-      of Australia’s most isolated regions.
+      Borroloola is a remote township situated on the McArthur River in the
+      Northern Territory’s Gulf of Carpentaria region. Located approximately
+      670 kilometres east-south-east of Katherine, it serves as the principal
+      service centre for the southern Gulf and an important stopping point
+      along the Savannah Way.
     </p>
 
     <p>
-      Today, Borroloola is best known as a gateway to the Gulf country,
-      offering access to renowned fishing destinations, river systems and
-      vast savannah landscapes. The town provides essential services,
-      accommodation, fuel and supplies for travellers, four-wheel-drive
-      enthusiasts and workers navigating the remote southern Gulf region.
+      The town is home to the Yanyuwa, Garrwa, Mara and Gudanji peoples, whose
+      continuing cultural connections to the rivers, coastline, islands and
+      surrounding Country are central to the region’s identity. Aboriginal
+      culture remains an important part of community life and is represented
+      through locally produced artwork, cultural knowledge and land and sea
+      management.
     </p>
 
     <p>
-      Surrounded by expansive floodplains, river systems and coastal
-      environments, Borroloola offers visitors a unique outback experience
-      shaped by seasonal change and natural diversity. The area holds deep
-      cultural significance for local Aboriginal communities, whose connection
-      to Country continues to define the region’s identity and traditions.
+      Borroloola developed as a frontier settlement during the late nineteenth
+      century and has a distinctive history shaped by pastoral activity,
+      transport, government administration and its remote location. The Old
+      Borroloola Police Station Museum Heritage Precinct preserves part of this
+      history and contains one of the Northern Territory’s oldest surviving
+      police station properties.
     </p>
 
     <p>
-      ShowcasingOz TV will feature Borroloola as part of its national filming
-      journey, capturing the town’s role as a remote outback hub, its connection
-      to the Gulf of Carpentaria and the landscapes and cultures that make this
-      part of the Northern Territory distinct.
+      Today, Borroloola provides fuel, groceries, mechanical services, health
+      facilities, accommodation and other essential services to local residents,
+      surrounding communities, pastoral properties and travellers crossing the
+      Gulf region. The town can be reached from the west via the Carpentaria
+      Highway and forms part of the Savannah Way touring route.
+    </p>
+
+    <p>
+      Fishing is one of the region’s strongest visitor attractions. The
+      McArthur River and nearby King Ash Bay attract anglers seeking barramundi
+      and other northern species, while the wider Gulf provides access to
+      estuaries, wetlands, coastal waters and the Sir Edward Pellew Group of
+      Islands.
+    </p>
+
+    <p>
+      The surrounding landscape changes dramatically between the wet and dry
+      seasons. Travellers should check current road conditions, park access
+      information and weather forecasts before visiting. Long distances,
+      extreme heat and limited services also make careful vehicle preparation,
+      adequate drinking water and responsible travel essential.
     </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
 
     <div class="video-placeholder">
-      Documentary Coming Soon
+      Borroloola Documentary Coming Soon
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions &amp; Points of Interest</h2>
+    <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Attractions featured on ShowcasingOz TV are captured through immersive
-      4K video storytelling and professional photography, showcasing
-      experiences, landscapes, culture and visitor engagement in a way that
-      static listings simply cannot achieve.
+      Borroloola offers opportunities to explore local Aboriginal art, regional
+      history, Gulf Country landscapes and the fishing culture associated with
+      the McArthur River and nearby King Ash Bay.
     </p>
 
     <p style="text-align:center;">
@@ -502,147 +498,137 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Old Borroloola Police Station Museum Heritage Precinct</strong>
+        This historic precinct preserves an important part of Borroloola’s
+        frontier and administrative history. Displays, surviving buildings and
+        local artefacts provide visitors with insight into the town’s development
+        and the experiences of people who lived and worked in the Gulf region.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Waralungku Arts</strong>
+        A community-owned Aboriginal art centre representing artists from
+        Borroloola and the surrounding Gulf Country. Visitors can view and
+        purchase locally produced paintings, prints, carvings, jewellery and
+        other works while learning more about the region’s cultures and stories.
+      </li>
 
-    <h3 class="other-accommodation-heading">
-      Other Attractions In And Around Borroloola
-    </h3>
-
-    <ul class="other-accommodation-list">
-      <li>Old Borroloola Police Station Museum</li>
-      <li>Waralungku Art Centre</li>
-      <li>Heartbreak Hotel</li>
     </ul>
-
-    <p class="accommodation-disclaimer">
-      This list is provided for visitor awareness only. Inclusion does not
-      imply partnership or endorsement.
-    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      These natural landmarks and local points of interest form an important
-      part of Borroloola’s landscape, history and sense of place. ShowcasingOz
-      TV will capture these locations during filming to help tell the broader
-      story of the region.
+      Explore Borroloola’s river, town centre, fishing destinations and nearby
+      conservation reserve, which together reveal the natural and cultural
+      character of the southern Gulf region.
     </p>
 
     <div class="poi-grid">
 
-      <div class="poi-card">
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Image Coming Soon
-        </div>
-
-        <div class="poi-content">
-          <h3>King Ash Bay</h3>
-
-          <p>
-            King Ash Bay is a popular fishing and camping destination located
-            near Borroloola on the McArthur River. Known for its relaxed
-            atmosphere and access to productive river systems, the area
-            attracts anglers and travellers seeking a remote Gulf Country
-            experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="poi-card">
-        <div class="poi-placeholder">
-          Image Coming Soon
-        </div>
-
-        <div class="poi-content">
-          <h3>Southern Lost City</h3>
-
-          <p>
-            The Southern Lost City features striking sandstone formations
-            shaped into towering columns and clustered city-like structures.
-            These natural formations highlight the unique geology of Limmen
-            National Park and create one of the Northern Territory’s most
-            visually distinctive landscapes.
-          </p>
-        </div>
-      </div>
-
-      <div class="poi-card">
-        <div class="poi-placeholder">
-          Image Coming Soon
-        </div>
-
-        <div class="poi-content">
-          <h3>Butterfly Falls</h3>
-
-          <p>
-            Butterfly Falls is a seasonal waterfall set within rugged
-            escarpment country in Limmen National Park. Surrounded by rocky
-            terrain and native vegetation, the falls offer a remote and scenic
-            natural feature within this vast outback environment.
-          </p>
-        </div>
-      </div>
-
-      <div class="poi-card">
-        <div class="poi-placeholder">
-          Image Coming Soon
-        </div>
-
-        <div class="poi-content">
-          <h3>Western Lost City</h3>
-
-          <p>
-            The Western Lost City is another remarkable collection of
-            sandstone pillars and formations resembling ancient ruins
-            scattered across the landscape. The site showcases the scale and
-            geological diversity of Limmen National Park’s remote terrain.
-          </p>
-        </div>
-      </div>
-
-      <div class="poi-card">
-        <div class="poi-placeholder">
-          Image Coming Soon
-        </div>
-
-        <div class="poi-content">
-          <h3>Caranbirini Waterhole</h3>
-
-          <p>
-            Caranbirini Waterhole is a permanent water source set among rocky
-            outcrops and escarpment features. The waterhole supports local
-            wildlife and offers a tranquil setting for visitors to experience
-            the natural beauty of the conservation reserve.
-          </p>
-        </div>
-      </div>
-
-      <div class="poi-card">
-        <div class="poi-placeholder">
-          Image Coming Soon
+          Barrawulla Loop Walk Image Coming Soon
         </div>
 
         <div class="poi-content">
           <h3>Barrawulla Loop Walk</h3>
 
           <p>
-            The Barrawulla Loop Walk is a marked trail that guides visitors
-            through sandstone formations, woodlands and around the waterhole.
-            The walk provides an accessible way to explore the area’s geology,
-            vegetation and cultural landscape within Caranbirini Conservation
-            Reserve.
+            A walking trail within Caranbirini Conservation Reserve that passes
+            through woodland and striking sandstone formations. The surrounding
+            landscape holds cultural significance and is associated with the
+            Barrawulla, or white cockatoo, creation story.
           </p>
         </div>
-      </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Borroloola Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Borroloola Town Centre</h3>
+
+          <p>
+            The service centre of the southern Gulf region, providing shops,
+            fuel, health services, community facilities and visitor
+            accommodation. The town centre reflects Borroloola’s role as an
+            important hub for remote communities and regional travellers.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Caranbirini Waterhole Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Caranbirini Waterhole</h3>
+
+          <p>
+            A permanent waterhole within Caranbirini Conservation Reserve,
+            approximately 46 kilometres south-west of Borroloola. The waterhole
+            supports birdlife and other native wildlife and can be explored by
+            following the reserve’s designated walking tracks.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          King Ash Bay Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>King Ash Bay</h3>
+
+          <p>
+            Located approximately 50 kilometres from Borroloola on the McArthur
+            River, King Ash Bay is one of the Gulf region’s best-known fishing
+            destinations. Its boat access and fishing facilities attract
+            visitors pursuing barramundi and other northern species.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lost City Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lost City, Caranbirini Conservation Reserve</h3>
+
+          <p>
+            A spectacular collection of weathered sandstone pillars within
+            Caranbirini Conservation Reserve. Some formations rise approximately
+            25 metres and resemble the towers and streets of an ancient city.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          McArthur River Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>McArthur River</h3>
+
+          <p>
+            The major river flowing through Borroloola and towards the Gulf of
+            Carpentaria. It supports local ecosystems, fishing activity and
+            cultural connections while shaping the landscape and identity of
+            the wider district.
+          </p>
+        </div>
+      </article>
 
     </div>
 
@@ -650,18 +636,16 @@
     <h2>🏨 Stay Where We Showcase — Borroloola</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Borroloola? Explore accommodation options in and
-      around this remote Gulf Country town while discovering the river
-      systems, fishing destinations, outback landscapes and cultural
-      significance that make Borroloola a unique Northern Territory
-      destination.
+      Planning a stay in Borroloola? Explore eligible commercial accommodation
+      in the town and around King Ash Bay while discovering the McArthur River,
+      local cultural attractions and the landscapes of the Gulf region.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place
-      to stay. We help people discover where to go, what to experience and
-      where to base themselves as they explore Australia’s cities, towns and
-      hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
@@ -682,8 +666,8 @@
     <p class="accommodation-intro">
       Accommodation partners featured on ShowcasingOz TV receive premium
       exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front of
-      travellers actively planning where to stay.
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -699,7 +683,7 @@
       <div class="accommodation-card">
 
         <div class="accommodation-placeholder">
-          Featured Accommodation Coming Soon
+          Featured Borroloola Accommodation Coming Soon
         </div>
 
       </div>
@@ -712,20 +696,10 @@
     <div class="other-accommodation-bookings">
 
       <div class="other-stay-item">
-        <span>Savannah Way Motel Borroloola</span>
-
-        <a
-          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSavannah%2520Way%2520Motel%252C%2520Borroloola%252C%2520Northern%2520Territory"
-          target="_blank"
-          rel="noopener sponsored"
-          class="accommodation-link"
-        >
-          View / Book
-        </a>
-      </div>
-
-      <div class="other-stay-item">
-        <span>Borroloola Hotel Motel</span>
+        <div class="stay-details">
+          <span>Borroloola Hotel Motel</span>
+          <small>Hotel / Motel · Borroloola</small>
+        </div>
 
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBorroloola%2520Hotel%2520Motel%252C%2520Borroloola%252C%2520Northern%2520Territory"
@@ -738,7 +712,42 @@
       </div>
 
       <div class="other-stay-item">
-        <span>McArthur River Caravan Park</span>
+        <div class="stay-details">
+          <span>King Ash Bay Fishing Club</span>
+          <small>Caravan Park / Cabins · King Ash Bay · Approximately 50 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKing%2520Ash%2520Bay%2520Fishing%2520Club%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>King Ash Bay Lodge</span>
+          <small>Lodge · King Ash Bay · Approximately 50 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKing%2520Ash%2520Bay%2520Lodge%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>McArthur River Caravan Park</span>
+          <small>Caravan Park / Cabins · Borroloola</small>
+        </div>
 
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMcArthur%2520River%2520Caravan%2520Park%252C%2520Borroloola%252C%2520Northern%2520Territory"
@@ -751,23 +760,13 @@
       </div>
 
       <div class="other-stay-item">
-        <span>King Ash Bay Lodge</span>
+        <div class="stay-details">
+          <span>Savannah Way Motel</span>
+          <small>Motel / Cabins · Borroloola</small>
+        </div>
 
         <a
-          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKing%2520Ash%2520Bay%2520Lodge%252C%2520Borroloola%252C%2520Northern%2520Territory"
-          target="_blank"
-          rel="noopener sponsored"
-          class="accommodation-link"
-        >
-          View / Book
-        </a>
-      </div>
-
-      <div class="other-stay-item">
-        <span>Lorella Springs Wilderness Park</span>
-
-        <a
-          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLorella%2520Springs%2520Wilderness%2520Park%252C%2520Northern%2520Territory"
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSavannah%2520Way%2520Motel%252C%2520Borroloola%252C%2520Northern%2520Territory"
           target="_blank"
           rel="noopener sponsored"
           class="accommodation-link"
@@ -779,9 +778,11 @@
     </div>
 
     <p class="accommodation-disclaimer">
-      This list is provided for visitor awareness only. Inclusion does not
-      imply partnership or endorsement. Booking buttons open Booking.com
-      search results and availability may vary. Some links on this page are
+      This list includes eligible hotels, motels, caravan parks, B&amp;Bs,
+      lodges and other qualifying commercial accommodation in Borroloola and
+      within approximately 50 kilometres of the town. Campgrounds, private
+      holiday rentals and Airbnb properties are not included. Inclusion does
+      not imply partnership or endorsement. Some links on this page are
       affiliate links, which means we may earn a small commission if you make
       a booking, at no extra cost to you.
     </p>
