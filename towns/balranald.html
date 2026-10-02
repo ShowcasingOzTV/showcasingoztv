@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Balranald (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Balranald, NSW — a Murray River town known for its river junction, pastoral heritage, proximity to Mungo National Park, and relaxed outback-meets-Riverina atmosphere." />
-<meta name="keywords" content="Balranald NSW, Balranald Riverina, Murray River town NSW, Murrumbidgee River junction, Mungo National Park gateway, Balranald attractions, Balranald accommodation, western NSW travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Balranald in south-western New South Wales, including local attractions, heritage landmarks, Yanga National Park and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Balranald NSW, Balranald attractions, Balranald accommodation, Yanga National Park, Yanga Homestead, Yanga Woolshed, Murrumbidgee River, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +59,308 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – BALRANALD ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-    .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +369,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,238 +394,463 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/balranald.jpg"
-       alt="Balranald New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/balranald.jpg"
+      alt="Balranald in south-western New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Balranald (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Balranald is a regional town in south-western New South Wales, located near the junction of the Murrumbidgee and Murray Rivers. Positioned where the Riverina meets the outback, Balranald serves as a gateway between irrigated farmland, pastoral country, and the semi-arid landscapes of western New South Wales.
-</p>
+    <h1>Balranald (NSW)</h1>
 
-<p>
-Established in the mid-19th century, Balranald developed as a river crossing and service centre for pastoral properties across the region. Its location along key inland routes made it an important stop for stock movement, trade, and transport, supporting both sheep and cattle grazing enterprises.
-</p>
+    <p>
+      Balranald is a historic riverside town in south-western New South Wales,
+      positioned where the Sturt Highway crosses the Murrumbidgee River.
+      Located between Hay and Mildura, the town is an important service centre
+      for surrounding pastoral properties, agricultural enterprises, national
+      parks and travellers crossing the state’s western plains.
+    </p>
 
-<p>
-The town is closely linked to the river systems that define the region, with the Murrumbidgee and Murray Rivers playing a vital role in sustaining agriculture, supporting irrigation, and shaping the local environment. River red gums, wetlands, and floodplains contribute to a diverse and productive landscape.
-</p>
+    <p>
+      The district forms part of the traditional Country of Aboriginal
+      communities whose continuing cultural connections extend across the
+      rivers, wetlands and ancient Willandra Lakes landscape. The surrounding
+      waterways have supported people, wildlife and trade for thousands of
+      years and remain central to the region’s identity.
+    </p>
 
-<p>
-Balranald is also recognised as a gateway to Mungo National Park, one of Australia’s most significant cultural and natural heritage sites. The park’s ancient lake systems, lunettes, and archaeological discoveries provide insight into tens of thousands of years of Aboriginal history.
-</p>
+    <p>
+      European explorers including John Oxley, Charles Sturt and Thomas
+      Mitchell travelled through the wider district during the nineteenth
+      century. Balranald was gazetted in 1851 and developed as a river crossing,
+      stock route and commercial centre serving pastoral stations along the
+      lower Murrumbidgee.
+    </p>
 
-<p>
-Today, Balranald offers essential services, accommodation, and visitor facilities, with a relaxed country-town atmosphere shaped by both its Riverina and outback influences. Parks, riverfront areas, and local attractions provide opportunities for recreation and exploration.
-</p>
+    <p>
+      The town also has connections with the Burke and Wills expedition, which
+      passed through Balranald in September 1860 while travelling north. The
+      expedition collected supplies in the district before continuing towards
+      the interior.
+    </p>
 
-<p>
-Surrounded by river landscapes, open plains, and expansive skies, Balranald captures the transition between fertile agricultural land and the vast interior of Australia. The town reflects resilience, history, and a strong connection to both water and land.
-</p>
+    <p>
+      Balranald’s position beside the Murrumbidgee gives the town a strong
+      relationship with river red gum forests, floodplain wetlands and native
+      birdlife. Riverside walking tracks and the Swing Bridge provide accessible
+      ways to experience this environment close to the centre of town.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Balranald as part of our national filming journey — highlighting its river heritage, pastoral history, proximity to Mungo National Park, and the welcoming community spirit that continues to shape this unique Riverina gateway town.
-</p>
+    <p>
+      Nearby Yanga National Park protects extensive wetlands, river country and
+      important Aboriginal and pastoral heritage. Its major visitor sites
+      include Yanga Homestead, Yanga Woolshed, Yanga Lake and Regatta Beach.
+      Balranald also serves as a southern gateway to the World Heritage-listed
+      Willandra Lakes Region and Mungo National Park, although Mungo is a
+      substantial drive from the township.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Balranald Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Balranald</h3>
-  <ul class="other-accommodation-list">
-    <li>Balranald Discovery Centre & Malcolm Museum</li>
-    <li>Balranald Southern Cross</li>
-    <li>Yanga Homestead</li>
-    <li>Balranald Art Gallery</li>
-    <li>Yanga Woolshed</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Balranald’s visitor attractions explore the town’s history, creative
+      community, aviation connections and the pastoral heritage of nearby
+      Yanga National Park.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Balranald’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Limondale Solar Farm</h3>
-      <p>
-Limondale Solar Farm is one of Australia’s largest solar energy projects, located near Balranald. The expansive array of panels highlights the region’s suitability for renewable energy generation and reflects the growing role of large-scale solar infrastructure in Australia’s energy landscape.
-</p>
+      <li>
+        <strong>Balranald Discovery Centre &amp; Malcolm Museum</strong>
+        The town’s principal visitor precinct combines local tourism
+        information with interpretive displays and historical buildings. The
+        surrounding complex includes the Malcolm Museum, Old Gaol, Wintong
+        School and displays examining Balranald’s development and regional
+        stories.
+      </li>
+
+      <li>
+        <strong>Balranald Gallery</strong>
+        Housed in Balranald’s former Masonic Lodge, the gallery provides a
+        community space for exhibitions, creative workshops and displays by
+        regional and visiting artists. Opening times should be checked before
+        visiting.
+      </li>
+
+      <li>
+        <strong>Balranald Southern Cross</strong>
+        A locally developed aviation attraction associated with Sir Charles
+        Kingsford Smith and the <em>Southern Cross</em>. Public access and open
+        days can vary, so visitors should confirm availability through the
+        Balranald Discovery Centre.
+      </li>
+
+      <li>
+        <strong>Yanga Homestead</strong>
+        Built around 1870, the homestead precinct contains the main residence,
+        stables, gardener’s shed, station store and other structures connected
+        with one of the region’s major pastoral properties. Visitor access may
+        be affected by weather, conservation work or park conditions.
+      </li>
+
+      <li>
+        <strong>Yanga Woolshed</strong>
+        A substantial nineteenth-century woolshed within Yanga National Park.
+        Visitors can explore its shearing stands, pens and working areas on a
+        self-guided visit while learning about the scale of pastoral operations
+        once conducted at Yanga Station.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      Attraction opening hours and access conditions can change. Visitors
+      should confirm current information before travelling.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These heritage sites, river locations and natural areas help tell the
+      broader story of Balranald and the surrounding lower Murrumbidgee
+      landscape.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Balranald Heritage Trail Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Balranald Heritage Trail</h3>
+
+          <p>
+            A self-guided route connecting significant buildings and historical
+            locations throughout the town. The trail introduces visitors to
+            Balranald’s development as a river crossing, pastoral service
+            centre and stopping point for inland explorers.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ben Scott Bird Trail Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ben Scott Bird Trail</h3>
+
+          <p>
+            A short nature trail through remnant black box, river red gum and
+            lignum habitat on the Balranald Common. The trail provides
+            opportunities to observe woodland and wetland bird species close
+            to town.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Murrumbidgee River &amp; Swing Bridge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Murrumbidgee River &amp; Swing Bridge</h3>
+
+          <p>
+            The pedestrian Swing Bridge crosses the Murrumbidgee River from
+            Court Street and connects with riverside walking and cycling
+            tracks. The surrounding river red gum corridor supports native
+            birds and wildlife.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Regatta Beach Picnic Area Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Regatta Beach Picnic Area</h3>
+
+          <p>
+            Located beside Yanga Lake in Yanga National Park, Regatta Beach
+            provides a scenic setting for picnics, birdwatching, paddling,
+            fishing and boating when water levels and park conditions permit.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Yanga Lake Viewing Deck Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Yanga Lake Viewing Deck</h3>
+
+          <p>
+            An elevated observation point overlooking Yanga Lake and its
+            surrounding wetlands. The deck offers broad views towards Pelican
+            Point and Regatta Beach and is particularly valuable for
+            birdwatching when the lake holds water.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Yanga National Park Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Yanga National Park</h3>
+
+          <p>
+            A large protected area near Balranald encompassing Murrumbidgee
+            River frontage, floodplain forests, wetlands and significant
+            Aboriginal and pastoral heritage. Sections of the park can close
+            because of flooding, poor road conditions, fire danger or
+            conservation work.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Regatta Beach Picnic Area</h3>
-      <p>
-Regatta Beach Picnic Area is a riverside reserve along the Murrumbidgee River, offering shaded picnic spots, open grassed areas, and access to the water. The site provides a relaxed setting for recreation and showcases the importance of river environments to the local community.
-</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Balranald</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Balranald? The following directory is limited to
+      eligible motels, hotels and caravan parks located within Balranald itself.
+      Private holiday rentals, campgrounds and accommodation in other towns
+      have not been included.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Balranald Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Balranald
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Balranald Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
- <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Balranald</h2>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Balranald
+    </h3>
 
-<p class="accommodation-intro">
-  Planning a stay in Balranald? Explore accommodation options in and around town while discovering
-  the river heritage, pastoral history, and gateway position to Mungo National Park that make Balranald a distinctive Riverina destination.
-</p>
+    <div class="other-accommodation-bookings">
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Balranald Caravan Park</span>
+          <small>Caravan park and cabins · Balranald</small>
+        </div>
 
-<p style="text-align:center;">
-  <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%252C%2BNew%2BSouth%2BWales%252C%2BAustralia"
-     target="_blank"
-     rel="noopener sponsored"
-     class="accommodation-link">
-    View All Balranald Accommodation
-  </a>
-</p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2520Caravan%2520Park%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Balranald</h3>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Balranald Club Motel</span>
+          <small>Motel · Balranald</small>
+        </div>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2520Club%2520Motel%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming &amp; feature options
-  </a>
-</p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Balranald Colony Inn Motel</span>
+          <small>Motel · Balranald</small>
+        </div>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2520Colony%2520Inn%2520Motel%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Balranald</h3>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Balranald Motor Inn &amp; Billabong Restaurant</span>
+          <small>Motel · Balranald</small>
+        </div>
 
-<div class="other-accommodation-bookings">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2520Motor%2520Inn%2520and%2520Billabong%2520Restaurant%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item">
-    <span>Balranald Club Motel</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2BClub%2BMotel%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Motel Capri</span>
+          <small>Motel · Balranald</small>
+        </div>
 
-  <div class="other-stay-item">
-    <span>Balranald Motor Inn &amp; Billabong Restaurant</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2BMotor%2BInn%2B%2526%2BBillabong%2BRestaurant%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMotel%2520Capri%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item">
-    <span>Sturt Motel Balranald</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSturt%2BMotel%2BBalranald%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Shamrock Hotel Motel Balranald</span>
+          <small>Hotel and motel · Balranald</small>
+        </div>
 
-  <div class="other-stay-item">
-    <span>The Shamrock Hotel Motel Balranald</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2BShamrock%2BHotel%2BMotel%2BBalranald%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DShamrock%2520Hotel%2520Motel%2520Balranald%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item">
-    <span>Balranald Caravan Park</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2BCaravan%2BPark%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Sturt Motel Balranald</span>
+          <small>Motel · Balranald</small>
+        </div>
 
-  <div class="other-stay-item">
-    <span>Balranald Colony Inn</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBalranald%2BColony%2BInn%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSturt%2520Motel%2520Balranald%252C%2520Balranald%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item">
-    <span>Motel Capri</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMotel%2BCapri%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+    </div>
 
-  <div class="other-stay-item">
-    <span>Homebush Hotel</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHomebush%2BHotel%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-  <div class="other-stay-item">
-    <span>Lake Paika Accommodation</span>
-    <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake%2BPaika%2BAccommodation%252C%2BBalranald%252C%2BNew%2BSouth%2BWales"
-       target="_blank" rel="noopener sponsored" class="accommodation-link">View / Book</a>
-  </div>
-
-</div>
-
-<p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  Some links on this page are affiliate links, which means we may earn a small commission if you make
-  a booking, at no extra cost to you.
-</p>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -631,10 +865,19 @@ Regatta Beach Picnic Area is a riverside reserve along the Murrumbidgee River, o
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
