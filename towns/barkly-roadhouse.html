@@ -4,6 +4,13 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,12 +18,12 @@
 
   <meta
     name="description"
-    content="Discover Barkly Roadhouse and Barkly Homestead on the Barkly Highway in the Northern Territory, including visitor facilities, outback landmarks and accommodation."
+    content="Discover Barkly Roadhouse and Barkly Homestead on the Barkly Highway with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Barkly Roadhouse, Barkly Homestead, Barkly Highway, Barkly Tableland, Northern Territory roadhouse, outback accommodation, NT road trip, Barkly region"
+    content="Barkly Roadhouse, Barkly Homestead, Barkly Highway, Barkly Tableland, Northern Territory accommodation, outback travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -38,13 +45,11 @@
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
-
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -102,19 +107,15 @@
 
       nav a {
         padding: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
-
-    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #dddddd;
+      background: #dddddd;
     }
-
-    /* ================= CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -138,79 +139,34 @@
       color: #333333;
     }
 
-    /* ================= PLACEHOLDERS ================= */
-
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .poi-placeholder {
       width: 100%;
-      height: 350px;
       background: #e1e1e1;
       border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
       color: #666666;
-      font-size: 1.2rem;
       font-weight: 500;
-      margin-top: 20px;
       text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .poi-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
-
-    /* ================= POINTS OF INTEREST ================= */
-
-    .poi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 25px;
-    }
-
-    .poi-card {
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-    }
-
-    .poi-placeholder {
-      height: 160px;
-      background: #e1e1e1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666666;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .poi-content {
-      padding: 15px;
-      text-align: center;
-    }
-
-    .poi-content h3 {
-      margin-top: 0;
-      margin-bottom: 6px;
-      color: #0E3557;
-      text-align: center;
-    }
-
-    .poi-content p {
-      font-size: 0.9rem;
-      color: #555555;
-      margin: 0;
-      text-align: center;
-    }
-
-    /* ================= SHARED GRID ================= */
 
     .accommodation-grid {
       display: grid;
@@ -222,22 +178,14 @@
     .accommodation-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       overflow: hidden;
     }
 
-    .accommodation-content {
-      padding: 15px;
-    }
-
-    .featured-badge {
-      display: inline-block;
-      background: #E87722;
-      color: #ffffff;
-      font-size: 0.75rem;
-      padding: 5px 10px;
-      border-radius: 4px;
-      margin: 10px 0;
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
 
     .accommodation-link {
@@ -252,89 +200,127 @@
       text-decoration: underline;
     }
 
-    .accommodation-intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .other-accommodation-heading {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .other-accommodation-list {
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
       list-style: none;
-      padding-left: 0;
-      text-align: center;
     }
 
-    .other-accommodation-list li {
-      margin-bottom: 12px;
-      text-align: center;
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
       color: #333333;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
-    .attraction-name {
+    .attractions-list strong {
       display: block;
       color: #0E3557;
-      font-weight: 700;
       margin-bottom: 4px;
     }
 
-    .accommodation-disclaimer {
-      font-size: 0.8rem;
-      color: #777777;
-      margin-top: 15px;
-      text-align: center;
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
     }
 
-    /* ================= ACCOMMODATION LIST ================= */
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
 
     .other-accommodation-bookings {
-      max-width: 700px;
+      max-width: 780px;
       margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
     .other-stay-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      padding: 14px 0;
-      border-bottom: 1px solid #e5e5e5;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
     }
 
-    .stay-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .stay-name {
+    .stay-details span {
+      display: block;
       color: #0E3557;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .stay-type {
-      color: #666666;
-      font-size: 0.85rem;
+    .stay-details small {
+      display: block;
       margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
     }
 
-    @media (max-width: 768px) {
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
       .other-stay-item {
+        align-items: flex-start;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .stay-details {
-        align-items: center;
       }
     }
-
-    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -348,14 +334,16 @@
       margin-bottom: 15px;
     }
 
-    footer .footer-links a {
+    footer .footer-links a,
+    footer p a {
       color: #E87722;
       text-decoration: none;
       font-weight: 500;
       margin: 0 6px;
     }
 
-    footer .footer-links a:hover {
+    footer .footer-links a:hover,
+    footer p a:hover {
       color: #ffffff;
     }
 
@@ -365,39 +353,11 @@
       line-height: 1.6;
     }
 
-    footer p a {
-      color: #E87722;
-      text-decoration: none;
-    }
-
-    footer p a:hover {
-      color: #ffffff;
-    }
-
     .gst-disclaimer {
       display: block;
       margin-top: 8px;
       font-size: 0.8rem;
       color: #ffffff;
-    }
-
-    footer,
-    footer * {
-      color: #ffffff !important;
-    }
-
-    footer {
-      background-color: #0E3557 !important;
-    }
-
-    footer .footer-links a,
-    footer p a {
-      color: #E87722 !important;
-    }
-
-    footer .footer-links a:hover,
-    footer p a:hover {
-      color: #ffffff !important;
     }
   </style>
 </head>
@@ -407,6 +367,7 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -431,15 +392,16 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener("click", function () {
-      menu.classList.toggle("active");
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
     });
   </script>
 
@@ -447,12 +409,12 @@
   <section class="hero">
     <img
       src="../images/towns/barkly-roadhouse.jpg"
-      alt="Barkly Roadhouse and the surrounding Barkly Tableland in the Northern Territory"
+      alt="Barkly Roadhouse and Barkly Homestead Northern Territory"
       width="1600"
       height="320"
       fetchpriority="high"
       decoding="async"
-      style="width:100%;height:100%;object-fit:cover;"
+      style="width:100%; height:100%; object-fit:cover;"
     >
   </section>
 
@@ -462,68 +424,64 @@
     <h1>Barkly Roadhouse (NT)</h1>
 
     <p>
-      Barkly Roadhouse is a remote outback destination and essential highway
-      stop situated on the Barkly Highway in the Northern Territory. The
-      roadhouse is currently operated as Barkly Homestead and provides an
-      important place for travellers to refuel, eat, rest and stay overnight
-      while crossing the enormous Barkly Tableland.
+      Barkly Roadhouse is a remote and important outback stop on the Barkly
+      Highway in the Northern Territory. The destination is now operated as
+      Barkly Homestead and provides essential services for travellers crossing
+      the vast Barkly Tableland between Tennant Creek and the Queensland border.
     </p>
 
     <p>
-      Located between Tennant Creek in the Northern Territory and Camooweal
-      near the Queensland border, Barkly Homestead stands on one of Australia’s
-      great long-distance driving routes. Its isolated position makes it an
-      important service centre for tourists, transport operators, pastoral
-      workers and other travellers moving through this sparsely populated part
-      of northern Australia.
+      Its isolated location makes Barkly Homestead an important stopping point
+      for tourists, professional drivers, pastoral workers and other travellers
+      moving through northern Australia. Fuel, meals, refreshments, supplies
+      and overnight accommodation are available in one convenient location.
     </p>
 
     <p>
-      The surrounding Barkly Tableland is characterised by extensive grasslands,
-      working cattle stations, distant horizons and dramatic outback skies. The
-      region’s immense scale becomes particularly apparent on the Barkly Highway,
-      where travellers can journey for long distances between settlements and
-      services.
+      The surrounding Barkly Tableland is characterised by expansive grasslands,
+      large pastoral properties, distant horizons and dramatic outback skies.
+      Travelling through the region gives visitors a strong appreciation of the
+      scale and remoteness of Australia’s northern interior.
     </p>
 
     <p>
-      Barkly Homestead provides fuel, meals, refreshments, visitor supplies and
-      overnight accommodation in one convenient location. The facilities have
-      been substantially rebuilt following the 2022 fire that destroyed the
-      former roadhouse, allowing this important highway stop to continue serving
-      the region and the travelling public.
+      Barkly Homestead has also demonstrated the resilience associated with
+      remote Australian communities and businesses. The facilities were rebuilt
+      following the fire that destroyed the former roadhouse in 2022, allowing
+      this essential highway service to continue supporting travellers and the
+      surrounding region.
     </p>
 
     <p>
-      Visitors should remember that this is an extremely remote part of
-      Australia. Travellers should carry adequate drinking water, monitor fuel
-      levels, check road and weather conditions, and ensure their vehicle is
-      prepared for long-distance outback travel. Mobile telephone coverage may
-      also be limited outside the immediate roadhouse area.
+      Visitors should prepare carefully before travelling through the area.
+      Long distances separate fuel and service locations, while mobile coverage
+      may be limited away from the roadhouse. Travellers should carry sufficient
+      drinking water, monitor fuel levels and check current road and weather
+      conditions before setting out.
     </p>
 
     <p>
-      For many visitors, Barkly Roadhouse is more than a practical stop. It
-      provides an opportunity to experience the isolation, hospitality and
-      resilience that define life in the Australian outback, while breaking up
-      one of the country’s longest and most memorable highway journeys.
+      For many travellers, Barkly Roadhouse is more than a practical refuelling
+      stop. It offers a genuine encounter with the isolation, hospitality and
+      character of the Australian outback while providing a welcome break during
+      one of the country’s great long-distance road journeys.
     </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
 
     <div class="video-placeholder">
-      Documentary Coming Soon
+      Barkly Roadhouse Documentary Coming Soon
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions In And Around Barkly Roadhouse</h2>
+    <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Attractions featured on ShowcasingOz TV are captured through immersive
-      4K video storytelling and professional photography, showcasing the
-      experiences, landscapes, people and businesses that give each destination
-      its individual character.
+      Barkly Roadhouse is primarily a remote highway destination rather than a
+      conventional tourism centre. Its visitor appeal comes from the experience
+      of stopping at Barkly Homestead and travelling through the vast Barkly
+      Tableland landscape.
     </p>
 
     <p style="text-align:center;">
@@ -535,67 +493,47 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">
-          Featured Attraction Coming Soon
-        </div>
-      </div>
-    </div>
+    <ul class="attractions-list">
 
-    <h3 class="other-accommodation-heading">
-      Other Attractions In And Around Barkly Roadhouse
-    </h3>
-
-    <ul class="other-accommodation-list">
       <li>
-        <span class="attraction-name">Barkly Homestead Roadhouse</span>
-        The roadhouse is the principal visitor destination at this remote
-        highway stop. Its facilities include fuel, food, refreshments, a bar
-        and grill, traveller supplies, accommodation and spaces where visitors
-        can relax before continuing their journey across the Barkly Tableland.
+        <strong>Barkly Homestead Roadhouse</strong>
+        The central visitor destination at Barkly Roadhouse, providing fuel,
+        food, refreshments, traveller supplies, accommodation and a welcome
+        place to rest during the long journey across the Barkly Tableland.
       </li>
+
     </ul>
 
-    <p class="accommodation-disclaimer">
-      This list is provided for visitor awareness only. Inclusion does not
-      imply partnership or endorsement.
-    </p>
-
-    <!-- LANDMARKS AND POINTS OF INTEREST -->
-    <h2>🗺️ Landmarks &amp; Points of Interest</h2>
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      These landmarks and regional points of interest help tell the story of
-      Barkly Roadhouse, the Barkly Highway and the vast tableland landscape
-      surrounding this important outback stop.
+      Explore the remote highway junctions, distinctive roadside features and
+      expansive tableland scenery that help define Barkly Roadhouse and the
+      surrounding region.
     </p>
 
     <div class="poi-grid">
 
-      <!-- BARKLY HIGHWAY AND TABLELANDS HIGHWAY JUNCTION -->
-      <div class="poi-card">
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Image Coming Soon
+          Barkly Highway and Tablelands Highway Junction Image Coming Soon
         </div>
 
         <div class="poi-content">
           <h3>Barkly Highway and Tablelands Highway Junction</h3>
 
           <p>
-            This important outback junction connects the east–west Barkly
+            This important outback junction connects the east-west Barkly
             Highway with the Tablelands Highway, which travels north through
-            remote cattle country towards the Cape Crawford and Heartbreak
-            Hotel area. The junction highlights Barkly Homestead’s strategic
-            position within the Northern Territory road network.
+            remote pastoral country towards Cape Crawford.
           </p>
         </div>
-      </div>
+      </article>
 
-      <!-- BARKLY HOMESTEAD BIG GOANNAS -->
-      <div class="poi-card">
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Image Coming Soon
+          Barkly Homestead Big Goannas Image Coming Soon
         </div>
 
         <div class="poi-content">
@@ -603,51 +541,44 @@
 
           <p>
             The large fighting-goanna sculpture at Barkly Homestead is one of
-            the roadhouse’s most recognisable features. The distinctive
-            outback artwork provides a popular photograph stop and reflects
-            the wildlife, creativity and roadside character associated with
-            remote Australian travel.
+            the roadhouse’s most recognisable features and a popular photograph
+            stop for travellers crossing the Barkly Tableland.
           </p>
         </div>
-      </div>
+      </article>
 
-      <!-- BARKLY TABLELAND -->
-      <div class="poi-card">
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Image Coming Soon
+          Barkly Tableland Image Coming Soon
         </div>
 
         <div class="poi-content">
           <h3>Barkly Tableland</h3>
 
           <p>
-            The Barkly Tableland is an immense region of open grasslands,
-            pastoral properties and expansive skies. Its flat horizons,
-            changing colours and dramatic sunsets provide travellers with a
-            powerful sense of the scale and isolation of Australia’s northern
-            interior.
+            An immense region of open grasslands, cattle stations and expansive
+            skies. Its flat horizons and changing outback colours provide a
+            powerful sense of northern Australia’s scale and isolation.
           </p>
         </div>
-      </div>
+      </article>
 
-      <!-- FREWENA REST AREA -->
-      <div class="poi-card">
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Image Coming Soon
+          Frewena Rest Area Image Coming Soon
         </div>
 
         <div class="poi-content">
           <h3>Frewena Rest Area</h3>
 
           <p>
-            Frewena Rest Area is a public highway rest point located east of
-            Barkly Homestead on the Barkly Highway. It provides motorists with
-            a place to pause during the long drive across the tableland.
-            Travellers should not rely on the rest area for fuel, accommodation
-            or the full range of services available at Barkly Homestead.
+            A public highway rest area east of Barkly Homestead where motorists
+            can pause during the long drive across the tableland. Travellers
+            should not rely on the rest area for fuel, accommodation or other
+            commercial services.
           </p>
         </div>
-      </div>
+      </article>
 
     </div>
 
@@ -656,15 +587,15 @@
 
     <p class="accommodation-intro">
       Planning an overnight stop at Barkly Roadhouse? Barkly Homestead provides
-      the principal commercial accommodation at this isolated highway location,
+      the principal commercial accommodation at this remote highway location,
       allowing travellers to rest before continuing across the Barkly Tableland.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place
-      to stay. We help visitors discover where to go, what to experience and
-      where to base themselves while exploring Australia’s cities, towns and
-      remote destinations.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
@@ -674,7 +605,7 @@
         rel="noopener sponsored"
         class="accommodation-link"
       >
-        View Barkly Roadhouse Accommodation
+        View All Barkly Roadhouse Accommodation
       </a>
     </p>
 
@@ -685,8 +616,8 @@
     <p class="accommodation-intro">
       Accommodation partners featured on ShowcasingOz TV receive premium
       exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front of
-      travellers actively planning where to stay.
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -700,9 +631,11 @@
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
+
         <div class="accommodation-placeholder">
-          Featured Accommodation Coming Soon
+          Featured Barkly Roadhouse Accommodation Coming Soon
         </div>
+
       </div>
     </div>
 
@@ -712,14 +645,10 @@
 
     <div class="other-accommodation-bookings">
 
-      <!-- BARKLY HOMESTEAD -->
       <div class="other-stay-item">
         <div class="stay-details">
-          <span class="stay-name">Barkly Homestead</span>
-
-          <span class="stay-type">
-            Roadhouse, motel rooms and cabins · Barkly Highway
-          </span>
+          <span>Barkly Homestead</span>
+          <small>Roadhouse / Motel / Cabins · Barkly Highway</small>
         </div>
 
         <a
@@ -735,13 +664,13 @@
     </div>
 
     <p class="accommodation-disclaimer">
-      This accommodation list includes eligible hotels, motels, serviced
-      accommodation, cabins and caravan parks within the immediate Barkly
+      This list includes eligible hotels, motels, caravan parks, B&amp;Bs and
+      other qualifying commercial accommodation within the immediate Barkly
       Roadhouse area. Campgrounds, private holiday rentals and Airbnb
       properties are not included. Inclusion does not imply partnership or
       endorsement. Some links on this page are affiliate links, which means
-      ShowcasingOz TV may earn a small commission if you make a booking, at no
-      extra cost to you.
+      we may earn a small commission if you make a booking, at no extra cost
+      to you.
     </p>
 
   </section>
