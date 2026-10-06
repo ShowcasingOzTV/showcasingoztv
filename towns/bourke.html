@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Bourke (NSW) | ShowcasingOz TV</title>
- <meta name="description" content="Discover Bourke, NSW — a historic outback town on the Darling River, known as the Gateway to the Outback and rich in river heritage, pastoral history, and frontier spirit." />
- <meta name="keywords" content="Bourke NSW, Bourke outback, Darling River town, Gateway to the Outback, Bourke attractions, Bourke accommodation, western New South Wales towns, outback travel NSW, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Bourke and the surrounding outback region with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Bourke NSW, Bourke attractions, Bourke accommodation, Darling River, Back O Bourke, Jandra Paddleboat, Gundabooka National Park, outback New South Wales, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +55,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – BOURKE ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +367,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,340 +392,586 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/bourke.jpg"
-       alt="Bourke New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/bourke.jpg"
+      alt="Bourke New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Bourke (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p> Bourke is a historic outback town in north-western New South Wales, located on the banks of the Darling River and widely recognised as the “Gateway to the Outback.” Serving as an important regional centre, Bourke has long supported surrounding pastoral districts and travellers moving between inland New South Wales and far-western Queensland. </p>
+    <h1>Bourke (NSW)</h1>
 
-<p> Established in the mid-19th century, Bourke developed rapidly as river trade, stock routes, and pastoral expansion shaped inland Australia. Paddle steamers once transported wool and supplies along the Darling River, while droving and grazing cemented the town’s role in the pastoral economy. Bourke’s growth reflects the challenges and determination required to build permanent settlements in Australia’s arid interior. </p>
+    <p>
+      Bourke is a historic outback town situated on the banks of the
+      Baaka-Darling River in north-western New South Wales. Widely known as the
+      Gateway to the Outback, the town serves as an important regional centre
+      for surrounding pastoral properties, smaller communities and travellers
+      exploring western New South Wales.
+    </p>
 
-<p> The Darling River has always been central to Bourke’s identity, influencing transport, agriculture, and daily life. River wharves, historic bridges, and riverfront precincts provide insight into the town’s trading past and its reliance on water in a harsh climate. The river also holds deep cultural significance for Aboriginal communities whose connection to Country in the region extends back tens of thousands of years. </p>
- 
-<p> Bourke is well known for its cultural and historical attractions, which explore themes of frontier life, Aboriginal heritage, and outback resilience. Museums, heritage buildings, and interpretive centres help visitors understand the complexities of life along the Darling River and the social history of one of Australia’s most iconic outback towns. </p>
-  
-<p> Set amid wide plains, open skies, and classic red-earth landscapes, Bourke captures the essence of outback New South Wales. The town offers a blend of history, culture, and community pride, supported by local accommodation, hospitality venues, and services that continue to welcome travellers venturing into Australia’s inland heart. </p>
+    <p>
+      The Bourke district forms part of the traditional Country of the Ngemba
+      people and other Aboriginal groups with enduring connections to the river,
+      wetlands and surrounding plains. The Baaka-Darling River has supported
+      community life, cultural practices and movement through the region for
+      thousands of years.
+    </p>
 
-<p> ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Bourke as part of our national filming journey — highlighting its river heritage, pastoral history, Aboriginal culture, and the enduring outback spirit that continues to make Bourke a landmark destination in western New South Wales. </p>
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      European settlement expanded during the nineteenth century after the
+      establishment of a stockade near the river. Bourke subsequently became a
+      major inland river port, with paddle steamers carrying wool and supplies
+      between pastoral properties, river towns and southern markets.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      The arrival of the railway strengthened Bourke’s role as a transport and
+      commercial centre. Historic buildings, the reconstructed wharf, railway
+      exhibits and surviving river infrastructure continue to reflect the
+      period when the town connected the pastoral interior with larger markets.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <p>
+      Visitors can explore Bourke’s history at the Back O’ Bourke Information
+      and Exhibition Centre, cruise the river aboard the Jandra Paddleboat and
+      visit cultural, historical and natural landmarks throughout the town and
+      surrounding district.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <p>
+      Bourke also provides a base for visiting Mount Oxley, Gundabooka National
+      Park and Toorale National Park. These destinations reveal expansive
+      plains, rocky ranges, river environments, Aboriginal cultural heritage
+      and the striking colours of the western New South Wales landscape.
+    </p>
+
+    <p>
+      The region experiences high temperatures and considerable distances
+      between services. Visitors travelling beyond town should carry sufficient
+      water, monitor fuel levels and check current road, weather and national
+      park conditions before departing.
+    </p>
+
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Bourke Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Bourke</h3>
-  <ul class="other-accommodation-list">
-    <li>Toorale Station Homestead</li>
-    <li>Shindy's Inn Louth</li>
-    <li>Brewarrina Aboriginal Culture Museum</li>
-    <li>Settlers Museum - Brewarrina</li>
-    <li>Muddy Waters Coffee Shop and Gallery</li>
-    <li>Oasis Hotel Enngonia</li>
-    <li>Back O'Bourke Visitor Information & Exhibition Centre</li>
-    <li>PV Jandra Paddleboat Cruise</li>
-    <li>Back O' Bourke Gallery</li>
-    <li>Bourke & District Historical Society Museum</li>
-    <li>National NW Railway Museum</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Bourke’s attractions explore Aboriginal culture, river trade, pastoral
+      history, local art and the people whose stories have shaped this
+      significant outback community.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Bourke’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>North Bourke Bridge</h3>
-      <p>
-  North Bourke Bridge is a key river crossing over the Darling River, linking Bourke with North Bourke and surrounding pastoral districts. The bridge reflects the town’s reliance on river transport routes and remains an important piece of local infrastructure and history.
-</p>
+      <li>
+        <strong>Back O’ Bourke Gallery</strong>
+        A local gallery presenting artwork and creative work connected with
+        Bourke, its people and the surrounding outback landscape.
+      </li>
+
+      <li>
+        <strong>Back O’ Bourke Information and Exhibition Centre</strong>
+        Bourke’s principal visitor centre combines tourism information with
+        interactive exhibitions exploring Aboriginal culture, exploration,
+        river trade, pastoral history, local identities and life in the
+        Australian outback.
+      </li>
+
+      <li>
+        <strong>Bourke Aboriginal Art Gallery</strong>
+        A local gallery showcasing Aboriginal artwork and creative expression
+        connected with Bourke and the surrounding region.
+      </li>
+
+      <li>
+        <strong>Bourke Men’s Shed and Gallery</strong>
+        A community space displaying locally created pieces and providing
+        visitors with an opportunity to see work produced by Bourke residents.
+      </li>
+
+      <li>
+        <strong>Jandra Paddleboat</strong>
+        A paddleboat cruise on the Baaka-Darling River that introduces visitors
+        to Bourke’s river environment and the paddle-steamer history that helped
+        establish the town as an important inland port.
+      </li>
+
+      <li>
+        <strong>National Northwest Railway Museum</strong>
+        A local railway collection preserving equipment and stories associated
+        with the railway’s role in Bourke’s transport, pastoral and commercial
+        history.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore Bourke’s riverfront, heritage places, memorials and nearby
+      landscapes, which together reveal the town’s cultural, pastoral and
+      transport history.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bourke Historic Cemetery Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bourke Historic Cemetery</h3>
+
+          <p>
+            The cemetery contains graves and memorials associated with
+            generations of Bourke residents and provides a record of the
+            families, workers and community figures connected with the town.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bourke Historic Wharf Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bourke Historic Wharf</h3>
+
+          <p>
+            The reconstructed wharf recalls Bourke’s years as a busy river port,
+            when paddle steamers carried wool, supplies and passengers along the
+            Darling River.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bourke Lock and Weir Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bourke Lock and Weir</h3>
+
+          <p>
+            An important piece of river infrastructure associated with the
+            management of water near Bourke. The surrounding river environment
+            also supports birdlife and other native species.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bourke North Base Survey Beacon Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bourke North Base Survey Beacon</h3>
+
+          <p>
+            A surviving reference point connected with early land surveying and
+            the considerable work required to map the remote inland districts
+            of New South Wales.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Baaka-Darling River Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Darling River</h3>
+
+          <p>
+            Known as the Baaka by its Traditional Custodians, the river is
+            central to Bourke’s cultural identity, environment and history. It
+            supported Aboriginal life long before becoming a major route for
+            inland paddle-steamer trade.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Fred Hollows Grave and Memorial Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Fred Hollows Grave and Memorial</h3>
+
+          <p>
+            The final resting place of renowned ophthalmologist and humanitarian
+            Fred Hollows. The memorial recognises his work improving eye health,
+            particularly among Aboriginal communities.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mount Oxley Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mount Oxley</h3>
+
+          <p>
+            Located approximately 50 kilometres from Bourke, Mount Oxley rises
+            abruptly from the surrounding plains and provides expansive views
+            across the outback landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mulgowan Aboriginal Heritage Site Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mulgowan Aboriginal Heritage Site</h3>
+
+          <p>
+            An important Aboriginal cultural site within Gundabooka National
+            Park featuring rock art and other evidence of the enduring
+            connection between Aboriginal people and Country.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          North Bourke Bridge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>North Bourke Bridge</h3>
+
+          <p>
+            A historic lift bridge over the Darling River that reflects the
+            need to accommodate both road traffic and river vessels during the
+            paddle-steamer era.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Percy Hobson Mural Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Percy Hobson Mural</h3>
+
+          <p>
+            A large public artwork honouring Bourke-born athlete Percy Hobson,
+            who became the first Aboriginal Australian to win a Commonwealth
+            Games gold medal.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Poet’s Corner Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Poet’s Corner</h3>
+
+          <p>
+            A memorial area in Bourke’s Central Park recognising writers and
+            poets associated with the outback, including Henry Lawson, Will
+            Ogilvie, Harry “Breaker” Morant and Francis Humphris Brown.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Toorale National Park Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Toorale National Park</h3>
+
+          <p>
+            A protected landscape south-west of Bourke where the Warrego and
+            Darling rivers meet. The park preserves river environments,
+            floodplains, pastoral heritage and Aboriginal cultural connections.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Percy Hobson Silo Art</h3>
-      <p>
-The Percy Hobson Silo Art honours the life and achievements of Percy Hobson, an Aboriginal high-jump champion and community leader from the Bourke region. The artwork celebrates sporting excellence, cultural pride, and local Aboriginal heritage.
-</p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Fred Hollows Grave</h3>
-      <p>
-The grave of Fred Hollows marks the final resting place of the renowned humanitarian and eye surgeon who spent part of his early life in Bourke. The site recognises his lifelong commitment to improving health outcomes, particularly for Aboriginal communities.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mulgowan Aboriginal Heritage Site</h3>
-      <p>
-The Mulgowan Aboriginal Heritage Site is an area of cultural significance that preserves evidence of long-term Aboriginal occupation. It highlights traditional land use, ceremonial practices, and the enduring connection between people and landscape.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Bourke Wharf</h3>
-      <p>
-The Old Bourke Wharf recalls the era of paddle steamers and river trade along the Darling River. Once a bustling transport hub, the site represents Bourke’s importance as a river port during the height of inland commerce.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mount Oxley</h3>
-      <p>
-Mount Oxley provides elevated views across the surrounding plains and Darling River country. Named after explorer John Oxley, the site offers a sense of scale and perspective on the vast landscapes that define the Bourke region.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Historic Barwon Bridge</h3>
-      <p>
-The Historic Barwon Bridge is a heritage-listed structure that played a key role in connecting communities across the Barwon River. It stands as an example of early engineering and the importance of reliable crossings in regional development.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Louth Cemetery</h3>
-      <p>
-Louth Cemetery serves as a historical record of early settlers, pastoral workers, and families connected to the Darling River towns. The cemetery reflects the isolation and hardship experienced by those who lived and worked in the region.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mount Talowla Lookout</h3>
-      <p>
-Mount Talowla Lookout offers panoramic views over Bourke and the surrounding river plains. The lookout provides a strong visual appreciation of the landscape and is a popular spot to observe sunsets and changing light across the outback.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Homestead Dam</h3>
-      <p>
-Homestead Dam is a quiet water body associated with local pastoral activity and land management. The site reflects the importance of water storage and infrastructure in sustaining life and grazing in arid inland environments.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Darling River Drive</h3>
-      <p>
-Darling River Drive is a scenic route following the curves of the Darling River, offering access to riverbanks, historic sites, and natural landscapes. The drive highlights the central role the river plays in shaping Bourke’s environment and history.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Bourke North Base Survey Beacon</h3>
-      <p>
-The Bourke North Base Survey Beacon marks an important reference point used in early land surveying. It represents the scientific and logistical efforts required to map and manage vast inland regions.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Byrock Rockholes Aboriginal Place</h3>
-      <p>
-The Byrock Rockholes Aboriginal Place is a culturally significant site featuring natural rock waterholes used by Aboriginal people for thousands of years. The site demonstrates traditional survival knowledge and deep connections to Country.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Former Mulga Market General Store</h3>
-      <p>
-The Former Mulga Market General Store reflects the role of small rural stores in supporting outback communities. It represents a time when general stores were vital social and economic hubs for travellers and local residents alike.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Yappa (Mulgowan) Aboriginal Art Site</h3>
-      <p>
-The Yappa Aboriginal Art Site contains rock engravings and markings that reflect the long cultural and spiritual connection of Aboriginal people to the Bourke region. The site offers insight into traditional knowledge, storytelling, and connection to Country.
-</p>
-    </div>
-  </div>
-  </div>
 
     <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Bourke</h2>
+    <h2>🏨 Stay Where We Showcase — Bourke</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Bourke? Explore accommodation options in and around town while discovering
-  the stories, landscapes, and outback character that make Bourke one of western New South Wales’
-  most iconic destinations.
-</p>
+    <p class="accommodation-intro">
+      Planning a stay in Bourke? Explore eligible commercial accommodation in
+      and around town while discovering the Baaka-Darling River, local history
+      and the landscapes of outback New South Wales.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke"
-     target="_blank"
-     class="accommodation-link">
-    View All Bourke Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Bourke Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Bourke</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Bourke
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Bourke</h3>
-<div class="other-accommodation-bookings">
+        <div class="accommodation-placeholder">
+          Featured Bourke Accommodation Coming Soon
+        </div>
 
-  <div class="other-stay-item"><span>Bourke Riverside Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      </div>
+    </div>
 
-  <div class="other-stay-item"><span>Darling River Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Bourke
+    </h3>
 
-  <div class="other-stay-item"><span>Sunshine Gardens Bourke Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>Kidman's Camp</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bourke Bridge Inn</span>
+          <small>Hotel / Motel · North Bourke</small>
+        </div>
 
-  <div class="other-stay-item"><span>Bourke Bridge Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke%2520Bridge%2520Inn%252C%2520North%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Mitchell Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bourke Riverside Motel</span>
+          <small>Motel · Bourke</small>
+        </div>
 
-  <div class="other-stay-item"><span>Major Mitchell Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke%2520Riverside%2520Motel%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>The Port of Bourke Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Darling River Motel</span>
+          <small>Motel · Bourke</small>
+        </div>
 
-  <div class="other-stay-item"><span>Gidgee Guesthouse</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDarling%2520River%2520Motel%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Bourke Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kidman’s Camp</span>
+          <small>Caravan Park / Cabins · North Bourke · Approximately 8 km</small>
+        </div>
 
-  <!-- Brewarrina -->
-  <div class="other-stay-item"><span>River View Motel - Brewarrina</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKidmans%2520Camp%252C%2520North%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Beds on the Barwon - Brewarrina</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Major Mitchell Motel</span>
+          <small>Motel · Bourke</small>
+        </div>
 
-  <div class="other-stay-item"><span>Lynchies Cabins - Brewarrina</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMajor%2520Mitchell%2520Motel%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Brewarrina Hotel - Brewarrina</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mitchell Caravan Park</span>
+          <small>Caravan Park / Cabins · Bourke</small>
+        </div>
 
-  <!-- Louth -->
-  <div class="other-stay-item"><span>Shindy's Inn - Louth</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMitchell%2520Caravan%2520Park%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Rose Isle Station - Louth</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Poets on Mertin</span>
+          <small>Bed &amp; Breakfast · Bourke</small>
+        </div>
 
-  <div class="other-stay-item"><span>Trilby Station - Louth</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBourke" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPoets%2520on%2520Mertin%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-</div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Sunshine Resort Gardens</span>
+          <small>Resort / Motel · Bourke</small>
+        </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSunshine%2520Resort%2520Gardens%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-</section>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Port of Bourke Hotel</span>
+          <small>Hotel · Bourke</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Port%2520of%2520Bourke%2520Hotel%252C%2520Bourke%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes eligible hotels, motels, caravan parks and B&amp;Bs
+      in Bourke and its immediate surrounds. Campgrounds, privately operated
+      apartments, Airbnb properties and private holiday rentals are not
+      included. Inclusion does not imply partnership or endorsement. Some
+      links on this page are affiliate links, which means we may earn a small
+      commission if you make a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -733,10 +986,19 @@ The Yappa Aboriginal Art Site contains rock engravings and markings that reflect
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
