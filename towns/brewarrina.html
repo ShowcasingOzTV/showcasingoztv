@@ -18,12 +18,12 @@
 
   <meta
     name="description"
-    content="Discover Brewarrina in north-western New South Wales with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Brewarrina and the surrounding Barwon River country with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Brewarrina NSW, visit Brewarrina, Barwon River, Brewarrina Aboriginal Fish Traps, Brewarrina attractions, Brewarrina accommodation, Outback NSW, ShowcasingOz TV"
+    content="Brewarrina NSW, Brewarrina Fish Traps, Baiame's Ngunnhu, Brewarrina Aboriginal Cultural Museum, Barwon River, Brewarrina attractions, Brewarrina accommodation, outback New South Wales, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -139,26 +139,6 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder,
@@ -218,6 +198,128 @@
 
     .accommodation-link:hover {
       text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     footer {
@@ -322,35 +424,56 @@
     <h1>Brewarrina (NSW)</h1>
 
     <p>
-      Brewarrina is an outback town in north-western New South Wales,
-      situated on the banks of the Barwon River. The town has deep
-      Aboriginal cultural significance and forms part of a landscape
-      shaped by the river, pastoral activity and generations of
-      community history.
+      Brewarrina is an outback town situated on the banks of the Barwon River
+      in north-western New South Wales. Located approximately 96 kilometres east
+      of Bourke, the town serves as an important centre for surrounding
+      communities, pastoral properties and travellers following the Kamilaroi
+      Highway and Darling River Run.
     </p>
 
     <p>
-      Brewarrina is especially known for Baiame’s Ngunnhu, commonly
-      referred to as the Brewarrina Aboriginal Fish Traps. Together
-      with the town’s heritage, riverside setting and local stories,
-      they make Brewarrina an important destination in Outback
-      New South Wales.
+      Known locally as “Bre”, Brewarrina is a place of exceptional Aboriginal
+      cultural significance. The town and surrounding river country are
+      connected with the Ngemba, Murrawarri, Euahlayi, Weilwan, Ualarai and
+      Baranbinja peoples, whose cultural, spiritual and political connections
+      with Country have continued across thousands of generations.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      At the heart of Brewarrina is Baiame’s Ngunnhu, the National
+      Heritage-listed Aboriginal fish traps. The extensive system of stone
+      weirs and holding ponds stretches along the Barwon River and demonstrates
+      sophisticated knowledge of river flows, fish behaviour, engineering and
+      sustainable food gathering.
+    </p>
 
-      <h2>🚧 Our Complete Brewarrina Guide Is Coming Soon</h2>
+    <p>
+      The fish traps also served as an important intertribal meeting place.
+      Aboriginal nations travelled to the area for ceremonies, trade, cultural
+      exchange and the seasonal harvesting of fish. The site remains a living
+      cultural place rather than simply an archaeological feature.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Brewarrina. Following filming, it
-        will be expanded with our full town documentary, original
-        photography, featured attractions, local landmarks,
-        accommodation options, businesses and practical information
-        to help visitors explore the town and the surrounding region.
-      </p>
+    <p>
+      Brewarrina later developed as a river port and service centre during the
+      expansion of pastoral activity and European settlement. Riverboats,
+      historic buildings, the Barwon Bridge and the town’s museums preserve
+      parts of this more recent history.
+    </p>
 
-    </div>
+    <p>
+      Visitors can explore the Brewarrina Aboriginal Cultural Museum, join a
+      guided tour of Baiame’s Ngunnhu, follow the River Walk, visit the sacred
+      Ochre Beds and learn about both Aboriginal and settler history throughout
+      the town.
+    </p>
+
+    <p>
+      Brewarrina also offers fishing, birdwatching and quiet riverside
+      environments. Travellers heading beyond town should prepare for long
+      distances, changing road conditions, limited services and high
+      temperatures during warmer months.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -363,9 +486,9 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Brewarrina’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage
-      is completed.
+      Brewarrina’s attractions share the town’s living Aboriginal culture,
+      riverside environment, community history, local creativity and enduring
+      connection to Country.
     </p>
 
     <p style="text-align:center;">
@@ -377,72 +500,225 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Brewarrina Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Brewarrina Aboriginal Cultural Museum</strong>
+        A culturally significant museum beside Baiame’s Ngunnhu, presenting
+        immersive stories, local artwork and cultural knowledge connected with
+        the Aboriginal peoples of the Brewarrina region. Guided tours of the
+        museum and fish traps are also available.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Brewarrina Settlers Museum</strong>
+        A local historical collection housed in a nineteenth-century building
+        constructed from bricks made in Brewarrina. Its displays preserve
+        photographs, household objects, machinery and other material associated
+        with the town’s pastoral and settler history. Opening access may depend
+        on volunteer availability.
+      </li>
+
+      <li>
+        <strong>Brewarrina Visitor Information and Exhibition Centre</strong>
+        The town’s visitor information centre provides maps, brochures, local
+        advice, regional itineraries, gifts and information about Brewarrina’s
+        cultural and natural attractions.
+      </li>
+
+      <li>
+        <strong>Muddy Waters Coffee Shop and Gallery</strong>
+        A locally operated café and gallery in Brewarrina’s main street,
+        offering meals and refreshments alongside gifts, artwork and locally
+        produced items.
+      </li>
+
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Brewarrina’s cultural places, riverside landmarks and other
-      points of interest will be documented and added to this page
-      following our visit.
+      Explore Brewarrina’s culturally significant river sites, historic
+      structures and places of remembrance, which together reveal the depth and
+      complexity of the town’s story.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Brewarrina Points of Interest Coming Soon
+          Baiame’s Ngunnhu Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Baiame’s Ngunnhu</h3>
+
+          <p>
+            The National Heritage-listed Brewarrina Aboriginal fish traps form
+            an extensive network of stone weirs and ponds in the Barwon River.
+            The site remains a place of profound cultural, spiritual and social
+            significance for Aboriginal communities.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Barwon Bridge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Barwon Bridge</h3>
+
+          <p>
+            A historic lift-span bridge across the Barwon River that reflects
+            Brewarrina’s former role as an inland river port. The movable span
+            allowed riverboats to pass when commercial river traffic operated
+            through the district.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Barwon River Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Barwon River</h3>
+
+          <p>
+            The river is central to Brewarrina’s culture, environment and
+            history. It supports wildlife, fishing and recreation while holding
+            enduring significance for the Aboriginal peoples connected with
+            this Country.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Brewarrina Mission Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Brewarrina Mission</h3>
+
+          <p>
+            A State Heritage-listed place associated with the forced relocation
+            and government control of Aboriginal people. The site carries
+            difficult but important histories and should be visited with
+            cultural sensitivity and respect.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Four Mile Reserve Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Four Mile Reserve</h3>
+
+          <p>
+            A peaceful riverside area near Brewarrina offering opportunities
+            for picnicking, fishing, birdwatching and appreciating the natural
+            environment along the Barwon River.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Hospital Creek Memorial Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Hospital Creek Memorial</h3>
+
+          <p>
+            Located approximately 17 kilometres north of Brewarrina, this
+            memorial honours Aboriginal men, women and children killed during
+            the Hospital Creek massacre. It is a place for quiet reflection,
+            truth-telling and remembrance.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ochre Beds Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ochre Beds</h3>
+
+          <p>
+            These State Heritage-listed ochre deposits lie downstream from
+            Baiame’s Ngunnhu. Ochre from this sacred place has been used for
+            ceremony, body decoration, storytelling and cultural exchange for
+            thousands of years.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          River Walk Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>River Walk</h3>
+
+          <p>
+            A self-guided pathway extending along the Barwon River and linking
+            Baiame’s Ngunnhu with riverside reserves and the Ochre Beds. The
+            walk allows visitors to experience the landscape while following
+            local signage and respecting culturally sensitive areas.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Brewarrina</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Brewarrina? Explore available accommodation
-      in and around the town while we continue developing our complete
-      Brewarrina destination guide.
+      Planning a stay in Brewarrina? Explore eligible commercial accommodation
+      in and around town while discovering Baiame’s Ngunnhu, the Barwon River,
+      local museums and Brewarrina’s cultural heritage.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Brewarrina%2C+New+South+Wales%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBrewarrina%252C%2520New%2520South%2520Wales%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Brewarrina Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Brewarrina
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -463,6 +739,104 @@
 
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Brewarrina
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Beds on the Barwon</span>
+          <small>Caravan Park / Commercial Cabins · Brewarrina</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBeds%2520on%2520the%2520Barwon%252C%2520Brewarrina%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Brewarrina Caravan &amp; Camping Park</span>
+          <small>Caravan Park · Brewarrina</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBrewarrina%2520Caravan%2520and%2520Camping%2520Park%252C%2520Brewarrina%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Hotel Brewarrina</span>
+          <small>Hotel · Brewarrina</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHotel%2520Brewarrina%252C%2520Brewarrina%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Lynchies Cabins</span>
+          <small>Commercial Cabin Accommodation · Brewarrina</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLynchies%2520Cabins%252C%2520Brewarrina%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>River View Motel</span>
+          <small>Motel · Brewarrina</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRiver%2520View%2520Motel%252C%2520Brewarrina%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes eligible hotels, motels, caravan parks and dedicated
+      commercial cabin accommodation in Brewarrina and its immediate surrounds.
+      Free camping areas, campgrounds without qualifying commercial
+      accommodation, Airbnb properties and private holiday rentals are not
+      included. Inclusion does not imply partnership or endorsement. Some
+      links on this page are affiliate links, which means we may earn a small
+      commission if you make a booking, at no extra cost to you.
+    </p>
 
   </section>
 
@@ -489,8 +863,8 @@
       </a><br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
       </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
