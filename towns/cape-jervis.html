@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Cape Jervis on South Australia’s Fleurieu Peninsula with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Cape Jervis and the southern Fleurieu Peninsula with ShowcasingOz TV, including Deep Creek National Park, Rapid Bay, Talisker Mine, SeaLink ferries, coastal landmarks, attractions and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Cape Jervis SA, Cape Jervis Fleurieu Peninsula, Kangaroo Island ferry, Cape Jervis attractions, Cape Jervis accommodation, South Australia travel, ShowcasingOz TV"
+    content="Cape Jervis SA, Cape Jervis attractions, Cape Jervis accommodation, SeaLink ferry, Deep Creek National Park, Rapid Bay, Talisker Mine, Fleurieu Peninsula, Kangaroo Island ferry, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -139,26 +143,6 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder,
@@ -218,6 +202,128 @@
 
     .accommodation-link:hover {
       text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     footer {
@@ -307,7 +413,7 @@
   <section class="hero">
     <img
       src="../images/towns/cape_jervis.jpg"
-      alt="Cape Jervis Fleurieu Peninsula South Australia"
+      alt="Cape Jervis on South Australia's Fleurieu Peninsula"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,36 +428,52 @@
     <h1>Cape Jervis (SA)</h1>
 
     <p>
-      Cape Jervis is a coastal community at the south-western tip of
-      South Australia’s Fleurieu Peninsula. Set against rugged coastline
-      and open rural landscapes, it is best known as the mainland
-      departure point for ferry services travelling across Backstairs
-      Passage to Kangaroo Island.
+      Cape Jervis is a coastal community positioned at the southwestern tip of
+      South Australia’s Fleurieu Peninsula, approximately 100 kilometres south
+      of Adelaide. Looking across Backstairs Passage towards Kangaroo Island,
+      the town occupies one of the state’s most important and visually striking
+      coastal locations.
     </p>
 
     <p>
-      Beyond its role as a transport gateway, Cape Jervis offers sweeping
-      ocean views, opportunities for fishing and coastal exploration, and
-      access to walking experiences along the Fleurieu coast. Its setting
-      makes it both a destination in its own right and a natural link to
-      Kangaroo Island.
+      The town is best known as the mainland departure point for vehicle and
+      passenger ferries travelling to Penneshaw on Kangaroo Island. The regular
+      ferry connection makes Cape Jervis an important transport gateway, while
+      the harbour, terminal and surrounding businesses support travellers,
+      local residents, fishing activity and regional tourism.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Cape Jervis is also the western starting point of the Wild South Coast Way
+      on the Heysen Trail. From here, walkers can follow the rugged southern
+      coastline through Deep Creek National Park towards Victor Harbor,
+      encountering beaches, protected coves, waterfalls, native bushland and
+      elevated views across the Southern Ocean.
+    </p>
 
-      <h2>🚧 Our Complete Cape Jervis Guide Is Coming Soon</h2>
+    <p>
+      The surrounding district contains a varied collection of coastal and
+      historical destinations. Rapid Bay is known for its beach, towering
+      cliffs and long jetty, while Talisker Mine preserves evidence of the
+      region’s nineteenth-century mining activity. Inland locations such as
+      Delamere and Ingalalla Falls reveal another side of the southern
+      Fleurieu’s rural landscape.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Cape Jervis. Following filming, it
-        will be expanded with our full town documentary, original
-        photography, featured attractions, local landmarks,
-        accommodation options, businesses and practical information
-        to help visitors explore the town and the surrounding
-        Fleurieu Peninsula.
-      </p>
+    <p>
+      The coastline around Cape Jervis can be steep, exposed and challenging.
+      Several beaches and lookouts require travel along unsealed roads or
+      walking trails, and conditions may change following rain, strong winds
+      or high seas. Visitors should check current park and road information,
+      carry sufficient water and remain within marked public-access areas.
+    </p>
 
-    </div>
+    <p>
+      ShowcasingOz TV will capture Cape Jervis and its surrounding destinations
+      as part of our national filming journey, highlighting the town’s role as
+      the gateway to Kangaroo Island and the natural, historical and community
+      experiences found across the southern Fleurieu Peninsula.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -364,9 +486,9 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Cape Jervis’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage
-      is completed.
+      Cape Jervis provides access to one of South Australia’s best-known ferry
+      journeys, while the nearby community of Delamere offers a quieter look at
+      everyday life on the southern Fleurieu Peninsula.
     </p>
 
     <p style="text-align:center;">
@@ -378,72 +500,293 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Cape Jervis Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Delamere, including Delamere General Store</strong>
+        Explore this small rural community between Cape Jervis and the eastern
+        side of the Fleurieu Peninsula. The Delamere General Store provides a
+        useful local stop and reflects the important role small businesses play
+        in servicing residents and travellers across the district.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>SeaLink Ferry and Investigator Strait</strong>
+        Travel by ferry from Cape Jervis across the waters separating the
+        Fleurieu Peninsula from Kangaroo Island. The journey offers changing
+        coastal views before arriving at Penneshaw on the island’s eastern end.
+      </li>
 
-    <!-- POINTS OF INTEREST -->
-    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+    </ul>
 
-    <p class="accommodation-intro">
-      Cape Jervis’s coastal landmarks, walking areas and other points
-      of interest will be documented and added to this page following
-      our visit.
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Ferry services, access and operating
+      times should be confirmed directly with the relevant operator.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest, Landmarks &amp; Hidden Gems</h2>
 
+    <p class="accommodation-intro">
+      Explore the beaches, lookouts, walking destinations, heritage sites and
+      coastal landscapes found around Cape Jervis and the southern Fleurieu
+      Peninsula.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Cape Jervis Points of Interest Coming Soon
+          Blowhole Beach Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Blowhole Beach</h3>
+
+          <p>
+            A secluded beach within Deep Creek National Park, reached by a
+            steep walking trail or suitable four-wheel-drive access. The beach
+            is surrounded by rugged hills and offers views towards Kangaroo
+            Island across Backstairs Passage.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cape Jervis Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cape Jervis</h3>
+
+          <p>
+            The coastal township and headland at the southwestern tip of the
+            Fleurieu Peninsula, known as the mainland gateway to Kangaroo Island
+            and the starting point of the Wild South Coast Way.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cape Jervis Lookout and Lighthouse Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cape Jervis Lookout &amp; Lighthouse</h3>
+
+          <p>
+            A coastal viewing area overlooking the harbour, Backstairs Passage
+            and the ferry route to Kangaroo Island. The lighthouse structure
+            reflects Cape Jervis’s long-standing maritime and navigational role.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Deep Creek Waterfall Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Deep Creek Waterfall</h3>
+
+          <p>
+            A seasonal waterfall reached by a demanding walk through Deep Creek
+            National Park. The route passes through native vegetation and steep
+            terrain before reaching the secluded waterfall area.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ingalalla Falls Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ingalalla Falls</h3>
+
+          <p>
+            A peaceful waterfall and picnic destination near Hay Flat, surrounded
+            by native vegetation. Water flow varies with seasonal rainfall, but
+            the reserve remains a scenic stop within the Fleurieu countryside.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kangaroo Island View Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kangaroo Island View</h3>
+
+          <p>
+            A coastal viewing location offering expansive outlooks across
+            Backstairs Passage towards Kangaroo Island, particularly impressive
+            during clear weather and changing afternoon light.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Rapid Bay Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Rapid Bay</h3>
+
+          <p>
+            A small coastal settlement framed by high limestone cliffs and
+            agricultural land. Its history is closely connected with quarrying,
+            shipping and the development of its distinctive jetties.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Rapid Bay Beach and Cave Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Rapid Bay Beach &amp; Cave</h3>
+
+          <p>
+            A scenic beach known for clear water, imposing cliffs and coastal
+            rock formations. The small cave feature should only be approached
+            when conditions are safe, with visitors remaining alert to tides,
+            rockfall and unstable cliff edges.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          SeaLink Ferry Terminal Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>SeaLink Ferry Terminal, Cape Jervis</h3>
+
+          <p>
+            The mainland terminal for ferry services to Penneshaw on Kangaroo
+            Island. The busy harbour precinct is central to Cape Jervis’s role
+            as one of South Australia’s most important regional gateways.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Starfish Hill Wind Farm Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Starfish Hill Wind Farm</h3>
+
+          <p>
+            A prominent renewable-energy development spread across the exposed
+            hills near Cape Jervis and Delamere. Its turbines have become a
+            distinctive feature of the southern Fleurieu landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Talisker Mine Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Talisker Mine</h3>
+
+          <p>
+            The remains of a nineteenth-century silver and lead mining operation
+            within Talisker Conservation Park. A walking trail passes historic
+            ruins and interpretive signs explaining the mine and the people who
+            worked there.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tapanappa Lookout and Deep Creek Cove Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tapanappa Lookout, including Deep Creek Cove</h3>
+
+          <p>
+            An elevated viewpoint within Deep Creek National Park offering
+            sweeping views across steep coastal valleys, Deep Creek Cove,
+            Backstairs Passage and Kangaroo Island.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tunkalilla Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tunkalilla Beach</h3>
+
+          <p>
+            A remote and exposed stretch of southern Fleurieu coastline backed
+            by steep hills and open farmland. The beach is valued for its wild
+            scenery, isolation and connection with the Heysen Trail.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Cape Jervis</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Cape Jervis? Explore available accommodation
-      in and around the town while we continue developing our complete
-      Cape Jervis destination guide.
+      Cape Jervis and nearby Second Valley provide a small selection of
+      commercial accommodation, including motel-style rooms, hotel rooms,
+      caravan-park cabins and lodge accommodation. These properties offer
+      convenient bases for exploring the southern Fleurieu Peninsula or
+      travelling to Kangaroo Island.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves while exploring Australia’s cities, towns and
+      hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Cape+Jervis%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCape%2BJervis%252C%2BSouth%2BAustralia%252C%2BAustralia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
-        View All Cape Jervis Accommodation
+        Search Cape Jervis Accommodation on Booking.com
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Cape Jervis
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -457,13 +800,107 @@
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
-          Featured Cape Jervis Accommodation Coming Soon
+          Featured Accommodation Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Cape Jervis
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>BIG4 Cape Jervis Accommodation &amp; Caravan Park</span>
+          <small>
+            Cape Jervis | Caravan park with motel-style rooms, cabins and
+            other managed accommodation.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fcape-jervis-station-amp-caravan-park.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Cape Jervis Tavern</span>
+          <small>
+            Cape Jervis | Tavern offering hotel-style rooms and family
+            accommodation close to the ferry terminal.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCape%2BJervis%2BTavern%252C%2BSouth%2BAustralia%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Second Valley Caravan Park</span>
+          <small>
+            Second Valley | Commercial caravan park providing cabins,
+            on-site accommodation and caravan facilities.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSecond%2BValley%2BCaravan%2BPark%252C%2BSouth%2BAustralia%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Second Valley Lodge</span>
+          <small>
+            Second Valley | Lodge accommodation with motel-style facilities
+            overlooking the surrounding rural landscape.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSecond%2BValley%2BLodge%252C%2BSouth%2BAustralia%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes qualifying hotels, motel-style accommodation,
+      caravan parks and lodges in Cape Jervis and the nearby Second Valley
+      area. Private holiday homes, holiday rentals, privately operated
+      apartments, Airbnb listings and camping-only facilities are not
+      included. Inclusion does not imply partnership or endorsement. Some
+      links on this page are affiliate links, which means we may earn a small
+      commission if you make a booking, at no extra cost to you. Booking.com
+      may not display every property when rooms are unavailable or the
+      property does not release inventory through the platform.
+    </p>
 
   </section>
 
@@ -487,13 +924,15 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a><br>
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
-      </span><br>
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
 
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
 
