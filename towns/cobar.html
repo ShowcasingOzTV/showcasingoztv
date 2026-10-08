@@ -4,31 +4,51 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Cobar (NSW) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Cobar, NSW — an historic mining town at the crossroads of the Barrier Highway and Kidman Way, with rich heritage, striking outback landscapes, local attractions and accommodation." />
-  <meta name="keywords" content="Cobar NSW, Cobar attractions, Cobar accommodation, Great Cobar Museum, Cobar Sound Chapel, Fort Bourke Hill Lookout, Mount Grenfell Historic Site, outback New South Wales, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Cobar, New South Wales, including its mining heritage, attractions, landmarks, points of interest and accommodation with ShowcasingOz TV."
+  >
+
+  <meta
+    name="keywords"
+    content="Cobar NSW, Cobar attractions, Cobar accommodation, Great Cobar Museum, Cobar Sound Chapel, Fort Bourke Hill Lookout, Mount Grenfell Historic Site, outback New South Wales, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
       color: #ffffff;
@@ -95,14 +115,12 @@
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
@@ -125,31 +143,35 @@
       color: #333333;
     }
 
-    /* ================= PLACEHOLDERS ================= */
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .poi-placeholder {
       width: 100%;
-      height: 350px;
       background: #e1e1e1;
       border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
       color: #666666;
-      font-size: 1.2rem;
       font-weight: 500;
-      margin-top: 20px;
       text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
+    .attraction-placeholder,
+    .poi-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -164,6 +186,12 @@
       overflow: hidden;
     }
 
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
     .accommodation-link {
       display: inline-block;
       margin-top: 10px;
@@ -173,112 +201,131 @@
     }
 
     .accommodation-link:hover {
-      color: #E87722;
       text-decoration: underline;
     }
 
-    .accommodation-intro,
-    .attractions-intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .other-accommodation-heading {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .other-accommodation-list {
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
       list-style: none;
-      padding-left: 0;
-      text-align: center;
     }
 
-    .other-accommodation-list li {
-      margin-bottom: 8px;
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
     }
 
-    .accommodation-disclaimer {
-      font-size: 0.8rem;
-      color: #777777;
-      margin-top: 15px;
-      text-align: center;
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
     }
 
-    /* ================= POINTS OF INTEREST ================= */
     .poi-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
       margin-top: 25px;
     }
 
     .poi-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
       overflow: hidden;
     }
 
-    .poi-placeholder {
+    .poi-card .poi-placeholder {
       height: 160px;
-      background: #e1e1e1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666666;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-align: center;
+      border-radius: 0;
+      padding: 20px;
     }
 
     .poi-content {
-      padding: 15px;
-      text-align: center;
+      padding: 20px;
     }
 
     .poi-content h3 {
-      margin-top: 0;
-      margin-bottom: 6px;
       color: #0E3557;
+      margin: 0 0 10px;
     }
 
     .poi-content p {
-      font-size: 0.9rem;
-      color: #555555;
       margin: 0;
     }
 
-    /* ================= ACCOMMODATION LIST ================= */
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
     .other-accommodation-bookings {
-      max-width: 700px;
+      max-width: 780px;
       margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
     .other-stay-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e5e5;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
     }
 
-    .other-stay-item span {
+    .stay-details span {
+      display: block;
       color: #0E3557;
-      font-weight: 500;
+      font-weight: 700;
     }
 
-    @media (max-width: 768px) {
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
       .other-stay-item {
+        align-items: flex-start;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
       }
     }
 
-    /* ================= FOOTER ================= */
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -324,8 +371,14 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
-        <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
       </a>
 
       <span class="menu-btn" id="menu-btn">
@@ -343,6 +396,7 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
@@ -350,18 +404,22 @@
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
   </script>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="../images/towns/cobar.jpg"
-         alt="Cobar New South Wales"
-         width="1600"
-         height="320"
-         fetchpriority="high"
-         decoding="async"
-         style="width:100%;height:100%;object-fit:cover;">
+    <img
+      src="../images/towns/cobar.jpg"
+      alt="Cobar New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
   </section>
 
   <!-- MAIN CONTENT -->
@@ -370,110 +428,178 @@
     <h1>Cobar (NSW)</h1>
 
     <p>
-      Cobar is an historic mining town in western New South Wales, positioned at the crossroads of the Barrier Highway and the Kidman Way. Surrounded by red-earth plains, mulga country and working pastoral properties, the town is an important service centre for travellers, local communities and major mining operations across the region.
+      Cobar is a historic mining town in western New South Wales, positioned
+      at the crossroads of the Barrier Highway and the Kidman Way. Surrounded
+      by red-earth plains, mulga country and working pastoral properties, the
+      town is an important service centre for travellers, local communities
+      and major mining operations across the region.
     </p>
 
     <p>
-      The town’s modern story grew from the discovery of copper in the 1870s. Mining rapidly transformed the isolated site into a busy settlement, and Cobar later became associated with gold, silver, lead and zinc as the district’s mineral industry expanded. Mining remains central to the local economy and identity, while the town’s preserved buildings, machinery and memorials reveal the experiences of generations who worked above and below ground.
+      The modern town grew following the discovery of copper during the
+      1870s. Mining rapidly transformed the isolated site into a busy
+      settlement, and Cobar later became associated with gold, silver, lead
+      and zinc as the district’s mineral industry expanded.
     </p>
 
     <p>
-      Visitors can explore that heritage through the Great Cobar Museum and Visitor Information Centre, the Cobar Miners Memorial and the open-air displays of Cobar Miners Heritage Park. The distinctive Cobar Sound Chapel adds a contemporary cultural dimension, combining music, art and the dramatic acoustics of a former water tank overlooking the outback landscape.
+      Mining remains central to Cobar’s economy and identity. Historic
+      buildings, preserved machinery, museum collections and memorials
+      provide insight into the experiences of generations who worked above
+      and below ground.
     </p>
 
     <p>
-      Beyond the town centre, Fort Bourke Hill Lookout provides a broad perspective across Cobar and the surrounding mining country. Farther afield, Mount Grenfell Historic Site protects an Aboriginal cultural landscape of profound significance, including rock-art galleries and walking routes through rugged ranges and open woodland.
+      Visitors can explore that heritage through the Great Cobar Museum and
+      Visitor Information Centre, the Cobar Miners Memorial and the open-air
+      displays at Cobar Miners Heritage Park. These locations explain how
+      mineral discoveries, changing technology and the mining workforce
+      shaped the town.
     </p>
 
     <p>
-      Cobar also reflects the character of an enduring outback community. Its hotels, motels, caravan park, sporting clubs, local businesses and public spaces support residents and visitors travelling long distances across inland New South Wales. This combination of industry, heritage, culture and community gives the town a character that is both practical and unmistakably local.
+      The distinctive Cobar Sound Chapel adds a contemporary cultural
+      dimension to the town. Created inside a former water tank, the space
+      combines music, visual art, architecture and the unusual acoustic
+      qualities of the industrial structure.
     </p>
 
     <p>
-      ShowcasingOz TV will capture the people, businesses, landscapes and stories that define Cobar as part of our national filming journey — highlighting its mining legacy, Aboriginal cultural connections, outback setting and continuing role as a major regional centre.
+      Beyond the town centre, Fort Bourke Hill Lookout provides broad views
+      across Cobar and the surrounding mining landscape. Farther west, Mount
+      Grenfell Historic Site protects an Aboriginal cultural landscape of
+      profound importance, including rock-art galleries and walking routes
+      through rugged ranges and open woodland.
+    </p>
+
+    <p>
+      Cobar also reflects the character of an enduring outback community.
+      Its accommodation providers, hotels, local businesses, sporting clubs
+      and public facilities support residents, mining workers and visitors
+      travelling long distances across inland New South Wales.
+    </p>
+
+    <p>
+      ShowcasingOz TV will capture the people, businesses, landscapes and
+      stories that define Cobar as part of our national filming journey,
+      highlighting its mining legacy, Aboriginal cultural connections,
+      outback setting and continuing role as an important regional centre.
     </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
-    <div class="video-placeholder">Documentary Coming Soon</div>
+
+    <div class="video-placeholder">
+      Cobar Documentary Coming Soon
+    </div>
 
     <!-- ATTRACTIONS -->
     <h2>📍 Attractions</h2>
 
-    <p class="attractions-intro">
-      Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and professional photography — showcasing experiences, landscapes, culture and visitor engagement in a way that static listings simply cannot achieve.
+    <p class="accommodation-intro">
+      Cobar’s visitor attractions explore the town’s mining heritage,
+      industrial history, local stories and distinctive relationship with
+      music, art and the surrounding outback environment.
     </p>
 
     <p style="text-align:center;">
-      <a href="../attraction-partners.html" class="accommodation-link">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">Featured Attraction Coming Soon</div>
-      </div>
-    </div>
+    <ul class="attractions-list">
 
-    <h3 class="other-accommodation-heading">
-      Other Attractions In And Around Cobar
-    </h3>
+      <li>
+        <strong>Cobar Miners Memorial</strong>
+        A memorial recognising the miners who lost their lives while working
+        in Cobar’s mines. Interpretive displays help visitors understand the
+        risks, working conditions and human contribution behind the town’s
+        long mining history.
+      </li>
 
-    <ul class="other-accommodation-list">
-      <li>Cobar Miners Memorial</li>
-      <li>Cobar Sound Chapel</li>
-      <li>The Great Cobar Museum and Visitor Information Centre</li>
+      <li>
+        <strong>Cobar Sound Chapel</strong>
+        A contemporary sound and art installation created inside a former
+        water tank overlooking the Cobar landscape. The chapel combines
+        architecture, music and visual art within an atmospheric industrial
+        setting.
+      </li>
+
+      <li>
+        <strong>The Great Cobar Museum and Visitor Information Centre</strong>
+        Located in the former administration building of the Great Cobar
+        Copper Mine, the museum presents the district’s mining, pastoral,
+        social and Aboriginal history while also providing local visitor
+        information.
+      </li>
+
     </ul>
-
-    <p class="accommodation-disclaimer">
-      This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      These landmarks and points of interest form an important part of Cobar’s landscape, heritage and sense of place. ShowcasingOz TV will capture these locations during filming to help tell the broader story of the region.
+      These landmarks and cultural locations help explain Cobar’s mining
+      history, regional landscape and the continuing connection between
+      Aboriginal people and Country.
     </p>
 
     <div class="poi-grid">
 
-      <div class="poi-card">
-        <div class="poi-placeholder">Image Coming Soon</div>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cobar Miners Heritage Park Image Coming Soon
+        </div>
 
         <div class="poi-content">
           <h3>Cobar Miners Heritage Park</h3>
 
           <p>
-            Located near the Great Cobar Museum, this open-air heritage area displays mining machinery and interpretive material that help explain the equipment, working conditions and industries that shaped Cobar’s development.
+            Located near the Great Cobar Museum, this open-air heritage area
+            displays mining machinery and interpretive information explaining
+            the equipment, industries and working practices that contributed
+            to Cobar’s development.
           </p>
         </div>
-      </div>
+      </article>
 
-      <div class="poi-card">
-        <div class="poi-placeholder">Image Coming Soon</div>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Fort Bourke Hill Lookout Image Coming Soon
+        </div>
 
         <div class="poi-content">
           <h3>Fort Bourke Hill Lookout</h3>
 
           <p>
-            Fort Bourke Hill Lookout offers elevated views across Cobar, the surrounding outback and the scale of the nearby mining landscape. It is a useful vantage point for understanding how closely the town’s history and present-day economy are connected to mining.
+            Fort Bourke Hill Lookout provides elevated views across Cobar,
+            the surrounding outback and the nearby mining landscape. The
+            viewpoint helps visitors appreciate the scale of the mining
+            activity and its proximity to the town.
           </p>
         </div>
-      </div>
+      </article>
 
-      <div class="poi-card">
-        <div class="poi-placeholder">Image Coming Soon</div>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mount Grenfell Historic Site Image Coming Soon
+        </div>
 
         <div class="poi-content">
           <h3>Mount Grenfell Historic Site</h3>
 
           <p>
-            Mount Grenfell Historic Site protects a culturally significant Aboriginal landscape west of Cobar. Rock-art galleries, walking tracks and the surrounding ranges provide visitors with insight into the enduring connection between the Ngiyampaa people and Country.
+            Mount Grenfell Historic Site protects a culturally significant
+            Aboriginal landscape west of Cobar. Rock-art galleries, walking
+            tracks and the surrounding ranges provide insight into the
+            enduring connection between the Ngiyampaa people and Country.
           </p>
         </div>
-      </div>
+      </article>
 
     </div>
 
@@ -481,18 +607,26 @@
     <h2>🏨 Stay Where We Showcase — Cobar</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Cobar? Explore hotels, motels, lodge accommodation and caravan-park options in town while discovering the mining heritage, cultural sites and outback landscapes that make Cobar a distinctive western New South Wales destination.
+      Planning a stay in Cobar? Explore hotels, motels, lodge accommodation
+      and caravan-park options while discovering the mining heritage,
+      cultural sites and outback landscapes that make Cobar a distinctive
+      western New South Wales destination.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help people discover where to go, what to experience and where to base themselves as they explore Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities, towns
+      and hidden gems.
     </p>
 
     <p style="text-align:center;">
-      <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%252C%2520New%2520South%2520Wales%252C%2520Australia"
-         target="_blank"
-         rel="noopener sponsored"
-         class="accommodation-link">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
         View All Cobar Accommodation
       </a>
     </p>
@@ -502,20 +636,28 @@
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally produced video, photography and destination-led storytelling that places their property in front of travellers actively planning where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a href="../accommodation-partners.html" class="accommodation-link">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
+
         <div class="accommodation-placeholder">
-          Featured Accommodation Coming Soon
+          Featured Cobar Accommodation Coming Soon
         </div>
+
       </div>
     </div>
 
@@ -526,111 +668,161 @@
     <div class="other-accommodation-bookings">
 
       <div class="other-stay-item">
-        <span>Cobar Caravan Park</span>
+        <div class="stay-details">
+          <span>Cobar Caravan Park</span>
+          <small>Caravan Park and Cabins · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Caravan%2520Park%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Caravan%2520Park%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Cobar Central Motor Inn</span>
+        <div class="stay-details">
+          <span>Cobar Central Motor Inn</span>
+          <small>Motor Inn · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Central%2520Motor%2520Inn%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Central%2520Motor%2520Inn%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Cobar Miners Lodge</span>
+        <div class="stay-details">
+          <span>Cobar Miners Lodge</span>
+          <small>Contractor Lodge · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Miners%2520Lodge%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Miners%2520Lodge%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Cobar Motor Inn</span>
+        <div class="stay-details">
+          <span>Cobar Motor Inn</span>
+          <small>Motor Inn · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Motor%2520Inn%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Motor%2520Inn%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Cobar Oasis Motel</span>
+        <div class="stay-details">
+          <span>Cobar Oasis Motel</span>
+          <small>Motel · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Oasis%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Oasis%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Cobar Town &amp; Country Motor Inn</span>
+        <div class="stay-details">
+          <span>Cobar Town &amp; Country Motor Inn</span>
+          <small>Motor Inn · Cobar town centre</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Town%2520%2526%2520Country%2520Motor%2520Inn%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobar%2520Town%2520%2526%2520Country%2520Motor%2520Inn%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Copper City Motel</span>
+        <div class="stay-details">
+          <span>Copper City Motel</span>
+          <small>Motel · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCopper%2520City%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCopper%2520City%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Crossroads Motel</span>
+        <div class="stay-details">
+          <span>Crossroads Motel</span>
+          <small>Motel · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCrossroads%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCrossroads%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Great Western Hotel and Motel</span>
+        <div class="stay-details">
+          <span>Great Western Hotel and Motel</span>
+          <small>Hotel and Motel · Cobar town centre</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGreat%2520Western%2520Hotel%2520and%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGreat%2520Western%2520Hotel%2520and%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
 
       <div class="other-stay-item">
-        <span>Hi-Way Motel</span>
+        <div class="stay-details">
+          <span>Hi-Way Motel</span>
+          <small>Motel · Cobar · Within town</small>
+        </div>
 
-        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHi-Way%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
-           target="_blank"
-           rel="noopener sponsored"
-           class="accommodation-link">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHi-Way%2520Motel%252C%2520Cobar%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
           View / Book
         </a>
       </div>
@@ -638,7 +830,10 @@
     </div>
 
     <p class="accommodation-disclaimer">
-      This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links, which means we may earn a small commission if you make a booking, at no extra cost to you.
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Some links on this page are affiliate
+      links, which means we may earn a small commission if you make a booking,
+      at no extra cost to you.
     </p>
 
   </section>
@@ -659,11 +854,17 @@
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
-      </span><br>
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
