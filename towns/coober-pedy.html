@@ -8,8 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Coober Pedy (SA) | ShowcasingOz TV</title>
-<meta name="description" content="Coober Pedy is a unique outback town in South Australia, famous for its underground homes, opal mining history, lunar landscapes, and iconic desert experiences along the Stuart Highway." />
-<meta name="keywords" content="Coober Pedy, Coober Pedy SA, opal mining town, underground homes, dugouts Coober Pedy, South Australian outback, Stuart Highway travel, desert landscapes Australia" />
+
+  <meta name="description" content="Discover Coober Pedy, South Australia, an iconic outback opal-mining town known for underground homes, historic mines, desert landscapes, attractions and accommodation." />
+
+  <meta name="keywords" content="Coober Pedy, Coober Pedy SA, Coober Pedy accommodation, Coober Pedy attractions, opal mining town, underground homes, Breakaways, South Australian outback, Stuart Highway, ShowcasingOz TV" />
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css">
@@ -31,7 +33,7 @@
     /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,46 +41,59 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
@@ -86,7 +101,7 @@ header.navbar img {
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
     /* ================= CONTENT ================= */
@@ -96,270 +111,213 @@ header.navbar img {
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
     /* ================= PLACEHOLDERS ================= */
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+      width: 100%;
+      height: 350px;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 20px;
+      text-align: center;
     }
 
     .accommodation-placeholder,
     .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+      height: 200px;
+      font-size: 1.1rem;
     }
-    /* ================= POINTS OF INTEREST ================= */
-
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
 
     /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
     }
 
     .accommodation-link:hover {
-      text-decoration:underline;
+      color: #E87722;
+      text-decoration: underline;
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    .accommodation-intro,
+    .attractions-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      text-align: center;
     }
 
     .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
     }
 
     .other-accommodation-list li {
-      margin-bottom:6px;
+      margin-bottom: 8px;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      font-size: 0.8rem;
+      color: #777777;
+      margin-top: 15px;
+      text-align: center;
     }
-/* ================= CENTER ALIGN – COOBER PEDY ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    /* ================= POINTS OF INTEREST ================= */
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    .poi-placeholder {
+      height: 160px;
+      background: #e1e1e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    .poi-content {
+      padding: 15px;
+      text-align: center;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    .poi-content h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      color: #0E3557;
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    .poi-content p {
+      font-size: 0.9rem;
+      color: #555555;
+      margin: 0;
+    }
 
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    /* ================= ACCOMMODATION LIST ================= */
+    .other-accommodation-bookings {
+      max-width: 700px;
+      margin: 25px auto 0;
+    }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+    .other-stay-item span {
+      color: #0E3557;
+      font-weight: 500;
+    }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+    /* ================= FOOTER ================= */
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-footer p a:hover {
-  color: #ffffff;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-footer {
-  background-color: #0E3557 !important;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-                .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -368,10 +326,17 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img src="/images/logo.jpg"
+             alt="ShowcasingOz TV Logo"
+             width="170"
+             height="65">
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -386,378 +351,549 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/coober-pedy.jpg"
-       alt="Coober Pedy South Australia"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img src="../images/towns/coober-pedy.jpg"
+         alt="Coober Pedy South Australia"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%;height:100%;object-fit:cover;">
+  </section>
 
-  <h1>Coober Pedy (SA)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>Coober Pedy is one of Australia’s most distinctive outback towns, located in the far north of South Australia along the Stuart Highway. Renowned as the world’s opal capital, the town is famous for its underground homes, known as dugouts, which provide relief from the extreme desert temperatures and offer a fascinating insight into life in the arid interior.</p>
+    <h1>Coober Pedy (SA)</h1>
 
-<p>The discovery of opals in 1915 shaped Coober Pedy’s identity, drawing prospectors from around the world and creating a multicultural community built on mining, resilience, and ingenuity. Today, visitors can explore active and historic opal fields, underground museums, and working mines that tell the story of the town’s colourful past.</p>
+    <p>
+      Coober Pedy is one of Australia’s most distinctive outback towns, located in northern South Australia along the Stuart Highway. Internationally recognised as an important opal-mining centre, the town is equally famous for its underground homes, businesses, churches and accommodation carved into the surrounding sandstone.
+    </p>
 
-<p>Coober Pedy’s underground lifestyle extends beyond housing, with underground churches, hotels, shops, and galleries carved into the rock. These unique spaces showcase the creativity of the town’s residents and have become major attractions for travellers seeking an experience unlike anywhere else in Australia.</p>
+    <p>
+      Opal was discovered in the district in 1915, attracting prospectors and miners from across Australia and overseas. The difficult working conditions, isolation and extreme temperatures demanded resilience and ingenuity. Over time, these challenges helped create the multicultural mining community and unconventional underground lifestyle for which Coober Pedy is now known.
+    </p>
 
-<p>Surrounded by striking desert landscapes, Coober Pedy offers access to natural attractions such as the Breakaways Conservation Park, Moon Plain, and colourful mesas that have featured in numerous films and television productions. The otherworldly terrain and vast open skies make the region particularly memorable for photography and sightseeing.</p>
+    <p>
+      Many residents live in underground homes known as dugouts. These structures use the surrounding earth to maintain a more stable internal temperature throughout the year, providing relief from the intense summer heat. Visitors can experience this way of life through underground motels, museums, churches, galleries and former mines located throughout the town.
+    </p>
 
-<p>As a key stop for travellers crossing Australia from north to south, Coober Pedy continues to thrive as a gateway to the outback, combining rich mining heritage, unique architecture, and unforgettable desert scenery. The town remains a symbol of adaptability and adventure, offering visitors a truly iconic Australian outback experience.</p>
+    <p>
+      Coober Pedy’s opal heritage remains central to its identity. Working and historic mines, opal shops, museums and interpretive attractions explain how opal is located, extracted, processed and valued. The landscape surrounding the town is marked by mine shafts and mullock heaps, creating a striking visual record of more than a century of prospecting.
+    </p>
 
+    <p>
+      Beyond the town, the Kanku-Breakaways Conservation Park contains colourful mesas, escarpments and expansive desert plains. Nearby sections of the Dog Fence and Moon Plain further demonstrate the scale and isolation of the region. The unusual terrain has also attracted numerous film and television productions, contributing another layer to Coober Pedy’s international profile.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      As a major service centre on the Stuart Highway, Coober Pedy provides accommodation, fuel, food, vehicle services and visitor facilities for travellers moving between South Australia and the Northern Territory. Its remote position makes it an important stop during one of Australia’s most memorable inland road journeys.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, underground spaces, opal heritage and desert landscapes that define Coober Pedy as part of our national filming journey. The town’s combination of industry, cultural diversity, unconventional architecture and outback resilience makes it one of Australia’s most remarkable regional destinations.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Coober Pedy</h3>
-  <ul class="other-accommodation-list">
-    <li>Faye's Underground Home</li>
-    <li>Old Timers Mine</li>
-    <li>Old Coober Pedy Jail</li>
-    <li>Umoona Opal Mine & Museum</li>
-    <li>Josephine's Gallery and Kangaroo Orphanage</li>
-    <li>The Big Miner</li>
-    <li>Serbian Orthodox Church</li>
-    <li>Catacomb Church</li>
-    <li>Crocodile Harry's Underground Nest & Dugout</li>
-    <li>The Mail Run</li>
-    <li>Tom's Opal Mine</li>
-    <li>Big Winch 360</li>
-    <li>The Opal Bug</li>
-    <li>Cadney Homestead Roadhouse</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="attractions-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and professional photography, showcasing experiences, landscapes, culture and visitor engagement in a way that static listings simply cannot achieve.
+    </p>
 
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html"
+         class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Coober Pedy’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Big Art Tyres</h3>
-      <p>Big Art Tyres is a striking roadside installation near Coober Pedy, featuring large sculptural tyres that reflect the region’s mining heritage and creative outback spirit. It’s a popular stop for photos and a reminder of the town’s industrial roots and artistic flair.</p>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="attraction-placeholder">
+          Featured Attraction Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Spaceship from Pitch Black</h3>
-      <p>The Spaceship from Pitch Black is a well-known film prop left behind after the 2000 sci-fi movie was filmed near Coober Pedy. Set against the stark desert landscape, it has become a cult attraction for movie fans and travellers exploring the Moon Plain area.</p>
-    </div>
-  </div>
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around Coober Pedy
+    </h3>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Welcome to Northern Territory & South Australia Sign</h3>
-      <p>The Welcome to Northern Territory & South Australia Sign marks the border crossing between the two states along the Stuart Highway. It’s a classic outback photo opportunity for travellers making the long journey between South Australia and the NT.</p>
-    </div>
-  </div>
+    <ul class="other-accommodation-list">
+      <li>Big Winch 360</li>
+      <li>Cadney Homestead Roadhouse</li>
+      <li>Catacomb Church</li>
+      <li>Crocodile Harry’s Underground Nest &amp; Dugout</li>
+      <li>Faye’s Underground Home</li>
+      <li>Josephine’s Gallery and Kangaroo Orphanage</li>
+      <li>Old Coober Pedy Jail</li>
+      <li>Old Timers Mine</li>
+      <li>Serbian Orthodox Church</li>
+      <li>The Big Miner</li>
+      <li>The Mail Run</li>
+      <li>The Opal Bug</li>
+      <li>Tom’s Opal Mine</li>
+      <li>Umoona Opal Mine &amp; Museum</li>
+    </ul>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Johnston Geodetic Station</h3>
-      <p>Johnston Geodetic Station is a historic survey marker that once played a role in Australia’s national mapping and geodetic network. Located in remote desert surroundings, it highlights the importance of surveying in opening up the inland.</p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These landmarks, communities and roadside points of interest form part of Coober Pedy’s story and the broader Stuart Highway journey. ShowcasingOz TV will capture these locations during filming to help present the region’s landscapes, heritage and sense of place.
+    </p>
+
+    <div class="poi-grid">
 
       <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mirror Hill</h3>
-      <p>Mirror Hill is a unique lookout featuring mirrored installations that reflect the surrounding desert landscape. The site offers an artistic interpretation of the outback environment and provides a quiet place to stop, explore, and take photographs.</p>
-    </div>
-  </div>
+        <div class="poi-placeholder">Image Coming Soon</div>
 
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dog Fence</h3>
-      <p>The Dog Fence near Coober Pedy forms part of the world’s longest continuous fence, built to protect livestock from wild dogs. It stands as an impressive example of large-scale rural infrastructure and outback problem-solving.</p>
-    </div>
-  </div>
+        <div class="poi-content">
+          <h3>Antakirinja Country</h3>
 
-          <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Forever Place</h3>
-      <p>The Forever Place is a reflective and symbolic site near Coober Pedy, offering visitors a space to pause and contemplate the vastness and timeless nature of the outback. It is often associated with art, remembrance, and connection to country.</p>
-    </div>
-  </div>
+          <p>
+            The country surrounding Coober Pedy holds deep cultural significance for the Antakirinja people and other Traditional Owners of the region. Visitors should respect cultural protocols, access restrictions and the continuing connection between Aboriginal communities and Country.
+          </p>
+        </div>
+      </div>
 
-            <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Salt and Pepper</h3>
-      <p>Salt and Pepper is a distinctive rock formation in the Coober Pedy region, named for its contrasting colours against the desert plain. The formation adds visual interest to the landscape and is a popular spot for photography.</p>
-    </div>
-  </div>
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
 
-              <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Queenie's View</h3>
-      <p>Queenie’s View is a scenic lookout offering elevated views across the rugged desert terrain surrounding Coober Pedy. It’s an ideal spot to appreciate the scale of the outback and capture sunset or panoramic photos.</p>
-    </div>
-  </div>
+        <div class="poi-content">
+          <h3>Big Art Tyres</h3>
 
-                <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Antakirinja</h3>
-      <p>Antakirinja is an Aboriginal community and culturally significant area located near Coober Pedy. The region holds deep cultural importance for Traditional Owners and represents the enduring connection between people and country in the outback.</p>
-    </div>
-  </div>
+          <p>
+            Big Art Tyres is a distinctive roadside art installation featuring oversized painted tyres. The display reflects Coober Pedy’s creative character and the town’s ability to transform materials associated with transport and mining into memorable public art.
+          </p>
+        </div>
+      </div>
 
-                  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Breakway Scenic Point</h3>
-      <p>Breakaway Scenic Point provides access to the colourful mesas and escarpments of the Breakaways Conservation Park. Known for its dramatic formations and sweeping views, it is one of the most photographed natural attractions near Coober Pedy.</p>
-    </div>
-  </div>
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
 
-                    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Welcome to Coober Pedy Sign</h3>
-      <p>The Welcome to Coober Pedy Sign greets visitors arriving in the opal capital of the world. It’s a popular photo stop that marks entry into one of Australia’s most unique outback towns.</p>
-    </div>
-  </div>
+        <div class="poi-content">
+          <h3>Bon Bon Rest Area</h3>
 
-                      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Stuart Monument</h3>
-      <p>The Stuart Monument commemorates explorer John McDouall Stuart, who led successful expeditions through central Australia. The monument reflects the historical significance of exploration routes that later became major transport corridors.</p>
-    </div>
-  </div>
+          <p>
+            Bon Bon Rest Area provides a stopping point beside the Stuart Highway south of Coober Pedy. It gives long-distance travellers an opportunity to rest while experiencing the open plains and isolated character of South Australia’s northern outback.
+          </p>
+        </div>
+      </div>
 
-                      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Wild Flowers of Coober Pedy</h3>
-      <p>Wild Flowers of Coober Pedy showcases the surprising bursts of colour that appear in the desert after rain. Seasonal blooms transform the arid landscape and highlight the resilience of native plant life.</p>
-    </div>
-  </div>
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
 
-                        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Hutchison Monument</h3>
-      <p>The Hutchison Monument recognises individuals who contributed to the exploration, development, or history of the Coober Pedy region. It serves as a reminder of the hardships and achievements of early outback pioneers.</p>
-    </div>
-  </div>
+        <div class="poi-content">
+          <h3>Breakaways Scenic Lookout</h3>
 
-                          <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Bon Bon Rest Area</h3>
-      <p>Bon Bon Rest Area is a well-maintained stop along the Stuart Highway, offering travellers a place to rest, camp, and break long journeys. Located near Bon Bon Station, it’s a convenient and popular pause point for outback road trips.</p>
-    </div>
-  </div>
+          <p>
+            The Breakaways Scenic Lookout provides sweeping views across the colourful mesas and escarpments of Kanku-Breakaways Conservation Park. Changing light reveals layers of ochre, red, brown and cream across one of the region’s most recognisable landscapes.
+          </p>
+        </div>
+      </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Marla</h3>
-      <p>Marla is a small outback settlement in South Australia located along the Stuart Highway, serving as an important stopover for travellers heading between Coober Pedy and the Northern Territory. The town functions primarily as a roadhouse service centre, providing fuel, accommodation, and essential supplies in a remote and sparsely populated region. Surrounded by arid landscapes and vast open plains, Marla reflects the practical, no-frills nature of life in Australia’s interior.</p>
-    </div>
-  </div>
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
 
-</div>
+        <div class="poi-content">
+          <h3>Dog Fence</h3>
+
+          <p>
+            The Dog Fence near Coober Pedy forms part of one of the world’s longest fences. Constructed to protect pastoral country from dingoes and wild dogs, it demonstrates the enormous scale of rural infrastructure across Australia’s inland regions.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Hutchison Monument</h3>
+
+          <p>
+            The Hutchison Monument contributes to the collection of local markers and memorials that record people and events connected with Coober Pedy’s development. It forms part of the historical landscape encountered while exploring the town.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Johnston Geodetic Station</h3>
+
+          <p>
+            Johnston Geodetic Station is associated with Australia’s surveying and national mapping network. Its remote location demonstrates the extensive fieldwork required to measure and map the vast interior of the continent.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Marla</h3>
+
+          <p>
+            Marla is a remote Stuart Highway settlement north of Coober Pedy. It provides fuel, accommodation, meals and essential supplies for travellers continuing towards the Northern Territory or turning onto the Oodnadatta Track.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Mirror Hill</h3>
+
+          <p>
+            Mirror Hill combines reflective installations with the surrounding desert environment. The mirrored surfaces interact with the changing sky, light and landscape, creating an unusual photographic point of interest near Coober Pedy.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Queenie’s View</h3>
+
+          <p>
+            Queenie’s View provides an elevated outlook across the rugged desert terrain surrounding Coober Pedy. The location offers broad views of the landscape and is particularly striking when the low light brings out the colours of the outback.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Salt and Pepper</h3>
+
+          <p>
+            Salt and Pepper is a distinctive formation in the Coober Pedy region, named for its contrasting colours. Its appearance adds another unusual feature to the stark geology and broad desert views surrounding the town.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Spaceship from Pitch Black</h3>
+
+          <p>
+            This surviving film prop is associated with the science-fiction film <em>Pitch Black</em>, which used the landscapes around Coober Pedy during production. The prop reflects the region’s continuing appeal as a setting for films requiring an otherworldly environment.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Stuart Monument</h3>
+
+          <p>
+            The Stuart Monument commemorates explorer John McDouall Stuart and the expeditions that crossed central Australia. The Stuart Highway follows a major inland transport corridor bearing his name.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>The Forever Place</h3>
+
+          <p>
+            The Forever Place is a reflective local site associated with art, remembrance and the enduring character of the outback. Its isolated setting encourages visitors to pause and consider the scale and stillness of the surrounding landscape.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Welcome to Coober Pedy Sign</h3>
+
+          <p>
+            The Welcome to Coober Pedy Sign marks arrival in the town internationally recognised for opal mining and underground living. It has become a popular photograph for travellers completing the long Stuart Highway journey.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Welcome to Northern Territory &amp; South Australia Sign</h3>
+
+          <p>
+            The state and territory border signs mark the crossing between South Australia and the Northern Territory along the Stuart Highway. Although well north of Coober Pedy, they form part of the broader overland journey through Australia’s centre.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Wildflowers of Coober Pedy</h3>
+
+          <p>
+            Seasonal wildflowers can bring unexpected colour to the arid landscape following suitable rainfall. Their brief appearance demonstrates the resilience of native plants adapted to the region’s demanding desert conditions.
+          </p>
+        </div>
+      </div>
+
+    </div>
 
     <!-- ACCOMMODATION -->
- <h2>🏨 Stay Where We Showcase — Coober Pedy</h2>
+    <h2>🏨 Stay Where We Showcase — Coober Pedy</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Coober Pedy? Explore accommodation options in and around this iconic outback opal town while discovering
-  the underground lifestyle, desert landscapes, and unique experiences that make Coober Pedy one of Australia’s most unforgettable destinations.
-</p>
+    <p class="accommodation-intro">
+      Planning a stay in Coober Pedy? Explore hotels, motels, caravan parks and bed-and-breakfast accommodation while discovering the underground lifestyle, opal-mining heritage and desert landscapes that make Coober Pedy one of Australia’s most distinctive destinations.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay. We help people discover where to go, what to experience and where to base themselves as they explore Australia’s cities, towns and hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy"
-     target="_blank"
-     class="accommodation-link">
-    View All Coober Pedy Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober%2520Pedy%252C%2520South%2520Australia%252C%2520Australia"
+         target="_blank"
+         rel="noopener sponsored"
+         class="accommodation-link">
+        View All Coober Pedy Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Coober Pedy</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Coober Pedy
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally produced video, photography and destination-led storytelling that places their property in front of travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html"
+         class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Accommodation Coming Soon
+        </div>
+      </div>
+    </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Coober Pedy</h3>
-<div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Coober Pedy
+    </h3>
 
-  <div class="other-stay-item"><span>Coober Pedy Experience Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>Desert Cave Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>BIG4 Stuart Range Outback Resort</span>
 
-  <div class="other-stay-item"><span>BIG4 Stuart Range Outback Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2520Stuart%2520Range%2520Outback%2520Resort%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Radeka Downunder Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Coober Pedy Experience Motel</span>
 
-  <div class="other-stay-item"><span>Lookout Cave Underground Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober%2520Pedy%2520Experience%2520Motel%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>The Underground Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Desert Cave Hotel</span>
 
-  <div class="other-stay-item"><span>Opal Inn Hotel Motel Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDesert%2520Cave%2520Hotel%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Venushill Bed and Breakfast</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Desert Dwellers Underground B&amp;B</span>
 
-  <div class="other-stay-item"><span>Dug Out B&B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDesert%2520Dwellers%2520Underground%2520B%2526B%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Underground Bed & Breakfast</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Down to Erth B&amp;B</span>
 
-  <div class="other-stay-item"><span>Riba's Caravan Park & Underground Camping</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDown%2520to%2520Erth%2520B%2526B%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Oasis Tourist Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Dug Out B&amp;B</span>
 
-  <div class="other-stay-item"><span>Di's Dugouts</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDug%2520Out%2520B%2526B%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Mud Hut Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Lookout Cave Underground Motel</span>
 
-  <div class="other-stay-item"><span>Coober Pedy Accommodations</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLookout%2520Cave%2520Underground%2520Motel%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Holly Place & 894 Holly Court</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Mud Hut Motel</span>
 
-  <div class="other-stay-item"><span>Ali's Underground Studio</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMud%2520Hut%2520Motel%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Desert Gum Grund Street</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Oasis Coober Pedy Tourist Park</span>
 
-  <div class="other-stay-item"><span>Zen Underground</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOasis%2520Coober%2520Pedy%2520Tourist%2520Park%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Desert View Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Opal Inn Hotel, Motel and Caravan Park</span>
 
-  <div class="other-stay-item"><span>Agva Opal Accomodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOpal%2520Inn%2520Hotel%2520Motel%2520Caravan%2520Park%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>532 Grund Street Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Radeka Downunder Underground Motel</span>
 
-  <div class="other-stay-item"><span>Coober Pedy Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRadeka%2520Downunder%2520Underground%2520Motel%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>The Opal Cave Bunkhouse</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Riba’s Underground Camping and Caravan Park</span>
 
-  <div class="other-stay-item"><span>Desert Dwellers Underground B&B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRibas%2520Underground%2520Camping%2520and%2520Caravan%2520Park%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>City Centre Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>The Underground Motel</span>
 
-  <div class="other-stay-item"><span>Jake B&B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Underground%2520Motel%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Bryant Hill Dugout</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Underground Bed &amp; Breakfast</span>
 
-  <div class="other-stay-item"><span>Down to Erth B&B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DUnderground%2520Bed%2520%2526%2520Breakfast%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Cozy Cave Coober Pedy</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <span>Venushill B&amp;B</span>
 
-  <div class="other-stay-item"><span>Stunning Dugout Cave</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVenushill%2520B%2526B%252C%2520Coober%2520Pedy%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Breakaway Views 374 Alp Street</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+    </div>
 
-  <div class="other-stay-item"><span>Comfort Inn Coober Pedy Experience</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links, which means we may earn a small commission if you make a booking, at no extra cost to you.
+    </p>
 
-  <div class="other-stay-item"><span>Tom Cat Hill Road</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Pop’n’nin Dugout Accommodation at Coober Pedy Views</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Underwood Court Fresh Dugout</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>PO Box 2 Underground Residence</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Earthworm 2 House - Light Filled Underground House</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Undergound Gem - Apartment</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Opal House - Apartment</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Cave Place Units</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>AGVA Opal</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Venushill B&B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Green Opal</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Lot 1002 Underground Home</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Desert Gum Grund Street</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoober+Pedy" target="_blank" class="accommodation-link">View / Book</a></div>
-
-</div>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -776,7 +912,11 @@ footer .gst-disclaimer {
 
     <p>
       📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
