@@ -4,35 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Charleville (QLD) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Charleville, QLD — a major outback centre known for its rich pastoral history, space and science attractions, and role as a gateway to Queensland’s Channel Country." />
-  <meta name="keywords" content="Charleville QLD, Charleville outback, Channel Country Queensland, Charleville attractions, Charleville accommodation, outback travel Queensland, western Queensland towns, Australian outback destinations, ShowcasingOz TV" />
 
+  <meta
+    name="description"
+    content="Discover Charleville in Outback Queensland with ShowcasingOz TV, including space experiences, bilby conservation, aviation history, heritage landmarks, museums and accommodation."
+  >
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="keywords"
+    content="Charleville QLD, Charleville attractions, Charleville accommodation, Charleville Cosmos Centre, Charleville Bilby Experience, Hotel Corones, Outback Queensland, Charleville Water Tower Art, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -40,328 +59,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – CHARLEVILLE ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-                        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +371,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,207 +396,570 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/charleville.jpg"
-       alt="Charleville Queensland"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/charleville.jpg"
+      alt="Charleville in Outback Queensland"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Charleville (QLD)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Charleville is a significant regional centre located in south-west Queensland, serving as a key hub for the surrounding outback and Channel Country regions. Positioned along the Warrego River, the town plays an important role in supporting pastoral communities, travellers, and essential services across a vast and remote area of the state.
-</p>
+    <h1>Charleville (QLD)</h1>
 
-<p>
-Established in the late 19th century, Charleville developed as a service town for cattle and sheep stations, with pastoralism forming the backbone of its economy for generations. The town’s history is closely linked to the wool industry, stock routes, and the challenges of life in Australia’s arid interior, shaping a strong and resilient local identity.
-</p>
+    <p>
+      Charleville is a major regional centre in south-western Queensland,
+      positioned beside the Warrego River and surrounded by the open landscapes
+      of the Mulga Lands. The town provides commercial, health, education,
+      transport and community services across an immense area of Outback
+      Queensland.
+    </p>
 
-<p>
-Charleville is widely recognised for its contributions to science, aviation, and communication in remote Australia. The town is home to major attractions that explore space science, radio communications, and the history of the Royal Flying Doctor Service, highlighting Charleville’s long-standing role in connecting isolated communities to vital services and the wider world.
-</p>
+    <p>
+      The town developed during the nineteenth century as pastoral activity
+      expanded across western Queensland. Sheep stations, cattle properties,
+      wool production and regional trade became central to Charleville’s growth,
+      while its position on important road, rail and stock routes strengthened
+      its role as a service centre.
+    </p>
 
-<p>
-As a larger outback centre, Charleville offers a broad range of accommodation, dining, and visitor facilities, making it a popular stop for travellers exploring western Queensland. Its museums, heritage buildings, parks, and cultural attractions provide insight into both historic and contemporary outback life, while the town’s welcoming atmosphere reflects the strong sense of community that defines the region.
-</p>
+    <p>
+      Charleville’s railway connection reinforced its importance as a transport
+      hub and helped connect remote communities with eastern Queensland. Aviation
+      later became another defining part of the town’s story, particularly
+      through early Qantas operations, the Royal Flying Doctor Service and the
+      establishment of a major United States Army Air Forces base during the
+      Second World War.
+    </p>
 
-<p>
-Surrounded by wide floodplains, open skies, and classic red-earth landscapes, Charleville represents the meeting point between frontier history and modern outback living. It is a town that balances tradition with innovation, offering visitors a deeper understanding of how regional centres continue to support and sustain life in Australia’s inland.
-</p>
+    <p>
+      Today, Charleville is known nationally for its combination of astronomy,
+      wildlife conservation, aviation history and outback heritage. The clear
+      inland skies support observatory and planetarium experiences, while the
+      Charleville Bilby Experience promotes awareness of one of Australia’s most
+      threatened native animals.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Charleville as part of our national filming journey — highlighting its regional importance, scientific achievements, pastoral heritage, and the welcoming outback spirit that makes the town a cornerstone of western Queensland.
-</p>
+    <p>
+      Historic buildings, museums and visitor experiences tell stories of
+      pastoral settlement, communications, medicine, aviation and everyday life
+      in remote Queensland. Hotel Corones remains one of the town’s most
+      recognisable buildings and reflects the confidence and ambition that
+      accompanied Charleville’s growth during the early twentieth century.
+    </p>
 
+    <p>
+      Charleville also provides a substantial range of accommodation, shops,
+      dining and visitor services, making it an important base for travellers
+      continuing towards Quilpie, Cunnamulla, Tambo, Augathella and other
+      destinations across western Queensland.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, history and
+      experiences that define Charleville as part of our national filming
+      journey, highlighting its scientific attractions, bilby conservation,
+      aviation legacy, pastoral heritage and continuing importance to
+      communities across the Queensland outback.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Charleville Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Charleville</h3>
-  <ul class="other-accommodation-list">
-    <li>Charleville Cosmos Centre - Big Sky Observatory</li>
-    <li>Charleville Bilby Experience - Bilby Experience Tour</li>
-    <li>Charleville Historic House & Museum</li>
-    <li>Royal Flying Doctor Service Charleville Visitor Centre</li>
-    <li>Outback Date Farms - Tour</li>
-    <li>WWII Secret Base & Tour</li>
-    <li>Hotel Corones Tour</li>
-    <li>Charleville Cosmos Centre - Sun Viewing Our Star & Oasis in Space Planetarium Show</li>
-    <li>Outback Museum of Australia</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Charleville’s attractions bring together astronomy, wildlife conservation,
+      aviation, military history, pastoral heritage, local agriculture and the
+      story of vital services developed to support remote Australia.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Charleville’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Charleville Silo Art</h3>
-      <p>
-  Charleville Silo Art is a large-scale public artwork that celebrates the town’s people, pastoral heritage, and outback identity, transforming functional grain silos into a striking visual landmark and popular photo stop for visitors.
-</p>
+      <li>
+        <strong>Charleville Bilby Experience – Bilby Experience Tour</strong>
+        Learn about the greater bilby, the threats facing the species and the
+        conservation work supporting its survival. The guided experience gives
+        visitors an opportunity to see bilbies in a purpose-built nocturnal
+        environment while discovering their behaviour and ecological importance.
+      </li>
+
+      <li>
+        <strong>Charleville Cosmos Centre – Big Sky Observatory</strong>
+        Explore Charleville’s famously clear night skies during a guided
+        observatory experience. Powerful telescopes and knowledgeable guides
+        introduce visitors to planets, star clusters, nebulae and other objects
+        visible across the outback sky.
+      </li>
+
+      <li>
+        <strong>Charleville Cosmos Centre – Sun Viewing Our Star &amp; Oasis in Space Planetarium Show</strong>
+        Examine the Sun safely through specialised solar-viewing equipment before
+        taking a planetarium journey exploring Earth’s place within the solar
+        system and the conditions that make life possible.
+      </li>
+
+      <li>
+        <strong>Charleville Historic House &amp; Museum</strong>
+        Discover local history through collections of household items,
+        photographs, machinery, transport exhibits and community records housed
+        within one of Charleville’s significant historic buildings.
+      </li>
+
+      <li>
+        <strong>Hotel Corones Tour</strong>
+        Step inside Charleville’s landmark 1929 hotel and learn about its
+        architecture, aviation connections, famous guests and the remarkable
+        story of founder Harry Corones.
+      </li>
+
+      <li>
+        <strong>Outback Date Farms Tour</strong>
+        Visit a working family-operated date plantation and learn how dates are
+        cultivated, harvested and prepared under the demanding conditions of
+        south-western Queensland.
+      </li>
+
+      <li>
+        <strong>Outback Museum of Australia</strong>
+        Explore the natural, social and cultural history of Outback Australia
+        through a developing museum precinct near Charleville Airport, the
+        Cosmos Centre and the town’s Second World War heritage attractions.
+      </li>
+
+      <li>
+        <strong>Royal Flying Doctor Service Charleville Visitor Centre</strong>
+        Discover how aviation, medicine and radio communication were combined to
+        provide health care across remote Australia. Displays explain the history
+        of the Flying Doctor and the work undertaken from the Charleville base.
+      </li>
+
+      <li>
+        <strong>WWII Secret Base &amp; Tour</strong>
+        Learn about Charleville’s role as a strategically important United States
+        Army Air Forces base between 1942 and 1946 through an interactive
+        exhibition and guided tour of significant wartime locations.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Tours, sessions and experiences may require
+      advance bookings and operate at scheduled times.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These landmarks reflect Charleville’s community identity and preserve the
+      memory of significant events within the surrounding district.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Angellala Bridge Explosion Site Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Angellala Bridge Explosion Site</h3>
+
+          <p>
+            Located approximately 30 kilometres southwest of Charleville, this
+            memorial and interpretive site marks the location of the September
+            2014 road-train explosion that destroyed the former bridge. It also
+            recognises the courage of the emergency personnel who responded to
+            the incident.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Charleville Water Tower Art Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Charleville Water Tower Art</h3>
+
+          <p>
+            Painted by artist Guido van Helten, this large monochromatic mural
+            features children from the Charleville community. The water tower
+            forms part of the Australian Silo Art Trail and has become one of
+            the town’s most recognisable public artworks.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Angellala Bridge Monument</h3>
-      <p>
-The Angellala Bridge Monument commemorates the historic Angellala Creek crossing, recognising its importance as a key transport and stock route that supported early settlement and pastoral activity in the Charleville region.
-</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Charleville</h2>
+
+    <p class="accommodation-intro">
+      Charleville provides one of the largest selections of commercial
+      accommodation in south-western Queensland, including hotels, motels,
+      caravan parks and tourist parks. These properties offer convenient bases
+      for exploring the town’s astronomy, wildlife, heritage and aviation
+      experiences.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves while exploring Australia’s cities, towns and hidden
+      gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCharleville%252C%2BQueensland%252C%2BAustralia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        Search Charleville Accommodation on Booking.com
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Charleville
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure
+      through professionally produced video, photography and destination-led
+      storytelling that places their property in front of travellers actively
+      planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-   <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Charleville</h2>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Charleville
+    </h3>
 
-  <p class="accommodation-intro">
-    Planning a stay in Charleville? Explore accommodation options in and around this major outback centre while discovering
-    the pastoral history, science and space attractions, and regional importance that make Charleville a cornerstone of western Queensland.
-  </p>
+    <div class="other-accommodation-bookings">
 
-  <p class="accommodation-intro">
-    ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-    people discover where to go, what to experience, and where to base themselves as they explore
-    Australia’s cities, towns, and hidden gems.
-  </p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bailey Bar Caravan Park</span>
+          <small>
+            Charleville | Pet-friendly caravan park with cabins, powered sites
+            and visitor facilities within walking distance of the town centre.
+          </small>
+        </div>
 
-  <p style="text-align:center;">
-    <a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">
-      View All Charleville Accommodation
-    </a>
-  </p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBailey%2BBar%2BCaravan%2BPark%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <h3 class="other-accommodation-heading">Featured Accommodation Opportunities In Charleville</h3>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Baileybar Motor Inn</span>
+          <small>
+            Charleville | Motor inn accommodation located near the Bailey Bar
+            Caravan Park and the southern entrance to town.
+          </small>
+        </div>
 
-  <p class="accommodation-intro">
-    Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-    produced video, photography, and destination-led storytelling that places their property in front
-    of travellers actively planning where to stay.
-  </p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBaileybar%2BMotor%2BInn%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <p style="text-align:center;">
-    <a href="../accommodation-partners.html" class="accommodation-link">
-      Explore accommodation filming & feature options
-    </a>
-  </p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Cattle Camp Hotel</span>
+          <small>
+            Charleville | Country hotel with a detached motel wing containing
+            six air-conditioned accommodation units.
+          </small>
+        </div>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fcattle-camp.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Charleville Bush Caravan Park</span>
+          <small>
+            Charleville | Commercial bush-style caravan park with powered sites
+            and shared visitor facilities approximately two kilometres from town.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCharleville%2BBush%2BCaravan%2BPark%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Charleville Motel</span>
+          <small>
+            Charleville | Drive-up motel with several room categories, private
+            bathrooms, a swimming pool and guest recreation areas.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fcharleville-motel.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Cobb &amp; Co Caravan Park</span>
+          <small>
+            Charleville | Caravan park with nine on-site cabins, powered and
+            unpowered sites and facilities for caravans, motorhomes and larger
+            vehicles.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCobb%2Band%2BCo%2BCaravan%2BPark%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Cosmos Country Motor Inn</span>
+          <small>
+            Charleville | Centrally located motor inn providing motel rooms,
+            family accommodation, parking and accessible facilities.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fcosmos-country-motor-inn.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Evening Star Tourist Park</span>
+          <small>
+            Charleville | Tourist caravan park on the Adavale Road, approximately
+            eight kilometres west of the town centre.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEvening%2BStar%2BTourist%2BPark%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Hotel Corones</span>
+          <small>
+            Charleville | Heritage-listed country hotel offering traditional
+            hotel rooms, ensuite rooms and historically themed suites.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fcorones-charleville.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mulga Country Motor Inn</span>
+          <small>
+            Charleville | Motor inn set within landscaped grounds, offering
+            motel rooms, a swimming pool and guest facilities.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMulga%2BCountry%2BMotor%2BInn%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Rocks Motel</span>
+          <small>
+            Charleville | Modern motel with guest rooms, landscaped grounds,
+            swimming pool and an on-site restaurant.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2BRocks%2BMotel%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Waltzing Matilda Motor Inn</span>
+          <small>
+            Charleville | Centrally located motor inn within walking distance
+            of shops, cafés, restaurants and other town services.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fcharleville-waltzing-matilda-motor-inn.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Warrego Motel</span>
+          <small>
+            Charleville | Family-owned motel offering conventional motel rooms
+            and managed cabins opposite the railway station and visitor centre.
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWarrego%2BMotel%252C%2BCharleville%252C%2BQueensland%252C%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Charleville</h3>
-  <div class="other-accommodation-bookings">
+    <p class="accommodation-disclaimer">
+      This list includes qualifying hotels, motels, motor inns, caravan parks
+      and tourist parks in and around Charleville. Private holiday homes,
+      privately operated cottages and apartments, Airbnb listings, campgrounds
+      and RV-only bush parks are not included. Inclusion does not imply
+      partnership or endorsement. Some links on this page are affiliate links,
+      which means we may earn a small commission if you make a booking, at no
+      extra cost to you. Booking.com may not display every property when rooms
+      are unavailable or the property does not release inventory through the
+      platform.
+    </p>
 
-    <div class="other-stay-item"><span>Charleville Waltzing Matilda Motor Inn</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Rocks Motel</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Hotel Corones Charleville</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Charleville Motel</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Cattle Camp Hotel Charleville</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Warrego Motel Charleville</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Cosmos Country Motor Inn</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Mulga Country Motor Inn</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Bailey Bar Caravan Park</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Evening Star Tourist Park</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Charleville Bush Caravan Park and Cottage</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Baileybar Motor Inn</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-    <div class="other-stay-item"><span>Charleville Bush Cottage</span><a href="https://www.booking.com/searchresults.html?ss=Charleville" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  </div>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -600,10 +974,21 @@ The Angellala Bridge Monument commemorates the historic Angellala Creek crossing
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
