@@ -1,380 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Deniliquin NSW | Attractions, Landmarks & Accommodation | ShowcasingOz TV</title>
+
+  <meta
+    name="description"
+    content="Discover Deniliquin in New South Wales, including its attractions, heritage, Edward River landmarks, points of interest and local accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Deniliquin NSW, Deniliquin attractions, Deniliquin accommodation, Edward River, Peppin Heritage Centre, Deni Ute Muster, Riverina tourism, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  >
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <title>Deniliquin (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Deniliquin, NSW — a vibrant Riverina town on the Edward River, known for its strong agricultural heritage, river lifestyle, and iconic ute culture." />
-<meta name="keywords" content="Deniliquin NSW, Deniliquin Riverina, Edward River town, Deni Ute Muster, Riverina agriculture, Deniliquin attractions, Deniliquin accommodation, Murray region NSW, ShowcasingOz TV" />
-
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../style.css">
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #0E3557;
+    function gtag() {
+      dataLayer.push(arguments);
     }
 
-    /* ================= HEADER ================= */
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #333333;
+    }
+
+    /* HEADER */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      display: block;
+      width: auto;
+      height: 65px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
-
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    nav a:hover,
+    nav a:focus {
+      color: #E87722;
     }
 
-    /* ================= HERO ================= */
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    /* HERO */
+
     .hero {
-      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 320px;
-      background-color: #ddd;
+      padding: 20px;
+      color: #ffffff;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
+        url("../images/towns/deniliquin.jpg") center center / cover no-repeat;
     }
 
-    /* ================= CONTENT ================= */
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 3rem;
+      line-height: 1.1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    /* MAIN CONTENT */
+
     .content {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 45px 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
-
-    p { line-height:1.6; color:#333; }
-
-    /* ================= PLACEHOLDERS ================= */
-    .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .content h2 {
+      margin: 45px 0 20px;
+      color: #0E3557;
+      font-size: 2rem;
+      line-height: 1.25;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .content h2:first-child {
+      margin-top: 0;
     }
 
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    .content h3 {
+      color: #0E3557;
+      line-height: 1.3;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+    .content p {
+      margin: 0 0 18px;
+      color: #333333;
+      font-size: 1.05rem;
+      line-height: 1.75;
     }
 
-    .accommodation-content {
-      padding:15px;
+    /* DOCUMENTARY */
+
+    .documentary-placeholder {
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 35px;
+      background: #eef2f5;
+      border: 2px dashed #9aa7b2;
+      border-radius: 12px;
+      color: #0E3557;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: center;
     }
 
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
+    /* ATTRACTIONS */
+
+    .attractions-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .attraction-item {
+      padding: 20px;
+      background: #f7f9fb;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .attraction-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+    }
+
+    .attraction-item p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    /* LANDMARKS AND POIS */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #e5e9ed;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+    }
+
+    .poi-image-placeholder {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #dfe7ed, #edf2f5);
+      color: #68737D;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .poi-card-content {
+      padding: 20px;
+    }
+
+    .poi-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+    }
+
+    .poi-card p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    /* ACCOMMODATION */
+
+    .accommodation-intro {
+      text-align: left;
     }
 
     .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 22px;
+      background: #E87722;
+      border-radius: 8px;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease;
     }
 
-    .accommodation-link:hover {
-      text-decoration:underline;
+    .accommodation-link:hover,
+    .accommodation-link:focus {
+      background: #c95f16;
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 22px 0 35px;
+    }
+
+    .accommodation-card {
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #e1e6ea;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    .accommodation-placeholder {
+      min-height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: #f1f4f6;
+      color: #68737D;
+      font-weight: 700;
+      text-align: center;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 35px;
+      font-size: 1.4rem;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f7f9fb;
+      border: 1px solid #dfe5e9;
+      border-radius: 10px;
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.08rem;
+    }
+
+    .stay-details small {
+      display: block;
+      color: #5f6870;
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 10px 18px;
+      background: #0E3557;
+    }
+
+    .other-stay-item .accommodation-link:hover,
+    .other-stay-item .accommodation-link:focus {
+      background: #082742;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      margin-top: 25px !important;
+      color: #666666 !important;
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* FOOTER */
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      padding: 30px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 18px;
+      line-height: 2;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer a {
+      margin: 0 8px;
+      color: #E87722;
+      text-decoration: none;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – DENILIQUIN ================= */
+    footer p {
+      margin: 0;
+      color: #ffffff;
+      line-height: 1.7;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    .gst-disclaimer {
+      font-size: 0.9rem;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    /* RESPONSIVE LAYOUT */
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    @media (max-width: 900px) {
+      nav {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 0;
+        background: #0E3557;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+      nav.active {
+        display: flex;
+      }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+      nav a {
+        margin: 0;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
 
-.poi-content h3 {
-  text-align: center;
-}
+      .menu-btn {
+        display: block;
+      }
+    }
 
-.poi-content p {
-  text-align: center;
-}
+    @media (max-width: 700px) {
+      .hero {
+        height: 280px;
+      }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+      .hero h1 {
+        font-size: 2.35rem;
+      }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+      .hero p {
+        font-size: 1.08rem;
+      }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+      .content {
+        padding: 35px 18px;
+      }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+      .content h2 {
+        font-size: 1.65rem;
+      }
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+      .poi-grid {
+        grid-template-columns: 1fr;
+      }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+      .other-stay-item {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-    .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER / NAVIGATION -->
+
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-      <nav id="menu">
+      <a href="/" aria-label="ShowcasingOz TV home">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span
+        class="menu-btn"
+        id="menu-btn"
+        role="button"
+        tabindex="0"
+        aria-label="Open navigation menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </span>
+
+      <nav id="menu" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
         <a href="/towns/index.html">Towns</a>
@@ -388,210 +509,526 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <!-- HERO -->
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/deniliquin.jpg"
-       alt="Deniliquin New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Deniliquin, New South Wales</h1>
 
-<!-- MAIN CONTENT -->
-<section class="content">
-
-  <h1>Deniliquin (NSW)</h1>
-
-<p>
-Deniliquin is a vibrant regional town in the Riverina district of southern New South Wales, located on the banks of the Edward River. Known for its strong agricultural base and lively community culture, Deniliquin plays a key role in supporting farming and irrigation across the region.
-</p>
-
-<p>
-Established in the mid-19th century, Deniliquin developed as a river crossing and service centre for surrounding pastoral and cropping districts. The town grew alongside the expansion of sheep grazing, cropping, and irrigation, becoming an important hub for wool production and agricultural trade.
-</p>
-
-<p>
-The Edward River is central to Deniliquin’s identity, providing opportunities for recreation, water sports, and riverside living. Tree-lined banks, parks, and river access points create a relaxed environment that complements the town’s rural setting.
-</p>
-
-<p>
-Deniliquin is widely recognised for its strong community spirit and events, most notably the Deni Ute Muster, which celebrates Australian rural culture and attracts visitors from across the country. This event reflects the town’s connection to farming life and its unique place in regional Australia.
-</p>
-
-<p>
-Today, Deniliquin offers a wide range of services, retail outlets, accommodation options, and community facilities. Heritage buildings, sporting infrastructure, and local attractions contribute to a dynamic and welcoming atmosphere.
-</p>
-
-<p>
-Surrounded by productive farmland, irrigation channels, and expansive Riverina landscapes, Deniliquin captures the character of one of Australia’s key agricultural regions. The town blends tradition with modern regional living, supported by strong community pride and a deep connection to land and water.
-</p>
-
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Deniliquin as part of our national filming journey — highlighting its agricultural heritage, Edward River lifestyle, and the vibrant community spirit that continues to make Deniliquin a standout Riverina destination.
-</p>
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Deniliquin</h3>
-  <ul class="other-accommodation-list">
-    <li>The Depot Historic Collection</li>
-    <li>Peppin Heritage Centre</li>
-    <li>Deniliquin & District Historical Society Museum</li>
-    <li>Pretty Pine Hotel & Smoko Sculpture</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Deniliquin’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Waring Gardens</h3>
       <p>
-Waring Gardens is a central green space in Deniliquin featuring landscaped lawns, shaded areas, and walking paths. The gardens provide a peaceful setting for relaxation and community events, reflecting the town’s emphasis on outdoor lifestyle and public spaces.
-</p>
+        Edward River landscapes, Riverina heritage and the proud rural
+        character of one of southern New South Wales’ best-known regional towns.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Deniliquin Water Tower Art</h3>
+  <main class="content">
+
+    <!-- ABOUT DENILIQUIN -->
+
+    <section aria-labelledby="about-deniliquin">
+      <h2 id="about-deniliquin">Discover Deniliquin</h2>
+
       <p>
-The Deniliquin Water Tower Art is a large-scale mural that celebrates local identity and rural culture. The artwork adds a contemporary visual landmark to the town and highlights the growing role of public art in regional Australia.
-</p>
-    </div>
-  </div>
-</div>
+        Deniliquin is a major regional town in southern New South Wales,
+        situated on the banks of the Edward River within the wider Murray and
+        Riverina region. Commonly known as Deni, the town is an important
+        service centre for the surrounding agricultural districts and combines
+        a strong rural economy with an active riverside lifestyle.
+      </p>
+
+      <p>
+        The district is part of the traditional country of the Barapa Barapa
+        and Wamba Wamba peoples, whose cultural connections with the rivers,
+        wetlands and surrounding landscape extend across generations. The
+        Edward River and its associated waterways remain central to the
+        environmental and cultural identity of the region.
+      </p>
+
+      <p>
+        European settlement developed during the nineteenth century as
+        pastoral activity expanded across the Riverina. Deniliquin became an
+        important river crossing, livestock centre and supply point for nearby
+        sheep and cattle properties. Wool, grain, rice and irrigated
+        agriculture have all contributed to the district’s economic history.
+      </p>
+
+      <p>
+        The town’s relationship with the river continues to shape everyday
+        life. River red gums, sandy beaches and forested reserves provide
+        settings for fishing, boating, kayaking, water-skiing, walking and
+        wildlife observation. These natural areas sit close to the town centre,
+        allowing visitors to experience the river without travelling far from
+        local services.
+      </p>
+
+      <p>
+        Deniliquin is also nationally recognised for the Deni Ute Muster,
+        which celebrates rural culture, music, working vehicles and country
+        communities. The event has helped introduce the town to visitors from
+        throughout Australia, while local museums and heritage collections
+        preserve stories extending well beyond its modern event identity.
+      </p>
+
+      <p>
+        Historic buildings, community gardens, public artworks and
+        agricultural displays provide further insight into Deniliquin’s
+        development. The Peppin Heritage Centre documents the influence of the
+        locally developed Peppin Merino, while other collections explore
+        transport, industry, household life and the experiences of local
+        families.
+      </p>
+
+      <p>
+        Today, Deniliquin supports a diverse range of shops, hospitality
+        businesses, accommodation providers, sporting organisations and
+        community services. Its location makes it both a destination in its
+        own right and a useful base for exploring the Edward River, Murray
+        Valley Regional Park and nearby rural communities.
+      </p>
+
+      <p>
+        ShowcasingOz TV will capture the people, businesses, landscapes and
+        stories that define Deniliquin. Our visit will explore the town’s
+        agricultural heritage, Edward River lifestyle, community identity and
+        continuing role as one of the most distinctive regional centres in
+        southern New South Wales.
+      </p>
+    </section>
+
+    <!-- DOCUMENTARY -->
+
+    <section aria-labelledby="deniliquin-documentary">
+      <h2 id="deniliquin-documentary">Watch Our Deniliquin Documentary</h2>
+
+      <div class="documentary-placeholder">
+        The full ShowcasingOz TV Deniliquin documentary will appear here
+        following our visit and filming.
+      </div>
+    </section>
+
+    <!-- ATTRACTIONS -->
+
+    <section aria-labelledby="deniliquin-attractions">
+      <h2 id="deniliquin-attractions">
+        Attractions In and Around Deniliquin
+      </h2>
+
+      <div class="attractions-list">
+
+        <article class="attraction-item">
+          <h3>Deniliquin &amp; District Historical Society Museum</h3>
+
+          <p>
+            Explore a locally assembled collection preserving the history of
+            Deniliquin and its surrounding pastoral district. Displays,
+            photographs, documents and community artefacts provide insight into
+            the people, businesses and events that contributed to the town’s
+            development.
+          </p>
+        </article>
+
+        <article class="attraction-item">
+          <h3>Peppin Heritage Centre</h3>
+
+          <p>
+            Discover Deniliquin’s pastoral, agricultural and community history
+            within a significant heritage building. The centre examines the
+            development of the Peppin Merino, local wool production and the
+            lives of people who helped shape the district, while also serving
+            as an important visitor information point.
+          </p>
+        </article>
+
+        <article class="attraction-item">
+          <h3>Pretty Pine Hotel &amp; Smoko Sculpture</h3>
+
+          <p>
+            Located north-west of Deniliquin, the historic Pretty Pine Hotel
+            recalls the district’s coaching, pastoral and highway heritage.
+            The nearby Smoko sculpture provides a distinctive roadside feature
+            and celebrates the familiar rural tradition of taking a break
+            during the working day.
+          </p>
+        </article>
+
+        <article class="attraction-item">
+          <h3>The Depot Historic Collection</h3>
+
+          <p>
+            View an extensive private collection of historic vehicles,
+            machinery, memorabilia and everyday objects. The Depot presents
+            changing transport and social history through carefully arranged
+            displays that appeal to visitors interested in motoring,
+            engineering and Australian life from earlier generations.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- LANDMARKS / POINTS OF INTEREST -->
+
+    <section aria-labelledby="deniliquin-pois">
+      <h2 id="deniliquin-pois">
+        Landmarks, Points of Interest &amp; Hidden Gems
+      </h2>
+
+      <div class="poi-grid">
+
+        <article class="poi-card">
+          <div class="poi-image-placeholder">
+            Deniliquin Water Tower Art Image Coming Soon
+          </div>
+
+          <div class="poi-card-content">
+            <h3>Deniliquin Water Tower Art</h3>
+
+            <p>
+              This large-scale mural has transformed a functional water tower
+              into a prominent piece of public art. The imagery reflects
+              Deniliquin’s local identity and rural character while creating a
+              distinctive visual landmark for visitors entering or exploring
+              the town.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-image-placeholder">
+            Waring Gardens Image Coming Soon
+          </div>
+
+          <div class="poi-card-content">
+            <h3>Waring Gardens</h3>
+
+            <p>
+              Located close to the centre of Deniliquin, Waring Gardens
+              provides landscaped lawns, mature trees, shaded seating and
+              walking areas. The gardens serve as a peaceful public space and
+              community gathering point within easy reach of the town’s shops
+              and services.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
 
     <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Deniliquin</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Deniliquin? Explore accommodation options in and around this vibrant Riverina town while discovering
-  the Edward River lifestyle, agricultural heritage, and community spirit that make Deniliquin a standout destination in southern New South Wales.
-</p>
+    <section aria-labelledby="deniliquin-accommodation">
+      <h2 id="deniliquin-accommodation">
+        🏨 Stay Where We Showcase — Deniliquin
+      </h2>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+      <p class="accommodation-intro">
+        Planning a stay in Deniliquin? Explore accommodation in and around this
+        welcoming Riverina town while discovering its Edward River landscapes,
+        agricultural heritage, museums, public art and strong rural community
+        identity.
+      </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin"
-     target="_blank"
-     class="accommodation-link">
-    View All Deniliquin Accommodation
-  </a>
-</p>
+      <p class="accommodation-intro">
+        ShowcasingOz TV is designed to do more than help travellers find a
+        place to stay. We help people discover where to go, what to experience
+        and where to base themselves while exploring Australia’s cities,
+        towns and hidden gems.
+      </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Deniliquin</h3>
+      <p style="text-align: center;">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin%252C%2520New%2520South%2520Wales%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View All Deniliquin Accommodation
+        </a>
+      </p>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+      <h3 class="other-accommodation-heading">
+        Featured Accommodation Opportunities In and Around Deniliquin
+      </h3>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+      <p class="accommodation-intro">
+        Accommodation partners featured on ShowcasingOz TV receive premium
+        exposure through professionally produced video, photography and
+        destination-led storytelling that places their property in front of
+        travellers actively planning where to stay.
+      </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+      <p style="text-align: center;">
+        <a
+          href="../accommodation-partners.html"
+          class="accommodation-link"
+        >
+          Explore Accommodation Filming &amp; Feature Options
+        </a>
+      </p>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Deniliquin</h3>
-<div class="other-accommodation-bookings">
+      <div class="accommodation-grid">
+        <div class="accommodation-card">
+          <div class="accommodation-placeholder">
+            Featured Deniliquin Accommodation Coming Soon
+          </div>
+        </div>
+      </div>
 
-  <div class="other-stay-item"><span>Deniliquin Country Club Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+      <h3 class="other-accommodation-heading">
+        Other Accommodation In and Around Deniliquin
+      </h3>
 
-  <div class="other-stay-item"><span>Deniliquin Pioneer Tourist Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>Deni Golf Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>BIG4 Deniliquin Holiday Park</strong>
+            <small>
+              Holiday park, cabins and caravan sites · Deniliquin
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>Coach House Hotel Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2520Deniliquin%2520Holiday%2520Park"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <div class="other-stay-item"><span>Centrepoint Motel Deniliquin</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Centrepoint Motel Deniliquin</strong>
+            <small>
+              Motel and serviced apartments · Deniliquin town centre
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>Riviana Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCentrepoint%2520Motel%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <div class="other-stay-item"><span>BIG4 Deniliquin Holiday Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Coach House Hotel</strong>
+            <small>
+              Hotel and motel accommodation · Deniliquin town centre
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>Deniliquin Riverside Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCoach%2520House%2520Hotel%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <div class="other-stay-item"><span>Deniliquin Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Deni Car-O-Tel &amp; Caravan Park</strong>
+            <small>
+              Cabins and caravan park · Deniliquin
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>McLean Beach Holiday Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeni%2520Car-O-Tel%2520and%2520Caravan%2520Park%252C%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <div class="other-stay-item"><span>Cottages on Edward</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Deni Golf Resort</strong>
+            <small>
+              Motel rooms, cabins and family units · Deniliquin Golf Course
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>Settlement Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeni%2520Golf%2520Resort%252C%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <div class="other-stay-item"><span>Edward River Hotel (The Buncha)</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Deniliquin Country Club Motor Inn</strong>
+            <small>
+              Motor inn · Near Deniliquin Bowling Club and town centre
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>The Bottle - O - Sportsmans Arms Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin%2520Country%2520Club%2520Motor%2520Inn"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <div class="other-stay-item"><span>Pretty Pine Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Deniliquin Motel</strong>
+            <small>
+              Motel · Central Deniliquin
+            </small>
+          </div>
 
-  <div class="other-stay-item"><span>Deni Car-O-Tel & Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin" target="_blank" class="accommodation-link">View / Book</a></div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin%2520Motel%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-</div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Deniliquin Pioneer Tourist Park</strong>
+            <small>
+              Cabins, motel room and caravan park · Cobb Highway, Deniliquin
+            </small>
+          </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDeniliquin%2520Pioneer%2520Tourist%2520Park"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-</section>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>McLean Beach Holiday Park</strong>
+            <small>
+              Holiday park, cabins and caravan sites · Edward River, Deniliquin
+            </small>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMcLean%2520Beach%2520Holiday%2520Park%252C%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Park Lane Deniliquin</strong>
+            <small>
+              Holiday park, cabins and caravan sites · Edward River, Deniliquin
+            </small>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPark%2520Lane%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Riviana Motel</strong>
+            <small>
+              Motel · Hetherington Street, Deniliquin
+            </small>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRiviana%2520Motel%252C%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Settlement Motor Inn</strong>
+            <small>
+              Motor inn · Victoria Street, Deniliquin
+            </small>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSettlement%2520Motor%2520Inn%252C%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Sportsmans Arms Hotel</strong>
+            <small>
+              Hotel and motel rooms · Deniliquin
+            </small>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSportsmans%2520Arms%2520Hotel%252C%2520Deniliquin"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        This list is provided for visitor awareness only. Inclusion does not
+        imply partnership or endorsement. Some links on this page are affiliate
+        links, which means we may earn a small commission if you make a
+        booking, at no extra cost to you.
+      </p>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
+
   <footer>
     <div class="footer-links">
       <a href="/">Home</a> |
@@ -607,11 +1044,42 @@ The Deniliquin Water Tower Art is a large-scale mural that celebrates local iden
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
+
+  <!-- MOBILE MENU -->
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    function toggleMenu() {
+      const isActive = menu.classList.toggle('active');
+      menuBtn.setAttribute('aria-expanded', String(isActive));
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    menuBtn.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
+    });
+  </script>
 
 </body>
 </html>
