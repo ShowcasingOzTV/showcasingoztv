@@ -1,379 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daly Waters NT | Attractions, Landmarks & Accommodation | ShowcasingOz TV</title>
 
-  <title>Daly Waters (NT) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Daly Waters, NT — a historic outback stop along the Stuart Highway, known for its iconic pub, aviation heritage, and early telegraph station in the Northern Territory." />
-<meta name="keywords" content="Daly Waters NT, Daly Waters outback, Daly Waters Pub, Stuart Highway stops, Daly Waters aviation history, telegraph station NT, Northern Territory travel, outback Australia destinations, ShowcasingOz TV" />
+  <meta
+    name="description"
+    content="Discover Daly Waters in the Northern Territory, including the historic Daly Waters Pub, aviation complex, telegraph history, local landmarks and accommodation."
+  >
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <style>
-    body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #0E3557;
+    function gtag() {
+      dataLayer.push(arguments);
     }
 
-    /* ================= HEADER ================= */
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #333333;
+    }
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      display: block;
+      height: 65px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
-
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    nav a:hover,
+    nav a:focus {
+      color: #E87722;
     }
 
-    /* ================= HERO ================= */
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+
     .hero {
-      width: 100%;
+      position: relative;
       height: 320px;
-      background-color: #ddd;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.5)),
+        url("../images/towns/daly-waters.jpg") center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 20px;
     }
 
-    /* ================= CONTENT ================= */
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 3rem;
+      line-height: 1.1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
     .content {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 45px 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
-
-    p { line-height:1.6; color:#333; }
-
-    /* ================= PLACEHOLDERS ================= */
-    .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .content h2 {
+      color: #0E3557;
+      font-size: 2rem;
+      margin: 45px 0 20px;
+      line-height: 1.25;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .content h2:first-child {
+      margin-top: 0;
     }
 
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    .content h3 {
+      color: #0E3557;
+      line-height: 1.3;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+    .content p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin: 0 0 18px;
     }
 
-    .accommodation-content {
-      padding:15px;
+    .documentary-placeholder {
+      min-height: 320px;
+      background: #eef2f5;
+      border: 2px dashed #9aa7b2;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 35px;
+      text-align: center;
+      color: #0E3557;
+      font-size: 1.25rem;
+      font-weight: 700;
     }
 
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
+    .attractions-list {
+      display: grid;
+      gap: 18px;
     }
 
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+    .attraction-item {
+      background: #f7f9fb;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
     }
 
-    .accommodation-link:hover {
-      text-decoration:underline;
+    .attraction-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+    }
+
+    .attraction-item p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .poi-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+      border: 1px solid #e5e9ed;
+    }
+
+    .poi-image-placeholder {
+      height: 190px;
+      background: linear-gradient(135deg, #dfe7ed, #edf2f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #68737D;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .poi-card-content {
+      padding: 20px;
+    }
+
+    .poi-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+    }
+
+    .poi-card p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.65;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: left;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      background: #E87722;
+      color: #ffffff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .accommodation-link:hover,
+    .accommodation-link:focus {
+      background: #c95f16;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 22px 0 35px;
+    }
+
+    .accommodation-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e1e6ea;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    .accommodation-placeholder {
+      min-height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: #f1f4f6;
+      color: #68737D;
+      text-align: center;
+      font-weight: 700;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 35px;
+      font-size: 1.4rem;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: #f7f9fb;
+      border: 1px solid #dfe5e9;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details strong {
+      display: block;
+      color: #0E3557;
+      font-size: 1.08rem;
+      margin-bottom: 5px;
+    }
+
+    .stay-details small {
+      display: block;
+      color: #5f6870;
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      background: #0E3557;
+      padding: 10px 18px;
+    }
+
+    .other-stay-item .accommodation-link:hover,
+    .other-stay-item .accommodation-link:focus {
+      background: #082742;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      color: #666666;
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+      margin-top: 25px !important;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer .footer-links {
+      margin-bottom: 18px;
+      line-height: 2;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer a {
+      color: #E87722;
+      text-decoration: none;
+      margin: 0 8px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer p {
+      margin: 0;
+      line-height: 1.7;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – DALY WATERS ================= */
+    .gst-disclaimer {
+      font-size: 0.9rem;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+      nav.active {
+        display: flex;
+      }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+      nav a {
+        margin: 0;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+      .menu-btn {
+        display: block;
+      }
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    @media (max-width: 700px) {
+      .hero {
+        height: 280px;
+      }
 
-.poi-content h3 {
-  text-align: center;
-}
+      .hero h1 {
+        font-size: 2.35rem;
+      }
 
-.poi-content p {
-  text-align: center;
-}
+      .hero p {
+        font-size: 1.08rem;
+      }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+      .content {
+        padding: 35px 18px;
+      }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+      .content h2 {
+        font-size: 1.65rem;
+      }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+      .poi-grid {
+        grid-template-columns: 1fr;
+      }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+      .other-stay-item {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER / NAVIGATION -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
-      <nav id="menu">
+      <a href="/" aria-label="ShowcasingOz TV home">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span
+        class="menu-btn"
+        id="menu-btn"
+        role="button"
+        tabindex="0"
+        aria-label="Open navigation menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </span>
+
+      <nav id="menu" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
         <a href="/towns/index.html">Towns</a>
@@ -387,173 +477,296 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
-
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/daly-waters.jpg"
-       alt="Daly Waters Northern Territory"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
-
-<!-- MAIN CONTENT -->
-<section class="content">
-
-  <h1>Daly Waters (NT)</h1>
-
-<p>
-Daly Waters is a small but iconic outback locality in the Northern Territory, located along the Stuart Highway between Tennant Creek and Katherine. Known for its historic pub and rich transport heritage, Daly Waters has long served as a key stop for travellers crossing Australia’s interior.
-</p>
-
-<p>
-Established in the late 19th century, Daly Waters developed as part of the Overland Telegraph Line, which connected Australia’s north and south and played a crucial role in communication across the continent. The telegraph station formed the foundation of the settlement, supporting workers and travellers in a remote and challenging environment.
-</p>
-
-<p>
-The area later became an important aviation hub, with Daly Waters hosting one of Australia’s earliest international airfields. During the early 20th century, it served as a refuelling and stopover point for long-distance flights, further cementing its role in connecting remote Australia with the wider world.
-</p>
-
-<p>
-Today, Daly Waters is best known for its iconic outback pub, which has become a destination in its own right. Covered in memorabilia from visitors across the globe, the pub reflects the unique culture and character of outback travel and remains a lively gathering place in an otherwise quiet settlement.
-</p>
-
-<p>
-Surrounded by open savannah, red earth, and vast skies, Daly Waters captures the essence of the Northern Territory’s inland landscapes. Its small size, rich history, and strong sense of place make it a memorable stop for those travelling the Stuart Highway.
-</p>
-
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Daly Waters as part of our national filming journey — highlighting its telegraph and aviation history, iconic pub culture, and the enduring role it plays in Australia’s outback travel network.
-</p>
-
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Daly Waters, Northern Territory</h1>
+      <p>
+        Outback aviation history, Overland Telegraph heritage and one of
+        Australia’s most memorable highway stopovers.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Daly Waters</h3>
-  <ul class="other-accommodation-list">
-    <li>Daly Waters Pub</li>
-    <li>Tim’s Junkyard</li>
-    <li>Daly Waters Aviation Complex & Flying Fox</li>
-  </ul>
+  <main class="content">
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <!-- ABOUT -->
+    <section aria-labelledby="about-daly-waters">
+      <h2 id="about-daly-waters">Discover Daly Waters</h2>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Daly Water’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+      <p>
+        Daly Waters is a small but nationally recognised outback locality in
+        the Northern Territory, situated near the junction of the Stuart and
+        Carpentaria highways. Located between Tennant Creek and Katherine, it
+        has long provided travellers with an important place to rest, refuel
+        and experience the distinctive character of Australia’s remote north.
+      </p>
 
-<div class="poi-grid">
+      <p>
+        The area forms part of the traditional country of the Jingili people,
+        whose cultural connections to the land and surrounding water sources
+        extend across generations. The availability of reliable water made
+        Daly Waters an important meeting place long before European exploration
+        and later helped shape its role in communications and transport.
+      </p>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Stuart Tree</h3>
-<p>
-Stuart Tree marks a site associated with explorer John McDouall Stuart during his expeditions through central Australia. The location reflects the challenges of early inland exploration and the routes that would later become major transport corridors.
-</p>
-    </div>
-  </div>
+      <p>
+        Daly Waters became closely connected with the development of the
+        Overland Telegraph during the 1870s. The telegraph linked Australia
+        with international communications networks and transformed the speed
+        at which news could travel between the continent and the rest of the
+        world. Remnants and stories associated with the former telegraph
+        station remain an important part of the locality’s heritage.
+      </p>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Daly Waters Telegraph Station</h3>
-<p>
-The Daly Waters Telegraph Station is a historic site linked to the Overland Telegraph Line, which revolutionised communication across Australia in the late 19th century. The station represents the ingenuity and determination required to establish reliable communication in remote outback regions.
- </p>
-    </div>
-  </div>
+      <p>
+        The town also occupies a significant place in Australian aviation
+        history. Daly Waters developed as an important refuelling and service
+        point for early long-distance flights, later becoming a military
+        airfield during the Second World War. Its historic aviation complex,
+        hangar and airfield reflect the pioneering period when travelling
+        across Australia by air was still a major undertaking.
+      </p>
 
-</div>
+      <p>
+        Today, Daly Waters is best known by many travellers for its colourful
+        historic pub. The building, memorabilia and contributions left by
+        visitors from around the world have created an unusual and instantly
+        recognisable outback atmosphere. The pub continues to serve as a
+        social centre, accommodation provider and popular stop along the
+        Stuart Highway journey.
+      </p>
+
+      <p>
+        Beyond its built heritage, Daly Waters is surrounded by open savannah,
+        native bushland and the immense skies characteristic of the Northern
+        Territory interior. Seasonal changes influence the appearance of the
+        landscape, from dry golden grasslands to greener conditions following
+        the northern wet season.
+      </p>
+
+      <p>
+        ShowcasingOz TV will explore the stories, businesses and historic sites
+        that have made Daly Waters much more than a highway stop. Its enduring
+        links with First Nations culture, telecommunications, aviation,
+        pastoral travel and outback hospitality make it a compelling
+        destination on the journey through Australia’s north.
+      </p>
+    </section>
+
+    <!-- DOCUMENTARY -->
+    <section aria-labelledby="daly-waters-documentary">
+      <h2 id="daly-waters-documentary">Watch Our Daly Waters Documentary</h2>
+
+      <div class="documentary-placeholder">
+        The full ShowcasingOz TV Daly Waters documentary will appear here
+        following our visit and filming.
+      </div>
+    </section>
+
+    <!-- ATTRACTIONS -->
+    <section aria-labelledby="daly-waters-attractions">
+      <h2 id="daly-waters-attractions">Attractions In and Around Daly Waters</h2>
+
+      <div class="attractions-list">
+
+        <article class="attraction-item">
+          <h3>Daly Waters Aviation Complex &amp; Flying Fox</h3>
+          <p>
+            Explore one of the Northern Territory’s most historically
+            significant aviation sites. Daly Waters played an important role
+            in early passenger flights, international air routes and military
+            operations. The surviving hangar, airfield features, interpretive
+            information and locally displayed Flying Fox provide insight into
+            the challenges and achievements of pioneering outback aviation.
+          </p>
+        </article>
+
+        <article class="attraction-item">
+          <h3>Daly Waters Pub</h3>
+          <p>
+            Visit one of Australia’s best-known outback pubs, established in
+            the early twentieth century and filled with decades of traveller
+            memorabilia. Its unusual collections, rustic buildings, meals,
+            entertainment and welcoming outback atmosphere have made the pub
+            a memorable stop for generations of Stuart Highway travellers.
+          </p>
+        </article>
+
+        <article class="attraction-item">
+          <h3>Tim’s Junkyard</h3>
+          <p>
+            Discover an eclectic outdoor collection of machinery, vehicles,
+            equipment and other objects accumulated over many years. Located
+            near the Daly Waters Pub precinct, the display reflects the
+            resourcefulness, humour and improvisational spirit often
+            associated with life in remote Australian communities.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- LANDMARKS / POIS -->
+    <section aria-labelledby="daly-waters-pois">
+      <h2 id="daly-waters-pois">
+        Landmarks, Points of Interest &amp; Hidden Gems
+      </h2>
+
+      <div class="poi-grid">
+
+        <article class="poi-card">
+          <div class="poi-image-placeholder">
+            Daly Waters Telegraph Station Image Coming Soon
+          </div>
+
+          <div class="poi-card-content">
+            <h3>Daly Waters Telegraph Station</h3>
+            <p>
+              The former telegraph station site recalls Daly Waters’ role in
+              the Overland Telegraph network, which connected Australia with
+              overseas communications during the nineteenth century. Although
+              little of the original station remains, the location represents
+              an important stage in the development of communication across
+              the continent’s remote interior.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-image-placeholder">
+            Stuart Tree Image Coming Soon
+          </div>
+
+          <div class="poi-card-content">
+            <h3>Stuart Tree</h3>
+            <p>
+              This historic tree is associated with explorer John McDouall
+              Stuart and the expeditions that helped establish an overland
+              route through central Australia. The marked tree provides a
+              physical connection to the era of European exploration and the
+              subsequent development of the telegraph and transport corridor.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
 
     <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Daly Waters</h2>
+    <section aria-labelledby="daly-waters-accommodation">
+      <h2 id="daly-waters-accommodation">
+        🏨 Stay Where We Showcase — Daly Waters
+      </h2>
 
-  <p class="accommodation-intro">
-    Planning a stay in Daly Waters? Explore accommodation options in and around this iconic outback stop while discovering
-    the telegraph history, aviation heritage, and pub culture that make Daly Waters one of the Northern Territory’s most memorable highway destinations.
-  </p>
+      <p class="accommodation-intro">
+        Planning a stay in Daly Waters? Explore accommodation at this iconic
+        outback stop while discovering its aviation heritage, telegraph
+        history, famous pub and the expansive Northern Territory landscape
+        surrounding the Stuart Highway.
+      </p>
 
-  <p class="accommodation-intro">
-    ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-    people discover where to go, what to experience, and where to base themselves as they explore
-    Australia’s cities, towns, and hidden gems.
-  </p>
+      <p class="accommodation-intro">
+        ShowcasingOz TV is designed to do more than help travellers find a
+        place to stay. We help people discover where to go, what to experience
+        and where to base themselves while exploring Australia’s cities,
+        towns and hidden gems.
+      </p>
 
-  <p style="text-align:center;">
-    <a href="https://www.booking.com/searchresults.html?ss=Daly+Waters" target="_blank" class="accommodation-link">
-      View All Daly Waters Accommodation
-    </a>
-  </p>
+      <p style="text-align: center;">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDaly%2520Waters%252C%2520Northern%2520Territory%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View All Daly Waters Accommodation
+        </a>
+      </p>
 
-  <h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Daly Waters</h3>
+      <h3 class="other-accommodation-heading">
+        Featured Accommodation Opportunities In and Around Daly Waters
+      </h3>
 
-  <p class="accommodation-intro">
-    Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-    produced video, photography, and destination-led storytelling that places their property in front
-    of travellers actively planning where to stay.
-  </p>
+      <p class="accommodation-intro">
+        Accommodation partners featured on ShowcasingOz TV receive premium
+        exposure through professionally produced video, photography and
+        destination-led storytelling that places their property in front of
+        travellers actively planning where to stay.
+      </p>
 
-  <p style="text-align:center;">
-    <a href="../accommodation-partners.html" class="accommodation-link">
-      Explore accommodation filming & feature options
-    </a>
-  </p>
+      <p style="text-align: center;">
+        <a
+          href="../accommodation-partners.html"
+          class="accommodation-link"
+        >
+          Explore Accommodation Filming &amp; Feature Options
+        </a>
+      </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-    </div>
-  </div>
+      <div class="accommodation-grid">
+        <div class="accommodation-card">
+          <div class="accommodation-placeholder">
+            Featured Daly Waters Accommodation Coming Soon
+          </div>
+        </div>
+      </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Daly Waters</h3>
-  <div class="other-accommodation-bookings">
+      <h3 class="other-accommodation-heading">
+        Other Accommodation In and Around Daly Waters
+      </h3>
 
-    <div class="other-stay-item"><span>Daly Waters Pub</span><a href="https://www.booking.com/searchresults.html?ss=Daly+Waters" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-accommodation-bookings">
 
-    <div class="other-stay-item"><span>Daly Waters Hi-Way Inn</span><a href="https://www.booking.com/searchresults.html?ss=Daly+Waters" target="_blank" class="accommodation-link">View / Book</a></div>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Daly Waters Hi-Way Inn</strong>
+            <small>
+              Roadhouse, motel, cabins and caravan park · Stuart and
+              Carpentaria highway junction · Near Daly Waters
+            </small>
+          </div>
 
-  </div>
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDaly%2520Waters%2520Hi-Way%2520Inn%252C%2520Northern%2520Territory"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <strong>Daly Waters Pub</strong>
+            <small>
+              Historic pub, motel rooms, cabins and caravan park · Daly Waters
+              township
+            </small>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDaly%2520Waters%2520Historic%2520Pub%252C%2520Northern%2520Territory"
+            target="_blank"
+            rel="noopener sponsored"
+            class="accommodation-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        This list is provided for visitor awareness only. Inclusion does not
+        imply partnership or endorsement. Some links on this page are
+        affiliate links, which means we may earn a small commission if you
+        make a booking, at no extra cost to you.
+      </p>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -571,17 +784,40 @@ The Daly Waters Telegraph Station is a historic site linked to the Overland Tele
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
 
-</body>
-</html>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-</body>
-</html>
+    function toggleMenu() {
+      const isActive = menu.classList.toggle('active');
+      menuBtn.setAttribute('aria-expanded', String(isActive));
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    menuBtn.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
+    });
+  </script>
 
 </body>
 </html>
