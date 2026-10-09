@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Dimboola (VIC) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Dimboola, VIC — a Wimmera River town known for its red gum riverbanks, agricultural heritage, Pink Lake nearby, and relaxed country atmosphere in western Victoria." />
-<meta name="keywords" content="Dimboola VIC, Dimboola Victoria, Wimmera River town, Pink Lake Victoria, Little Desert National Park, Dimboola attractions, Dimboola accommodation, western Victoria travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Dimboola in Victoria, including its Wimmera River setting, local attractions, landmarks, Pink Lake, Little Desert National Park and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Dimboola VIC, Dimboola attractions, Dimboola accommodation, Wimmera River, Pink Lake Victoria, Little Desert National Park, western Victoria tourism, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +59,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – DIMBOOLA ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +371,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,222 +396,392 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/dimboola.jpg"
-       alt="Dimboola Victoria"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/dimboola.jpg"
+      alt="Dimboola Victoria"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Dimboola (VIC)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Dimboola is a regional town in western Victoria, situated along the banks of the Wimmera River and surrounded by broadacre farmland. As part of the Wimmera district, Dimboola serves as an agricultural service centre supporting grain production and rural industries across the region.
-</p>
+    <h1>Dimboola (VIC)</h1>
 
-<p>
-Established in the late 19th century, Dimboola developed alongside the expansion of wheat farming and the railway network that enabled efficient transport across western Victoria. The town’s heritage reflects the resilience and determination of early settlers who transformed the Wimmera’s dry plains into productive farmland.
-</p>
+    <p>
+      Dimboola is a regional town in western Victoria, positioned on the
+      banks of the Wimmera River and surrounded by the broad agricultural
+      landscapes of the Wimmera. Located approximately halfway between
+      Melbourne and Adelaide, it provides travellers with a peaceful place
+      to pause while exploring western Victoria.
+    </p>
 
-<p>
-The Wimmera River forms a defining feature of Dimboola, with red gum-lined banks providing scenic walking tracks, picnic areas, and recreational spaces. The river corridor offers a natural contrast to the surrounding farmland and highlights the importance of water in sustaining life and agriculture in the region.
-</p>
+    <p>
+      The district forms part of the traditional country of the Wotjobaluk
+      people and the wider Wotjobaluk, Jaadwa, Jadawadjali, Wergaia and
+      Jupagulk Nations. The Wimmera River, surrounding wetlands and nearby
+      bushland hold longstanding cultural and environmental importance.
+    </p>
 
-<p>
-Dimboola is also well positioned near natural attractions such as Pink Lake and the Little Desert National Park, drawing visitors interested in unique landscapes and outdoor exploration. These nearby environments showcase the diversity of western Victoria’s ecosystems, from salt lakes to sandy bushland.
-</p>
+    <p>
+      European settlement expanded through the district during the nineteenth
+      century as pastoral activity, grain growing and transport routes
+      developed across the Wimmera. Dimboola grew as a local service centre,
+      railway town and agricultural hub supporting farms throughout the
+      surrounding region.
+    </p>
 
-<p>
-Today, Dimboola offers essential services, accommodation options, and community facilities within a relaxed country setting. Heritage buildings, local events, and sporting clubs contribute to a strong sense of community pride and regional identity.
-</p>
+    <p>
+      The railway strengthened connections between Dimboola, Melbourne,
+      Adelaide and other western Victorian communities. Grain production,
+      freight movement and rural services became central to the local economy,
+      leaving a lasting influence on the town’s buildings, infrastructure and
+      community identity.
+    </p>
 
-<p>
-Surrounded by open plains, grain silos, and expansive skies, Dimboola captures the character of Victoria’s farming heartland while offering access to distinctive natural landscapes. The town balances agricultural tradition with outdoor recreation and country hospitality.
-</p>
+    <p>
+      The Wimmera River is one of Dimboola’s defining natural features.
+      River red gums line its banks, while walking areas, picnic locations,
+      beaches and recreational spaces provide opportunities to enjoy the
+      river environment close to the town centre.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Dimboola as part of our national filming journey — highlighting its Wimmera River setting, agricultural heritage, nearby natural attractions, and the welcoming community spirit that continues to shape this western Victorian town.
-</p>
+    <p>
+      Dimboola also provides access to Little Desert National Park, where
+      sandy soils, heathlands, woodlands and seasonal wildflowers support a
+      diverse range of native plants and wildlife. Horseshoe Bend is among
+      the best-known local access points to the river and surrounding park.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Other nearby landscapes include Pink Lake, known for the seasonal colour
+      created by its salt-loving microorganisms, and the agricultural country
+      surrounding Arkona. Public art, distinctive local businesses and
+      heritage buildings add further character to the town and wider district.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, heritage and
+      landscapes that define Dimboola. Our visit will highlight its Wimmera
+      River setting, agricultural history, nearby national park, public art
+      and the community spirit that continues to shape this western Victorian
+      town.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Dimboola Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Dimboola</h3>
-  <ul class="other-accommodation-list">
-    <li>Dimboola Imaginarium</li>
-    <li>The Forbidden Forest</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Dimboola’s visitor attractions combine creative local businesses with
+      distinctive experiences that contribute to the town’s artistic and
+      community character.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Dimboola’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Horseshoe Bend (Little Desert National Park)</h3>
-      <p>
-      Horseshoe Bend is a scenic section of the Wimmera River located within Little Desert National Park. Surrounded by native bushland and sandy terrain, the area offers walking opportunities and peaceful river views, showcasing the diverse ecosystems of western Victoria.
-      </p>
+      <li>
+        <strong>Dimboola Imaginarium</strong>
+        A creative retail and visitor destination housed within a distinctive
+        historic building. Its imaginative displays, unusual objects,
+        artistic presentation and changing experiences add a playful and
+        unconventional attraction to Dimboola’s town centre.
+      </li>
+
+      <li>
+        <strong>The Forbidden Forest</strong>
+        An immersive local attraction designed around fantasy, imagination
+        and discovery. Its themed environment provides visitors with an
+        experience that differs from the natural and heritage attractions
+        found elsewhere around Dimboola.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Dimboola’s landmarks and surrounding landscapes reveal the Wimmera’s
+      river environment, agricultural heritage, public art and distinctive
+      natural features.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Arkona Silo Art Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Arkona Silo Art</h3>
+
+          <p>
+            The Arkona Silo Art is a large-scale mural painted on working
+            grain silos in the nearby rural locality of Arkona. The artwork
+            celebrates regional life and adds another distinctive destination
+            to the Wimmera Mallee’s expanding silo art trail.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Dimboola Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Dimboola Town Centre</h3>
+
+          <p>
+            Dimboola’s town centre contains heritage buildings, local shops,
+            cafés, creative businesses and community facilities reflecting
+            the town’s agricultural foundations. Its position near the
+            Wimmera River makes it a convenient base for exploring the wider
+            district.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Horseshoe Bend Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Horseshoe Bend, Little Desert National Park</h3>
+
+          <p>
+            Horseshoe Bend is a scenic section of the Wimmera River beside
+            Little Desert National Park. River red gums, native bushland and
+            sandy terrain create opportunities for walking, picnicking,
+            wildlife observation and enjoying peaceful river views.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Pink Lake Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Pink Lake</h3>
+
+          <p>
+            Pink Lake is a seasonal salt lake near Dimboola known for the
+            pale pink colouring that can appear when environmental conditions
+            support particular algae and microorganisms. Its colour varies,
+            but the open salt landscape remains a distinctive photographic
+            feature.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Smug’s Mural Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Smug’s Mural</h3>
+
+          <p>
+            This large-scale public artwork was created by internationally
+            recognised Australian street artist Smug. The detailed mural adds
+            a contemporary cultural landmark to Dimboola and provides a
+            striking contrast with the town’s historic streetscape.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Smug’s Mural (Dimboola)</h3>
-      <p>
-      Smug’s Mural is a striking piece of public art in Dimboola created by renowned Australian street artist Matt “Smug” Adnate. The large-scale artwork celebrates local identity and adds a contemporary cultural element to the town’s historic streetscape.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dimboola Town Centre</h3>
-      <p>
-      Dimboola’s town centre features heritage buildings, local shops, cafés, and community spaces that reflect its strong agricultural foundations. Positioned near the Wimmera River, the centre serves as both a service hub for surrounding farmland and a welcoming stop for travellers.
-      </p>
-    </div>
-  </div>
-
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Arkona Silo Art</h3>
-      <p>
-      The Arkona Silo Art is a large-scale mural painted on working grain silos in the nearby rural locality of Arkona. Part of Victoria’s silo art trail, the artwork celebrates regional farming life and contributes to tourism across the Wimmera district.
-      </p>
-    </div>
-  </div>
-
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Pink Lake (near Dimboola)</h3>
-      <p>
-      Pink Lake is a seasonal salt lake known for its pale pink hues caused by natural algae and mineral content. The lake’s unique colouring and expansive open landscape make it a distinctive natural feature of western Victoria and a popular photography destination.
-      </p>
-    </div>
-  </div>
-  </div>
 
     <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Dimboola</h2>
+    <h2>🏨 Stay Where We Showcase — Dimboola</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Dimboola? Explore accommodation options in and around this Wimmera River town while discovering
-  the red gum riverbanks, nearby natural attractions, and relaxed country character that make Dimboola a distinctive western Victorian stop.
-</p>
+    <p class="accommodation-intro">
+      Planning a stay in Dimboola? Explore accommodation in and around this
+      Wimmera River town while discovering its red gum riverbanks, local
+      attractions, public art and nearby natural landscapes.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities, towns
+      and hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola"
-     target="_blank"
-     class="accommodation-link">
-    View All Dimboola Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola%252C%2520Victoria%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Dimboola Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Dimboola</h3>
+    <h3 style="text-align:center; margin-top:50px;">
+      Featured Accommodation Opportunities In And Around Dimboola
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Dimboola</h3>
-<div class="other-accommodation-bookings">
+        <div class="accommodation-placeholder">
+          Featured Dimboola Accommodation Coming Soon
+        </div>
 
-  <div class="other-stay-item"><span>Victoria Hotel Dimboola</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola" target="_blank" class="accommodation-link">View / Book</a></div>
+      </div>
+    </div>
 
-  <div class="other-stay-item"><span>Motel Dimboola</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola" target="_blank" class="accommodation-link">View / Book</a></div>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Dimboola
+    </h3>
 
-  <div class="other-stay-item"><span>Riverside Holiday Park Dimboola</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>The Willery Guesthouse</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Dimboola Motel</span>
+          <small>
+            Motel · Horsham Road · Approximately 1.5 km from Dimboola Town Centre
+          </small>
+        </div>
 
-  <div class="other-stay-item"><span>Glenwillan Homestead - Wallup</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola%2520Motel%252C%2520Dimboola%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Dimboola Imaginarium - Apartment With Shared Bathroom</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDimboola" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Glenwillan Homestead</span>
+          <small>
+            Bed &amp; Breakfast / Homestead · Wallup · Approximately 40 km from Dimboola
+          </small>
+        </div>
 
-</div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGlenwillan%2520Homestead%252C%2520Wallup%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Riverside Holiday Park Dimboola</span>
+          <small>
+            Holiday Park, Cabins &amp; Caravan Sites · Wimmera River · Dimboola
+          </small>
+        </div>
 
-</section>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRiverside%2520Holiday%2520Park%2520Dimboola%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Victoria Hotel Dimboola</span>
+          <small>
+            Hotel Accommodation · Dimboola Town Centre
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVictoria%2520Hotel%2520Dimboola%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -615,10 +796,19 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and landscape
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
