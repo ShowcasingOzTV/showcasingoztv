@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Dunkeld (VIC) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Dunkeld, VIC — a scenic village at the southern gateway to the Grampians, known for its mountain views, walking trails, and relaxed country charm." />
-<meta name="keywords" content="Dunkeld VIC, Dunkeld Victoria, Grampians gateway town, Mount Sturgeon, Grampians National Park, Dunkeld attractions, Dunkeld accommodation, western Victoria travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Dunkeld in Victoria, including its Southern Grampians scenery, attractions, walking trails, landmarks and local accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Dunkeld VIC, Dunkeld attractions, Dunkeld accommodation, Southern Grampians, Mount Sturgeon, Grampians National Park, western Victoria tourism, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +59,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – DUNKELD ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +371,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,232 +396,443 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/dunkeld.jpg"
-       alt="Dunkeld Victoria"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/dunkeld.jpg"
+      alt="Dunkeld Victoria"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Dunkeld (VIC)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Dunkeld is a picturesque village in western Victoria, located at the southern gateway to the Grampians National Park and set against the dramatic backdrop of Mount Sturgeon and the Serra Range. Known for its natural beauty and relaxed atmosphere, Dunkeld offers a distinctive blend of outdoor adventure and country hospitality.
-</p>
+    <h1>Dunkeld (VIC)</h1>
 
-<p>
-Established in the mid-19th century, Dunkeld developed as a pastoral settlement supporting sheep grazing and farming across the surrounding plains. The fertile land and proximity to water sources contributed to the growth of agriculture, shaping the town’s identity and connection to the region’s rural heritage.
-</p>
+    <p>
+      Dunkeld is a picturesque village in western Victoria, positioned at the
+      southern gateway to Gariwerd, the Grampians National Park. The town sits
+      beneath the distinctive peaks of Mount Sturgeon and Mount Abrupt, where
+      the rugged mountain landscape meets the open agricultural plains of the
+      Southern Grampians.
+    </p>
 
-<p>
-The Grampians landscape defines Dunkeld’s character, with rugged peaks, bushland, and walking trails beginning just beyond the town. The area attracts hikers, nature enthusiasts, and photographers seeking access to some of Victoria’s most iconic natural scenery, including mountain summits, lookouts, and native wildlife habitats.
-</p>
+    <p>
+      The area forms part of the traditional country of the Djab Wurrung and
+      Jardwadjali peoples, whose cultural connections with Gariwerd and the
+      surrounding landscape extend across generations. Mountains, waterways,
+      plants, wildlife and cultural places throughout the region remain
+      important parts of this living connection.
+    </p>
 
-<p>
-Dunkeld has also gained recognition for its food and wine offerings, with local produce, dining experiences, and hospitality venues enhancing its appeal as a regional destination. The town balances its outdoor focus with a strong sense of community and cultural identity.
-</p>
+    <p>
+      European settlement developed during the nineteenth century as pastoral
+      properties and small communities were established across the surrounding
+      plains. Sheep grazing, wool production and farming became important to
+      the local economy, while Dunkeld grew as a service centre for nearby
+      stations and rural families.
+    </p>
 
-<p>
-Today, Dunkeld provides accommodation, cafés, and visitor services that cater to travellers exploring the Grampians and surrounding districts. Its compact town centre and welcoming atmosphere make it an ideal base for both short visits and extended stays.
-</p>
+    <p>
+      The mountains immediately north of the town strongly influence Dunkeld’s
+      identity. Walking tracks provide access to elevated viewpoints, rocky
+      ridgelines, woodland and native wildlife habitat. The changing appearance
+      of the ranges throughout the day creates a dramatic backdrop visible
+      from streets, gardens and properties across the district.
+    </p>
 
-<p>
-Surrounded by open farmland, native bushland, and striking mountain ranges, Dunkeld captures the transition between Victoria’s agricultural plains and rugged national park landscapes. The town offers a peaceful yet engaging experience shaped by nature, history, and community.
-</p>
+    <p>
+      Dunkeld has also developed a strong reputation for regional hospitality,
+      food and wine. Local venues draw on produce from western Victoria, while
+      accommodation businesses allow visitors to experience the landscape from
+      the town centre, nearby farms and the foothills of the national park.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Dunkeld as part of our national filming journey — highlighting its Grampians setting, pastoral heritage, outdoor lifestyle, and the welcoming spirit that makes it a standout destination in western Victoria.
-</p>
+    <p>
+      Community attractions preserve the town’s pastoral, military and social
+      history. The local museum, heritage buildings and specialised collections
+      provide insight into the people who lived and worked throughout the
+      Southern Grampians district.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      The Dunkeld Arboretum, town walking routes and surrounding lookouts offer
+      quieter ways to experience the area. Together with the nearby national
+      park trails, these places make Dunkeld a practical base for visitors
+      interested in walking, photography, wildlife and regional heritage.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, landscapes and
+      stories that define Dunkeld. Our visit will highlight its Gariwerd
+      setting, pastoral heritage, outdoor experiences and the local hospitality
+      that has established the town as one of western Victoria’s distinctive
+      regional destinations.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Dunkeld Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Dunkeld</h3>
-  <ul class="other-accommodation-list">
-    <li>Mount Sturgeon Homestead</li>
-    <li>Dunkeld Museum</li>
-    <li>Dunkeld Bakery</li>
-    <li>Australian Light Horse Heritage Collection</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Dunkeld’s attractions explore local military history, community heritage,
+      regional food and the pastoral properties that have helped shape the
+      Southern Grampians district.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Dunkeld’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mount Sturgeon Lookout</h3>
-      <p>
-      Mount Sturgeon Lookout provides elevated views over Dunkeld, the surrounding plains, and the southern reaches of the Grampians. The lookout highlights the dramatic contrast between farmland and mountain ranges.
-      </p>
+      <li>
+        <strong>Australian Light Horse Heritage Collection</strong>
+        A specialised collection preserving equipment, uniforms, photographs,
+        documents and stories connected with the Australian Light Horse. The
+        displays provide insight into the service of mounted soldiers and the
+        wider military history remembered by regional communities.
+      </li>
+
+      <li>
+        <strong>Dunkeld Bakery</strong>
+        A local bakery contributing to Dunkeld’s country hospitality and town
+        centre character. It provides visitors and residents with baked goods,
+        refreshments and a convenient place to stop before exploring the
+        surrounding walking trails and attractions.
+      </li>
+
+      <li>
+        <strong>Dunkeld Museum</strong>
+        A community museum preserving photographs, documents, household
+        objects, farming equipment and other material connected with Dunkeld
+        and the surrounding district. Its collection traces local settlement,
+        rural life and community development.
+      </li>
+
+      <li>
+        <strong>Mount Sturgeon Homestead</strong>
+        A historic pastoral homestead situated near the base of Mount Sturgeon.
+        The property reflects the district’s farming history and connection
+        with the surrounding landscape, while continuing to operate as part of
+        the Royal Mail Hotel’s accommodation and events offering.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Dunkeld’s landmarks combine community spaces, mountain walks and elevated
+      viewpoints that reveal the dramatic meeting of the Grampians ranges and
+      Victoria’s western agricultural plains.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Dunkeld Arboretum Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Dunkeld Arboretum</h3>
+
+          <p>
+            The Dunkeld Arboretum is a landscaped reserve containing native
+            and introduced tree species, walking areas, wetlands and open
+            spaces. Views towards the nearby mountains make it a peaceful
+            location for walking, picnicking, birdwatching and photography.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Dunkeld Town Centre &amp; Heritage Trail Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Dunkeld Town Centre &amp; Heritage Trail</h3>
+
+          <p>
+            Dunkeld’s compact town centre contains historic buildings, local
+            businesses and community landmarks. The heritage trail connects
+            significant sites and interpretive information, allowing visitors
+            to explore the town’s development on foot.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Grampians Valley / Mirranatwa Gap Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Grampians Valley / Mirranatwa Gap Lookout</h3>
+
+          <p>
+            This scenic viewing area offers expansive perspectives across the
+            Mirranatwa district, surrounding farmland and the mountain ranges
+            of the southern Grampians. The changing light and broad landscape
+            make it a striking regional viewpoint.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mount Sturgeon Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mount Sturgeon Lookout</h3>
+
+          <p>
+            The Mount Sturgeon area provides elevated views over Dunkeld,
+            nearby pastoral country and the southern reaches of Gariwerd. The
+            landscape demonstrates the dramatic transition between mountain
+            bushland and the open plains surrounding the town.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Piccaninny Walk Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Piccaninny Walk</h3>
+
+          <p>
+            The Piccaninny Walk is a popular track in the southern Grampians
+            offering a comparatively short climb through native vegetation to
+            an elevated viewpoint. The summit provides broad views towards
+            Dunkeld, Mount Sturgeon and the surrounding plains.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dunkeld Town Centre & Heritage Trail</h3>
-      <p>
-      Dunkeld’s town centre and heritage trail showcase historic buildings, local landmarks, and interpretive signage that tell the story of the town’s development. The trail offers an easy way to explore Dunkeld’s history and character on foot.
-      </p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Dunkeld</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Dunkeld? Explore accommodation in and around this
+      Southern Grampians village while discovering its mountain scenery,
+      walking trails, heritage attractions and renowned regional hospitality.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld%252C%2520Victoria%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Dunkeld Accommodation
+      </a>
+    </p>
+
+    <h3 style="text-align:center; margin-top:50px;">
+      Featured Accommodation Opportunities In And Around Dunkeld
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Dunkeld Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dunkeld Arboretum</h3>
-      <p>
-      The Dunkeld Arboretum is a landscaped reserve featuring a wide variety of tree species from around the world. Set near the foothills of the Grampians, it provides a peaceful environment for walking, picnicking, and appreciating both native and introduced plant life.
-      </p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Dunkeld
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Dunkeld Caravan Park</span>
+          <small>
+            Caravan Park · Dunkeld · Near the Southern Grampians
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld%2520Caravan%2520Park%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Dunkeld Village Accommodation</span>
+          <small>
+            Hotel-Style Studio Rooms &amp; Hikers Lodge · Dunkeld Town Centre
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld%2520Village%2520Accommodation%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Grampians View B&amp;B</span>
+          <small>
+            Bed &amp; Breakfast · Dunkeld
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGrampians%2520View%2520B%2526B%252C%2520Dunkeld%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mount Sturgeon Cottages &amp; Homestead</span>
+          <small>
+            Royal Mail Hotel-Operated Cottages &amp; Homestead · Approximately 5 Minutes from Dunkeld
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMount%2520Sturgeon%2520Cottages%2520and%2520Homestead%252C%2520Dunkeld%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Royal Mail Hotel</span>
+          <small>
+            Hotel, Apartments &amp; Dining · Dunkeld Town Centre
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRoyal%2520Mail%2520Hotel%252C%2520Dunkeld%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tobacco Kiln B&amp;B</span>
+          <small>
+            Bed &amp; Breakfast · Near Dunkeld and Grampians National Park
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTobacco%2520Kiln%2520B%2526B%252C%2520Dunkeld%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Piccaninny Walk</h3>
-      <p>
-      The Piccaninny Walk is a popular hiking trail in the Grampians National Park, offering access to scenic lookouts and mountain landscapes. The walk showcases the rugged terrain, native vegetation, and expansive views that define the region.
-      </p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Grampians Valley / Mirranatwa Gap Lookout</h3>
-      <p>
-      The Grampians Valley / Mirranatwa Gap Lookout offers sweeping panoramic views across the surrounding valleys, farmland, and mountain ranges. The site provides one of the most striking vantage points in the southern Grampians region.
-      </p>
-    </div>
-  </div>
-  </div>
-
-   <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Dunkeld</h2>
-
-<p class="accommodation-intro">
-  Planning a stay in Dunkeld? Explore accommodation options in and around this scenic Grampians gateway village while discovering
-  the mountain views, walking trails, and country charm that make Dunkeld one of western Victoria’s most appealing regional escapes.
-</p>
-
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
-
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld"
-     target="_blank"
-     class="accommodation-link">
-    View All Dunkeld Accommodation
-  </a>
-</p>
-
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Dunkeld</h3>
-
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
-
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Dunkeld</h3>
-<div class="other-accommodation-bookings">
-
-  <div class="other-stay-item"><span>Royal Mail Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Aquila Eco Lodges</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Southern Grampians Cottages</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Dunkeld Studio Accommodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Dunkeld Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Corrugated Cottage</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Grampians Historic Tobacco Kiln</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Mount Sturgeon Homestead</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Kensington Cottage</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Grampians Retreat</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDunkeld" target="_blank" class="accommodation-link">View / Book</a></div>
-
-</div>
-  
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -625,10 +847,19 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and landscape
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
