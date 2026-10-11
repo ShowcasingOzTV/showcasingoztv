@@ -3,365 +3,413 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Euston (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Euston, NSW — a Murray River town on the Victoria border, known for its river lifestyle, agriculture, and relaxed setting near Robinvale." />
-<meta name="keywords" content="Euston NSW, Euston Riverina, Murray River town NSW, Robinvale Euston, Euston attractions, Euston accommodation, western NSW towns, Murray region travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Euston, New South Wales, including Euston Station 1848 Homestead, Euston Town Centre, Murray River history and local accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Euston NSW, Euston attractions, Euston accommodation, Euston Station Homestead, Murray River, Balranald Shire, Riverina, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      width: auto;
+      height: 65px;
+    }
 
     nav a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      margin-bottom: 20px;
+      color: #0E3557;
+      text-align: center;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      margin-top: 50px;
+      color: #E87722;
+      text-align: center;
+    }
+
+    p {
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .section-intro,
+    .accommodation-intro {
+      max-width: 760px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .accommodation-placeholder {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
     }
 
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    .accommodation-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
+    /* ================= LINKS AND BUTTONS ================= */
 
     .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 18px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
     }
 
     .accommodation-link:hover {
-      text-decoration:underline;
+      background: #E87722;
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 760px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      background: #f9f9f9;
+      color: #333333;
+      line-height: 1.6;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .attractions-list strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .poi-placeholder {
+      display: flex;
+      height: 160px;
+      padding: 0 15px;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 0 0 8px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      margin-bottom: 14px;
+      padding: 16px 18px;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e4e4e4;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.02rem;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* ================= FOOTER ================= */
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a {
+      margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – EUSTON ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    /* ================= MOBILE ================= */
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #0E3557;
+      }
 
-.poi-content h3 {
-  text-align: center;
-}
+      nav.active {
+        display: flex;
+      }
 
-.poi-content p {
-  text-align: center;
-}
+      nav a {
+        margin-left: 0;
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+      .menu-btn {
+        display: block;
+      }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+      .hero {
+        height: 250px;
+      }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-    .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -370,10 +418,19 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn" aria-label="Open navigation menu">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -388,190 +445,312 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/euston.jpg"
-       alt="Euston New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/euston.jpg"
+      alt="Euston on the Murray River in New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </section>
 
-  <h1>Euston (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-<p>
-Euston is a small regional town in south-western New South Wales, located on the banks of the Murray River and directly opposite the Victorian town of Robinvale. Positioned along the NSW–Victoria border, Euston forms part of a connected cross-border community shaped by river life and agriculture.
-</p>
+    <h1>Euston (NSW)</h1>
 
-<p>
-Established in the 19th century, Euston developed as a river crossing and service point for pastoral and farming districts in the surrounding region. The Murray River played a central role in transport, trade, and settlement, supporting early industries and enabling the growth of the local economy.
-</p>
+    <p>
+      Euston is a small Murray River town in far south-western New South
+      Wales, within Balranald Shire. Located directly across the river from
+      Robinvale in Victoria, Euston forms part of a closely connected
+      cross-border community while retaining its own history, businesses and
+      identity on the New South Wales side of the Murray.
+    </p>
 
-<p>
-Today, irrigation and agriculture remain key drivers of the area, with vineyards, orchards, and cropping operations contributing to the productive Murray River corridor. The town reflects the broader Riverina and Sunraysia influence, where water access has transformed the landscape into a fertile growing region.
-</p>
+    <p>
+      The district has long been connected to the river and the pastoral
+      properties that developed across the surrounding landscape. During the
+      nineteenth century, the Murray supported travel, trade and communication
+      between isolated settlements. Euston became an important local service
+      point as pastoral activity and river transport expanded through the
+      region.
+    </p>
 
-<p>
-The Murray River continues to define Euston’s lifestyle, offering opportunities for fishing, boating, and riverside recreation. Parks and access points along the river provide a relaxed environment for both residents and visitors.
-</p>
+    <p>
+      Euston Station played an important role in the area’s early development.
+      The surviving 1848 homestead provides a physical connection to the
+      pastoral era and the people who worked and lived along this section of
+      the Murray River. It remains one of the community’s most significant
+      historic places.
+    </p>
 
-<p>
-Euston’s close relationship with Robinvale creates a shared regional hub, with services, businesses, and community life extending across both sides of the river. This connection strengthens the town’s role within the wider Murray region.
-</p>
+    <p>
+      Agriculture continues to shape Euston and the surrounding district.
+      Irrigation from the Murray supports vineyards, orchards, horticulture and
+      broadacre farming. This productive landscape forms part of the wider
+      Riverina and Sunraysia agricultural region, where access to water has
+      transformed otherwise dry inland country.
+    </p>
 
-<p>
-Surrounded by irrigated farmland, river red gums, and open skies, Euston captures the character of Australia’s inland river communities. The town combines agricultural productivity with a laid-back riverside atmosphere.
-</p>
+    <p>
+      The Murray River also influences the town’s lifestyle and visitor appeal.
+      River red gums, waterfront areas and nearby river access support fishing,
+      boating and relaxed outdoor recreation. Euston’s accommodation and
+      hospitality businesses provide useful stopping points for travellers
+      following the Murray or travelling between regional New South Wales,
+      Victoria and South Australia.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Euston as part of our national filming journey — highlighting its Murray River setting, agricultural strength, cross-border community, and the relaxed lifestyle that continues to shape this southern NSW town.
-</p>
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Although Euston and Robinvale share services and strong community
+      connections, they are separate towns in different states. This page
+      therefore focuses only on attractions, landmarks and accommodation
+      located in Euston, with Robinvale businesses and destinations covered on
+      the separate Robinvale town page.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, history and river
+      landscapes that define Euston. Our coverage will highlight its pastoral
+      heritage, agricultural importance, Murray River setting and the local
+      character that distinguishes this small New South Wales community.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Euston</h3>
-  <ul class="other-accommodation-list">
-    <li>Euston Station 1848 Homestead</li>
-    <li>Robinswood Homestead - Robinvale</li>
-    <li>Rural Life Museum - Robinvale</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions In And Around Euston</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="section-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, history, culture and visitor engagement in a way that static
+      listings cannot achieve.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Euston’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Euston Town Centre</h3>
-      <p>
-Euston’s town centre provides essential services, local shops, and community facilities that support both residents and the surrounding agricultural district. Positioned near the Murray River and the bridge connection to Robinvale, the centre reflects the town’s role as part of a broader cross-border regional hub.
-</p>
+      <li>
+        <strong>Euston Station 1848 Homestead</strong>
+        This historic homestead is a surviving link to the early pastoral
+        development of the Euston district. Dating from 1848, it reflects the
+        settlement of large grazing properties along the Murray River and
+        provides insight into the region’s nineteenth-century history. Access
+        arrangements should be confirmed locally before visiting.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+    <p class="section-intro">
+      This local point of interest forms an important part of Euston’s
+      community identity and sense of place. ShowcasingOz TV will capture the
+      location during filming to help tell the broader story of the town.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Euston Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Euston Town Centre</h3>
+
+          <p>
+            Euston Town Centre contains the local businesses, hospitality
+            venues and community facilities that support residents, nearby
+            agricultural properties and passing travellers. Its location near
+            the Murray River and the bridge to Victoria reflects Euston’s role
+            as both an independent town and part of a connected cross-border
+            community.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Robinvale</h3>
-      <p>
-Robinvale is a Murray River town in north-west Victoria, known for its irrigated agriculture, including vineyards and horticulture. Located opposite Euston, it forms part of a connected cross-border community and serves as a key regional hub.
-</p>
-    </div>
-  </div>
-</div>
 
     <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Euston</h2>
+    <h2>🏨 Stay Where We Showcase — Euston</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Euston? Explore accommodation options in and around this Murray River town while discovering
-  the river lifestyle, irrigated agriculture, and relaxed cross-border character that make Euston a distinctive stop in south-western New South Wales.
-</p>
+    <p class="accommodation-intro">
+      Planning a stay in Euston? Explore accommodation located on the New South
+      Wales side of the Murray River while discovering the town’s pastoral
+      heritage, river setting and relaxed regional character.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston"
-     target="_blank"
-     class="accommodation-link">
-    View All Euston Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Euston Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Euston</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Euston
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Accommodation Coming Soon
+        </div>
+      </div>
+    </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Euston</h3>
-<div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Euston
+    </h3>
 
-  <div class="other-stay-item"><span>Euston Motel Accommodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>Euston Club Resort Riverside Suites & Executive Units</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Euston Club Cabin Park</strong>
+          <span>
+            Commercially operated self-contained cabin accommodation
+            overlooking the Murray River, with access to Euston Club Resort
+            facilities.
+          </span>
+        </div>
 
-  <div class="other-stay-item"><span>Euston Club Cabin Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston%2520Club%2520Cabin%2520Park%252C%2520Euston%252C%2520NSW"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Riverfront Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Euston Club Resort Riverside Suites &amp; Executive Units</strong>
+          <span>
+            Resort-operated riverside suites, apartments and executive units
+            located beside the Murray River in Euston.
+          </span>
+        </div>
 
-  <div class="other-stay-item"><span>Phil’s Bend</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston%2520Club%2520Resort%252C%2520Euston%252C%2520NSW"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Robinvale Bridge Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRobinvale" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Euston Motel</strong>
+          <span>
+            Modern motel accommodation offering guest rooms and a
+            motel-operated studio apartment on the Sturt Highway in Euston.
+          </span>
+        </div>
 
-  <div class="other-stay-item"><span>Robinvale Golf Club Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRobinvale" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston%2520Motel%252C%2520Euston%252C%2520NSW"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Robinvale Riverside Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRobinvale" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Euston Riverfront Caravan Park &amp; Cafe</strong>
+          <span>
+            A locally operated caravan park on Murray Terrace, positioned close
+            to the town centre and the Murray River.
+          </span>
+        </div>
 
-</div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEuston%2520Riverfront%2520Caravan%2520Park%252C%2520Euston%252C%2520NSW"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This accommodation list includes hotels, motels, caravan parks, bed and
+      breakfasts, and apartments or cabins operated as part of an established
+      accommodation business. It does not include campgrounds, Airbnb
+      properties or privately operated holiday rentals. Robinvale
+      accommodation is listed separately on the Robinvale town page.
+      Inclusion is provided for visitor awareness only and does not imply
+      partnership or endorsement. Some links on this page are affiliate links,
+      which means ShowcasingOz TV may earn a small commission if you make a
+      booking, at no additional cost to you.
+    </p>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -589,8 +768,18 @@ Robinvale is a Murray River town in north-west Victoria, known for its irrigated
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
