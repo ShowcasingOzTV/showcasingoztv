@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Edenhope (VIC) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Edenhope, VIC — a peaceful Wimmera town on the South Australian border, known for Lake Wallace, rural heritage, and relaxed country living in western Victoria." />
-<meta name="keywords" content="Edenhope VIC, Edenhope Victoria, Wimmera town, Lake Wallace Edenhope, western Victoria border towns, Edenhope attractions, Edenhope accommodation, rural Victoria travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Edenhope in Victoria, including Lake Wallace, local attractions, heritage, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Edenhope VIC, Edenhope attractions, Edenhope accommodation, Lake Wallace, Red Tail Gallery, western Victoria tourism, Wimmera travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +59,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – EDENHOPE ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +371,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,193 +396,356 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/edenhope.jpg"
-       alt="Edenhope Victoria"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/edenhope.jpg"
+      alt="Edenhope Victoria"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Edenhope (VIC)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Edenhope is a quiet rural town in western Victoria, located near the South Australian border and set within the Wimmera region. Surrounded by farmland and natural waterways, Edenhope offers a relaxed country atmosphere shaped by agriculture and regional living.
-</p>
+    <h1>Edenhope (VIC)</h1>
 
-<p>
-Established in the mid-19th century, Edenhope developed as a service centre for surrounding pastoral and cropping properties. Sheep grazing and grain production have long formed the foundation of the local economy, reflecting the broader agricultural character of the Wimmera district.
-</p>
+    <p>
+      Edenhope is a rural town in western Victoria, positioned on the southern
+      shore of Lake Wallace and approximately 30 kilometres from the South
+      Australian border. It serves as an important community and service centre
+      for the surrounding farms and smaller settlements of the West Wimmera.
+    </p>
 
-<p>
-Lake Wallace is a defining natural feature of the town, providing a scenic focal point for recreation and community life. The lake’s open water, walking areas, and surrounding reserves offer a contrast to the dry farming landscapes and support a variety of birdlife.
-</p>
+    <p>
+      The district forms part of the traditional country of the Jadawadjali
+      people, whose cultural connections with the region’s lakes, wetlands,
+      plants, wildlife and surrounding landscapes extend across generations.
+      These waterways remain important environmental and cultural features of
+      western Victoria.
+    </p>
 
-<p>
-Edenhope’s position near the state border places it within a network of small regional communities that share strong agricultural ties and a resilient rural identity. Nearby towns and localities contribute to the area’s sense of connection and regional continuity.
-</p>
+    <p>
+      European pastoral settlement developed during the nineteenth century,
+      with sheep grazing and later grain production becoming central to the
+      district’s economy. Edenhope grew as a supply, administrative and social
+      centre for rural properties spread across the surrounding plains.
+    </p>
 
-<p>
-Today, Edenhope offers essential services, accommodation, and community facilities, with a welcoming atmosphere and steady pace of life. The town centre reflects its heritage, while local events and recreational spaces support a strong sense of community.
-</p>
+    <p>
+      Lake Wallace is the town’s defining natural feature. When water levels
+      allow, the lake supports fishing, boating and other recreational
+      activities, while its shoreline provides walking, cycling, picnicking
+      and birdwatching opportunities. A track follows the lake and connects
+      several of Edenhope’s community facilities and landmarks.
+    </p>
 
-<p>
-Surrounded by open plains, lakes, and farmland, Edenhope captures the essence of western Victoria’s rural landscape. It is a town shaped by agriculture, natural features, and the enduring spirit of country communities.
-</p>
+    <p>
+      Edenhope also holds an important place in Australian sporting history.
+      The district is connected with members of the Aboriginal cricket team
+      that toured England in 1868, the first organised Australian sporting
+      team to compete internationally. A monument near Lake Wallace recognises
+      this significant cultural and sporting story.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Edenhope as part of our national filming journey — highlighting its Lake Wallace setting, agricultural heritage, border-town character, and the welcoming community spirit that continues to shape this western Victorian town.
-</p>
+    <p>
+      The town centre contains local shops, hospitality businesses, community
+      services and heritage buildings. The former courthouse, information
+      centre and Red Tail Gallery help visitors explore local history, art and
+      the character of the wider West Wimmera district.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Nearby Goroke provides another perspective on regional life through its
+      agricultural streetscape and large-scale silo artwork. Together, these
+      communities demonstrate the resilience and creativity of towns located
+      across Victoria’s western border country.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, heritage and
+      landscapes that define Edenhope. Our visit will highlight its Lake
+      Wallace setting, agricultural history, Aboriginal sporting heritage,
+      public art and the welcoming community spirit of the West Wimmera.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Edenhope Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Edenhope</h3>
-  <ul class="other-accommodation-list">
-    <li>Edenhope Information Centre and Courthouse</li>
-    <li>Red Tail Gallery</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Edenhope’s attractions introduce visitors to the town’s heritage,
+      community stories, visitor information and the creative work produced
+      throughout the West Wimmera.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Edenhope’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Goroke (including Silo Art)</h3>
-      <p>
-      Goroke is a small Wimmera town known for its large-scale silo art, which celebrates local agricultural life and community identity. The artwork has become a key attraction, drawing visitors to this quiet farming district.
-      </p>
+      <li>
+        <strong>Edenhope Information Centre &amp; Courthouse</strong>
+        Located within an important local heritage building, the centre
+        provides visitor information about Edenhope and the surrounding West
+        Wimmera. The former courthouse setting also helps preserve the town’s
+        administrative and community history.
+      </li>
+
+      <li>
+        <strong>Red Tail Gallery</strong>
+        A community-focused gallery presenting artwork, creative pieces and
+        exhibitions connected with local and regional artists. The gallery
+        contributes to Edenhope’s cultural life and provides visitors with an
+        opportunity to discover creativity from across the district.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Edenhope’s landmarks combine lake scenery, Aboriginal sporting history,
+      community character and public art from across the surrounding West
+      Wimmera district.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Edenhope Town Centre &amp; Big Eyed Scad Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Edenhope Town Centre &amp; Big Eyed Scad</h3>
+
+          <p>
+            Edenhope’s town centre contains local shops, services, hospitality
+            businesses and community facilities reflecting its role as a
+            regional service centre. The Big Eyed Scad sculpture provides an
+            unusual and playful local landmark for visitors exploring the town.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Goroke &amp; Silo Art Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Goroke &amp; Silo Art</h3>
+
+          <p>
+            Goroke is a small West Wimmera town surrounded by productive
+            agricultural country. Its large-scale silo artwork celebrates
+            regional wildlife and community identity while attracting visitors
+            travelling through Victoria’s western farming districts.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lake Wallace &amp; Aboriginal Cricket Team Monument Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lake Wallace &amp; Aboriginal Cricket Team Monument</h3>
+
+          <p>
+            Lake Wallace is Edenhope’s principal natural and recreational
+            landmark, offering shoreline views, walking areas and important
+            bird habitat. The nearby monument commemorates members of the
+            Aboriginal cricket team that toured England in 1868 and recognises
+            their place in Australian sporting history.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Edenhope Town Centre (including the Big Eyed Scad)</h3>
-      <p>
-      Edenhope’s town centre features local shops, services, and community spaces that reflect its agricultural foundations. The Big Eyed Scad sculpture adds a unique and playful landmark, celebrating local character and providing a focal point for visitors.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Wallace (including the Aboriginal Cricket Team Monument)</h3>
-      <p>
-      Lake Wallace is a central recreational and natural feature of Edenhope, offering open water views, walking areas, and birdlife habitats. The nearby Aboriginal Cricket Team Monument commemorates one of Australia’s earliest touring cricket teams, recognising an important piece of cultural and sporting history.
-      </p>
-    </div>
-  </div>
-  </div>
 
     <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Edenhope</h2>
+    <h2>🏨 Stay Where We Showcase — Edenhope</h2>
 
-  <p class="accommodation-intro">
-    Planning a stay in Edenhope? Explore accommodation options in and around this peaceful border town while discovering
-    the Lake Wallace setting, rural heritage, and relaxed country atmosphere that make Edenhope a distinctive part of western Victoria.
-  </p>
+    <p class="accommodation-intro">
+      Planning a stay in Edenhope? Explore accommodation in and around this
+      West Wimmera town while discovering Lake Wallace, local heritage,
+      community attractions and the surrounding rural landscape.
+    </p>
 
-  <p class="accommodation-intro">
-    ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-    people discover where to go, what to experience, and where to base themselves as they explore
-    Australia’s cities, towns, and hidden gems.
-  </p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="https://www.booking.com/searchresults.html?ss=Edenhope" target="_blank" class="accommodation-link">
-      View All Edenhope Accommodation
-    </a>
-  </p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEdenhope%252C%2520Victoria%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Edenhope Accommodation
+      </a>
+    </p>
 
-  <h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Edenhope</h3>
+    <h3 style="text-align:center; margin-top:50px;">
+      Featured Accommodation Opportunities In And Around Edenhope
+    </h3>
 
-  <p class="accommodation-intro">
-    Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-    produced video, photography, and destination-led storytelling that places their property in front
-    of travellers actively planning where to stay.
-  </p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="../accommodation-partners.html" class="accommodation-link">
-      Explore accommodation filming & feature options
-    </a>
-  </p>
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Edenhope Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Edenhope</h3>
-  <div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Edenhope
+    </h3>
 
-    <div class="other-stay-item"><span>Edenhope Motor Inn and Restaurant</span><a href="https://www.booking.com/searchresults.html?ss=Edenhope" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-    <div class="other-stay-item"><span>Edenhope Lakeside Tourist Park</span><a href="https://www.booking.com/searchresults.html?ss=Edenhope" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Ardwick Homestead B&amp;B</span>
+          <small>
+            Bed &amp; Breakfast / Farm Homestead · Near Apsley · Approximately 25–30 km from Edenhope
+          </small>
+        </div>
 
-    <div class="other-stay-item"><span>Ardwick Homestead Farmstay - Apsley</span><a href="https://www.booking.com/searchresults.html?ss=Edenhope" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DArdwick%2520Homestead%252C%2520Apsley%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  </div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Edenhope Lakeside Tourist Park</span>
+          <small>
+            Tourist Park, Cabins, Villas &amp; Caravan Sites · Lake Wallace, Edenhope
+          </small>
+        </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEdenhope%2520Lakeside%2520Tourist%2520Park%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Edenhope Motor Inn</span>
+          <small>
+            Motel &amp; Restaurant · Elizabeth Street, Edenhope
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEdenhope%2520Motor%2520Inn%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Lake Wallace Hotel</span>
+          <small>
+            Hotel Accommodation · Elizabeth Street, Edenhope
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake%2520Wallace%2520Hotel%252C%2520Edenhope%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -586,10 +760,19 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and landscape
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
