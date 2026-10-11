@@ -3,365 +3,413 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Eromanga (QLD) | ShowcasingOz TV</title>
- <meta name="description" content="Discover Eromanga, QLD — Queensland’s most westerly town, known for its rich fossil heritage, iconic outback pub, and remote desert landscapes in the heart of the Channel Country." />
-  <meta name="keywords" content="Eromanga QLD, Eromanga outback, Channel Country Queensland, Queensland westernmost town, Eromanga fossils, Eromanga attractions, Eromanga accommodation, outback travel Queensland, remote Australian towns, ShowcasingOz TV" />
 
-<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Eromanga, Queensland, including its dinosaur discoveries, outback heritage, attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Eromanga QLD, Eromanga attractions, Eromanga accommodation, Eromanga Natural History Museum, Cooper dinosaur, Channel Country, Outback Queensland, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      width: auto;
+      height: 65px;
+    }
 
     nav a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      margin-bottom: 20px;
+      color: #0E3557;
+      text-align: center;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      margin-top: 50px;
+      color: #E87722;
+      text-align: center;
+    }
+
+    p {
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .section-intro,
+    .accommodation-intro {
+      max-width: 760px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .accommodation-placeholder {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
     }
 
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    .accommodation-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
+    /* ================= LINKS AND BUTTONS ================= */
 
     .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 18px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
     }
 
     .accommodation-link:hover {
-      text-decoration:underline;
+      background: #E87722;
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 760px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      background: #f9f9f9;
+      color: #333333;
+      line-height: 1.6;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .attractions-list strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .poi-placeholder {
+      display: flex;
+      height: 160px;
+      padding: 0 15px;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 0 0 8px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      margin-bottom: 14px;
+      padding: 16px 18px;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e4e4e4;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.02rem;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* ================= FOOTER ================= */
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a {
+      margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – EROMANGA ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    /* ================= MOBILE ================= */
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #0E3557;
+      }
 
-.poi-content h3 {
-  text-align: center;
-}
+      nav.active {
+        display: flex;
+      }
 
-.poi-content p {
-  text-align: center;
-}
+      nav a {
+        margin-left: 0;
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+      .menu-btn {
+        display: block;
+      }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+      .hero {
+        height: 250px;
+      }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-                .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -370,10 +418,19 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn" aria-label="Open navigation menu">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -388,203 +445,358 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/eromanga.jpg"
-       alt="Eromanga Queensland"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/eromanga.jpg"
+      alt="Eromanga in Outback Queensland"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </section>
 
-<h1>Eromanga (QLD)</h1>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-<p>
-Eromanga is a small but historically significant outback town located in south-west Queensland, deep within the heart of the Channel Country. Known as Queensland’s most westerly town, Eromanga sits in an isolated desert landscape characterised by vast open plains, ancient river systems, and a powerful sense of remoteness that defines life in Australia’s inland.
-</p>
+    <h1>Eromanga (QLD)</h1>
 
-<p>
-Originally established in the late 19th century as a service centre for surrounding cattle stations, Eromanga developed around pastoral activity and the vital stock routes that once crisscrossed the region. Today, the town retains its strong connection to the land, with grazing, tourism, and heritage playing a central role in its identity.
-</p>
+    <p>
+      Eromanga is a small but nationally significant outback community in the
+      Quilpie Shire of south-west Queensland. Located deep within the Channel
+      Country, it is widely recognised as Queensland’s most westerly town.
+      Its remote position, sweeping horizons and distinctive red-earth
+      landscapes give visitors an immediate sense of the scale and isolation
+      of inland Australia.
+    </p>
 
-<p>
-Eromanga is internationally recognised for its extraordinary fossil discoveries, which have reshaped scientific understanding of Australia’s prehistoric past. The surrounding region has yielded some of the country’s most important dinosaur finds, earning Eromanga a place on the map as a key destination for fossil tourism and outback discovery.
-</p>
+    <p>
+      The town developed during the late nineteenth century as pastoral
+      settlement expanded across the region. Cattle and sheep stations,
+      transport routes and essential outback services all played an important
+      role in Eromanga’s growth. Pastoral activity remains part of the wider
+      district’s identity, while tourism, scientific research and local
+      enterprise now contribute to the town’s economy.
+    </p>
 
-<p>
-Despite its small population, Eromanga offers visitors essential outback services and a warm welcome, with its iconic pub, local museum, and community facilities providing a focal point for travellers exploring remote western Queensland. The town is often visited by four-wheel-drive adventurers, history enthusiasts, and travellers seeking an authentic outback experience far removed from major population centres.
-</p>
+    <p>
+      Eromanga also sits within the enormous Eromanga Basin, a geological
+      formation extending beneath a large section of inland Australia. The
+      basin has supported petroleum exploration and production, adding another
+      important chapter to the town’s economic and industrial history.
+    </p>
 
-<p>
-Surrounded by expansive desert landscapes and shaped by resilience, self-reliance, and community spirit, Eromanga represents the enduring character of Australia’s inland towns. It is a place where history, science, and everyday outback life intersect, offering visitors a deeper appreciation of both the land and the people who continue to call this remote region home.
-</p>
+    <p>
+      Today, Eromanga is best known internationally for its remarkable fossil
+      discoveries. The surrounding countryside has produced dinosaur,
+      megafauna, plant and marine fossils of major scientific importance.
+      These discoveries include Australotitan cooperensis, commonly known as
+      Cooper, one of the largest dinosaurs ever identified in Australia.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Eromanga as part of our national filming journey — highlighting its pioneering outback heritage, world-class fossil significance, and the resilient way of life that continues to thrive in one of Queensland’s most remote communities.
-</p>
+    <p>
+      The Eromanga Natural History Museum preserves and studies this material
+      while giving visitors an opportunity to see fossil preparation,
+      scientific research and significant specimens at close range. Together
+      with the Eromanga Living History Centre, the museum connects the ancient
+      natural history of the region with the pastoral, industrial and social
+      history of the modern community.
+    </p>
 
+    <p>
+      Although its population is small, Eromanga provides an important welcome
+      and stopping point for travellers exploring the Channel Country. Its
+      historic hotel, visitor facilities, local heritage displays and
+      accommodation businesses offer a valuable base from which to experience
+      the surrounding outback landscape.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, stories and
+      landscapes that define Eromanga. Our coverage will explore its
+      world-class fossil heritage, pioneering history, local attractions and
+      the resilience of the community that continues to sustain one of
+      Queensland’s most remote towns.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Eromanga</h3>
-  <ul class="other-accommodation-list">
-    <li>Eromanga Living History Centre</li>
-    <li>Eromanga Royal Hotel</li>
-    <li>Eromanga Natural History Museum</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions In And Around Eromanga</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="section-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, heritage, culture and visitor engagement in a way that
+      static listings cannot achieve.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Eromangas's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Julie Kate’s Corner</h3>
-      <p>
-  Julie Kate’s Corner is a local point of interest that reflects the character and stories of Eromanga’s close-knit outback community, offering visitors a small but meaningful connection to the town’s people and history.
-</p>
+      <li>
+        <strong>Eromanga Living History Centre</strong>
+        This self-guided local history centre introduces visitors to
+        Eromanga’s pastoral development, early settlement, oil industry,
+        community life and fossil discoveries. Its displays provide useful
+        historical context before exploring the town and visiting the natural
+        history museum.
+      </li>
+
+      <li>
+        <strong>Eromanga Natural History Museum</strong>
+        A major scientific and visitor attraction dedicated to the fossils,
+        geology and natural history of the Eromanga region. Guided experiences
+        introduce visitors to locally discovered dinosaurs, fossil preparation
+        and the scientific work involved in preserving the area’s prehistoric
+        heritage.
+      </li>
+
+      <li>
+        <strong>Eromanga Royal Hotel</strong>
+        A historic outback hotel and long-standing social landmark in the
+        centre of Eromanga. The hotel reflects the town’s pastoral and
+        travelling history while continuing to serve residents, station
+        families and visitors exploring the Channel Country.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+    <p class="section-intro">
+      These landmarks and local points of interest form an important part of
+      Eromanga’s landscape, history and sense of place. ShowcasingOz TV will
+      capture these locations during filming to help tell the broader story
+      of the region.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Eromanga &amp; Knot-A-Saurus Park Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Eromanga &amp; Knot-A-Saurus Park</h3>
+
+          <p>
+            A dinosaur-themed public space celebrating Eromanga’s connection
+            to Australia’s prehistoric past. Its large dinosaur figures create
+            a memorable roadside photo opportunity and introduce visitors to
+            the fossil discoveries associated with the district.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Eromanga Botanical Gardens Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Eromanga Botanical Gardens</h3>
+
+          <p>
+            A community space highlighting plants capable of surviving the
+            demanding conditions of south-west Queensland. The gardens offer
+            visitors a place to pause while observing vegetation associated
+            with the region’s dry climate and outback environment.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Julie Kate’s Corner Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Julie Kate’s Corner</h3>
+
+          <p>
+            A small local point of interest associated with Eromanga’s
+            community character and everyday town life. It forms part of the
+            collection of places through which visitors can appreciate the
+            stories and identity of this remote settlement.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Kyabra Waterhole Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kyabra Waterhole</h3>
+
+          <p>
+            A natural water feature in the wider Eromanga district that
+            illustrates the importance of permanent and seasonal water across
+            the Channel Country. Conditions and road access can vary, so
+            visitors should obtain current local advice before travelling.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Kyabra Waterhole</h3>
-      <p>
-Kyabra Waterhole is a scenic natural feature near Eromanga, showcasing the importance of water in the Channel Country and providing a peaceful setting within the otherwise arid outback landscape.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-     <h3>Eromanga Botanical Gardens</h3>
-<p>
-The Eromanga Botanical Gardens highlight native and arid-zone plant species, offering a shaded and well-maintained space for visitors to relax while learning about the region’s unique flora.
-</p>
-    </div>
-  </div>
-  
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-     <h3>Eromanga and Knot-A-Saurus Park</h3>
-<p>
-Eromanga and Knot-A-Saurus Park is a family-friendly attraction celebrating the town’s world-renowned fossil discoveries, featuring dinosaur-themed displays and playful sculptures that reflect Eromanga’s strong connection to prehistoric history.
-</p>
-
-          </div>
-  </div>
-  </div>
 
     <!-- ACCOMMODATION -->
-  <h2>🏨 Stay Where We Showcase — Eromanga</h2>
+    <h2>🏨 Stay Where We Showcase — Eromanga</h2>
 
-  <p class="accommodation-intro">
-    Planning a stay in Eromanga? Explore accommodation options in and around this remote outback town while discovering
-    the Channel Country landscapes, fossil heritage, and pioneering character that make Eromanga one of Queensland’s most distinctive inland destinations.
-  </p>
+    <p class="accommodation-intro">
+      Planning a stay in Eromanga? Explore local accommodation while
+      discovering the town’s fossil heritage, historic outback character and
+      expansive Channel Country landscapes.
+    </p>
 
-  <p class="accommodation-intro">
-    ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-    people discover where to go, what to experience, and where to base themselves as they explore
-    Australia’s cities, towns, and hidden gems.
-  </p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">
-      View All Eromanga Accommodation
-    </a>
-  </p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEromanga%252C%2520Queensland%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Eromanga Accommodation
+      </a>
+    </p>
 
-  <h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Eromanga</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Eromanga
+    </h3>
 
-  <p class="accommodation-intro">
-    Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-    produced video, photography, and destination-led storytelling that places their property in front
-    of travellers actively planning where to stay.
-  </p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="../accommodation-partners.html" class="accommodation-link">
-      Explore accommodation filming & feature options
-    </a>
-  </p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Eromanga</h3>
-  <div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Eromanga
+    </h3>
 
-    <div class="other-stay-item"><span>Eromanga Motel, Caravan Park</span><a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-    <div class="other-stay-item"><span>The Family Hotel</span><a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Cooper’s Country Lodge</strong>
+          <span>
+            Four-star lodge-style accommodation located at the Eromanga
+            Natural History Museum.
+          </span>
+        </div>
 
-    <div class="other-stay-item"><span>Eromanga Royal Hotel</span><a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCooper%2527s%2520Country%2520Lodge%252C%2520Eromanga%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-    <div class="other-stay-item"><span>Cooper's Country Lodge</span><a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Eromanga Motel &amp; Caravan Park</strong>
+          <span>
+            Local motel rooms and caravan facilities in Eromanga, also
+            operating as Fossil Outpost Eromanga.
+          </span>
+        </div>
 
-    <div class="other-stay-item"><span>Toogunna Plains Farmstay</span><a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEromanga%2520Motel%2520and%2520Caravan%2520Park%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-    <div class="other-stay-item"><span>Eromanga Natural History Museum Accommodation</span><a href="https://www.booking.com/searchresults.html?ss=Eromanga" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Royal Hotel Eromanga</strong>
+          <span>
+            Historic outback hotel offering accommodation, meals and
+            traditional country hospitality in the centre of Eromanga.
+          </span>
+        </div>
 
-  </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRoyal%2520Hotel%2520Eromanga%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
+    </div>
 
-</section>
+    <p class="accommodation-disclaimer">
+      This accommodation list includes hotels, motels, caravan parks, bed and
+      breakfasts, and eligible commercially operated lodge-style
+      accommodation. It does not include campgrounds, Airbnb properties or
+      privately operated holiday rentals. Inclusion is provided for visitor
+      awareness only and does not imply partnership or endorsement. Some links
+      on this page are affiliate links, which means ShowcasingOz TV may earn a
+      small commission if you make a booking, at no additional cost to you.
+    </p>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -602,8 +814,18 @@ Eromanga and Knot-A-Saurus Park is a family-friendly attraction celebrating the 
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
