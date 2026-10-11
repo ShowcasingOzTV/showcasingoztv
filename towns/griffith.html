@@ -3,364 +3,413 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Griffith (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Griffith, NSW — a vibrant Riverina city known for its Italian heritage, irrigation farming, wineries, and rich agricultural production in southern New South Wales." />
-<meta name="keywords" content="Griffith NSW, Griffith Riverina, Murrumbidgee Irrigation Area, Griffith wineries, Riverina agriculture, Griffith attractions, Griffith accommodation, NSW food and wine region, ShowcasingOz TV" />
+  <title>Goolwa (SA) | ShowcasingOz TV</title>
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Goolwa, Middleton, Hindmarsh Island and Currency Creek, including local attractions, river and coastal landmarks, heritage sites and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Goolwa SA, Goolwa attractions, Goolwa accommodation, Middleton SA, Hindmarsh Island, Currency Creek, Murray Mouth, Coorong National Park, Fleurieu Peninsula, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      width: auto;
+      height: 65px;
+    }
 
     nav a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      margin-bottom: 20px;
+      color: #0E3557;
+      text-align: center;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      margin-top: 50px;
+      color: #E87722;
+      text-align: center;
+    }
+
+    p {
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .section-intro,
+    .accommodation-intro {
+      max-width: 760px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .accommodation-placeholder {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
-    }
-    /* ================= POINTS OF INTEREST ================= */
-
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+    .accommodation-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
+    /* ================= LINKS AND BUTTONS ================= */
 
     .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 18px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
     }
 
     .accommodation-link:hover {
-      text-decoration:underline;
+      background: #E87722;
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 760px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      background: #f9f9f9;
+      color: #333333;
+      line-height: 1.6;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .attractions-list strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .poi-placeholder {
+      display: flex;
+      height: 160px;
+      padding: 0 15px;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 0 0 8px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      margin-bottom: 14px;
+      padding: 16px 18px;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e4e4e4;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.02rem;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      text-align: center;
     }
-/* ================= CENTER ALIGN – GRIFFITH ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    footer .footer-links a {
+      margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    footer .footer-links a:hover {
+      color: #ffffff;
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+    /* ================= MOBILE ================= */
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #0E3557;
+      }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+      nav.active {
+        display: flex;
+      }
 
-footer p a:hover {
-  color: #ffffff;
-}
+      nav a {
+        margin-left: 0;
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
 
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
+      .menu-btn {
+        display: block;
+      }
 
-footer {
-  background-color: #0E3557 !important;
-}
+      .hero {
+        height: 250px;
+      }
 
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-            .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  }
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -369,10 +418,19 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn" aria-label="Open navigation menu">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -387,411 +445,819 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/griffith.jpg"
-       alt="Griffith New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/goolwa.jpg"
+      alt="Goolwa on the lower Murray River in South Australia"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </section>
 
-<h1>Griffith (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-<p>
-Griffith is a vibrant regional city in the Riverina district of southern New South Wales, known for its strong agricultural base, multicultural heritage, and reputation as a major food and wine destination. Positioned within the Murrumbidgee Irrigation Area, Griffith plays a key role in one of Australia’s most productive farming regions.
-</p>
+    <h1>Goolwa (SA)</h1>
 
-<p>
-Established in the early 20th century as part of an irrigation scheme, Griffith was designed to support intensive agriculture through a network of canals and water management systems. This transformation turned semi-arid land into fertile farmland, enabling large-scale production of fruit, vegetables, rice, and wine grapes.
-</p>
+    <p>
+      Goolwa is a historic river-port town on Ngarrindjeri Country at the
+      southern end of South Australia’s Fleurieu Peninsula. Positioned near
+      the final reaches of the Murray River, the Murray Mouth, Lake Alexandrina
+      and the Coorong, Goolwa occupies one of the most environmentally and
+      culturally significant waterways in Australia.
+    </p>
 
-<p>
-The city is particularly known for its Italian influence, with many families settling in the region and contributing to its food, wine, and cultural identity. Wineries, cafés, and restaurants reflect this heritage, making Griffith a recognised destination for regional cuisine and hospitality.
-</p>
+    <p>
+      During the nineteenth century, Goolwa developed as an important inland
+      port connecting river traffic with coastal transport. Paddle steamers
+      carried wool, grain and other goods along the Murray-Darling river
+      system, while the railway between Goolwa and Port Elliot provided a link
+      between the river and the sea. Much of this history remains visible
+      around the Goolwa Wharf Precinct.
+    </p>
 
-<p>
-Agriculture remains central to Griffith’s economy, supported by food processing, packaging, and export industries. The surrounding farmland and irrigation infrastructure continue to define both the landscape and the livelihoods of the community.
-</p>
+    <p>
+      The river continues to shape the town’s identity. Cruises, paddling
+      experiences, marinas, historic vessels and waterfront businesses provide
+      different ways to explore the lower Murray. The nearby Goolwa Barrage
+      forms part of the system separating the fresh water of the Lower Lakes
+      from the tidal waters extending towards the Murray Mouth and Coorong.
+    </p>
 
-<p>
-Today, Griffith offers a wide range of services, retail, accommodation, and visitor attractions, with a vibrant town centre and strong community culture. Parks, walking tracks, public art, and cultural landmarks contribute to a dynamic and welcoming regional city.
-</p>
+    <p>
+      Goolwa is also closely connected with the coast. Goolwa Beach and nearby
+      Middleton Beach are known for surfing, walking, fishing and seasonal
+      whale watching. The Encounter Bikeway links coastal communities through
+      a shared trail used by cyclists and walkers.
+    </p>
 
-<p>
-Surrounded by vineyards, orchards, and open plains, Griffith captures the innovation and productivity of the Riverina. The city blends agricultural success with cultural diversity, creating a unique and engaging destination in southern New South Wales.
-</p>
+    <p>
+      This page also covers Middleton, Hindmarsh Island and Currency Creek.
+      Middleton contributes surf culture, beaches, historic structures and
+      local artisan businesses. Hindmarsh Island provides access to marinas,
+      farm experiences, the barrage and views towards the Murray Mouth.
+      Currency Creek adds vineyards, railway heritage, historic bridges and
+      peaceful rural scenery.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Griffith as part of our national filming journey — highlighting its irrigation heritage, food and wine culture, agricultural strength, and the diverse community that continues to shape this thriving Riverina city.
-</p>
+    <p>
+      Goolwa’s town centre combines heritage buildings with cafés, galleries,
+      accommodation, visitor services and local businesses. Community
+      organisations, museums and cultural spaces preserve the stories of the
+      river port while new tourism and hospitality businesses continue to
+      strengthen the destination.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, waterways, coastal
+      landscapes and heritage that define Goolwa and its surrounding
+      communities. Our coverage will highlight the region’s river-port
+      history, Ngarrindjeri culture, environmental importance, local
+      attractions and connections between the Murray River, Coorong and
+      Southern Ocean.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Griffith</h3>
-  <ul class="other-accommodation-list">
-    <li>Wallys Junk Art Gallery - Rankins Springs</li>
-    <li>Binya Hall - Binya</li>
-    <li>De Bortoli Wines</li>
-    <li>Griffith Pioneer Park Museum</li>
-    <li>Griffith Tourism Hub</li>
-    <li>Yarran Wines</li>
-    <li>Berton Vineyards</li>
-    <li>Griffith Regional Art Gallery</li>
-    <li>Made To Thrive</li>
-    <li>Calabria Family Wines</li>
-    <li>Griffith Italian Museum and Cultural Centre</li>
-    <li>Griffith War Memorial Museum</li>
-    <li>Catania Fruit Salad Farm</li>
-    <li>The Aisling Distillery</li>
-    <li>Darlington Point Museum - Darlington Point</li>
-    <li>Southern Cotton Gin Tour - Whitton</li>
-    <li>Whitton Malt House - Whitton</li>
-    <li>Altina Wildlife Park</li>
-    <li>Yarrow Park Award Winning Cellar Door - Coleambally</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions In And Around Goolwa</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="section-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, culture, history and visitor engagement in a way that
+      static listings cannot achieve.
+    </p>
 
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Griffith’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <ul class="attractions-list">
 
-<div class="poi-grid">
+      <li>
+        <strong>Art@Goolwa Inc</strong>
+        A community-focused arts organisation and gallery showcasing work by
+        local and regional artists. Exhibitions and creative activities help
+        visitors engage with the artistic character of Goolwa and the wider
+        Fleurieu Peninsula.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Goolgowi</h3>
-      <p>Goolgowi is a small Riverina service town located along the Mid-Western Highway, supporting surrounding agricultural districts. It functions as a convenient stop for travellers and a hub for local farming communities.
-      </p>
+      <li>
+        <strong>Canoe the Coorong</strong>
+        Guided paddling experiences that introduce visitors to the waterways,
+        sand dunes, wildlife, ecology and cultural significance of the
+        Coorong. Tours provide a low-impact way to explore areas that are best
+        experienced from the water.
+      </li>
+
+      <li>
+        <strong>Goolwa Animal Farm</strong>
+        A family-oriented attraction where visitors can meet and interact with
+        a variety of farm animals. The property offers animal-feeding
+        experiences, open spaces and activities designed to introduce children
+        to rural animals and farm life.
+      </li>
+
+      <li>
+        <strong>Goolwa National Trust Museum</strong>
+        Located in a former blacksmith’s shop dating from around 1872, the
+        museum presents the history of Goolwa, Currency Creek and Hindmarsh
+        Island. Its collection covers river trade, local industries,
+        settlement, community life and the development of the district.
+      </li>
+
+      <li>
+        <strong>Goolwa Visitor Information Centre</strong>
+        Located within the Signal Point Experience Centre, Goolwa Visitor
+        Services provides local maps, destination information and guidance on
+        attractions, cruises, beaches, events and experiences across the
+        Alexandrina region and Fleurieu Peninsula.
+      </li>
+
+      <li>
+        <strong>Hindmarsh Island Marina &amp; Islanders’ Tavern</strong>
+        A marina precinct on Hindmarsh Island providing moorings, marine
+        services and access to the lower Murray waterways. Islanders’ Tavern
+        adds waterfront dining and a relaxed meeting place overlooking the
+        marina.
+      </li>
+
+      <li>
+        <strong>Kombi Surf</strong>
+        A locally operated surf school providing lessons and coaching at
+        Middleton Beach. Its experiences help beginners and developing surfers
+        build confidence while learning about ocean conditions and surf
+        safety.
+      </li>
+
+      <li>
+        <strong>Middleton Chocolates</strong>
+        A local Middleton business producing handmade chocolates, truffles,
+        creams, fudge and house-made ice cream. It provides visitors with an
+        opportunity to sample locally made confectionery while exploring the
+        coastal township.
+      </li>
+
+      <li>
+        <strong>Narnu Farm</strong>
+        A family farm experience on Hindmarsh Island where visitors can
+        encounter farm animals and take part in activities connected with
+        traditional rural life. The property is particularly known for
+        hands-on experiences designed for families and groups.
+      </li>
+
+      <li>
+        <strong>One Paddock Currency Creek Winery</strong>
+        A winery and cellar-door destination within the Currency Creek wine
+        region. Visitors can explore locally produced wines while experiencing
+        the vineyard landscape and cool-climate character of the district.
+      </li>
+
+      <li>
+        <strong>PS Oscar W Cruise</strong>
+        A restored historic paddle steamer operating from Goolwa Wharf.
+        Scheduled cruises offer a living-history experience and allow
+        passengers to see the lower Murray from a vessel connected with
+        Australia’s river-trading era.
+      </li>
+
+      <li>
+        <strong>River Port Heritage Centre</strong>
+        Located within the historic Goolwa Wharf Precinct, the centre
+        interprets the town’s development as a major Murray River port. Its
+        displays explore paddle-steamer trade, rail transport, local industry
+        and the people who worked along the river.
+      </li>
+
+      <li>
+        <strong>Shaw Family Vintners</strong>
+        A family-owned wine producer with vineyards, winemaking facilities and
+        a cellar door at Currency Creek. Visitors can taste wines from several
+        labels while learning about the region’s cool-climate viticulture.
+      </li>
+
+      <li>
+        <strong>Signal Point Experience Centre</strong>
+        An interpretive and cultural centre overlooking the Murray River at
+        Goolwa Wharf. Its exhibition explores Ngarrindjeri and colonial
+        heritage together with the ecology of the Murray River, Lower Lakes
+        and Coorong.
+      </li>
+
+      <li>
+        <strong>Spirit of the Coorong Cruises &amp; Coorong National Park</strong>
+        Cruises departing from Goolwa Wharf explore the lower Murray, Murray
+        Mouth and Coorong. Guided experiences provide commentary on the
+        region’s ecology, wildlife, cultural heritage and changing waterways,
+        with selected cruises including guided walks within Coorong National
+        Park.
+      </li>
+
+      <li>
+        <strong>Steam Exchange Brewery</strong>
+        A small independent brewery located within the historic Goolwa Wharf
+        Precinct. Visitors can sample handcrafted beer in a setting closely
+        connected with the town’s river-port and railway heritage.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Opening hours, tours and access
+      arrangements should be confirmed directly with each operator before
+      visiting.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+    <p class="section-intro">
+      These landmarks and local points of interest form an important part of
+      Goolwa, Middleton, Hindmarsh Island and Currency Creek. ShowcasingOz TV
+      will capture these locations during filming to help tell the broader
+      story of the region.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Aboriginal Canoe Tree Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Aboriginal Canoe Tree</h3>
+          <p>
+            A culturally significant scarred tree showing where bark was
+            carefully removed to create a canoe or another traditional object.
+            The site provides a physical reminder of the long Ngarrindjeri
+            connection with the lands and waterways of the lower Murray.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Basham Beach Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Basham Beach</h3>
+          <p>
+            A broad coastal beach and conservation area between Middleton and
+            Port Elliot. Its exposed shoreline, dunes and elevated viewing
+            areas are popular for walking, coastal scenery and observing
+            southern right whales during their seasonal migration.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Blue Temper Ironworks &amp; Middleton Station Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Blue Temper Ironworks &amp; Middleton Station</h3>
+          <p>
+            Blue Temper Ironworks showcases the work of Middleton blacksmith
+            and artist Chris Murphy near the town’s heritage railway station.
+            The area connects contemporary metalwork with Middleton’s railway
+            history and includes the artist’s distinctive public sculptures.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Currency Creek Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Currency Creek</h3>
+          <p>
+            A small rural township and waterway north of Goolwa where
+            vineyards, wetlands, railway infrastructure and historic sites
+            come together. The surrounding district forms part of the
+            recognised Currency Creek wine region.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Currency Creek Lions Park &amp; Waterfall Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Currency Creek Lions Park &amp; Waterfall</h3>
+          <p>
+            A peaceful public reserve beside the creek with picnic facilities,
+            shady vegetation and access to the nearby waterfall. Water flow
+            varies with seasonal rainfall, so the character of the site
+            changes throughout the year.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Currency Creek Railway Viaduct Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Currency Creek Railway Viaduct</h3>
+          <p>
+            An imposing historic railway structure spanning the Currency Creek
+            valley. The viaduct demonstrates the engineering required to
+            establish rail connections across the southern Fleurieu Peninsula
+            and remains a prominent feature of the local landscape.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Encounter Bikeway Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Encounter Bikeway</h3>
+          <p>
+            A shared coastal pathway connecting Goolwa with Middleton and
+            communities farther west. The route gives cyclists and walkers
+            access to beaches, coastal viewpoints, reserves and sections of
+            the region’s historic railway corridor.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Finniss Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Finniss</h3>
+          <p>
+            A small rural settlement north of Goolwa surrounded by grazing
+            properties, farmland and open Fleurieu countryside. Finniss
+            contributes another perspective on the agricultural communities
+            connected with Currency Creek and the lower Murray district.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Goolwa Barrage Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Goolwa Barrage</h3>
+          <p>
+            One of the structures built across channels near the Murray Mouth
+            to manage the boundary between the fresh water of the Lower Lakes
+            and the tidal waters of the Coorong. The barrage is also a useful
+            location for observing waterbirds and the surrounding waterways.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Goolwa Beach Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Goolwa Beach</h3>
+          <p>
+            A long and exposed ocean beach popular for surfing, fishing,
+            walking and four-wheel-drive access towards the Murray Mouth.
+            Visitors driving on the beach must assess current sand, tide and
+            weather conditions before entering.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Goolwa Railway Station Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Goolwa Railway Station</h3>
+          <p>
+            A heritage railway station associated with the historic rail
+            connection established to move goods between the Murray River and
+            the coast. It remains part of the SteamRanger heritage railway
+            experience and Goolwa’s transport story.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Goolwa Town Centre Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Goolwa Town Centre</h3>
+          <p>
+            The commercial and community heart of Goolwa, combining heritage
+            buildings, shops, cafés, galleries, accommodation and everyday
+            services. Its streets reflect the town’s transition from working
+            river port to modern regional and tourism centre.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Goolwa Wharf Precinct Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Goolwa Wharf Precinct</h3>
+          <p>
+            Goolwa’s principal heritage and waterfront precinct, bringing
+            together the wharf, historic vessels, railway, visitor centre,
+            museum experiences, galleries, hospitality businesses and river
+            cruises.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Hindmarsh Island Bridge Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Hindmarsh Island Bridge</h3>
+          <p>
+            The bridge linking Goolwa with Hindmarsh Island across the Goolwa
+            Channel. It provides an elevated view of the waterway and is an
+            important transport connection for island residents, businesses
+            and visitors.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Historic Currency Creek Cemetery Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Historic Currency Creek Cemetery</h3>
+          <p>
+            A small historic burial ground containing graves connected with
+            early settlers and families of the Currency Creek district. The
+            surviving memorials provide insight into the community’s colonial
+            history and changing population.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Historic Middleton Mill Ruin Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Historic Middleton Mill Ruin (Bowman’s Mill)</h3>
+          <p>
+            The remains of an early flour mill associated with Middleton’s
+            nineteenth-century development. The surviving stonework recalls
+            the importance of grain production, milling and local industry in
+            the early settlement period.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Middleton Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Middleton</h3>
+          <p>
+            A coastal township between Goolwa and Port Elliot known for its
+            surf culture, heritage railway, local businesses and access to a
+            long section of the southern Fleurieu coastline.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Middleton Beach Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Middleton Beach</h3>
+          <p>
+            A well-known surfing beach with a long sandy shoreline and
+            consistent ocean exposure. It is used for surfing lessons,
+            swimming when conditions allow, beach walks and seasonal whale
+            watching.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Murray Mouth Lookout &amp; Sugars Beach Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Murray Mouth Lookout &amp; Sugars Beach</h3>
+          <p>
+            A Hindmarsh Island viewing area overlooking the channels, dunes
+            and shifting sands near the Murray Mouth. Sugars Beach provides a
+            convenient base from which visitors can observe the meeting point
+            of the river system and Southern Ocean.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Old Currency Creek Road Bridge Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Old Currency Creek Road Bridge</h3>
+          <p>
+            A surviving piece of early road infrastructure associated with
+            travel through the Currency Creek district. The bridge contributes
+            to the collection of railway, road and settlement heritage found
+            throughout the creek valley.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Rankins Springs Turntable</h3>
-      <p>The Old Rankins Springs Turntable is a historic railway feature once used to rotate locomotives. It reflects the importance of rail transport in supporting agricultural production and regional connectivity.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Rankins Springs</h3>
-      <p>Rankins Springs is a small rural locality surrounded by farming country, representing the dispersed agricultural settlements that characterise the Riverina region.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Picnic Train Historical Site</h3>
-      <p>Binya is a quiet agricultural locality near Griffith, reflecting the irrigation-based farming landscape that supports cropping and horticulture across the region.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Woolshed Falls Walking Track</h3>
-      <p>Woolshed Falls Walking Track provides access to a small cascade and natural bushland setting, offering a short walk through native vegetation and a peaceful outdoor experience.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Falcon Falls Walking Track</h3>
-      <p>Falcon Falls Walking Track leads to a minor waterfall and lookout area, showcasing local bushland and offering a quiet natural escape within the broader agricultural landscape.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Wyangan</h3>
-      <p>Lake Wyangan is a popular recreational lake offering fishing, boating, and picnic areas. The lake is an important local attraction, providing a contrast to the surrounding farmland.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Hermit’s Cave</h3>
-      <p>Hermit’s Cave is a unique historic site featuring hand-carved caves, rock walls, and gardens created by an Italian hermit in the early 20th century. The site reflects cultural history and individual craftsmanship.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Heesco Mural</h3>
-      <p>The Heesco Mural is a large-scale artwork by artist Heesco, depicting local themes and contributing to Griffith’s growing public art scene.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Big Wine Bottles</h3>
-      <p>The Big Wine Bottles are a roadside attraction celebrating Griffith’s status as a major wine-producing region, reflecting its strong viticulture industry.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mount Brogden Walking Track</h3>
-      <p>Mount Brogden Walking Track offers elevated views across Griffith and the surrounding farmland, providing perspective on the scale of the irrigation landscape.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>MIA Pioneers Memorial</h3>
-      <p>The MIA Pioneers Memorial commemorates the individuals who established the Murrumbidgee Irrigation Area, recognising their role in transforming the region.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>I.O.O.F Park</h3>
-      <p>I.O.O.F Park is a central recreational space featuring open lawns, playgrounds, and community facilities, supporting outdoor activities and gatherings.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Nancy Blumer Memorial</h3>
-      <p>The Nancy Blumer Memorial honours a local community figure, reflecting the contributions of individuals who have shaped Griffith’s social and cultural life.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Pioneer Women Of Griffith District Statue</h3>
-      <p>This statue recognises the role of women in developing the Griffith district, highlighting their contributions to agriculture, family life, and community building.</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Fairey Firefly Monument</h3>
-      <p>The Fairey Firefly Monument commemorates a naval aircraft and its connection to the region, serving as a unique historical landmark.</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Bucyrus Erie - Coleambally</h3>
-      <p>The Bucyrus Erie machine in Coleambally is a large piece of earthmoving equipment displayed as a monument to the engineering efforts behind irrigation development
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Coleambally Water Tower</h3>
-      <p>The Coleambally Water Tower features artwork that reflects the town’s irrigation heritage and agricultural identity.</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Coleambally</h3>
-      <p>Coleambally is a purpose-built irrigation town developed as part of the Murrumbidgee Irrigation Area, supporting intensive agriculture and modern farming practices.
-      </p>
-    </div>
-  </div>
-
-</div>
 
     <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Griffith</h2>
+    <h2>🏨 Stay Where We Showcase — Goolwa</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Griffith? Explore accommodation options in and around this vibrant Riverina city while discovering
-  the food and wine culture, irrigation heritage, and agricultural strength that make Griffith one of southern New South Wales’ most dynamic regional destinations.
-</p>
+    <p class="accommodation-intro">
+      Planning a stay in the region? Explore eligible accommodation in Goolwa,
+      Middleton, Hindmarsh Island and Currency Creek while discovering the
+      lower Murray, Coorong, local beaches, wineries and river-port heritage.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith"
-     target="_blank"
-     class="accommodation-link">
-    View All Griffith Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGoolwa%252C%2520South%2520Australia%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Goolwa Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Griffith</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Goolwa
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Accommodation Coming Soon
+        </div>
+      </div>
+    </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Griffith</h3>
-<div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Goolwa
+    </h3>
 
-  <div class="other-stay-item"><span>Quest Apartments Griffith</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>Citrus Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Baronet B&amp;B</strong>
+          <span>
+            Bed-and-breakfast accommodation in Goolwa with private guest
+            facilities and breakfast provisions.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBaronet%2520B%2526B%252C%2520Goolwa%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Gem Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Beach Huts Middleton</strong>
+          <span>
+            Commercial four-star boutique accommodation offering individually
+            themed self-contained beach huts in a landscaped village-style
+            setting.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBeach%2520Huts%2520Middleton%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>The Grand Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Birks Harbour Boathouse &amp; Birks River Retreat</strong>
+          <span>
+            Commercial bed-and-breakfast accommodation beside Birks Harbour
+            Marina, offering a private waterfront stay for one couple.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBirks%2520Harbour%2520Boathouse%252C%2520Goolwa%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Econo Lodge Griffith Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Discovery Parks – Goolwa</strong>
+          <span>
+            A major commercial holiday park offering cabins, villas, caravan
+            sites and family recreation facilities near central Goolwa.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDiscovery%2520Parks%2520Goolwa%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>The Griff Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Goolwa Hotel</strong>
+          <span>
+            Historic hotel in central Goolwa providing guest accommodation,
+            dining and traditional country-pub hospitality.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGoolwa%2520Hotel%252C%2520Goolwa%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Acacia Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Goolwa Riverwalk Bed &amp; Breakfast</strong>
+          <span>
+            Established bed-and-breakfast accommodation within a historic
+            farmhouse near the river and Goolwa’s central attractions.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGoolwa%2520Riverwalk%2520Bed%2520and%2520Breakfast%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Comfort Inn Gemini</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Hindmarsh Island Caravan Park</strong>
+          <span>
+            Commercial caravan park on Hindmarsh Island offering cabins and
+            caravan accommodation within easy reach of Goolwa and the lower
+            Murray.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHindmarsh%2520Island%2520Caravan%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Yambil Inn Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Middleton Caravan Park</strong>
+          <span>
+            Commercial caravan park in Middleton offering cabins and caravan
+            accommodation close to the township and southern coastline.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMiddleton%2520Caravan%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>The Kidman Wayside Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Motel Goolwa</strong>
+          <span>
+            Centrally located motel offering 24 guest rooms, off-street
+            parking and an on-site café within Goolwa’s shopping precinct.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMotel%2520Goolwa%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Hotel Victoria</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Pago Middleton</strong>
+          <span>
+            Boutique guest accommodation in Middleton offering four
+            individually appointed king rooms with private ensuite bathrooms
+            and shared retreat facilities.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPago%2520Middleton%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Aline Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+    </div>
 
-  <div class="other-stay-item"><span>Griffith Tourist Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
+    <p class="accommodation-disclaimer">
+      This accommodation list includes hotels, motels, caravan parks, bed and
+      breakfasts, boutique guest accommodation, and cabins or units operated
+      as part of an established accommodation business. It does not include
+      campgrounds, Airbnb properties, private holiday homes, standalone
+      holiday rentals or farmstay accommodation. Port Elliot properties are
+      not included on this page. Inclusion is provided for visitor awareness
+      only and does not imply partnership or endorsement. Some links on this
+      page are affiliate links, which means ShowcasingOz TV may earn a small
+      commission if you make a booking, at no additional cost to you.
+    </p>
 
-  <div class="other-stay-item"><span>Griffith Prestige Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Jen's Garden Pods</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Mia Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Banna Suites</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Coro Club Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Le Grange Griffith</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Exies Bagtown Motel & Function Centre</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Area Hotel & Bistro</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Yenda Hotel - Yenda</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Ingleden Park Farmstay Cottages</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Griffith Working Hostels</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Explorers Hostel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Village Stay Bilbul</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Abode on Sidlow</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Catania Fruit Salad Farm</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Tony's Tiny Home</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Griffith Prestige Apartments - Deluxe Apartment</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Paris's Place - Four-Bedroom House</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGriffith" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Rankins Springs Motel - Rankins Springs</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRankins+Springs" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Goolgowi Highway Motel - Goolgowi</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGoolgowi" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Goolgowi Motor Inn - Goolgowi</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGoolgowi" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Coleambally Motel - Coleambally</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DColeambally" target="_blank" class="accommodation-link">View / Book</a></div>
-
-</div>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-
-</section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -809,8 +1275,18 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and experienc
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
