@@ -3,7 +3,6 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -18,12 +17,12 @@
 
   <meta
     name="description"
-    content="Discover Hahndorf in South Australia’s Adelaide Hills with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Hahndorf and the surrounding Adelaide Hills, including local attractions, wineries, farms, museums, historic towns, landmarks and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Hahndorf SA, Hahndorf Adelaide Hills, German heritage South Australia, Hahndorf attractions, Hahndorf accommodation, South Australia travel, ShowcasingOz TV"
+    content="Hahndorf SA, Hahndorf attractions, Hahndorf accommodation, Adelaide Hills, Mount Barker, Stirling, wineries, German heritage, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -39,41 +38,43 @@
 
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #ffffff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     header.navbar .container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
+      align-items: center;
+      justify-content: space-between;
     }
 
     header.navbar img {
-      height: 65px;
       width: auto;
+      height: 65px;
     }
 
     nav a {
-      color: #ffffff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
     nav a:hover {
@@ -82,40 +83,27 @@
 
     .menu-btn {
       display: none;
-      cursor: pointer;
+      color: #ffffff;
       font-size: 1.5rem;
+      cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #0E3557;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        right: 0;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      nav a {
-        padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
-      }
-    }
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ================= CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -124,69 +112,148 @@
     }
 
     h1 {
+      margin-bottom: 20px;
+      color: #0E3557;
       text-align: center;
-      margin-bottom: 10px;
     }
 
     h2 {
-      text-align: center;
-      color: #E87722;
       margin-top: 50px;
+      color: #E87722;
+      text-align: center;
     }
 
     p {
-      line-height: 1.6;
       color: #333333;
+      line-height: 1.6;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
+    .section-intro,
+    .accommodation-intro {
+      max-width: 760px;
+      margin: 0 auto 20px;
       text-align: center;
     }
 
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
+    /* ================= PLACEHOLDERS ================= */
 
     .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
-      width: 100%;
-      background: #e1e1e1;
-      border-radius: 12px;
+    .accommodation-placeholder {
       display: flex;
-      justify-content: center;
+      width: 100%;
       align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #e1e1e1;
       color: #666666;
+      font-size: 1.2rem;
       font-weight: 500;
       text-align: center;
-      box-sizing: border-box;
     }
 
     .video-placeholder {
       height: 350px;
       margin-top: 20px;
-      font-size: 1.2rem;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .accommodation-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
+
+    /* ================= BUTTONS ================= */
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 18px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .accommodation-link:hover {
+      background: #E87722;
+      color: #ffffff;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 760px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      background: #f9f9f9;
+      color: #333333;
+      line-height: 1.6;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .attractions-list strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .poi-placeholder {
+      display: flex;
+      height: 160px;
+      padding: 0 15px;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 0 0 8px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+    }
+
+    /* ================= ACCOMMODATION ================= */
 
     .accommodation-grid {
       display: grid;
@@ -196,35 +263,75 @@
     }
 
     .accommodation-card {
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .accommodation-intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .accommodation-link {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: 600;
+    .other-accommodation-heading {
+      margin-top: 50px;
       color: #0E3557;
-      text-decoration: none;
+      text-align: center;
     }
 
-    .accommodation-link:hover {
-      text-decoration: underline;
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
     }
+
+    .other-stay-item {
+      display: flex;
+      margin-bottom: 14px;
+      padding: 16px 18px;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e4e4e4;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0E3557;
+      font-size: 1.02rem;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
+      margin-top: 60px;
+      padding: 40px 20px;
       background: #0E3557;
       color: #ffffff;
-      padding: 40px 20px;
-      margin-top: 60px;
       text-align: center;
     }
 
@@ -232,16 +339,14 @@
       margin-bottom: 15px;
     }
 
-    footer .footer-links a,
-    footer p a {
-      color: #E87722;
-      text-decoration: none;
-      font-weight: 500;
+    footer .footer-links a {
       margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
     }
 
-    footer .footer-links a:hover,
-    footer p a:hover {
+    footer .footer-links a:hover {
       color: #ffffff;
     }
 
@@ -251,21 +356,67 @@
       line-height: 1.6;
     }
 
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
+
+    footer p a:hover {
+      color: #ffffff;
+    }
+
     .gst-disclaimer {
       display: block;
       margin-top: 8px;
-      font-size: 0.8rem;
       color: #ffffff;
+      font-size: 0.8rem;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #0E3557;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin-left: 0;
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        height: 250px;
+      }
+
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER -->
   <header class="navbar">
     <div class="container">
-
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -275,7 +426,7 @@
         >
       </a>
 
-      <span class="menu-btn" id="menu-btn">
+      <span class="menu-btn" id="menu-btn" aria-label="Open navigation menu">
         <i class="fa fa-bars"></i>
       </span>
 
@@ -290,16 +441,15 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
+    menuBtn.addEventListener("click", function () {
+      menu.classList.toggle("active");
     });
   </script>
 
@@ -307,166 +457,1033 @@
   <section class="hero">
     <img
       src="../images/towns/hahndorf.jpg"
-      alt="Hahndorf Adelaide Hills South Australia"
+      alt="Hahndorf in the Adelaide Hills of South Australia"
       width="1600"
       height="320"
       fetchpriority="high"
       decoding="async"
-      style="width:100%; height:100%; object-fit:cover;"
     >
   </section>
 
   <!-- MAIN CONTENT -->
-  <section class="content">
+  <main class="content">
 
     <h1>Hahndorf (SA)</h1>
 
     <p>
-      Hahndorf is a historic town in South Australia’s Adelaide Hills,
-      widely recognised for its German heritage, tree-lined main street
-      and distinctive collection of traditional buildings, shops,
-      galleries, cafés and restaurants.
+      Hahndorf is a historic Adelaide Hills township on the traditional lands
+      of the Peramangk and Kaurna peoples. Established by Lutheran migrants
+      from Prussia in 1839, it is recognised as Australia’s oldest surviving
+      German settlement and remains one of South Australia’s most visited
+      regional destinations.
     </p>
 
     <p>
-      Surrounded by the landscapes and produce of the Adelaide Hills,
-      Hahndorf brings together history, food, wine, artisan businesses
-      and country-town character. Its proximity to Adelaide makes it one
-      of the region’s most accessible and recognisable visitor destinations.
+      The town was named after Captain Dirk Meinertz Hahn, who assisted the
+      first settlers during their journey to South Australia. Early families
+      established farms, cottages, workshops and businesses along what became
+      the town’s main street, creating a distinctive settlement pattern that
+      remains visible today.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Hahndorf’s German heritage is reflected in its architecture, churches,
+      museums, food traditions and family businesses. Historic stone and
+      timber-framed buildings now contain restaurants, bakeries, galleries,
+      shops and accommodation, giving the main street a character unlike any
+      other regional centre in Australia.
+    </p>
 
-      <h2>🚧 Our Complete Hahndorf Guide Is Coming Soon</h2>
+    <p>
+      The surrounding Adelaide Hills support vineyards, orchards, flower
+      farms, dairies and specialist food producers. Cool-climate wineries,
+      cellar doors, distilleries, breweries and artisan businesses have made
+      the district an important destination for food, wine and regional
+      produce.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Hahndorf. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        the town and the surrounding Adelaide Hills.
-      </p>
+    <p>
+      This page also covers the nearby communities and landscapes most closely
+      connected with Hahndorf, including Mount Barker, Littlehampton, Nairne,
+      Balhannah, Oakbank, Echunga, Mylor, Aldgate, Bridgewater, Stirling,
+      Summertown, Uraidla and selected sections of the Mount Lofty Ranges.
+    </p>
 
-    </div>
+    <p>
+      The region combines cultural attractions with wildlife sanctuaries,
+      gardens, bushwalking areas, heritage railways, museums, historic hotels
+      and adventure facilities. Its towns are connected by winding roads,
+      productive valleys and elevated landscapes that change noticeably
+      through the seasons.
+    </p>
+
+    <p>
+      ShowcasingOz TV will capture the people, businesses, heritage and
+      landscapes that define Hahndorf and the surrounding Adelaide Hills. Our
+      coverage will explore German settlement history, local food and wine,
+      farming, arts, wildlife, historic townships and the small businesses
+      that sustain the region’s visitor economy.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
 
     <div class="video-placeholder">
-      Hahndorf Documentary Coming Soon
+      Documentary Coming Soon
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions</h2>
+    <h2>📍 Attractions In And Around Hahndorf</h2>
 
-    <p class="accommodation-intro">
-      Hahndorf’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage
-      is completed.
+    <p class="section-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, history, culture and visitor engagement in a way that
+      static listings cannot achieve.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../attraction-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Hahndorf Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Ambleside Distillers</strong>
+        A Hahndorf distillery producing small-batch gin and other spirits,
+        with tastings and experiences explaining its botanicals and
+        production methods.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Atelier Art Gallery</strong>
+        A local gallery presenting visual art and creative work within the
+        Adelaide Hills arts community.
+      </li>
 
-    <!-- POINTS OF INTEREST -->
-    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+      <li>
+        <strong>Beerenberg Family Farm</strong>
+        A long-established Hahndorf family farm producing preserves, sauces
+        and condiments, with seasonal strawberry picking and a farm shop.
+      </li>
 
-    <p class="accommodation-intro">
-      Hahndorf’s heritage streetscapes, historic landmarks and other
-      points of interest will be documented and added to this page
-      following our visit.
+      <li>
+        <strong>Bird in Hand Winery</strong>
+        A Woodside winery combining cool-climate wine production with food,
+        art, events and landscaped vineyard surroundings.
+      </li>
+
+      <li>
+        <strong>Bridgewater Mill &amp; Waterwheel</strong>
+        A prominent heritage mill complex beside Cox Creek, recognised for
+        its large waterwheel and connection with early Adelaide Hills
+        industry.
+      </li>
+
+      <li>
+        <strong>Cleland Wildlife Park</strong>
+        A major wildlife park in the Mount Lofty Ranges where visitors can
+        encounter Australian animals in spacious natural settings.
+      </li>
+
+      <li>
+        <strong>Cobb’s Hill Estate</strong>
+        An Adelaide Hills vineyard and cellar-door destination producing
+        cool-climate wine in a rural setting near Oakbank.
+      </li>
+
+      <li>
+        <strong>Golding Wines</strong>
+        A family-owned Lobethal-area winery offering cellar-door tastings,
+        dining and events among vineyards and landscaped grounds.
+      </li>
+
+      <li>
+        <strong>Grünthal Brew Craft Hub</strong>
+        A Verdun food and beverage destination bringing together local beer,
+        cheese, wine and regional produce.
+      </li>
+
+      <li>
+        <strong>Hahndorf Academy, Regional Art Gallery &amp; German Migration Museum</strong>
+        A heritage cultural centre containing exhibitions, local history,
+        artworks and collections documenting German migration and settlement
+        in the Adelaide Hills.
+      </li>
+
+      <li>
+        <strong>Hahndorf Farm Barn</strong>
+        A family attraction offering hands-on encounters with farm animals,
+        demonstrations and activities introducing visitors to rural life.
+      </li>
+
+      <li>
+        <strong>Hahndorf Flower Farm</strong>
+        A local flower-growing business showcasing seasonal blooms and
+        locally grown floral products.
+      </li>
+
+      <li>
+        <strong>Hahndorf Hill Winery</strong>
+        A boutique Adelaide Hills winery known for cool-climate varieties,
+        cellar-door tastings and vineyard views near Hahndorf.
+      </li>
+
+      <li>
+        <strong>Hahndorf Lavender Estate Farm</strong>
+        A seasonal lavender-growing property offering visitors an opportunity
+        to experience flowering fields and lavender-based products.
+      </li>
+
+      <li>
+        <strong>Hahndorf Sweets</strong>
+        A confectionery shop on Hahndorf’s main street offering traditional
+        sweets and nostalgic treats.
+      </li>
+
+      <li>
+        <strong>Howard Vineyard</strong>
+        A family-owned vineyard and cellar door at Nairne producing
+        cool-climate Adelaide Hills wines.
+      </li>
+
+      <li>
+        <strong>Humbugs of Hahndorf</strong>
+        A specialist confectionery store offering an extensive collection of
+        sweets, chocolates and traditional favourites.
+      </li>
+
+      <li>
+        <strong>Jurlique Farm</strong>
+        The biodynamic Adelaide Hills farm where botanicals used in Jurlique
+        skincare are grown, harvested and prepared.
+      </li>
+
+      <li>
+        <strong>Kidman Flower Co Farm Shed</strong>
+        A local flower farm and retail shed offering seasonal blooms and
+        products grown within the Adelaide Hills.
+      </li>
+
+      <li>
+        <strong>Left Barrel Brewing</strong>
+        An independent Balhannah brewery producing small-batch beer and
+        welcoming visitors to its local taproom.
+      </li>
+
+      <li>
+        <strong>Lenswood Cider Co</strong>
+        An Adelaide Hills cider producer drawing on the apple-growing heritage
+        of Lenswood and surrounding orchards.
+      </li>
+
+      <li>
+        <strong>Lenswood Pick Your Own Orchard</strong>
+        A seasonal orchard experience allowing visitors to pick fruit
+        directly from the trees when crops and weather permit.
+      </li>
+
+      <li>
+        <strong>Littlewood Agapanthus Farm &amp; Nursery</strong>
+        A specialist nursery and display garden showcasing agapanthus and
+        other plants suited to Adelaide Hills conditions.
+      </li>
+
+      <li>
+        <strong>Melba’s Chocolates</strong>
+        A well-known Woodside confectionery factory where visitors can see
+        chocolate and sweets being produced and purchase locally made treats.
+      </li>
+
+      <li>
+        <strong>Mount Lofty Adventure Hub</strong>
+        An outdoor adventure facility offering elevated activities and
+        challenges within the Mount Lofty Ranges environment.
+      </li>
+
+      <li>
+        <strong>Mt Barker Railway Station &amp; Highlander Train Ride</strong>
+        A heritage railway location used for selected SteamRanger services,
+        including special Highlander journeys through the Adelaide Hills.
+      </li>
+
+      <li>
+        <strong>Nairne Museum</strong>
+        A community museum preserving photographs, household objects,
+        machinery and stories connected with Nairne’s early settlement and
+        industrial history.
+      </li>
+
+      <li>
+        <strong>Ngeringa Vineyards</strong>
+        A biodynamic vineyard and winery near Mount Barker producing
+        cool-climate wines from estate-grown fruit.
+      </li>
+
+      <li>
+        <strong>Paech’s Farm</strong>
+        A Hahndorf-area farming property connected with the district’s
+        agricultural heritage and generations of the Paech family.
+      </li>
+
+      <li>
+        <strong>Pike &amp; Joyce Wines</strong>
+        A Lenswood winery and restaurant overlooking elevated vineyards and
+        productive Adelaide Hills countryside.
+      </li>
+
+      <li>
+        <strong>Piney Ridge Farm</strong>
+        A rural Adelaide Hills property offering farm-based visitor
+        experiences and seasonal produce.
+      </li>
+
+      <li>
+        <strong>Red Cacao Chocolatier</strong>
+        A Stirling chocolatier creating handmade chocolates, desserts and
+        café offerings using specialist techniques and quality ingredients.
+      </li>
+
+      <li>
+        <strong>Shaw + Smith Winery</strong>
+        A leading Adelaide Hills winery near Balhannah, recognised for
+        cool-climate varieties and guided cellar-door tastings.
+      </li>
+
+      <li>
+        <strong>Sidewood Estate</strong>
+        A Hahndorf-area winery offering wine and cider tastings, dining and
+        landscaped grounds.
+      </li>
+
+      <li>
+        <strong>Stangate House and Garden</strong>
+        A historic Aldgate property with an established garden known for its
+        mature trees, camellias and seasonal displays.
+      </li>
+
+      <li>
+        <strong>The 3 Wishes Candle Barn</strong>
+        A Hahndorf retailer specialising in candles, fragrances and
+        decorative products.
+      </li>
+
+      <li>
+        <strong>The Cedars, Sir Hans Heysen Historic Home &amp; Studio</strong>
+        The former home and studio of artist Sir Hans Heysen, preserving the
+        property, artworks, personal objects and landscapes that influenced
+        his work.
+      </li>
+
+      <li>
+        <strong>The Fudge Shop</strong>
+        A Hahndorf confectionery business producing and selling handmade
+        fudge in a variety of flavours.
+      </li>
+
+      <li>
+        <strong>The German Village Shop</strong>
+        A specialty Hahndorf store offering German-inspired gifts, decorative
+        items, collectables and souvenirs.
+      </li>
+
+      <li>
+        <strong>The Lane Vineyard</strong>
+        A Hahndorf winery and restaurant with elevated vineyard views,
+        cool-climate wines and regional dining.
+      </li>
+
+      <li>
+        <strong>The Menz FruChocs Shop</strong>
+        A dedicated retail outlet celebrating the South Australian FruChocs
+        confectionery brand and other Menz products.
+      </li>
+
+      <li>
+        <strong>Thorngrove Manor House</strong>
+        An architecturally distinctive Stirling manor combining decorative
+        arts, unusual handcrafted design and exclusive boutique
+        accommodation.
+      </li>
+
+      <li>
+        <strong>Tin Shed Distilling Co</strong>
+        An Adelaide Hills distillery producing small-batch spirits with a
+        focus on local character and contemporary craft production.
+      </li>
+
+      <li>
+        <strong>Udder Delights Cheese Cellar</strong>
+        A Hahndorf cheese destination offering locally produced cheese,
+        tastings, meals and regional products.
+      </li>
+
+      <li>
+        <strong>Ukaria Cultural Centre</strong>
+        A purpose-built cultural and performance venue near Mount Barker,
+        known for intimate concerts, distinctive architecture and its natural
+        setting.
+      </li>
+
+      <li>
+        <strong>Warrawong Wildlife Sanctuary</strong>
+        A conservation sanctuary established to protect Australian wildlife
+        within a restored native environment in the Adelaide Hills.
+      </li>
+
+      <li>
+        <strong>Wolf Blass Gallery &amp; Museum</strong>
+        A Hahndorf attraction presenting objects and stories associated with
+        winemaker Wolf Blass and his contribution to Australian wine.
+      </li>
+
+      <li>
+        <strong>Woodhouse Adventure Park</strong>
+        A large outdoor recreation property near Piccadilly offering obstacle
+        courses, activities and adventure experiences for families and groups.
+      </li>
+
+      <li>
+        <strong>Woodside Cheese Wrights</strong>
+        An artisan Adelaide Hills cheesemaker producing specialist cow and
+        goat-milk cheeses using local ingredients.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Seasonal activities, tours, tastings
+      and opening hours should be confirmed directly before visiting.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
 
-        <div class="poi-placeholder">
-          Hahndorf Points of Interest Coming Soon
+    <p class="section-intro">
+      These townships, landmarks and natural places form an important part of
+      Hahndorf and the surrounding Adelaide Hills. ShowcasingOz TV will capture
+      them during filming to help tell the broader story of the region.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Aldgate Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Aldgate Town Centre &amp; Pump Hotel Facade</h3>
+          <p>
+            A leafy Adelaide Hills centre with local shops and heritage
+            buildings, including the surviving facade associated with the
+            former Pump Hotel.
+          </p>
         </div>
-
       </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Balhannah Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Balhannah Town Centre &amp; Balhannah Hotel Facade</h3>
+          <p>
+            A local service centre surrounded by vineyards and orchards, with
+            heritage elements including the Balhannah Hotel facade.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Bridgewater Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Bridgewater Town Centre</h3>
+          <p>
+            A wooded hills township centred around local services, Cox Creek
+            and the historic Bridgewater Mill precinct.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Byethorne Park Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Byethorne Park Lakeside Reserve</h3>
+          <p>
+            A landscaped reserve at Nairne with open lawns, a lake, walking
+            areas and space for community recreation.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Crafers Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Crafers &amp; Crafers Hotel Facade</h3>
+          <p>
+            A historic township near the summit of Mount Lofty, recognised for
+            its hills setting and the prominent heritage character of the
+            Crafers Hotel.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Deep Creek Bridge Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Deep Creek Bridge</h3>
+          <p>
+            A small historic bridge set within the winding roads and wooded
+            landscape of the central Adelaide Hills.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Devil’s Elbow Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Devil’s Elbow</h3>
+          <p>
+            A sharply curving section of the old hills road known for its
+            steep terrain and place in the motoring history of the Mount Lofty
+            Ranges.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Eagle on the Hill Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Eagle on the Hill</h3>
+          <p>
+            A historic former hotel and roadside landmark associated with the
+            old route between Adelaide and the hills.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Echunga Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Echunga Town Centre, Hagen Arms Hotel &amp; RSL Garden of Remembrance</h3>
+          <p>
+            A historic rural township with heritage buildings, the prominent
+            Hagen Arms Hotel and a garden commemorating local military
+            service.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Hahndorf Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Hahndorf Town Centre &amp; German Main Street Architecture</h3>
+          <p>
+            The historic heart of Hahndorf, where German-influenced cottages,
+            churches and commercial buildings line the main street.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Historic St James Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Historic St James Anglican School &amp; Church</h3>
+          <p>
+            A heritage religious and educational site reflecting the early
+            development of Anglican worship and schooling in the district.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Jupiter Creek Gold Diggings Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Jupiter Creek Gold Diggings</h3>
+          <p>
+            A former goldfield containing the Crystal Mine, Hewlett’s Hut,
+            Beatrice Mine, Beatrice Chimney and New Phoenix Adit. Visitors
+            should remain on marked routes and avoid entering unstable mine
+            workings.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Laratinga Wetlands Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Laratinga Wetlands Cultural &amp; Boardwalk Precinct</h3>
+          <p>
+            A Mount Barker wetland system with boardwalks, shared trails,
+            habitat areas and cultural interpretation connected with Country.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Littlehampton Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Littlehampton Town Centre</h3>
+          <p>
+            A growing Adelaide Hills township with local businesses, heritage
+            features and strong connections with nearby Mount Barker and
+            Hahndorf.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Matthew Smillie Plaque Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Matthew Smillie Plaque</h3>
+          <p>
+            A historical marker recognising surveyor Matthew Smillie and his
+            association with early European exploration and surveying in the
+            Adelaide Hills.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Mount Barker Summit Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mount Barker Summit Lookout</h3>
+          <p>
+            An elevated lookout offering broad views across Mount Barker,
+            surrounding farmland and the southern Adelaide Hills.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Mount Barker Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mount Barker Town Centre</h3>
+          <p>
+            A major Adelaide Hills service centre combining historic
+            buildings with retail, dining, civic and community facilities.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Mount Lofty Botanic Garden Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mount Lofty Botanic Garden</h3>
+          <p>
+            An extensive cool-climate garden featuring walking trails,
+            deciduous trees, landscaped collections and seasonal colour.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Carminow Castle Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mount Lofty Castle (Carminow Castle)</h3>
+          <p>
+            A distinctive castle-like private residence and architectural
+            landmark within the Mount Lofty area. It should be viewed only
+            from lawful public locations.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Mount Lofty Summit Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mount Lofty Summit</h3>
+          <p>
+            One of the best-known viewpoints in South Australia, overlooking
+            Adelaide, the coastal plain and surrounding Mount Lofty Ranges.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Mylor Township Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mylor Township</h3>
+          <p>
+            A small township surrounded by wooded hills, rural properties,
+            reserves and winding roads near Hahndorf.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Nairne Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Nairne Town Centre, Mural, Historic Walk &amp; Railway Station</h3>
+          <p>
+            A historic township with public art, heritage buildings, a
+            self-guided historic walk and a surviving railway precinct.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Oakbank Racecourse Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Oakbank Racecourse</h3>
+          <p>
+            A historic Adelaide Hills racing venue best known for its
+            long-running Easter racing tradition and community events.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Oakbank Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Oakbank Town Centre</h3>
+          <p>
+            A small hills township surrounded by vineyards, farmland and
+            historic properties, closely associated with the nearby
+            racecourse.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Pioneer Women Silhouette Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Pioneer Women Silhouette</h3>
+          <p>
+            A public memorial recognising the work, resilience and
+            contribution of pioneer women in the development of the Adelaide
+            Hills.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Stirling Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Stirling Town Centre &amp; Historic Stirling Hotel</h3>
+          <p>
+            A leafy commercial village known for gardens, mature trees,
+            cafés, specialty shops and the historic Stirling Hotel.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Summertown Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Summertown</h3>
+          <p>
+            A small elevated township surrounded by orchards, vineyards and
+            cool-climate horticultural properties.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Uraidla Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Uraidla</h3>
+          <p>
+            A revitalised Adelaide Hills township known for local food,
+            hospitality, community businesses and nearby productive farmland.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Waterfall Gully Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Waterfall Gully</h3>
+          <p>
+            A wooded valley and popular walking destination at the base of
+            Mount Lofty, known for First Falls and the trail towards the
+            summit.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Woodside Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Woodside Town Centre</h3>
+          <p>
+            A regional Adelaide Hills centre serving surrounding farms,
+            wineries and food producers, with local shops and heritage
+            buildings.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Woodside Water Tank Art Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Woodside Water Tank Art</h3>
+          <p>
+            A large-scale public artwork transforming local water
+            infrastructure into a visual landmark connected with the
+            community and surrounding landscape.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Hahndorf</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Hahndorf? Explore available accommodation in
-      and around the town while we continue developing our complete
-      Hahndorf destination guide.
+      Planning a stay in the Adelaide Hills? Explore eligible accommodation
+      located closer to Hahndorf than Adelaide, Macclesfield, Strathalbyn,
+      Birdwood or Murray Bridge.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Hahndorf%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHahndorf%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Hahndorf Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Hahndorf
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../accommodation-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
-          Featured Hahndorf Accommodation Coming Soon
+          Featured Accommodation Coming Soon
         </div>
-
       </div>
     </div>
 
-  </section>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Hahndorf
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Discovery Parks – Hahndorf</strong>
+          <span>
+            Commercial holiday park offering resort-style rooms, cabins and
+            caravan accommodation in Hahndorf.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDiscovery%2520Parks%2520Hahndorf%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Hahndorf House B&amp;B</strong>
+          <span>
+            Established bed-and-breakfast accommodation providing breakfast
+            provisions within walking distance of Hahndorf’s main street.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHahndorf%2520House%2520Bed%2520and%2520Breakfast%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Hahndorf Motel</strong>
+          <span>
+            Family-owned Main Street motel offering queen, spa and family
+            rooms with on-site parking.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHahndorf%2520Motel%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Hahndorf Old Mill Hotel</strong>
+          <span>
+            Historic Main Street hotel providing guest accommodation, dining
+            and traditional Adelaide Hills hospitality.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHahndorf%2520Old%2520Mill%2520Hotel%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Mount Barker Caravan &amp; Tourist Park</strong>
+          <span>
+            Commercial tourist park offering cabins and powered caravan sites
+            in Mount Barker.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMount%2520Barker%2520Caravan%2520and%2520Tourist%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>The Lodge by Haus</strong>
+          <span>
+            Four-star motel-style accommodation with 19 rooms in a quiet
+            setting behind Hahndorf’s main street.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Lodge%2520by%2520Haus%252C%2520Hahndorf%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>The Manna by Haus, Ascend Hotel Collection</strong>
+          <span>
+            Chain-affiliated Hahndorf hotel offering contemporary guest rooms
+            close to the town’s main attractions.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Manna%2520by%2520Haus%252C%2520Hahndorf%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>The Stirling Hotel</strong>
+          <span>
+            Historic Stirling hotel offering individually designed guest rooms
+            and suites with on-site dining.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Stirling%2520Hotel%252C%2520Stirling%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>The Studios by Haus</strong>
+          <span>
+            Apartment-style accommodation operated within the Haus hotel group
+            in central Hahndorf.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Studios%2520by%2520Haus%252C%2520Hahndorf%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Thorngrove Manor Hotel</strong>
+          <span>
+            Exclusive boutique hotel accommodation within an architecturally
+            distinctive manor in Stirling.
+          </span>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThorngrove%2520Manor%2520Hotel%252C%2520Stirling%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This accommodation list includes hotels, motels, caravan parks, bed and
+      breakfasts, and apartments operated as part of an established hotel
+      group. It does not include campgrounds, Airbnb properties, farmstays,
+      private cottages or independently operated holiday rentals.
+      Accommodation closer to Adelaide, Macclesfield, Strathalbyn, Birdwood
+      or Murray Bridge has been excluded from this page. Inclusion is provided
+      for visitor awareness only and does not imply partnership or
+      endorsement. Some links on this page are affiliate links, which means
+      ShowcasingOz TV may earn a small commission if you make a booking, at no
+      additional cost to you.
+    </p>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -484,16 +1501,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a><br>
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
-      </span><br>
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
 
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-
   </footer>
 
 </body>
