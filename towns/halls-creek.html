@@ -1,91 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Halls Creek (WA) | ShowcasingOz TV</title>
-  <meta name="description" content="Explore Halls Creek (WA) — a historic Kimberley town and gateway to the Tanami Track, Wolfe Creek Crater, and remote outback adventures, featured on ShowcasingOz TV." />
-  <meta name="keywords" content="Halls Creek, Western Australia, Kimberley region, Tanami Track, Wolfe Creek Crater, outback town, remote travel, 4WD routes, Aboriginal culture, regional Australia, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Explore Halls Creek in Western Australia's Kimberley region, including local attractions, historic landmarks, natural places of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Halls Creek, Western Australia, Kimberley, China Wall, Caroline Pool, Palm Springs, Wolfe Creek Crater, Kandimalal, Yarliyil Art Centre, Halls Creek accommodation, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      display: block;
+      width: auto;
+      height: 65px;
+    }
 
     nav a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    nav a:hover { color: #E87722; }
-
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    nav a:hover,
+    nav a:focus {
+      color: #E87722;
     }
+
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      overflow: hidden;
+      background: #dddddd;
     }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ================= MAIN CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -93,203 +124,340 @@ header.navbar img {
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
-
-    p { line-height:1.6; color:#333; }
-
-    .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    h1 {
+      margin: 0 0 20px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    h2 {
+      margin-top: 55px;
+      margin-bottom: 20px;
+      color: #E87722;
+      text-align: center;
     }
+
+    h3 {
+      color: #0E3557;
+    }
+
+    p {
+      color: #333333;
+      line-height: 1.7;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      color: #444444;
+      text-align: center;
+    }
+
+    /* ================= BUTTONS ================= */
+
+    .page-link {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .page-link:hover,
+    .page-link:focus {
+      background: #E87722;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .button-row {
+      margin: 22px 0;
+      text-align: center;
+    }
+
+    /* ================= DOCUMENTARY ================= */
+
+    .video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 350px;
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .attraction-item {
+      padding: 24px;
+      border-left: 5px solid #E87722;
+      border-radius: 12px;
+      background: #f8f9fa;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .attraction-item h3 {
+      margin: 0 0 10px;
+      color: #0E3557;
+    }
+
+    .attraction-item p {
+      margin: 0;
+      color: #4b4b4b;
+    }
+
+    /* ================= POI CARDS ================= */
 
     .poi-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 25px;
-}
-
-@media (max-width: 900px) {
-  .poi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .poi-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-  text-align: center;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin: 10px 0 8px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 28px;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
     }
 
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+    .poi-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+      padding: 20px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
     }
 
-    .accommodation-link:hover { text-decoration:underline; }
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    .poi-content h3 {
+      margin: 5px 0 10px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .accommodation-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 200px;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
-      text-align:center;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
-      text-align:center;
+    .other-accommodation-bookings {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details h4 {
+      margin: 0 0 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    .stay-details p {
+      margin: 0;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .other-stay-item .page-link {
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
-      text-align:center;
+      margin-top: 24px;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      text-align: center;
     }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+    footer .footer-links a {
+      margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
+    }
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+    footer .footer-links a:hover,
+    footer .footer-links a:focus {
+      color: #ffffff;
+    }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-footer p a:hover {
-  color: #ffffff;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
+    footer p a:hover,
+    footer p a:focus {
+      color: #ffffff;
+    }
 
-footer {
-  background-color: #0E3557 !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
 
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
+    /* ================= RESPONSIVE ================= */
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+    @media (max-width: 900px) {
+      .poi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 85px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0E3557;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 0;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .other-stay-item .page-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
+
+      .content {
+        margin-top: 30px;
+      }
+
+      .poi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-placeholder {
+        min-height: 250px;
+      }
+    }
   </style>
 </head>
 
@@ -298,10 +466,28 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span
+        class="menu-btn"
+        id="menu-btn"
+        role="button"
+        tabindex="0"
+        aria-label="Open navigation menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -313,194 +499,443 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  document.getElementById('menu-btn')
-    .addEventListener('click', () =>
-      document.getElementById('menu').classList.toggle('active'));
-</script>
+  <script>
+    const menuButton = document.getElementById('menu-btn');
+    const navigationMenu = document.getElementById('menu');
 
-<section class="hero">
-  <img src="../images/towns/halls-creek.jpg"
-       alt="Halls Creek Weestern Australia"
-       width="1600"
-       height="320"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    function toggleNavigation() {
+      const isOpen = navigationMenu.classList.toggle('active');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    }
 
-<section class="content">
+    menuButton.addEventListener('click', toggleNavigation);
 
-  <h1>Halls Creek (WA)</h1>
+    menuButton.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleNavigation();
+      }
+    });
+  </script>
 
-<p>
-Halls Creek is a historic outback town located in Western Australia’s Kimberley region, serving as an important service centre and gateway to some of the most remote and culturally significant landscapes in northern Australia. Established during the late 19th-century gold rush, the town has long played a role in supporting exploration, pastoral activity, and inland travel through the Kimberley.
-</p>
+  <!-- HERO IMAGE -->
+  <section class="hero">
+    <img
+      src="../images/towns/halls-creek.jpg"
+      alt="Halls Creek in the Kimberley region of Western Australia"
+      width="1600"
+      height="320"
+    >
+  </section>
 
-<p>
-Today, Halls Creek is best known as a key stop along the Great Northern Highway and the western terminus of the Tanami Track, connecting the Kimberley to Alice Springs in the Northern Territory. The town provides essential services, accommodation, fuel, and supplies for travellers, freight operators, and remote communities navigating vast desert and savannah landscapes.
-</p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="content">
 
-<p>
-Surrounded by striking geological formations and culturally significant sites, Halls Creek offers access to iconic destinations such as Wolfe Creek Crater (Kandimalal), one of the world’s largest meteorite impact craters. The area holds deep cultural importance for local Aboriginal communities, whose connection to Country continues to shape the region’s identity.
-</p>
+      <h1>Halls Creek (WA)</h1>
 
-<p>
-ShowcasingOz TV will feature Halls Creek as part of its national filming journey, capturing the town’s role as a vital outback hub, its cultural and historical significance, and its connection to the remote Kimberley landscapes that define this part of Western Australia.
-</p>
-
-
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <h2>📍 Attractions & Points of Interest</h2>
-
-  <p class="accommodation-intro">
-    Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-    professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-    in a way that static listings simply cannot achieve.
-  </p>
-
-  <p style="text-align:center;">
-    <a href="../attraction-partners.html" class="accommodation-link">
-      Explore attractions filming &amp; feature options
-    </a>
-  </p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Attractions in Halls Creek (WA)</h3>
-  <ul class="other-accommodation-list">
-    <li>Yarliyil Art Gallery</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-
- <h2>🗺️ Points of Interest &amp; Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of the town’s landscape,
-  history, and sense of place.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>China Wall</h3>
       <p>
-        China Wall is a striking natural quartz formation near Halls Creek, created by a quartz reef
-        exposed through erosion. Its bright white appearance and unusual structure make it a popular
-        geological landmark and short walking stop for visitors.
+        Halls Creek is a remote Kimberley town situated on the Great Northern
+        Highway in northern Western Australia. Surrounded by red earth,
+        spinifex-covered ranges and immense open landscapes, the town provides
+        an important service centre for residents, surrounding Aboriginal
+        communities, pastoral properties and travellers crossing the eastern
+        Kimberley.
       </p>
-    </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Caroline Pool</h3>
       <p>
-        Caroline Pool is a tranquil natural waterhole located near Halls Creek, set among rocky
-        outcrops and savannah woodland. It offers a scenic rest stop and insight into the region’s
-        natural water sources.
+        The district has an important place in Western Australian history. Gold
+        was discovered near the original Halls Creek settlement in 1885,
+        helping to trigger Western Australia’s first major gold rush. Although
+        the rush was relatively short-lived, it contributed to the development
+        of transport, trade and settlement across the Kimberley.
       </p>
-    </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Halls Creek</h3>
       <p>
-        Old Halls Creek is the original site of the town, established during the late 19th-century
-        gold rush. The area contains historical remnants that reflect the challenges of early
-        settlement in the Kimberley.
+        The present-day town was developed away from the original goldfield
+        settlement and now supports travellers using the Great Northern
+        Highway, Duncan Road and the Tanami Road. Fuel, supplies,
+        accommodation, visitor information and essential services make Halls
+        Creek a significant stopping point between Fitzroy Crossing and
+        Kununurra.
       </p>
-    </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Palm Springs</h3>
       <p>
-        Palm Springs is a remote natural oasis characterised by palm trees, rocky terrain, and
-        seasonal water flows, highlighting the contrast between arid landscapes and pockets of lush
-        vegetation.
+        Halls Creek is also a gateway to a remarkable collection of natural
+        landmarks. White quartz formations, seasonal waterholes, rocky gorges
+        and permanent freshwater springs reveal the geological diversity of
+        the surrounding country. More distant journeys lead towards the Bungle
+        Bungle Range and Kandimalal, commonly known as Wolfe Creek Crater.
       </p>
-    </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>WA–NT Border</h3>
       <p>
-        The WA–NT Border marks the boundary between Western Australia and the Northern Territory in a
-        remote outback setting and represents a significant geographic transition for inland
-        travellers.
+        Aboriginal culture is central to the identity of Halls Creek and the
+        wider region. Local artists, families and Traditional Owners maintain
+        deep cultural connections with Country, waterways, stories and
+        landscapes. Places throughout the district often have both Aboriginal
+        names and later European names, reflecting different layers of
+        cultural and historical significance.
       </p>
-    </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Wolfe Creek Meteorite Crater</h3>
       <p>
-        Wolfe Creek Meteorite Crater (Kandimalal) is one of the largest meteorite impact craters in
-        the world and a significant geological and culturally important site for local Aboriginal
-        communities.
+        Travellers should remember that distances in the Kimberley are
+        substantial and conditions can change quickly. Some surrounding roads
+        are unsealed, access may be affected during the wet season and remote
+        journeys require careful preparation. Visitors should check current
+        road, weather and access information before leaving town.
       </p>
-    </div>
-  </div>
 
-</div>
+      <p>
+        ShowcasingOz TV will explore Halls Creek as both a living regional
+        community and an important gateway to the eastern Kimberley. Our
+        coverage will highlight the town’s history, Aboriginal art, nearby
+        landscapes and the local businesses that help residents and travellers
+        navigate this remote part of Australia.
+      </p>
 
-  <h2>🏨 Featured Accommodation in Halls Creek</h2>
+      <!-- DOCUMENTARY -->
+      <h2>🎥 Town Documentary</h2>
 
-  <p class="accommodation-intro">
-    Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-    Selected partners receive cinematic 4K video coverage and professional photography presented as
-    part of a nationally filmed travel series.
-  </p>
+      <div class="video-placeholder">
+        Halls Creek Documentary Coming Soon
+      </div>
 
-  <p style="text-align:center;">
-    <a href="../accommodation-partners.html" class="accommodation-link">
-      Explore accommodation filming &amp; feature options
-    </a>
-  </p>
+      <!-- ATTRACTIONS -->
+      <h2>📍 Attractions In And Around Halls Creek</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
-    </div>
-  </div>
+      <p class="section-intro">
+        Halls Creek provides opportunities to learn about local Aboriginal art,
+        culture and regional history. Attractions featured on ShowcasingOz TV
+        are presented through destination-led storytelling, professional
+        photography and immersive video.
+      </p>
 
-  <h3 class="other-accommodation-heading">Other Accommodation in Halls Creek</h3>
-  <ul class="other-accommodation-list">
-    <li>Kimberley Hotel</li>
-    <li>Halls Creek Motel</li>
-    <li>Shell Roadhouse</li>
-  </ul>
+      <div class="button-row">
+        <a href="../attraction-partners.html" class="page-link">
+          Explore attraction filming &amp; feature options
+        </a>
+      </div>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+      <div class="attractions-list">
 
-</section>
+        <article class="attraction-item">
+          <h3>Yarliyil Art Centre</h3>
+
+          <p>
+            Yarliyil Art Centre is an Aboriginal-owned arts organisation in
+            Halls Creek that provides a place for local artists to create,
+            exhibit and sell their work through an ethical community-based
+            enterprise. The centre represents artists from Halls Creek and
+            surrounding communities, with artworks expressing connections to
+            Country, family, culture, history and the distinctive landscapes
+            of the Kimberley. A visit offers travellers an opportunity to
+            engage with locally produced Aboriginal art while directly
+            supporting participating artists and the continuation of cultural
+            expression.
+          </p>
+        </article>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        This attraction listing is provided for visitor awareness only.
+        Inclusion does not imply a commercial partnership or endorsement.
+        Opening hours and visitor access may change, so confirm current
+        information before travelling.
+      </p>
+
+      <!-- LANDMARKS / POIS -->
+      <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+      <p class="section-intro">
+        The country surrounding Halls Creek contains geological formations,
+        freshwater places and historic locations connected with the
+        Kimberley’s Aboriginal heritage, gold-rush history and remote
+        landscapes.
+      </p>
+
+      <div class="poi-grid">
+
+        <!-- CAROLINE POOL -->
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Caroline Pool Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Caroline Pool</h3>
+
+            <p>
+              Caroline Pool, known as Wimirri in the Jaru language, is a
+              natural waterhole surrounded by shady trees, broad sandy creek
+              banks and rocky Kimberley country. The site was historically an
+              important water source and became a popular gathering place for
+              local families. Water levels vary considerably with seasonal
+              rainfall, and access is by an unsealed road that may become
+              corrugated or temporarily inaccessible.
+            </p>
+          </div>
+        </article>
+
+        <!-- CHINA WALL -->
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            China Wall Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>China Wall</h3>
+
+            <p>
+              China Wall is a striking natural formation created by a white
+              quartz vein rising from the surrounding landscape. Its narrow,
+              wall-like ridge extends across the red Kimberley terrain and
+              creates a dramatic contrast against the surrounding bushland.
+              Located a short drive from Halls Creek, it is one of the area’s
+              most accessible geological landmarks and a popular photography
+              stop.
+            </p>
+          </div>
+        </article>
+
+        <!-- OLD HALLS CREEK -->
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Old Halls Creek Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Old Halls Creek</h3>
+
+            <p>
+              Old Halls Creek marks the site of the original township that
+              developed after the discovery of gold in 1885. The settlement
+              once supported prospectors and residents with stores, government
+              services, a hospital, police station and hotel. Surviving
+              remains, memorials and nearby historic places provide insight
+              into the hardships and ambitions of the Kimberley gold-rush
+              period. Access is via Duncan Road and includes unsealed sections.
+            </p>
+          </div>
+        </article>
+
+        <!-- PALM SPRINGS -->
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Palm Springs Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Palm Springs</h3>
+
+            <p>
+              Palm Springs, also known by the Jaru name Lugangarna, is a
+              spring-fed permanent freshwater pool on the Black Elvire River.
+              Palm trees, rocky banks and surrounding vegetation give the
+              location an oasis-like character that contrasts strongly with
+              the wider dry landscape. It is reached by travelling along
+              Duncan Road, and visitors should confirm road and water
+              conditions before setting out.
+            </p>
+          </div>
+        </article>
+
+        <!-- WOLFE CREEK -->
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Kandimalal / Wolfe Creek Crater Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Wolfe Creek Meteorite Crater</h3>
+
+            <p>
+              Kandimalal, widely known as Wolfe Creek Meteorite Crater, is an
+              immense meteorite impact structure located southeast of Halls
+              Creek near the Tanami Road. The crater has major geological
+              importance and profound cultural significance for Aboriginal
+              people connected with the area. Reaching the national park
+              involves remote travel, and a four-wheel-drive vehicle is
+              strongly recommended. Road conditions, fuel requirements and
+              park access should be checked before departure.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        Conditions at natural and remote locations can change because of
+        rainfall, flooding, heat, road closures and cultural access
+        requirements. Check with the Halls Creek Visitor Information Centre
+        and relevant authorities before travelling.
+      </p>
+
+      <!-- ACCOMMODATION -->
+      <h2>🏨 Stay Where We Showcase — Halls Creek</h2>
+
+      <p class="section-intro">
+        Planning a visit to Halls Creek? Search for available accommodation in
+        town and establish a comfortable base for exploring local Aboriginal
+        art, gold-rush history and the remarkable landscapes of the eastern
+        Kimberley.
+      </p>
+
+      <p class="section-intro">
+        ShowcasingOz TV is designed to do more than help travellers find
+        somewhere to stay. We help viewers discover where to go, what to
+        experience and which regional businesses can support their journey
+        through Australia’s towns, cities and remote destinations.
+      </p>
+
+      <div class="button-row">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHalls%2520Creek%252C%2520Western%2520Australia%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="page-link"
+        >
+          View Halls Creek Accommodation
+        </a>
+      </div>
+
+      <h3 class="other-accommodation-heading">
+        Featured Accommodation Opportunities In And Around Halls Creek
+      </h3>
+
+      <p class="section-intro">
+        Accommodation partners featured on ShowcasingOz TV receive premium
+        exposure through professionally produced video, photography and
+        destination-led storytelling that places their property in front of
+        travellers actively planning where to stay.
+      </p>
+
+      <div class="button-row">
+        <a href="../accommodation-partners.html" class="page-link">
+          Explore accommodation filming &amp; feature options
+        </a>
+      </div>
+
+      <div class="accommodation-placeholder">
+        Featured Halls Creek Accommodation Coming Soon
+      </div>
+
+      <h3 class="other-accommodation-heading">
+        Other Accommodation In Halls Creek
+      </h3>
+
+      <div class="other-accommodation-bookings">
+
+        <!-- HALLS CREEK CARAVAN PARK -->
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Halls Creek Caravan Park</h4>
+
+            <p>
+              Caravan park accommodation in Halls Creek. Travellers should
+              confirm current operating arrangements, site availability and
+              facilities directly before arrival.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHalls%2520Creek%2520Caravan%2520Park%252C%2520Halls%2520Creek%252C%2520Western%2520Australia"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <!-- HALLS CREEK MOTEL -->
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Halls Creek Motel</h4>
+
+            <p>
+              A centrally located motel offering a range of guest rooms and
+              self-contained accommodation, together with an onsite restaurant,
+              bar and swimming pool.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHalls%2520Creek%2520Motel%252C%2520Halls%2520Creek%252C%2520Western%2520Australia"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <!-- KIMBERLEY HOTEL -->
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Kimberley Hotel</h4>
+
+            <p>
+              A full-service Halls Creek hotel offering guest rooms,
+              self-contained apartments, dining facilities, landscaped grounds
+              and selected caravan accommodation.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKimberley%2520Hotel%252C%2520Halls%2520Creek%252C%2520Western%2520Australia"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <!-- SHELL ROADHOUSE -->
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Shell Roadhouse</h4>
+
+            <p>
+              Roadhouse-style accommodation and traveller services in Halls
+              Creek. Guests should confirm room availability and current
+              accommodation facilities before travelling.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DShell%2520Roadhouse%252C%2520Halls%2520Creek%252C%2520Western%2520Australia"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        This accommodation list is provided for visitor awareness only.
+        Inclusion does not imply a partnership, recommendation or endorsement
+        by ShowcasingOz TV. Accommodation services and availability may change,
+        so travellers should confirm current details before booking. Some links
+        on this page are affiliate links, which means ShowcasingOz TV may earn a
+        small commission if you complete a qualifying booking, at no additional
+        cost to you.
+      </p>
+
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -515,10 +950,21 @@ ShowcasingOz TV will feature Halls Creek as part of its national filming journey
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
