@@ -14,17 +14,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Adelaide (SA) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Adelaide, South Australia with ShowcasingOz TV. Our complete Adelaide destination guide, documentary, attractions, landmarks and accommodation features are coming soon.">
-  <meta name="keywords" content="Adelaide SA, Adelaide South Australia, visit Adelaide, Adelaide attractions, Adelaide accommodation, Adelaide travel guide, ShowcasingOz TV">
+
+  <meta
+    name="description"
+    content="Explore Adelaide and its metropolitan coast, city precincts, attractions, landmarks, points of interest and visitor accommodation with ShowcasingOz TV."
+  >
+
+  <meta
+    name="keywords"
+    content="Adelaide SA, Adelaide attractions, Adelaide landmarks, Adelaide accommodation, Glenelg, Port Adelaide, Adelaide beaches, South Australia travel, ShowcasingOz TV"
+  >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
@@ -75,31 +85,6 @@
       font-size: 1.5rem;
     }
 
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #0E3557;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        right: 0;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      nav a {
-        padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
-      }
-    }
-
     .hero {
       width: 100%;
       height: 320px;
@@ -114,7 +99,7 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     h2 {
@@ -124,34 +109,12 @@
     }
 
     p {
-      line-height: 1.6;
+      line-height: 1.65;
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .accommodation-placeholder {
       width: 100%;
       background: #e1e1e1;
       border-radius: 12px;
@@ -159,7 +122,7 @@
       justify-content: center;
       align-items: center;
       color: #666666;
-      font-weight: 500;
+      font-weight: 600;
       text-align: center;
       box-sizing: border-box;
     }
@@ -170,11 +133,89 @@
       font-size: 1.2rem;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .accommodation-placeholder {
       height: 200px;
       font-size: 1.1rem;
+    }
+
+    .section-intro,
+    .accommodation-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .attractions-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .attraction-item {
+      border: 1px solid #e4e7ea;
+      border-left: 5px solid #E87722;
+      border-radius: 10px;
+      padding: 18px;
+      background: #ffffff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .attraction-item h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .attraction-item p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .poi-placeholder {
+      height: 160px;
+      padding: 15px;
+      box-sizing: border-box;
+      background: #e1e1e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 0 0 7px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.9rem;
     }
 
     .accommodation-grid {
@@ -191,27 +232,69 @@
       overflow: hidden;
     }
 
-    .accommodation-intro {
+    .other-accommodation-heading {
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 20px;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 15px 16px;
+      margin-bottom: 10px;
+      border: 1px solid #e5e5e5;
+      border-radius: 9px;
+      background: #fafafa;
+    }
+
+    .stay-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stay-details strong {
+      color: #0E3557;
+    }
+
+    .stay-details span {
+      color: #666666;
+      font-size: 0.86rem;
     }
 
     .accommodation-link {
       display: inline-block;
-      margin-top: 10px;
-      font-weight: 600;
-      color: #0E3557;
+      flex-shrink: 0;
+      background: #0E3557;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 7px;
       text-decoration: none;
+      font-weight: 600;
     }
 
     .accommodation-link:hover {
-      text-decoration: underline;
+      background: #E87722;
+    }
+
+    .partner-link {
+      text-align: center;
+    }
+
+    .partner-link .accommodation-link {
+      margin-top: 5px;
     }
 
     .accommodation-disclaimer {
       max-width: 760px;
-      margin: 18px auto 0;
+      margin: 20px auto 0;
       color: #777777;
       font-size: 0.8rem;
       text-align: center;
@@ -242,8 +325,12 @@
       color: #ffffff;
     }
 
-    footer p {
+    footer p,
+    .gst-disclaimer {
       color: #ffffff;
+    }
+
+    footer p {
       font-size: 0.9rem;
       line-height: 1.6;
     }
@@ -252,7 +339,46 @@
       display: block;
       margin-top: 8px;
       font-size: 0.8rem;
-      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        margin-left: 0;
+      }
+
+      .hero {
+        height: 240px;
+      }
+
+      .other-stay-item {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+      .other-stay-item .accommodation-link {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -262,11 +388,14 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
-        <img src="/images/logo.jpg"
-             alt="ShowcasingOz TV Logo"
-             width="170"
-             height="65">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
       </a>
 
       <span class="menu-btn" id="menu-btn">
@@ -284,59 +413,91 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
+    menuBtn.addEventListener("click", function () {
+      menu.classList.toggle("active");
     });
   </script>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="../images/towns/adelaide.jpg"
-         alt="Adelaide South Australia"
-         width="1600"
-         height="320"
-         fetchpriority="high"
-         decoding="async"
-         style="width:100%; height:100%; object-fit:cover;">
+    <img
+      src="../images/towns/adelaide.jpg"
+      alt="Adelaide South Australia"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
   </section>
 
   <!-- MAIN CONTENT -->
-  <section class="content">
+  <main class="content">
 
     <h1>Adelaide (SA)</h1>
 
     <p>
-      Adelaide is South Australia’s capital and a gateway to some of the
-      state’s best-known cultural, coastal, food and wine experiences.
-      The city combines historic architecture, parklands, major attractions,
-      beaches and lively dining and entertainment precincts.
+      Adelaide is South Australia’s capital and the cultural, commercial and transport
+      centre of the state. The city sits on Kaurna Country between the Mount Lofty
+      Ranges and Gulf St Vincent, with the River Torrens / Karrawirra Parri passing
+      through a broad band of parklands that separates the central business district
+      from North Adelaide.
     </p>
 
     <p>
-      From the city centre and surrounding suburbs to nearby coastal
-      communities, Adelaide offers visitors a broad mix of experiences
-      within a relatively compact and accessible destination.
+      Colonel William Light’s planned city is recognised for its grid of streets,
+      five central squares and surrounding green belt. This layout makes many of
+      Adelaide’s civic buildings, museums, galleries, theatres, markets and dining
+      precincts easy to explore, while the city’s laneways and heritage arcades reveal
+      a more intimate side of the capital.
     </p>
 
-    <div class="page-update-notice">
-      <h2>🚧 Our Complete Adelaide Guide Is Coming Soon</h2>
+    <p>
+      North Terrace forms Adelaide’s principal cultural boulevard. Parliament House,
+      Government House, the State Library, South Australian Museum, Art Gallery of
+      South Australia, university buildings and gardens sit within a compact precinct,
+      while the nearby riverbank brings together Adelaide Oval, the Festival Centre,
+      convention facilities and Elder Park.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Adelaide. Following filming, it will be
-        expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        the city and its surrounding areas.
-      </p>
-    </div>
+    <p>
+      Adelaide’s identity extends well beyond the city centre. Glenelg, Brighton,
+      Henley Beach, West Beach, Semaphore and Port Noarlunga connect the metropolitan
+      area with Gulf St Vincent, offering jetties, beaches, coastal paths and seaside
+      precincts. Port Adelaide adds a working-port landscape and an exceptional
+      concentration of maritime, railway, aviation and military heritage.
+    </p>
+
+    <p>
+      To the east, the suburbs rise toward the Mount Lofty Ranges through established
+      neighbourhoods, conservation parks, gardens and historic estates. Morialta,
+      Belair, Waite, Carrick Hill and Penfolds Magill Estate show how quickly
+      Adelaide’s urban landscape gives way to bushland, foothill views and productive
+      land.
+    </p>
+
+    <p>
+      The southern metropolitan area follows the coast and Onkaparinga River toward
+      Hallett Cove, Port Noarlunga and Old Noarlunga. Here, geological formations,
+      Kaurna cultural interpretation, estuarine habitat and historic township
+      character add further depth to the story of metropolitan Adelaide.
+    </p>
+
+    <p>
+      ShowcasingOz TV will document Adelaide as a connected collection of city, coast,
+      port, parklands and suburbs. Our coverage will focus on the people, small
+      businesses, cultural institutions, visitor experiences and distinctive places
+      that make the wider metropolitan area an essential starting point for exploring
+      South Australia.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -346,83 +507,79 @@
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions</h2>
+    <h2>📍 Attractions In And Around Adelaide</h2>
 
-    <p class="accommodation-intro">
-      Adelaide’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+    <p class="section-intro">
+      These museums, cultural venues, tours, visitor experiences and commercial
+      attractions form part of ShowcasingOz TV’s planned Adelaide coverage. Each
+      will be documented in greater detail as filming is completed.
     </p>
 
-    <p style="text-align:center;">
-      <a href="../attraction-partners.html"
-         class="accommodation-link">
+    <p class="partner-link">
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">
-          Featured Adelaide Attractions Coming Soon
-        </div>
-      </div>
-    </div>
+    <div class="attractions-list" id="attractions-list"></div>
 
-    <!-- POINTS OF INTEREST -->
-    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
-
-    <p class="accommodation-intro">
-      Adelaide’s landmarks, neighbourhoods, beaches and other points of
-      interest will be documented and added to this page following our visit.
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Opening arrangements, tour schedules and access
+      conditions can change, so visitors should confirm details directly with each
+      operator.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="poi-placeholder">
-          Adelaide Points of Interest Coming Soon
-        </div>
-      </div>
-    </div>
+    <!-- LANDMARKS / POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+    <p class="section-intro">
+      These beaches, parks, streetscapes, lookouts, historic places and natural
+      landmarks help tell the wider story of Adelaide and its metropolitan communities.
+    </p>
+
+    <div class="poi-grid" id="poi-grid"></div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Adelaide</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Adelaide? Explore available accommodation across
-      the city while we continue developing our complete Adelaide
-      destination guide.
+      Planning a stay in Adelaide? Explore accommodation across the city centre and
+      the wider metropolitan area, from the coast and southern suburbs to Port
+      Adelaide, the north and the foothills.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a
-      place to stay. We help people discover where to go, what to experience
-      and where to base themselves as they explore Australia’s cities,
-      towns and hidden gems.
+      The directory is limited to hotels that accept accommodation bookings, motels,
+      caravan and holiday parks, bed and breakfasts, and managed apartments connected
+      with established hotel or serviced-apartment operators. Private holiday rentals,
+      hostels and standalone campsites are not included.
     </p>
 
-<p style="text-align:center;">
-  <a href="https://www.booking.com/searchresults.html?ss=Adelaide%2C+South+Australia%2C+Australia"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="accommodation-link">
-    View All Adelaide Accommodation
-  </a>
-</p>
+    <p class="partner-link">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAdelaide%2C%20South%20Australia%2C%20Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Adelaide Accommodation
+      </a>
+    </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Adelaide
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive premium
-      exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front
-      of travellers actively planning where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure
+      through professionally produced video, photography and destination-led
+      storytelling that places their property in front of travellers actively
+      planning where to stay.
     </p>
 
-    <p style="text-align:center;">
-      <a href="../accommodation-partners.html"
-         class="accommodation-link">
+    <p class="partner-link">
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
@@ -435,15 +592,28 @@
       </div>
     </div>
 
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Adelaide
+    </h3>
+
+    <div
+      class="other-accommodation-bookings"
+      id="other-accommodation-bookings"
+    ></div>
+
     <p class="accommodation-disclaimer">
-      Some links on this page are affiliate links, which means we may earn
-      a small commission if you make a booking, at no extra cost to you.
+      This directory is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Property names, classifications and booking
+      availability can change. Some links on this page are affiliate links, which
+      means ShowcasingOz TV may earn a small commission if you make a booking, at no
+      extra cost to you.
     </p>
 
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -470,7 +640,645 @@
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
+
+  <script>
+    const adelaideAttractions = [
+      [
+        "Adelaide Arcade",
+        "A richly detailed Victorian-era shopping arcade connecting Rundle Mall and Grenfell Street, known for its heritage architecture, specialty retailers and long-running stories of Adelaide’s commercial past."
+      ],
+      [
+        "Adelaide Cemetery Tours",
+        "Guided experiences exploring the stories, symbolism and notable burials found within Adelaide’s historic cemeteries, providing a different perspective on the city’s social history."
+      ],
+      [
+        "Adelaide Central Market",
+        "One of Australia’s largest undercover fresh-produce markets, bringing together fruit and vegetable stalls, bakeries, cheesemakers, cafés and multicultural food traders in the heart of the city."
+      ],
+      [
+        "Adelaide Contemporary Experimental",
+        "A contemporary arts organisation presenting ambitious exhibitions, public programs and experimental work by Australian and international artists."
+      ],
+      [
+        "Adelaide Festival Centre & Dunstan Playhouse",
+        "South Australia’s principal performing-arts precinct, presenting theatre, music, dance, festivals and major cultural events beside the River Torrens."
+      ],
+      [
+        "Adelaide Gaol",
+        "A former prison operating from 1841 until 1988, now preserved as a museum where visitors can explore cells, yards, towers and stories from South Australia’s penal history."
+      ],
+      [
+        "Adelaide Haunted Horizons",
+        "After-dark guided tours sharing reported paranormal encounters and darker historical stories connected with selected heritage locations across Adelaide."
+      ],
+      [
+        "Adelaide Holocaust Museum and Andrew Steiner Education Centre",
+        "A museum and education centre preserving survivor testimony and examining the Holocaust through personal stories, artefacts, exhibitions and learning programs."
+      ],
+      [
+        "Adelaide Oval RoofClimb",
+        "A guided climb across the roofline of Adelaide Oval, providing elevated views over the stadium, parklands, River Torrens and city skyline."
+      ],
+      [
+        "Adelaide Oval Tour & Bradman Collection",
+        "A behind-the-scenes stadium tour paired with a collection celebrating Sir Donald Bradman, including cricket memorabilia and displays connected with his remarkable career."
+      ],
+      [
+        "Adelaide Planetarium",
+        "A dome theatre at the University of South Australia’s Mawson Lakes campus offering guided journeys through the night sky, astronomy presentations and educational programs."
+      ],
+      [
+        "Adelaide Town Hall",
+        "A landmark civic building on King William Street, admired for its architecture, historic council chambers, grand auditorium and role in Adelaide’s public life."
+      ],
+      [
+        "Adelaide Tramway Museum",
+        "A volunteer-run museum at St Kilda preserving Adelaide’s tramway heritage through restored vehicles, displays and operating heritage tram rides on selected days."
+      ],
+      [
+        "Adelaide Zoo",
+        "A major city zoo beside Botanic Park, home to native and exotic wildlife and long associated with conservation, education and family visits."
+      ],
+      [
+        "Army Museum of South Australia",
+        "Located within historic Keswick Barracks, the museum documents South Australian military service through uniforms, vehicles, weapons, photographs and personal stories."
+      ],
+      [
+        "Art Gallery of South Australia",
+        "A major public gallery on North Terrace with significant Australian, First Nations, European and Asian collections, complemented by changing exhibitions and public programs."
+      ],
+      [
+        "Australian Space Discovery Centre",
+        "An interactive visitor centre at Lot Fourteen where exhibits, presentations and activities introduce Australia’s space sector, missions, technology and career pathways."
+      ],
+      [
+        "Ayers House Museum",
+        "A prominent North Terrace mansion associated with former South Australian premier Sir Henry Ayers, showcasing grand colonial-era architecture and interiors."
+      ],
+      [
+        "Bay Discovery Centre",
+        "A Glenelg museum housed in the former town hall, presenting exhibitions about Kaurna culture, local settlement, seaside recreation and the development of Holdfast Bay."
+      ],
+      [
+        "Beaumont House",
+        "A heritage-listed villa and garden in Beaumont, associated with prominent South Australian families and opened for selected tours and community events."
+      ],
+      [
+        "Belair National Park",
+        "South Australia’s oldest national park combines bushland, wildlife, heritage and recreation. Scheduled coverage includes Old Government House, Playford Lake and the Lower and Upper Waterfall lookouts."
+      ],
+      [
+        "Burnside Village",
+        "A major eastern-suburbs shopping destination known for fashion, dining and an airy centre design built around established gum trees."
+      ],
+      [
+        "Carrick Hill House Museum & Garden",
+        "A historic home in Springfield containing an important decorative-arts collection, surrounded by formal gardens, woodland and broad views across Adelaide."
+      ],
+      [
+        "Chinatown Adelaide",
+        "A lively dining and cultural precinct centred on Moonta Street, with restaurants, grocers, ceremonial gateways and close connections to Adelaide Central Market."
+      ],
+      [
+        "Classic Jets Fighter Museum",
+        "An aviation museum at Parafield Airport where volunteers preserve and restore historic aircraft, engines and aviation material, including significant military jet projects."
+      ],
+      [
+        "Clipper Ship City of Adelaide",
+        "One of the world’s oldest surviving composite clipper ships, now preserved at Port Adelaide as a major maritime conservation project with strong migration connections."
+      ],
+      [
+        "Coopers Brewery Tour",
+        "A guided look inside Australia’s largest family-owned brewery, exploring the Coopers story and the processes behind its ales, stouts and naturally conditioned beers."
+      ],
+      [
+        "Dolphin Sanctuary Kayak Tour",
+        "A guided paddling experience through sheltered waterways, mangrove habitat and parts of the Adelaide Dolphin Sanctuary, with opportunities to observe local wildlife responsibly."
+      ],
+      [
+        "EcoCaddy Pedicab Tours",
+        "Small-group pedicab tours offering a low-impact way to explore Adelaide’s lanes, public art, food precincts, parklands and city stories."
+      ],
+      [
+        "Escape Hunt Adelaide",
+        "An immersive escape-room attraction where teams solve themed puzzles, search for clues and work against the clock."
+      ],
+      [
+        "Fort Glanville",
+        "A preserved nineteenth-century coastal fort at Semaphore Park, featuring defensive structures, military artefacts and interpretive programs focused on South Australia’s colonial defences."
+      ],
+      [
+        "Haigh’s Chocolates & Factory Tours",
+        "Adelaide’s celebrated family-owned chocolatier, represented by its city stores and Greenhill Road visitor centre, where scheduled tours explain the company’s history and chocolate-making process."
+      ],
+      [
+        "Harbour Town Adelaide",
+        "An open-air outlet shopping centre near Adelaide Airport offering fashion, homeware and specialty retailers alongside cafés and visitor services."
+      ],
+      [
+        "Her Majesty’s Theatre",
+        "A restored heritage theatre in Grote Street presenting musicals, theatre, comedy and live performance within one of Adelaide’s most significant entertainment buildings."
+      ],
+      [
+        "Historic Cummins House",
+        "A heritage residence at Novar Gardens connected with pioneering politician John Morphett and generations of the Morphett family, set within established grounds."
+      ],
+      [
+        "JamFactory",
+        "A leading craft and design organisation at the Lion Arts Factory, with galleries, studios and retail spaces supporting ceramics, glass, furniture, jewellery and other contemporary makers."
+      ],
+      [
+        "Jet Flight Simulator Adelaide",
+        "A fixed-base flight-simulation experience that lets visitors take the controls of a commercial jet cockpit with guidance from an instructor."
+      ],
+      [
+        "Living Kaurna Cultural Centre at Warriparinga",
+        "A cultural centre at a place of deep significance to Kaurna people, presenting exhibitions, art and interpretation connected with Country, culture and the Tjilbruke story."
+      ],
+      [
+        "Migration Museum",
+        "A social-history museum examining the many migration stories that have shaped South Australia, while also acknowledging colonisation and its continuing effects on First Nations people."
+      ],
+      [
+        "MOD.",
+        "The University of South Australia’s future-focused museum uses interactive exhibitions to explore science, technology and ideas through creative and frequently changing experiences."
+      ],
+      [
+        "Montacute Valley Classic Carriage Drives",
+        "A horse-drawn carriage experience through the scenic Montacute Valley, offering a slower-paced perspective on the landscape and rural edges of metropolitan Adelaide."
+      ],
+      [
+        "National Military Vehicle Museum",
+        "A museum at Edinburgh Parks preserving military vehicles, equipment and associated stories from Australian service history."
+      ],
+      [
+        "National Railway Museum",
+        "A substantial Port Adelaide collection of locomotives, carriages and railway artefacts tracing the development of rail transport in South Australia and across Australia."
+      ],
+      [
+        "National Wine Centre of Australia",
+        "A striking city venue beside the Botanic Garden featuring wine education, exhibitions, tastings and events focused on Australia’s diverse wine regions."
+      ],
+      [
+        "Parliament of South Australia",
+        "The seat of South Australia’s Parliament on North Terrace, where public tours provide insight into the state’s parliamentary chambers, architecture and democratic processes."
+      ],
+      [
+        "Penfolds Magill Estate",
+        "The historic home of Penfolds on Adelaide’s eastern edge, combining working vineyards, heritage cellars, wine experiences and dining close to the city."
+      ],
+      [
+        "Pirate Life Brewing",
+        "A large Port Adelaide brewery and hospitality venue where visitors can explore the brand’s beers in a converted industrial setting."
+      ],
+      [
+        "Port River Dolphin Cruise & Adelaide Dolphin Sanctuary",
+        "A cruise through the Port River and sanctuary waterways, combining maritime scenery, mangrove habitat, industrial heritage and the chance to observe resident dolphins."
+      ],
+      [
+        "River Torrens Popeye Cruise",
+        "A long-running sightseeing cruise along the River Torrens through Elder Park and the city’s riverbank precinct, accompanied by local commentary."
+      ],
+      [
+        "SkyCity Adelaide Casino",
+        "A major entertainment complex in the historic Adelaide Railway Station building, with gaming, restaurants, bars and adjoining luxury accommodation."
+      ],
+      [
+        "South Australian Aviation Museum",
+        "A Port Adelaide museum displaying aircraft, engines and aviation artefacts that tell stories of civil, military and technological flight in South Australia."
+      ],
+      [
+        "South Australian Maritime Museum & Port Adelaide Lighthouse",
+        "A museum exploring voyages, migration, working-port life and maritime industries, with the nearby red lighthouse forming a defining feature of the Port Adelaide precinct."
+      ],
+      [
+        "South Australian Museum",
+        "A major North Terrace museum recognised for its natural-history collections and extensive Aboriginal cultural collections, supported by research and public exhibitions."
+      ],
+      [
+        "St Francis Xavier’s Cathedral",
+        "A prominent Gothic Revival cathedral overlooking Victoria Square and serving as the principal Roman Catholic cathedral in Adelaide."
+      ],
+      [
+        "St Kilda Adventure Playground",
+        "A large free playground north of Adelaide featuring slides, climbing structures, tunnels and broad spaces designed for energetic family visits."
+      ],
+      [
+        "St Peter’s Cathedral",
+        "An important Anglican cathedral in North Adelaide, recognised for its twin spires, stained glass, stonework and longstanding place in the city’s religious history."
+      ],
+      [
+        "State Library of South Australia & Mortlock Wing",
+        "South Australia’s principal public research library, including the celebrated Mortlock Wing with its ornate galleries, heritage collections and historic reading-room atmosphere."
+      ],
+      [
+        "Temptation Sailing Wild Dolphin Watch",
+        "A marine experience departing Glenelg to search for dolphins in Gulf St Vincent, with wildlife viewing conducted from a purpose-built sailing catamaran."
+      ],
+      [
+        "The Beachouse Amusement Park",
+        "A family entertainment venue on the Glenelg foreshore with waterslides, arcade games, rides and indoor activities."
+      ],
+      [
+        "The IceArenA",
+        "Adelaide’s indoor ice-skating venue at Thebarton, offering public skating sessions, lessons, ice hockey and other rink-based activities."
+      ],
+      [
+        "West Beach Adventure",
+        "An outdoor aerial adventure venue at West Beach, best known for MegaClimb’s elevated obstacles, climbing challenges and views across the coast."
+      ]
+    ];
+
+    const adelaidePois = [
+      [
+        "Adelaide Botanic Garden & Museum of Economic Botany",
+        "A major public garden beside North Terrace containing themed plant collections, historic glasshouses and the Santos Museum of Economic Botany, one of the garden’s most distinctive heritage buildings."
+      ],
+      [
+        "Adelaide Himeji Garden",
+        "A carefully composed Japanese garden on South Terrace, combining water, stone, plants and traditional design principles in a peaceful city setting."
+      ],
+      [
+        "Adelaide Riverbank Footbridge",
+        "A pedestrian bridge linking Adelaide Oval and North Adelaide with the railway station, convention centre, Festival Centre and central riverbank precinct."
+      ],
+      [
+        "Aurko’s Lookout",
+        "An elevated eastern-suburbs viewpoint providing a broad outlook across the Adelaide plain toward the city and Gulf St Vincent."
+      ],
+      [
+        "Barker Inlet Wetlands",
+        "A constructed wetland system near the Port River estuary that supports water treatment, birdlife and habitat within Adelaide’s industrial northern coastline."
+      ],
+      [
+        "Beehive Corner",
+        "A much-loved landmark at the corner of Rundle Mall and King William Street, named for the distinctive beehive motif crowning its ornate façade."
+      ],
+      [
+        "Bonython Park / Tulya Wardli",
+        "A large western parklands reserve beside the River Torrens, used for recreation, events, picnics and access to shared paths."
+      ],
+      [
+        "Botanic Park",
+        "An expansive green space adjoining Adelaide Botanic Garden and Adelaide Zoo, known for mature trees, open lawns, gatherings and major outdoor events."
+      ],
+      [
+        "Brighton Beach & Jetty",
+        "A popular metropolitan beach with a long jetty, swimming areas, coastal views and convenient access to cafés and Jetty Road Brighton."
+      ],
+      [
+        "Coastal Walkway Bridges",
+        "Pedestrian bridges along Adelaide’s southern coastal route connect cliff-top and beachside sections while opening views across Gulf St Vincent."
+      ],
+      [
+        "Ebenezer Place & Vardon Avenue",
+        "Neighbouring East End laneways characterised by heritage buildings, public art, cafés, bars, restaurants and independent businesses."
+      ],
+      [
+        "Glen Osmond Tollgate",
+        "A prominent heritage gateway marking the historic entrance to Adelaide from the South Eastern Freeway and the route once used to collect road tolls."
+      ],
+      [
+        "Glenelg Beach & Jetty",
+        "One of Adelaide’s best-known seaside destinations, combining a broad sandy beach, jetty, foreshore lawns and easy access to Moseley Square and Jetty Road."
+      ],
+      [
+        "Glenelg Tramway",
+        "Adelaide’s historic tram connection between the city and Glenelg, now integrated into the modern light-rail network and still central to the seaside suburb’s identity."
+      ],
+      [
+        "Government House",
+        "The official residence of the Governor of South Australia, occupying a prominent landscaped site on North Terrace beside Parliament House."
+      ],
+      [
+        "Hallett Cove Conservation Park",
+        "A geologically important coastal park preserving evidence of ancient glaciation. Key locations include Black Point Cave, the boardwalk, Blackcliff Lookout and the Sugarloaf formation."
+      ],
+      [
+        "Henley Square & Henley Beach Jetty",
+        "A lively beachfront meeting place with lawns, water features, dining and sunset views centred on Henley Beach’s jetty and foreshore."
+      ],
+      [
+        "Hindmarsh Square / Mukata & The Leaning Pine",
+        "A central city square combining lawns, paths and public art, including the prominent Leaning Pine sculpture."
+      ],
+      [
+        "Hurtle Square / Tangkaira & The Forest of Dreams",
+        "One of Adelaide’s five city squares, featuring green space and The Forest of Dreams public artwork within the south-eastern city quarter."
+      ],
+      [
+        "Jetty Road & Moseley Square",
+        "Glenelg’s main shopping, dining and entertainment strip leads directly to the foreshore and the civic space of Moseley Square."
+      ],
+      [
+        "Leigh Street",
+        "A narrow city laneway known for preserved façades, restaurants, small bars and its intimate connection between Hindley and Currie streets."
+      ],
+      [
+        "Light Square / Wauwi",
+        "A western city square containing the grave and monument of Colonel William Light, Adelaide’s surveyor, alongside lawns, paths and public space."
+      ],
+      [
+        "Light’s Vision Lookout",
+        "A North Adelaide lookout marked by a statue of Colonel William Light and offering a direct view over the parklands to the city plan he surveyed."
+      ],
+      [
+        "Morialta Conservation Park",
+        "A dramatic gorge landscape in Adelaide’s east with walking trails, wildlife and rock formations. Scheduled locations include Giant’s Cave, Kookaburra Rock, Eagles Nest Lookout, First Falls Lookout, Morialta Falls and Second Falls."
+      ],
+      [
+        "National War Memorial",
+        "South Australia’s principal war memorial on North Terrace, dedicated to those who served and died in the First World War and used for commemorative observances."
+      ],
+      [
+        "Newman’s Horseradish Factory Ruins",
+        "Stone ruins associated with an early foothills horseradish enterprise, offering a small but distinctive reminder of Adelaide’s nineteenth-century agricultural industry."
+      ],
+      [
+        "Old Gum Tree Reserve",
+        "The Glenelg North reserve traditionally associated with the proclamation of the colony of South Australia on 28 December 1836."
+      ],
+      [
+        "Old Noarlunga & Suspension Bridge",
+        "A historic township set beside a bend in the Onkaparinga River, with heritage character, riverside scenery and a pedestrian suspension bridge."
+      ],
+      [
+        "Onkaparinga River Mouth",
+        "The meeting point of the Onkaparinga River and Gulf St Vincent, bordered by dunes, estuarine habitat, Port Noarlunga South and coastal recreation areas."
+      ],
+      [
+        "Port Noarlunga Beach & Jetty",
+        "A sheltered southern beach and long jetty overlooking an offshore reef, popular for walking, swimming, snorkelling, diving and sunset views."
+      ],
+      [
+        "River Torrens / Karrawirra Parri & Elder Park",
+        "The river and park form the green heart of Adelaide’s central riverbank, including paths, lawns, the rotunda, water features and sections of the Adelaide Kaurna Walking Trail."
+      ],
+      [
+        "Rundle Mall",
+        "Adelaide’s principal pedestrian shopping mall, recognised for public artworks, heritage façades, arcades, department stores and busy city atmosphere."
+      ],
+      [
+        "Rymill Park / Murlawirrapurka",
+        "An eastern parklands reserve with a lake, lawns, paths and event spaces close to the East End and Adelaide Botanic Garden."
+      ],
+      [
+        "Semaphore Beach, Jetty, Carousel & Clock Tower",
+        "A broad family-friendly beach and foreshore precinct where the jetty, heritage carousel and landmark clock tower help define Semaphore’s seaside character."
+      ],
+      [
+        "St Kilda Mangrove Boardwalk",
+        "A boardwalk and interpretive trail through mangrove and saltmarsh habitat on the Barker Inlet, offering insight into an important coastal ecosystem."
+      ],
+      [
+        "The Parade, Norwood",
+        "A prominent eastern-suburbs boulevard lined with shops, cafés, restaurants and civic spaces, forming the commercial and social centre of Norwood."
+      ],
+      [
+        "Thorndon Park Reserve",
+        "A landscaped reserve around a former reservoir at Paradise, offering walking paths, picnic areas, play facilities and views across the water."
+      ],
+      [
+        "Veale Gardens",
+        "A formal garden within the southern Adelaide Park Lands, featuring landscaped lawns, water elements, rose beds and established trees."
+      ],
+      [
+        "Victoria Square / Tarntanyangga",
+        "Adelaide’s central civic square and an important Kaurna place, surrounded by major public buildings and used for gatherings, events and city life."
+      ],
+      [
+        "Waite Arboretum",
+        "A living collection of trees from around the world within the Waite precinct at Urrbrae, supporting research, education and quiet public walking."
+      ],
+      [
+        "West Beach & River Torrens Mouth",
+        "A long metropolitan beach near Adelaide Airport where the River Torrens outlet reaches Gulf St Vincent, linked with coastal paths and recreation areas."
+      ],
+      [
+        "West Lakes Boating Lake",
+        "A large constructed lake and residential waterway used for rowing, paddling, boating and waterfront recreation in Adelaide’s west."
+      ],
+      [
+        "Wheal Watkins Historic Site",
+        "Remnants of an early mine in the Adelaide foothills, preserving part of the district’s small-scale nineteenth-century mining history."
+      ],
+      [
+        "Whitmore Square / Iparrityi & Voyager Sculpture",
+        "A south-western city square with lawns, community space and the distinctive Voyager public sculpture."
+      ]
+    ];
+
+    const adelaideStays = [
+      ["Adabco Boutique Hotel", "Hotel", "Adelaide CBD"],
+      ["Adelaide Airport Motel", "Motel", "Brooklyn Park"],
+      ["Adelaide Caravan Park", "Caravan and holiday park", "Hackney"],
+      ["Adelaide Granada Motor Inn", "Motel", "Glenunga"],
+      ["Adelaide Inn", "Hotel", "North Adelaide"],
+      ["Adelaide International Motel", "Motel", "Glenelg North"],
+      ["Adelaide Marriott Hotel", "Hotel", "Adelaide CBD"],
+      ["Adelaide Oval Hotel", "Hotel", "North Adelaide"],
+      ["Adelaide Paringa", "Hotel", "Adelaide CBD"],
+      ["Adelaide Pulteney Motel", "Motel", "Adelaide CBD"],
+      ["Adelaide Riviera Hotel", "Hotel", "Adelaide CBD"],
+      ["Adelaide Rockford", "Hotel", "Adelaide CBD"],
+      ["Adelaide Royal Coach", "Hotel", "Kent Town"],
+      ["Adelaide Showground Caravan Park", "Caravan park", "Wayville"],
+      ["Amora Adelaide", "Hotel", "Adelaide CBD"],
+      ["Arkaba Hotel", "Hotel", "Fullarton"],
+      ["Aspen Holidays Highway 1", "Caravan and holiday park", "Bolivar"],
+      ["Atura Adelaide Airport", "Hotel", "Adelaide Airport"],
+      ["Avani Adelaide Residences", "Hotel-managed apartments", "Adelaide CBD"],
+      ["Best Western Adelaide Airport", "Hotel", "West Beach"],
+      ["Best Western Ensenada Motor Inn", "Motel", "Glenelg"],
+      ["BreakFree Adelaide", "Hotel-managed apartments", "Adelaide CBD"],
+      ["BreakFree North Adelaide", "Hotel", "North Adelaide"],
+      ["Brighton Beachfront Holiday Park", "Caravan and holiday park", "Kingston Park"],
+      ["Brownhill Creek Tourist Park", "Caravan and holiday park", "Mitcham"],
+      ["Buffalo Motor Inn", "Motel", "Glenelg"],
+      ["Buxton Manor", "Bed and breakfast", "North Adelaide"],
+      ["Coast Motel and Apartments", "Motel", "Port Noarlunga South"],
+      ["Comfort Inn & Suites Manhattan", "Hotel and suites", "Enfield"],
+      ["Comfort Inn Glenelg", "Motel", "Glenelg East"],
+      ["Crowne Plaza Adelaide", "Hotel", "Adelaide CBD"],
+      ["Crowne Plaza Adelaide Mawson Lakes", "Hotel", "Mawson Lakes"],
+      ["Crystalbrook Sam", "Hotel", "Adelaide CBD"],
+      ["Discovery Parks – Adelaide Beachfront", "Caravan and holiday park", "Semaphore Park"],
+      ["Discovery Parks – West Beach Parks", "Caravan and holiday park", "West Beach"],
+      ["Echo Holiday Parks – Windsor Gardens", "Caravan and holiday park", "Windsor Gardens"],
+      ["Econo Lodge East Adelaide", "Motel", "Kent Town"],
+      ["Enfield Hotel", "Hotel", "Clearview"],
+      ["Eos by SkyCity", "Hotel", "Adelaide CBD"],
+      ["Frewville Motor Inn", "Motel", "Frewville"],
+      ["Fullarton Motor Lodge", "Motel", "Fullarton"],
+      ["Glenelg Motel", "Motel", "Glenelg North"],
+      ["Grosvenor Hotel Adelaide", "Hotel", "Adelaide CBD"],
+      ["Haven Marina Motel", "Motel", "Glenelg North"],
+      ["Hilton Adelaide", "Hotel", "Adelaide CBD"],
+      ["Holiday Inn Express Adelaide City Centre", "Hotel", "Adelaide CBD"],
+      ["Hotel Alba Adelaide", "Hotel", "Adelaide CBD"],
+      ["Hotel Grand Chancellor Adelaide", "Hotel", "Adelaide CBD"],
+      ["Hotel Indigo Adelaide Markets", "Hotel", "Adelaide CBD"],
+      ["HotelMOTEL Adelaide", "Hotel and motel", "Adelaide CBD"],
+      ["ibis Adelaide", "Hotel", "Adelaide CBD"],
+      ["ibis Styles Adelaide Manor", "Hotel", "Gepps Cross"],
+      ["InterContinental Adelaide", "Hotel", "Adelaide CBD"],
+      ["Jacksons Motor Inn", "Motel", "Glen Osmond"],
+      ["Largs Pier Hotel", "Hotel and motel", "Largs Bay"],
+      ["Levi Adelaide Holiday Park", "Caravan and holiday park", "Vale Park"],
+      ["Majestic M Suites", "Hotel-managed suites", "North Adelaide"],
+      ["Majestic Minima Hotel", "Hotel", "North Adelaide"],
+      ["Majestic Roof Garden Hotel", "Hotel", "Adelaide CBD"],
+      ["Mantra Adelaide Central", "Hotel-managed apartments", "Adelaide CBD"],
+      ["Mantra Hindmarsh Square Adelaide", "Hotel", "Adelaide CBD"],
+      ["Mantra Meridien Adelaide", "Hotel", "North Adelaide"],
+      ["Mantra Tonsley Adelaide", "Hotel", "Tonsley"],
+      ["Marion Holiday Park", "Caravan and holiday park", "Bedford Park"],
+      ["Marion Hotel", "Hotel", "Mitchell Park"],
+      ["Mawson Lakes Hotel", "Hotel and managed apartments", "Mawson Lakes"],
+      ["Mayfair Hotel", "Hotel", "Adelaide CBD"],
+      ["Mick O’Shea’s Hotel", "Hotel", "Hackham"],
+      ["Miller Apartments Adelaide", "Serviced apartment hotel", "Adelaide CBD"],
+      ["Morphettville Motor Inn", "Motel", "Camden Park"],
+      ["Nightcap at Exeter Hotel", "Hotel", "Exeter"],
+      ["Nightcap at Findon Hotel", "Hotel", "Findon"],
+      ["Nightcap at Finsbury Hotel", "Hotel", "Woodville North"],
+      ["Nightcap at Hendon Hotel", "Hotel", "Hendon"],
+      ["Nightcap at Playford Tavern", "Hotel", "Davoren Park"],
+      ["Nightcap at Rex Hotel", "Hotel", "Marleston"],
+      ["Nightcap at Rose & Crown Hotel", "Hotel", "Elizabeth South"],
+      ["Nightcap at Watermark Glenelg", "Hotel", "Glenelg North"],
+      ["Norfolk Motor Inn", "Motel", "Glenelg South"],
+      ["North Adelaide Boutique Stays Accommodation", "Boutique hotel", "North Adelaide"],
+      ["Oaks Adelaide Embassy Suites", "Hotel-managed apartments", "Adelaide CBD"],
+      ["Oaks Adelaide Horizons Suites", "Hotel-managed apartments", "Adelaide CBD"],
+      ["Oaks Glenelg Liberty Suites", "Hotel-managed apartments", "Glenelg"],
+      ["Oaks Glenelg Plaza Pier Suites", "Hotel-managed apartments", "Glenelg"],
+      ["Pavlos Motel", "Motel", "Pooraka"],
+      ["Peninsula Hotel Motel", "Hotel and motel", "Taperoo"],
+      ["Peppers Waymouth Adelaide", "Hotel", "Adelaide CBD"],
+      ["Pooraka Motor Inn", "Motel", "Pooraka"],
+      ["Princes Lodge Motel", "Motel", "North Adelaide"],
+      ["Pullman Adelaide", "Hotel", "Adelaide CBD"],
+      ["Quality Apartments Adelaide Central", "Serviced apartment hotel", "Adelaide CBD"],
+      ["Quest East Adelaide", "Serviced apartment hotel", "Kent Town"],
+      ["Quest King William South", "Serviced apartment hotel", "Adelaide CBD"],
+      ["Quest Mawson Lakes", "Serviced apartment hotel", "Mawson Lakes"],
+      ["Quest Norwood", "Serviced apartment hotel", "Norwood"],
+      ["Quest on Franklin", "Serviced apartment hotel", "Adelaide CBD"],
+      ["Quest Port Adelaide", "Serviced apartment hotel", "Port Adelaide"],
+      ["Rydges South Park Adelaide", "Hotel", "Adelaide CBD"],
+      ["Scotty’s Motel", "Motel", "Medindie"],
+      ["Sfera’s Park Suites & Convention Centre", "Hotel", "Modbury"],
+      ["Sofitel Adelaide", "Hotel", "Adelaide CBD"],
+      ["St Francis Winery Resort", "Hotel", "Old Reynella"],
+      ["Stamford Grand Adelaide", "Hotel", "Glenelg"],
+      ["Stamford Plaza Adelaide", "Hotel", "Adelaide CBD"],
+      ["Sturt River Park", "Cabin and caravan park", "Darlington"],
+      ["Taft Motor Inn", "Motel", "Glenelg"],
+      ["The George Glenelg", "Hotel", "Glenelg"],
+      ["The Lakes Hotel", "Hotel", "West Lakes"],
+      ["The Osmond Motel & Apartments", "Motel and managed apartments", "Frewville"],
+      ["The Playford Adelaide – MGallery", "Hotel", "Adelaide CBD"],
+      ["The Sands Motel Adelaide", "Motel", "Fullarton"],
+      ["The SOHO Hotel", "Hotel", "Adelaide CBD"],
+      ["The Terrace Hotel Adelaide", "Hotel", "Adelaide CBD"],
+      ["The Watson Adelaide – Art Series", "Hotel and managed suites", "Walkerville"],
+      ["Tollgate Motel", "Motel", "Glen Osmond"],
+      ["Tom’s Court Hotel", "Hotel", "Adelaide CBD"],
+      ["TRYP by Wyndham Pulteney Street Adelaide", "Hotel", "Adelaide CBD"],
+      ["Vibe Hotel Adelaide", "Hotel", "Adelaide CBD"],
+      ["Walkers Arms Hotel", "Hotel", "Walkerville"],
+      ["Water Bay Villa Bed & Breakfast", "Bed and breakfast", "Glenelg South"],
+      ["Welcome Inn 277", "Motel", "Frewville"],
+      ["Woodcroft Park", "Caravan and cabin park", "Woodcroft"]
+    ];
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, function (character) {
+        return {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        }[character];
+      });
+    }
+
+    function affiliateBookingUrl(query) {
+      const destinationUrl =
+        "https://www.booking.com/searchresults.html?ss=" + query;
+
+      return (
+        "https://www.jdoqocy.com/click-101877738-17293136?url=" +
+        encodeURIComponent(destinationUrl)
+      );
+    }
+
+    document.getElementById("attractions-list").innerHTML =
+      adelaideAttractions.map(function (attraction) {
+        const name = attraction[0];
+        const description = attraction[1];
+
+        return `
+          <article class="attraction-item">
+            <h3>${escapeHtml(name)}</h3>
+            <p>${escapeHtml(description)}</p>
+          </article>
+        `;
+      }).join("");
+
+    document.getElementById("poi-grid").innerHTML =
+      adelaidePois.map(function (poi) {
+        const name = poi[0];
+        const description = poi[1];
+
+        return `
+          <article class="poi-card">
+            <div class="poi-placeholder">
+              ${escapeHtml(name)} Image Coming Soon
+            </div>
+
+            <div class="poi-content">
+              <h3>${escapeHtml(name)}</h3>
+              <p>${escapeHtml(description)}</p>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+    document.getElementById("other-accommodation-bookings").innerHTML =
+      adelaideStays.map(function (property) {
+        const name = property[0];
+        const type = property[1];
+        const suburb = property[2];
+
+        const searchQuery =
+          name + ", " + suburb + ", South Australia";
+
+        return `
+          <div class="other-stay-item">
+            <div class="stay-details">
+              <strong>${escapeHtml(name)}</strong>
+              <span>
+                ${escapeHtml(type)} · ${escapeHtml(suburb)}
+              </span>
+            </div>
+
+            <a
+              href="${affiliateBookingUrl(searchQuery)}"
+              target="_blank"
+              rel="noopener sponsored"
+              class="accommodation-link"
+            >
+              View / Book
+            </a>
+          </div>
+        `;
+      }).join("");
+  </script>
 
 </body>
 </html>
