@@ -1,377 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Hillston (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Hillston, NSW — a Riverina town on the Lachlan River, known for its irrigated agriculture, open landscapes, and relaxed rural lifestyle." />
-<meta name="keywords" content="Hillston NSW, Hillston Riverina, Lachlan River town, Riverina agriculture, Hillston attractions, Hillston accommodation, western NSW towns, outback NSW travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Explore Hillston on the Lachlan River, including its agricultural history, Willandra National Park, surrounding villages, local landmarks and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Hillston NSW, Hillston Riverina, Lachlan River, Willandra National Park, Merriwagga, Hillston accommodation, western New South Wales, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      display: block;
+      width: auto;
+      height: 65px;
+    }
 
     nav a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover,
+    nav a:focus {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      overflow: hidden;
+      background: #dddddd;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* ================= CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
-
-    p { line-height:1.6; color:#333; }
-
-    /* ================= PLACEHOLDERS ================= */
-    .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    h1 {
+      margin: 0 0 20px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
-    }
-    /* ================= POINTS OF INTEREST ================= */
-
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    h2 {
+      margin-top: 55px;
+      margin-bottom: 20px;
+      color: #E87722;
+      text-align: center;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+    h3 {
+      color: #0E3557;
     }
 
-    .accommodation-content {
-      padding:15px;
+    p {
+      color: #333333;
+      line-height: 1.7;
     }
 
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      color: #444444;
+      text-align: center;
     }
 
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+    /* ================= BUTTONS ================= */
+
+    .page-link {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .accommodation-link:hover {
-      text-decoration:underline;
+    .page-link:hover,
+    .page-link:focus {
+      background: #E87722;
+      color: #ffffff;
+      transform: translateY(-1px);
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    .button-row {
+      margin: 22px 0;
+      text-align: center;
+    }
+
+    /* ================= DOCUMENTARY ================= */
+
+    .video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 350px;
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .attraction-item {
+      padding: 24px;
+      border-left: 5px solid #E87722;
+      border-radius: 12px;
+      background: #f8f9fa;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .attraction-item h3 {
+      margin: 0 0 10px;
+      color: #0E3557;
+    }
+
+    .attraction-item p {
+      margin: 0;
+      color: #4b4b4b;
+    }
+
+    /* ================= POI CARDS ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 28px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .poi-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+      padding: 20px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 5px 0 10px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .accommodation-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 200px;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 25px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details h4 {
+      margin: 0 0 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    .stay-details p {
+      margin: 0;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .other-stay-item .page-link {
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      margin-top: 24px;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      text-align: center;
     }
-/* ================= CENTER ALIGN – HILLSTON ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    footer .footer-links a {
+      margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    footer .footer-links a:hover,
+    footer .footer-links a:focus {
+      color: #ffffff;
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+    footer p a:hover,
+    footer p a:focus {
+      color: #ffffff;
+    }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+    /* ================= RESPONSIVE ================= */
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+    @media (max-width: 900px) {
+      .poi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 85px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0E3557;
+      }
 
-footer p a:hover {
-  color: #ffffff;
-}
+      nav.active {
+        display: flex;
+      }
 
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
+      nav a {
+        margin: 0;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
 
-footer {
-  background-color: #0E3557 !important;
-}
+      .menu-btn {
+        display: block;
+      }
 
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+      .other-stay-item .page-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
 
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
 
-            .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
+      .content {
+        margin-top: 30px;
+      }
 
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
+      .poi-grid {
+        grid-template-columns: 1fr;
+      }
 
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      .video-placeholder {
+        min-height: 250px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span
+        class="menu-btn"
+        id="menu-btn"
+        role="button"
+        tabindex="0"
+        aria-label="Open navigation menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -383,214 +499,470 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuButton = document.getElementById('menu-btn');
+    const navigationMenu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/hillston.jpg"
-       alt="Hillston New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    function toggleNavigation() {
+      const isOpen = navigationMenu.classList.toggle('active');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    }
 
-<!-- MAIN CONTENT -->
-<section class="content">
+    menuButton.addEventListener('click', toggleNavigation);
 
-<h1>Hillston (NSW)</h1>
+    menuButton.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleNavigation();
+      }
+    });
+  </script>
 
-<p>
-Hillston is a regional town in the Riverina district of western New South Wales, situated along the banks of the Lachlan River. Known for its agricultural strength and relaxed country atmosphere, Hillston serves as an important centre for surrounding farming communities.
-</p>
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/hillston.jpg"
+      alt="Hillston in the western Riverina region of New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </section>
 
-<p>
-Established in the 19th century, Hillston developed as a river crossing and service point for pastoral activity in the region. Over time, the town evolved alongside the expansion of agriculture, with irrigation playing a key role in shaping its economy and landscape.
-</p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="content">
 
-<p>
-Today, Hillston is recognised for its diverse agricultural production, including cotton, grain, citrus, and other irrigated crops. The surrounding farmland highlights the importance of water management and the Lachlan River system in supporting regional growth.
-</p>
+      <h1>Hillston (NSW)</h1>
 
-<p>
-The Lachlan River remains central to the town’s identity, providing opportunities for recreation, fishing, and riverside relaxation. Its presence also contributes to the greenery and contrast within the otherwise expansive plains of the Riverina.
-</p>
-
-<p>
-Hillston offers essential services, accommodation, and local businesses, with a friendly and welcoming community. Its town centre reflects its role as a regional hub, supporting both residents and travellers moving through western New South Wales.
-</p>
-
-<p>
-Surrounded by wide-open farmland and big skies, Hillston captures the character of inland Australia — where agriculture, water, and community are closely connected.
-</p>
-
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Hillston as part of our national filming journey — highlighting its agricultural strength, Lachlan River setting, regional importance, and the community spirit that continues to shape this Riverina town.
-</p>
-
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Hillston</h3>
-  <ul class="other-accommodation-list">
-    <li>Willandra Homestead</li>
-    <li>Willandra Men’s Quarters & Cottage</li>
-    <li>The Black Stump Hotel</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-
-  <h2>🗺️ Points of Interest & Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Hillston’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Woorabinda</h3>
-      <p>Lake Woorabinda is a scenic waterbody on the edge of town, offering walking paths, picnic areas, and a peaceful setting for relaxation and outdoor recreation.
+      <p>
+        Hillston is a regional town situated beside the Lachlan River in the
+        western Riverina of New South Wales. Located at the junction of the
+        Kidman Way and Lachlan Valley Way, it provides services and supplies
+        for surrounding farms, agricultural businesses and smaller rural
+        communities.
       </p>
-    </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lachlan River Swing Bridge</h3>
-      <p>The Lachlan River Swing Bridge is a historic pedestrian bridge crossing the river, providing a unique vantage point and a connection to the town’s past infrastructure.
+      <p>
+        The district forms part of the traditional country of Aboriginal
+        peoples connected with the Lachlan River and the western Riverina.
+        Long before the development of the present town, the river and its
+        surrounding wetlands provided water, food, movement routes and places
+        of cultural significance.
       </p>
-    </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Hillston Town Centre</h3>
-      <p>Hillston’s town centre features local shops, services, and community facilities, reflecting its role as a regional hub within the Riverina.
+      <p>
+        European settlement expanded during the nineteenth century as
+        pastoralists established sheep and cattle properties along the Lachlan
+        River. The locality became an important river crossing for stock and
+        travellers before developing into a permanent service centre.
       </p>
-    </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Merriwagga</h3>
-      <p>Merriwagga is a small nearby village known for its agricultural surroundings and classic country pub, representing the rural character of the broader Hillston district.
+      <p>
+        Water continues to shape Hillston’s economy and landscape. Irrigation
+        supports a diverse agricultural district producing cotton, grain,
+        citrus, vegetables and livestock. These industries have also created
+        employment in agricultural services, freight, processing and water
+        management.
       </p>
-    </div>
-  </div>
-</div>
 
-   <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Hillston</h2>
+      <p>
+        Hillston’s connection with the Lachlan River remains visible through
+        riverside reserves, fishing locations, walking areas and the town’s
+        swinging pedestrian bridge. Lake Woorabinda provides another important
+        recreation area close to the town centre.
+      </p>
 
-<p class="accommodation-intro">
-  Planning a stay in Hillston? Explore accommodation options in and around this Riverina town while discovering
-  the Lachlan River setting, irrigated agriculture, and relaxed rural lifestyle that define this part of western New South Wales.
-</p>
+      <p>
+        Beyond Hillston, the district opens into expansive pastoral country.
+        Willandra National Park preserves the buildings and landscape of a
+        former major sheep station, while Merriwagga reflects the history and
+        character of the smaller communities established across the plains.
+      </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+      <p>
+        ShowcasingOz TV will explore Hillston’s agricultural economy, Lachlan
+        River setting, surrounding communities and pastoral history. Our
+        coverage will connect the town with Willandra National Park,
+        Merriwagga and the local businesses supporting life in this part of
+        western New South Wales.
+      </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW"
-     target="_blank"
-     class="accommodation-link">
-    View All Hillston Accommodation
-  </a>
-</p>
+      <!-- DOCUMENTARY -->
+      <h2>🎥 Town Documentary</h2>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Hillston</h3>
+      <div class="video-placeholder">
+        Hillston Documentary Coming Soon
+      </div>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+      <!-- ATTRACTIONS -->
+      <h2>📍 Attractions In And Around Hillston</h2>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+      <p class="section-intro">
+        Hillston provides access to pastoral heritage, historic station
+        buildings and rural hospitality across the western Riverina.
+      </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+      <div class="button-row">
+        <a href="../attraction-partners.html" class="page-link">
+          Explore attraction filming &amp; feature options
+        </a>
+      </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Hillston</h3>
-<div class="other-accommodation-bookings">
+      <div class="attractions-list">
 
-  <div class="other-stay-item"><span>Club House Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+        <article class="attraction-item">
+          <h3>Black Stump Hotel</h3>
 
-  <div class="other-stay-item"><span>Hillston Backpackers</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+          <p>
+            The Black Stump Hotel is a traditional country pub in Merriwagga,
+            south of Hillston. Closely associated with the district’s Black
+            Stump identity, the hotel has served residents, agricultural
+            workers and travellers moving through the western Riverina. It
+            remains a recognisable local meeting place and an example of the
+            small rural pubs that continue to support isolated communities.
+          </p>
+        </article>
 
-  <div class="other-stay-item"><span>Hillston Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+        <article class="attraction-item">
+          <h3>Willandra Homestead</h3>
 
-  <div class="other-stay-item"><span>Hillston Motel & Shamrock Restaurant</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+          <p>
+            Willandra Homestead stands within Willandra National Park on the
+            site of a former major pastoral station. The present homestead was
+            built in 1918 and formed part of a large complex supporting one of
+            the region’s prominent Merino enterprises. Restored rooms,
+            verandahs and surrounding station buildings provide an insight
+            into pastoral life on the western plains.
+          </p>
+        </article>
 
-  <div class="other-stay-item"><span>Hillston Motor Inn On High</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+        <article class="attraction-item">
+          <h3>Willandra Men’s Quarters &amp; Cottage</h3>
 
-  <div class="other-stay-item"><span>Kidman Way Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+          <p>
+            The men’s quarters and cottage form part of the historic Willandra
+            Homestead complex. These buildings help explain the different
+            living arrangements experienced by station workers, managers and
+            families. Together with the homestead, woolshed and other surviving
+            structures, they reveal how a large pastoral property operated in
+            an isolated environment.
+          </p>
+        </article>
 
-  <div class="other-stay-item"><span>Tattersall's Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+      </div>
 
-  <div class="other-stay-item"><span>The Old School Caravan Park - Merriwagga</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston+NSW" target="_blank" class="accommodation-link">View / Book</a></div>
+      <p class="accommodation-disclaimer">
+        Willandra National Park is in a remote area northwest of Hillston.
+        Roads may be unsealed and access can be affected by wet weather.
+        Confirm park conditions, building access and opening arrangements
+        before travelling.
+      </p>
 
-</div>
-  
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
+      <!-- LANDMARKS AND POIS -->
+      <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
 
-</section>
+      <p class="section-intro">
+        Hillston’s landmarks connect the town with the Lachlan River, irrigated
+        agriculture and the small rural communities of the surrounding
+        district.
+      </p>
+
+      <div class="poi-grid">
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Hillston Town Centre Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Hillston Town Centre</h3>
+
+            <p>
+              Hillston Town Centre contains local shops, accommodation,
+              hospitality businesses and essential community services. High
+              Street reflects the town’s continuing role as a commercial and
+              service centre for surrounding farms and rural communities.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Lachlan River Swing Bridge Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Lachlan River Swing Bridge</h3>
+
+            <p>
+              Hillston’s swinging pedestrian bridge crosses the Lachlan River
+              and connects with riverside walking areas. The bridge provides a
+              distinctive view of the river, its red gums and the green
+              corridor that passes beside the town.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Lake Woorabinda Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Lake Woorabinda</h3>
+
+            <p>
+              Lake Woorabinda is a constructed recreation lake near central
+              Hillston. A surrounding walking track, picnic areas and open
+              space make it a popular place for exercise, birdwatching and
+              relaxation beside the water.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Merriwagga Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Merriwagga</h3>
+
+            <p>
+              Merriwagga is a small agricultural village south of Hillston on
+              the Kidman Way. The community is surrounded by broad farming
+              country and is best known to travellers for the Black Stump
+              Hotel and its connection with local Black Stump folklore.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        River levels, rural-road conditions and access to remote locations can
+        change following rain or flooding. Check current local and national
+        park advice before travelling beyond Hillston.
+      </p>
+
+      <!-- ACCOMMODATION -->
+      <h2>🏨 Stay Where We Showcase: Hillston</h2>
+
+      <p class="section-intro">
+        Planning a stay in Hillston? Search local accommodation while exploring
+        the Lachlan River, surrounding agricultural district, Merriwagga and
+        the pastoral heritage of Willandra National Park.
+      </p>
+
+      <p class="section-intro">
+        ShowcasingOz TV is designed to do more than help travellers find
+        somewhere to stay. We help viewers discover where to go, what to
+        experience and which regional businesses can support their journey.
+      </p>
+
+      <div class="button-row">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston%252C%2520New%2520South%2520Wales%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="page-link"
+        >
+          View Hillston Accommodation
+        </a>
+      </div>
+
+      <h3 class="other-accommodation-heading">
+        Featured Accommodation Opportunities In And Around Hillston
+      </h3>
+
+      <p class="section-intro">
+        Accommodation partners featured on ShowcasingOz TV receive exposure
+        through professionally produced video, photography and
+        destination-led storytelling that places their property in front of
+        travellers actively planning where to stay.
+      </p>
+
+      <div class="button-row">
+        <a href="../accommodation-partners.html" class="page-link">
+          Explore accommodation filming &amp; feature options
+        </a>
+      </div>
+
+      <div class="accommodation-placeholder">
+        Featured Hillston Accommodation Coming Soon
+      </div>
+
+      <h3 class="other-accommodation-heading">
+        Other Accommodation In And Around Hillston
+      </h3>
+
+      <div class="other-accommodation-bookings">
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Billabourie Riverside Tourist Park</h4>
+
+            <p>
+              Riverside tourist park offering caravan accommodation and
+              visitor facilities near Hillston.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBillabourie%2520Riverside%2520Tourist%2520Park%252C%2520Hillston%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Hillston Caravan Park</h4>
+
+            <p>
+              Caravan park beside the Lachlan River offering self-contained
+              cabins, powered sites and visitor facilities.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston%2520Caravan%2520Park%252C%2520Hillston%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Hillston Motel &amp; Shamrock Restaurant</h4>
+
+            <p>
+              Motel accommodation offering guest rooms, free Wi-Fi and an
+              onsite restaurant in Hillston.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston%2520Motel%2520and%2520Shamrock%2520Restaurant%252C%2520Hillston%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Hillston Motor Inn on High</h4>
+
+            <p>
+              Motor-inn accommodation on High Street, providing convenient
+              access to Hillston’s shops and local services.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHillston%2520Motor%2520Inn%2520on%2520High%252C%2520Hillston%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Kidman Way Motor Inn</h4>
+
+            <p>
+              Established motel accommodation on High Street for business
+              travellers, agricultural workers and visitors passing through
+              Hillston.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKidman%2520Way%2520Motor%2520Inn%252C%2520Hillston%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Tattersall’s Hotel</h4>
+
+            <p>
+              Traditional hotel accommodation and hospitality facilities on
+              High Street in Hillston.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTattersalls%2520Hotel%252C%2520Hillston%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>The Old School Caravan Park, Merriwagga</h4>
+
+            <p>
+              Small caravan park in Merriwagga providing a regional
+              accommodation option south of Hillston.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Old%2520School%2520Caravan%2520Park%252C%2520Merriwagga%252C%2520New%2520South%2520Wales"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        This accommodation list is provided for visitor awareness only.
+        Inclusion does not imply a partnership, recommendation or endorsement
+        by ShowcasingOz TV. Availability, ownership and operating arrangements
+        may change, so travellers should confirm current details before
+        booking. Some links on this page are affiliate links, which means
+        ShowcasingOz TV may earn a small commission if you complete a
+        qualifying booking, at no additional cost to you.
+      </p>
+
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -605,10 +977,21 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and experienc
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
