@@ -1,379 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<title>Hopetoun (VIC) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Hopetoun, VIC — a Mallee town near Lake Lascelles, known for its silo art, agricultural heritage, and proximity to Lake Tyrrell in north-west Victoria." />
-<meta name="keywords" content="Hopetoun VIC, Hopetoun Victoria, Mallee town VIC, Lake Lascelles, silo art Victoria, Lake Tyrrell near Hopetoun, Hopetoun attractions, Hopetoun accommodation, Mallee region travel, ShowcasingOz TV" />
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hopetoun (VIC) | ShowcasingOz TV</title>
+
+  <meta
+    name="description"
+    content="Explore Hopetoun and the northern Wimmera Mallee, including Lake Lascelles, Lascelles Silo Art, Rainbow, Beulah, local heritage and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Hopetoun Victoria, Hopetoun Mallee, Lake Lascelles, Lascelles Silo Art, Rainbow Victoria, Beulah Victoria, Hopetoun accommodation, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
-      background: #0E3557;
-      color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 0;
+      background: #0E3557;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      display: block;
+      width: auto;
+      height: 65px;
+    }
 
     nav a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover,
+    nav a:focus {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
-
-    @media (max-width:768px){
-      nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
-      }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
-      }
+    .menu-btn {
+      display: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      overflow: hidden;
+      background: #dddddd;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* ================= CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
-
-    p { line-height:1.6; color:#333; }
-
-    /* ================= PLACEHOLDERS ================= */
-    .video-placeholder,
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    h1 {
+      margin: 0 0 20px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    h2 {
+      margin-top: 55px;
+      margin-bottom: 20px;
+      color: #E87722;
+      text-align: center;
     }
 
-    /* ================= SHARED GRID ================= */
-    .accommodation-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+    h3 {
+      color: #0E3557;
     }
 
-    .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
+    p {
+      color: #333333;
+      line-height: 1.7;
     }
 
-    .accommodation-content {
-      padding:15px;
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      color: #444444;
+      text-align: center;
     }
 
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
+    /* ================= BUTTONS ================= */
+
+    .page-link {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: #0E3557;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
+    .page-link:hover,
+    .page-link:focus {
+      background: #E87722;
+      color: #ffffff;
+      transform: translateY(-1px);
     }
 
-    .accommodation-link:hover {
-      text-decoration:underline;
+    .button-row {
+      margin: 22px 0;
+      text-align: center;
     }
 
-    .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+    /* ================= DOCUMENTARY ================= */
+
+    .video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 350px;
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .attraction-item {
+      padding: 24px;
+      border-left: 5px solid #E87722;
+      border-radius: 12px;
+      background: #f8f9fa;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .attraction-item h3 {
+      margin: 0 0 10px;
+      color: #0E3557;
+    }
+
+    .attraction-item p {
+      margin: 0;
+      color: #4b4b4b;
+    }
+
+    /* ================= POI CARDS ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 28px;
+    }
+
+    .poi-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .poi-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+      padding: 20px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      margin: 5px 0 10px;
+      color: #0E3557;
+    }
+
+    .poi-content p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .accommodation-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 200px;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 12px;
+      background: #e1e1e1;
+      color: #666666;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      color: #0E3557;
+      text-align: center;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 25px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    }
+
+    .stay-details {
+      flex: 1;
+    }
+
+    .stay-details h4 {
+      margin: 0 0 5px;
+      color: #0E3557;
+      font-size: 1.05rem;
+    }
+
+    .stay-details p {
+      margin: 0;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .other-stay-item .page-link {
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      margin-top: 24px;
+      color: #777777;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* ================= FOOTER ================= */
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background: #0E3557;
+      color: #ffffff;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a {
+      margin: 0 6px;
+      color: #E87722;
+      font-weight: 500;
+      text-decoration: none;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer .footer-links a:focus {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – HOPETOUN ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer p a:hover,
+    footer p a:focus {
+      color: #ffffff;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    /* ================= RESPONSIVE ================= */
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    @media (max-width: 900px) {
+      .poi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 85px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0E3557;
+      }
 
-.poi-content p {
-  text-align: center;
-}
+      nav.active {
+        display: flex;
+      }
 
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+      nav a {
+        margin: 0;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
+      .menu-btn {
+        display: block;
+      }
 
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
 
-footer .footer-links a:hover {
-  color: #ffffff;
-}
+      .other-stay-item .page-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
 
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
 
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
+      .content {
+        margin-top: 30px;
+      }
 
-footer p a:hover {
-  color: #ffffff;
-}
+      .poi-grid {
+        grid-template-columns: 1fr;
+      }
 
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+      .video-placeholder {
+        min-height: 250px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span
+        class="menu-btn"
+        id="menu-btn"
+        role="button"
+        tabindex="0"
+        aria-label="Open navigation menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,228 +499,471 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuButton = document.getElementById('menu-btn');
+    const navigationMenu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/hopetoun.jpg"
-       alt="Hopetoun Victoria"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    function toggleNavigation() {
+      const isOpen = navigationMenu.classList.toggle('active');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    }
 
-<!-- MAIN CONTENT -->
-<section class="content">
+    menuButton.addEventListener('click', toggleNavigation);
 
-<h1>Hopetoun (VIC)</h1>
+    menuButton.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleNavigation();
+      }
+    });
+  </script>
 
-<p>
-Hopetoun is a small regional town in north-west Victoria’s Mallee region, known for its agricultural heritage, relaxed lifestyle, and proximity to some of the area’s most distinctive natural attractions. Located near Lake Lascelles and within reach of Lake Tyrrell, Hopetoun offers a classic Mallee experience shaped by farming and wide-open landscapes.
-</p>
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/hopetoun.jpg"
+      alt="Hopetoun in the Wimmera Mallee region of Victoria"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </section>
 
-<p>
-Established in the late 19th century, Hopetoun developed as a service centre for surrounding wheat and grain farming districts. The fertile yet challenging Mallee environment has long supported broadacre cropping, with agriculture remaining central to the town’s identity and economy.
-</p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="content">
 
-<p>
-Lake Lascelles is a defining feature of Hopetoun, providing a scenic setting for recreation, walking, and community activities. The lake’s calm waters and open surroundings create a peaceful contrast to the dry farmland that characterises the region.
-</p>
+      <h1>Hopetoun (VIC)</h1>
 
-<p>
-Hopetoun has also embraced regional tourism through public art and nearby natural attractions, with silo art and the nearby Lake Tyrrell drawing visitors to the area. These features highlight both the creativity and natural beauty found within the Mallee.
-</p>
-
-<p>
-The town centre offers essential services, accommodation, and local businesses, supporting residents and travellers exploring north-west Victoria. Its quiet streets and welcoming atmosphere reflect the slower pace of rural life.
-</p>
-
-<p>
-Surrounded by expansive plains, grain silos, and big skies, Hopetoun captures the essence of the Mallee — a region defined by resilience, agriculture, and natural beauty.
-</p>
-
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Hopetoun as part of our national filming journey — highlighting its Lake Lascelles setting, agricultural foundations, silo art presence, and the community spirit that continues to shape this Mallee town.
-</p>
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Hopetoun</h3>
-  <ul class="other-accommodation-list">
-    <li>Lake Corrong Homestead</li>
-    <li>Yurunga Homestead - Rainbow</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Hopetoun’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lascelles</h3>
       <p>
-      Lascelles is a small Mallee locality surrounded by grain farming country, reflecting the agricultural landscape that defines the region.
+        Hopetoun is a regional town in Victoria’s northern Wimmera Mallee,
+        situated beside Lake Lascelles and surrounded by broad grain-producing
+        farmland. Its location on the Henty Highway makes it an important
+        service centre for surrounding farms and smaller communities.
       </p>
-    </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lascelles Silo Art</h3>
       <p>
-      The Lascelles Silo Art features large-scale murals depicting local farming families, celebrating the people and stories behind the Mallee’s agricultural community.
+        The wider district forms part of Country traditionally connected with
+        Aboriginal peoples of north-western Victoria. Lakes, waterways,
+        wetlands and Mallee landscapes provided food, movement routes and
+        places of cultural importance long before European settlement and
+        agricultural development.
       </p>
-    </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Hopetoun Town Centre</h3>
       <p>
-      Hopetoun’s town centre provides essential services, local shops, and community spaces, supporting both residents and visitors in this rural setting.
+        Hopetoun was established during the expansion of farming and closer
+        settlement across the Mallee. Grain production became central to the
+        local economy, with railways, storage facilities and regional roads
+        helping farmers transport wheat and other crops to larger markets.
       </p>
-    </div>
-  </div>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Lascelles</h3>
       <p>
-      Lake Lascelles is a central recreational lake offering walking tracks, picnic areas, and a scenic setting for relaxation, forming a key feature of the town.
+        Agriculture remains fundamental to the town and surrounding district.
+        Large paddocks, grain silos and seasonal crop changes shape the
+        landscape. Local businesses provide supplies, maintenance, transport,
+        hospitality and other essential services to farming families and
+        visitors.
       </p>
-    </div>
-  </div>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Rainbow</h3>
       <p>
-      Rainbow is a nearby Mallee town known for its silo art, rural character, and role as a service centre for surrounding farming communities.
+        Lake Lascelles gives Hopetoun a distinctive recreational centre close
+        to town. Walking areas, picnic facilities and views across the water
+        provide a contrast with the surrounding dryland farms. Nearby Lake
+        Corrong also contributes to the local wetland environment.
       </p>
-    </div>
-  </div>
 
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Beulah</h3>
       <p>
-      Beulah is a small agricultural town in the Mallee region, reflecting the grain farming heritage and quiet rural lifestyle of north-west Victoria.
+        Hopetoun is well positioned for exploring smaller Mallee communities
+        such as Beulah, Lascelles and Rainbow. Historic homesteads, painted
+        silos, country hotels and community streetscapes reveal how these
+        settlements developed and adapted to the challenges of the region.
       </p>
-    </div>
-  </div>
-  </div>
 
-   <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Hopetoun</h2>
+      <p>
+        ShowcasingOz TV will explore Hopetoun’s agricultural foundations,
+        community businesses, lakeside setting and connections with the wider
+        Wimmera Mallee. Our coverage will connect the town with nearby
+        Lascelles, Rainbow and Beulah while highlighting the people sustaining
+        these regional communities.
+      </p>
 
-<p class="accommodation-intro">
-  Planning a stay in Hopetoun? Explore accommodation options in and around this Mallee town while discovering
-  Lake Lascelles, nearby silo art, and the agricultural landscapes that define north-west Victoria.
-</p>
+      <!-- DOCUMENTARY -->
+      <h2>🎥 Town Documentary</h2>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+      <div class="video-placeholder">
+        Hopetoun Documentary Coming Soon
+      </div>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun+VIC"
-     target="_blank"
-     class="accommodation-link">
-    View All Hopetoun Accommodation
-  </a>
-</p>
+      <!-- ATTRACTIONS -->
+      <h2>📍 Attractions In And Around Hopetoun</h2>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Hopetoun</h3>
+      <p class="section-intro">
+        Historic homesteads around Hopetoun and Rainbow preserve stories
+        connected with settlement, farming, family life and the development of
+        the northern Wimmera Mallee.
+      </p>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+      <div class="button-row">
+        <a href="../attraction-partners.html" class="page-link">
+          Explore attraction filming &amp; feature options
+        </a>
+      </div>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+      <div class="attractions-list">
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+        <article class="attraction-item">
+          <h3>Corrong Homestead</h3>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Hopetoun</h3>
-<div class="other-accommodation-bookings">
+          <p>
+            Corrong Homestead is a historic property near Hopetoun that
+            reflects the development of farming and domestic life in the
+            Mallee. The homestead and its surrounding environment help explain
+            how early residents established homes and agricultural properties
+            in a region shaped by distance, limited water and demanding
+            climatic conditions.
+          </p>
+        </article>
 
-  <div class="other-stay-item"><span>Eureka Hotel - Rainbow</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+        <article class="attraction-item">
+          <h3>Yurunga Homestead, Rainbow</h3>
 
-  <div class="other-stay-item"><span>Hopetoun Community Hotel Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+          <p>
+            Yurunga Homestead is a substantial historic residence in Rainbow.
+            Its period architecture, furnishings and grounds provide an
+            insight into the lives of a prominent local family and the
+            prosperity generated by commerce and agriculture during the
+            district’s development.
+          </p>
+        </article>
 
-  <div class="other-stay-item"><span>Hopetoun House Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+      </div>
 
-  <div class="other-stay-item"><span>Rainbow Motor Lodge Pot of Gold - Rainbow</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun+VIC" target="_blank" class="accommodation-link">View / Book</a></div>
+      <p class="accommodation-disclaimer">
+        Historic-property access and opening arrangements may be limited or
+        dependent on volunteers. Confirm current visitor information before
+        travelling. Inclusion does not imply a commercial partnership or
+        endorsement.
+      </p>
 
-</div>
-  
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
+      <!-- LANDMARKS AND POIS -->
+      <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
 
-</section>
+      <p class="section-intro">
+        Hopetoun and its surrounding communities contain lakes, painted silos,
+        agricultural streetscapes and small-town landmarks that reflect the
+        character of the northern Wimmera Mallee.
+      </p>
+
+      <div class="poi-grid">
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Beulah Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Beulah</h3>
+
+            <p>
+              Beulah is a small agricultural town southeast of Hopetoun beside
+              Yarriambiack Creek. Its streetscape, grain infrastructure and
+              community facilities reflect the importance of farming and local
+              cooperation throughout the Wimmera Mallee.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Hopetoun Town Centre Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Hopetoun Town Centre</h3>
+
+            <p>
+              Hopetoun Town Centre contains shops, hospitality businesses and
+              services supporting residents, farmers and travellers. Its broad
+              streets and country businesses reflect the town’s continuing
+              role as a regional service centre.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Lake Lascelles Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Lake Lascelles</h3>
+
+            <p>
+              Lake Lascelles is a recreational lake immediately beside
+              Hopetoun. Walking areas, picnic facilities and views across the
+              water make it an important community destination and provide a
+              green contrast with the surrounding Mallee farmland.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Lascelles Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Lascelles</h3>
+
+            <p>
+              Lascelles is a small grain-growing community north of Hopetoun.
+              Silos, railway infrastructure and surrounding broadacre farms
+              demonstrate the importance of grain production to the town and
+              the wider Mallee district.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Lascelles Silo Art Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Lascelles Silo Art</h3>
+
+            <p>
+              Lascelles Silo Art was created by artist Rone and portrays local
+              farming couple Geoff and Merrilyn Horman. The large-scale,
+              understated portraits recognise the family connections and
+              agricultural traditions that have sustained the district across
+              several generations.
+            </p>
+          </div>
+        </article>
+
+        <article class="poi-card">
+          <div class="poi-placeholder">
+            Rainbow Image Coming Soon
+          </div>
+
+          <div class="poi-content">
+            <h3>Rainbow</h3>
+
+            <p>
+              Rainbow is a historic Mallee town northwest of Hopetoun and an
+              important service centre for surrounding farms. Heritage
+              buildings, murals, local businesses and its position near the
+              southern Big Desert give the town a distinctive identity.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        Conditions on rural roads may change during periods of heavy rain,
+        extreme heat, harvest traffic or maintenance. Check local information
+        before travelling between smaller communities.
+      </p>
+
+      <!-- ACCOMMODATION -->
+      <h2>🏨 Stay Where We Showcase: Hopetoun</h2>
+
+      <p class="section-intro">
+        Planning a stay in Hopetoun? Search accommodation in Hopetoun and
+        nearby Rainbow while exploring Lake Lascelles, Mallee heritage,
+        painted silos and the surrounding agricultural communities.
+      </p>
+
+      <p class="section-intro">
+        ShowcasingOz TV is designed to do more than help travellers find
+        somewhere to stay. We help viewers discover where to go, what to
+        experience and which regional businesses can support their journey.
+      </p>
+
+      <div class="button-row">
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun%252C%2520Victoria%252C%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="page-link"
+        >
+          View Hopetoun Accommodation
+        </a>
+      </div>
+
+      <h3 class="other-accommodation-heading">
+        Featured Accommodation Opportunities In And Around Hopetoun
+      </h3>
+
+      <p class="section-intro">
+        Accommodation partners featured on ShowcasingOz TV receive exposure
+        through professionally produced video, photography and
+        destination-led storytelling that places their property in front of
+        travellers actively planning where to stay.
+      </p>
+
+      <div class="button-row">
+        <a href="../accommodation-partners.html" class="page-link">
+          Explore accommodation filming &amp; feature options
+        </a>
+      </div>
+
+      <div class="accommodation-placeholder">
+        Featured Hopetoun Accommodation Coming Soon
+      </div>
+
+      <h3 class="other-accommodation-heading">
+        Other Accommodation In And Around Hopetoun
+      </h3>
+
+      <div class="other-accommodation-bookings">
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Eureka Hotel, Rainbow</h4>
+
+            <p>
+              Traditional country-hotel accommodation with meals and
+              hospitality facilities in central Rainbow.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEureka%2520Hotel%252C%2520Rainbow%252C%2520Victoria"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Hopetoun Caravan Park</h4>
+
+            <p>
+              Caravan park near Lake Lascelles and Lake Corrong offering
+              cabins, powered sites and visitor amenities.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun%2520Caravan%2520Park%252C%2520Hopetoun%252C%2520Victoria"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Hopetoun Community Hotel Motel</h4>
+
+            <p>
+              Community-owned hotel-motel offering renovated rooms, family
+              accommodation, meals and hospitality facilities in central
+              Hopetoun.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHopetoun%2520Community%2520Hotel%2520Motel%252C%2520Hopetoun%252C%2520Victoria"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Rainbow Motor Lodge Pot of Gold</h4>
+
+            <p>
+              Independent motor-lodge accommodation offering motel rooms and
+              family units in Rainbow.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRainbow%2520Motor%2520Lodge%2520Pot%2520of%2520Gold%252C%2520Rainbow%252C%2520Victoria"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Royal Hotel Rainbow</h4>
+
+            <p>
+              Country-hotel accommodation and hospitality facilities in
+              central Rainbow.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRoyal%2520Hotel%2520Rainbow%252C%2520Victoria"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+        <div class="other-stay-item">
+          <div class="stay-details">
+            <h4>Sir Robert Menzies Caravan Park, Rainbow</h4>
+
+            <p>
+              Caravan park in Rainbow offering sites and regional visitor
+              accommodation facilities.
+            </p>
+          </div>
+
+          <a
+            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSir%2520Robert%2520Menzies%2520Caravan%2520Park%252C%2520Rainbow%252C%2520Victoria"
+            target="_blank"
+            rel="noopener sponsored"
+            class="page-link"
+          >
+            View / Book
+          </a>
+        </div>
+
+      </div>
+
+      <p class="accommodation-disclaimer">
+        This accommodation list is provided for visitor awareness only.
+        Inclusion does not imply a partnership, recommendation or endorsement
+        by ShowcasingOz TV. Availability, ownership and operating arrangements
+        may change, so travellers should confirm current details before
+        booking. Some links on this page are affiliate links, which means
+        ShowcasingOz TV may earn a small commission if you complete a
+        qualifying booking, at no additional cost to you.
+      </p>
+
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -621,10 +978,21 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and experienc
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+
+      <br>
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
