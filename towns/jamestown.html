@@ -4,336 +4,383 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Jamestown (SA) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Jamestown, SA — a historic agricultural town in the Northern Flinders Ranges, known for its rich farming heritage, railway history, and role as a regional service centre." />
-<meta name="keywords" content="Jamestown SA, Jamestown South Australia, Northern Flinders Ranges town, Jamestown agriculture, Jamestown heritage, Jamestown attractions, Jamestown accommodation, regional South Australia towns, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Jamestown in South Australia's Mid North, including its agricultural history, railway heritage, local attractions, landmarks and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Jamestown SA, Jamestown South Australia, Southern Flinders Ranges, Mid North South Australia, Jamestown attractions, Jamestown accommodation, RM Williams Centre, Bundaleer Forest, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
+    /* ================= MAIN CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* ================= SHARED LINKS AND GRIDS ================= */
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-/* ================= CENTER ALIGN – JAMESTOWN ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -342,10 +389,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -357,250 +414,448 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/jamestown.jpg"
-       alt="Jamestown South Australia"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/jamestown.jpg"
+      alt="Jamestown in South Australia's Mid North"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Jamestown (SA)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Jamestown is a historic agricultural town in South Australia, located in the Northern Flinders Ranges and serving as an important regional service centre for surrounding farming communities. Positioned between the Clare Valley and the Flinders Ranges, Jamestown has long supported broadacre cropping, grazing, and rural life across the district.
-</p>
+    <h1>Jamestown (SA)</h1>
 
-<p>
-Established in the late 19th century, Jamestown developed alongside the expansion of farming and the arrival of the railway, which played a key role in transporting grain, livestock, and supplies. The town’s growth reflects South Australia’s agricultural settlement patterns, with wheat, barley, sheep, and cattle forming the backbone of the local economy.
-</p>
+    <p>
+      Jamestown is a historic agricultural town in South Australia’s Mid North,
+      positioned between the productive farming districts of the Clare Valley
+      and the landscapes of the Southern Flinders Ranges. The town serves as an
+      important commercial and community centre for surrounding farms and
+      smaller settlements.
+    </p>
 
-<p>
-Jamestown is closely connected to South Australia’s railway heritage, with historic rail infrastructure and sites that highlight the importance of rail transport in opening up inland regions. These links helped transform Jamestown into a regional hub, supporting both local producers and travelling merchants during the height of rural expansion.
-</p>
+    <p>
+      Established during the expansion of European settlement through inland
+      South Australia, Jamestown developed around agriculture, transport and
+      regional trade. Wheat, barley, livestock and other rural industries have
+      played an enduring role in the district’s economy and continue to shape
+      the appearance and identity of the surrounding countryside.
+    </p>
 
-<p>
-Today, Jamestown offers a range of visitor facilities, local businesses, and community services that reflect its role as a modern rural centre. Heritage buildings, museums, parks, and local attractions provide insight into the town’s past, while cafés, accommodation options, and events showcase its welcoming country-town atmosphere.
-</p>
+    <p>
+      The arrival of the railway helped Jamestown become an important collection
+      and distribution point for agricultural produce. Historic railway
+      infrastructure, museum collections and surviving buildings preserve the
+      story of how rail transport connected local producers with markets and
+      supported the development of the wider Mid North.
+    </p>
 
-<p>
-Surrounded by rolling farmland, low hills, and classic South Australian rural landscapes, Jamestown embodies the character of the Northern Flinders region. The town balances agricultural tradition with community pride, offering visitors an authentic experience of regional life away from the coast and capital cities.
-</p>
+    <p>
+      Jamestown is also closely associated with Reginald Murray Williams, whose
+      experiences in rural Australia contributed to the development of the
+      R.M. Williams clothing and footwear business. The town commemorates this
+      connection through exhibitions and local stories celebrating his life,
+      work and influence on Australian bush culture.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Jamestown as part of our national filming journey — highlighting its agricultural heritage, railway history, and the strong regional community spirit that continues to make Jamestown a vital and welcoming country town.
-</p>
+    <p>
+      The town centre contains historic buildings, locally operated shops,
+      hotels, cafés and community facilities. Public artworks, museums, walking
+      routes and landscaped open spaces make it possible to explore much of
+      Jamestown’s history while moving through the town on foot.
+    </p>
 
+    <p>
+      Beyond the township, Bundaleer Forest introduces visitors to one of South
+      Australia’s historically important forestry areas. Lookouts, rural roads,
+      creek environments and nearby communities provide further perspectives
+      on the landscapes and industries that define this part of the state.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      ShowcasingOz TV will capture the people, businesses, history and visitor
+      experiences that give Jamestown its distinctive character. Our coverage
+      will highlight the town’s agricultural foundations, railway heritage,
+      connection with R.M. Williams and continuing importance to communities
+      throughout the Mid North.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Jamestown Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Jamestown</h3>
-  <ul class="other-accommodation-list">
-    <li>Gladstone Gaol - Gladstone</li>
-    <li>Belalie Art Gallery</li>
-    <li>Penn Cottage Museum of Pressed Glass</li>
-    <li>Jamestown National Trust Railway Station Museum</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="accommodation-intro">
+      Jamestown’s attractions explore local art, railway history, agricultural
+      life, regional heritage and the people whose stories have become part of
+      the wider Australian identity.
+    </p>
 
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Jamestown and the surrounding region's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <ul class="attractions-list">
 
-<div class="poi-grid">
+      <li>
+        <strong>Belalie Art Gallery</strong>
+        A community gallery presenting exhibitions by local and visiting
+        artists, providing a creative space for visual art and cultural
+        expression in the heart of Jamestown.
+      </li>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mariette's Lookout</h3>
-      <p>Mariette’s Lookout offers elevated views across Jamestown and the surrounding agricultural landscape. The lookout provides a clear sense of the town’s setting within South Australia’s Mid North and is a popular spot to take in wide rural vistas and changing light.
-</p>
+      <li>
+        <strong>Gladstone Gaol</strong>
+        A substantial heritage complex in nearby Gladstone that served several
+        institutional purposes during its operating history and now provides
+        visitors with an insight into South Australia’s correctional and social
+        history.
+      </li>
+
+      <li>
+        <strong>Jamestown National Trust Railway Station Museum</strong>
+        A local history museum housed within Jamestown’s former railway station,
+        preserving railway objects, photographs and displays connected with the
+        development of the town and surrounding district.
+      </li>
+
+      <li>
+        <strong>Penn Cottage Museum of Pressed Glass</strong>
+        A specialised museum displaying an extensive collection of pressed
+        glass in a historic cottage setting, alongside objects that offer an
+        insight into domestic and decorative history.
+      </li>
+
+      <li>
+        <strong>R.M. Williams Centre</strong>
+        A visitor centre exploring the life and legacy of Reginald Murray
+        Williams, his connection with the district and the development of one
+        of Australia’s best-known rural clothing and footwear brands.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Opening hours and visitor access may
+      change, so checking directly with each attraction before travelling is
+      recommended.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Jamestown and the surrounding district contain historic townships,
+      commemorative walks, public artworks, forest landscapes and elevated
+      viewpoints that help tell the broader story of South Australia’s
+      Mid North.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bundaleer Forest Reserve Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bundaleer Forest Reserve</h3>
+
+          <p>
+            A historically significant forestry area near Jamestown containing
+            walking routes, picnic areas and a mixture of planted forest and
+            native vegetation within the Southern Flinders landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Dead Man’s Hill Signboard Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Dead Man’s Hill Signboard</h3>
+
+          <p>
+            An interpretive roadside marker associated with local history and
+            folklore, preserving one of the stories connected with early travel
+            and settlement in the Jamestown district.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Diggers’ Walk Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Diggers’ Walk</h3>
+
+          <p>
+            A commemorative walking route honouring local servicemen and women
+            while providing a reflective journey through part of Jamestown’s
+            landscaped town environment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Gladstone Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Gladstone</h3>
+
+          <p>
+            A nearby Mid North service town with strong links to agriculture,
+            rail transport and regional history, including a substantial
+            collection of heritage buildings and former railway infrastructure.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Jamestown Mural Walk Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Jamestown Mural Walk</h3>
+
+          <p>
+            A collection of public artworks depicting local identities,
+            industries and historical stories, allowing visitors to explore
+            Jamestown’s heritage while walking through the town.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mariette’s Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mariette’s Lookout</h3>
+
+          <p>
+            An elevated viewpoint overlooking Jamestown and the surrounding
+            agricultural country, offering a broad perspective across the
+            town, farms and low hills of the Mid North.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Laura Lookout</h3>
-      <p>Laura Lookout provides panoramic views over the town of Laura and the surrounding ranges. The lookout highlights the transition between farmland and the rising terrain of the Southern Flinders Ranges, making it a rewarding stop for visitors travelling through the region.
-</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Jamestown</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Jamestown? The town and its immediate surrounding
+      district provide hotel and motel rooms, bed-and-breakfast accommodation,
+      self-contained motel terraces, cabins, villas and caravan park
+      accommodation.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves as they explore Australia’s cities, towns and hidden
+      gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DJamestown%252C%2520South%2520Australia%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Jamestown Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Jamestown
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Jamestown Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Laura</h3>
-      <p>Laura is a historic rural town in South Australia’s Mid North, known for its agricultural roots and close connection to the Southern Flinders Ranges. It serves as a gateway to nearby forests and walking trails and retains a strong country-town character.
-</p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Jamestown
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Belalie Wines B&amp;B</span>
+          <small>Bed &amp; Breakfast · Caltowie district · Approximately 5 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBelalie%2520Wines%2520B%2526B%252C%2520Jamestown%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Caltowie Hotel B&amp;B</span>
+          <small>Hotel and Bed &amp; Breakfast · Caltowie · Approximately 13 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCaltowie%2520Hotel%2520B%2526B%252C%2520Caltowie%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Commercial Hotel Motel Jamestown</span>
+          <small>Hotel and Motel · Jamestown</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCommercial%2520Hotel%2520Motel%2520Jamestown%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Jamestown Motel Terraces</span>
+          <small>Motel-style Terraces · Jamestown</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DJamestown%2520Motel%2520Terraces%252C%2520Jamestown%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Railway Hotel Motel Jamestown</span>
+          <small>Hotel and Motel · Jamestown</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRailway%2520Hotel%2520Motel%2520Jamestown%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Park Jamestown</span>
+          <small>Caravan Park, Cabins and Villas · Jamestown</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Park%2520Jamestown%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Gladstone</h3>
-      <p>Gladstone is a regional service town with a long history tied to farming and rail transport. Positioned at a key junction in the Mid North, it remains an important hub for surrounding agricultural communities and travellers moving through the region.
-</p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com search
+      results, and individual property availability may vary. Some links on
+      this page are affiliate links, which means we may earn a small commission
+      if you make a booking, at no extra cost to you.
+    </p>
 
-         <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>RM Williams Centre</h3>
-      <p>The RM Williams Centre celebrates the life and legacy of Australian bushman and entrepreneur Reginald Murray Williams. The centre explores his connection to the region and his influence on Australian rural culture, craftsmanship, and iconic bushwear.
-</p>
-    </div>
-  </div>
-
-         <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Jamestown Mural Walk</h3>
-      <p>The Jamestown Mural Walk features a series of outdoor artworks that depict local history, industry, and community stories. The walk offers an engaging way to explore the town while learning about its past through public art.
-</p>
-    </div>
-  </div>
-
-         <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Digger’s Walk</h3>
-      <p>Digger’s Walk is a commemorative walking trail honouring local servicemen and women. The walk reflects the community’s respect for military service and provides a quiet space for reflection within the town setting.
-</p>
-    </div>
-  </div>
-
-         <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Bundaleer Forest Reserve</h3>
-      <p>Bundaleer Forest Reserve is one of South Australia’s oldest planted forests and a significant environmental and recreational area near Jamestown. The reserve offers walking trails, picnic areas, and insight into early forestry practices in the region.
-</p>
-    </div>
-  </div>
-
-         <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dead Man’s Hill Signboard</h3>
-      <p>The Dead Man’s Hill Signboard marks a site associated with local folklore and early settlement history. It reflects the hardships and stories of those who lived and worked in the district during the region’s pioneering years.
-</p>
-    </div>
-  </div>
-
-         <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Yunta</h3>
-      <p>Yunta is a small settlement northeast of Jamestown that developed as a rail and service point for pastoral activity. Today, it represents the quiet resilience of South Australia’s inland communities and the legacy of rail-based settlement.
-</p>
-    </div>
-  </div>
-
-           <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Big Dice</h3>
-      <p>The Big Dice is a roadside attraction located on the Barrier Highway near Yunta, on the route between South Australia and Broken Hill. A popular photo stop for travellers, it symbolises the long-distance outback journey and the quirky landmarks that break up the drive across Australia’s vast inland landscapes.
-</p>
-    </div>
-  </div>
-</div>
-
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in And Around Jamestown</h2>
-
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Jamestown</h3>
-  <ul class="other-accommodation-list">
-    <li>North Laura Hotel - Laura</li>
-    <li>Stone Hut Cottages - Stone Hut</li>
-    <li>Laura (SA) Community Caravan Park - Laura</li>
-    <li>Gladstone Caravan Park - Gladstone</li>
-    <li>Belalie Wines</li>
-    <li>The Park Jamestown - Spalding Villas</li>
-    <li>The Commercial Hotel Motel</li>
-    <li>The Park Jamestown</li>
-    <li>Railway Hotel-Motel Jamestown</li>
-    <li>Jamestown Hotel</li>
-    <li>Cockburn House</li>
-    <li>North Bundaleer</li>
-    <li>Hornsdale Farm Stay</li>
-    <li>Mannanarie Manor</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -615,10 +870,19 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and experienc
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
