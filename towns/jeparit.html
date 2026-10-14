@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Jeparit in Victoria’s Wimmera region with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Jeparit in Victoria's Wimmera Mallee, including the Wimmera Mallee Pioneer Museum, Lake Hindmarsh East Beach, Jeparit Town Centre and local accommodation."
   >
 
   <meta
     name="keywords"
-    content="Jeparit VIC, Jeparit Wimmera, Wimmera River, Sir Robert Menzies, Jeparit attractions, Jeparit accommodation, regional Victoria travel, ShowcasingOz TV"
+    content="Jeparit VIC, Jeparit Victoria, Lake Hindmarsh, Wimmera Mallee Pioneer Museum, Jeparit attractions, Jeparit accommodation, Wimmera Mallee, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -45,11 +49,13 @@
       color: #0E3557;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -107,15 +113,19 @@
 
       nav a {
         padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
+
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
+
+    /* ================= MAIN CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -139,25 +149,7 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
+    /* ================= PLACEHOLDERS ================= */
 
     .video-placeholder,
     .accommodation-placeholder,
@@ -188,6 +180,8 @@
       font-size: 1.1rem;
     }
 
+    /* ================= SHARED LINKS AND GRIDS ================= */
+
     .accommodation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -198,7 +192,7 @@
     .accommodation-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
     }
 
@@ -219,6 +213,136 @@
     .accommodation-link:hover {
       text-decoration: underline;
     }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -307,7 +431,7 @@
   <section class="hero">
     <img
       src="../images/towns/jeparit.jpg"
-      alt="Jeparit Victoria"
+      alt="Jeparit in Victoria's Wimmera Mallee"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,34 +446,57 @@
     <h1>Jeparit (VIC)</h1>
 
     <p>
-      Jeparit is a small regional town in Victoria’s Wimmera, situated
-      beside the Wimmera River and surrounded by broad agricultural
-      landscapes. Its history, riverside setting and close-knit community
-      reflect the character of north-western Victoria.
+      Jeparit is a small rural town in western Victoria, positioned beside the
+      Wimmera River near the southern edge of Lake Hindmarsh. The town sits
+      between the Wimmera and Southern Mallee landscapes, where broadacre
+      agriculture, waterways and expansive skies contribute to a distinctive
+      regional setting.
     </p>
 
     <p>
-      The town is also known as the birthplace of Sir Robert Menzies,
-      Australia’s longest-serving prime minister. Jeparit’s local heritage,
-      nearby waterways and position within the Wimmera provide visitors
-      with a quiet country destination shaped by farming, history and the
-      natural environment.
+      The Wimmera River flows through Jeparit before reaching Lake Hindmarsh,
+      creating an important environmental and recreational corridor. Riverfront
+      areas, walking routes and nearby lake environments connect the town with
+      a water system that has sustained people, wildlife and agricultural
+      communities for generations.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Jeparit stands on Wotjobaluk Country, and the Wimmera River and Lake
+      Hindmarsh hold continuing cultural importance for Traditional Owners.
+      These waterways form part of a much older cultural landscape containing
+      stories, travel routes, resources and places of significance.
+    </p>
 
-      <h2>🚧 Our Complete Jeparit Guide Is Coming Soon</h2>
+    <p>
+      European pastoral settlement and broadacre farming later influenced the
+      development of Jeparit. Wheat growing, grazing and livestock production
+      became central to the district’s economy, supported by transport,
+      machinery and local businesses serving farms throughout the surrounding
+      Wimmera Mallee.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Jeparit. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        the town and the surrounding Wimmera region.
-      </p>
+    <p>
+      The town is also recognised as the birthplace of Sir Robert Menzies,
+      Australia’s longest-serving prime minister. Jeparit commemorates this
+      connection through local displays and public spaces, adding a nationally
+      significant political story to the town’s rural history.
+    </p>
 
-    </div>
+    <p>
+      Jeparit’s heritage can be explored through its town centre and the
+      Wimmera Mallee Pioneer Museum, while Lake Hindmarsh provides a powerful
+      example of the region’s naturally variable waterways. The appearance of
+      the lake changes considerably according to rainfall and inflows, creating
+      very different experiences across wet and dry periods.
+    </p>
+
+    <p>
+      ShowcasingOz TV will capture the history, landscapes, businesses and
+      community stories that define Jeparit. Our coverage will highlight the
+      town’s agricultural heritage, its relationship with the Wimmera River and
+      Lake Hindmarsh, and its place within Victoria’s wider Wimmera Mallee.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -362,8 +509,9 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Jeparit’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Jeparit’s principal visitor attraction preserves an extensive collection
+      connected with pioneering life, farming, transport and community
+      development throughout the Wimmera Mallee.
     </p>
 
     <p style="text-align:center;">
@@ -375,72 +523,112 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Jeparit Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Wimmera Mallee Pioneer Museum</strong>
+        One of the region’s most substantial collections of pioneering history,
+        featuring agricultural machinery, horse-drawn vehicles, historic
+        buildings and displays illustrating everyday life in the Wimmera Mallee.
+        The museum grounds include relocated structures such as a homestead,
+        church, school, hall, blacksmith shop, chemist and gaol.
+      </li>
 
-      </div>
-    </div>
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Opening hours and visitor access may
+      change, so checking directly with the attraction before travelling is
+      recommended.
+    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Jeparit’s riverside areas, heritage landmarks and other points of
-      interest will be documented and added to this page following
-      our visit.
+      Jeparit’s town centre and nearby Lake Hindmarsh reveal the close
+      relationship between the local community, the district’s agricultural
+      history and the naturally variable waterways of western Victoria.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Jeparit Points of Interest Coming Soon
+          Jeparit Town Centre Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Jeparit Town Centre</h3>
+
+          <p>
+            The centre of Jeparit contains local businesses, community
+            facilities and public spaces connected with the town’s rural
+            history. It also reflects Jeparit’s association with Sir Robert
+            Menzies and its longstanding role in supporting surrounding farming
+            communities.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lake Hindmarsh East Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lake Hindmarsh East Beach</h3>
+
+          <p>
+            A lakeside location on the eastern side of Lake Hindmarsh offering
+            broad views across one of Victoria’s largest natural freshwater
+            lake systems. Water levels vary significantly, so the landscape can
+            range from open water and shoreline habitat to a vast exposed lake
+            bed during extended dry periods.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Jeparit</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Jeparit? Explore available accommodation in
-      and around the town while we continue developing our complete
-      Jeparit destination guide.
+      Jeparit has a limited local accommodation market. Its principal visitor
+      accommodation is a riverside holiday park offering modern cabins and
+      caravan facilities within the town, close to the Wimmera River and local
+      services.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves as they explore Australia’s cities, towns and hidden
+      gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Jeparit%2C+Victoria%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DJeparit%252C%2520Victoria%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Jeparit Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Jeparit
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -461,6 +649,40 @@
 
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Jeparit
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Jeparit Riverview Holiday Park</span>
+          <small>Holiday and Caravan Park with Cabins · Jeparit</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DJeparit%2520Riverview%2520Holiday%2520Park%252C%2520Jeparit%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes eligible accommodation located in Jeparit and does not
+      include properties that are closer to Warracknabeal, Dimboola or
+      Hopetoun. Inclusion does not imply partnership or endorsement. Booking
+      buttons open Booking.com search results, and individual property
+      availability may vary. Some links on this page are affiliate links, which
+      means we may earn a small commission if you make a booking, at no extra
+      cost to you.
+    </p>
 
   </section>
 
@@ -487,8 +709,8 @@
       </a><br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
       </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
