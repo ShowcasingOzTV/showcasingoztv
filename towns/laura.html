@@ -4,336 +4,383 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Laura (SA) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Laura, South Australia – a historic Flinders Ranges town and gateway to Mount Remarkable National Park, heritage rail history, scenic gorges, and outback landscapes." />
-<meta name="keywords" content="Laura SA, Laura South Australia, Flinders Ranges town, Mount Remarkable National Park, Laura railway history, Warren Gorge, Stone Hut, Horrocks Pass, regional South Australia, outback towns SA, heritage rail SA, Flinders Ranges tourism" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Laura in South Australia's Southern Flinders Ranges, including Gladstone Gaol, Laura Lookout, Wirrabara Silo Art and accommodation in and around Laura."
+  >
+
+  <meta
+    name="keywords"
+    content="Laura SA, Laura South Australia, Southern Flinders Ranges, Gladstone Gaol, Laura Lookout, Wirrabara Silo Art, Laura accommodation, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
+    /* ================= MAIN CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* ================= SHARED LINKS AND GRIDS ================= */
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.poi-content {
-  padding: 15px;
-}
-
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
-
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-/* ================= CENTER ALIGN – LAURA ================= */
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-.other-accommodation-list li {
-  text-align: center;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  text-align: center;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  text-align: center;
-}
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -342,10 +389,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -357,199 +414,375 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/laura.jpg"
-       alt="Laura South Australia"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/laura.jpg"
+      alt="Laura in South Australia's Southern Flinders Ranges"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Laura (SA)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>Laura is a historic town located at the southern gateway to South Australia’s Flinders Ranges, positioned along the Horrocks Highway approximately 230 kilometres north of Adelaide. Established in the late 19th century, Laura developed as an important service and railway town supporting surrounding pastoral districts and agricultural communities.</p>
+    <h1>Laura (SA)</h1>
 
-<p>The town is closely associated with South Australia’s rail heritage, having once been a key junction on the narrow-gauge railway network that connected the Flinders Ranges to Port Augusta and beyond. Today, this history is preserved through local heritage features and interpretive signage that reflect Laura’s role in opening up the region.</p>
+    <p>
+      Laura is a historic rural town in South Australia’s Mid North and is
+      commonly described as part of the Southern Flinders Ranges. Positioned
+      beside the Rocky River on the Horrocks Highway, the town is surrounded by
+      grain-growing country, low ranges, small farming communities and historic
+      settlements.
+    </p>
 
-<p>Laura is best known as a base for exploring Mount Remarkable National Park, which lies just to the east of the township. The park offers dramatic gorges, rugged mountain landscapes, native wildlife, and well-marked walking trails, including access to the popular Warren Gorge, renowned for its scenic beauty and yellow-footed rock-wallaby sightings.</p>
+    <p>
+      The township was surveyed during the nineteenth century and developed as
+      agriculture expanded through the district. Farming, local trade and
+      transport shaped Laura’s early growth, while its position between
+      Gladstone, Stone Hut and the ranges made it an important service point for
+      surrounding properties.
+    </p>
 
-<p>The surrounding countryside reflects the transition between agricultural land and true outback landscapes, a contrast that shaped early settlement patterns defined by Goyder’s Line. Visitors to Laura gain insight into the challenges faced by early settlers attempting to farm the region’s variable climate.</p>
+    <p>
+      Railway development strengthened Laura’s connection with other Mid North
+      communities. The former line linked Gladstone with Laura before being
+      extended farther north, allowing agricultural produce, supplies and
+      passengers to move through the district more efficiently.
+    </p>
 
-<p>Today, Laura offers a quiet, authentic country-town atmosphere with historic buildings, local accommodation, and easy access to some of the southern Flinders Ranges’ most striking natural and cultural attractions. It remains a rewarding stop for travellers seeking history, scenery, and a deeper connection to regional South Australia.</p>
+    <p>
+      Laura retains a traditional country-town centre with historic buildings,
+      local shops, eateries, community facilities and shaded public spaces.
+      Visitors can explore the town on foot, learn about local stories through
+      heritage material and follow cycling or walking routes into the
+      surrounding countryside.
+    </p>
 
+    <p>
+      The town is also associated with poet and journalist C.J. Dennis, who
+      spent part of his childhood in Laura. His connection with the town is
+      recognised through local displays, public artwork and community
+      celebrations that preserve an important part of Laura’s cultural story.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Nearby destinations include the heritage and correctional history of
+      Gladstone, the small settlement of Stone Hut and the forestry and
+      agricultural landscapes around Wirrabara. These places are more naturally
+      connected with Laura than with the larger centres farther north.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will capture the people, heritage, businesses and
+      landscapes that give Laura its identity. Our coverage will highlight the
+      town’s agricultural foundations, railway history, literary connections
+      and role as a welcoming base in the Southern Flinders Ranges.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Laura Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions in Laura</h3>
-  <ul class="other-accommodation-list">
-    <li>Jacka Brothers Brewery - Melrose</li>
-    <li>Gladstone Gaol</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="accommodation-intro">
+      Laura provides access to one of the Mid North’s most substantial heritage
+      complexes, preserving important stories connected with policing,
+      corrections and institutional history in nearby Gladstone.
+    </p>
 
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Laura’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <ul class="attractions-list">
 
-<div class="poi-grid">
+      <li>
+        <strong>Gladstone Gaol</strong>
+        A substantial heritage complex in nearby Gladstone that operated in
+        several institutional roles during its history. Its surviving
+        cellblocks, yards, buildings and displays provide an insight into South
+        Australia’s correctional and social history.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Wilbur's Watch</h3>
-      <p>A roadside lookout offering elevated views across the surrounding countryside and ranges, Wilbur’s Watch provides a quiet stop for travellers to take in the landscape and appreciate the region’s natural setting.
-      </p>
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Opening hours and visitor access may
+      change, so checking directly with the attraction before travelling is
+      recommended.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Laura’s townscape, surrounding viewpoints and nearby public artworks
+      reveal the region’s agricultural character, settlement history and
+      strong sense of community identity.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Laura Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Laura Lookout</h3>
+
+          <p>
+            An elevated viewpoint overlooking Laura and the surrounding
+            agricultural landscape, providing a clear perspective of the
+            town’s position between the Mid North plains and the Southern
+            Flinders Ranges.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Laura Township Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Laura Township</h3>
+
+          <p>
+            A historic country township centred around Herbert Street, with
+            local businesses, heritage buildings, public spaces and community
+            landmarks reflecting Laura’s agricultural, railway and cultural
+            history.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Wirrabara Silo Art Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Wirrabara Silo Art</h3>
+
+          <p>
+            A large-scale public artwork transforming local grain silos into a
+            visual landmark celebrating the wildlife, forestry history and
+            community identity of the Wirrabara district.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Doughboy Reserve</h3>
-      <p>A local reserve featuring natural bushland and open space, Doughboy Reserve is valued for short walks, picnicking, and its peaceful rural atmosphere near the township.
-      </p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Laura</h2>
+
+    <p class="accommodation-intro">
+      Accommodation in and around Laura includes hotel rooms, bed-and-breakfast
+      stays, commercial cottage accommodation and caravan parks with cabins.
+      The properties below are located in Laura or nearby communities that are
+      more closely connected with Laura than Jamestown or Melrose.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves as they explore Australia’s cities, towns and hidden
+      gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLaura%252C%2520South%2520Australia%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Laura Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Laura
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Laura Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Wirrabara Silo Art</h3>
-      <p>A striking public art installation transforming grain silos into large-scale murals celebrating local history, forestry, and community life, making Wirrabara a popular stop on South Australia’s silo art trail.
-      </p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Laura
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Fleur de Lis Bed &amp; Breakfast</span>
+          <small>Bed &amp; Breakfast · Laura</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DFleur%2520de%2520Lis%2520Bed%2520and%2520Breakfast%252C%2520Laura%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Gladstone Caravan Park</span>
+          <small>Caravan Park, Cabins and Units · Gladstone · Approximately 12 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGladstone%2520Caravan%2520Park%252C%2520Gladstone%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Laura Community Caravan Park</span>
+          <small>Caravan Park and Ensuite Cabins · Laura</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLaura%2520Community%2520Caravan%2520Park%252C%2520Laura%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>North Laura Hotel</span>
+          <small>Hotel and Motel-style Units · Laura</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNorth%2520Laura%2520Hotel%252C%2520Laura%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Stone Hut Cottages</span>
+          <small>Commercial Cottage Accommodation · Stone Hut · Approximately 9 km</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStone%2520Hut%2520Cottages%252C%2520Stone%2520Hut%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Taralee Orchards B&amp;B</span>
+          <small>Bed &amp; Breakfast Cottages · Wirrabara Forest district</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTaralee%2520Orchards%2520Bed%2520and%2520Breakfast%252C%2520Wirrabara%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Bundaleer Forest Reserve</h3>
-      <p>Australia’s first planted forest reserve, Bundaleer Forest features historic pine plantings, walking tracks, picnic areas, and strong links to South Australia’s forestry heritage.
-      </p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list includes eligible hotels, bed-and-breakfast businesses,
+      commercial cottage operators and caravan parks with bookable
+      accommodation in Laura and its surrounding district. Private holiday
+      houses, standalone Airbnb properties and campgrounds without qualifying
+      accommodation have not been included. Inclusion does not imply
+      partnership or endorsement. Booking buttons open Booking.com search
+      results, and individual property availability may vary. Some links on
+      this page are affiliate links, which means we may earn a small commission
+      if you make a booking, at no extra cost to you.
+    </p>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mariette's Lookout</h3>
-      <p>A scenic lookout offering panoramic views over the surrounding ranges and valleys, Mariette’s Lookout is a popular spot for photography and quiet reflection.
-      </p>
-    </div>
-  </div>
-
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Dead Man’s Hill Signboard</h3>
-      <p>A historic signboard marking a local landmark with a sombre name, offering insight into early settler history and the stories that shaped the region.
-      </p>
-    </div>
-  </div>
-
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Laura Township</h3>
-      <p>A historic Flinders Ranges town known for its railway heritage, quiet country atmosphere, and proximity to Mount Remarkable National Park, serving as a gateway to nearby natural attractions.
-      </p>
-    </div>
-  </div>
-
-          <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Laura Lookout</h3>
-      <p>An elevated viewpoint overlooking the township of Laura and the surrounding plains, providing a clear perspective of the town’s setting at the edge of the Flinders Ranges.
-      </p>
-    </div>
-  </div>
-
-</div>
-
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in Laura</h2>
-
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Accommodation in Laura</h3>
-  <ul class="other-accommodation-list">
-    <li>Stone Hut Cottages - Stone Hut</li>
-    <li>North Laura Hotel</li>
-    <li>Laura (SA) Community Caravan Park</li>
-    <li>Taralee Orchards</li>
-    <li>Gladstone Caravan Park</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -564,10 +797,19 @@ footer .gst-disclaimer {
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
