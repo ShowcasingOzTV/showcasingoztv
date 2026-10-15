@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Kingscote on Kangaroo Island with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Kingscote on Kangaroo Island, including local galleries, museums, breweries, wineries, historic Reeves Point, Emu Bay and accommodation in and around Kingscote."
   >
 
   <meta
     name="keywords"
-    content="Kingscote SA, Kingscote Kangaroo Island, Nepean Bay, Kingscote attractions, Kingscote accommodation, South Australia travel, ShowcasingOz TV"
+    content="Kingscote SA, Kingscote Kangaroo Island, Kingscote attractions, Kingscote accommodation, Reeves Point, Emu Bay, Kangaroo Island travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -45,11 +49,13 @@
       color: #0E3557;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -107,15 +113,19 @@
 
       nav a {
         padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
+
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
+
+    /* ================= MAIN CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -139,25 +149,7 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
+    /* ================= PLACEHOLDERS ================= */
 
     .video-placeholder,
     .accommodation-placeholder,
@@ -188,6 +180,8 @@
       font-size: 1.1rem;
     }
 
+    /* ================= SHARED LINKS AND GRIDS ================= */
+
     .accommodation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -198,7 +192,7 @@
     .accommodation-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
     }
 
@@ -219,6 +213,136 @@
     .accommodation-link:hover {
       text-decoration: underline;
     }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -307,7 +431,7 @@
   <section class="hero">
     <img
       src="../images/towns/kingscote.jpg"
-      alt="Kingscote Kangaroo Island South Australia"
+      alt="Kingscote on Kangaroo Island in South Australia"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,33 +446,57 @@
     <h1>Kingscote (SA)</h1>
 
     <p>
-      Kingscote is Kangaroo Island’s principal township and an important
-      service centre for residents and visitors. Set beside Nepean Bay,
-      it combines a working waterfront, coastal scenery, shops, dining,
-      accommodation and access to many of the island’s experiences.
+      Kingscote is Kangaroo Island’s largest town and principal commercial and
+      administrative centre. Located on the shores of Nepean Bay, it provides
+      an important base for exploring the island while offering supermarkets,
+      cafés, galleries, accommodation, medical services and other facilities
+      needed by residents and visitors.
     </p>
 
     <p>
-      The town also has a strong maritime and settlement history, reflected
-      in its heritage sites and historic waterfront areas. Its central role
-      and convenient location make Kingscote a natural base for exploring
-      Kangaroo Island’s communities, wildlife, produce and landscapes.
+      The town’s coastline extends around a sheltered harbour where jetties,
+      fishing areas, walking paths and the tidal pool connect Kingscote with the
+      waters of Nepean Bay. Marine life, seabirds and changing coastal views are
+      part of everyday life along the foreshore.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Reeves Point, immediately north of the modern town centre, is closely
+      associated with the establishment of the first official European
+      settlement in South Australia in 1836. Historic markers, archaeological
+      remains, cemetery sites and surviving vegetation preserve elements of
+      this early colonial history.
+    </p>
 
-      <h2>🚧 Our Complete Kingscote Guide Is Coming Soon</h2>
+    <p>
+      Kingscote and its surrounding district support a diverse group of
+      producers and creative businesses. Galleries, studios, wineries,
+      breweries, distilleries, eucalyptus products, honey and wool enterprises
+      provide visitors with opportunities to meet local makers and understand
+      the industries operating across Kangaroo Island.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Kingscote. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        the town and surrounding areas of Kangaroo Island.
-      </p>
+    <p>
+      The town also provides access to nearby rural and coastal destinations
+      including Emu Bay, Bay of Shoals, Wisanger and Cygnet River. These areas
+      contain beaches, wetlands, historic buildings, farms and visitor
+      businesses that remain naturally connected with Kingscote.
+    </p>
 
-    </div>
+    <p>
+      As Kangaroo Island’s primary service centre, Kingscote combines practical
+      facilities with a relaxed coastal atmosphere. Its location makes it a
+      useful base for exploring the northern and central parts of the island
+      without placing accommodation belonging to American River, Parndana or
+      other island communities under the Kingscote directory.
+    </p>
+
+    <p>
+      ShowcasingOz TV will capture the businesses, producers, artists, history
+      and coastal experiences that define Kingscote. Our coverage will highlight
+      both the town’s role as Kangaroo Island’s principal centre and the smaller
+      enterprises contributing to the island’s distinctive visitor economy.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -361,8 +509,10 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Kingscote’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Kingscote and its surrounding district offer galleries, studios,
+      museums, wildlife products, local food and drink producers and marine
+      experiences that introduce visitors to Kangaroo Island’s creative and
+      agricultural communities.
     </p>
 
     <p style="text-align:center;">
@@ -374,72 +524,329 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Kingscote Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Bay of Shoals Winery</strong>
+        A vineyard and cellar-door destination overlooking the Bay of Shoals,
+        producing Kangaroo Island wines in a coastal setting north of
+        Kingscote.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Bloom by the Ocean Studio</strong>
+        A local creative studio showcasing original works and artistic
+        products influenced by Kangaroo Island’s landscapes, coastline and
+        natural environment.
+      </li>
+
+      <li>
+        <strong>Emu Bay Lavender Farm</strong>
+        A working lavender farm near Emu Bay where visitors can explore
+        lavender products, seasonal plantings and locally produced food in a
+        rural Kangaroo Island setting.
+      </li>
+
+      <li>
+        <strong>Emu Ridge Eucalyptus</strong>
+        A family-operated eucalyptus oil business presenting the history and
+        process of producing eucalyptus products on Kangaroo Island, together
+        with local gifts and produce.
+      </li>
+
+      <li>
+        <strong>Fine Art Kangaroo Island Gallery</strong>
+        A Kingscote gallery representing artists whose work reflects Kangaroo
+        Island’s wildlife, landscapes, communities and cultural identity across
+        a range of artistic mediums.
+      </li>
+
+      <li>
+        <strong>George’s 52,000 Castle Lights</strong>
+        A distinctive seasonal light display created around a castle-like
+        property, featuring thousands of lights and decorations assembled as a
+        community and visitor attraction.
+      </li>
+
+      <li>
+        <strong>Hope Cottage National Trust Museum</strong>
+        A museum precinct preserving buildings, photographs, machinery and
+        domestic objects connected with the development of Kingscote and the
+        wider history of Kangaroo Island.
+      </li>
+
+      <li>
+        <strong>Island Beehive</strong>
+        A Kangaroo Island honey producer specialising in products connected
+        with the island’s Ligurian bee population, with visitor information
+        explaining local beekeeping and honey production.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Brewery</strong>
+        An independent brewery near Kingscote producing craft beer in a rural
+        setting and providing visitors with an opportunity to sample locally
+        made beverages.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Gallery</strong>
+        A local gallery showcasing artwork, handcrafted pieces and creative
+        products connected with artists and makers from Kangaroo Island.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Marine Adventures</strong>
+        A marine-tour operator offering experiences from the Bay of Shoals area,
+        including departures near the boat ramp and opportunities to explore
+        Kangaroo Island’s coastal environment and marine life.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Spirits</strong>
+        A Kangaroo Island distillery producing gin, vodka and other spirits
+        using regional ingredients and botanical influences, with tastings and
+        visitor experiences available at its Cygnet River premises.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Wool</strong>
+        A local wool enterprise highlighting the island’s sheep-farming
+        traditions, natural fibres and products connected with Kangaroo
+        Island’s agricultural industries.
+      </li>
+
+      <li>
+        <strong>Shep’s Studio</strong>
+        A local artist’s studio displaying distinctive creative work inspired
+        by Kangaroo Island’s people, wildlife, landscapes and rural character.
+      </li>
+
+      <li>
+        <strong>Solstice Kangaroo Island</strong>
+        A creative Kangaroo Island business presenting locally inspired
+        products and experiences that draw on the island’s natural environment
+        and artistic community.
+      </li>
+
+      <li>
+        <strong>The Islander Estate Vineyards</strong>
+        A Kangaroo Island wine producer combining island-grown fruit with
+        French-influenced winemaking techniques and offering tastings at its
+        estate near Cygnet River.
+      </li>
+
+      <li>
+        <strong>Wisanger School House</strong>
+        A historic former school building preserving part of the educational
+        and community history of the Wisanger district north-west of Kingscote.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Opening hours, tours, tastings and
+      visitor access may change, so checking directly with each attraction
+      before travelling is recommended.
+    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Kingscote’s waterfront, heritage landmarks and other points of
-      interest will be documented and added to this page following
-      our visit.
+      Kingscote’s landmarks trace the town’s colonial history, coastal
+      development and connection with Nepean Bay, while nearby Emu Bay and Duck
+      Lagoon introduce visitors to the natural environments surrounding the
+      island’s principal township.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Kingscote Points of Interest Coming Soon
+          Duck Lagoon Reserve Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Duck Lagoon Reserve</h3>
+
+          <p>
+            A peaceful reserve near Cygnet River containing lagoon habitat,
+            mature trees, picnic facilities and opportunities to observe
+            birdlife and other native wildlife.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Emu Bay Beach and Jetty Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Emu Bay Beach &amp; Jetty</h3>
+
+          <p>
+            A long north-coast beach known for pale sand, clear water and its
+            historic jetty. Emu Bay is a popular destination for swimming,
+            fishing, beach walks and coastal sightseeing.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Flagstaff Hill Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Flagstaff Hill Lookout</h3>
+
+          <p>
+            An elevated viewpoint near Kingscote providing broad views across
+            the town, Nepean Bay, the Bay of Shoals and the surrounding coastal
+            landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kingscote Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kingscote Town Centre</h3>
+
+          <p>
+            Kangaroo Island’s principal commercial centre, including the
+            Dauncey Street shopping strip, cafés, local services, galleries and
+            businesses serving residents and visitors from across the island.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kingscote Jetty Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kingscote Jetty</h3>
+
+          <p>
+            A prominent working and recreational structure on the Kingscote
+            foreshore, used for fishing, boating access and views across Nepean
+            Bay and the town’s waterfront.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kingscote Tidal Pool Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kingscote Tidal Pool</h3>
+
+          <p>
+            A protected seawater swimming area built into the Kingscote
+            foreshore and replenished by the tides, providing a distinctive
+            place for swimming close to the town centre.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Old Kingscote Jetty Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Old Kingscote Jetty</h3>
+
+          <p>
+            The surviving remains and location of earlier jetty infrastructure
+            connected with Kingscote’s maritime development and the movement of
+            passengers, supplies and produce.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Old Police Station Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Old Police Station</h3>
+
+          <p>
+            A historic building associated with law enforcement and government
+            administration during the early development of Kingscote and
+            Kangaroo Island.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Reeves Point Historic Site Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Reeves Point Historic Site</h3>
+
+          <p>
+            The site of South Australia’s first official European settlement.
+            The precinct includes the Old Mulberry Tree, the old cemetery,
+            remains of early jetty infrastructure and the cairn marking the
+            location of the first post office.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Kingscote</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Kingscote? Explore available accommodation in
-      and around the town while we continue developing our complete
-      Kingscote destination guide.
+      Kingscote offers Kangaroo Island’s largest concentration of established
+      hotels, motels, guesthouse rooms, managed cabins and caravan park
+      accommodation. The properties below are located in Kingscote or its
+      immediate surrounds and are not closer to American River or Parndana.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves as they explore Australia’s cities, towns and hidden
+      gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Kingscote%2C+Kangaroo+Island%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKingscote%252C%2520Kangaroo%2520Island%252C%2520South%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Kingscote Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Kingscote
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -460,6 +867,137 @@
 
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Kingscote
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kangaroo Island Cabins</span>
+          <small>Managed Cabin Accommodation · Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKangaroo%2520Island%2520Cabins%252C%2520Kingscote%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kangaroo Island Seaside Inn</span>
+          <small>Hotel / Inn · Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fkangaroo-island-seaside-inn.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>KI Caravan Park, Kingscote</span>
+          <small>Caravan Park, Cabins and Family Units · Brownlow, Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKI%2520Caravan%2520Park%2520Kingscote%252C%2520Kangaroo%2520Island"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>KI Dragonfly Guesthouse</span>
+          <small>Guesthouse · Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKI%2520Dragonfly%2520Guesthouse%252C%2520Kingscote%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Ozone Hotel Kangaroo Island</span>
+          <small>Hotel and Hotel-operated Apartments · Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOzone%2520Hotel%2520Kangaroo%2520Island%252C%2520Kingscote%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Queenscliffe Family Hotel</span>
+          <small>Hotel Accommodation · Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fqueenscliffe.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Ellson Hotel</span>
+          <small>Boutique Hotel · Kingscote</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fkangaroo-island-seaview-motel.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes eligible hotels, inns, guesthouses, managed cabin
+      accommodation and caravan parks in Kingscote and its immediate surrounds.
+      Properties closer to American River or Parndana, private holiday houses,
+      Airbnb listings and independently operated apartments or villas have not
+      been included. Inclusion does not imply partnership or endorsement.
+      Booking buttons open Booking.com, and individual property availability
+      may vary. Some links on this page are affiliate links, which means we may
+      earn a small commission if you make a booking, at no extra cost to you.
+    </p>
 
   </section>
 
@@ -486,8 +1024,8 @@
       </a><br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
       </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
