@@ -3,148 +3,384 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Kings Canyon (NT) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Kings Canyon (NT) — one of Australia’s most breathtaking natural wonders in Watarrka National Park, known for towering sandstone cliffs, gorge walks and unforgettable outback scenery. Featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Kings Canyon, Watarrka National Park, Northern Territory, outback, Rim Walk, Red Centre, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Kings Canyon and Watarrka National Park in Australia's Red Centre, including the Rim Walk, Kings Creek Walk, Garden of Eden and accommodation near the canyon."
+  >
+
+  <meta
+    name="keywords"
+    content="Kings Canyon NT, Watarrka National Park, Kings Canyon Rim Walk, Kings Creek Walk, Garden of Eden, Kings Canyon accommodation, Red Centre, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
-    
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
+
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-    nav a:hover { color: #E87722; }
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
-    @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+    nav a:hover {
+      color: #E87722;
     }
 
-    /* Hero Banner */
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/kings-canyon.png') center center / cover no-repeat;
+      background: #dddddd;
     }
 
-    /* Content */
+    /* ================= MAIN CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
-
-    p { line-height:1.6; color:#333; }
-
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
     }
 
-    /* Video Placeholder */
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    /* ================= PLACEHOLDERS ================= */
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
     .video-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.3rem;
-      margin-top:20px;
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    /* ================= SHARED LINKS AND GRIDS ================= */
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
-      text-align:center;
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -153,10 +389,20 @@ footer p a:hover {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -168,57 +414,318 @@ footer p a:hover {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero"></section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/kings-canyon.jpg"
+      alt="Kings Canyon in Watarrka National Park"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Kings Canyon (NT)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-  <p>
-    Kings Canyon is one of the most spectacular natural wonders of Australia’s Red Centre,  
-    located in the heart of Watarrka National Park. Famous for its towering sandstone walls, 
-    dramatic cliffs, palm-filled oasis and ancient geological formations, it offers an  
-    unforgettable outback experience.
-    <br><br>
-    The iconic Rim Walk provides breathtaking views across the canyon and surrounding desert,  
-    while the Garden of Eden offers a surprising pocket of lush green life hidden within the  
-    ancient landscape. ShowcasingOz TV will be capturing the scale, beauty and deep cultural  
-    significance of this extraordinary region during our 2026 filming journey.
-  </p>
+    <h1>Kings Canyon (NT)</h1>
 
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">
-    Documentary Coming Soon
-  </div>
+    <p>
+      Kings Canyon is one of the defining natural landmarks of Australia’s Red
+      Centre. Located within Watarrka National Park at the western end of the
+      George Gill Range, the canyon is known for its towering sandstone walls,
+      sheltered creek environment and sweeping views across the surrounding
+      desert landscape.
+    </p>
 
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p>
-    We’ll be showcasing the Rim Walk, Kings Creek, the Garden of Eden and the region’s  
-    spectacular landscapes in June 2026 during Series 1.
-  </p>
+    <p>
+      Watarrka National Park has deep cultural importance for the Luritja and
+      Arrernte peoples, whose connections with the landscape extend across many
+      thousands of years. The canyon, waterholes, plants and geological features
+      form part of a living cultural landscape containing places and stories
+      that must be approached respectfully.
+    </p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon">
-      <p>Attractions Coming Soon</p>
+    <p>
+      The canyon’s cliffs expose layers of sandstone shaped by erosion over
+      hundreds of millions of years. Weathering has created sheer walls,
+      sheltered gorges, domed formations and narrow passages that contrast
+      strongly with the open plains and desert vegetation beyond the canyon.
+    </p>
+
+    <p>
+      Walking is the principal way to experience Kings Canyon. The demanding Rim
+      Walk climbs above the canyon and follows its upper edges, while the easier
+      Kings Creek Walk travels along the canyon floor. Heat and exposure can
+      make conditions dangerous, particularly during the warmer months.
+    </p>
+
+    <p>
+      The Garden of Eden is a sheltered rockhole surrounded by plants that
+      benefit from the canyon’s protected environment. It is also a culturally
+      sensitive place. Visitors may use the designated walking route but must
+      not swim in the waterhole or enter closed areas.
+    </p>
+
+    <p>
+      Kings Canyon is extremely remote, with limited fuel, accommodation and
+      visitor services. Travellers need to carry sufficient water, monitor road
+      and weather conditions and understand that mobile phone coverage may be
+      unreliable across much of the surrounding region.
+    </p>
+
+    <p>
+      ShowcasingOz TV will capture the scale, geology, cultural significance and
+      visitor experiences that define Kings Canyon and Watarrka National Park.
+      Our coverage will also highlight the importance of preparation, respectful
+      access and protecting this extraordinary Central Australian environment.
+    </p>
+
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Kings Canyon Documentary Coming Soon
     </div>
-  </div>
 
-</section>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
+
+    <p class="accommodation-intro">
+      The principal visitor experiences at Kings Canyon are its established
+      walking routes. Conditions can be demanding, so visitors should check
+      temperatures, park alerts and track requirements before starting.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+
+      <li>
+        <strong>Kings Canyon Rim Walk</strong>
+        A challenging six-kilometre circuit that climbs steeply to the top of
+        the canyon before following its sandstone rim. The route passes dramatic
+        cliff edges, weathered rock formations and the Garden of Eden while
+        providing extensive views across Watarrka National Park. The walk
+        generally takes three to four hours. On days forecast to reach 36°C or
+        higher, walkers must begin before 9:00 am.
+      </li>
+
+      <li>
+        <strong>Kings Creek Walk</strong>
+        A shorter and less demanding return walk following Kings Creek along
+        the canyon floor. The route provides views toward the towering canyon
+        walls and introduces visitors to the sheltered vegetation growing within
+        the gorge without requiring the steep climb of the Rim Walk.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Track access, closures and heat
+      restrictions may change. Check official Watarrka National Park information
+      before beginning any walk.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Kings Canyon contains culturally important water places, dramatic
+      sandstone formations and protected creek environments shaped by geology,
+      climate and thousands of years of Traditional Owner connection.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Garden of Eden Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Garden of Eden</h3>
+
+          <p>
+            A sheltered rockhole and pocket of vegetation reached from the Kings
+            Canyon Rim Walk. The waterhole is culturally significant and
+            swimming is prohibited. Visitors must remain on the designated
+            route and respect all signs and closures.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kings Canyon Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kings Canyon</h3>
+
+          <p>
+            A vast sandstone canyon within Watarrka National Park, distinguished
+            by sheer walls, sheltered gullies and elevated views across the
+            George Gill Range and surrounding Central Australian landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Kings Creek Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Kings Creek</h3>
+
+          <p>
+            The creek running through the base of Kings Canyon supports a
+            protected corridor of vegetation and provides a striking contrast
+            with the exposed sandstone walls and arid country surrounding the
+            gorge.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Kings Canyon</h2>
+
+    <p class="accommodation-intro">
+      The Kings Canyon area has only two established accommodation bases.
+      Visitors can choose from resort rooms, lodge accommodation, glamping,
+      safari-style cabins and caravan facilities within driving distance of
+      Watarrka National Park.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves as they explore Australia’s cities, towns and hidden
+      gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKings%2520Canyon%252C%2520Northern%2520Territory%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Kings Canyon Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Kings Canyon
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Kings Canyon Accommodation Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Kings Canyon
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Discovery Resorts – Kings Canyon</span>
+          <small>Resort, Lodge Rooms, Glamping and Caravan Park · Approximately 7 km from Watarrka National Park</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fkings-canyon-resort.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kings Creek Station</span>
+          <small>Station Lodge and Luxury Tented Accommodation · Approximately 36 km from Kings Canyon</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fkings-creek-station.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes the established commercial accommodation operations
+      serving the Kings Canyon and Watarrka National Park area. Standalone
+      campsites are not individually promoted. Inclusion does not imply
+      partnership or endorsement. Booking buttons open Booking.com, and
+      individual room types and availability may vary. Some links on this page
+      are affiliate links, which means we may earn a small commission if you
+      make a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -233,10 +740,19 @@ footer p a:hover {
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
