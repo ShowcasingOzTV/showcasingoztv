@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Louth on the Darling River in Outback New South Wales with ShowcasingOz TV. Our complete destination guide, documentary, landmarks and accommodation features are coming soon."
+    content="Discover Louth on the Darling River in Outback New South Wales. Explore Shindy's Inn, Louth Cemetery, Toorale National Park, Mount Talowla Lookout and accommodation around Louth."
   >
 
   <meta
     name="keywords"
-    content="Louth NSW, Louth Darling River, Outback New South Wales, Louth attractions, Louth accommodation, outback travel, ShowcasingOz TV"
+    content="Louth NSW, Louth Darling River, Shindy's Inn, Toorale National Park, Mount Talowla Lookout, Louth attractions, Louth accommodation, Outback NSW, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -108,6 +112,7 @@
       nav a {
         padding: 15px;
         border-top: 1px solid rgba(255,255,255,0.15);
+        margin-left: 0;
       }
     }
 
@@ -139,29 +144,8 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder,
     .poi-placeholder {
       width: 100%;
       background: #e1e1e1;
@@ -182,7 +166,6 @@
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder,
     .poi-placeholder {
       height: 200px;
       font-size: 1.1rem;
@@ -204,7 +187,7 @@
 
     .accommodation-intro {
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 20px;
     }
 
@@ -218,6 +201,124 @@
 
     .accommodation-link:hover {
       text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      border-radius: 0;
+    }
+
+    .poi-card-content {
+      padding: 18px;
+    }
+
+    .poi-card-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .poi-card-content p {
+      margin: 0;
+      font-size: 0.94rem;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+    }
+
+    .other-stay-details {
+      display: flex;
+      flex-direction: column;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    .other-stay-details strong {
+      color: #0E3557;
+      margin-bottom: 3px;
+    }
+
+    .other-stay-details small {
+      color: #666666;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 15px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
 
     footer {
@@ -257,6 +358,26 @@
       font-size: 0.8rem;
       color: #ffffff;
     }
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
+
+      .video-placeholder {
+        height: 240px;
+      }
+
+      .other-stay-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 
@@ -265,7 +386,6 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -290,7 +410,6 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
@@ -298,7 +417,7 @@
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', function () {
       menu.classList.toggle('active');
     });
   </script>
@@ -307,7 +426,7 @@
   <section class="hero">
     <img
       src="../images/towns/louth.jpg"
-      alt="Louth Outback New South Wales"
+      alt="Louth and the Darling River in Outback New South Wales"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,34 +441,53 @@
     <h1>Louth (NSW)</h1>
 
     <p>
-      Louth is a small outback community situated on the Darling River
-      in western New South Wales. Surrounded by vast pastoral country,
-      the settlement reflects the isolation, resilience and strong local
-      connections that have shaped life along the river.
+      Louth is a small and character-filled outback community situated beside the Darling
+      River in north-western New South Wales. Located between Bourke and Tilpa, the village
+      is surrounded by expansive grazing country, river landscapes and the unmistakable
+      horizons of the Australian outback.
     </p>
 
     <p>
-      Its river setting, historic buildings and pastoral heritage give
-      Louth a distinctive sense of place. The community is also widely
-      associated with the annual Louth Races, which bring visitors
-      together for one of the best-known social events in this part
-      of Outback New South Wales.
+      The town was established during the nineteenth century when the Darling River was an
+      important transport and trade route. Louth developed as a service point for nearby
+      pastoral stations, river travellers and the workers who supported the surrounding
+      grazing industry.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Although the population is now small, Louth retains a strong community identity.
+      Its historic buildings, riverside setting and connections with surrounding stations
+      preserve the atmosphere of an authentic outback settlement rather than a conventional
+      tourism centre.
+    </p>
 
-      <h2>🚧 Our Complete Louth Guide Is Coming Soon</h2>
+    <p>
+      Louth is widely known for the annual Louth Races, which bring visitors from across
+      Australia to the village each August. The event transforms the normally quiet
+      community into a major outback gathering while maintaining the relaxed hospitality
+      for which the town is known.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Louth. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        the community and surrounding Darling River region.
-      </p>
+    <p>
+      The nearby Louth Cemetery contains one of the town’s most significant stories. The
+      memorial to Mary Mathews was designed so the setting sun would reflect from its cross
+      towards the former Mathews family home, creating an enduring connection between the
+      town’s history and the surrounding landscape.
+    </p>
 
-    </div>
+    <p>
+      North of Louth, Toorale National Park and State Conservation Area protect extensive
+      floodplains and the meeting country of the Darling and Warrego river systems.
+      Travellers can explore scenic driving routes, pastoral heritage, riverside picnic
+      areas and elevated viewpoints across this remote environment.
+    </p>
+
+    <p>
+      With limited services and considerable distances between communities, visitors should
+      plan carefully, confirm road and weather conditions and carry suitable supplies.
+      Those who make the journey will discover a welcoming riverside village and an
+      especially memorable part of Outback New South Wales.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -359,114 +497,269 @@
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions</h2>
+    <h2>📍 Attractions In And Around Louth</h2>
 
     <p class="accommodation-intro">
-      Louth’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Louth’s local businesses and gathering places offer visitors an authentic introduction
+      to life beside the Darling River and the hospitality of a small outback community.
     </p>
 
+    <ul class="attractions-list">
+      <li>
+        <strong>Shindy’s Inn</strong>
+        A traditional outback hotel situated near the banks of the Darling River in Louth.
+        Shindy’s Inn is a local meeting place offering refreshments, meals, visitor services
+        and country hospitality. Its collection of photographs, memorabilia and historic
+        items provides an informal window into the stories and personalities of the Louth
+        district.
+      </li>
+    </ul>
+
     <p style="text-align:center;">
-      <a
-        href="../attraction-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-
-        <div class="attraction-placeholder">
-          Featured Louth Attractions Coming Soon
-        </div>
-
-      </div>
-    </div>
-
     <!-- POINTS OF INTEREST -->
-    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
 
     <p class="accommodation-intro">
-      Louth’s riverside areas, heritage landmarks and other points
-      of interest will be documented and added to this page following
-      our visit.
+      Explore Louth’s historic township, remarkable cemetery and the remote river,
+      floodplain and pastoral landscapes of the surrounding district.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <!-- LOUTH CEMETERY -->
+      <div class="poi-card">
         <div class="poi-placeholder">
-          Louth Points of Interest Coming Soon
+          Louth Cemetery Image Coming Soon
         </div>
 
+        <div class="poi-card-content">
+          <h3>Louth Cemetery</h3>
+
+          <p>
+            The historic Louth Cemetery contains the memorial of Mary Mathews, commissioned
+            by town founder Thomas Andrew Mathews following her death in 1886. Its polished
+            cross was positioned to reflect the setting sun towards the family’s former
+            home, creating one of Louth’s most distinctive historic stories.
+          </p>
+        </div>
       </div>
+
+      <!-- LOUTH TOWN CENTRE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Louth Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Louth Town Centre</h3>
+
+          <p>
+            Louth’s compact town centre sits beside the Darling River and preserves the
+            quiet character of a remote pastoral settlement. Historic buildings, community
+            facilities and the river crossing illustrate the village’s long-standing role
+            as a meeting and service point for the surrounding district.
+          </p>
+        </div>
+      </div>
+
+      <!-- MANY BIG ROCKS -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Many Big Rocks Picnic Area Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Many Big Rocks Picnic Area – Karnu Yalpa</h3>
+
+          <p>
+            Many Big Rocks, known as Karnu Yalpa, is a remote riverside picnic and fishing
+            area in Toorale National Park. Located along the Darling River driving route,
+            it offers shade beneath river red gums and coolibahs, opportunities for
+            birdwatching and views across the river’s natural rock formations.
+          </p>
+
+          <p>
+            The surrounding route incorporates the Darling River Drive and access through
+            the wider Toorale landscape, including the Homestead Dam area. Conditions can
+            be remote and changeable, so visitors should check current park alerts and road
+            access before travelling.
+          </p>
+        </div>
+      </div>
+
+      <!-- MOUNT TALOWLA LOOKOUT -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Mount Talowla Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Mount Talowla Lookout</h3>
+
+          <p>
+            Mount Talowla Lookout provides sweeping views across Toorale National Park and
+            State Conservation Area. Known to the Kurnu-Baakandji People as Withawitha
+            Iaana, the elevated viewpoint reveals the scale of the surrounding floodplains,
+            river country and distant outback ranges.
+          </p>
+        </div>
+      </div>
+
+      <!-- TOORALE STATION HOMESTEAD -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Toorale Station Homestead Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Toorale Station Homestead</h3>
+
+          <p>
+            The Toorale Station Homestead precinct preserves an important part of the
+            region’s pastoral history. Established on a vast former grazing property, the
+            precinct includes historic structures and interpretation connected with station
+            life, river commerce and the development of the surrounding outback district.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
-    <h2>🏨 Stay Where We Showcase — Louth</h2>
+    <h2>🏨 Stay Where We Showcase – Louth</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Louth? Explore available accommodation in
-      and around the community while we continue developing our
-      complete Louth destination guide.
+      Accommodation around Louth is limited and should be arranged before travelling.
+      The local options below provide hotel cabins, station accommodation, cottages,
+      bunkhouse rooms and caravan facilities within the Louth district and along the
+      Darling River corridor.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay.
+      We help people discover where to go, what to experience and where to base themselves
+      as they explore Australia’s cities, towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Louth%2C+New+South+Wales%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLouth%252C%2520New%2520South%2520Wales%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
-        View Available Accommodation In And Around Louth
+        View All Louth Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Louth
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through
+      professionally produced video, photography and destination-led storytelling that
+      places their property in front of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../accommodation-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
           Featured Louth Accommodation Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Louth
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <!-- ROSE ISLE STATION -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Rose Isle Station</strong>
+          <small>
+            Station accommodation, cabins, cottages and caravan sites ·
+            Louth–Bourke Road
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRose%2520Isle%2520Station%252C%2520Louth%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- SHINDY'S INN -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Shindy’s Inn</strong>
+          <small>
+            Hotel and riverside cabin accommodation · Louth town centre
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DShindy%2527s%2520Inn%252C%2520Louth%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- TRILBY STATION -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Trilby Station</strong>
+          <small>
+            Station cottages, bunkhouse accommodation and caravan sites ·
+            Louth district
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTrilby%2520Station%252C%2520Louth%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Accommodation availability and booking options may
+      change, particularly during major events such as the Louth Races. Some links on
+      this page are affiliate links, which means we may earn a small commission if you
+      make a booking, at no extra cost to you.
+    </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -484,16 +777,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a><br>
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
-      </span><br>
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-
   </footer>
 
 </body>
