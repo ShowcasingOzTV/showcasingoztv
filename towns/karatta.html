@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Karatta on western Kangaroo Island with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Karatta on Kangaroo Island, including Flinders Chase National Park, Remarkable Rocks, Admirals Arch, Kelly Hill Caves, Hanson Bay and local accommodation."
   >
 
   <meta
     name="keywords"
-    content="Karatta SA, Karatta Kangaroo Island, western Kangaroo Island, Karatta attractions, Karatta accommodation, South Australia travel, ShowcasingOz TV"
+    content="Karatta SA, Karatta Kangaroo Island, Flinders Chase National Park, Remarkable Rocks, Admirals Arch, Kelly Hill Caves, Hanson Bay, Karatta accommodation, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -45,11 +49,13 @@
       color: #0E3557;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -107,15 +113,19 @@
 
       nav a {
         padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
+
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
+
+    /* ================= MAIN CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -139,25 +149,7 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
+    /* ================= PLACEHOLDERS ================= */
 
     .video-placeholder,
     .accommodation-placeholder,
@@ -188,6 +180,8 @@
       font-size: 1.1rem;
     }
 
+    /* ================= SHARED LINKS AND GRIDS ================= */
+
     .accommodation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -198,7 +192,7 @@
     .accommodation-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
     }
 
@@ -219,6 +213,136 @@
     .accommodation-link:hover {
       text-decoration: underline;
     }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -307,7 +431,7 @@
   <section class="hero">
     <img
       src="../images/towns/karatta.jpg"
-      alt="Karatta Kangaroo Island South Australia"
+      alt="Karatta on Kangaroo Island in South Australia"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,34 +446,58 @@
     <h1>Karatta (SA)</h1>
 
     <p>
-      Karatta is a rural locality on western Kangaroo Island, surrounded
-      by farmland, native vegetation and the island’s expansive natural
-      landscapes. Rather than a conventional town centre, it provides a
-      quiet base within reach of some of Kangaroo Island’s best-known
-      wilderness areas.
+      Karatta is a sparsely populated rural locality on the western side of
+      Kangaroo Island, surrounded by native bushland, farmland and some of the
+      island’s most dramatic coastal scenery. Rather than having a concentrated
+      town centre, the locality extends across a broad landscape near Flinders
+      Chase National Park, Kelly Hill Conservation Park and Hanson Bay.
     </p>
 
     <p>
-      Its position offers access to dramatic coastline, wildlife habitats,
-      walking experiences and conservation areas across the island’s west.
-      Karatta reflects the remote, rural character that forms an important
-      part of the broader Kangaroo Island experience.
+      The western end of Kangaroo Island is known for its rugged Southern Ocean
+      coastline, wind-shaped vegetation, limestone formations and important
+      wildlife habitat. Karatta provides a practical base for visitors exploring
+      this less-developed part of the island and its internationally recognised
+      natural landmarks.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Flinders Chase National Park is central to the area’s visitor appeal. Its
+      coastal environment contains Remarkable Rocks, Admirals Arch, the Cape du
+      Couedic Lighthouse and the historic remains at Weirs Cove, together with
+      walking routes, lookouts and opportunities to observe native wildlife.
+    </p>
 
-      <h2>🚧 Our Complete Karatta Guide Is Coming Soon</h2>
+    <p>
+      The Karatta district was heavily affected by the 2019–20 Kangaroo Island
+      bushfires. The fires changed large areas of vegetation, damaged visitor
+      infrastructure and affected local wildlife and businesses. Regrowth,
+      rebuilding and conservation work have since become an important part of
+      the region’s continuing story.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Karatta. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        the locality and surrounding areas of western Kangaroo Island.
-      </p>
+    <p>
+      Beyond Flinders Chase, the area includes the limestone cave environments
+      of Kelly Hill, the sheltered shoreline of Hanson Bay and remote beaches
+      exposed to the conditions of the Southern Ocean. Wildlife experiences
+      throughout the district may include kangaroos, wallabies, echidnas,
+      koalas, birdlife and colonies of long-nosed fur seals.
+    </p>
 
-    </div>
+    <p>
+      Karatta’s accommodation and visitor services are limited compared with
+      Kangaroo Island’s larger settlements. However, its holiday park cabins
+      and luxury lodge accommodation provide access to the island’s western
+      wilderness without requiring visitors to base themselves closer to
+      Kingscote, Parndana or Vivonne Bay.
+    </p>
+
+    <p>
+      ShowcasingOz TV will capture the landscapes, wildlife, businesses and
+      visitor experiences that define Karatta and western Kangaroo Island. Our
+      coverage will highlight the area’s natural landmarks, conservation story,
+      bushfire recovery and close relationship with the powerful Southern Ocean.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -362,8 +510,9 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Karatta’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Karatta provides access to wildlife encounters, cave experiences,
+      visitor information and family activities across the western side of
+      Kangaroo Island.
     </p>
 
     <p style="text-align:center;">
@@ -375,72 +524,231 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Karatta Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Flinders Chase Visitor Centre</strong>
+        The principal visitor information point for Flinders Chase National
+        Park, helping travellers understand current park conditions, available
+        facilities and the natural and cultural features of Kangaroo Island’s
+        western end. Visitors should check park alerts and access information
+        before travelling into remote areas.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Hanson Bay Wildlife Sanctuary</strong>
+        A privately operated wildlife sanctuary near Hanson Bay where visitors
+        can experience regenerating bushland and learn about native animals,
+        conservation and the landscape’s recovery following the Kangaroo Island
+        bushfires.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Mini Golf</strong>
+        A family-friendly recreational attraction in the Karatta area offering
+        a relaxed activity for visitors staying near Flinders Chase National
+        Park and the western Kangaroo Island attractions.
+      </li>
+
+      <li>
+        <strong>Kelly Hill Caves</strong>
+        A limestone cave system within Kelly Hill Conservation Park, formed by
+        water moving through the island’s limestone landscape. Access and tour
+        arrangements can change, so visitors should check current conditions
+        and booking requirements before travelling.
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Opening hours, tours and access
+      conditions may change, so checking directly with each attraction or park
+      authority before travelling is recommended.
+    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Karatta’s natural landscapes, nearby landmarks and other points
-      of interest will be documented and added to this page following
-      our visit.
+      Western Kangaroo Island contains remote beaches, historic lighthouse
+      infrastructure, geological formations and coastal lookouts shaped by the
+      powerful conditions of the Southern Ocean.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Karatta Points of Interest Coming Soon
+          Admirals Arch and Fur Seal Lookout Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Admirals Arch &amp; Fur Seal Lookout</h3>
+
+          <p>
+            A naturally formed coastal arch at Cape du Couedic reached by a
+            boardwalk through a rugged shoreline environment. Nearby viewing
+            areas provide opportunities to observe long-nosed fur seals resting
+            and moving among the rocks below.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bunker Hill Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bunker Hill Lookout</h3>
+
+          <p>
+            An elevated viewing point within the western Kangaroo Island
+            landscape, providing a perspective across regenerating bushland and
+            the extensive natural environment surrounding Flinders Chase.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cape du Couedic Lighthouse Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cape du Couedic Lighthouse</h3>
+
+          <p>
+            A historic stone lighthouse completed in the early twentieth
+            century to help guide shipping around Kangaroo Island’s hazardous
+            south-western coastline. It remains one of the most recognisable
+            structures in Flinders Chase National Park.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Hanson Bay Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Hanson Bay Beach</h3>
+
+          <p>
+            A picturesque south-coast beach bordered by native vegetation and
+            exposed to changing Southern Ocean conditions. The bay forms part
+            of the remote coastal landscape between Kelly Hill and Flinders
+            Chase.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Remarkable Rocks Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Remarkable Rocks</h3>
+
+          <p>
+            A group of immense granite formations sculpted by weathering over
+            millions of years. Their distinctive shapes and elevated coastal
+            setting have made them one of Kangaroo Island’s most recognisable
+            natural landmarks.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Scott Cove Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Scott Cove Lookout</h3>
+
+          <p>
+            A coastal viewpoint overlooking the cliffs, coves and open waters
+            of Kangaroo Island’s western coastline. The lookout demonstrates
+            the scale and isolation of this remote Southern Ocean landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Weirs Cove Historic Ruins and Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Weirs Cove Historic Ruins &amp; Lookout</h3>
+
+          <p>
+            The remains of buildings and infrastructure once used to land
+            supplies for the Cape du Couedic lighthouse keepers. The site also
+            provides commanding views over the cliffs and Southern Ocean.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          West Bay Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>West Bay Beach</h3>
+
+          <p>
+            A remote beach on the western side of Kangaroo Island surrounded by
+            protected wilderness. Reaching the area requires careful planning,
+            and visitors should check current road, weather and park conditions
+            before setting out.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Karatta</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Karatta? Explore available accommodation in
-      and around the locality while we continue developing our complete
-      Karatta destination guide.
+      Accommodation around Karatta is limited but distinctive, ranging from
+      managed holiday park cabins surrounded by bushland to internationally
+      recognised luxury lodge accommodation overlooking the Southern Ocean.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and where
+      to base themselves as they explore Australia’s cities, towns and hidden
+      gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Karatta%2C+Kangaroo+Island%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKaratta%252C%2520Kangaroo%2520Island%252C%2520South%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Karatta Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Karatta
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -461,6 +769,57 @@
 
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Karatta
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Discovery Parks – Kangaroo Island</span>
+          <small>Holiday and Caravan Park with Cabins · Karatta</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDiscovery%2520Parks%2520Kangaroo%2520Island%252C%2520Karatta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Southern Ocean Lodge</span>
+          <small>Luxury Lodge · Hanson Bay, Karatta</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSouthern%2520Ocean%2520Lodge%252C%2520Karatta%252C%2520Kangaroo%2520Island"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list includes eligible accommodation in the Karatta and Hanson Bay
+      area. It does not include properties that are closer to Parndana or
+      Vivonne Bay, private holiday rentals, Airbnb properties or standalone
+      campsites. Inclusion does not imply partnership or endorsement. Booking
+      buttons open Booking.com search results, and individual property
+      availability may vary. Some links on this page are affiliate links, which
+      means we may earn a small commission if you make a booking, at no extra
+      cost to you.
+    </p>
 
   </section>
 
@@ -487,8 +846,8 @@
       </a><br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
       </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
