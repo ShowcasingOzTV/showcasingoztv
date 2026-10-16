@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Macclesfield in South Australia’s Adelaide Hills with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Macclesfield in the southern Adelaide Hills with ShowcasingOz TV. Explore local wineries, galleries, forests, heritage attractions, landmarks and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Macclesfield SA, Macclesfield Adelaide Hills, Angas River, Macclesfield attractions, Macclesfield accommodation, South Australia travel, ShowcasingOz TV"
+    content="Macclesfield SA, Macclesfield Adelaide Hills, Longview Vineyard, Kuitpo Forest, Meadows South Australia, Macclesfield attractions, Macclesfield accommodation, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -107,6 +111,7 @@
 
       nav a {
         padding: 15px;
+        margin-left: 0;
         border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
@@ -139,29 +144,8 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder,
     .poi-placeholder {
       width: 100%;
       background: #e1e1e1;
@@ -182,7 +166,6 @@
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder,
     .poi-placeholder {
       height: 200px;
       font-size: 1.1rem;
@@ -204,7 +187,7 @@
 
     .accommodation-intro {
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 20px;
     }
 
@@ -218,6 +201,124 @@
 
     .accommodation-link:hover {
       text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      border-radius: 0;
+    }
+
+    .poi-card-content {
+      padding: 18px;
+    }
+
+    .poi-card-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .poi-card-content p {
+      margin: 0;
+      font-size: 0.94rem;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+    }
+
+    .other-stay-details {
+      display: flex;
+      flex-direction: column;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    .other-stay-details strong {
+      color: #0E3557;
+      margin-bottom: 3px;
+    }
+
+    .other-stay-details small {
+      color: #666666;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 15px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
 
     footer {
@@ -257,6 +358,26 @@
       font-size: 0.8rem;
       color: #ffffff;
     }
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
+
+      .video-placeholder {
+        height: 240px;
+      }
+
+      .other-stay-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 
@@ -265,7 +386,6 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -290,7 +410,6 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
@@ -298,7 +417,7 @@
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', function () {
       menu.classList.toggle('active');
     });
   </script>
@@ -307,7 +426,7 @@
   <section class="hero">
     <img
       src="../images/towns/macclesfield.jpg"
-      alt="Macclesfield Adelaide Hills South Australia"
+      alt="Macclesfield in the Adelaide Hills, South Australia"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,34 +441,51 @@
     <h1>Macclesfield (SA)</h1>
 
     <p>
-      Macclesfield is a historic village in South Australia’s Adelaide
-      Hills, set beside the Angas River and surrounded by rolling farmland
-      and wooded hills. Its stone buildings, country roads and quiet setting
-      give the community a distinctive rural character.
+      Macclesfield is a historic rural township in the southern Adelaide Hills, surrounded
+      by rolling farmland, vineyards, forest country and the upper reaches of the Angas
+      River. Its peaceful setting and strong village character make it an appealing stop
+      between the central Adelaide Hills and the Fleurieu Peninsula.
     </p>
 
     <p>
-      The town’s heritage, community spaces and access to surrounding
-      landscapes make it an appealing stop for visitors exploring the
-      southern Adelaide Hills. Macclesfield offers a slower-paced alternative
-      to the region’s busier destinations while remaining within reach of
-      Adelaide and the Fleurieu Peninsula.
+      The township was established during the nineteenth century and retains a collection
+      of historic churches, hotels, cottages and civic buildings. These structures reflect
+      Macclesfield’s early development as a local centre for farming, trade and community
+      life.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Macclesfield is particularly known for its broad tree-lined streets, heritage
+      buildings and community parklands. The Angas River passes through the town, linking
+      its natural setting with reserves, walking areas and public spaces used for local
+      gatherings and events.
+    </p>
 
-      <h2>🚧 Our Complete Macclesfield Guide Is Coming Soon</h2>
+    <p>
+      The surrounding district supports vineyards, cellar doors, galleries and small
+      creative businesses. Longview Vineyard has become one of the area’s best-known
+      destinations, combining cool-climate wines, dining, events and accommodation within
+      the hills outside the township.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Macclesfield. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        village and surrounding Adelaide Hills.
-      </p>
+    <p>
+      Nearby Meadows provides additional shops, food businesses and heritage attractions,
+      while Prospect Hill preserves the stories of early farming communities through its
+      historical museum and collection of pioneer buildings.
+    </p>
 
-    </div>
+    <p>
+      Macclesfield also provides a convenient base for exploring Kuitpo Forest. Its pine
+      plantations, native vegetation and shared-use trails attract walkers, cyclists,
+      horse riders and visitors seeking a quiet outdoor experience within easy reach of
+      the township.
+    </p>
+
+    <p>
+      Together, Macclesfield, Meadows, Prospect Hill and Kuitpo form a distinctive part of
+      the southern Adelaide Hills, combining country hospitality, local history, cool-climate
+      wine, creative businesses and accessible forest landscapes.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -359,114 +495,359 @@
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions</h2>
+    <h2>📍 Attractions In And Around Macclesfield</h2>
 
     <p class="accommodation-intro">
-      Macclesfield’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage is completed.
+      Macclesfield and the surrounding southern Adelaide Hills offer a mixture of wine,
+      art, forest adventure and local history.
     </p>
 
+    <ul class="attractions-list">
+
+      <li>
+        <strong>Longview Vineyard</strong>
+        Located among rolling hills just outside Macclesfield, Longview Vineyard is a
+        family-owned wine estate producing cool-climate wines. Visitors can experience
+        the cellar door, seasonal dining, vineyard scenery, events, day-spa treatments
+        and on-site accommodation.
+      </li>
+
+      <li>
+        <strong>Prospect Hill Historical Museum</strong>
+        Situated in the nearby village of Prospect Hill, this community museum occupies
+        a collection of historic buildings along the main street. Its displays preserve
+        machinery, household objects, photographs and memorabilia illustrating the lives
+        of the district’s early farming families and pioneers.
+      </li>
+
+      <li>
+        <strong>The Cheese Factory Studio Gallery</strong>
+        Located in Meadows, this former cheese factory has been transformed into an
+        intimate arts and cultural venue. The space supports exhibitions, performances,
+        workshops and community events while preserving the character of one of the
+        town’s distinctive historic buildings.
+      </li>
+
+      <li>
+        <strong>TreeClimb Kuitpo Forest</strong>
+        TreeClimb Kuitpo Forest offers elevated adventure courses among the forest canopy.
+        A series of obstacles, platforms and zip-lines provides outdoor challenges for
+        different ages and confidence levels within the landscape of Kuitpo Forest.
+      </li>
+
+    </ul>
+
     <p style="text-align:center;">
-      <a
-        href="../attraction-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-
-        <div class="attraction-placeholder">
-          Featured Macclesfield Attractions Coming Soon
-        </div>
-
-      </div>
-    </div>
-
     <!-- POINTS OF INTEREST -->
-    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
 
     <p class="accommodation-intro">
-      Macclesfield’s heritage streetscapes, riverside areas and other
-      points of interest will be documented and added to this page
-      following our visit.
+      Explore Macclesfield’s heritage township, community parklands and the historic
+      forest and mining landscapes of the surrounding district.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <!-- ALMANDA SILVER MINE COMPLEX -->
+      <div class="poi-card">
         <div class="poi-placeholder">
-          Macclesfield Points of Interest Coming Soon
+          Almanda Silver Mine Complex Image Coming Soon
         </div>
 
+        <div class="poi-card-content">
+          <h3>Almanda Silver Mine Complex</h3>
+
+          <p>
+            Located within Scott Creek Conservation Park, the Almanda Silver Mine Complex
+            preserves the remains of nineteenth-century mining activity. Historic shafts,
+            stonework, machinery sites and the Old Almanda Mine reveal the district’s
+            short but significant period of copper and silver mining.
+          </p>
+        </div>
       </div>
+
+      <!-- CRYSTAL LAKE PARK -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Crystal Lake Park Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Crystal Lake Park</h3>
+
+          <p>
+            Crystal Lake Park is one of Macclesfield’s most distinctive community spaces.
+            The reserve incorporates public sculptures, open lawns, established trees and
+            nearby Lord Robinson Park, providing a setting for recreation, community events
+            and quiet walks beside the town.
+          </p>
+        </div>
+      </div>
+
+      <!-- KUITPO FOREST TRAIL -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Kuitpo Forest Trail Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Kuitpo Forest Trail</h3>
+
+          <p>
+            The shorter Forest Trail introduces visitors to Kuitpo’s mixture of commercial
+            pine plantation and native woodland. Beginning near the Chookarloo area, the
+            trail provides an accessible forest walk beneath tall trees and through changing
+            vegetation.
+          </p>
+        </div>
+      </div>
+
+      <!-- MACCLESFIELD -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Macclesfield Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Macclesfield</h3>
+
+          <p>
+            Macclesfield’s town centre retains the appearance of a traditional Adelaide
+            Hills village, with historic buildings arranged along broad, tree-lined
+            streets. Notable sites include St John’s Anglican Church and the Three Brothers
+            Arms Hotel, an historic public house dating from the town’s early development.
+          </p>
+        </div>
+      </div>
+
+            <!-- MACKERETH COTTAGE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Mackereth Cottage Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Mackereth Cottage</h3>
+
+          <p>
+            The remains of Mackereth Cottage stand near Scott Creek at Dorset Vale and
+            preserve part of the district’s early European settlement history. George
+            and Sarah Ann Mackereth established their home here in 1839 and raised their
+            family on the surrounding property. Although only ruins remain, the site
+            provides an important connection with the lives of the area’s earliest
+            farming families.
+          </p>
+        </div>
+      </div>
+
+      <!-- MEADOWS -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Meadows Township Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Meadows</h3>
+
+          <p>
+            Meadows is a neighbouring rural township serving the surrounding dairy,
+            grazing and farming district. Its town centre includes the historic Memorial
+            Hall, local shops, community facilities and the well-known Meadows Bakery.
+          </p>
+        </div>
+      </div>
+
+            <!-- MOUNT BOLD RESERVOIR LOOKOUT -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Mount Bold Reservoir Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Mount Bold Reservoir Lookout</h3>
+
+          <p>
+            Mount Bold Reservoir Lookout provides expansive views across South Australia’s
+            largest reservoir and the surrounding hills, forests and protected catchment.
+            The reserve supports extensive areas of native vegetation and wildlife, with
+            walking trails allowing visitors to experience the landscape from several
+            vantage points. Access conditions and opening times should be checked before
+            travelling.
+          </p>
+        </div>
+      </div>
+
+      <!-- TINJELLA TRAIL -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Tinjella Trail Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Tinjella Trail – Christmas Hill Forest</h3>
+
+          <p>
+            The Tinjella Trail is a marked shared-use loop through the Kuitpo Forest
+            network. Beginning on Christmas Hill Road, the trail passes through pine
+            plantation and native forest and is used by walkers, cyclists and horse
+            riders exploring the quieter parts of the reserve.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
-    <h2>🏨 Stay Where We Showcase — Macclesfield</h2>
+    <h2>🏨 Stay Where We Showcase – Macclesfield</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Macclesfield? Explore available accommodation
-      in and around the town while we continue developing our complete
-      Macclesfield destination guide.
+      Planning a stay around Macclesfield? The eligible accommodation below includes
+      established vineyard accommodation and hosted bed and breakfasts associated with
+      Macclesfield and its immediate rural surroundings.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay.
+      We help people discover where to go, what to experience and where to base themselves
+      as they explore Australia’s cities, towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Macclesfield%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMacclesfield%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Macclesfield Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Macclesfield
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through
+      professionally produced video, photography and destination-led storytelling that
+      places their property in front of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../accommodation-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
           Featured Macclesfield Accommodation Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Macclesfield
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <!-- DUCK DUCK GOOSE BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Duck Duck Goose Bed and Breakfast</strong>
+          <small>
+            Hosted bed and breakfast · Highland Valley and Wistow district
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDuck%2520Duck%2520Goose%2520Bed%2520and%2520Breakfast%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- HIGHROOST BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>HighRoost Bed &amp; Breakfast</strong>
+          <small>
+            Rural bed and breakfast · Gemmells and Macclesfield district
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fhigh-roost.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- LONGVIEW VINEYARD -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Longview Vineyard</strong>
+          <small>
+            Vineyard suites and lodge accommodation · Macclesfield
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLongview%2520Vineyard%252C%2520Macclesfield%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- THE OLD OAK BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>The Old Oak Bed and Breakfast</strong>
+          <small>
+            Bed and breakfast accommodation · Bull Creek district
+          </small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Old%2520Oak%2520Bed%2520and%2520Breakfast%252C%2520Bull%2520Creek%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Accommodation availability, services and booking
+      arrangements may change, so visitors should confirm details directly before
+      travelling. Some links on this page are affiliate links, which means we may earn
+      a small commission if you make a booking, at no extra cost to you.
+    </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -484,16 +865,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a><br>
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
-      </span><br>
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-
   </footer>
 
 </body>
