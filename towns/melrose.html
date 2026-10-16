@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Melrose (SA) | ShowcasingOz TV</title>
- <meta name="description" content="Discover Melrose, SA — a picturesque heritage town at the base of Mount Remarkable, known for its historic streetscapes, outdoor adventures, and gateway to the Southern Flinders Ranges." />
- <meta name="keywords" content="Melrose SA, Melrose South Australia, Mount Remarkable town, Southern Flinders Ranges, Melrose attractions, Melrose accommodation, Flinders Ranges gateway, regional South Australia towns, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Melrose at the base of Mount Remarkable in South Australia. Explore local attractions, heritage landmarks, walking trails and accommodation around Melrose and Wilmington."
+  >
+
+  <meta
+    name="keywords"
+    content="Melrose SA, Mount Remarkable, Melrose attractions, Melrose accommodation, Southern Flinders Ranges, Wilmington SA, Melrose Heritage Museum, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,302 +59,325 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        margin-left: 0;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      border-radius: 0;
+    }
+
+    .poi-card-content {
+      padding: 18px;
+    }
+
+    .poi-card-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .poi-card-content p {
+      margin: 0;
+      font-size: 0.94rem;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+    }
+
+    .other-stay-details {
+      display: flex;
+      flex-direction: column;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    .other-stay-details strong {
+      color: #0E3557;
+      margin-bottom: 3px;
+    }
+
+    .other-stay-details small {
+      color: #666666;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 15px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – MELROSE ================= */
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+      .video-placeholder {
+        height: 240px;
+      }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+      .other-stay-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 
@@ -343,10 +386,19 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -361,182 +413,375 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/melrose.jpg"
-       alt="Melrose South Australia"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', function () {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/melrose.jpg"
+      alt="Melrose and Mount Remarkable in South Australia"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Melrose (SA)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Melrose is a picturesque heritage town in South Australia, located at the base of Mount Remarkable and widely regarded as the gateway to the Southern Flinders Ranges. Surrounded by rolling hills, rugged peaks, and scenic farmland, Melrose offers a blend of natural beauty, history, and outdoor adventure.
-</p>
+    <h1>Melrose (SA)</h1>
 
-<p>
-Established in the 1850s, Melrose is one of the oldest towns in South Australia and developed as a service centre for nearby farming and pastoral districts. Its historic streetscape reflects this early settlement period, with well-preserved stone buildings, former hotels, and civic structures that tell the story of the region’s colonial past and rural resilience.
-</p>
+    <p>
+      Melrose is a historic country town positioned beneath Mount Remarkable in South
+      Australia’s Southern Flinders Ranges. Surrounded by mountain slopes, native bushland
+      and agricultural country, it serves as an important southern gateway to the broader
+      Flinders Ranges region.
+    </p>
 
-<p>
-Mount Remarkable dominates the landscape and has long shaped Melrose’s identity. The mountain and surrounding national park provide opportunities for bushwalking, hiking, cycling, and wildlife observation, drawing visitors seeking both gentle nature experiences and more challenging outdoor pursuits. The area is particularly popular with hikers and mountain bike enthusiasts.
-</p>
+    <p>
+      Established during the nineteenth century, Melrose is regarded as the oldest town
+      in the Flinders Ranges. The discovery of copper helped drive its early development,
+      while farming, transport and services for the surrounding district contributed to
+      the town’s long-term survival.
+    </p>
 
-<p>
-Melrose has built a strong reputation as an adventure and tourism hub while maintaining its relaxed country-town atmosphere. Cafés, galleries, accommodation providers, and local businesses cater to visitors, while community events and markets contribute to the town’s welcoming and creative character.
-</p>
+    <p>
+      Melrose retains an attractive collection of stone buildings, hotels, cottages and
+      civic structures. These buildings preserve connections with the town’s mining,
+      brewing, policing and agricultural history and give the central streets a strong
+      heritage character.
+    </p>
 
-<p>
-Set against dramatic mountain scenery and open rural plains, Melrose captures the essence of the Southern Flinders Ranges — where heritage, landscape, and lifestyle come together. The town offers a balance of history, recreation, and natural beauty, making it a distinctive destination for travellers exploring regional South Australia.
-</p>
+    <p>
+      Mount Remarkable rises immediately beside the township and reaches approximately
+      960 metres above sea level. The mountain and surrounding national park provide
+      habitat for native wildlife and extensive opportunities for bushwalking, scenic
+      viewing and nature-based exploration.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Melrose as part of our national filming journey — highlighting its historic character, connection to Mount Remarkable, thriving outdoor culture, and the strong community spirit that continues to make Melrose a standout destination in the Flinders Ranges.
-</p>
+    <p>
+      The town has also developed a national reputation as a mountain-biking destination.
+      Trail networks extend through the surrounding foothills and bushland, attracting
+      riders of different abilities and supporting events, businesses and accommodation
+      connected with outdoor recreation.
+    </p>
 
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Nearby Wilmington provides additional services, accommodation and attractions for
+      travellers exploring the Southern Flinders Ranges. The town is also a gateway to
+      Alligator Gorge and the northern sections of Mount Remarkable National Park.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      Today, Melrose combines its historic identity with cafés, accommodation, cycling,
+      walking and community events. Its position beneath Mount Remarkable makes it a
+      memorable base for exploring the landscapes, heritage and small communities of the
+      Southern Flinders Ranges.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Melrose Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Melrose</h3>
-  <ul class="other-accommodation-list">
-    <li>Wilmington Toy Museum</li>
-    <li>Jacka Brothers Brewery</li>
-    <li>Melrose Heritage Museum</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions In And Around Melrose</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Melrose and nearby Wilmington offer visitors local history, heritage buildings and
+      small community attractions connected with the Southern Flinders Ranges.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Melrose and the surrounding region's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <ul class="attractions-list">
 
-<div class="poi-grid">
+      <!-- JACKA BROTHERS BREWERY -->
+      <li>
+        <strong>Jacka Brothers Brewery</strong>
+        The historic Jacka Brothers Brewery complex preserves an important part of
+        Melrose’s commercial history. Brewing began at the site during the nineteenth
+        century, and its stone buildings remain a prominent local landmark. The restored
+        complex now provides a place for visitors to experience its architecture, gardens,
+        hospitality and connection with the Jacka family.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Goyder's Monument</h3>
-      <p>
-  Goyder’s Monument marks the work of surveyor-general George Goyder, whose surveys played a crucial role in defining agricultural boundaries across South Australia. The monument reflects the importance of early land surveying and its lasting impact on settlement and farming in the Flinders Ranges region.
-</p>
+      <!-- MELROSE HERITAGE MUSEUM -->
+      <li>
+        <strong>Melrose Heritage Museum</strong>
+        Located within the town’s historic former courthouse and police station precinct,
+        Melrose Heritage Museum presents objects, photographs and displays connected with
+        local settlement, policing, mining, agriculture and community life. The surviving
+        buildings and former holding cells form an important part of the museum experience.
+      </li>
+
+      <!-- WILMINGTON TOY MUSEUM -->
+      <li>
+        <strong>Wilmington Toy Museum</strong>
+        The Wilmington Toy Museum displays a wide-ranging collection of toys, models and
+        memorabilia assembled across many decades. Its collection provides a nostalgic
+        look at changing childhood interests, manufacturing styles and popular culture,
+        making it an unusual attraction within the Southern Flinders Ranges.
+      </li>
+
+    </ul>
+
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+    <p class="accommodation-intro">
+      Explore the reserves, monuments and mountain landscapes that contribute to
+      Melrose’s history and distinctive setting beneath Mount Remarkable.
+    </p>
+
+    <div class="poi-grid">
+
+      <!-- DOUGHBOY RESERVE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Doughboy Reserve Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Doughboy Reserve</h3>
+
+          <p>
+            Doughboy Reserve is a roadside recreation area in the wider Melrose district,
+            providing a quiet place to stop among the rural landscapes of the Southern
+            Flinders Ranges. The reserve is used for picnics, short breaks and appreciating
+            the surrounding bushland and agricultural scenery.
+          </p>
+        </div>
+      </div>
+
+      <!-- GOYDER'S MONUMENT -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Goyder’s Monument Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Goyder’s Monument</h3>
+
+          <p>
+            Goyder’s Monument recognises South Australian Surveyor-General George Goyder
+            and his influential assessment of the boundary between reliable agricultural
+            country and more drought-prone land. The monument reflects the importance of
+            rainfall, surveying and land management to the settlement of the region.
+          </p>
+        </div>
+      </div>
+
+      <!-- MOUNT REMARKABLE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Mount Remarkable Summit Trail Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Mount Remarkable Summit Trail and Soldiers Memorial Monument</h3>
+
+          <p>
+            The Mount Remarkable Summit Trail climbs from Melrose through changing
+            vegetation towards the summit of the mountain. The challenging walk rewards
+            experienced and prepared hikers with elevated views across the Southern
+            Flinders Ranges and surrounding plains.
+          </p>
+
+          <p>
+            The Soldiers Memorial Monument adds an important commemorative element to the
+            mountain landscape, honouring local service personnel and preserving the
+            district’s connection with Australia’s wartime history.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Mt Remarkable Summit Trail/Soldiers Memorial Monument</h3>
-      <p>
-The Mount Remarkable Summit Trail is a challenging hike leading to panoramic views across the Southern Flinders Ranges. Near the summit, the Soldiers Memorial Monument honours local service personnel and adds historical significance to one of the region’s most rewarding walking experiences.
-</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase – Melrose</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay around Melrose? Explore eligible hotels, motels, caravan parks and
+      bed and breakfasts in Melrose and nearby Wilmington while discovering Mount
+      Remarkable and the Southern Flinders Ranges.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay.
+      We help people discover where to go, what to experience and where to base themselves
+      as they explore Australia’s cities, towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMelrose%252C%2520South%2520Australia%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Melrose Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Melrose
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through
+      professionally produced video, photography and destination-led storytelling that
+      places their property in front of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Melrose Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Doughboy Reserve</h3>
-      <p>
-Doughboy Reserve is a scenic recreation area near Melrose, popular for picnicking, walking, and family outings. Set against natural bushland, the reserve provides a relaxed space to enjoy the outdoors while taking in views of the surrounding hills.
-</p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Melrose
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <!-- BEAUTIFUL VALLEY CARAVAN PARK -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Beautiful Valley Caravan Park</strong>
+          <small>Caravan park, cabins and units · Wilmington</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBeautiful%2520Valley%2520Caravan%2520Park%252C%2520Wilmington%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- MELROSE CARAVAN AND TOURIST PARK -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Melrose Caravan &amp; Tourist Park</strong>
+          <small>Caravan park and cabin accommodation · Melrose</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMelrose%2520Caravan%2520and%2520Tourist%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- MOUNT REMARKABLE HOTEL MOTEL -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Mount Remarkable Hotel Motel</strong>
+          <small>Hotel and motel rooms · Melrose</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMount%2520Remarkable%2520Hotel%2520Motel%252C%2520Melrose%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- NORTH STAR HOTEL -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>North Star Hotel</strong>
+          <small>Boutique hotel rooms and hotel-managed accommodation · Melrose</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNorth%2520Star%2520Hotel%252C%2520Melrose%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- WILMINGTON HOTEL -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Wilmington Hotel</strong>
+          <small>Country hotel rooms · Wilmington</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fwilmington-wilmington.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- WOZZA'S BNB -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Wozza’s BnB</strong>
+          <small>Bed and self-serve breakfast accommodation · Melrose</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWozza%2527s%2520BnB%252C%2520Melrose%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Wirrabara Silo Art</h3>
-      <p>
-The Wirrabara Silo Art is a striking large-scale artwork celebrating the region’s forestry heritage and community identity. Located a short drive from Melrose, the silos have become a major visual landmark and a popular stop for travellers exploring the Southern Flinders Ranges.
-</p>
-    </div>
-  </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Accommodation availability, services and booking
+      arrangements may change, so visitors should confirm details directly before
+      travelling. Some links on this page are affiliate links, which means we may earn
+      a small commission if you make a booking, at no extra cost to you.
+    </p>
 
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation In And Around Melrose</h2>
-
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Melrose</h3>
-  <ul class="other-accommodation-list">
-    <li>Mt Remarkable Hotel Motel</li>
-    <li>North Star Hotel</li>
-    <li>Melrose Holiday Units</li>
-    <li>Jacka Brothers Brewery - Guesthouse</li>
-    <li>Jacka Brothers Brewery - The Brewer's Cottage</li>
-    <li>Under The Mount</li>
-    <li>Melrose Caravan & Tourist Park</li>
-    <li>Bluey Blundstone's Accommodation</li>
-    <li>Kookaburra Creek Retreat</li>
-    <li>Wozza's BnB</li>
-    <li>Beautiful Valley Caravan Park - Wilmington</li>
-    <li>Wilmington Hotel - Wilmington</li>
-    <li>Wozzas Vault Cafe</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -554,8 +799,18 @@ The Wirrabara Silo Art is a striking large-scale artwork celebrating the region�
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
