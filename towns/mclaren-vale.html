@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover McLaren Vale, South Australia’s celebrated wine region, with ShowcasingOz TV. Our complete destination guide, documentary, attractions and accommodation features are coming soon."
+    content="Discover McLaren Vale and the surrounding Fleurieu Coast with ShowcasingOz TV. Explore wineries, local attractions, heritage places, beaches, landmarks and accommodation."
   >
 
   <meta
     name="keywords"
-    content="McLaren Vale SA, McLaren Vale wine region, Fleurieu Peninsula, McLaren Vale wineries, McLaren Vale attractions, McLaren Vale accommodation, South Australia travel, ShowcasingOz TV"
+    content="McLaren Vale SA, McLaren Vale wineries, McLaren Vale attractions, McLaren Vale accommodation, Willunga, Aldinga, Port Willunga, Fleurieu Peninsula, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -107,6 +111,7 @@
 
       nav a {
         padding: 15px;
+        margin-left: 0;
         border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
@@ -139,29 +144,8 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder,
     .poi-placeholder {
       width: 100%;
       background: #e1e1e1;
@@ -182,7 +166,6 @@
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder,
     .poi-placeholder {
       height: 200px;
       font-size: 1.1rem;
@@ -204,7 +187,7 @@
 
     .accommodation-intro {
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 20px;
     }
 
@@ -218,6 +201,124 @@
 
     .accommodation-link:hover {
       text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      border-radius: 0;
+    }
+
+    .poi-card-content {
+      padding: 18px;
+    }
+
+    .poi-card-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .poi-card-content p {
+      margin: 0;
+      font-size: 0.94rem;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+    }
+
+    .other-stay-details {
+      display: flex;
+      flex-direction: column;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    .other-stay-details strong {
+      color: #0E3557;
+      margin-bottom: 3px;
+    }
+
+    .other-stay-details small {
+      color: #666666;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 15px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
 
     footer {
@@ -257,6 +358,26 @@
       font-size: 0.8rem;
       color: #ffffff;
     }
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
+
+      .video-placeholder {
+        height: 240px;
+      }
+
+      .other-stay-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 
@@ -265,7 +386,6 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -290,7 +410,6 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
@@ -298,7 +417,7 @@
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', function () {
       menu.classList.toggle('active');
     });
   </script>
@@ -307,7 +426,7 @@
   <section class="hero">
     <img
       src="../images/towns/mclaren_vale.jpg"
-      alt="McLaren Vale wine region South Australia"
+      alt="McLaren Vale vineyards in South Australia"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,34 +441,52 @@
     <h1>McLaren Vale (SA)</h1>
 
     <p>
-      McLaren Vale is one of South Australia’s best-known wine regions,
-      set among rolling vineyards between the Mount Lofty Ranges and the
-      Fleurieu Peninsula coast. The town and surrounding district are
-      closely associated with winemaking, regional produce and
-      destination dining.
+      McLaren Vale is one of Australia’s best-known wine regions, situated between the
+      southern Mount Lofty Ranges and the coastline of Gulf St Vincent. Centred around
+      the township of McLaren Vale, the district combines vineyards, cellar doors,
+      restaurants, orchards, historic settlements and coastal scenery.
     </p>
 
     <p>
-      Visitors are drawn to its cellar doors, restaurants, galleries,
-      cycling routes and scenic landscapes. Located within easy reach
-      of Adelaide and nearby beaches, McLaren Vale brings together rural
-      character, creative experiences and a strong food-and-wine identity.
+      Grape growing began in the district during the nineteenth century, making McLaren
+      Vale one of South Australia’s oldest continuously producing wine regions. Its varied
+      soils and Mediterranean climate support many grape varieties, with Shiraz and
+      Grenache forming an especially important part of the region’s identity.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      The area is home to internationally recognised producers as well as family-owned
+      wineries, small-batch distilleries and emerging winemakers. Visitors can experience
+      traditional cellar doors, contemporary architecture, vineyard restaurants, private
+      tastings and experiences exploring the connection between local wine, food and land.
+    </p>
 
-      <h2>🚧 Our Complete McLaren Vale Guide Is Coming Soon</h2>
+    <p>
+      McLaren Vale’s appeal extends beyond wine. Almonds, olives, chocolate, fresh produce
+      and other regional products contribute to a strong food culture supported by farm
+      gates, markets, restaurants and long-established local businesses.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to McLaren Vale. Following filming,
-        it will be expanded with our full town documentary, original
-        photography, featured attractions, local landmarks,
-        accommodation options, businesses and practical information
-        to help visitors explore the town and surrounding wine region.
-      </p>
+    <p>
+      The nearby township of Willunga adds another layer of history and community life.
+      Its courthouse and police station precinct, heritage streets, weekly farmers market
+      and position beneath Willunga Hill help preserve the character of one of the region’s
+      earliest settlements.
+    </p>
 
-    </div>
+    <p>
+      West of the vineyards, Moana, Maslin Beach, Aldinga and Port Willunga provide access
+      to some of the Fleurieu Coast’s most distinctive beaches. Cliffs, reefs, historic
+      jetty pylons, caves and broad sandy shorelines create a strong connection between
+      McLaren Vale’s wine country and the coast.
+    </p>
+
+    <p>
+      To the north, Old Noarlunga and the Onkaparinga River mark the boundary between the
+      wine region and metropolitan Adelaide. The river mouth, national park, historic
+      township and surrounding walking routes provide opportunities to explore the natural
+      and cultural landscape that frames McLaren Vale.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -359,115 +496,611 @@
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>📍 Attractions</h2>
+    <h2>📍 Attractions In And Around McLaren Vale</h2>
 
     <p class="accommodation-intro">
-      McLaren Vale’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage
-      is completed.
+      McLaren Vale’s attractions combine internationally recognised wineries, regional
+      produce, heritage experiences, distilling, art and guided exploration of the region.
     </p>
 
+    <ul class="attractions-list">
+
+      <li>
+        <strong>Coriole Vineyards</strong>
+        Established among the hills of McLaren Vale, Coriole Vineyards combines a historic
+        cellar door with gardens, vineyard views, regional food and a broad selection of
+        wines. The property is particularly associated with Shiraz and Mediterranean grape
+        varieties that suit the region’s climate.
+      </li>
+
+      <li>
+        <strong>d’Arenberg – The Cube, Salvador Dalí Exhibition, Sensorial Circus Café</strong>
+        The d’Arenberg Cube is one of McLaren Vale’s most recognisable contemporary
+        landmarks. The multi-level building combines wine tasting, immersive displays,
+        art and dining. Visitor experiences include the Salvador Dalí exhibition and the
+        playful sensory environment of the Sensorial Circus Café.
+      </li>
+
+      <li>
+        <strong>Historic Willunga Courthouse and Police Station Precinct</strong>
+        This heritage precinct preserves Willunga’s former courthouse, police station,
+        cells and associated buildings. Displays and interpretation explore law, policing,
+        settlement and everyday life in the district during the nineteenth and early
+        twentieth centuries.
+      </li>
+
+      <li>
+        <strong>Hugh Hamilton Wines</strong>
+        Hugh Hamilton Wines combines a modern cellar door with extensive views across its
+        vineyards. The family’s long winemaking history is presented through guided
+        tastings and distinctive wines carrying the winery’s black sheep identity.
+      </li>
+
+      <li>
+        <strong>Maxwell Winery – Maze, Heritage Tour, Tasting and Premium Picnic</strong>
+        Maxwell Winery offers several scheduled visitor experiences, including its
+        well-known hedge maze, heritage tour and tasting, and a premium vineyard picnic
+        package. The property also includes a cellar door, restaurant, gardens and views
+        across the surrounding vineyard landscape.
+      </li>
+
+      <li>
+        <strong>McLaren Vale and Fleurieu Coast Visitor Centre</strong>
+        The regional visitor centre provides local maps, travel information, accommodation
+        assistance and recommendations covering McLaren Vale, Willunga and the Fleurieu
+        Coast. The centre is a practical starting point for planning cellar-door visits,
+        coastal experiences, walking routes and regional touring.
+      </li>
+
+      <li>
+        <strong>MyMcLarenVale Private Wine Tours</strong>
+        MyMcLarenVale provides private guided touring through the wine region. Its scheduled
+        full-day experience includes lunch and visits to approximately four or five
+        wineries, offering guests a locally guided introduction to the people, wines and
+        landscapes of McLaren Vale.
+      </li>
+
+      <li>
+        <strong>Never Never Distilling Co.</strong>
+        Never Never Distilling Co. produces award-winning gin and other spirits from its
+        McLaren Vale base. Visitors can explore the distillery’s range through tastings
+        and drinks while enjoying views across the surrounding vineyards and hills.
+      </li>
+
+      <li>
+        <strong>Oliver’s Taranga Vineyards</strong>
+        Oliver’s Taranga is a family-owned vineyard with generations of farming and
+        wine-growing history in McLaren Vale. Its cellar door presents wines produced from
+        estate-grown fruit and shares the story of the Oliver family’s connection with the
+        district.
+      </li>
+
+      <li>
+        <strong>Samuel’s Gorge Winery</strong>
+        Samuel’s Gorge occupies a dramatic setting overlooking the Onkaparinga River
+        National Park. Its cellar door operates from a historic farm building and offers
+        tastings of wines shaped by the winery’s small-batch approach and surrounding
+        landscape.
+      </li>
+
+      <li>
+        <strong>The Almond Train</strong>
+        The Almond Train is a distinctive roadside business operating from a converted
+        railway carriage. It showcases locally grown almonds alongside confectionery,
+        flavoured products and gifts connected with the region’s agricultural heritage.
+      </li>
+
+      <li>
+        <strong>The FruChocs Shop</strong>
+        The FruChocs Shop celebrates one of South Australia’s best-known confectionery
+        products. Visitors can browse FruChocs, chocolate products, gifts and other locally
+        associated treats in the heart of McLaren Vale.
+      </li>
+
+      <li>
+        <strong>Waverley Park Homestead</strong>
+        Waverley Park Homestead is a historic property associated with the early pastoral
+        and agricultural development of the district. Its buildings and setting provide
+        insight into the European settlement and farming history of the McLaren Vale area.
+      </li>
+
+      <li>
+        <strong>Wirra Wirra Vineyards</strong>
+        Wirra Wirra is an established McLaren Vale winery known for its historic ironstone
+        buildings, cellar door and surrounding vineyards. The property combines tastings,
+        food experiences and stories connected with the winery’s heritage and distinctive
+        personality.
+      </li>
+
+    </ul>
+
     <p style="text-align:center;">
-      <a
-        href="../attraction-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-
-        <div class="attraction-placeholder">
-          Featured McLaren Vale Attractions Coming Soon
-        </div>
-
-      </div>
-    </div>
-
     <!-- POINTS OF INTEREST -->
-    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
 
     <p class="accommodation-intro">
-      McLaren Vale’s vineyard landscapes, local landmarks and other
-      points of interest will be documented and added to this page
-      following our visit.
+      Explore McLaren Vale’s townships, beaches, river landscapes, heritage places and
+      scenic viewpoints between Old Noarlunga and Willunga.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <!-- ALDINGA -->
+      <div class="poi-card">
         <div class="poi-placeholder">
-          McLaren Vale Points of Interest Coming Soon
+          Aldinga Image Coming Soon
         </div>
 
+        <div class="poi-card-content">
+          <h3>Aldinga</h3>
+
+          <p>
+            Aldinga is a growing coastal and rural community between McLaren Vale and the
+            Fleurieu coastline. Its historic township, surrounding farmland and proximity
+            to Aldinga Beach connect the wine region with the coast and the wider southern
+            Fleurieu Peninsula.
+          </p>
+        </div>
       </div>
+
+      <!-- MASLIN BEACH -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Maslin Beach Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Maslin Beach</h3>
+
+          <p>
+            Maslin Beach is known for its broad sandy shoreline and striking multicoloured
+            cliffs. Coastal views, clear water and the elevated cliff-top landscape make
+            it one of the most visually distinctive beaches near McLaren Vale.
+          </p>
+        </div>
+      </div>
+
+      <!-- MCLAREN VALE TOWN CENTRE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          McLaren Vale Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>McLaren Vale Town Centre</h3>
+
+          <p>
+            McLaren Vale’s town centre serves as the commercial and visitor hub of the wine
+            region. Main Road contains cafés, restaurants, cellar doors, specialty shops
+            and local services, with vineyards and wineries beginning only a short distance
+            from the centre of town.
+          </p>
+        </div>
+      </div>
+
+      <!-- MOANA BEACH -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Moana Beach Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Moana Beach</h3>
+
+          <p>
+            Moana Beach offers a long sandy shoreline backed by low dunes and coastal
+            development. It is a popular location for swimming, walking and watching the
+            sunset across Gulf St Vincent, with designated sections allowing vehicle
+            access under applicable conditions.
+          </p>
+        </div>
+      </div>
+
+      <!-- OLD NOARLUNGA -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Old Noarlunga Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Old Noarlunga – Suspension Bridge</h3>
+
+          <p>
+            Old Noarlunga is an historic township positioned beside a sweeping bend of the
+            Onkaparinga River. Its heritage buildings, elevated landscape and pedestrian
+            suspension bridge preserve the character of an early settlement at the
+            northern gateway to the McLaren Vale district.
+          </p>
+        </div>
+      </div>
+
+      <!-- ONKAPARINGA RIVER MOUTH -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Onkaparinga River Mouth Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Onkaparinga River Mouth</h3>
+
+          <p>
+            The Onkaparinga River reaches Gulf St Vincent between Port Noarlunga South and
+            Moana. Its estuary contains wetlands, sandbars and sheltered water supporting
+            birdlife, kayaking, fishing and changing views across the coast.
+          </p>
+        </div>
+      </div>
+
+      <!-- ONKAPARINGA RIVER NATIONAL PARK -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Onkaparinga River National Park Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Onkaparinga River National Park – Punchbowl Lookout</h3>
+
+          <p>
+            Onkaparinga River National Park protects a rugged gorge carved through the
+            hills north of McLaren Vale. Punchbowl Lookout provides an accessible elevated
+            view across the gorge, river valley, cliffs and native vegetation of the park.
+          </p>
+        </div>
+      </div>
+
+      <!-- PORT WILLUNGA BEACH -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Port Willunga Beach Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Port Willunga Beach</h3>
+
+          <p>
+            Port Willunga Beach is recognised for its pale cliffs, sheltered sand and the
+            remaining pylons of the former jetty. The caves cut into the cliff and the
+            nearby Harbour Master’s Cottage recall the period when Port Willunga operated
+            as an important coastal export point.
+          </p>
+        </div>
+      </div>
+
+      <!-- WILLUNGA FARMERS MARKET -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Willunga Farmers Market Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Willunga Farmers Market</h3>
+
+          <p>
+            Willunga Farmers Market brings together growers, producers and food businesses
+            from across the Fleurieu Peninsula. The weekly market is an important local
+            gathering place and showcases fruit, vegetables, baked goods, dairy products,
+            meats and other seasonal regional produce.
+          </p>
+        </div>
+      </div>
+
+      <!-- WILLUNGA HILL LOOKOUT -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Willunga Hill Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Willunga Hill Lookout</h3>
+
+          <p>
+            Willunga Hill rises above the township and provides expansive views across the
+            vineyards, plains and coastline of the southern Fleurieu region. The steep
+            climb is also internationally recognised through its association with the
+            Tour Down Under cycling race.
+          </p>
+        </div>
+      </div>
+
+      <!-- WILLUNGA TOWN CENTRE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Willunga Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Willunga Town Centre</h3>
+
+          <p>
+            Willunga is one of South Australia’s oldest towns and retains a strong
+            collection of heritage buildings, shops, cafés and community spaces. Its
+            historic streets and position beneath Willunga Hill make it an important
+            cultural centre within the wider McLaren Vale district.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
-    <h2>🏨 Stay Where We Showcase — McLaren Vale</h2>
+    <h2>🏨 Stay Where We Showcase – McLaren Vale</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in McLaren Vale? Explore available accommodation
-      in and around the town while we continue developing our complete
-      McLaren Vale destination guide.
+      Planning a stay in McLaren Vale? Explore eligible hotels, motels, hosted bed and
+      breakfasts and caravan-park accommodation within the wine region and its immediate
+      surrounds, extending no farther north than Old Noarlunga.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay.
+      We help people discover where to go, what to experience and where to base themselves
+      as they explore Australia’s cities, towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=McLaren+Vale%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMcLaren%2520Vale%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All McLaren Vale Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around McLaren Vale
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through
+      professionally produced video, photography and destination-led storytelling that
+      places their property in front of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../accommodation-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
           Featured McLaren Vale Accommodation Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around McLaren Vale
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <!-- 3 DIVAS B&B -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>3 Divas B&amp;B</strong>
+          <small>Bed and breakfast · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3D3%2520Divas%2520B%2526B%252C%2520McLaren%2520Vale%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- AMANDE BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Amande Bed and Breakfast</strong>
+          <small>Bed and breakfast · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Famande-bed-and-breakfast.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- BED AND BREAKFAST AT TIFFANY'S -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Bed &amp; Breakfast at Tiffany’s</strong>
+          <small>Hosted bed and breakfast · McLaren Vale wine region</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fbed-amp-breakfast-at-tiffany-39-s.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- BELLA COSA -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Bella Cosa</strong>
+          <small>Bed and breakfast cottages · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fbella-cosa-bed-and-breakfast.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- BELLEVUE BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Bellevue Bed &amp; Breakfast</strong>
+          <small>Hosted bed and breakfast · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fbellevue-bed-and-breakfast.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- BERESFORD ESTATE -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Beresford Estate</strong>
+          <small>Vineyard hotel and suites · McLaren Flat</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBeresford%2520Estate%252C%2520McLaren%2520Flat%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- HOTEL CALIFORNIA ROAD -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Hotel California Road at Inkwell Wines</strong>
+          <small>Boutique vineyard hotel · Tatachilla</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHotel%2520California%2520Road%2520at%2520Inkwell%2520Wines%252C%2520McLaren%2520Vale"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- MCLAREN VALE LAKESIDE CARAVAN PARK -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>McLaren Vale Lakeside Caravan Park</strong>
+          <small>Caravan park, cabins and cottages · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMcLaren%2520Vale%2520Lakeside%2520Caravan%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- MCLAREN VALE MOTEL AND APARTMENTS -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>McLaren Vale Motel &amp; Apartments</strong>
+          <small>Motel and managed apartments · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fmclaren-vale-motel-apartment.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- SERAFINO MCLAREN VALE -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Serafino McLaren Vale</strong>
+          <small>Vineyard hotel and resort rooms · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSerafino%2520McLaren%2520Vale%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- SOUTHERN VALES BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Southern Vales Bed &amp; Breakfast</strong>
+          <small>Bed and breakfast · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSouthern%2520Vales%2520Bed%2520and%2520Breakfast%252C%2520McLaren%2520Vale"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <!-- WINE AND ROSES BED AND BREAKFAST -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Wine and Roses Bed and Breakfast</strong>
+          <small>Bed and breakfast · McLaren Vale</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWine%2520and%2520Roses%2520Bed%2520and%2520Breakfast%252C%2520McLaren%2520Vale"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Accommodation availability, services and booking
+      arrangements may change, so visitors should confirm details before travelling.
+      Some links on this page are affiliate links, which means we may earn a small
+      commission if you make a booking, at no extra cost to you.
+    </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -485,16 +1118,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a><br>
+      </a>
+      <br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
-      </span><br>
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
-
   </footer>
 
 </body>
