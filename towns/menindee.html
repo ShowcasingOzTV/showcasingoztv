@@ -4,34 +4,54 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<title>Menindee (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Menindee, NSW — an outback town on the Darling River, known for the Menindee Lakes system, Burke and Wills history, and vast inland landscapes." />
-<meta name="keywords" content="Menindee NSW, Menindee Lakes, Darling River town NSW, Burke and Wills Menindee, Kinchega National Park, outback NSW travel, Menindee attractions, ShowcasingOz TV" />
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Menindee (NSW) | ShowcasingOz TV</title>
+
+  <meta
+    name="description"
+    content="Discover Menindee on the Darling River in Outback New South Wales. Explore the Menindee Lakes, Kinchega National Park, Burke and Wills history, local attractions and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Menindee NSW, Menindee Lakes, Kinchega National Park, Darling River, Burke and Wills, Menindee attractions, Menindee accommodation, Outback NSW, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +59,325 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        margin-left: 0;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      border-radius: 0;
+    }
+
+    .poi-card-content {
+      padding: 18px;
+    }
+
+    .poi-card-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .poi-card-content p {
+      margin: 0;
+      font-size: 0.94rem;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+    }
+
+    .other-stay-details {
+      display: flex;
+      flex-direction: column;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    .other-stay-details strong {
+      color: #0E3557;
+      margin-bottom: 3px;
+    }
+
+    .other-stay-details small {
+      color: #666666;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 15px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – MENINDEE ================= */
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    @media (max-width: 600px) {
+      .hero {
+        height: 240px;
+      }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+      .video-placeholder {
+        height: 240px;
+      }
 
-.other-accommodation-list li {
-  text-align: center;
-}
+      .other-stay-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+      .other-stay-item .accommodation-link {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 
@@ -370,10 +386,19 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -388,257 +413,432 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/menindee.jpg"
-       alt="Menindee New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', function () {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/menindee.jpg"
+      alt="Menindee Lakes in Outback New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Menindee (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Menindee is a historic outback town in far western New South Wales, located along the Darling River and surrounded by the expansive Menindee Lakes system. Known for its rich exploration history and striking inland waterways, Menindee offers a unique blend of river life and desert landscapes.
-</p>
+    <h1>Menindee (NSW)</h1>
 
-<p>
-Established in the mid-19th century, Menindee is one of the oldest European settlements in western New South Wales. The town played a key role in early exploration, most notably as a base for the Burke and Wills expedition, cementing its place in Australian history.
-</p>
+    <p>
+      Menindee is a historic outback town beside the Darling River, also known as the
+      Baaka, in far western New South Wales. Surrounded by river country, red earth and
+      the vast Menindee Lakes system, it presents a striking meeting point between inland
+      water and the arid Australian landscape.
+    </p>
 
-<p>
-The Menindee Lakes system is the defining feature of the region, consisting of a series of interconnected lakes that support water storage, wildlife habitats, and recreation. These waterways create a rare inland oasis, attracting birdlife and providing opportunities for fishing, boating, and camping.
-</p>
+    <p>
+      Established during the nineteenth century, Menindee is one of the oldest European
+      settlements in western New South Wales. The town developed as an important river
+      port and service centre for pastoral stations, travellers and communities throughout
+      the surrounding district.
+    </p>
 
-<p>
-The surrounding landscape is characterised by red earth, river gums, and open plains, offering a classic outback setting shaped by both water and arid conditions. Nearby Kinchega National Park adds further depth to the region, preserving pastoral heritage sites and natural environments.
-</p>
+    <p>
+      Menindee occupies a significant place in Australian exploration history. Burke and
+      Wills and the Victorian Exploring Expedition reached the town in 1860, using it as
+      an important staging point before continuing north into more remote country.
+    </p>
 
-<p>
-Menindee provides basic services, accommodation, and a quiet rural atmosphere, appealing to travellers seeking an authentic outback experience. Its combination of history, waterways, and remote location makes it a distinctive destination in far western New South Wales.
-</p>
+    <p>
+      The Menindee Lakes system is the defining natural feature of the region. Its
+      interconnected lakes and water-storage infrastructure support town water supplies,
+      wildlife habitat, fishing, boating and recreation, although water levels can change
+      considerably according to river flows and water-management conditions.
+    </p>
 
-<p>
-Surrounded by lakes, river systems, and wide-open country, Menindee captures the contrast and scale of inland Australia, where water and landscape combine to shape a unique environment.
-</p>
+    <p>
+      Kinchega National Park protects extensive areas of lake, river and floodplain country
+      near Menindee. The park also preserves significant Aboriginal cultural connections,
+      pastoral remains, the Kinchega Woolshed and sites associated with river transport
+      along the Darling.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Menindee as part of our national filming journey — highlighting its Menindee Lakes system, exploration history, connection to the Darling River, and the rugged beauty of this far western New South Wales destination.
-</p>
+    <p>
+      Menindee and the lakes attract a wide variety of waterbirds when conditions are
+      favourable. River red gums, wetlands, open water and semi-arid country support a
+      distinctive ecosystem and create memorable opportunities for photography,
+      birdwatching and observing outback sunsets.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Today, Menindee remains a small but important regional community offering essential
+      services and a limited range of visitor accommodation. Travellers should check road,
+      park and lake conditions before visiting, particularly when planning journeys into
+      Kinchega National Park or along unsealed outback roads.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Menindee Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Menindee</h3>
-  <ul class="other-accommodation-list">
-    <li>Menindee Tourist Center</li>
-    <li>Tolarno Station</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions In And Around Menindee</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Menindee’s visitor experiences introduce travellers to the town’s history, regional
+      stories and the pastoral landscapes surrounding the Darling River.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Menindee’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <ul class="attractions-list">
 
-<div class="poi-grid">
+      <!-- MENINDEE VISITOR INFORMATION CENTRE -->
+      <li>
+        <strong>Menindee Visitor Information Centre</strong>
+        Operated with the support of local volunteers, the Menindee Visitor Information
+        Centre provides maps, current travel advice and information about the lakes,
+        Kinchega National Park, road conditions and local history. It is a practical first
+        stop for travellers unfamiliar with the district.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Burke & Wills Memorial</h3>
-      <p>
-  The Burke & Wills Memorial commemorates the famous explorers and their expedition, marking Menindee’s role as a key staging point in Australian exploration history.
-</p>
+      <!-- TOLARNO STATION -->
+      <li>
+        <strong>Tolarno Station</strong>
+        Tolarno Station is a working pastoral property in the wider Menindee district.
+        Its station landscape, historic homestead and connections with the Darling River
+        provide insight into pastoral life, environmental conditions and the challenges
+        faced by remote river communities.
+      </li>
+
+    </ul>
+
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Landmarks, Points of Interest &amp; Hidden Gems</h2>
+
+    <p class="accommodation-intro">
+      Explore Menindee’s exploration history, lake system, pastoral heritage and the
+      significant landscapes preserved within Kinchega National Park.
+    </p>
+
+    <div class="poi-grid">
+
+      <!-- BURKE AND WILLS CAMPSITE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Burke and Wills Campsite Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Burke and Wills Campsite</h3>
+
+          <p>
+            The Burke and Wills Campsite marks an area associated with the Victorian
+            Exploring Expedition’s stay at Menindee in 1860. It helps explain the town’s
+            role as a staging point where the expedition reorganised and prepared before
+            continuing north.
+          </p>
+        </div>
+      </div>
+
+      <!-- BURKE AND WILLS MEMORIAL -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Burke and Wills Memorial Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Burke and Wills Memorial</h3>
+
+          <p>
+            The Burke and Wills Memorial commemorates the explorers and Menindee’s
+            connection with their famous expedition across the Australian continent.
+            Interpretation at the site provides context for the expedition’s time in the
+            town and its importance to the wider journey.
+          </p>
+        </div>
+      </div>
+
+      <!-- KINCHEGA WOOLSHED -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Kinchega Woolshed Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Kinchega Woolshed</h3>
+
+          <p>
+            Kinchega Woolshed is a substantial historic shearing shed that demonstrates
+            the scale of pastoral activity once undertaken on Kinchega Station. Its
+            timber structure, shearing equipment and interpretation reveal the working
+            lives of shearers and station employees.
+          </p>
+        </div>
+      </div>
+
+      <!-- LAKE PAMAMAROO -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Lake Pamamaroo Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Lake Pamamaroo</h3>
+
+          <p>
+            Lake Pamamaroo forms part of the Menindee Lakes system north of the township.
+            When water levels permit, the lake supports fishing, boating, birdwatching and
+            expansive views across open water, river red gums and the surrounding outback.
+          </p>
+        </div>
+      </div>
+
+      <!-- MENINDEE LAKES DAM WALL -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Menindee Lakes Dam Wall Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Menindee Lakes Dam Wall</h3>
+
+          <p>
+            The dam wall and associated water-control infrastructure demonstrate the scale
+            and engineering of the Menindee Lakes storage system. The area provides broad
+            views across the lake environment and illustrates how water is managed within
+            the Darling River system.
+          </p>
+        </div>
+      </div>
+
+      <!-- MORTON BOULKA PICNIC AREA -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Morton Boulka Picnic Area Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Morton Boulka Picnic Area</h3>
+
+          <p>
+            Morton Boulka Picnic Area is a remote lakeside location within Kinchega
+            National Park. Positioned between the Menindee and Cawndilla lake systems,
+            it can provide opportunities for picnicking, birdwatching, paddling and
+            swimming when water levels and park conditions are suitable.
+          </p>
+        </div>
+      </div>
+
+      <!-- OLD KINCHEGA HOMESTEAD -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Old Kinchega Homestead Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Old Kinchega Homestead</h3>
+
+          <p>
+            The remains of Old Kinchega Homestead preserve part of the pastoral history of
+            Kinchega Station. Building ruins and interpretation illustrate the isolation,
+            working conditions and everyday challenges experienced by people living beside
+            the Darling River.
+          </p>
+        </div>
+      </div>
+
+      <!-- PS PROVIDENCE HISTORIC SITE -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          PS Providence Historic Site Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>PS Providence Historic Site</h3>
+
+          <p>
+            The PS Providence Historic Site commemorates the paddle steamer destroyed by
+            a boiler explosion in 1872. The tragedy claimed the lives of members of its
+            crew and remains an important reminder of the risks associated with nineteenth-
+            century river transport on the Darling.
+          </p>
+        </div>
+      </div>
+
+      <!-- SUNSET STRIP -->
+      <div class="poi-card">
+        <div class="poi-placeholder">
+          Sunset Strip Walk of Fame Image Coming Soon
+        </div>
+
+        <div class="poi-card-content">
+          <h3>Sunset Strip and Walk of Fame</h3>
+
+          <p>
+            Sunset Strip is a small lakeside settlement on the northern shore of Lake
+            Menindee, approximately 20 kilometres from town. Known for its expansive
+            sunsets, the community also features a locally created Walk of Fame
+            celebrating identities and stories connected with the district.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Sunset Strip Home To The Walk Of Fame</h3>
-      <p>
-Sunset Strip is a scenic area along the river featuring a local Walk of Fame, celebrating notable individuals connected to the region and offering a popular spot for sunset views.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Menindee Lakes Dam Wall</h3>
-      <p>
-The Menindee Lakes Dam Wall provides views over the vast lake system, showcasing the scale of water storage and the surrounding outback landscape.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Pamamaroo</h3>
-      <p>
-Lake Pamamaroo is one of the main lakes in the Menindee system, known for its birdlife, fishing, and expansive water views.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Burke & Wills Campsite</h3>
-      <p>
-The Burke & Wills Campsite marks the location where the explorers established a base, providing historical context and insight into their journey.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Morton Boulka Picnic Area</h3>
-      <p>
-Morton Boulka Picnic Area offers a shaded riverside setting within Kinchega National Park, ideal for relaxing and enjoying the natural environment.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Kinchega Homestead</h3>
-      <p>
-The Old Kinchega Homestead is a preserved pastoral site reflecting early station life and the development of the region’s grazing industry.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>PS Providence Historic Site</h3>
-      <p>
-The PS Providence Historic Site marks the resting place of a historic paddle steamer, highlighting the importance of river transport along the Darling River.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Kinchega Woolshed</h3>
-      <p>
-Kinchega Woolshed is a well-preserved shearing shed that illustrates the scale of the pastoral industry and the working life of shearers in the region.
-</p>
-    </div>
-  </div>
-  </div>
 
     <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Menindee</h2>
+    <h2>🏨 Stay Where We Showcase – Menindee</h2>
 
-<p class="accommodation-intro">
-  Planning a stay in Menindee? Explore accommodation options in and around this outback town while discovering
-  the Menindee Lakes system, Darling River landscapes, and rich exploration history that define far western New South Wales.
-</p>
+    <p class="accommodation-intro">
+      Accommodation in Menindee is limited, so advance planning is strongly recommended.
+      The eligible options below include local hotel rooms, motel accommodation and
+      caravan parks serving visitors to the lakes, Darling River and Kinchega National Park.
+    </p>
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay.
+      We help people discover where to go, what to experience and where to base themselves
+      as they explore Australia’s cities, towns and hidden gems.
+    </p>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales"
-     target="_blank"
-     class="accommodation-link">
-    View All Menindee Accommodation
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Menindee Accommodation
+      </a>
+    </p>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Menindee</h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Menindee
+    </h3>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through
+      professionally produced video, photography and destination-led storytelling that
+      places their property in front of travellers actively planning where to stay.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Menindee Accommodation Coming Soon
+        </div>
+      </div>
+    </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Menindee</h3>
-<div class="other-accommodation-bookings">
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Menindee
+    </h3>
 
-  <div class="other-stay-item"><span>Albermarle Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+    <div class="other-accommodation-bookings">
 
-  <div class="other-stay-item"><span>Bindara on the Darling</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+      <!-- BURKE AND WILLS MENINDEE MOTEL -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Burke &amp; Wills Menindee Motel</strong>
+          <small>Motel · Menindee town centre</small>
+        </div>
 
-  <div class="other-stay-item"><span>Burke & Wills Menindee Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBurke%2520and%2520Wills%2520Menindee%2520Motel%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Copi Hollow Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+      <!-- COPI HOLLOW LAKE CARAVAN PARK -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Copi Hollow Lake Caravan Park</strong>
+          <small>Caravan park and on-site cabins · Copi Hollow</small>
+        </div>
 
-  <div class="other-stay-item"><span>Kinchega Shearers' Quarters</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCopi%2520Hollow%2520Lake%2520Caravan%2520Park%252C%2520Menindee%252C%2520NSW"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Menindee Lakes Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+      <!-- MAIDENS MENINDEE HOTEL -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Maidens Menindee Hotel</strong>
+          <small>Country hotel accommodation · Menindee town centre</small>
+        </div>
 
-  <div class="other-stay-item"><span>Nelia Gaari Station</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMaidens%2520Menindee%2520Hotel%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-</div>
-  
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+      <!-- MENINDEE LAKES CARAVAN PARK -->
+      <div class="other-stay-item">
+        <div class="other-stay-details">
+          <strong>Menindee Lakes Caravan Park</strong>
+          <small>Caravan park · Menindee</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMenindee%2520Lakes%2520Caravan%2520Park%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply
+      partnership or endorsement. Accommodation availability, park access, road
+      conditions and lake conditions may change, so visitors should confirm details
+      directly before travelling. Some links on this page are affiliate links, which
+      means we may earn a small commission if you make a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -656,8 +856,18 @@ Kinchega Woolshed is a well-preserved shearing shed that illustrates the scale o
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>
+      <br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span>
+      <br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
