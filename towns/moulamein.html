@@ -1,92 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Moulamein, New South Wales | ShowcasingOz TV</title>
-
-  <meta
-    name="description"
-    content="Discover Moulamein in New South Wales, including its pastoral heritage, historic attractions, riverfront landmarks and local accommodation."
-  >
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  >
-
-  <!-- Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"
-  ></script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Moulamein (NSW) | ShowcasingOz TV</title>
+
+  <meta name="description" content="Discover Moulamein with ShowcasingOz TV, including pastoral attractions, historic landmarks, riverside points of interest and accommodation.">
+
+  <meta name="keywords" content="Moulamein NSW, Moulamein Riverina, Edward River, Moulamein attractions, Moulamein accommodation, New South Wales travel, ShowcasingOz TV">
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333333;
       background: #ffffff;
+      color: #0E3557;
     }
 
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
 
     header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     header.navbar img {
-      width: auto;
       height: 65px;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      width: auto;
     }
 
     nav a {
       color: #ffffff;
-      margin-left: 18px;
+      margin-left: 20px;
       text-decoration: none;
-      font-size: 0.95rem;
       font-weight: 500;
     }
 
@@ -98,414 +76,316 @@
       display: none;
       cursor: pointer;
       font-size: 1.5rem;
-      color: #ffffff;
     }
 
-    .hero {
-      min-height: 320px;
-      padding: 70px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      color: #ffffff;
-      background:
-        linear-gradient(rgba(14, 53, 87, 0.48), rgba(14, 53, 87, 0.7)),
-        url("../images/towns/moulamein.jpg") center center / cover no-repeat;
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      line-height: 1.1;
-      text-shadow: 0 2px 7px rgba(0, 0, 0, 0.45);
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
-      line-height: 1.6;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 45px 20px 20px;
-    }
-
-    section {
-      margin-bottom: 55px;
-    }
-
-    h2 {
-      margin: 0 0 22px;
-      color: #0E3557;
-      font-size: 1.9rem;
-      text-align: center;
-    }
-
-    h3 {
-      color: #0E3557;
-    }
-
-    .town-introduction {
-      max-width: 900px;
-      margin: 0 auto 55px;
-    }
-
-    .town-introduction p,
-    .accommodation-intro {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: #3f3f3f;
-    }
-
-    .video-placeholder {
-      min-height: 330px;
-      padding: 35px;
-      border-radius: 12px;
-      background: #E9EEF2;
-      border: 2px dashed #9AA7B2;
-      color: #0E3557;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .video-placeholder i {
-      margin-bottom: 15px;
-      color: #E87722;
-      font-size: 3.2rem;
-    }
-
-    .video-placeholder strong {
-      margin-bottom: 8px;
-      font-size: 1.35rem;
-    }
-
-    .video-placeholder span {
-      color: #555555;
-      line-height: 1.6;
-    }
-
-    .attractions-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .attraction-item {
-      padding: 22px;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-left: 5px solid #E87722;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .attraction-item h3 {
-      margin: 0 0 9px;
-      color: #E87722;
-      font-size: 1.22rem;
-    }
-
-    .attraction-item p {
-      margin: 0;
-      color: #444444;
-      line-height: 1.65;
-    }
-
-    .poi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-      gap: 22px;
-    }
-
-    .poi-card {
-      overflow: hidden;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .poi-placeholder {
-      height: 165px;
-      padding: 20px;
-      background: linear-gradient(135deg, #DDE8EF, #EEF3F6);
-      color: #607282;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .poi-placeholder i {
-      margin-bottom: 9px;
-      color: #E87722;
-      font-size: 2rem;
-    }
-
-    .poi-card-content {
-      padding: 20px;
-    }
-
-    .poi-card-content h3 {
-      margin: 0 0 9px;
-      color: #E87722;
-      font-size: 1.18rem;
-    }
-
-    .poi-card-content p {
-      margin: 0;
-      color: #444444;
-      line-height: 1.6;
-    }
-
-    .accommodation-section {
-      padding: 35px 25px;
-      background: #F5F7FA;
-      border-radius: 14px;
-    }
-
-    .accommodation-section .accommodation-intro {
-      max-width: 900px;
-      margin: 0 auto 18px;
-      text-align: center;
-    }
-
-    .accommodation-link {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      background: #E87722;
-      color: #ffffff;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .accommodation-link:hover {
-      background: #CC611A;
-      transform: translateY(-1px);
-    }
-
-    .other-accommodation-heading {
-      margin: 40px 0 18px;
-      text-align: center;
-      color: #0E3557;
-      font-size: 1.35rem;
-    }
-
-    .accommodation-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .accommodation-card {
-      overflow: hidden;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .accommodation-placeholder {
-      min-height: 190px;
-      padding: 25px;
-      background: linear-gradient(135deg, #0E3557, #1C527E);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .other-accommodation-bookings {
-      display: grid;
-      gap: 14px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .other-stay-item {
-      padding: 17px 18px;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .other-stay-details {
-      flex: 1;
-    }
-
-    .other-stay-details strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #0E3557;
-      font-size: 1.04rem;
-    }
-
-    .other-stay-details span {
-      color: #666666;
-      font-size: 0.94rem;
-      line-height: 1.45;
-    }
-
-    .other-stay-item .accommodation-link {
-      flex: 0 0 auto;
-      padding: 10px 17px;
-      font-size: 0.94rem;
-    }
-
-    .accommodation-disclaimer {
-      max-width: 900px;
-      margin: 25px auto 0;
-      color: #666666;
-      font-size: 0.88rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    footer {
-      margin-top: 60px;
-      padding: 30px 20px;
-      background: #0E3557;
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .footer-links {
-      margin-bottom: 18px;
-      line-height: 2;
-    }
-
-    footer a {
-      margin: 0 8px;
-      color: #E87722;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    footer p {
-      margin: 0;
-      color: #ffffff;
-      line-height: 1.7;
-    }
-
-    .gst-disclaimer {
-      font-size: 0.88rem;
-      color: #D9E1E7;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       nav {
         display: none;
+        flex-direction: column;
+        background: #0E3557;
         width: 100%;
         position: absolute;
-        top: 85px;
+        top: 70px;
         right: 0;
-        padding: 8px 0;
-        background: #0E3557;
-        flex-direction: column;
-        align-items: stretch;
       }
 
       nav.active {
         display: flex;
       }
 
-      nav a {
-        margin: 0;
-        padding: 13px 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
       .menu-btn {
         display: block;
       }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    @media (max-width: 650px) {
-      .hero {
-        min-height: 275px;
-        padding: 55px 20px;
-      }
+    .hero {
+      width: 100%;
+      height: 320px;
+      background: #dddddd;
+    }
 
-      main {
-        padding-top: 35px;
-      }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-      section {
-        margin-bottom: 45px;
-      }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-      h2 {
-        font-size: 1.6rem;
-      }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-      .video-placeholder {
-        min-height: 260px;
-      }
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
-      .accommodation-section {
-        padding: 30px 16px;
-      }
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
 
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
       .other-stay-item {
-        align-items: stretch;
+        align-items: flex-start;
         flex-direction: column;
       }
+    }
 
-      .other-stay-item .accommodation-link {
-        width: 100%;
-        text-align: center;
-      }
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVIGATION -->
+  <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
-        <img
-          src="/images/logo.jpg"
-          alt="ShowcasingOz TV Logo"
-          width="170"
-          height="65"
-        >
+        <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
       </a>
 
-      <span
-        class="menu-btn"
-        id="menu-btn"
-        aria-label="Open navigation menu"
-        role="button"
-        tabindex="0"
-      >
-        <i class="fa-solid fa-bars"></i>
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
       </span>
 
       <nav id="menu">
@@ -519,360 +399,308 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Moulamein, New South Wales</h1>
-
-      <p>
-        Riverina history, pastoral heritage and peaceful waterways at the
-        meeting of the Edward River and Billabong Creek.
-      </p>
-    </div>
+    <img src="../images/towns/moulamein.jpg"
+         alt="Moulamein New South Wales"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
   </section>
 
-  <main>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-    <!-- TOWN INTRODUCTION -->
-    <section class="town-introduction">
-      <h2>Discover Moulamein</h2>
+    <h1>Moulamein (NSW)</h1>
 
-      <p>
-        Moulamein is a historic rural town in southern New South Wales, located
-        at the meeting of the Edward River and Billabong Creek. Recognised as
-        the oldest town in the Riverina, it offers visitors an opportunity to
-        explore the early pastoral, river-trading and settlement history of the
-        region in a peaceful country setting.
-      </p>
+    <p>
+      Moulamein is a historic rural town in southern New South Wales, situated
+      at the meeting of the Edward River and Billabong Creek. Recognised as the
+      oldest town in the Riverina, it offers visitors an opportunity to explore
+      the early pastoral, river-trading and settlement history of the region in
+      a peaceful country setting.
+    </p>
 
-      <p>
-        The waterways surrounding Moulamein have shaped the town’s development
-        and identity. Long before European settlement, this landscape held deep
-        cultural importance for the Wamba Wamba people, who used the rivers,
-        creeks and surrounding country for hunting, fishing, camping and
-        ceremonial gatherings.
-      </p>
+    <p>
+      Long before European settlement, the surrounding rivers, creeks and
+      wetlands held deep cultural importance for the Wamba Wamba people. These
+      waterways supported hunting, fishing, camping and ceremonial gatherings
+      and continue to form an important part of the area’s cultural and natural
+      landscape.
+    </p>
 
-      <p>
-        During the nineteenth century, Moulamein developed as an inland port and
-        service centre for the surrounding pastoral district. Paddle steamers
-        transported wool, produce and supplies along the river system, linking
-        remote farming properties with larger markets and river ports.
-      </p>
+    <p>
+      During the nineteenth century, Moulamein developed as an inland river
+      port and service centre for the surrounding pastoral district. Paddle
+      steamers transported wool, agricultural produce, passengers and supplies
+      along the river system, connecting remote farming properties with larger
+      markets and regional ports.
+    </p>
 
-      <p>
-        The Old Moulamein Wharf remains a visible connection to this riverboat
-        era. Nearby historic buildings, including the former courthouse, help
-        illustrate Moulamein’s early importance as an administrative and
-        commercial centre for a widely dispersed population.
-      </p>
+    <p>
+      The town’s heritage can be explored through the Old Moulamein Wharf,
+      former courthouse, Mooloomoon Shearing Shed and Moulamein Heritage
+      Village. Moulamein Lake and the Edward River provide additional
+      opportunities for walking, picnicking, fishing, birdwatching and enjoying
+      the river red gum landscape.
+    </p>
 
-      <p>
-        Pastoral history remains central to the local story. Mooloomoon Shearing
-        Shed preserves the working history of the district’s sheep industry,
-        while the Moulamein Heritage Village brings together historic
-        buildings, machinery and artefacts associated with the region’s early
-        settlers, tradespeople and farming families.
-      </p>
-
-      <p>
-        Natural attractions are equally important to the Moulamein experience.
-        Moulamein Lake provides a tranquil location for walking, picnicking,
-        birdwatching and family recreation, while the Edward River supports
-        fishing and opportunities to enjoy the river red gum environment.
-      </p>
-
-      <p>
-        With its heritage attractions, riverfront landmarks, local
-        accommodation and welcoming country character, Moulamein provides an
-        interesting stop for travellers exploring the western Riverina and the
-        wider River Country region.
-      </p>
-    </section>
+    <p>
+      ShowcasingOz TV will document Moulamein’s pastoral history, riverside
+      landmarks, local attractions and community stories as part of its
+      national filming journey. Following our visit, this page will be expanded
+      with original photography, professionally produced video and additional
+      information gathered on location.
+    </p>
 
     <!-- DOCUMENTARY -->
-    <section>
-      <h2>🎥 Watch Our Moulamein Feature</h2>
+    <h2>🎥 Town Documentary</h2>
 
-      <div class="video-placeholder">
-        <i class="fa-solid fa-circle-play"></i>
-
-        <strong>Our Moulamein documentary is coming soon</strong>
-
-        <span>
-          ShowcasingOz TV will capture Moulamein’s attractions, pastoral
-          heritage, riverfront landmarks, local businesses and community
-          stories during our visit.
-        </span>
-      </div>
-    </section>
+    <div class="video-placeholder">
+      Moulamein Documentary Coming Soon
+    </div>
 
     <!-- ATTRACTIONS -->
-    <section>
-      <h2>🎟️ Attractions In And Around Moulamein</h2>
+    <h2>📍 Attractions</h2>
 
-      <div class="attractions-list">
+    <p class="accommodation-intro">
+      Moulamein’s attractions preserve the pastoral, legal, artistic and
+      pioneering history of one of the Riverina’s oldest communities.
+    </p>
 
-        <!-- Alphabetical order -->
-        <article class="attraction-item">
-          <h3>Mooloomoon Shearing Shed</h3>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+
+      <li>
+        <strong>Mooloomoon Shearing Shed</strong>
+        Set among native bushland beside the Edward River, this historic
+        shearing shed contains displays exploring the lives of the shearers,
+        settlers and pastoral families who helped shape Moulamein and the
+        surrounding wool industry.
+      </li>
+
+      <li>
+        <strong>Moulamein Art Gallery</strong>
+        A welcoming local gallery showcasing artwork, handcrafted items and
+        gifts created by artists and makers from Moulamein and the surrounding
+        Riverina region.
+      </li>
+
+      <li>
+        <strong>Moulamein Heritage Village</strong>
+        A collection of preserved buildings, machinery, tools and household
+        artefacts associated with the district’s pioneering history, including
+        an old schoolhouse, blacksmith’s shop and other displays illustrating
+        early community life.
+      </li>
+
+      <li>
+        <strong>Old Moulamein Courthouse</strong>
+        Dating from 1890, the former courthouse reflects Moulamein’s early role
+        as an administrative and legal centre serving residents across a large
+        and sparsely populated section of the Riverina.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore Moulamein’s waterways, natural landmarks and surviving river-port
+      heritage through these important local points of interest.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Moulamein Lake Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Moulamein Lake</h3>
 
           <p>
-            Set among native bushland beside the Edward River, this historic
-            shearing shed explores the lives of the shearers, settlers and
-            pastoral families who helped shape Moulamein. Historical displays
-            tell the story of the local wool industry and other significant
-            Australian shearing sheds.
+            A peaceful lake covering approximately 15 hectares and providing
+            an attractive setting for walking, picnicking, birdwatching and
+            family recreation. Its calm water and surrounding vegetation
+            provide valuable habitat for local waterbirds.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="attraction-item">
-          <h3>Moulamein Art Gallery</h3>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Old Moulamein Wharf Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Old Moulamein Wharf</h3>
 
           <p>
-            This welcoming local gallery showcases artwork, handcrafted items
-            and gifts created by artists and makers from Moulamein and the
-            surrounding region. It provides visitors with an opportunity to
-            discover the creative side of the community while supporting local
-            talent.
+            Constructed in 1908, the wharf recalls the period when Moulamein
+            operated as an important inland river port. Paddle steamers once
+            transported wool, agricultural produce, passengers and supplies
+            through the surrounding river system.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="attraction-item">
-          <h3>Moulamein Heritage Village</h3>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Big Tree Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Big Tree</h3>
 
           <p>
-            The Heritage Village preserves buildings, machinery, tools and
-            household artefacts associated with the district’s pioneering
-            history. Its collection includes structures such as an old
-            schoolhouse and blacksmith’s shop, helping visitors understand
-            everyday life in the developing Riverina.
+            One of the largest recorded river red gums in the Riverina, with
+            a circumference of approximately 11.6 metres. Located along the
+            Moulamein River Walk, the tree is an important natural landmark
+            and meeting place within a culturally significant landscape.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="attraction-item">
-          <h3>Old Moulamein Courthouse</h3>
-
-          <p>
-            Dating from 1890, the former courthouse reflects Moulamein’s early
-            role as an administrative and legal centre. Court services had
-            operated in the district from the nineteenth century, serving
-            residents across a large and sparsely populated portion of the
-            Riverina.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- LANDMARKS / POIs -->
-    <section>
-      <h2>📍 Landmarks, Points Of Interest &amp; Hidden Gems</h2>
-
-      <div class="poi-grid">
-
-        <!-- Alphabetical order -->
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-water"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
-
-          <div class="poi-card-content">
-            <h3>Moulamein Lake</h3>
-
-            <p>
-              This peaceful lake covers approximately 15 hectares and provides
-              an attractive setting for walking, picnicking, birdwatching and
-              family recreation. Its calm water and surrounding vegetation
-              create valuable habitat for waterbirds, including black swans.
-            </p>
-          </div>
-        </article>
-
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-anchor"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
-
-          <div class="poi-card-content">
-            <h3>Old Moulamein Wharf</h3>
-
-            <p>
-              Constructed in 1908, the wharf recalls the period when Moulamein
-              operated as a busy inland river port. Paddle steamers once used
-              the surrounding waterways to transport wool, agricultural
-              produce, passengers and essential supplies throughout the region.
-            </p>
-          </div>
-        </article>
-
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-tree"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
-
-          <div class="poi-card-content">
-            <h3>The Big Tree</h3>
-
-            <p>
-              This immense river red gum is one of the largest recorded examples
-              in the Riverina, with a circumference of approximately 11.6
-              metres. Located along the Moulamein River Walk, it is an important
-              natural landmark and meeting place within a culturally significant
-              riverside landscape.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </section>
+    </div>
 
     <!-- ACCOMMODATION -->
-    <section class="accommodation-section">
-      <h2>🏨 Stay Where We Showcase — Moulamein</h2>
+    <h2>🏨 Stay Where We Showcase — Moulamein</h2>
 
-      <p class="accommodation-intro">
-        Planning a visit to Moulamein? Explore local hotel, cabin and
-        caravan-park accommodation while discovering the town’s waterways,
-        pastoral heritage and relaxed Riverina character.
-      </p>
+    <p class="accommodation-intro">
+      Planning a stay in Moulamein? Explore local hotel, cabin and
+      caravan-park accommodation while discovering the town’s waterways,
+      pastoral heritage and relaxed Riverina character.
+    </p>
 
-      <p class="accommodation-intro">
-        ShowcasingOz TV is designed to do more than help travellers find a place
-        to stay. We help people discover where to go, what to experience and
-        where to base themselves while exploring Australia’s cities, towns and
-        hidden gems.
-      </p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
 
-      <p style="text-align:center;">
-        <a
-          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fcity%2Fau%2Fmoulamein.html"
-          target="_blank"
-          rel="noopener sponsored"
-          class="accommodation-link"
-        >
-          View All Moulamein Accommodation
-        </a>
-      </p>
+    <p style="text-align:center;">
+      <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMoulamein%252C%2520New%2520South%2520Wales%252C%2520Australia"
+         target="_blank"
+         rel="noopener sponsored"
+         class="accommodation-link">
+        View All Moulamein Accommodation
+      </a>
+    </p>
 
-      <h3 class="other-accommodation-heading">
-        Featured Accommodation Opportunities In And Around Moulamein
-      </h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Moulamein
+    </h3>
 
-      <p class="accommodation-intro">
-        Accommodation partners featured on ShowcasingOz TV receive premium
-        exposure through professionally produced video, photography and
-        destination-led storytelling that places their property in front of
-        travellers actively planning where to stay.
-      </p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
 
-      <p style="text-align:center;">
-        <a
-          href="../accommodation-partners.html"
-          class="accommodation-link"
-        >
-          Explore Accommodation Filming &amp; Feature Options
-        </a>
-      </p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-      <div class="accommodation-grid">
-        <div class="accommodation-card">
-          <div class="accommodation-placeholder">
-            Featured Accommodation Coming Soon
-          </div>
-        </div>
-      </div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
 
-      <h3 class="other-accommodation-heading">
-        Other Accommodation In And Around Moulamein
-      </h3>
-
-      <div class="other-accommodation-bookings">
-
-        <!-- Alphabetical order -->
-        <div class="other-stay-item">
-          <div class="other-stay-details">
-            <strong>Mooloomoon</strong>
-
-            <span>
-              Managed self-contained cabin accommodation set among native
-              bushland beside the Edward River near Moulamein.
-            </span>
-          </div>
-
-          <a
-            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMooloomoon%252C%2BMoulamein%252C%2BNew%2BSouth%2BWales"
-            target="_blank"
-            rel="noopener sponsored"
-            class="accommodation-link"
-          >
-            View / Book
-          </a>
-        </div>
-
-        <div class="other-stay-item">
-          <div class="other-stay-details">
-            <strong>Moulamein Lakeside Caravan Park</strong>
-
-            <span>
-              Local caravan park beside Moulamein Lake offering cabin
-              accommodation together with powered caravan sites.
-            </span>
-          </div>
-
-          <a
-            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMoulamein%2BLakeside%2BCaravan%2BPark%252C%2BNew%2BSouth%2BWales"
-            target="_blank"
-            rel="noopener sponsored"
-            class="accommodation-link"
-          >
-            View / Book
-          </a>
-        </div>
-
-        <div class="other-stay-item">
-          <div class="other-stay-details">
-            <strong>Tattersalls Hotel Moulamein</strong>
-
-            <span>
-              Historic country hotel offering ensuite rooms, traditional pub
-              rooms and two self-contained cabins overlooking the river.
-            </span>
-          </div>
-
-          <a
-            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTattersalls%2BHotel%2BMoulamein%252C%2BNew%2BSouth%2BWales"
-            target="_blank"
-            rel="noopener sponsored"
-            class="accommodation-link"
-          >
-            View / Book
-          </a>
+        <div class="accommodation-placeholder">
+          Featured Moulamein Accommodation Coming Soon
         </div>
 
       </div>
+    </div>
 
-      <p class="accommodation-disclaimer">
-        This accommodation list is provided for visitor awareness only.
-        Inclusion does not imply partnership, endorsement or personal
-        inspection by ShowcasingOz TV. Availability, facilities and booking
-        conditions should be confirmed directly with each accommodation
-        provider. Some links on this page are affiliate links, which means we
-        may earn a small commission if you make a qualifying booking, at no
-        additional cost to you.
-      </p>
-    </section>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Moulamein
+    </h3>
 
-  </main>
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Mooloomoon</span>
+          <small>Self-Contained Cabins · Moulamein district · Near town</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMooloomoon%252C%2520Moulamein%252C%2520New%2520South%2520Wales"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Moulamein Lakeside Caravan Park</span>
+          <small>Caravan Park / Cabins · Moulamein · Within town</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMoulamein%2520Lakeside%2520Caravan%2520Park%252C%2520Moulamein%252C%2520New%2520South%2520Wales"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tattersalls Hotel Moulamein</span>
+          <small>Hotel / Cabins · Moulamein · Within town centre</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTattersalls%2520Hotel%2520Moulamein%252C%2520New%2520South%2520Wales"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -890,37 +718,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-
-    function toggleMenu() {
-      menu.classList.toggle('active');
-    }
-
-    menuBtn.addEventListener('click', toggleMenu);
-
-    menuBtn.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        toggleMenu();
-      }
-    });
-  </script>
-
 </body>
-
 </html>
