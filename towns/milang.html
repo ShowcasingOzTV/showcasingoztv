@@ -1,92 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Milang, South Australia | ShowcasingOz TV</title>
-
-  <meta
-    name="description"
-    content="Discover Milang and Clayton Bay in South Australia, including Lake Alexandrina, local heritage attractions, waterfront landmarks and accommodation."
-  >
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  >
-
-  <!-- Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"
-  ></script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Milang (SA) | ShowcasingOz TV</title>
+
+  <meta name="description" content="Discover Milang and Clayton Bay with ShowcasingOz TV, including historic attractions, lakeside landmarks, points of interest and accommodation.">
+
+  <meta name="keywords" content="Milang SA, Clayton Bay, Lake Alexandrina, Milang Railway Museum, Milang attractions, Milang accommodation, South Australia travel, ShowcasingOz TV">
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333333;
       background: #ffffff;
+      color: #0E3557;
     }
 
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
 
     header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     header.navbar img {
-      width: auto;
       height: 65px;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      width: auto;
     }
 
     nav a {
       color: #ffffff;
-      margin-left: 18px;
+      margin-left: 20px;
       text-decoration: none;
-      font-size: 0.95rem;
       font-weight: 500;
     }
 
@@ -98,413 +76,316 @@
       display: none;
       cursor: pointer;
       font-size: 1.5rem;
-      color: #ffffff;
     }
 
-    .hero {
-      min-height: 320px;
-      padding: 70px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      color: #ffffff;
-      background:
-        linear-gradient(rgba(14, 53, 87, 0.48), rgba(14, 53, 87, 0.7)),
-        url("../images/towns/milang.jpg") center center / cover no-repeat;
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      line-height: 1.1;
-      text-shadow: 0 2px 7px rgba(0, 0, 0, 0.45);
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
-      line-height: 1.6;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 45px 20px 20px;
-    }
-
-    section {
-      margin-bottom: 55px;
-    }
-
-    h2 {
-      margin: 0 0 22px;
-      color: #0E3557;
-      font-size: 1.9rem;
-      text-align: center;
-    }
-
-    h3 {
-      color: #0E3557;
-    }
-
-    .town-introduction {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .town-introduction p,
-    .accommodation-intro {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: #3f3f3f;
-    }
-
-    .video-placeholder {
-      min-height: 330px;
-      padding: 35px;
-      border-radius: 12px;
-      background: #E9EEF2;
-      border: 2px dashed #9AA7B2;
-      color: #0E3557;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .video-placeholder i {
-      margin-bottom: 15px;
-      color: #E87722;
-      font-size: 3.2rem;
-    }
-
-    .video-placeholder strong {
-      margin-bottom: 8px;
-      font-size: 1.35rem;
-    }
-
-    .video-placeholder span {
-      color: #555555;
-      line-height: 1.6;
-    }
-
-    .attractions-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .attraction-item {
-      padding: 22px;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-left: 5px solid #E87722;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .attraction-item h3 {
-      margin: 0 0 9px;
-      color: #E87722;
-      font-size: 1.22rem;
-    }
-
-    .attraction-item p {
-      margin: 0;
-      color: #444444;
-      line-height: 1.65;
-    }
-
-    .poi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-      gap: 22px;
-    }
-
-    .poi-card {
-      overflow: hidden;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .poi-placeholder {
-      height: 165px;
-      padding: 20px;
-      background: linear-gradient(135deg, #DDE8EF, #EEF3F6);
-      color: #607282;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .poi-placeholder i {
-      margin-bottom: 9px;
-      color: #E87722;
-      font-size: 2rem;
-    }
-
-    .poi-card-content {
-      padding: 20px;
-    }
-
-    .poi-card-content h3 {
-      margin: 0 0 9px;
-      color: #E87722;
-      font-size: 1.18rem;
-    }
-
-    .poi-card-content p {
-      margin: 0;
-      color: #444444;
-      line-height: 1.6;
-    }
-
-    .accommodation-section {
-      padding: 35px 25px;
-      background: #F5F7FA;
-      border-radius: 14px;
-    }
-
-    .accommodation-section .accommodation-intro {
-      max-width: 900px;
-      margin: 0 auto 18px;
-      text-align: center;
-    }
-
-    .accommodation-link {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      background: #E87722;
-      color: #ffffff;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .accommodation-link:hover {
-      background: #CC611A;
-      transform: translateY(-1px);
-    }
-
-    .other-accommodation-heading {
-      margin: 40px 0 18px;
-      text-align: center;
-      color: #0E3557;
-      font-size: 1.35rem;
-    }
-
-    .accommodation-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .accommodation-card {
-      overflow: hidden;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .accommodation-placeholder {
-      min-height: 190px;
-      padding: 25px;
-      background: linear-gradient(135deg, #0E3557, #1C527E);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .other-accommodation-bookings {
-      display: grid;
-      gap: 14px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .other-stay-item {
-      padding: 17px 18px;
-      background: #ffffff;
-      border: 1px solid #DDE3E8;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .other-stay-details {
-      flex: 1;
-    }
-
-    .other-stay-details strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #0E3557;
-      font-size: 1.04rem;
-    }
-
-    .other-stay-details span {
-      color: #666666;
-      font-size: 0.94rem;
-      line-height: 1.45;
-    }
-
-    .other-stay-item .accommodation-link {
-      flex: 0 0 auto;
-      padding: 10px 17px;
-      font-size: 0.94rem;
-    }
-
-    .accommodation-disclaimer {
-      max-width: 900px;
-      margin: 25px auto 0;
-      color: #666666;
-      font-size: 0.88rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    footer {
-      margin-top: 60px;
-      padding: 30px 20px;
-      background: #0E3557;
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .footer-links {
-      margin-bottom: 18px;
-      line-height: 2;
-    }
-
-    footer a {
-      margin: 0 8px;
-      color: #E87722;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    footer p {
-      margin: 0;
-      line-height: 1.7;
-    }
-
-    .gst-disclaimer {
-      font-size: 0.88rem;
-      color: #D9E1E7;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       nav {
         display: none;
+        flex-direction: column;
+        background: #0E3557;
         width: 100%;
         position: absolute;
-        top: 85px;
+        top: 70px;
         right: 0;
-        padding: 8px 0;
-        background: #0E3557;
-        flex-direction: column;
-        align-items: stretch;
       }
 
       nav.active {
         display: flex;
       }
 
-      nav a {
-        margin: 0;
-        padding: 13px 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
       .menu-btn {
         display: block;
       }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
     }
 
-    @media (max-width: 650px) {
-      .hero {
-        min-height: 275px;
-        padding: 55px 20px;
-      }
+    .hero {
+      width: 100%;
+      height: 320px;
+      background: #dddddd;
+    }
 
-      main {
-        padding-top: 35px;
-      }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-      section {
-        margin-bottom: 45px;
-      }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-      h2 {
-        font-size: 1.6rem;
-      }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-      .video-placeholder {
-        min-height: 260px;
-      }
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
-      .accommodation-section {
-        padding: 30px 16px;
-      }
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
 
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
       .other-stay-item {
-        align-items: stretch;
+        align-items: flex-start;
         flex-direction: column;
       }
+    }
 
-      .other-stay-item .accommodation-link {
-        width: 100%;
-        text-align: center;
-      }
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVIGATION -->
+  <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
-        <img
-          src="/images/logo.jpg"
-          alt="ShowcasingOz TV Logo"
-          width="170"
-          height="65"
-        >
+        <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
       </a>
 
-      <span
-        class="menu-btn"
-        id="menu-btn"
-        aria-label="Open navigation menu"
-        role="button"
-        tabindex="0"
-      >
-        <i class="fa-solid fa-bars"></i>
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
       </span>
 
       <nav id="menu">
@@ -518,357 +399,313 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Milang, South Australia</h1>
-
-      <p>
-        Lakeside heritage, railway history and peaceful waterfront discoveries
-        beside beautiful Lake Alexandrina.
-      </p>
-    </div>
+    <img src="../images/towns/milang.jpg"
+         alt="Milang Lake Alexandrina South Australia"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
   </section>
 
-  <main>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-    <!-- TOWN INTRODUCTION -->
-    <section class="town-introduction">
-      <h2>Discover Milang</h2>
+    <h1>Milang (SA)</h1>
 
-      <p>
-        Milang is a historic lakeside town situated on the western shore of Lake
-        Alexandrina, approximately 80 kilometres south-east of Adelaide. Once an
-        important river port serving paddle steamers and surrounding farming
-        communities, the town retains a strong connection to the transport,
-        agricultural and maritime history of the Lower Murray region.
-      </p>
+    <p>
+      Milang is a historic lakeside town on the western shore of Lake
+      Alexandrina, approximately 80 kilometres south-east of Adelaide.
+      Surrounded by farming country, wetlands and the broad waters of the
+      Lower Lakes, the town combines an important transport and agricultural
+      history with a relaxed waterfront atmosphere.
+    </p>
 
-      <p>
-        Before the development of extensive railway networks and modern roads,
-        Milang became a busy transfer point for goods travelling across Lake
-        Alexandrina and along the Murray River system. Produce from surrounding
-        farms was brought into town before being transported by vessel, while
-        supplies arriving at the port were distributed throughout the district.
-        The surviving jetty, hand crane and railway heritage help tell the story
-        of this once-bustling commercial centre.
-      </p>
+    <p>
+      During the nineteenth century, Milang developed into a significant river
+      and lake port. Paddle steamers and other vessels carried agricultural
+      produce, supplies and passengers across Lake Alexandrina and through the
+      connected Murray River system. Goods arriving at Milang were transferred
+      between water, road and later rail transport for distribution throughout
+      the surrounding district.
+    </p>
 
-      <p>
-        Today, Milang offers visitors a quieter experience shaped by open lake
-        views, historic buildings and a close-knit community. Its compact town
-        centre makes it easy to explore local heritage sites, community
-        attractions and the foreshore while enjoying the relaxed atmosphere of
-        a small South Australian country town.
-      </p>
+    <p>
+      The town’s surviving jetty, historic hand crane and former railway
+      precinct help preserve the story of this busy transport era. The Milang
+      Railway Museum explores the railway line that once connected the town
+      with Strathalbyn, while the restored Milang Lakeside Butter Factory
+      reflects the importance of dairying and local food production.
+    </p>
 
-      <p>
-        The Milang Railway Museum preserves the story of the railway line that
-        once connected the town with Strathalbyn and the broader South
-        Australian rail network. Exhibits, restored railway equipment and the
-        former station precinct provide an engaging introduction to the role
-        transport played in Milang’s growth.
-      </p>
+    <p>
+      Nearby Clayton Bay extends the area’s appeal with a peaceful foreshore,
+      boating access, wetlands and birdlife. Its position beside the waterways
+      linking Lake Alexandrina with the lower Murray system makes it a popular
+      destination for fishing, paddling, boating and quiet waterfront
+      recreation.
+    </p>
 
-      <p>
-        Another significant part of the town’s history can be found at the
-        Milang Lakeside Butter Factory. Dating from the late nineteenth century,
-        the restored complex reflects the importance of dairy farming and local
-        food production to the surrounding district. Its preservation has been
-        driven by considerable community effort.
-      </p>
-
-      <p>
-        Nearby Clayton Bay extends the Milang experience to another peaceful
-        waterfront community. Located beside the waterways connecting Lake
-        Alexandrina with the lower Murray system, Clayton Bay is known for its
-        foreshore, boating environment, wetland scenery and abundant birdlife.
-      </p>
-
-      <p>
-        Together, Milang and Clayton Bay provide a rewarding base for visitors
-        interested in regional history, railway heritage, lakeside scenery,
-        fishing, boating and the natural environment of the Lower Lakes.
-      </p>
-    </section>
+    <p>
+      ShowcasingOz TV will document Milang’s transport history, lakeside
+      landmarks, community attractions and the nearby Clayton Bay area as part
+      of its national filming journey. Following our visit, this page will be
+      expanded with original photography, professionally produced video and
+      additional information gathered on location.
+    </p>
 
     <!-- DOCUMENTARY -->
-    <section>
-      <h2>🎥 Watch Our Milang Feature</h2>
+    <h2>🎥 Town Documentary</h2>
 
-      <div class="video-placeholder">
-        <i class="fa-solid fa-circle-play"></i>
-
-        <strong>Our Milang documentary is coming soon</strong>
-
-        <span>
-          ShowcasingOz TV will visit Milang and Clayton Bay to capture their
-          attractions, heritage, waterfront landmarks and local stories.
-        </span>
-      </div>
-    </section>
+    <div class="video-placeholder">
+      Milang Documentary Coming Soon
+    </div>
 
     <!-- ATTRACTIONS -->
-    <section>
-      <h2>🎟️ Attractions In And Around Milang</h2>
+    <h2>📍 Attractions</h2>
 
-      <div class="attractions-list">
+    <p class="accommodation-intro">
+      Milang’s attractions preserve the town’s railway, agricultural and
+      industrial heritage while sharing the stories of the people and
+      industries that shaped the community.
+    </p>
 
-        <!-- Alphabetical order -->
-        <article class="attraction-item">
-          <h3>Milang Lakeside Butter Factory</h3>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html" class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+
+      <li>
+        <strong>Milang Lakeside Butter Factory</strong>
+        Originally established in 1893, this restored heritage complex
+        preserves Milang’s connection with dairy farming and regional food
+        production through historical equipment, photographs and community
+        displays.
+      </li>
+
+      <li>
+        <strong>Milang Railway Museum</strong>
+        Located within the former railway station precinct, the museum
+        preserves railway memorabilia, equipment and displays connected with
+        the line that once linked Milang with Strathalbyn and the wider South
+        Australian railway network.
+      </li>
+
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore Milang and Clayton Bay through their historic town centre,
+      waterfront landmarks, foreshore scenery and connections with Lake
+      Alexandrina and the Lower Lakes.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Clayton Bay Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Clayton Bay</h3>
 
           <p>
-            Originally established in 1893, the Milang Lakeside Butter Factory
-            reflects the importance of dairy farming and food production in the
-            district. The restored heritage complex contains historic equipment,
-            photographs and displays exploring the factory’s operation, the
-            surrounding farming community and Milang’s commercial history.
+            A peaceful waterfront settlement surrounded by waterways,
+            wetlands and bird habitat. Its foreshore, boating facilities and
+            natural setting make it a popular destination for anglers,
+            paddlers and visitors seeking quiet riverside recreation.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="attraction-item">
-          <h3>Milang Railway Museum</h3>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Clayton Bay Compass Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Clayton Bay Compass</h3>
 
           <p>
-            Located within Milang’s former railway station precinct, the museum
-            preserves the history of the railway that once connected the town
-            with Strathalbyn. Its collection includes railway memorabilia,
-            restored equipment, historical displays and interactive experiences
-            illustrating the development of rail transport in South Australia.
+            A distinctive foreshore feature identifying surrounding directions
+            and destinations while helping visitors understand Clayton Bay’s
+            position within the Lower Lakes and Murray River waterways.
           </p>
-        </article>
+        </div>
+      </article>
 
-      </div>
-    </section>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Milang Jetty Hand Crane Image Coming Soon
+        </div>
 
-    <!-- LANDMARKS / POIs -->
-    <section>
-      <h2>📍 Landmarks, Points Of Interest &amp; Hidden Gems</h2>
+        <div class="poi-content">
+          <h3>Milang Jetty Hand Crane &amp; Lake Alexandrina</h3>
 
-      <div class="poi-grid">
+          <p>
+            The historic hand crane near Milang Jetty recalls the period when
+            the town operated as a busy lake port. The site overlooks Lake
+            Alexandrina and connects Milang’s industrial heritage with one of
+            South Australia’s most significant freshwater environments.
+          </p>
+        </div>
+      </article>
 
-        <!-- Alphabetical order -->
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-water"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Milang Town Centre Image Coming Soon
+        </div>
 
-          <div class="poi-card-content">
-            <h3>Clayton Bay &amp; Foreshore</h3>
+        <div class="poi-content">
+          <h3>Milang Town Centre</h3>
 
-            <p>
-              Clayton Bay is a peaceful waterfront settlement surrounded by
-              waterways, wetlands and bird habitat. Its foreshore provides
-              attractive views, picnic areas and access to a landscape popular
-              with boaters, anglers, paddlers and nature lovers.
-            </p>
-          </div>
-        </article>
+          <p>
+            A relaxed historic service town containing community facilities,
+            local businesses and heritage buildings within easy reach of the
+            railway precinct, lakeside foreshore and other important local
+            sites.
+          </p>
+        </div>
+      </article>
 
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-compass"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
-
-          <div class="poi-card-content">
-            <h3>Clayton Bay Compass</h3>
-
-            <p>
-              This distinctive foreshore feature identifies surrounding
-              directions and destinations while helping visitors understand
-              Clayton Bay’s position within the Lower Lakes and Murray River
-              waterways. It also provides an interesting stopping point during
-              a walk along the waterfront.
-            </p>
-          </div>
-        </article>
-
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-anchor"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
-
-          <div class="poi-card-content">
-            <h3>Milang Jetty Hand Crane &amp; Lake Alexandrina</h3>
-
-            <p>
-              The historic hand crane near Milang Jetty recalls the period when
-              the town operated as an important lake port. Set against the broad
-              waters of Lake Alexandrina, the site connects Milang’s surviving
-              industrial heritage with one of South Australia’s most significant
-              freshwater environments.
-            </p>
-          </div>
-        </article>
-
-        <article class="poi-card">
-          <div class="poi-placeholder">
-            <i class="fa-solid fa-building"></i>
-            <span>Destination imagery coming soon</span>
-          </div>
-
-          <div class="poi-card-content">
-            <h3>Milang Town Centre</h3>
-
-            <p>
-              Milang’s town centre retains the relaxed character of a historic
-              rural service town. Heritage buildings, community facilities and
-              local businesses provide a starting point for exploring the
-              railway precinct, lakeside foreshore and nearby historical sites.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </section>
+    </div>
 
     <!-- ACCOMMODATION -->
-    <section class="accommodation-section">
-      <h2>🏨 Stay Where We Showcase — Milang</h2>
+    <h2>🏨 Stay Where We Showcase — Milang</h2>
 
-      <p class="accommodation-intro">
-        Planning a visit to Milang or Clayton Bay? Explore local motel, cabin,
-        villa and caravan-park accommodation close to Lake Alexandrina and the
-        waterways of the Lower Lakes.
-      </p>
+    <p class="accommodation-intro">
+      Planning a stay in Milang? Explore motel, cabin, villa and caravan-park
+      accommodation in Milang and Clayton Bay while discovering Lake
+      Alexandrina and the waterways of the Lower Lakes.
+    </p>
 
-      <p class="accommodation-intro">
-        ShowcasingOz TV is designed to do more than help travellers find a place
-        to stay. We help people discover where to go, what to experience and
-        where to base themselves while exploring Australia’s cities, towns and
-        hidden gems.
-      </p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
 
-      <p style="text-align:center;">
-        <a
-          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMilang%252C%2BSouth%2BAustralia"
-          target="_blank"
-          rel="noopener sponsored"
-          class="accommodation-link"
-        >
-          View All Milang Accommodation
-        </a>
-      </p>
+    <p style="text-align:center;">
+      <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMilang%252C%2520South%2520Australia%252C%2520Australia"
+         target="_blank"
+         rel="noopener sponsored"
+         class="accommodation-link">
+        View All Milang Accommodation
+      </a>
+    </p>
 
-      <h3 class="other-accommodation-heading">
-        Featured Accommodation Opportunities In And Around Milang
-      </h3>
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Milang
+    </h3>
 
-      <p class="accommodation-intro">
-        Accommodation partners featured on ShowcasingOz TV receive premium
-        exposure through professionally produced video, photography and
-        destination-led storytelling that places their property in front of
-        travellers actively planning where to stay.
-      </p>
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
 
-      <p style="text-align:center;">
-        <a
-          href="../accommodation-partners.html"
-          class="accommodation-link"
-        >
-          Explore Accommodation Filming &amp; Feature Options
-        </a>
-      </p>
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html" class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
 
-      <div class="accommodation-grid">
-        <div class="accommodation-card">
-          <div class="accommodation-placeholder">
-            Featured Accommodation Coming Soon
-          </div>
-        </div>
-      </div>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
 
-      <h3 class="other-accommodation-heading">
-        Other Accommodation In And Around Milang
-      </h3>
-
-      <div class="other-accommodation-bookings">
-
-        <!-- Alphabetical order -->
-        <div class="other-stay-item">
-          <div class="other-stay-details">
-            <strong>Clayton Bay Riverside Holiday Park</strong>
-
-            <span>
-              Holiday park in Clayton Bay offering cabin and villa
-              accommodation, as well as caravan sites beside the water.
-            </span>
-          </div>
-
-          <a
-            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DClayton%2BBay%2BRiverside%2BHoliday%2BPark"
-            target="_blank"
-            rel="noopener sponsored"
-            class="accommodation-link"
-          >
-            View / Book
-          </a>
-        </div>
-
-        <div class="other-stay-item">
-          <div class="other-stay-details">
-            <strong>Milang Lakeside Caravan Park</strong>
-
-            <span>
-              Lakeside caravan park in Milang providing ensuite cabins,
-              standard cabins, on-site vans and powered caravan sites.
-            </span>
-          </div>
-
-          <a
-            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMilang%2BLakeside%2BCaravan%2BPark"
-            target="_blank"
-            rel="noopener sponsored"
-            class="accommodation-link"
-          >
-            View / Book
-          </a>
-        </div>
-
-        <div class="other-stay-item">
-          <div class="other-stay-details">
-            <strong>The Shore Milang</strong>
-
-            <span>
-              Renovated motel accommodation in Milang featuring private rooms
-              with ensuites, kitchenettes and modern guest amenities.
-            </span>
-          </div>
-
-          <a
-            href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fthe-shore-motel-milang.html"
-            target="_blank"
-            rel="noopener sponsored"
-            class="accommodation-link"
-          >
-            View / Book
-          </a>
+        <div class="accommodation-placeholder">
+          Featured Milang Accommodation Coming Soon
         </div>
 
       </div>
+    </div>
 
-      <p class="accommodation-disclaimer">
-        This accommodation list is provided for visitor awareness only.
-        Inclusion does not imply partnership, endorsement or personal
-        inspection by ShowcasingOz TV. Availability, facilities and booking
-        conditions should be confirmed directly with each accommodation
-        provider. Some links on this page are affiliate links, which means we
-        may earn a small commission if you make a qualifying booking, at no
-        additional cost to you.
-      </p>
-    </section>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Milang
+    </h3>
 
-  </main>
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Clayton Bay Riverside Holiday Park</span>
+          <small>Holiday Park / Cabins / Villas · Clayton Bay · Approximately 12 km</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DClayton%2520Bay%2520Riverside%2520Holiday%2520Park%252C%2520Clayton%2520Bay%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Milang Lakeside Caravan Park</span>
+          <small>Caravan Park / Cabins · Milang · Within town</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMilang%2520Lakeside%2520Caravan%2520Park%252C%2520Milang%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Shore Milang</span>
+          <small>Motel · Milang · Within town</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fthe-shore-motel-milang.html"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -886,37 +723,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-
-    function toggleMenu() {
-      menu.classList.toggle('active');
-    }
-
-    menuBtn.addEventListener('click', toggleMenu);
-
-    menuBtn.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        toggleMenu();
-      }
-    });
-  </script>
-
 </body>
-
 </html>
