@@ -4,337 +4,393 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Noccundra (QLD) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Noccundra, QLD — a tiny historic settlement on the Wilson River, known for its iconic outback pub, river crossings, and classic Channel Country landscapes." />
-<meta name="keywords" content="Noccundra QLD, Noccundra outback, Wilson River crossing, Channel Country Queensland, Noccundra Hotel, Noccundra attractions, western Queensland travel, outback Queensland towns, ShowcasingOz TV" />
 
-<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Noccundra in Queensland's remote Channel Country with ShowcasingOz TV. Explore the historic Noccundra Hotel, Wilson River, Noccundra Waterhole, local landmarks and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Noccundra QLD, Noccundra Queensland, Noccundra Hotel, Noccundra Waterhole, Wilson River, Channel Country, Noccundra accommodation, outback Queensland, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
     /* ================= CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
     .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      font-size: 0.95rem;
     }
 
     /* ================= SHARED GRID ================= */
+
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      background: #f9f9f9;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      padding: 18px 20px;
+      margin-bottom: 15px;
+    }
+
+    .attractions-list h3 {
+      color: #0E3557;
+      margin: 0 0 7px;
+    }
+
+    .attractions-list p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.95rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+    }
+
+    .poi-content p {
+      color: #555555;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .stay-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stay-details strong {
+      color: #0E3557;
+      font-weight: 600;
+    }
+
+    .stay-details span {
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 16px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-decoration: none;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      color: #ffffff;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+      .stay-details {
+        align-items: center;
+      }
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-.poi-content {
-  padding: 15px;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – NOCCUNDRA ================= */
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
   </style>
 </head>
 
@@ -343,10 +399,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -358,153 +424,389 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/noccundra.jpg"
-       alt="Noccundra Queensland"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/noccundra.jpg"
+      alt="Noccundra in Queensland's Channel Country"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Noccundra (QLD)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Noccundra is a tiny historic outback settlement in far south-west Queensland, located on the banks of the Wilson River within the Channel Country. Known for its isolation and enduring character, Noccundra offers visitors a rare glimpse into life in one of Australia’s most remote inland regions.
-</p>
+    <h1>Noccundra (QLD)</h1>
 
-<p>
-Noccundra developed in the late 19th century as a river crossing and service point for pastoralists, stockmen, and travellers moving through western Queensland. Its position on the Wilson River made it a natural stopping place along early stock routes, supporting the movement of cattle and supplies across vast distances.
-</p>
+    <p>
+      Noccundra is a tiny and exceptionally remote settlement in Queensland’s
+      Channel Country, positioned beside the Wilson River approximately 140
+      kilometres west of Thargomindah. Set within the immense Nockatunga
+      pastoral property, the settlement provides travellers with an authentic
+      experience of the isolation, landscape and resilience that characterise
+      far south-western Queensland.
+    </p>
 
-<p>
-The settlement is most closely associated with its iconic outback hotel, which has long served as both a social hub and a refuge for those navigating the Channel Country. The hotel’s presence reflects the importance of such establishments in sustaining remote communities and supporting travellers in an unforgiving environment.
-</p>
+    <p>
+      The settlement developed during the late nineteenth century near the
+      intersection of pastoral, stock and trading routes connecting western
+      Queensland with Innamincka and Tibooburra. A town reserve was established
+      during the 1880s, with a hotel, store, post office and other services
+      supporting pastoral workers and travellers moving across the region.
+    </p>
 
-<p>
-Life in and around Noccundra is shaped by the seasonal rhythms of the river and surrounding floodplains. During wet periods, the landscape transforms with water and birdlife, while dry seasons highlight the resilience required to operate in an arid and often isolated setting.
-</p>
+    <p>
+      Noccundra never developed into a substantial township. Improvements in
+      motor transport and the growth of larger regional centres gradually
+      reduced the need for its store and other services. Today, the historic
+      Noccundra Hotel is the settlement’s only surviving original occupied
+      building and remains an important meeting place for local station
+      families, workers and outback travellers.
+    </p>
 
-<p>
-Surrounded by expansive plains, open skies, and minimal infrastructure, Noccundra embodies the essence of outback Queensland. Its quiet atmosphere, historic structures, and river setting make it a compelling destination for travellers seeking authenticity, solitude, and a deeper understanding of inland Australia.
-</p>
+    <p>
+      Constructed from sandstone transported by camel train, the heritage
+      hotel is recognised for its traditional outback architecture and its
+      long association with the surrounding pastoral community. Throughout
+      its history, it has served as a hotel, accommodation provider, traveller
+      service point and venue for community gatherings and Royal Flying Doctor
+      Service clinics.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, and experiences that define Noccundra as part of our national filming journey — highlighting its river heritage, pastoral history, iconic outback hotel, and the enduring spirit of one of Queensland’s most remote settlements.
-</p>
+    <p>
+      The nearby Noccundra Waterhole forms part of the Wilson River and brings
+      life to the otherwise dry Channel Country landscape. The waterhole and
+      surrounding river environment attract birdlife and other wildlife,
+      providing opportunities for fishing, photography and quiet observation.
+      Seasonal flooding can dramatically transform the surrounding plains and
+      affect access through the district.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Noccundra’s airstrip, community hall, cemetery, memorials, racecourse,
+      rodeo ground and illuminated tennis court illustrate how a very small
+      and isolated population maintains its community connections. Together,
+      these places tell the story of a settlement shaped by pastoral life,
+      extreme distances and the changing conditions of the outback.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will be capturing the history, landscapes, local stories
+      and experiences that define Noccundra as part of our national filming
+      journey, highlighting its historic hotel, Wilson River setting and the
+      enduring character of one of Queensland’s most remote communities.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Noccundra Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Noccundra</h3>
-  <ul class="other-accommodation-list">
-    <li>Noccundra Hotel</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, history, culture and visitor engagement in a way that
+      static listings alone cannot achieve.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Noccundra's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Julie Kate’s Corner</h3>
-      <p>
-  Julie Kate’s Corner is a quiet roadside rest stop near Noccundra, providing travellers with a place to pause while journeying through the remote Channel Country. Set within classic outback landscapes, the stop reflects the vast distances, isolation, and sense of solitude that characterise travel in far south-west Queensland, making it a welcome break along this little-used outback route.
-</p>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="attraction-placeholder">
+          Featured Noccundra Attraction Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Old Noccundra Hotel Ruins</h3>
-      <p>
-The Old Noccundra Hotel ruins mark the site of an early outback hotel that once served travellers, stockmen, and pastoralists moving through the Channel Country. The remains offer a glimpse into the settlement’s early days and reflect the isolation, hardship, and resilience that defined life along the Wilson River in far south-west Queensland.
-</p>
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around Noccundra
+    </h3>
+
+    <ul class="attractions-list">
+
+      <li>
+        <h3>Noccundra Hotel</h3>
+
+        <p>
+          The heritage-listed Noccundra Hotel is the last surviving original
+          occupied building from the historic settlement. Constructed from
+          sandstone transported to the site by camel train, the hotel has
+          served pastoral workers, travellers and the surrounding community
+          since the late nineteenth century. It continues to operate as an
+          outback pub, dining venue, accommodation provider and local meeting
+          place.
+        </p>
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These historic sites, community facilities and natural landmarks form
+      an important part of Noccundra’s story. ShowcasingOz TV will document
+      these locations during filming to help explain the settlement’s
+      pastoral heritage and remote Channel Country environment.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Andrew Hume Expedition Memorial</h3>
+
+          <p>
+            Positioned near the Noccundra Hotel, this memorial commemorates
+            explorer Andrew Hume’s ill-fated 1874 expedition. Hume and his
+            party passed Noccundra Waterhole while attempting to find
+            survivors of Ludwig Leichhardt’s missing expedition.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Julie Kate’s Corner</h3>
+
+          <p>
+            Julie Kate’s Corner is an important road junction on the remote
+            routes connecting Noccundra with Innamincka and other Channel
+            Country destinations. The junction reflects the immense distances
+            and limited road network encountered while travelling through
+            this part of the outback.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Noccundra Airstrip</h3>
+
+          <p>
+            The unsealed airstrip behind the Noccundra Hotel provides an
+            important transport connection for the isolated settlement.
+            Visiting pilots can taxi close to the hotel, making aircraft
+            arrivals a distinctive part of Noccundra’s outback character.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Noccundra Cemetery</h3>
+
+          <p>
+            Noccundra’s small cemetery preserves part of the settlement’s
+            social history and provides a quiet reminder of the residents,
+            pastoral workers and families associated with this remote
+            community.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Noccundra Community Hall and Tennis Court</h3>
+
+          <p>
+            Located near the hotel, the community hall and illuminated tennis
+            court provide valuable recreational and gathering facilities for
+            residents of the surrounding pastoral district. A children’s
+            playground and public amenities are also located nearby.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Noccundra Racecourse and Rodeo Ground</h3>
+
+          <p>
+            These community grounds reflect the importance of campdrafting,
+            rodeo, horse racing and other social events within isolated
+            pastoral communities. Events bring together competitors,
+            residents and visitors from across the wider district.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Noccundra Store Remains</h3>
+
+          <p>
+            The surviving wall section and foundations mark the location of
+            Noccundra’s former general store. The store once supplied the
+            settlement and surrounding pastoral stations before closing as
+            transport patterns and regional services changed.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Noccundra Waterhole and Wilson River</h3>
+
+          <p>
+            The long waterhole beside Noccundra forms part of the Wilson River
+            and supports birdlife and other wildlife within the dry Channel
+            Country. Its gum-lined banks provide opportunities for fishing,
+            birdwatching, photography and observing the changing outback
+            environment.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
-  </div>
 
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation In And Around Noccundra</h2>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Noccundra</h2>
 
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
+    <p class="accommodation-intro">
+      Planning an overnight stay in Noccundra? The Noccundra Hotel provides
+      the settlement’s only qualifying commercial accommodation, offering
+      simple donga-style rooms for travellers exploring Queensland’s remote
+      Channel Country.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNoccundra%252C%2BQueensland%252C%2BAustralia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        Search Noccundra Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Noccundra
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Noccundra Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation In And Around Noccundra</h3>
-  <ul class="other-accommodation-list">
-    <li>Noccundra Hotel</li>
-  </ul>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Noccundra
+    </h3>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <div class="other-accommodation-bookings">
 
-</section>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Noccundra Hotel</strong>
+          <span>Hotel with donga-style rooms · Noccundra</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNoccundra%2BHotel%252C%2BNoccundra%252C%2BQueensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      Noccundra Hotel accommodation is provided in simple donga-style rooms
+      with shared bathroom facilities. Availability may be limited, so
+      travellers should confirm current accommodation, meal, fuel and access
+      arrangements before departing. Camping areas and camping-only facilities
+      have not been included in this accommodation list. Inclusion does not
+      imply partnership or endorsement. Some links on this page are affiliate
+      links, which means ShowcasingOz TV may earn a small commission if you
+      make a booking, at no additional cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -519,10 +821,19 @@ The Old Noccundra Hotel ruins mark the site of an early outback hotel that once 
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
