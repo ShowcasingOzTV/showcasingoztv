@@ -16,26 +16,18 @@
 
   <title>Myponga (SA) | ShowcasingOz TV</title>
 
-  <meta
-    name="description"
-    content="Discover Myponga and nearby Myponga Beach on South Australia’s Fleurieu Peninsula with ShowcasingOz TV. Our complete destination guide, documentary, attractions and accommodation features are coming soon."
-  >
+  <meta name="description" content="Discover Myponga and the surrounding Fleurieu Peninsula with ShowcasingOz TV, including attractions, beaches, reservoir landmarks and accommodation.">
 
-  <meta
-    name="keywords"
-    content="Myponga SA, Myponga Beach, Myponga Reservoir, Fleurieu Peninsula, Myponga attractions, Myponga accommodation, South Australia travel, ShowcasingOz TV"
-  >
+  <meta name="keywords" content="Myponga SA, Myponga Reservoir, Myponga Beach, Mount Compass, Sellicks Beach, Myponga attractions, Myponga accommodation, Fleurieu Peninsula travel, ShowcasingOz TV">
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    crossorigin="anonymous"
-    media="print"
-    onload="this.media='all'"
-  >
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -220,6 +212,128 @@
       text-decoration: underline;
     }
 
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -267,12 +381,7 @@
     <div class="container">
 
       <a href="/">
-        <img
-          src="/images/logo.jpg"
-          alt="ShowcasingOz TV Logo"
-          width="170"
-          height="65"
-        >
+        <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
       </a>
 
       <span class="menu-btn" id="menu-btn">
@@ -305,15 +414,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img
-      src="../images/towns/myponga.jpg"
-      alt="Myponga Fleurieu Peninsula South Australia"
-      width="1600"
-      height="320"
-      fetchpriority="high"
-      decoding="async"
-      style="width:100%; height:100%; object-fit:cover;"
-    >
+    <img src="../images/towns/myponga.jpg"
+         alt="Myponga Fleurieu Peninsula South Australia"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
   </section>
 
   <!-- MAIN CONTENT -->
@@ -322,34 +429,51 @@
     <h1>Myponga (SA)</h1>
 
     <p>
-      Myponga is a rural township on South Australia’s Fleurieu Peninsula,
-      surrounded by rolling farmland, wooded hills and reservoir country.
-      The district has strong agricultural foundations, with dairy farming
-      and other rural industries forming an important part of its character.
+      Myponga is a small rural town on South Australia’s Fleurieu Peninsula,
+      situated among rolling farmland between the Mount Lofty Ranges and the
+      coast. Located approximately 60 kilometres south of Adelaide, it provides
+      a convenient base for exploring Myponga Reservoir, Myponga Beach, Mount
+      Compass, Sellicks Hill and the southern Fleurieu countryside.
     </p>
 
     <p>
-      Nearby Myponga Beach adds a contrasting coastal experience, with a
-      small seaside community set between steep hills and the waters of
-      Gulf St Vincent. Together, Myponga township, Myponga Reservoir and
-      Myponga Beach offer visitors a mix of country scenery, local heritage
-      and coastal landscapes.
+      The surrounding district has long been associated with agriculture,
+      including dairy farming, grazing, orchards and berry production. Its
+      productive rural landscape continues to support local growers, food
+      producers and visitor experiences that showcase the produce and
+      agricultural character of the Fleurieu Peninsula.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Myponga Reservoir is one of the area’s defining landmarks. Constructed
+      across the Myponga River, the reservoir supplies drinking water to parts
+      of the Fleurieu Peninsula. Public access initiatives have also allowed
+      visitors to enjoy designated walking and cycling trails, reservoir views
+      and the surrounding natural landscape.
+    </p>
 
-      <h2>🚧 Our Complete Myponga Guide Is Coming Soon</h2>
+    <p>
+      The nearby coastline adds another dimension to the region. Myponga Beach
+      is a secluded coastal settlement set between steep hills and the sea,
+      while Sellicks Beach and Silver Sands Beach offer broad coastal views,
+      exposed cliffs and distinctive geological features.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Myponga. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore
-        Myponga, Myponga Beach and the surrounding Fleurieu Peninsula.
-      </p>
+    <p>
+      Myponga and Mount Compass also provide access to breweries, orchards,
+      berry farms, local food experiences and country hospitality. Together,
+      these destinations combine agricultural production, natural scenery and
+      small-business experiences within a relatively compact section of the
+      Fleurieu Peninsula.
+    </p>
 
-    </div>
+    <p>
+      ShowcasingOz TV will document Myponga’s rural character, reservoir,
+      coastline, local producers and surrounding communities as part of its
+      national filming journey. Following our visit, this page will be expanded
+      with original photography, professionally produced video and additional
+      information gathered on location.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -362,92 +486,230 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Myponga’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Myponga and its surrounding communities offer a varied collection of
+      local food, beverage, cultural and hospitality experiences shaped by the
+      agricultural and coastal character of the Fleurieu Peninsula.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../attraction-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../attraction-partners.html" class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <ul class="attractions-list">
 
-        <div class="attraction-placeholder">
-          Featured Myponga Attractions Coming Soon
-        </div>
+      <li>
+        <strong>Ceravolo Berries</strong>
+        A Fleurieu Peninsula berry producer connected with the region’s
+        productive agricultural landscape. The business grows and supplies
+        fresh berries while contributing to the local food and farming
+        industries surrounding Myponga and Mount Compass.
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <strong>Harvest the Fleurieu – High Tea</strong>
+        A regional produce destination at Mount Compass offering a high-tea
+        experience showcasing locally grown and locally sourced ingredients.
+        The venue also connects visitors with the farming traditions and
+        seasonal produce of the Fleurieu Peninsula.
+      </li>
+
+      <li>
+        <strong>Kerrie’s Cherries</strong>
+        A family-operated cherry-growing business in the Pages Flat district.
+        The orchard reflects the diversity of the Fleurieu Peninsula’s
+        agricultural industries and provides visitors with an opportunity to
+        discover locally grown seasonal fruit.
+      </li>
+
+      <li>
+        <strong>Nan Hai Pu Tuo Temple of Australia</strong>
+        A prominent Buddhist temple complex at Sellicks Hill overlooking the
+        surrounding coastal and rural landscape. The temple provides a place
+        for worship, reflection and cultural connection within a peaceful
+        hillside setting.
+      </li>
+
+      <li>
+        <strong>Smiling Samoyed Brewery</strong>
+        An independent brewery in Myponga overlooking the reservoir. Visitors
+        can sample locally produced beer, enjoy meals and potentially see the
+        brewing process while meeting the resident Samoyeds that helped inspire
+        the business’s name.
+      </li>
+
+      <li>
+        <strong>The Blueberry Patch</strong>
+        A seasonal berry-growing and farm-gate destination near Mount Compass.
+        The business highlights locally produced blueberries and the favourable
+        growing conditions found within this part of the Fleurieu Peninsula.
+      </li>
+
+      <li>
+        <strong>Victory Hotel</strong>
+        A long-established dining destination at Sellicks Hill with expansive
+        views across Sellicks Beach, Aldinga Bay and the Fleurieu coastline.
+        The hotel is particularly known for its restaurant, extensive wine
+        cellar and scenic coastal outlook.
+      </li>
+
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Myponga’s reservoir, rural landscapes, nearby coastline and other
-      points of interest will be documented and added to this page
-      following our visit.
+      Explore Myponga’s reservoir, rural town centre, nearby coastal
+      communities and natural landmarks throughout this scenic part of the
+      Fleurieu Peninsula.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Myponga Points of Interest Coming Soon
+          Mount Compass Image Coming Soon
         </div>
 
-      </div>
+        <div class="poi-content">
+          <h3>Mount Compass</h3>
+
+          <p>
+            A rural service town surrounded by dairy farms, grazing country,
+            orchards and wetlands. Mount Compass provides local shops,
+            hospitality businesses and access to several food and agricultural
+            experiences within the central Fleurieu Peninsula.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Myponga Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Myponga Beach</h3>
+
+          <p>
+            A secluded coastal settlement where steep hills descend towards a
+            sheltered beach and rocky shoreline. Its quiet setting and coastal
+            views contrast with the farming country surrounding Myponga
+            township.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Myponga Reservoir Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Myponga Reservoir Lookout</h3>
+
+          <p>
+            A scenic stopping point providing elevated views across Myponga
+            Reservoir and the surrounding hills. The lookout helps visitors
+            appreciate the scale of the reservoir and its position within the
+            Fleurieu Peninsula landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Myponga Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Myponga Town Centre</h3>
+
+          <p>
+            A compact rural township containing local businesses, community
+            facilities and connections with the surrounding agricultural
+            district. The town centre provides a practical stopping point
+            between the Adelaide region and the southern Fleurieu Peninsula.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Rock Bridge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Rock Bridge – Sellicks Beach</h3>
+
+          <p>
+            A naturally formed coastal rock feature near Sellicks Beach,
+            created through the continuing effects of erosion and wave action.
+            The formation contributes to the geological interest and rugged
+            character of this section of coastline.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Silver Sands Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Silver Sands Beach</h3>
+
+          <p>
+            A broad sandy beach south of Aldinga known for its open coastal
+            views and long shoreline. The beach forms part of the transition
+            between Adelaide’s southern coastline and the more rural landscapes
+            of the Fleurieu Peninsula.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Myponga</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Myponga? Explore available accommodation in
-      and around Myponga and Myponga Beach while we continue developing
-      our complete destination guide.
+      Planning a visit to Myponga? Explore bed-and-breakfast, cabin and
+      caravan-park accommodation in Myponga, Myponga Beach and Mount Compass
+      while discovering the reservoir, coastline and surrounding Fleurieu
+      Peninsula countryside.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="https://www.booking.com/searchresults.html?ss=Myponga%2C+South+Australia%2C+Australia"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="accommodation-link"
-      >
-        View Accommodation In And Around Myponga
+      <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMyponga%252C%2520South%2520Australia%252C%2520Australia"
+         target="_blank"
+         rel="noopener sponsored"
+         class="accommodation-link">
+        View All Myponga Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Myponga
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a
-        href="../accommodation-partners.html"
-        class="accommodation-link"
-      >
+      <a href="../accommodation-partners.html" class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
@@ -461,6 +723,64 @@
 
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Myponga
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>BIG4 Mount Compass Caravan Park</span>
+          <small>Caravan Park / Cabins · Mount Compass · Approximately 15 km</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2520Mount%2520Compass%2520Caravan%2520Park%252C%2520Mount%2520Compass%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Brooklyn Farm Bed and Breakfast</span>
+          <small>Bed &amp; Breakfast · Myponga Beach district · Approximately 9 km</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBrooklyn%2520Farm%2520Bed%2520and%2520Breakfast%252C%2520Myponga%2520Beach%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Heysen’s Rest Cabins</span>
+          <small>Bed &amp; Breakfast / Cabins · Myponga · Within town area</small>
+        </div>
+
+        <a href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHeysens%2520Rest%2520Cabins%252C%2520Myponga%252C%2520South%2520Australia"
+           target="_blank"
+           rel="noopener sponsored"
+           class="accommodation-link">
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
   </section>
 
@@ -487,8 +807,8 @@
       </a><br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
       </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
