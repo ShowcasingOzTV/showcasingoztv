@@ -6,7 +6,11 @@
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -18,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Normanville, Yankalilla and nearby Carrickalinga on South Australia’s Fleurieu Peninsula with ShowcasingOz TV. Our complete destination guide, documentary, attractions and accommodation features are coming soon."
+    content="Discover Normanville, Yankalilla and the surrounding Fleurieu Coast with ShowcasingOz TV. Explore beaches, heritage attractions, coastal landmarks, golf and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Normanville SA, Yankalilla SA, Carrickalinga, Fleurieu Peninsula, Normanville Beach, Normanville attractions, Normanville accommodation, South Australia travel, ShowcasingOz TV"
+    content="Normanville SA, Yankalilla SA, Normanville Beach, Carrickalinga Beach, Second Valley, Lady Bay, Normanville accommodation, Fleurieu Coast, Fleurieu Peninsula travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -45,11 +49,13 @@
       color: #0E3557;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -107,15 +113,19 @@
 
       nav a {
         padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
+
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
+
+    /* ================= CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -139,25 +149,7 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
+    /* ================= PLACEHOLDERS ================= */
 
     .video-placeholder,
     .accommodation-placeholder,
@@ -182,11 +174,18 @@
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .attraction-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
+
+    .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      font-size: 0.95rem;
+    }
+
+    /* ================= SHARED GRID ================= */
 
     .accommodation-grid {
       display: grid;
@@ -198,7 +197,7 @@
     .accommodation-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
     }
 
@@ -219,6 +218,141 @@
     .accommodation-link:hover {
       text-decoration: underline;
     }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      background: #f9f9f9;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      padding: 18px 20px;
+      margin-bottom: 15px;
+    }
+
+    .attractions-list h3 {
+      color: #0E3557;
+      margin: 0 0 7px;
+    }
+
+    .attractions-list p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.95rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+    }
+
+    .poi-content p {
+      color: #555555;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .other-accommodation-heading {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .stay-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stay-details strong {
+      color: #0E3557;
+      font-weight: 600;
+    }
+
+    .stay-details span {
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 16px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-decoration: none;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      color: #ffffff;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .stay-details {
+        align-items: center;
+      }
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -254,8 +388,8 @@
     .gst-disclaimer {
       display: block;
       margin-top: 8px;
-      font-size: 0.8rem;
       color: #ffffff;
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -306,8 +440,8 @@
   <!-- HERO -->
   <section class="hero">
     <img
-      src="../images/towns/normanville.jpg"
-      alt="Normanville and Yankalilla Fleurieu Peninsula South Australia"
+      src="../images/towns/normanville_yankalilla.jpg"
+      alt="Normanville and Yankalilla on South Australia's Fleurieu Coast"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -322,38 +456,60 @@
     <h1>Normanville &amp; Yankalilla (SA)</h1>
 
     <p>
-      Normanville and Yankalilla are neighbouring communities on South
-      Australia’s Fleurieu Peninsula, combining a relaxed coastal setting
-      with the rural landscapes and heritage of the surrounding district.
-      Normanville sits beside Gulf St Vincent, while Yankalilla lies a
-      short distance inland among rolling hills.
+      Normanville is a relaxed seaside town on South Australia’s Fleurieu
+      Peninsula, located beside a long sandy beach approximately 75 kilometres
+      south of Adelaide. Together with neighbouring Yankalilla, Carrickalinga
+      and Lady Bay, the town forms an important visitor destination along the
+      Fleurieu Coast.
     </p>
 
     <p>
-      Normanville Beach, its jetty and nearby Carrickalinga provide the
-      area’s coastal appeal, while Yankalilla contributes historic
-      buildings, local businesses and a strong country-town identity.
-      Together, these communities offer beaches, rural scenery and a
-      convenient base for exploring the western Fleurieu coast.
+      The Normanville district developed during the nineteenth century as
+      agriculture, grazing, mining and coastal trade expanded across the
+      southern Fleurieu Peninsula. Normanville’s beach and former jetty
+      provided a connection between the district’s farms and coastal shipping,
+      while Yankalilla became an inland service centre for surrounding rural
+      communities.
     </p>
 
-    <div class="page-update-notice">
+    <p>
+      Normanville is now known for its accessible foreshore, village
+      atmosphere, cafés, accommodation and proximity to several of the
+      peninsula’s most attractive beaches. Normanville Beach stretches between
+      Carrickalinga to the north and Lady Bay to the south, offering
+      opportunities for swimming, walking, fishing and coastal photography.
+    </p>
 
-      <h2>
-        🚧 Our Complete Normanville &amp; Yankalilla Guide Is Coming Soon
-      </h2>
+    <p>
+      Nearby Yankalilla retains a strong historical identity through its
+      churches, museum collections, older buildings and long association with
+      the surrounding agricultural district. The Fleurieu Coast Visitor Centre
+      provides local travel information while sharing its site with the
+      Yankalilla District Historical Museum.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Normanville and Yankalilla. Following
-        filming, it will be expanded with our full town documentary,
-        original photography, featured attractions, local landmarks,
-        accommodation options, businesses and practical information to
-        help visitors explore Normanville, Yankalilla, Carrickalinga and
-        the surrounding Fleurieu Peninsula.
-      </p>
+    <p>
+      South of Normanville, Lady Bay and Wirrina Cove combine coastal scenery
+      with resort facilities, golf and elevated viewpoints. Farther along the
+      coast, Second Valley is recognised for its historic settlement,
+      sheltered beach, jetty, rock formations and clear water popular with
+      swimmers, snorkellers, divers and fishers.
+    </p>
 
-    </div>
+    <p>
+      The district provides a convenient base for exploring a broad section
+      of the Fleurieu Coast without extending into destinations more
+      appropriately associated with Myponga, Victor Harbor or Cape Jervis.
+      Visitors can combine beaches, heritage, scenic drives, local businesses
+      and outdoor activities within a relatively compact coastal region.
+    </p>
+
+    <p>
+      ShowcasingOz TV will be capturing the beaches, attractions, heritage,
+      landscapes, accommodation and community stories that define Normanville,
+      Yankalilla and the surrounding Fleurieu Coast as part of our national
+      filming journey.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -366,9 +522,10 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Normanville and Yankalilla’s featured attractions will be added
-      as filming arrangements are confirmed and our destination
-      coverage is completed.
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, history, culture and visitor engagement in a way that
+      static listings alone cannot achieve.
     </p>
 
     <p style="text-align:center;">
@@ -382,74 +539,277 @@
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="attraction-placeholder">
-          Featured Normanville &amp; Yankalilla Attractions Coming Soon
+          Featured Normanville Attraction Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around Normanville
+    </h3>
+
+    <ul class="attractions-list">
+
+      <li>
+        <h3>Christ Church Yankalilla and Shrine of Our Lady of Yankalilla</h3>
+
+        <p>
+          Christ Church is a historic Anglican church in Yankalilla and the
+          home of the Shrine of Our Lady of Yankalilla. The shrine became a
+          place of Christian pilgrimage after an image resembling the Virgin
+          Mary was observed on an interior wall during the 1990s.
+        </p>
+      </li>
+
+      <li>
+        <h3>Fleurieu Coast Visitor Centre and Yankalilla District Historical Museum</h3>
+
+        <p>
+          This combined visitor and heritage facility provides information
+          about local attractions, accommodation, events and touring routes.
+          Its historical displays and research collection preserve stories,
+          photographs and objects connected with the Yankalilla district.
+        </p>
+      </li>
+
+      <li>
+        <h3>Lady Bay</h3>
+
+        <p>
+          Lady Bay is a coastal area immediately south of Normanville,
+          featuring sweeping views across Gulf St Vincent, beach access and
+          the surrounding golf and residential precinct. It marks the southern
+          end of the long Normanville beachfront.
+        </p>
+      </li>
+
+      <li>
+        <h3>Normanville</h3>
+
+        <p>
+          Normanville offers a relaxed coastal visitor experience combining
+          its historic township, local cafés and businesses, beachside
+          recreation and easy access to neighbouring Carrickalinga,
+          Yankalilla and Lady Bay.
+        </p>
+      </li>
+
+      <li>
+        <h3>Normanville Beach</h3>
+
+        <p>
+          Normanville Beach is a long sandy beach suitable for swimming,
+          walking, fishing and family recreation. Its foreshore, jetty
+          precinct and views across Gulf St Vincent make it the centrepiece
+          of the town’s coastal appeal.
+        </p>
+      </li>
+
+      <li>
+        <h3>The Links Lady Bay Golf Course</h3>
+
+        <p>
+          The Links Lady Bay is an 18-hole championship golf course set
+          between rolling hills and the Fleurieu coastline. The course forms
+          part of the Lady Bay resort precinct and provides expansive views
+          towards the coast and surrounding countryside.
+        </p>
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Normanville and Yankalilla’s beaches, rural landscapes and other
-      points of interest will be documented and added to this page
-      following our visit.
+      These beaches, lookouts, townships and local landmarks contribute to the
+      identity of Normanville and the wider Fleurieu Coast. ShowcasingOz TV
+      will document these locations during filming to help tell the broader
+      story of the district.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
 
-        <div class="poi-placeholder">
-          Normanville &amp; Yankalilla Points of Interest Coming Soon
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Carrickalinga Beach</h3>
+
+          <p>
+            Carrickalinga Beach is known for its pale sand, clear water and
+            uninterrupted coastal views. The beach extends north from
+            Normanville and provides a peaceful setting for swimming, walking,
+            fishing and photography.
+          </p>
         </div>
-
       </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Carrickalinga Lookout</h3>
+
+          <p>
+            Carrickalinga Lookout provides elevated views over Carrickalinga
+            Beach, Gulf St Vincent and the surrounding coastline. It is a
+            popular roadside stop for coastal photography and observing the
+            changing colours of the sea and landscape.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>HMAS Hobart Memorial Lookout</h3>
+
+          <p>
+            This coastal lookout commemorates the former guided-missile
+            destroyer HMAS Hobart, which was deliberately sunk in Yankalilla
+            Bay as an artificial reef and recreational dive site. Interpretive
+            information explains the ship’s history and offshore location.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Lady Bay</h3>
+
+          <p>
+            Lady Bay sits immediately south of Normanville near the mouth of
+            the Yankalilla River. The coastal precinct combines beach scenery,
+            sand dunes, residential development and views across Gulf St
+            Vincent.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Normanville Beach</h3>
+
+          <p>
+            The town’s main beachfront is a defining local landmark, with a
+            broad stretch of sand, foreshore facilities and a jetty precinct.
+            It connects Normanville with the wider coastline extending towards
+            Carrickalinga and Lady Bay.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Normanville Town Centre</h3>
+
+          <p>
+            Normanville’s town centre contains local cafés, shops, services
+            and historic buildings along Main Road. Its compact layout and
+            proximity to the beach contribute to the town’s relaxed coastal
+            village character.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Second Valley</h3>
+
+          <p>
+            Second Valley is a small historic settlement south of Normanville,
+            surrounded by rural hills and dramatic coastal scenery. Its stone
+            buildings and peaceful setting reflect the early European
+            development of the southern Fleurieu Peninsula.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Second Valley Beach and Jetty</h3>
+
+          <p>
+            Second Valley Beach is a sheltered coastal destination known for
+            its clear water, rock formations, historic boatsheds and jetty.
+            The precinct is popular for swimming, snorkelling, diving, fishing
+            and exploring the rugged shoreline.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Yankalilla</h3>
+
+          <p>
+            Yankalilla is an historic inland township that serves the
+            surrounding agricultural district and nearby coastal communities.
+            Its main street contains community facilities, heritage buildings,
+            local businesses and visitor services.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
-    <h2>
-      🏨 Stay Where We Showcase — Normanville &amp; Yankalilla
-    </h2>
+    <h2>🏨 Stay Where We Showcase — Normanville</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Normanville or Yankalilla? Explore available
-      accommodation across Normanville, Yankalilla and nearby
-      Carrickalinga while we continue developing our complete
-      destination guide.
+      Planning a stay around Normanville? Explore qualifying hotels, resorts,
+      caravan and holiday parks, bed-and-breakfasts and professionally managed
+      lodge accommodation across Normanville, Lady Bay, Yankalilla, Bald
+      Hills, Wirrina Cove and Second Valley.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find
-      a place to stay. We help people discover where to go, what to
-      experience and where to base themselves as they explore
-      Australia’s cities, towns and hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Normanville%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNormanville%252C%2BSouth%2BAustralia%252C%2BAustralia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
-        View Accommodation In And Around Normanville &amp; Yankalilla
+        View All Normanville Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
-      Featured Accommodation Opportunities In And Around
-      Normanville &amp; Yankalilla
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Normanville
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive
-      premium exposure through professionally produced video,
-      photography and destination-led storytelling that places
-      their property in front of travellers actively planning
-      where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -463,13 +823,173 @@
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
-
         <div class="accommodation-placeholder">
-          Featured Normanville &amp; Yankalilla Accommodation Coming Soon
+          Featured Normanville Accommodation Coming Soon
         </div>
-
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Normanville
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>BIG4 Normanville Jetty Holiday Park</strong>
+          <span>Holiday park with self-contained cabins · Normanville</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2BNormanville%2BJetty%2BHoliday%2BPark%252C%2BNormanville%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>BreakFree Wirrina Cove</strong>
+          <span>Hotel and resort · Wirrina Cove</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBreakFree%2BWirrina%2BCove%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Bungala House</strong>
+          <span>Historic bed-and-breakfast accommodation · Yankalilla</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fbungala-house.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Echo Holiday Parks – Normanville</strong>
+          <span>Holiday park with cabin accommodation · Normanville</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEcho%2BHoliday%2BParks%2BNormanville%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Lady Bay Resort</strong>
+          <span>Hotel and golf resort · Lady Bay, Normanville</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Flinks-lady-bay-grand.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Lush Pastures</strong>
+          <span>Boutique bed-and-breakfast · Bald Hills</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Flush-pastures.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Second Valley Caravan Park</strong>
+          <span>Caravan park with cabin accommodation · Second Valley</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSecond%2BValley%2BCaravan%2BPark%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Second Valley Cottages and Lodge</strong>
+          <span>Cottages and lodge accommodation · Second Valley</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fsecond-valley-cottages-and-lodge.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Wirrina Cove Holiday Park</strong>
+          <span>Holiday park with self-contained chalets · Wirrina Cove</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWirrina%2BCove%2BHoliday%2BPark%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This accommodation list includes hotels, resorts, caravan or holiday
+      parks with cabin accommodation, bed-and-breakfast properties and
+      professionally operated lodge accommodation. Privately operated holiday
+      homes, Airbnb listings and camping-only locations are not included.
+      Inclusion does not imply partnership or endorsement. Some links on this
+      page are affiliate links, which means ShowcasingOz TV may earn a small
+      commission if you make a booking, at no additional cost to you.
+    </p>
 
   </section>
 
@@ -496,8 +1016,8 @@
       </a><br>
 
       <span class="gst-disclaimer">
-        All prices listed are exclusive of GST. GST will be applied
-        once ShowcasingOz TV becomes GST-registered.
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
       </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
