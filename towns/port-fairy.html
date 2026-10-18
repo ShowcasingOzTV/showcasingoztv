@@ -3,17 +3,22 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Port Fairy (VIC) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Port Fairy, VIC — a charming coastal town known for its historic cottages, working harbour, pristine beaches, and maritime heritage along Victoria’s south-west coast." />
-<meta name="keywords" content="Port Fairy VIC, Port Fairy Victoria, Port Fairy harbour, Great Ocean Road towns, Port Fairy attractions, Port Fairy accommodation, south west Victoria coast, maritime heritage Victoria, ShowcasingOz TV" />
+  <meta name="description" content="Discover Port Fairy in south-west Victoria with ShowcasingOz TV, including its maritime heritage, coastal landmarks, attractions and accommodation.">
+  <meta name="keywords" content="Port Fairy VIC, Port Fairy Victoria, Port Fairy harbour, Port Fairy attractions, Port Fairy accommodation, Griffiths Island, Great Ocean Road, ShowcasingOz TV">
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
-
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         crossorigin="anonymous"
@@ -22,16 +27,15 @@
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,328 +43,310 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – PORT FAIRY ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-                .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -369,10 +355,17 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+      <a href="/">
+        <img src="/images/logo.jpg"
+             alt="ShowcasingOz TV Logo"
+             width="170"
+             height="65">
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -387,257 +380,562 @@ footer .gst-disclaimer {
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/port-fairy.jpg"
-       alt="Port Fairy Victoria"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img src="../images/towns/port-fairy.jpg"
+         alt="Port Fairy Victoria"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
+  </section>
 
-<h1>Port Fairy (VIC)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Port Fairy is a picturesque coastal town in south-west Victoria, located at the mouth of the Moyne River and renowned for its maritime heritage and preserved 19th-century architecture. With its historic streetscapes, working harbour, and scenic ocean views, Port Fairy is one of Victoria’s most distinctive seaside destinations.
-</p>
+    <h1>Port Fairy (VIC)</h1>
 
-<p>
-Established in the early 19th century, Port Fairy developed as a significant whaling and fishing port. The town’s wealth during this period contributed to the construction of many stone cottages and grand buildings that still line its streets today, creating one of the most intact historic townscapes in regional Victoria.
-</p>
+    <p>
+      Port Fairy is a historic coastal town at the mouth of the Moyne River in
+      south-west Victoria. Known for its working harbour, nineteenth-century
+      architecture, sandy beaches and strong maritime character, it is one of
+      the most distinctive seaside communities along Victoria’s western coast.
+    </p>
 
-<p>
-The harbour and Moyne River remain central to Port Fairy’s identity, supporting a commercial fishing fleet and recreational boating. Griffiths Island, located at the river’s mouth, offers walking trails and access to the historic lighthouse, providing sweeping views of the Southern Ocean and surrounding coastline.
-</p>
+    <p>
+      The district has been home to the Eastern Maar people for thousands of
+      years. Its rivers, wetlands, coastline and offshore waters continue to
+      hold deep cultural significance and form part of a landscape shaped by
+      longstanding connections between people and Country.
+    </p>
 
-<p>
-Port Fairy is also known for its vibrant arts and events culture, with galleries, markets, and annual festivals drawing visitors throughout the year. The town blends its maritime past with contemporary hospitality, offering cafés, restaurants, boutique accommodation, and specialty shops within a relaxed coastal setting.
-</p>
+    <p>
+      European commercial activity began during the early nineteenth century
+      when whalers and sealers operated along the coast. The settlement that
+      developed around the Moyne River was initially known as Belfast before
+      being renamed Port Fairy. Fishing, shipping, agriculture and maritime
+      trade all contributed to the town’s early growth.
+    </p>
 
-<p>
-Surrounded by rugged shoreline, sandy beaches, and rolling farmland, Port Fairy captures the natural beauty of Victoria’s south-west coast. Its combination of heritage architecture, ocean scenery, and cultural vitality makes it a standout destination along the coastal route west of the Great Ocean Road.
-</p>
+    <p>
+      Prosperity generated through maritime and agricultural industries led to
+      the construction of stone cottages, churches, hotels, warehouses and
+      substantial public buildings. Many remain standing, giving Port Fairy one
+      of regional Victoria’s most complete collections of nineteenth-century
+      architecture.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Port Fairy as part of our national filming journey — highlighting its maritime heritage, historic harbour precinct, coastal beauty, and the welcoming community spirit that continues to shape this iconic Victorian seaside town.
-</p>
+    <p>
+      The Moyne River and harbour remain central to the town. Commercial fishing
+      vessels, recreational boats and historic structures line the waterfront,
+      while nearby Griffiths Island protects important wildlife habitat and
+      provides access to the Port Fairy Lighthouse and sweeping Southern Ocean
+      views.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Port Fairy has also developed a strong reputation for arts, food, music
+      and community events. Galleries, restaurants, cafés, boutiques and
+      heritage accommodation complement the town’s beaches, coastal walks and
+      historic streetscapes.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      Its combination of working harbour, cultural heritage, dramatic coastal
+      scenery and village atmosphere makes Port Fairy a valuable base for
+      exploring south-west Victoria and the western end of the Great Ocean Road
+      touring region.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Port Fairy Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Port Fairy</h3>
-  <ul class="other-accommodation-list">
-    <li>Port Fairy Day Spa</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Port Fairy’s visitor experiences combine relaxation, heritage, coastal
+      scenery and the town’s established hospitality and wellness sector.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Port Fairy’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a href="../attraction-partners.html"
+         class="accommodation-link">
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
+      <li>
+        <strong>Port Fairy Day Spa</strong>
+        A local wellness destination offering spa treatments and opportunities
+        for relaxation within Port Fairy’s historic coastal setting.
+      </li>
+    </ul>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Codrington Wind Farm</h3>
-      <p>
-      Codrington Wind Farm is one of Australia’s earliest large-scale wind energy projects, located along the rugged coastline east of Port Fairy. The towering turbines overlook dramatic ocean scenery and highlight the region’s strong and consistent coastal winds.
-      </p>
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Port Fairy’s landmarks reveal the town’s maritime history, preserved
+      architecture and close relationship with the rugged coastline of
+      south-west Victoria.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Battery Hill Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Battery Hill</h3>
+          <p>
+            An elevated coastal site associated with Port Fairy’s nineteenth-century
+            harbour defences. The reserve contains historic gun emplacements and
+            provides views across the Moyne River entrance, harbour and coastline.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Codrington Wind Farm Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Codrington Wind Farm</h3>
+          <p>
+            One of Australia’s earliest commercial wind farms, positioned in
+            open coastal country west of Port Fairy. Its turbines demonstrate
+            how the region’s powerful and consistent winds are used to
+            generate renewable energy.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Griffiths Island &amp; Port Fairy Lighthouse Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Griffiths Island (including Port Fairy Lighthouse)</h3>
+          <p>
+            A coastal reserve at the mouth of the Moyne River, reached by a
+            pedestrian causeway. A walking trail circles the island and passes
+            the historic lighthouse, rocky shoreline, beaches and important
+            seabird habitat.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Port Fairy Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Port Fairy Town Centre</h3>
+          <p>
+            A remarkably intact historic centre containing nineteenth-century
+            cottages, churches, civic buildings and former commercial premises
+            alongside contemporary shops, galleries, cafés and restaurants.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Crags Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Crags</h3>
+          <p>
+            A dramatic coastal reserve west of Port Fairy featuring rugged
+            cliffs, offshore rock formations and expansive Southern Ocean
+            views. The area also has cultural significance for the Eastern
+            Maar people.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Crags</h3>
-      <p>
-      The Crags is a striking coastal rock formation shaped by powerful Southern Ocean swells. The rugged cliffs and wave-cut platforms provide dramatic viewpoints that showcase the raw beauty of Victoria’s south-west coastline.
-      </p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Port Fairy</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Port Fairy? Explore accommodation in and around the
+      town while discovering its maritime heritage, historic streetscapes,
+      beaches and working harbour.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort%2520Fairy%252C%2520Victoria%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Port Fairy Accommodation
+      </a>
+    </p>
+
+    <h3 style="text-align:center; margin-top:50px;">
+      Featured Accommodation Opportunities In And Around Port Fairy
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a href="../accommodation-partners.html"
+         class="accommodation-link">
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Port Fairy Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Port Fairy Town Centre</h3>
-      <p>
-      Port Fairy’s town centre features beautifully preserved 19th-century stone buildings, boutique shops, cafés, and galleries. The streetscape reflects the town’s maritime prosperity and continues to serve as a vibrant hub for visitors and the local community.
-      </p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Port Fairy
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>A1 Motels and Apartments Port Fairy</span>
+          <small>Motel and serviced apartments · Port Fairy · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DA1%2520Motels%2520and%2520Apartments%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Ashmont Motel and Apartments</span>
+          <small>Motel and serviced apartments · Port Fairy Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAshmont%2520Motel%2520and%2520Apartments%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>BIG4 Port Fairy Holiday Park</span>
+          <small>Holiday and caravan park · Port Fairy · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2520Port%2520Fairy%2520Holiday%2520Park%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Caledonian Inn – The Stump</span>
+          <small>Hotel / Motel · Port Fairy Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCaledonian%2520Inn%2520The%2520Stump%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Central Motel Port Fairy</span>
+          <small>Motel · Port Fairy Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCentral%2520Motel%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Drift House</span>
+          <small>Boutique hotel · Port Fairy · Within town</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDrift%2520House%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Gardens Caravan Park</span>
+          <small>Caravan park with cabins · Port Fairy · East Beach</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGardens%2520Caravan%2520Park%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Gum Tree Caravan Park</span>
+          <small>Caravan park with cabins · Port Fairy surrounds · Approximately 4 km from town</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGum%2520Tree%2520Caravan%2520Park%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Killarney Caravan Park</span>
+          <small>Caravan park with cabins · Killarney · Approximately 10 km from Port Fairy</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKillarney%2520Caravan%2520Park%252C%2520Killarney%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Merrijig Inn</span>
+          <small>Historic inn and B&amp;B · Port Fairy Wharf Precinct</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMerrijig%2520Inn%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Old Market Inn</span>
+          <small>Boutique hotel / B&amp;B · Port Fairy · Within town</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOld%2520Market%2520Inn%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Oscars Waterfront Boutique Hotel</span>
+          <small>Boutique hotel · Port Fairy Wharf Precinct</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOscars%2520Waterfront%2520Boutique%2520Hotel%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Pelican Waters Holiday Park</span>
+          <small>Holiday and caravan park · Port Fairy · Moyne River</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPelican%2520Waters%2520Holiday%2520Park%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Seacombe House Motor Inn</span>
+          <small>Motor inn and guesthouse · Port Fairy Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSeacombe%2520House%2520Motor%2520Inn%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Boatshed Waterfront B&amp;B</span>
+          <small>B&amp;B · Port Fairy Wharf Precinct</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Boatshed%2520Waterfront%2520B%2526B%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Oak &amp; Anchor Hotel</span>
+          <small>Boutique hotel · Port Fairy Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Oak%2520%2526%2520Anchor%2520Hotel%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Victoria Apartments</span>
+          <small>Professionally operated serviced apartments · Port Fairy Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Victoria%2520Apartments%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Wandering Whale</span>
+          <small>Hotel / guest accommodation · Port Fairy · Within town</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Wandering%2520Whale%252C%2520Port%2520Fairy%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Griffiths Island (including Port Fairy Lighthouse)</h3>
-      <p>
-      Griffiths Island is a coastal reserve at the mouth of the Moyne River, accessible by footbridge from Port Fairy. Walking tracks circle the island, leading to the historic Port Fairy Lighthouse and offering sweeping views of the harbour and Southern Ocean.
-      </p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Battery Hill</h3>
-      <p>
-      Battery Hill is an elevated coastal lookout that once served as a defensive site during the 19th century. Today, it offers panoramic views across Port Fairy’s harbour, river mouth, and surrounding coastline.
-      </p>
-    </div>
-  </div>
-  </div>
-
-  <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Port Fairy</h2>
-
-<p class="accommodation-intro">
-  Planning a stay in Port Fairy? Explore accommodation options in and around this charming coastal town while discovering
-  the maritime heritage, seaside landscapes, and relaxed village atmosphere that make Port Fairy one of Victoria’s most distinctive coastal destinations.
-</p>
-
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
-
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria"
-     target="_blank"
-     class="accommodation-link">
-    View All Port Fairy Accommodation
-  </a>
-</p>
-
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Port Fairy</h3>
-
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
-
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Port Fairy</h3>
-<div class="other-accommodation-bookings">
-
-  <div class="other-stay-item"><span>A1 Motel - Port Fairy Motel and Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Aloha Beachfront Accommodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Ashmont Motel & Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>BIG4 Port Fairy Holiday Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Central Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Cherry Plum Cottages</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Cottages for Couples</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Daisies by the Sea</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Dockside Waterfront Indulgence</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Douglas Riverside Accommodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Drift House, Small Luxury Hotel and Dining Room</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Elizabeth Margaret Brady Cottage</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Gardens Caravan Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Gobles Mill House</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Hearn's Beachside Villas</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Killarney Beach Retreat - Killarney</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Killarney Caravan Park - Killarney</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKillarney%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Merrijig Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Ocean Ridge Retreat</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Old Market Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Oscars Waterfront Boutique Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Pelican Waters Holiday Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Port Fairy Tiny Homes</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Seacombe House Accommodation</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Boatshed Waterfront B&amp;B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Caledonian Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Coach House</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Oak &amp; Anchor Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Victoria Apartments</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Wandering Whale</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort+Fairy%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-</div>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links, which means we may earn a small commission if you make a booking, at no extra cost to you.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -655,8 +953,16 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and landscape
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
   </footer>
