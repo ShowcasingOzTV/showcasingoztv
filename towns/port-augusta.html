@@ -14,27 +14,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Port Augusta (SA) | ShowcasingOz TV</title>
-
-  <meta
-    name="description"
-    content="Discover Port Augusta in South Australia with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
-  >
-
-  <meta
-    name="keywords"
-    content="Port Augusta SA, Port Augusta Spencer Gulf, Port Augusta attractions, Port Augusta accommodation, Flinders Ranges gateway, South Australia travel, ShowcasingOz TV"
-  >
+  <meta name="description" content="Discover Port Augusta in South Australia with ShowcasingOz TV, including attractions, landmarks, accommodation and visitor experiences around the Upper Spencer Gulf.">
+  <meta name="keywords" content="Port Augusta SA, Port Augusta attractions, Port Augusta accommodation, Upper Spencer Gulf, Australian Arid Lands Botanic Garden, Wadlata Outback Centre, South Australia travel, ShowcasingOz TV">
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    crossorigin="anonymous"
-    media="print"
-    onload="this.media='all'"
-  >
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -138,26 +127,6 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder,
@@ -219,6 +188,128 @@
       text-decoration: underline;
     }
 
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -265,12 +356,10 @@
   <header class="navbar">
     <div class="container">
       <a href="/">
-        <img
-          src="/images/logo.jpg"
-          alt="ShowcasingOz TV Logo"
-          width="170"
-          height="65"
-        >
+        <img src="/images/logo.jpg"
+             alt="ShowcasingOz TV Logo"
+             width="170"
+             height="65">
       </a>
 
       <span class="menu-btn" id="menu-btn">
@@ -302,15 +391,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img
-      src="../images/towns/port_augusta.jpg"
-      alt="Port Augusta Spencer Gulf South Australia"
-      width="1600"
-      height="320"
-      fetchpriority="high"
-      decoding="async"
-      style="width:100%; height:100%; object-fit:cover;"
-    >
+    <img src="../images/towns/port_augusta.jpg"
+         alt="Port Augusta South Australia"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
   </section>
 
   <!-- MAIN CONTENT -->
@@ -319,32 +406,50 @@
     <h1>Port Augusta (SA)</h1>
 
     <p>
-      Port Augusta sits at the head of Spencer Gulf, where the coast meets the
-      northern ranges and the landscapes begin to transition towards outback
-      South Australia. The city has long served as an important transport,
-      commercial and service centre for the surrounding region.
+      Port Augusta is a major regional city at the head of South Australia’s
+      Spencer Gulf. Positioned where several of the country’s most important
+      road and rail routes meet, it has long been known as the Crossroads of
+      Australia and serves as a gateway to the Flinders Ranges, Eyre Peninsula
+      and the state’s northern outback.
     </p>
 
     <p>
-      Often described as a gateway to the Flinders Ranges and the outback,
-      Port Augusta is a practical base for travellers heading north, west or
-      deeper into regional South Australia. Its gulf setting, railway heritage,
-      cultural stories and proximity to striking natural landscapes give the
-      city a distinct identity.
+      The city occupies the traditional lands of the Barngarla people and has
+      developed around the sheltered waters of the Upper Spencer Gulf. Its
+      location created an important meeting place between coastal, desert and
+      mountain environments, while also supporting transport, pastoral,
+      maritime and railway activity.
     </p>
 
-    <div class="page-update-notice">
-      <h2>🚧 Our Complete Port Augusta Guide Is Coming Soon</h2>
+    <p>
+      European settlement expanded during the nineteenth century when the port
+      became an outlet for wool and other pastoral products from inland South
+      Australia. Railway development later strengthened Port Augusta’s national
+      importance, connecting the city with Adelaide, Western Australia, the
+      Northern Territory and communities across the outback.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Port Augusta. Following filming, it will be
-        expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        city and surrounding region.
-      </p>
-    </div>
+    <p>
+      Port Augusta now provides major health, education, retail, transport and
+      government services for communities spread across a vast area of northern
+      South Australia. Its town centre and foreshore sit on the eastern side of
+      the gulf, while Port Augusta West, Stirling North and surrounding
+      residential and industrial areas form part of the wider city.
+    </p>
+
+    <p>
+      Visitors can explore the region’s natural environments at the Australian
+      Arid Lands Botanic Garden, learn about outback travel and settlement at
+      the Wadlata Outback Centre, discover local art and culture, and take in
+      views across the gulf from several elevated lookouts.
+    </p>
+
+    <p>
+      Port Augusta’s accommodation, dining, shopping and visitor services make
+      it a practical base for exploring the Upper Spencer Gulf. It is also an
+      important stopping point for travellers continuing towards the Flinders
+      Ranges, Eyre Peninsula, Far North, Nullarbor or central Australia.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -357,47 +462,190 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Port Augusta’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage is completed.
+      Port Augusta’s attractions introduce visitors to the natural landscapes,
+      Aboriginal culture, military history, creativity and outback stories that
+      have shaped the city and surrounding region.
     </p>
 
     <p style="text-align:center;">
-      <a href="../attraction-partners.html" class="accommodation-link">
+      <a href="../attraction-partners.html"
+         class="accommodation-link">
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">
-          Featured Port Augusta Attractions Coming Soon
-        </div>
-      </div>
-    </div>
+    <ul class="attractions-list">
+
+      <li>
+        <strong>Australian Arid Lands Botanic Garden</strong>
+        A nationally significant botanic garden dedicated to plants from
+        Australia’s arid regions. Its walking trails, themed gardens,
+        interpretive displays and views across the Upper Spencer Gulf help
+        visitors understand the diversity and resilience of dry-country
+        landscapes.
+      </li>
+
+      <li>
+        <strong>Curdnatta Art Group</strong>
+        A long-established local arts organisation supporting artists and
+        creative activity in Port Augusta. Its work provides visitors with an
+        opportunity to engage with locally produced art and the wider cultural
+        life of the community.
+      </li>
+
+      <li>
+        <strong>Port Augusta Cultural Centre</strong>
+        A community cultural venue supporting exhibitions, performances,
+        creative programs and events. The centre helps showcase the artistic
+        traditions and contemporary voices of Port Augusta and the surrounding
+        region.
+      </li>
+
+      <li>
+        <strong>RSL Military Museum</strong>
+        A local museum preserving military memorabilia, photographs, documents
+        and stories connected with service personnel from Port Augusta and
+        surrounding communities.
+      </li>
+
+      <li>
+        <strong>Wadlata Outback Centre</strong>
+        Port Augusta’s major visitor and interpretive centre, providing an
+        introduction to the landscapes, Aboriginal culture, natural history,
+        settlement and industries of the Flinders Ranges and South Australian
+        outback.
+      </li>
+
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Port Augusta’s gulf outlooks, railway heritage and other points of
-      interest will be documented and added to this page following our visit.
+      Port Augusta’s lookouts, waterfront areas, historic infrastructure and
+      surrounding communities reveal the city’s relationship with the Upper
+      Spencer Gulf and the landscapes beyond it.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
+
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Port Augusta Points of Interest Coming Soon
+          McLellan Lookout Image Coming Soon
         </div>
-      </div>
+
+        <div class="poi-content">
+          <h3>McLellan Lookout</h3>
+          <p>
+            An elevated viewing point offering broad perspectives across Port
+            Augusta, the Upper Spencer Gulf and the surrounding ranges and
+            plains.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Matthew Flinders Red Cliff Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Matthew Flinders Red Cliff Lookout</h3>
+          <p>
+            A coastal lookout overlooking the Upper Spencer Gulf and its
+            distinctive red cliffs. The site recognises the exploration of
+            Matthew Flinders and provides views across the gulf’s northern
+            waters.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Port Augusta Foreshore &amp; Jetty Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Port Augusta Foreshore &amp; Jetty</h3>
+          <p>
+            A central waterfront area used for walking, recreation, fishing and
+            community events. The precinct includes the jetty and Swimmers
+            Memorial Garden, which recognises the city’s long connection with
+            aquatic recreation.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Port Augusta Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Port Augusta Town Centre</h3>
+          <p>
+            The city’s principal commercial and civic area, bringing together
+            shops, services, heritage buildings, community facilities and
+            connections to the nearby foreshore.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Stirling North Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Stirling North</h3>
+          <p>
+            A residential community southeast of Port Augusta at the foot of
+            the ranges. Its location provides convenient access to the city,
+            nearby lookouts and routes leading towards Quorn and the Flinders
+            Ranges.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Historic Davenport Reservoir &amp; Storage Tank Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Historic Davenport Reservoir &amp; Storage Tank</h3>
+          <p>
+            Surviving infrastructure associated with Port Augusta’s early water
+            supply, illustrating the engineering challenges involved in
+            supporting a growing community in a dry regional environment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Water Tower Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Water Tower Lookout</h3>
+          <p>
+            A prominent local lookout reached by climbing the historic water
+            tower. The elevated platform provides panoramic views across the
+            city, Spencer Gulf, surrounding plains and distant ranges.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Port Augusta</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Port Augusta? Explore available accommodation in and
-      around the city while we continue developing our complete Port Augusta
-      destination guide.
+      Planning a stay in Port Augusta? Explore accommodation throughout the
+      city and Port Augusta West while discovering the Upper Spencer Gulf,
+      local attractions and surrounding outback landscapes.
     </p>
 
     <p class="accommodation-intro">
@@ -409,9 +657,9 @@
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Port+Augusta%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPort%2520Augusta%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Port Augusta Accommodation
@@ -430,7 +678,8 @@
     </p>
 
     <p style="text-align:center;">
-      <a href="../accommodation-partners.html" class="accommodation-link">
+      <a href="../accommodation-partners.html"
+         class="accommodation-link">
         Explore accommodation filming &amp; feature options
       </a>
     </p>
@@ -442,6 +691,278 @@
         </div>
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Port Augusta
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Augusta Budget Motel</span>
+          <small>Motel · Port Augusta · Southern approach</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAugusta%2520Budget%2520Motel%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Augusta Caravan Park</span>
+          <small>Caravan Park · Port Augusta · Within the city</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAugusta%2520Caravan%2520Park%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Augusta Courtyard Motel</span>
+          <small>Motel · Port Augusta West · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAugusta%2520Courtyard%2520Motel%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bentley’s Cabin Park</span>
+          <small>Cabin / Holiday Park · Port Augusta · Within the city</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBentley%2527s%2520Cabin%2520Park%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Comfort Inn &amp; Suites Augusta Westside</span>
+          <small>Hotel / Motel · Port Augusta West · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DComfort%2520Inn%2520%2526%2520Suites%2520Augusta%2520Westside%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Costello Hotels Port Augusta</span>
+          <small>Boutique hotel apartments · Port Augusta Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCostello%2520Hotels%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Crossroads Ecomotel</span>
+          <small>Motel · Port Augusta West · Approximately 3 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCrossroads%2520Ecomotel%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Discovery Parks – Port Augusta</span>
+          <small>Holiday / Caravan Park · Port Augusta West · Approximately 4 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDiscovery%2520Parks%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Econo Lodge Port Augusta</span>
+          <small>Motel · Port Augusta · Northern approach</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEcono%2520Lodge%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Flinders Hotel Motel</span>
+          <small>Hotel / Motel · Port Augusta Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DFlinders%2520Hotel%2520Motel%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Majestic Oasis Apartments</span>
+          <small>Serviced hotel apartments · Port Augusta Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMajestic%2520Oasis%2520Apartments%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Motel Poinsettia</span>
+          <small>Motel · Port Augusta West · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMotel%2520Poinsettia%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Pampas Motel</span>
+          <small>Motel · Port Augusta · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPampas%2520Motel%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Pastoral Hotel Motel</span>
+          <small>Hotel / Motel · Port Augusta · Approximately 2 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPastoral%2520Hotel%2520Motel%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Shoreline Caravan Park</span>
+          <small>Caravan Park with cabins · Port Augusta · Approximately 4 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DShoreline%2520Caravan%2520Park%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Standpipe Golf Motor Inn</span>
+          <small>Motor Inn · Port Augusta West · Approximately 4 km from the town centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStandpipe%2520Golf%2520Motor%2520Inn%252C%2520Port%2520Augusta%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
   </section>
 
@@ -464,14 +985,12 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
