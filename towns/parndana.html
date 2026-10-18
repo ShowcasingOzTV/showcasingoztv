@@ -3,9 +3,14 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -17,12 +22,12 @@
 
   <meta
     name="description"
-    content="Discover Parndana on Kangaroo Island with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Parndana in the heart of Kangaroo Island with ShowcasingOz TV. Explore its soldier-settlement history, local attractions, north-coast beaches, landmarks and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Parndana SA, Parndana Kangaroo Island, Parndana attractions, Parndana accommodation, soldier settlement, South Australia travel, ShowcasingOz TV"
+    content="Parndana SA, Parndana Kangaroo Island, Parndana attractions, Parndana accommodation, Stokes Bay, Snelling Beach, Western River Cove, Soldier Settler Museum, Kangaroo Island travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -44,11 +49,13 @@
       color: #0E3557;
     }
 
+    /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -106,15 +113,19 @@
 
       nav a {
         padding: 15px;
-        border-top: 1px solid rgba(255,255,255,0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
+
+    /* ================= HERO ================= */
 
     .hero {
       width: 100%;
       height: 320px;
       background: #dddddd;
     }
+
+    /* ================= CONTENT ================= */
 
     .content {
       max-width: 900px;
@@ -138,25 +149,7 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
+    /* ================= PLACEHOLDERS ================= */
 
     .video-placeholder,
     .accommodation-placeholder,
@@ -181,11 +174,18 @@
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder,
-    .poi-placeholder {
+    .attraction-placeholder {
       height: 200px;
       font-size: 1.1rem;
     }
+
+    .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      font-size: 0.95rem;
+    }
+
+    /* ================= SHARED GRID ================= */
 
     .accommodation-grid {
       display: grid;
@@ -197,7 +197,7 @@
     .accommodation-card {
       background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
     }
 
@@ -219,13 +219,140 @@
       text-decoration: underline;
     }
 
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      background: #f9f9f9;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      padding: 18px 20px;
+      margin-bottom: 15px;
+    }
+
+    .attractions-list h3 {
+      color: #0E3557;
+      margin: 0 0 7px;
+    }
+
+    .attractions-list p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.95rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+    }
+
+    .poi-content p {
+      color: #555555;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
+
+    .other-accommodation-heading {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .stay-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stay-details strong {
+      color: #0E3557;
+      font-weight: 600;
+    }
+
+    .stay-details span {
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 16px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-decoration: none;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      color: #ffffff;
+    }
+
     .accommodation-disclaimer {
       max-width: 760px;
-      margin: 18px auto 0;
+      margin: 20px auto 0;
       color: #777777;
       font-size: 0.8rem;
       text-align: center;
     }
+
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .stay-details {
+        align-items: center;
+      }
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: #0E3557;
@@ -261,8 +388,8 @@
     .gst-disclaimer {
       display: block;
       margin-top: 8px;
-      font-size: 0.8rem;
       color: #ffffff;
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -272,6 +399,7 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -296,6 +424,7 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
@@ -312,7 +441,7 @@
   <section class="hero">
     <img
       src="../images/towns/parndana.jpg"
-      alt="Parndana Kangaroo Island South Australia"
+      alt="Parndana in the heart of Kangaroo Island"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -327,30 +456,57 @@
     <h1>Parndana (SA)</h1>
 
     <p>
-      Parndana is a small inland township near the centre of Kangaroo Island,
-      serving the surrounding farming districts and providing an important
-      community hub for the island’s central and western areas.
+      Parndana is a small rural township located near the centre of Kangaroo
+      Island, approximately 40 kilometres west of Kingscote. Surrounded by
+      farmland and native vegetation, the town provides important services
+      for central and western Kangaroo Island while offering visitors a
+      practical base from which to explore several parts of the island.
     </p>
 
     <p>
-      The town’s identity is closely connected to Kangaroo Island’s post-war
-      soldier-settlement history and agricultural development. Its central
-      position makes it a practical base for exploring wildlife areas,
-      north-coast beaches and the island’s western landscapes.
+      The township was established following the Second World War as part of
+      the Kangaroo Island Soldier Settlement Scheme. Returned servicemen and
+      their families were allocated land across the central and western parts
+      of the island, where they cleared scrub, established farms and created
+      new community facilities under demanding conditions.
     </p>
 
-    <div class="page-update-notice">
-      <h2>🚧 Our Complete Parndana Guide Is Coming Soon</h2>
+    <p>
+      Agriculture remains fundamental to Parndana’s identity. Sheep, cattle,
+      cropping and other rural industries continue across the surrounding
+      district, while the town provides shops, fuel, education, sporting
+      facilities, accommodation and community services for local residents
+      and travellers.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Parndana. Following filming, it will be
-        expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        town and surrounding areas of Kangaroo Island.
-      </p>
-    </div>
+    <p>
+      The Parndana Soldier Settler Museum preserves the experiences of the
+      returned servicemen and families who built the post-war community. Its
+      collection includes photographs, documents, machinery, household
+      objects and personal stories that explain how the settlement scheme
+      shaped modern Kangaroo Island.
+    </p>
+
+    <p>
+      Parndana’s central position also provides access to the island’s rugged
+      north coast. Stokes Bay, King George Beach, Snelling Beach and Western
+      River Cove combine sheltered swimming areas, rocky headlands, river
+      mouths, dramatic roads and expansive views across Investigator Strait.
+    </p>
+
+    <p>
+      The district was significantly affected by the 2019–20 Kangaroo Island
+      bushfires, which damaged farms, native vegetation, wildlife habitat and
+      infrastructure. The recovery of the surrounding communities reflects
+      the same cooperation and resilience that characterised Parndana’s
+      original soldier-settlement period.
+    </p>
+
+    <p>
+      ShowcasingOz TV will be capturing Parndana’s history, attractions,
+      agricultural character, accommodation and surrounding north-coast
+      landscapes as part of our national filming journey.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -363,12 +519,17 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Parndana’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, history, culture and visitor engagement in a way that
+      static listings alone cannot achieve.
     </p>
 
     <p style="text-align:center;">
-      <a href="../attraction-partners.html" class="accommodation-link">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
         Explore attractions filming &amp; feature options
       </a>
     </p>
@@ -376,34 +537,185 @@
     <div class="accommodation-grid">
       <div class="accommodation-card">
         <div class="attraction-placeholder">
-          Featured Parndana Attractions Coming Soon
+          Featured Parndana Attraction Coming Soon
         </div>
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around Parndana
+    </h3>
+
+    <ul class="attractions-list">
+
+      <li>
+        <h3>Australian Red Gum Gallery</h3>
+
+        <p>
+          Located west of Parndana along the Playford Highway, the Australian
+          Red Gum Gallery showcases handcrafted woodturning and decorative
+          pieces created from distinctive Australian red gum and other
+          Kangaroo Island timbers.
+        </p>
+      </li>
+
+      <li>
+        <h3>Parndana Soldier Settler Museum and Soldiers Memorial Park</h3>
+
+        <p>
+          The museum preserves photographs, machinery, documents, household
+          items and personal stories associated with Kangaroo Island’s
+          post-war Soldier Settlement Scheme. The adjoining memorial area
+          recognises the returned servicemen and families whose work created
+          the Parndana community and surrounding farms.
+        </p>
+      </li>
+
+      <li>
+        <h3>Will’s Rare Breeds Farm</h3>
+
+        <p>
+          Will’s Rare Breeds Farm is a conservation-focused farm attraction
+          on the north-coast side of the Parndana district. It provides
+          visitors with opportunities to see and learn about uncommon breeds
+          of cattle, sheep, pigs, goats and poultry.
+        </p>
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Parndana’s heritage sites, rural landscapes and other points of interest
-      will be documented and added to this page following our visit.
+      These beaches, coastal viewpoints and local places form an important
+      part of Parndana’s surrounding landscape and sense of place.
+      ShowcasingOz TV will document these locations during filming to help
+      tell the broader story of central and northern Kangaroo Island.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="poi-placeholder">
-          Parndana Points of Interest Coming Soon
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Constitution Hill – North Coast Road Lookout</h3>
+
+          <p>
+            Constitution Hill provides a dramatic elevated view along the
+            winding North Coast Road towards Snelling Beach, Middle River and
+            the surrounding hills. The descent is one of the most
+            recognisable scenic approaches on Kangaroo Island’s north coast.
+          </p>
         </div>
       </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>King George Beach</h3>
+
+          <p>
+            King George Beach is a secluded north-coast beach set within a
+            rocky cove near the mouth of King George Creek. Its isolated
+            setting, clear water and surrounding headlands make it a quiet
+            destination for fishing, walking and coastal photography.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Parndana Town Centre</h3>
+
+          <p>
+            Parndana Town Centre provides shops, fuel, community facilities,
+            sporting areas and visitor services for the central and western
+            parts of Kangaroo Island. Its layout and memorial features reflect
+            the town’s post-war soldier-settlement origins.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Snelling Beach</h3>
+
+          <p>
+            Snelling Beach is a broad sandy beach at the mouth of Middle River,
+            framed by steep coastal hills and reached by the scenic descent
+            from Constitution Hill. Its remote setting offers striking views
+            and a strong sense of Kangaroo Island’s rugged north coast.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Stokes Bay Beach and Tunnel</h3>
+
+          <p>
+            Stokes Bay Beach is reached through a narrow natural passage
+            between granite boulders. The passage opens onto a sheltered sandy
+            beach where a rock pool provides protection from the stronger
+            ocean conditions beyond.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Stokes Bay Bush Garden</h3>
+
+          <p>
+            Stokes Bay Bush Garden presents a diverse collection of native
+            plants, including species found on Kangaroo Island and elsewhere
+            across Australia. Its garden setting highlights banksias,
+            grevilleas, orchids and other distinctive Australian flora.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Western River Cove</h3>
+
+          <p>
+            Western River Cove is a remote north-facing beach set beneath
+            steep hills at the mouth of Western River. Reached by a winding
+            coastal road, the cove provides a picnic area, beach access and
+            habitat used by Kangaroo Island’s glossy black-cockatoos.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Parndana</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Parndana? Explore available accommodation in and
-      around the town while we continue developing our complete Parndana
-      destination guide.
+      Planning a stay in Parndana? Explore qualifying lodge, hotel-cabin and
+      bed-and-breakfast accommodation within the township while using its
+      central location to discover Kangaroo Island’s farming districts,
+      heritage attractions and north-coast scenery.
     </p>
 
     <p class="accommodation-intro">
@@ -415,16 +727,16 @@
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Parndana%2C+Kangaroo+Island%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DParndana%252C%2BKangaroo%2BIsland%252C%2BSouth%2BAustralia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Parndana Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Parndana
     </h3>
 
@@ -436,7 +748,10 @@
     </p>
 
     <p style="text-align:center;">
-      <a href="../accommodation-partners.html" class="accommodation-link">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
         Explore accommodation filming &amp; feature options
       </a>
     </p>
@@ -449,10 +764,78 @@
       </div>
     </div>
 
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Parndana
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Ficifolia Lodge</strong>
+          <span>Professionally operated lodge apartments · Parndana</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DFicifolia%2BLodge%252C%2BParndana%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Parndana Hotel Cabins</strong>
+          <span>Hotel and holiday-park cabin accommodation · Parndana</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fparndana-caravan-amp-camping-accommodation.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>The Open House B&amp;B</strong>
+          <span>Bed-and-breakfast accommodation · Parndana</span>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2BOpen%2BHouse%2BB%2526B%252C%2BParndana%252C%2BSouth%2BAustralia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This accommodation list includes qualifying hotels, hotel cabins,
+      bed-and-breakfast properties and professionally operated lodge
+      accommodation. Privately operated holiday homes, Airbnb listings,
+      camping-only locations and properties more appropriately associated
+      with Vivonne Bay, Kingscote or American River are not included.
+      Inclusion does not imply partnership or endorsement. Some links on this
+      page are affiliate links, which means ShowcasingOz TV may earn a small
+      commission if you make a booking, at no additional cost to you.
+    </p>
+
   </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -470,17 +853,16 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
