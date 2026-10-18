@@ -14,27 +14,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Penneshaw (SA) | ShowcasingOz TV</title>
-
-  <meta
-    name="description"
-    content="Discover Penneshaw on Kangaroo Island with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
-  >
-
-  <meta
-    name="keywords"
-    content="Penneshaw SA, Penneshaw Kangaroo Island, Penneshaw ferry, Penneshaw attractions, Penneshaw accommodation, Dudley Peninsula, South Australia travel, ShowcasingOz TV"
-  >
+  <meta name="description" content="Discover Penneshaw and the Dudley Peninsula on Kangaroo Island, including local attractions, landmarks, accommodation and visitor experiences.">
+  <meta name="keywords" content="Penneshaw SA, Penneshaw Kangaroo Island, Penneshaw ferry, Penneshaw attractions, Penneshaw accommodation, Dudley Peninsula, South Australia travel, ShowcasingOz TV">
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    crossorigin="anonymous"
-    media="print"
-    onload="this.media='all'"
-  >
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous"
+        media="print"
+        onload="this.media='all'">
 
   <style>
     body {
@@ -138,26 +127,6 @@
       color: #333333;
     }
 
-    .page-update-notice {
-      max-width: 780px;
-      margin: 30px auto 10px;
-      padding: 24px 26px;
-      background: #FFF4EB;
-      border: 2px solid #E87722;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .page-update-notice h2 {
-      color: #0E3557;
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-    }
-
-    .page-update-notice p {
-      margin: 0;
-    }
-
     .video-placeholder,
     .accommodation-placeholder,
     .attraction-placeholder,
@@ -219,12 +188,126 @@
       text-decoration: underline;
     }
 
-    .accommodation-disclaimer {
-      max-width: 760px;
-      margin: 18px auto 0;
-      color: #777777;
-      font-size: 0.8rem;
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
       text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     footer {
@@ -273,12 +356,7 @@
   <header class="navbar">
     <div class="container">
       <a href="/">
-        <img
-          src="/images/logo.jpg"
-          alt="ShowcasingOz TV Logo"
-          width="170"
-          height="65"
-        >
+        <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
       </a>
 
       <span class="menu-btn" id="menu-btn">
@@ -302,23 +380,18 @@
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
-
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
   </script>
 
   <!-- HERO -->
   <section class="hero">
-    <img
-      src="../images/towns/penneshaw.jpg"
-      alt="Penneshaw Kangaroo Island South Australia"
-      width="1600"
-      height="320"
-      fetchpriority="high"
-      decoding="async"
-      style="width:100%; height:100%; object-fit:cover;"
-    >
+    <img src="../images/towns/penneshaw.jpg"
+         alt="Penneshaw Kangaroo Island South Australia"
+         width="1600"
+         height="320"
+         fetchpriority="high"
+         decoding="async"
+         style="width:100%; height:100%; object-fit:cover;">
   </section>
 
   <!-- MAIN CONTENT -->
@@ -327,46 +400,41 @@
     <h1>Penneshaw (SA)</h1>
 
     <p>
-      Penneshaw is a coastal township on the Dudley Peninsula at the eastern
-      end of Kangaroo Island. As the island’s principal passenger and vehicle
-      ferry gateway, it is often the first Kangaroo Island community
-      encountered by visitors arriving from Cape Jervis.
+      Penneshaw is a coastal township on the Dudley Peninsula at the eastern end of Kangaroo Island.
+      Overlooking Backstairs Passage, it is the island’s main passenger and vehicle ferry gateway and
+      the first Kangaroo Island community encountered by many visitors arriving from the mainland.
     </p>
 
     <p>
-      The township combines coastal scenery, maritime history and a relaxed
-      village atmosphere, with access to beaches, walking trails, local
-      services and the wider attractions of the Dudley Peninsula. It also
-      provides a convenient starting point for exploring the rest of
-      Kangaroo Island.
+      The town developed around Hog Bay, where its sheltered foreshore, jetty and maritime connections
+      remain central to local life. Frenchman’s Rock recalls the visit of Nicolas Baudin’s expedition in
+      1803, while the Penneshaw Maritime and Folk Museum preserves stories from the district’s seafaring,
+      agricultural and community history.
     </p>
 
-    <div class="page-update-notice">
-      <h2>🚧 Our Complete Penneshaw Guide Is Coming Soon</h2>
+    <p>
+      Penneshaw is also a practical base for exploring the wider Dudley Peninsula. The surrounding area
+      brings together beaches, conservation parks, coastal walking trails, lighthouses, wineries, local
+      produce and wildlife experiences, from Baudin Beach and Island Beach to Cape Willoughby and
+      Antechamber Bay.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Penneshaw. Following filming, it will be
-        expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        town and surrounding Dudley Peninsula.
-      </p>
-    </div>
+    <p>
+      With essential visitor services, accommodation, dining and easy access to both natural and cultural
+      attractions, Penneshaw offers more than an arrival point. It is a destination in its own right and a
+      strong starting point for discovering the eastern end of Kangaroo Island.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
-
-    <div class="video-placeholder">
-      Penneshaw Documentary Coming Soon
-    </div>
+    <div class="video-placeholder">Penneshaw Documentary Coming Soon</div>
 
     <!-- ATTRACTIONS -->
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Penneshaw’s featured attractions will be added as filming arrangements
-      are confirmed and our destination coverage is completed.
+      Penneshaw and the Dudley Peninsula offer maritime adventures, wildlife encounters,
+      local produce, wine, art and heritage experiences.
     </p>
 
     <p style="text-align:center;">
@@ -375,51 +443,224 @@
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">
-          Featured Penneshaw Attractions Coming Soon
-        </div>
-      </div>
-    </div>
+    <ul class="attractions-list">
+      <li>
+        <strong>Cape Willoughby Lighthouse &amp; Weather Station</strong>
+        Explore Kangaroo Island’s easternmost headland and the historic lighthouse precinct overlooking
+        Backstairs Passage. The site reveals the maritime importance of this exposed coastline and the role
+        of lighthouse keepers and weather observation in guiding vessels through the strait.
+      </li>
+
+      <li>
+        <strong>False Cape Wines</strong>
+        A Dudley Peninsula cellar-door experience showcasing Kangaroo Island wines in a rural setting.
+        Visitors can discover locally grown varieties and enjoy the landscape that helps shape the region’s
+        distinctive cool maritime character.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Artworks Gallery</strong>
+        A community-focused gallery at Baudin Beach presenting work by Kangaroo Island artists and makers.
+        Its displays provide an introduction to the island’s creative community through locally produced
+        art, craft and gifts.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Living Honey (Private Beekeeping Experience)</strong>
+        A private beekeeping experience introducing visitors to Kangaroo Island’s protected Ligurian bee
+        population, responsible hive management and the production of local honey.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Ocean Safari</strong>
+        Boat-based coastal tours departing from Penneshaw, offering the opportunity to experience the
+        island’s marine environment, rugged shoreline and wildlife from the water.
+      </li>
+
+      <li>
+        <strong>Penneshaw Penguin Centre</strong>
+        A local wildlife experience associated with Penneshaw’s little penguin colony. Guided evening
+        activities help visitors learn about the birds, their habitat and the importance of viewing them
+        responsibly.
+      </li>
+
+      <li>
+        <strong>Rob’s Shearing &amp; Sheepdogs</strong>
+        A working-farm presentation featuring sheep shearing and trained sheepdogs, giving visitors an
+        engaging look at the skills and traditions behind Kangaroo Island’s rural industries.
+      </li>
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Penneshaw’s coastal outlooks, maritime landmarks and other points of
-      interest will be documented and added to this page following our visit.
+      From historic coastal sites and sheltered beaches to remote lighthouses and conservation areas,
+      these places reveal the landscape and stories of Penneshaw and the Dudley Peninsula.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
+
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Penneshaw Points of Interest Coming Soon
+          Antechamber Bay &amp; Lashmar Conservation Park Image Coming Soon
         </div>
-      </div>
+        <div class="poi-content">
+          <h3>Antechamber Bay &amp; Lashmar Conservation Park</h3>
+          <p>
+            A broad sandy bay and protected coastal landscape beside the Chapman River. The area is valued
+            for beach access, picnicking, walking and its peaceful bushland setting, with the Chapman River
+            Bridge forming part of the approach.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Baudin Beach Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Baudin Beach</h3>
+          <p>
+            A small seaside settlement west of Penneshaw with a sheltered beach, coastal views and a
+            relaxed residential character overlooking Nepean Bay.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Cape Hart Conservation Park Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Cape Hart Conservation Park (Lashmar Road Terminus)</h3>
+          <p>
+            A remote conservation area on the Dudley Peninsula’s southern coast, protecting rugged mallee
+            country and an exposed shoreline. The Lashmar Road terminus provides a sense of the area’s
+            isolation and wild coastal character.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Cape St Albans Lighthouse Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Cape St Albans Lighthouse</h3>
+          <p>
+            A remote navigational light on the peninsula’s eastern coastline, positioned above the waters
+            of Backstairs Passage and the rugged cliffs around Cape St Albans.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Dudley Wines Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Dudley Wines</h3>
+          <p>
+            A landmark cellar door overlooking Backstairs Passage, combining Kangaroo Island wine with
+            expansive coastal views across the Dudley Peninsula.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Island Beach Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Island Beach</h3>
+          <p>
+            A long, sheltered stretch of white sand on Eastern Cove, known for calm, clear water and broad
+            views across Nepean Bay.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Kangaroo Island Sculpture Trail Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Kangaroo Island Sculpture Trail</h3>
+          <p>
+            A walking trail close to Penneshaw featuring sculptures set among regenerating native
+            vegetation, bringing together public art, community creativity and the local environment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Penneshaw Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Penneshaw</h3>
+          <p>
+            Kangaroo Island’s eastern gateway and ferry port, with shops, visitor services, dining,
+            accommodation and coastal viewpoints arranged around the Hog Bay foreshore.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Penneshaw Beach Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Penneshaw Beach (Hog Bay, including Frenchman’s Rock)</h3>
+          <p>
+            A sheltered town beach beside the ferry port. Frenchman’s Rock commemorates the 1803 visit of
+            French explorer Nicolas Baudin and connects the foreshore with the island’s early recorded
+            European history.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Penneshaw Maritime &amp; Folk Museum Image Coming Soon
+        </div>
+        <div class="poi-content">
+          <h3>Penneshaw Maritime &amp; Folk Museum</h3>
+          <p>
+            A local museum housed in the former school building, preserving objects, photographs and
+            stories connected with the Dudley Peninsula’s maritime, agricultural and community heritage.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">The Ironstone Hill Hike Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>The Ironstone Hill Hike (including Harry Bates’ Cottage Ruins)</h3>
+          <p>
+            A coastal walking route through the Cape Willoughby area, passing the ruins associated with
+            early settler Harry Bates and offering views across the exposed eastern end of Kangaroo Island.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Turkey Corner Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Turkey Corner</h3>
+          <p>
+            A scenic coastal point on the Dudley Peninsula, offering another perspective on the island’s
+            eastern shoreline and surrounding rural landscape.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Penneshaw</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Penneshaw? Explore available accommodation in and
-      around the town while we continue developing our complete Penneshaw
-      destination guide.
+      Planning a stay in Penneshaw? Explore available accommodation in and around the town while
+      discovering the beaches, heritage, wildlife and coastal landscapes of the Dudley Peninsula.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place
-      to stay. We help people discover where to go, what to experience and
-      where to base themselves as they explore Australia’s cities, towns and
-      hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a place to stay.
+      We help people discover where to go, what to experience and where to base themselves
+      as they explore Australia’s cities, towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Penneshaw%2C+Kangaroo+Island%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPenneshaw%252C%2520Kangaroo%2520Island%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Penneshaw Accommodation
@@ -431,10 +672,9 @@
     </h3>
 
     <p class="accommodation-intro">
-      Accommodation partners featured on ShowcasingOz TV receive premium
-      exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front of
-      travellers actively planning where to stay.
+      Accommodation partners featured on ShowcasingOz TV receive premium exposure through
+      professionally produced video, photography and destination-led storytelling that places
+      their property in front of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
@@ -450,6 +690,125 @@
         </div>
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Penneshaw
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kangaroo Island Seafront Holiday Park</span>
+          <small>Holiday / Caravan Park · Penneshaw · Within town centre</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKangaroo%2520Island%2520Seafront%2520Holiday%2520Park%252C%2520Penneshaw%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kangaroo Island Seafront Hotel</span>
+          <small>Hotel · Penneshaw · Within town centre</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKangaroo%2520Island%2520Seafront%2520Hotel%252C%2520Penneshaw%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Lindsays of Kangaroo Island</span>
+          <small>B&amp;B / Guesthouse · Penneshaw · Approximately 2 km</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLindsays%2520of%2520Kangaroo%2520Island%252C%2520Penneshaw%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Penneshaw Beach Stay</span>
+          <small>Motel · Penneshaw · Within town centre</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPenneshaw%2520Beach%2520Stay%252C%2520Penneshaw%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Sea Dragon Kangaroo Island</span>
+          <small>Boutique Lodge / Guesthouse · Cape Willoughby · Approximately 25 km</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSea%2520Dragon%2520Kangaroo%2520Island%252C%2520Cape%2520Willoughby%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Fig Tree B&amp;B</span>
+          <small>B&amp;B · Baudin Beach · Approximately 10 km</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Fig%2520Tree%2520B%2526B%252C%2520Baudin%2520Beach%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Thorn Park on the Island</span>
+          <small>Hosted B&amp;B / Guesthouse · Penneshaw surrounds · Approximately 10 km</small>
+        </div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThorn%2520Park%2520on%2520the%2520Island%252C%2520Penneshaw%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
+      Booking buttons open Booking.com search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make a booking, at no extra cost to you.
+    </p>
 
   </section>
 
@@ -469,17 +828,12 @@
     </div>
 
     <p>
-      📧
-      <a href="mailto:showcasingoztv@gmail.com">
-        showcasingoztv@gmail.com
-      </a>
-      <br>
+      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
