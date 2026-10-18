@@ -4,364 +4,393 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Nyngan (NSW) | ShowcasingOz TV</title>
- <meta name="description" content="Discover Nyngan, NSW — a welcoming western plains town on the Bogan River, known for its rich agricultural heritage, riverside setting, and role as a regional service centre." />
- <meta name="keywords" content="Nyngan NSW, Nyngan western plains, Bogan River town, central west New South Wales, Nyngan attractions, Nyngan accommodation, regional NSW towns, outback travel NSW, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Nyngan in western New South Wales with ShowcasingOz TV. Explore local museums, heritage attractions, landmarks, the Bogan River district and accommodation in and around Nyngan."
+  >
+
+  <meta
+    name="keywords"
+    content="Nyngan NSW, Nyngan attractions, Nyngan accommodation, Bogan River, Big Bogan, Nyngan Museum, Mid-State Shearing Shed Museum, western New South Wales, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
     /* ================= HEADER ================= */
+
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
       }
     }
 
     /* ================= HERO ================= */
+
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
     /* ================= CONTENT ================= */
+
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
     /* ================= PLACEHOLDERS ================= */
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
     .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      font-size: 0.95rem;
     }
 
     /* ================= SHARED GRID ================= */
+
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= ATTRACTIONS ================= */
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      background: #f9f9f9;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      padding: 18px 20px;
+      margin-bottom: 15px;
+    }
+
+    .attractions-list h3 {
+      color: #0E3557;
+      margin: 0 0 7px;
+    }
+
+    .attractions-list p {
+      margin: 0;
+      color: #555555;
+      font-size: 0.95rem;
+    }
+
+    /* ================= POINTS OF INTEREST ================= */
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .poi-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 8px;
+    }
+
+    .poi-content p {
+      color: #555555;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ================= ACCOMMODATION ================= */
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 760px;
+      margin: 25px auto 0;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .stay-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stay-details strong {
+      color: #0E3557;
+      font-weight: 600;
+    }
+
+    .stay-details span {
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 9px 16px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+      text-decoration: none;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      color: #ffffff;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #777777;
+      font-size: 0.8rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 768px) {
+      .other-stay-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+      .stay-details {
+        align-items: center;
+      }
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    /* ================= FOOTER ================= */
 
-.poi-content {
-  padding: 15px;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – NYNGAN ================= */
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-       .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
   </style>
 </head>
 
@@ -370,10 +399,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,202 +424,462 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/nyngan.jpg"
-       alt="Nyngan New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/nyngan.jpg"
+      alt="Nyngan in western New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Nyngan (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Nyngan is a friendly western New South Wales town located on the banks of the Bogan River, serving as an important regional service centre for the surrounding plains and farming districts. Positioned along key inland routes, the town is a practical stopover for travellers and a vital hub for local communities across the Bogan Shire.
-</p>
+    <h1>Nyngan (NSW)</h1>
 
-<p>
-Established in the late 19th century, Nyngan grew with the expansion of agriculture, grazing, and rail transport across the western plains. Sheep and cattle production, along with broadacre cropping, have long supported the local economy, and the town’s development reflects the resilience and adaptability required to live and work in a region shaped by drought, flood, and extreme seasonal change.
-</p>
+    <p>
+      Nyngan is a welcoming western New South Wales town positioned beside
+      the Bogan River near the junction of the Mitchell and Barrier highways.
+      It serves as the administrative and commercial centre of Bogan Shire
+      while providing an important stopping point for travellers continuing
+      towards Bourke, Cobar and other destinations across western New South
+      Wales.
+    </p>
 
-<p>
-The Bogan River is central to Nyngan’s identity, providing a natural corridor through the district and supporting both community life and local land use. Riversides, weirs, and recreation areas highlight the importance of water in the western plains, while also offering visitors opportunities to relax, picnic, or enjoy the outdoors in a distinctly inland setting.
-</p>
+    <p>
+      The district lies across the traditional lands of the Wangaaypuwan,
+      Ngiyampaa and Wayilwan peoples, whose connections with the waterways,
+      plains and natural resources of the region extend across generations.
+      The Bogan River remains central to the landscape and to Nyngan’s
+      continuing identity.
+    </p>
 
-<p>
-Nyngan is well known for its unique local landmarks and community character, including attractions that celebrate the area’s natural environment and rural identity. The town offers essential visitor services, accommodation options, and welcoming hospitality venues, making it a comfortable base for exploring the surrounding region or continuing west towards Australia’s outback.
-</p>
+    <p>
+      European settlement expanded through the district during the nineteenth
+      century as pastoral properties, stock routes and transport services were
+      established. The arrival of the railway in 1883 shifted activity from
+      the earlier settlement of Canonba to the present town of Nyngan, which
+      developed into an important rail and service centre.
+    </p>
 
-<p>
-Set amid open farmland, big skies, and classic western plains landscapes, Nyngan captures the easygoing spirit of regional New South Wales. It is a town shaped by the river, the land, and the people who continue to keep the district thriving through hard work, strong community ties, and country pride.
-</p>
+    <p>
+      Sheep and cattle production, broadacre cropping, transport and regional
+      services have played major roles in the local economy. The Mid-State
+      Shearing Shed Museum preserves the history of the wool industry, while
+      the Nyngan Museum documents the town’s railway heritage, local families,
+      community development and the devastating flood of 1990.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Nyngan as part of our national filming journey — highlighting its agricultural heritage, connection to the Bogan River, and the welcoming country community spirit that makes Nyngan an authentic western NSW destination.
-</p>
+    <p>
+      In April 1990, extensive flooding overwhelmed the town’s levee and led
+      to the evacuation of almost the entire population by helicopter. The
+      operation remains one of the defining events in Nyngan’s modern history
+      and is commemorated through museum displays and the Iroquois helicopter
+      positioned near the former railway station.
+    </p>
 
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Today, Nyngan combines its rural heritage with distinctive roadside
+      attractions, local museums, country hospitality and the surrounding
+      landscapes of the western plains. Nearby communities including
+      Coolabah, Girilambone and Hermidale contribute further stories of
+      railway development, pastoral life, mining, transport and outback
+      enterprise.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will be capturing the attractions, businesses,
+      landscapes, accommodation and community stories that define Nyngan and
+      the wider Bogan Shire as part of our national filming journey.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Nyngan Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Nyngan</h3>
-  <ul class="other-accommodation-list">
-    <li>The Major Cafe & General Store</li>
-    <li>Nyngan Coach House</li>
-    <li>Nyngan Museum</li>
-    <li>Mid-State Shearing Shed Museuem</li>
-    <li>Hermidale Hotel</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Attractions featured on ShowcasingOz TV are captured through immersive
+      4K video storytelling and professional photography, showcasing local
+      experiences, history, culture and visitor engagement in a way that
+      static listings alone cannot achieve.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Nyngan’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Former Girilambone Railway Station</h3>
-      <p>
-  The Former Girilambone Railway Station reflects the importance of rail in opening up western New South Wales and supporting pastoral and mining communities. Once a busy junction on inland rail lines, the station stands as a reminder of Girilambone’s role in regional transport and outback settlement.
-</p>
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="attraction-placeholder">
+          Featured Nyngan Attraction Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Big Bogan</h3>
-      <p>
-The Big Bogan is Nyngan’s iconic “big thing,” celebrating the town’s connection to the Bogan River and local identity. Positioned near the river, it has become a popular photo stop and symbol of community pride in this western plains town.
-</p>
+    <h3 class="other-accommodation-heading">
+      Other Attractions In And Around Nyngan
+    </h3>
+
+    <ul class="attractions-list">
+
+      <li>
+        <h3>Hermidale Hotel</h3>
+
+        <p>
+          Located west of Nyngan in the small community of Hermidale, this
+          traditional country hotel provides refreshments, meals, hospitality
+          and accommodation for residents, workers and travellers using the
+          Barrier Highway.
+        </p>
+      </li>
+
+      <li>
+        <h3>Mid-State Shearing Shed Museum</h3>
+
+        <p>
+          Created by retired shearers and members of the Nyngan community,
+          this museum occupies a former railway goods shed and preserves
+          equipment, photographs, artwork and stories explaining the
+          importance of sheep farming and shearing throughout the district.
+        </p>
+      </li>
+
+      <li>
+        <h3>Nyngan Coach House</h3>
+
+        <p>
+          The Coach House presents a replica Cobb &amp; Co coach constructed
+          by local craftsman Don Burns, together with a traditional wool wagon
+          and displays connected with early transport, pastoral work and
+          regional travel.
+        </p>
+      </li>
+
+      <li>
+        <h3>Nyngan Museum</h3>
+
+        <p>
+          Housed in Nyngan’s historic 1883 railway station, the museum
+          preserves local family history, railway material, photographs,
+          community artefacts and displays documenting the 1990 flood and
+          helicopter evacuation.
+        </p>
+      </li>
+
+      <li>
+        <h3>The Major Café &amp; General Store</h3>
+
+        <p>
+          Located in Coolabah north of Nyngan, The Major combines an outback
+          café and general store in an important roadside stopping place. It
+          provides refreshments, supplies and country hospitality for the
+          local community and travellers using the Mitchell Highway.
+        </p>
+      </li>
+
+    </ul>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement.
+    </p>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      These regional landmarks form an important part of Nyngan’s identity,
+      history and changing economic landscape. ShowcasingOz TV will document
+      these locations during filming to help tell the broader story of Nyngan
+      and the surrounding Bogan Shire.
+    </p>
+
+    <div class="poi-grid">
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Former Girilambone Railway Station</h3>
+
+          <p>
+            The former railway station at Girilambone reflects the role rail
+            transport played in connecting small western communities with
+            larger regional centres. The surviving railway precinct preserves
+            part of the village’s pastoral, mining and transport history.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>Nyngan Solar Farm Lookout</h3>
+
+          <p>
+            The lookout provides views towards the large-scale Nyngan Solar
+            Plant west of town. Its extensive rows of photovoltaic panels
+            demonstrate the district’s growing contribution to renewable
+            energy production within the open western plains landscape.
+          </p>
+        </div>
+      </div>
+
+      <div class="poi-card">
+        <div class="poi-placeholder">Image Coming Soon</div>
+
+        <div class="poi-content">
+          <h3>The Big Bogan</h3>
+
+          <p>
+            The Big Bogan is Nyngan’s distinctive oversized roadside
+            sculpture and a light-hearted celebration of the town’s name and
+            connection with the Bogan River. It has become a popular visitor
+            photograph stop and local community symbol.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Nyngan Solar Farm Lookout</h3>
-      <p>
-The Nyngan Solar Farm Lookout offers views across one of Australia’s largest solar energy facilities. The site highlights the region’s growing role in renewable energy production and provides a striking contrast between modern infrastructure and the surrounding rural landscape.
-</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Nyngan</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Nyngan? Explore qualifying hotels, motels, tourist
+      parks and guest accommodation within Nyngan and the nearby community of
+      Hermidale while discovering the town’s museums, rural heritage and Bogan
+      River setting.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%252C%2BNew%2BSouth%2BWales%252C%2BAustralia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Nyngan Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Nyngan
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front of
+      travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <div class="accommodation-placeholder">
+          Featured Nyngan Accommodation Coming Soon
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
 
-  <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Nyngan</h2>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Nyngan
+    </h3>
 
-<p class="accommodation-intro">
-  Planning a stay in Nyngan? Explore accommodation options in and around this welcoming western plains town while discovering
-  its agricultural heritage, Bogan River setting, and relaxed country atmosphere in regional New South Wales.
-</p>
+    <div class="other-accommodation-bookings">
 
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Alamo Motor Inn</strong>
+          <span>Motel · Nyngan</span>
+        </div>
 
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales"
-     target="_blank"
-     class="accommodation-link">
-    View All Nyngan Accommodation
-  </a>
-</p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlamo%2BMotor%2BInn%252C%2BNyngan%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Nyngan</h3>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Canonbar Motel</strong>
+          <span>Motel · Nyngan</span>
+        </div>
 
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCanonbar%2BMotel%252C%2BNyngan%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Country Manor Motor Inn</strong>
+          <span>Motor inn · Nyngan</span>
+        </div>
 
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCountry%2BManor%2BMotor%2BInn%252C%2BNyngan%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Nyngan</h3>
-<div class="other-accommodation-bookings">
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Hermidale Hotel</strong>
+          <span>Hotel accommodation · Hermidale</span>
+        </div>
 
-  <div class="other-stay-item"><span>Alamo Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHermidale%2BHotel%252C%2BHermidale%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Canonbar Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Nyngan Riverside Tourist Park</strong>
+          <span>Tourist park with cabin accommodation · Nyngan</span>
+        </div>
 
-  <div class="other-stay-item"><span>Country Manor Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2BRiverside%2BTourist%2BPark%252C%2BNyngan%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Nyngan Riverside Tourist Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Outback Motor Inn</strong>
+          <span>Motor inn · Nyngan</span>
+        </div>
 
-  <div class="other-stay-item"><span>Outback Motor Inn Nyngan</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOutback%2BMotor%2BInn%252C%2BNyngan%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-  <div class="other-stay-item"><span>Perrington Estate</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>Perrington Estate</strong>
+          <span>Professionally operated guesthouse · Nyngan</span>
+        </div>
 
-  <div class="other-stay-item"><span>The Nyngan</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyngan%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fau%2Fperrington-estate.html"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-</div>
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <strong>The Nyngan Hotel</strong>
+          <span>Hotel accommodation · Nyngan</span>
+        </div>
 
-  <p class="accommodation-disclaimer">
-  This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links, which means we may earn a small commission if you make a booking, at no extra cost to you.
-  </p>
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2BNyngan%2BHotel%252C%2BNyngan%252C%2BNew%2BSouth%2BWales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
 
-</section>
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This accommodation list includes hotels, motels, tourist or caravan
+      parks with visitor accommodation, eligible bed-and-breakfast properties
+      and professionally operated guest accommodation. Private holiday
+      rentals, Airbnb listings, free camping areas and camping-only facilities
+      are not included. Inclusion does not imply partnership or endorsement.
+      Some links on this page are affiliate links, which means ShowcasingOz TV
+      may earn a small commission if you make a booking, at no additional cost
+      to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -595,10 +894,19 @@ The Nyngan Solar Farm Lookout offers views across one of Australia’s largest s
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
