@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tennant Creek (NT) | ShowcasingOz TV</title>
-  <meta name="description" content="Explore Tennant Creek (NT) — a historic gold mining town and gateway to the Barkly Tableland, rich in outback heritage and culture, featured on ShowcasingOz TV." />
-  <meta name="keywords" content="Tennant Creek, Northern Territory, Barkly Tableland, gold mining history, outback town, Devil’s Marbles, Karlu Karlu, regional Australia, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Tennant Creek and the Barkly region with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Tennant Creek NT, Barkly region, Battery Hill Mining Centre, Karlu Karlu, Tennant Creek attractions, Tennant Creek accommodation, Northern Territory travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,302 +55,330 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – TENNANT CREEK ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -343,10 +387,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -358,202 +412,442 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/tennant-creek.jpg"
-       alt="Tennant Creek Northern Territory"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/tennant-creek.jpg"
+      alt="Tennant Creek Northern Territory"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Tennant Creek (NT)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Tennant Creek is a historic outback town located in the Northern Territory’s Barkly region, known for its rich gold mining heritage and role as a key service centre for surrounding pastoral stations and remote communities. Established following the discovery of gold in the 1930s, the town quickly became an important hub in central Australia.
-</p>
+    <h1>Tennant Creek (NT)</h1>
 
-<p>
-Today, Tennant Creek sits along the Stuart Highway, providing essential services, accommodation, fuel, and supplies for travellers moving between Darwin and Alice Springs. The town continues to support freight operations, tourism, and regional industries across the vast Barkly Tableland.
-</p>
-
-<p>
-Surrounded by open plains and distinctive granite formations, Tennant Creek offers access to significant natural and cultural landmarks, including Karlu Karlu (Devil’s Marbles). The area holds deep cultural importance for local Aboriginal communities, whose connection to Country remains central to the region’s identity.
-</p>
-
-<p>
-ShowcasingOz TV will feature Tennant Creek as part of its national filming journey, capturing the town’s historical significance, its role as an outback crossroads, and its connection to the landscapes and cultures of the Barkly region.
-</p>
-
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Attractions in Tennant Creek</h3>
-  <ul class="other-accommodation-list">
-    <li>Battery Hill Mining Centre</li>
-    <li>Tennant Creek Telegraph Station</li>
-    <li>Nyinkka Nyunyu Art and Culture Centre</li>
-    <li>Barkly Regional Arts</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Tennant Creek's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Warumungu</h3>
-      <p>
-        Warumungu refers to the traditional owners of the Tennant Creek region, whose Country encompasses much of the Barkly area. The Warumungu people maintain strong cultural connections to the land, with sites of spiritual, historical, and cultural significance throughout the region.
-      </p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Pebbles</h3>
-      <p>
-The Pebbles is a lesser-known granite outcrop area near Tennant Creek, featuring rounded rock formations similar in character to nearby granite landscapes. The site offers a quiet setting that highlights the natural geology of the Barkly region.
-</p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Seven Mile</h3>
-      <p>
-Seven Mile is a historic area located near Tennant Creek, associated with early settlement and mining activity in the region. The site reflects the town’s development during the gold mining era and its role in supporting surrounding operations.
-</p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Bill Allen Lookout</h3>
     <p>
-Bill Allen Lookout provides elevated views over Tennant Creek and the surrounding Barkly Tableland. The lookout offers visitors a vantage point to appreciate the town’s setting within vast open plains and rugged outback landscapes.
-</p>
-  </div>
-</div>
-
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Bonney Well</h3>
-    <p>
-Bonney Well is a historic water source near Tennant Creek, once used by travellers, pastoralists, and early settlers moving through the region. It highlights the importance of natural wells in sustaining movement across remote inland Australia.
-</p>
-  </div>
-</div>
-
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Devils Marbles</h3>
-    <p>
-Devils Marbles, known as Karlu Karlu, is a world-renowned geological site featuring massive rounded granite boulders scattered across the landscape. The area is of great cultural significance to local Aboriginal communities and is one of the Northern Territory’s most iconic natural landmarks.
-</p>
-  </div>
-</div>
-
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Wycliffe Well & Wauchope</h3>
-    <p>
-Wycliffe Well and the nearby locality of Wauchope are small outback settlements north of Tennant Creek, historically linked to pastoral and roadside services along the Stuart Highway. The area is well known for its roadside stops and distinctive place in Northern Territory outback culture.
+      Tennant Creek is a historic outback town in the Northern Territory’s
+      Barkly region, approximately 500 kilometres north of Alice Springs.
+      Located beside the Stuart Highway, the town provides essential services,
+      accommodation, fuel and supplies for residents and travellers crossing
+      central Australia.
     </p>
-  </div>
-</div>
-</div> <!-- closes .poi-grid -->
 
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in Tennant Creek</h2>
+    <p>
+      The area is part of Warumungu Country. Warumungu people maintain deep
+      cultural, spiritual and historical connections with the landscape
+      surrounding Tennant Creek. Cultural knowledge, art and continuing
+      relationships with Country remain fundamental to the identity of the
+      wider Barkly region.
+    </p>
 
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
+    <p>
+      European activity in the district initially centred on the Overland
+      Telegraph Line. Tennant Creek Telegraph Station was established during
+      the 1870s and became an important communications point between Adelaide
+      and Darwin. The preserved station precinct provides insight into the
+      isolation and operational demands faced by early telegraph workers.
+    </p>
 
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
+    <p>
+      The modern township developed after gold was discovered during the
+      1930s. Mining attracted prospectors, workers and businesses, creating
+      rapid growth and establishing Tennant Creek as one of Australia’s
+      notable gold-mining centres. Battery Hill now preserves and interprets
+      this period of the town’s history.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    <p>
+      Tennant Creek later developed into an important administrative,
+      transport and commercial centre for pastoral stations, mining operations
+      and remote communities across the Barkly Tableland. Road freight,
+      government services, tourism and regional organisations continue to
+      support the town.
+    </p>
+
+    <p>
+      The surrounding landscape contains granite formations, historic wells,
+      mining sites and places of profound Aboriginal cultural significance.
+      Karlu Karlu, widely known as the Devils Marbles, is among the Northern
+      Territory’s most recognisable natural and cultural landmarks.
+    </p>
+
+    <p>
+      Today, visitors can explore mining and telegraph history, engage with
+      Aboriginal art and culture, visit regional galleries and travel through
+      the distinctive landscapes of the Barkly. Tennant Creek remains a
+      significant outback crossroads between Alice Springs and northern
+      Australia.
+    </p>
+
+    <p>
+      ShowcasingOz TV will document Tennant Creek’s history, businesses,
+      cultures and visitor experiences as part of its national filming
+      journey. Following our visit, this page will be expanded with original
+      photography, professionally produced video and information gathered on
+      location.
+    </p>
+
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Tennant Creek Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation in Alice Springs</h3>
-  <ul class="other-accommodation-list">
-    <li>Safari Lodge Motel</li>
-    <li>Outback Caravan Park</li>
-    <li>Bluestone Motor Inn</li>
-    <li>Tennant Creek Caravan Park</li>
-    <li>Goldfields Hotel Motel</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="accommodation-intro">
+      Tennant Creek’s visitor attractions explore Aboriginal culture, regional
+      art, gold-mining history and the Overland Telegraph Line.
+    </p>
 
-</section>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+      <li>
+        <strong>Barkly Regional Arts</strong>
+        A regional arts organisation supporting creative practice, cultural
+        expression and community projects across Tennant Creek and the wider
+        Barkly region.
+      </li>
+
+      <li>
+        <strong>Battery Hill Mining Centre</strong>
+        A major heritage attraction interpreting Tennant Creek’s gold-mining
+        history through museum displays, machinery, mineral collections,
+        historic buildings and visitor experiences.
+      </li>
+
+      <li>
+        <strong>Nyinkka Nyunyu Art and Culture Centre</strong>
+        A Warumungu cultural centre sharing local stories, art, language and
+        connections with Country through exhibitions, cultural interpretation
+        and community activities.
+      </li>
+
+      <li>
+        <strong>Tennant Creek Telegraph Station</strong>
+        A historic station precinct associated with the Overland Telegraph
+        Line. Preserved buildings and interpretation explain the role of
+        communications infrastructure in the development of inland Australia.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore Tennant Creek’s lookouts, historic water sources, mining areas,
+      granite landscapes and culturally significant places across the Barkly
+      region.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bill Allen Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bill Allen Lookout</h3>
+
+          <p>
+            An elevated viewpoint providing broad views over Tennant Creek and
+            the surrounding Barkly landscape. The lookout helps visitors
+            appreciate the town’s position among open plains and rocky
+            outcrops.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bonney Well Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bonney Well</h3>
+
+          <p>
+            A historic water source associated with early travellers,
+            pastoralists and movement through the region. The site reflects
+            the vital importance of dependable wells across remote inland
+            Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Karlu Karlu / Devils Marbles Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Karlu Karlu / Devils Marbles</h3>
+
+          <p>
+            A renowned landscape of massive rounded granite boulders south of
+            Tennant Creek. Karlu Karlu is of profound cultural importance to
+            Aboriginal traditional owners and must be visited with respect for
+            its living cultural significance.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Seven Mile Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Seven Mile</h3>
+
+          <p>
+            A historic area near Tennant Creek associated with early mining
+            activity and settlement. The site reflects the development of the
+            district during its gold-mining period.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Pebbles Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Pebbles</h3>
+
+          <p>
+            A granite outcrop area near Tennant Creek featuring rounded rock
+            formations. The site forms part of a culturally important
+            landscape and visitors must observe all access requirements and
+            cultural guidance.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Warumungu Country Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Warumungu Country</h3>
+
+          <p>
+            The traditional Country surrounding Tennant Creek, containing
+            places of continuing spiritual, cultural and historical
+            significance. Warumungu people maintain strong relationships with
+            this landscape through culture, language, knowledge and community.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Wycliffe Well &amp; Wauchope Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Wycliffe Well &amp; Wauchope</h3>
+
+          <p>
+            Small outback localities south of Tennant Creek associated with
+            pastoral activity and highway travel. The district includes
+            roadside services and access to the Karlu Karlu landscape.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Tennant Creek</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Tennant Creek? Explore hotels, motels and caravan
+      parks while discovering the town’s mining history, Aboriginal culture
+      and surrounding Barkly landscapes.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTennant%2520Creek%252C%2520Northern%2520Territory%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Tennant Creek Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Tennant Creek
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Tennant Creek Accommodation Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Tennant Creek
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bluestone Motor Inn</span>
+          <small>Motel · Tennant Creek</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBluestone%2520Motor%2520Inn%252C%2520Tennant%2520Creek%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Goldfields Hotel Motel</span>
+          <small>Hotel / Motel · Tennant Creek Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGoldfields%2520Hotel%2520Motel%252C%2520Tennant%2520Creek%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Outback Caravan Park</span>
+          <small>Caravan park with cabins · Tennant Creek</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOutback%2520Caravan%2520Park%252C%2520Tennant%2520Creek%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Safari Lodge Motel</span>
+          <small>Motel · Tennant Creek</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSafari%2520Lodge%2520Motel%252C%2520Tennant%2520Creek%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tennant Creek Caravan Park</span>
+          <small>Caravan park with cabins · Tennant Creek</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTennant%2520Creek%2520Caravan%2520Park%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -568,10 +862,19 @@ Wycliffe Well and the nearby locality of Wauchope are small outback settlements 
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
