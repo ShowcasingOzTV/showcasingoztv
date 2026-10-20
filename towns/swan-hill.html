@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Swan Hill (VIC) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Swan Hill, VIC — a vibrant Murray River town known for its riverfront lifestyle, Pioneer Settlement, nearby Lake Boga, and rich agricultural heritage." />
-<meta name="keywords" content="Swan Hill VIC, Swan Hill Victoria, Murray River towns, Pioneer Settlement Swan Hill, Lake Boga VIC, Swan Hill attractions, northwest Victoria travel, Murray River tourism, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Swan Hill and Lake Boga with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Swan Hill VIC, Swan Hill attractions, Pioneer Settlement, Lake Boga, Swan Hill accommodation, Murray River travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +55,330 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – SWAN HILL ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-        .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +387,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,266 +412,743 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/swan-hill.jpg"
-       alt="Swan Hill Victoria"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/swan-hill.jpg"
+      alt="Swan Hill Victoria"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Swan Hill (VIC)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Swan Hill is a vibrant regional city in north-west Victoria, located along the Murray River and known for its riverfront lifestyle, rich agricultural heritage, and strong connection to Australia’s pioneer history. As one of the key centres in the region, Swan Hill offers a mix of modern amenities and historical experiences.
-</p>
+    <h1>Swan Hill (VIC)</h1>
 
-<p>
-Established in the 19th century as a river crossing and trading point, Swan Hill developed into an important hub for transport, agriculture, and regional commerce. The Murray River played a central role in the town’s growth, supporting trade and shaping its identity as a river town.
-</p>
+    <p>
+      Swan Hill is a vibrant regional city in northwest Victoria, positioned
+      on the southern bank of the Murray River. Its riverfront setting,
+      agricultural industries and role as a major regional service centre have
+      made it one of the most important communities along this section of the
+      Murray.
+    </p>
 
-<p>
-Today, Swan Hill is best known for the Pioneer Settlement, a living museum that recreates early Australian life and highlights the importance of river trade and paddle steamers in the region’s development. The riverfront remains a focal point for visitors and locals alike, offering parks, walking tracks, and scenic views.
-</p>
+    <p>
+      The Swan Hill district is part of the traditional Country of the Wamba
+      Wamba and Wadi Wadi peoples, whose connections with the Murray River,
+      nearby lakes and surrounding landscapes extend across countless
+      generations. The river remains central to the area’s environment,
+      culture and community identity.
+    </p>
 
-<p>
-Surrounding the town are extensive agricultural areas producing grains, fruit, and livestock, reinforcing Swan Hill’s role as a key contributor to Victoria’s farming sector. Nearby towns and attractions add further depth to the region, creating a diverse travel experience.
-</p>
+    <p>
+      European settlement developed around a river crossing and trading point
+      during the nineteenth century. Paddle steamers transported passengers,
+      wool, produce and supplies along the Murray, helping Swan Hill become an
+      important centre for river trade, agriculture and regional commerce.
+    </p>
 
-<p>
-Swan Hill provides a full range of accommodation, dining, and services, making it a convenient base for exploring the Murray River and surrounding districts. Its combination of history, natural beauty, and regional activity makes it a well-rounded destination.
-</p>
+    <p>
+      Swan Hill is particularly well known for the Pioneer Settlement, a
+      large-scale living-history attraction recreating aspects of nineteenth
+      and early twentieth-century life. Its buildings, working displays,
+      vehicles and river experiences help visitors understand the importance
+      of paddle steamers, farming and regional enterprise.
+    </p>
 
-<p>
-Set against the backdrop of the Murray River and expansive farmland, Swan Hill captures the essence of north-west Victoria — where water, agriculture, and heritage combine to shape a dynamic regional centre.
-</p>
+    <p>
+      Agriculture continues to shape the district. Irrigated horticulture,
+      grain production and livestock industries support the regional economy,
+      while the Murray River and nearby lakes provide water, habitat,
+      recreation and a defining sense of place.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Swan Hill as part of our national filming journey — highlighting its riverfront setting, agricultural strength, historical significance, and its role as a key Murray River destination.
-</p>
+    <p>
+      South of Swan Hill, Lake Boga has its own distinctive wartime and
+      aviation history. During the Second World War, the lake became the site
+      of a major flying-boat repair depot. The Lake Boga Flying Boat Museum
+      now preserves this nationally significant story.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Today, Swan Hill provides extensive retail, dining, accommodation,
+      cultural and community services. Its combination of Murray River
+      scenery, museums, agricultural experiences and nearby rural communities
+      makes it a practical base for exploring northwest Victoria.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      ShowcasingOz TV will document Swan Hill’s history, businesses, people and
+      visitor experiences as part of its national filming journey. Following
+      our visit, this page will be expanded with original photography,
+      professionally produced video and additional information gathered on
+      location.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Swan Hill Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions In And Around Swan Hill</h3>
-  <ul class="other-accommodation-list">
-    <li>Tyntynder Homestead</li>
-    <li>Temba Orchards</li>
-    <li>Raymer's Lakeside Nursery and Gardens</li>
-    <li>Swan Hill Regional Art Gallery</li>
-    <li>Pheasant Farm</li>
-    <li>Hilltop Resort Fauna Park</li>
-    <li>Murray Downs Golf & Country Club</li>
-    <li>Pioneer Settlement</li>
-    <li>Lake Boga Flying Boat Museum - Lake Boga</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Swan Hill and Lake Boga offer visitors living-history experiences,
+      galleries, agricultural businesses, gardens, wildlife and recreational
+      attractions connected with the Murray River region.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Swan Hill’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
+      <li>
+        <strong>Hilltop Resort Fauna Park</strong>
+        A visitor experience associated with Hilltop Resort where guests can
+        encounter a selection of animals within a landscaped regional
+        property.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Giant Murray Cod</h3>
-      <p>
-      The Giant Murray Cod is a well-known roadside attraction celebrating one of the Murray River’s most iconic fish species and the region’s strong connection to the river.
-      </p>
+      <li>
+        <strong>Lake Boga Flying Boat Museum</strong>
+        A museum preserving the history of the secret flying-boat repair depot
+        established at Lake Boga during the Second World War. Displays include
+        photographs, artefacts, underground communications facilities and a
+        restored Catalina flying boat.
+      </li>
+
+      <li>
+        <strong>Murray Downs Golf &amp; Country Club</strong>
+        A major regional golf and hospitality destination across the Murray
+        River from Swan Hill, offering an established course, dining,
+        entertainment and visitor facilities.
+      </li>
+
+      <li>
+        <strong>Pheasant Farm</strong>
+        A local agricultural attraction connected with the breeding and care
+        of pheasants and other birdlife within the Swan Hill district.
+      </li>
+
+      <li>
+        <strong>Pioneer Settlement</strong>
+        Swan Hill’s signature living-history attraction, recreating an early
+        Murray River community through heritage buildings, working displays,
+        costumed interpreters, historic vehicles and river experiences.
+      </li>
+
+      <li>
+        <strong>Raymer’s Lakeside Nursery and Gardens</strong>
+        A nursery and garden destination near Lake Boga featuring established
+        plantings, landscaped areas and horticultural displays.
+      </li>
+
+      <li>
+        <strong>Swan Hill Regional Art Gallery</strong>
+        A public gallery presenting exhibitions from its permanent collection
+        alongside touring displays and work by regional and Australian
+        artists.
+      </li>
+
+      <li>
+        <strong>Temba Orchards</strong>
+        A local horticultural business reflecting the importance of irrigated
+        fruit production to Swan Hill and the surrounding Murray River
+        district.
+      </li>
+
+      <li>
+        <strong>Tyntynder Homestead</strong>
+        A historic homestead complex preserving buildings, furnishings,
+        machinery and stories associated with early pastoral settlement in the
+        Swan Hill district.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore Swan Hill’s town centre and celebrated roadside landmark,
+      together with Lake Boga’s lakeside heritage and the surrounding Mallee
+      community of Ultima.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Giant Murray Cod Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Giant Murray Cod</h3>
+
+          <p>
+            A well-known Swan Hill roadside landmark celebrating one of the
+            Murray River’s most recognisable native fish species and the
+            region’s close connection with the river.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lake Boga &amp; Cannie Ridge Pump Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lake Boga &amp; Cannie Ridge Pump</h3>
+
+          <p>
+            Lake Boga is known for its calm waters, recreational use and
+            wartime history. The Cannie Ridge Pump reflects the importance of
+            irrigation infrastructure and water management to agriculture
+            across the surrounding district.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Lake Boga Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Lake Boga Town Centre</h3>
+
+          <p>
+            A small lakeside commercial and community precinct providing local
+            services and access to Lake Boga’s recreation areas, foreshore and
+            aviation heritage.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Swan Hill Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Swan Hill Town Centre</h3>
+
+          <p>
+            The commercial and social centre of the city, containing shops,
+            cafés, restaurants, professional services and community
+            facilities serving Swan Hill and the wider Murray River district.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Ultima Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Ultima</h3>
+
+          <p>
+            A small rural community west of Swan Hill surrounded by the
+            agricultural landscapes of the Mallee. Ultima reflects the
+            character and community life of Victoria’s smaller grain-growing
+            settlements.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Swan Hill Town Centre</h3>
-      <p>
-      Swan Hill Town Centre offers a mix of shops, cafés, services, and local businesses, serving as the commercial and social hub of the region.
-      </p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Swan Hill</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Swan Hill? Explore hotels, motels, caravan parks,
+      resorts and eligible B&amp;Bs in Swan Hill, Murray Downs and Lake Boga
+      while discovering the Murray River and surrounding district.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a place
+      to stay. We help people discover where to go, what to experience and
+      where to base themselves as they explore Australia’s cities, towns and
+      hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan%2520Hill%252C%2520Victoria%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Swan Hill Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Swan Hill
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Swan Hill Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-      <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Boga & Cannie Ridge Pump</h3>
-      <p>
-      Lake Boga is a popular destination just south of Swan Hill, known for its calm waters, recreational opportunities, and wartime history. The Cannie Ridge Pump highlights the region’s irrigation systems and water management heritage.
-      </p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Swan Hill
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Australian Settlers Motor Inn</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAustralian%2520Settlers%2520Motor%2520Inn%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bed of Roses B&amp;B</span>
+          <small>B&amp;B · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBed%2520of%2520Roses%2520B%2526B%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>BIG4 Riverside Swan Hill</span>
+          <small>Caravan park with cabins · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2520Riverside%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>BIG4 Swan Hill</span>
+          <small>Caravan park with cabins · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBIG4%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Burke and Wills Motor Inn</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBurke%2520and%2520Wills%2520Motor%2520Inn%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Burrabliss Luxury Bed and Breakfast</span>
+          <small>B&amp;B · Lake Boga</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBurrabliss%2520Luxury%2520Bed%2520and%2520Breakfast%252C%2520Lake%2520Boga%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Comfort Inn Lady Augusta</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DComfort%2520Inn%2520Lady%2520Augusta%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Commercial Hotel Lake Boga</span>
+          <small>Hotel · Lake Boga</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCommercial%2520Hotel%252C%2520Lake%2520Boga%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Federal Hotel</span>
+          <small>Hotel · Swan Hill Town Centre</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DFederal%2520Hotel%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Happy Wanderer Motel</span>
+          <small>Motel · Lake Boga</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHappy%2520Wanderer%2520Motel%252C%2520Lake%2520Boga%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Hilltop Resort</span>
+          <small>Resort accommodation · Swan Hill district</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHilltop%2520Resort%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Jane Eliza Motor Inn</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DJane%2520Eliza%2520Motor%2520Inn%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Lake Boga Caravan Park</span>
+          <small>Caravan park with cabins · Lake Boga</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake%2520Boga%2520Caravan%2520Park%252C%2520Lake%2520Boga%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Lazy River Motor Inn</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLazy%2520River%2520Motor%2520Inn%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Murray Downs Resort</span>
+          <small>Resort and motel accommodation · Murray Downs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMurray%2520Downs%2520Resort%252C%2520Murray%2520Downs%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Murray River Motel</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMurray%2520River%2520Motel%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Paddle Steamer Motel</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPaddle%2520Steamer%2520Motel%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Paruna Motel</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DParuna%2520Motel%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Pioneer Station Motor Inn</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPioneer%2520Station%2520Motor%2520Inn%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Quality Inn Swan Hill</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DQuality%2520Inn%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Sun Centre Motel</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSun%2520Centre%2520Motel%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Swan Hill Holiday Park</span>
+          <small>Caravan park with cabins · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan%2520Hill%2520Holiday%2520Park%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Swan Hill Resort</span>
+          <small>Resort and motel accommodation · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan%2520Hill%2520Resort%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Travellers Rest Motor Inn</span>
+          <small>Motel · Swan Hill</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTravellers%2520Rest%2520Motor%2520Inn%252C%2520Swan%2520Hill%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Lake Boga Town Centre</h3>
-      <p>
-      Lake Boga Town Centre is a small lakeside hub offering local amenities, accommodation, and access to the lake’s recreational areas.
-      </p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Ultima</h3>
-      <p>
-      Ultima is a quiet rural locality west of Swan Hill, reflecting the agricultural landscapes and small-community lifestyle typical of the Mallee region.
-      </p>
-    </div>
-  </div>
-  </div>
-
-   <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Swan Hill</h2>
-
-<p class="accommodation-intro">
-  Planning a stay in Swan Hill? Explore accommodation options in and around this vibrant Murray River town while discovering
-  its riverfront lifestyle, agricultural strength, and the attractions that make it a key destination in north-west Victoria.
-</p>
-
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
-
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria"
-     target="_blank"
-     class="accommodation-link">
-    View All Swan Hill Accommodation
-  </a>
-</p>
-
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Swan Hill</h3>
-
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
-
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Swan Hill</h3>
-<div class="other-accommodation-bookings">
-
-  <div class="other-stay-item"><span>Australian Settlers Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Bed of Roses B&amp;B</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>BIG4 Riverside Swan Hill</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>BIG4 Swan Hill</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Burke and Wills Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Comfort Inn Lady Augusta</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Federal Hotel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Hilltop Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Jacaranda Holiday Units</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Jane Eliza Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Lazy River Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Murray Downs Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Murray River Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Paddle Steamer Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Paruna Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Pioneer Station Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Quality Inn Swan Hill</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Sun Centre Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Swan Hill Holiday Park</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Swan Hill Resort</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Travellers Rest Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSwan+Hill%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Burrabliss Luxury Bed and Breakfast - Lake Boga</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake+Boga%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Commercial Hotel - Lake Boga</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake+Boga%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Happy Wanderer Motel - Lake Boga</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake+Boga%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Lake Boga Caravan Park - Lake Boga</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLake+Boga%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-</div>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-    Some links on this page are affiliate links, which means we may earn a small commission if you make
-    a booking, at no extra cost to you.
-  </p>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -659,10 +1163,19 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and experienc
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
