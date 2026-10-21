@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Thargomindah (QLD) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Thargomindah, QLD — a remote outback town on the Bulloo River, known for its pioneering aviation history, artesian bore baths, and classic Channel Country landscapes." />
-  <meta name="keywords" content="Thargomindah QLD, Thargomindah outback, Bulloo River town, Channel Country Queensland, Thargomindah attractions, Thargomindah accommodation, western Queensland towns, outback travel Queensland, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Thargomindah and the surrounding Bulloo Shire with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Thargomindah QLD, Thargomindah attractions, Thargomindah accommodation, Bulloo River, Bulloo Shire, Channel Country travel, Queensland outback, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,302 +55,330 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – THARGOMINDAH ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -343,10 +387,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -358,170 +412,382 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/thargomindah.jpg"
-       alt="Thargomindah Queensland"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/thargomindah.jpg"
+      alt="Thargomindah Queensland"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Thargomindah (QLD)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p> Thargomindah is a remote outback town located in far south-west Queensland on the banks of the Bulloo River, serving as a vital service centre for surrounding pastoral stations within the Channel Country. Its isolated location and river setting have played a significant role in shaping both the town’s development and its close-knit community. </p>
+    <h1>Thargomindah (QLD)</h1>
 
-<p> Established in the late 19th century, Thargomindah developed as pastoralism expanded across western Queensland. Cattle grazing became the backbone of the local economy, with the town supporting vast properties that rely on seasonal flooding and resilient land management practices. Life in Thargomindah has always required adaptability, shaped by extreme weather, distance, and self-reliance. </p>
+    <p>
+      Thargomindah is a remote outback town on the banks of the Bulloo River in
+      far south-west Queensland. Located more than 1,000 kilometres west of
+      Brisbane, it serves as the administrative and service centre of the
+      Bulloo Shire and supports surrounding cattle stations, road travellers
+      and communities spread across an immense area of Channel Country.
+    </p>
 
-<p> Thargomindah holds a unique place in Australian history, most notably as the first town in the country to generate electric street lighting using hydroelectric power in 1898. The town was also an important early aviation hub, playing a role in the development of outback air services that helped connect remote communities long before modern road networks were established. </p>
- 
-<p> The Bulloo River and surrounding floodplains are central to life in Thargomindah, influencing both pastoral activity and the natural environment. Seasonal floods transform the landscape, supporting birdlife and grazing, while artesian water remains essential during dry periods — highlighting the ingenuity required to sustain permanent settlement in this arid region. </p>
+    <p>
+      The town developed during the nineteenth century as pastoral settlement
+      expanded across western Queensland. Cattle grazing became central to the
+      district’s economy, while Thargomindah supplied essential services to
+      properties operating across a landscape shaped by long distances,
+      irregular rainfall, drought and periodic flooding.
+    </p>
 
-<p> Today, Thargomindah offers visitors a quiet yet compelling outback experience. Heritage buildings, historic sites, riverside areas, and long stretches of open road provide insight into the town’s past and present, while local hospitality reflects the strong sense of community that defines life in one of Queensland’s most remote towns. </p>
+    <p>
+      Thargomindah holds an important place in Australian engineering history.
+      In 1898, artesian water pressure was used to operate a generator that
+      supplied electric street lighting to the town. This pioneering local
+      system demonstrated how artesian resources could support permanent
+      settlement and public infrastructure in an isolated inland community.
+    </p>
 
-<p> ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Thargomindah as part of our national filming journey — highlighting its pioneering innovations, aviation history, connection to the Bulloo River, and the enduring outback community spirit that continues to shape this resilient Channel Country town. </p>
-  
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Aviation also played a major part in reducing the effects of isolation.
+      Thargomindah became associated with early outback air services that
+      transported passengers, mail and supplies between communities that were
+      difficult to reach by road. The town’s historic hospital, police station,
+      Leahy House and hydro power infrastructure preserve different aspects of
+      this broader regional story.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <p>
+      The Bulloo River remains central to the town’s identity and environment.
+      During favourable seasons, waterholes, floodplains and river vegetation
+      support birdlife and provide a striking contrast with the surrounding
+      arid country. Thargomindah is also a starting point for journeys towards
+      Hungerford, Currawinya National Park, Noccundra and other remote parts of
+      Queensland’s south-west.
+    </p>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
+    <p>
+      ShowcasingOz TV will document Thargomindah’s pioneering infrastructure,
+      pastoral heritage, riverside landscape, local businesses and surrounding
+      outback communities as part of its national filming journey. Following
+      our visit, this page will be expanded with original photography,
+      professionally produced video and additional information gathered on
+      location.
+    </p>
 
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Thargomindah Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions in and around Thargomindah</h3>
-  <ul class="other-accommodation-list">
-    <li>Old Thargomindah Hospital</li>
-    <li>Thargomindah Hydro Power Station</li>
-    <li>Old Police Station</li>
-    <li>Historical Leahy House</li>
-    <li>Royal Mail Hotel - Hungerford</li>
-    <li>Thargomindah Visitor Information Centre</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Thargomindah provides visitors with opportunities to explore pioneering
+      infrastructure, historic buildings, regional stories and the heritage of
+      remote communities throughout the Bulloo Shire.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Thargomindah’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
+      <li>
+        <strong>Historical Leahy House</strong>
+        A historic residence preserving stories and displays connected with
+        Thargomindah’s early residents and the development of the district.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Cobb & Co Crossing of the Bulloo River</h3>
-      <p>
-  This historic crossing marks an important route once used by Cobb & Co coaches, stockmen, and early travellers moving through the Channel Country. It highlights the challenges of 19th-century outback travel and the critical role the Bulloo River played in connecting remote settlements across south-west Queensland.
-</p>
+      <li>
+        <strong>Old Police Station</strong>
+        A surviving historic building associated with law enforcement and
+        public administration in one of Queensland’s most remote districts.
+      </li>
+
+      <li>
+        <strong>Old Thargomindah Hospital</strong>
+        A heritage place reflecting the delivery of medical care to residents,
+        pastoral workers and travellers across the isolated Bulloo region.
+      </li>
+
+      <li>
+        <strong>Royal Mail Hotel - Hungerford</strong>
+        A historic outback hotel and former Cobb &amp; Co staging post serving the
+        remote community of Hungerford near the Queensland border.
+      </li>
+
+      <li>
+        <strong>Thargomindah Hydro Power Station</strong>
+        A significant part of the town’s pioneering power story, where artesian
+        water pressure was harnessed to generate electricity for street lighting.
+      </li>
+
+      <li>
+        <strong>Thargomindah Visitor Information Centre</strong>
+        A useful first stop for local information, road conditions, regional
+        history and guidance for exploring the Bulloo Shire and Channel Country.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore the river crossings, lookouts, historic places and remote border
+      landmarks that help explain Thargomindah’s relationship with the wider
+      Channel Country landscape.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Budjiti Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Budjiti Lookout</h3>
+
+          <p>
+            An elevated viewpoint providing broad views across the open plains,
+            river country and expansive skies surrounding Thargomindah.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cobb &amp; Co Crossing of the Bulloo River Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cobb &amp; Co Crossing of the Bulloo River</h3>
+
+          <p>
+            A historic river crossing associated with coach routes, stock
+            movements and early travellers passing through the Bulloo region.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Queensland / New South Wales Border Gate Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Queensland / New South Wales Border Gate (near Hungerford)</h3>
+
+          <p>
+            A distinctive remote border crossing near Hungerford where the road
+            passes through the gate in the Dog Fence between the two states.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Thargomindah Historical Cemetery Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Thargomindah Historical Cemetery</h3>
+
+          <p>
+            A historic burial ground preserving the names and stories of early
+            residents whose lives helped shape the remote settlement.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Thargomindah Historical Cemetery</h3>
-      <p>
-The historical cemetery offers a moving insight into Thargomindah’s early years, with graves dating back to the late 1800s. It tells the stories of pioneers, pastoral workers, and families who lived in extreme isolation, reflecting the hardship, resilience, and determination that shaped the town.
-</p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Thargomindah</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Thargomindah? Explore available accommodation in the
+      town and across the wider Bulloo Shire while discovering its pioneering
+      history, river landscape and remote outback character.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThargomindah%252C%2520Queensland%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Thargomindah Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Thargomindah
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Thargomindah Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Budjiti Lookout</h3>
-      <p>
-Budjiti Lookout provides elevated views across the vast Channel Country landscape surrounding Thargomindah. From this vantage point, visitors can take in sweeping floodplains, open skies, and remote terrain, gaining a strong sense of the scale and environment that define this outback region.
-</p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Thargomindah
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Bulloo River Hotel Motel</span>
+          <small>Hotel / Motel · Thargomindah</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBulloo%2520River%2520Hotel%2520Motel%252C%2520Thargomindah%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Explorers Caravan Park</span>
+          <small>Caravan Park / Cabins / Bunkhouse · Thargomindah</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DExplorers%2520Caravan%2520Park%252C%2520Thargomindah%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kilcowera Station</span>
+          <small>Station Stay / Shearers’ Quarters · Between Thargomindah and Hungerford</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKilcowera%2520Station%252C%2520Thargomindah%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Royal Mail Hotel - Hungerford</span>
+          <small>Hotel / Rooms / Bunkhouse · Hungerford</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DRoyal%2520Mail%2520Hotel%252C%2520Hungerford%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Thargomindah Oasis Motel</span>
+          <small>Motel · Thargomindah</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThargomindah%2520Oasis%2520Motel%252C%2520Thargomindah%252C%2520Queensland"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Queensland / New South Wales Border Gate (near Hungerford)</h3>
-      <p>
-Located near Hungerford, the border gate marks the transition between Queensland and New South Wales along remote outback roads. A popular photo stop, it symbolises the isolation, vast distances, and frontier spirit of this little-visited corner of inland Australia.
-</p>
-    </div>
-  </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in Thargomindah</h2>
-
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Accommodation in Thargomindah</h3>
-  <ul class="other-accommodation-list">
-    <li>Thargomindah Oasis Motel</li>
-    <li>Explorers Caravan Park</li>
-    <li>Bulloo River Hotel Motel</li>
-    <li>Kilcowera Station</li>
-    <li>Royal Mail Hotel - Hungerford</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -536,10 +802,19 @@ Located near Hungerford, the border gate marks the transition between Queensland
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
