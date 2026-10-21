@@ -4,34 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tooleybuc (NSW) | ShowcasingOz TV</title>
-<meta name="description" content="Discover Tooleybuc, NSW — a small Murray River town known for its historic bridge, riverside lifestyle, irrigation farming, and relaxed country atmosphere near the Victorian border." />
-<meta name="keywords" content="Tooleybuc NSW, Tooleybuc Murray River, Murray River town NSW, Tooleybuc Bridge, Riverina towns, Tooleybuc accommodation, western NSW travel, Murray River destinations, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Tooleybuc and the surrounding Murray River district with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Tooleybuc NSW, Tooleybuc attractions, Tooleybuc accommodation, Tooleybuc Bridge, Murray River travel, Riverina towns, New South Wales travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -39,329 +55,330 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – TOOLEYBUC ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
-
-            .other-accommodation-bookings {
-  max-width: 700px;
-  margin: 25px auto 0;
-}
-
-.other-stay-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.other-stay-item span {
-  color: #0E3557;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .other-stay-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -370,10 +387,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -385,253 +412,465 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/tooleybuc.jpg"
-       alt="Tooleybuc New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/tooleybuc.jpg"
+      alt="Tooleybuc New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-<h1>Tooleybuc (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Tooleybuc is a small and welcoming town in south-western New South Wales, located on the banks of the Murray River near the Victorian border. Positioned within the Riverina region, Tooleybuc is closely connected to irrigation farming, river trade history, and the relaxed lifestyle that defines many Murray River communities.
-</p>
+    <h1>Tooleybuc (NSW)</h1>
 
-<p>
-Established in the late 19th century, Tooleybuc developed as a river crossing and agricultural service centre. The Murray River played a central role in its early growth, supporting transport, trade, and pastoral activity. Over time, irrigation schemes transformed the surrounding district into productive farmland, strengthening the town’s role in supporting cropping and livestock industries.
-</p>
+    <p>
+      Tooleybuc is a small Murray River town in south-western New South Wales,
+      situated directly across the river from Victoria. Located approximately
+      45 kilometres north of Swan Hill, it serves surrounding farming districts
+      and provides an important stopping point on the road between south-eastern
+      Australia, western New South Wales and South Australia.
+    </p>
 
-<p>
-One of Tooleybuc’s most recognisable landmarks is its historic lift-span bridge across the Murray River, which symbolises the town’s connection to both New South Wales and Victoria. The bridge reflects the importance of reliable river crossings in linking rural communities and enabling regional development.
-</p>
+    <p>
+      European settlement expanded through the district during the nineteenth
+      century as pastoral activity and river transport developed along the
+      Murray. Tooleybuc grew around the need for a reliable river crossing and
+      services for residents, station workers and travellers moving between New
+      South Wales and Victoria.
+    </p>
 
-<p>
-Today, Tooleybuc maintains a quiet country-town atmosphere, offering essential services, accommodation, and hospitality venues for travellers exploring the Murray River corridor. Riverside reserves, fishing spots, and open parklands provide opportunities for relaxation and outdoor recreation in a scenic river setting.
-</p>
+    <p>
+      The Tooleybuc Bridge is the town’s most recognisable landmark. Its
+      historic lift-span design allowed road traffic to cross the river while
+      retaining the ability to open for river vessels. Together with the nearby
+      bridge keeper’s cottage, it demonstrates the importance of transport and
+      river navigation to the development of Murray River communities.
+    </p>
 
-<p>
-Surrounded by flat agricultural plains, red gums, and expansive skies, Tooleybuc captures the understated charm of Australia’s inland river towns. The community reflects resilience, practicality, and a strong connection to land and water — values that continue to shape life along the Murray.
-</p>
+    <p>
+      Irrigation transformed the surrounding country and supports a diverse
+      agricultural economy that includes grain, livestock, fruit and wine
+      production. Nearby communities such as Piangil, Manangatang, Wood Wood
+      and Nyah each reflect different parts of the broader farming and river
+      history shared across the New South Wales and Victorian border.
+    </p>
 
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and experiences that define Tooleybuc as part of our national filming journey — highlighting its Murray River heritage, irrigation history, historic bridge, and the welcoming rural spirit that makes this border town a distinctive Riverina destination.
-</p>
+    <p>
+      Tooleybuc’s riverside reserves, mature river red gums and open parkland
+      provide places for walking, fishing, boating and quiet recreation. The
+      town centre contains accommodation, hospitality venues and essential
+      services, giving visitors a practical base from which to explore this
+      section of the Murray River corridor.
+    </p>
 
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      ShowcasingOz TV will document Tooleybuc’s river heritage, historic bridge,
+      agricultural connections, local businesses and surrounding communities
+      as part of its national filming journey. Following our visit, this page
+      will be expanded with original photography, professionally produced video
+      and additional information gathered on location.
+    </p>
 
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
+    <div class="video-placeholder">
+      Tooleybuc Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Attractions in and around Tooleybuc</h3>
-  <ul class="other-accommodation-list">
-    <li>Andrew Peace Winery</li>
-    <li>Ron Dehne Ford Tractor Collection</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
+    <p class="accommodation-intro">
+      Tooleybuc provides a base for discovering local collections and
+      food-and-wine businesses connected with the productive Murray and Mallee
+      districts.
+    </p>
 
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Tooleybuc’s landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
 
-<div class="poi-grid">
+    <ul class="attractions-list">
+      <li>
+        <strong>Andrew Peace Wines</strong>
+        A family-owned winery near Piangil producing a broad range of wines from
+        vineyards beside the Murray River in north-western Victoria.
+      </li>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Manangatang Mallee Garden</h3>
-      <p>
-      The Manangatang Mallee Garden showcases native plants suited to the semi-arid Mallee environment. The garden highlights local biodiversity and provides visitors with insight into the resilient vegetation that thrives in north-west Victoria’s dry conditions.
-      </p>
+      <li>
+        <strong>Ron Dehne Ford Tractor Collection</strong>
+        A privately assembled collection celebrating Ford tractors,
+        agricultural machinery and the equipment used across the surrounding
+        farming district.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore Tooleybuc’s river-crossing heritage and the nearby rural
+      communities that connect the Murray River with the Victorian Mallee.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Bridge Keeper’s Cottage Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Bridge Keeper’s Cottage</h3>
+
+          <p>
+            A historic cottage associated with the operation and supervision of
+            Tooleybuc’s lift-span bridge across the Murray River.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Manangatang Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Manangatang</h3>
+
+          <p>
+            A Victorian Mallee township serving a surrounding grain, livestock
+            and agricultural district west of Tooleybuc.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Manangatang Mallee Garden Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Manangatang Mallee Garden</h3>
+
+          <p>
+            A community garden showcasing plants adapted to the dry conditions
+            and distinctive environment of north-western Victoria’s Mallee.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Nyah Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Nyah</h3>
+
+          <p>
+            A Murray River township south of Tooleybuc with strong links to
+            irrigated agriculture, river transport and surrounding farming
+            communities.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Piangil Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Piangil</h3>
+
+          <p>
+            A small Victorian community across the Murray from Tooleybuc that
+            developed as a railway and agricultural service centre.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tooleybuc Bridge Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tooleybuc Bridge</h3>
+
+          <p>
+            A historic lift-span bridge linking New South Wales and Victoria
+            and symbolising Tooleybuc’s longstanding connection with Murray
+            River transport.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tooleybuc Town Centre Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tooleybuc Town Centre</h3>
+
+          <p>
+            A compact rural centre offering local businesses, accommodation,
+            hospitality and essential services close to the Murray River.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Wood Wood Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Wood Wood</h3>
+
+          <p>
+            A small Victorian locality near the Murray River surrounded by
+            pastoral land, cropping country and low-lying river plains.
+          </p>
+        </div>
+      </article>
+
     </div>
-  </div>
 
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Manangatang</h3>
-      <p>
-      Manangatang’s town centre reflects its agricultural roots, featuring heritage buildings, local services, and community spaces that support surrounding grain and livestock farming districts. It offers a quiet, authentic country-town atmosphere.
-      </p>
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Tooleybuc</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Tooleybuc? Explore hotels, motels and caravan parks in
+      Tooleybuc and surrounding communities while discovering the Murray River,
+      local heritage and the wider agricultural district.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Tooleybuc Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Tooleybuc
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Tooleybuc Accommodation Coming Soon
+        </div>
+
+      </div>
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Bridge Keeper’s Cottage</h3>
-      <p>
-      The Bridge Keeper’s Cottage near the Murray River recalls the era when river crossings required manual operation and supervision. The cottage reflects the importance of transport infrastructure in connecting communities across state borders.
-      </p>
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Tooleybuc
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Country Club Hotel Tooleybuc</span>
+          <small>Hotel · Tooleybuc</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DCountry%2520Club%2520Hotel%2520Tooleybuc%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Kyalite Caravan Park</span>
+          <small>Caravan Park / Cabins · Kyalite</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKyalite%2520Caravan%2520Park%252C%2520Kyalite%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Manangatang Family Hotel</span>
+          <small>Hotel · Manangatang</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Manangatang%2520Family%2520Hotel%252C%2520Manangatang%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tooleybuc Caravan Park</span>
+          <small>Caravan Park · Tooleybuc</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2520Caravan%2520Park%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tooleybuc Club Motor Inn</span>
+          <small>Motel · Tooleybuc</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2520Club%2520Motor%2520Inn%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tooleybuc Country Roads Motor Inn</span>
+          <small>Motel · Tooleybuc</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2520Country%2520Roads%2520Motor%2520Inn%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tooleybuc Motel</span>
+          <small>Motel · Tooleybuc</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2520Motel%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Wood Wood Caravan Park &amp; General Store</span>
+          <small>Caravan Park / Cabins · Wood Wood</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWood%2520Wood%2520Caravan%2520Park%252C%2520Victoria"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
     </div>
-  </div>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Tooleybuc Bridge</h3>
-      <p>
-      The Tooleybuc Bridge is a historic lift-span bridge crossing the Murray River, linking New South Wales and Victoria. It stands as a key symbol of the town’s river heritage and its role in regional transport and development.
-      </p>
-    </div>
-  </div>
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Tooleybuc Town Centre</h3>
-      <p>
-      Tooleybuc’s town centre offers essential services, local businesses, and hospitality venues within a relaxed Murray River setting. It reflects the town’s close connection to irrigation farming and river-based recreation.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Piangil</h3>
-      <p>
-      Piangil is a small Victorian border settlement located along the Murray River. It developed as a railway and agricultural service point and today represents the quiet resilience of farming communities in the Mallee region.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Wood Wood</h3>
-      <p>
-      Wood Wood is a rural locality in north-west Victoria with a history tied to pastoralism and grain production. The area reflects the expansive farmland and low-lying river plains that characterise the broader Mallee landscape.
-      </p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Nyah</h3>
-      <p>
-      Nyah is a riverside town in Victoria situated along the Murray River. Known for its bridge crossing and agricultural base, Nyah serves as a regional link between farming districts on both sides of the river.
-      </p>
-    </div>
-  </div>
-  </div>
-
-  <!-- ACCOMMODATION -->
-<h2>🏨 Stay Where We Showcase — Tooleybuc</h2>
-
-<p class="accommodation-intro">
-  Planning a stay in Tooleybuc? Explore accommodation options in and around this Murray River town while discovering
-  its riverside setting, relaxed country atmosphere, and connections to surrounding communities across southern New South Wales and north-west Victoria.
-</p>
-
-<p class="accommodation-intro">
-  ShowcasingOz TV is designed to do more than help travellers find a place to stay — we help
-  people discover where to go, what to experience, and where to base themselves as they explore
-  Australia’s cities, towns, and hidden gems.
-</p>
-
-<p style="text-align:center;">
-  <a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2C+New+South+Wales"
-     target="_blank"
-     class="accommodation-link">
-    View All Tooleybuc Accommodation
-  </a>
-</p>
-
-<h3 class="other-accommodation-heading">Featured Accommodation Opportunities In And Around Tooleybuc</h3>
-
-<p class="accommodation-intro">
-  Accommodation partners featured on ShowcasingOz TV receive premium exposure through professionally
-  produced video, photography, and destination-led storytelling that places their property in front
-  of travellers actively planning where to stay.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-<div class="accommodation-grid">
-  <div class="accommodation-card">
-    <div class="accommodation-placeholder">Featured Accommodation Coming Soon</div>
-  </div>
-</div>
-
-<h3 class="other-accommodation-heading">Other Accommodation In And Around Tooleybuc</h3>
-<div class="other-accommodation-bookings">
-
-  <div class="other-stay-item"><span>Country Club Hotel Tooleybuc</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Tooleybuc Club Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Tooleybuc Country Roads Motor Inn</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Tooleybuc Motel</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Tooleybuc River Retreat Villas</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTooleybuc%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Grand Hotel - Nyah West</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNyah+West%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Kyalite Caravan Park - Kyalite</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKyalite%2C+New+South+Wales" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Piangil Cabins & Caravan Park - Piangil</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPiangil%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>The Manangatang Family Hotel - Manangatang</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DManangatang%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-  <div class="other-stay-item"><span>Wood Wood Caravan Park And General Store - Wood Wood</span><a href="https://www.awin1.com/awclick.php?mid=18118&id=2826210&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWood+Wood%2C+Victoria" target="_blank" class="accommodation-link">View / Book</a></div>
-
-</div>
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement. Some links on this page are affiliate links, which means we may earn a small commission if you make a booking, at no extra cost to you.
-  </p>
-
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -646,10 +885,19 @@ ShowcasingOz TV will be capturing the stories, people, businesses, and experienc
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
