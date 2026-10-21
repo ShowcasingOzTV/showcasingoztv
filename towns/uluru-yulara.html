@@ -3,6 +3,7 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -10,140 +11,374 @@
     gtag('config', 'G-RB6N742VZW');
   </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Uluru / Yulara (NT) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Uluru / Yulara (NT) — the gateway to Uluru and Kata Tjuta, rich in culture, natural wonder and desert landscapes. Featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Uluru, Yulara, Kata Tjuta, Ayers Rock, Northern Territory, Red Centre, desert Australia, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Uluru, Kata Tjuta and Yulara with ShowcasingOz TV, including cultural experiences, desert landmarks, walking trails and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Uluru, Yulara, Kata Tjuta, Ayers Rock Resort, Uluru accommodation, Red Centre, Northern Territory travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* Header */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
-    
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
+
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-    nav a:hover { color: #E87722; }
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
-    @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+    nav a:hover {
+      color: #E87722;
     }
 
-    /* Hero Banner */
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
+    }
+
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/uluru-yulara.png') center center / cover no-repeat;
+      background: #dddddd;
     }
 
-    /* Content */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
-    p { line-height:1.6; color:#333; }
-
-    /* Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
     }
 
-    /* Video Placeholder */
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
     .video-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-size:1.3rem;
-      color:#666;
-      margin-top:20px;
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
-      text-align:center;
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-/* Force footer links + email to orange on town pages */
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -152,10 +387,20 @@ footer p a:hover {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -167,67 +412,460 @@ footer p a:hover {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero"></section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/uluru-yulara.jpg"
+      alt="Uluru / Yulara Northern Territory"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Uluru / Yulara (NT)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-  <p>
-    Uluru / Yulara is the gateway to Australia’s most iconic natural  
-    landmark — **Uluru**, rising dramatically from the red desert of  
-    the Northern Territory. Yulara, the purpose-built resort town  
-    that services Uluru–Kata Tjuta National Park, offers  
-    accommodation, dining, tours and cultural experiences that  
-    celebrate the deep spiritual significance of this land.
-    <br><br>
-    Visitors from around the world travel here to witness the  
-    world-famous sunrise and sunset glow on Uluru, explore the  
-    towering domes of **Kata Tjuta (The Olgas)**, and experience  
-    the living culture of the Anangu people — the traditional  
-    custodians of the land.
-    <br><br>
-    With breathtaking landscapes, desert skies, walking trails,  
-    galleries, cultural centres and unforgettable outback  
-    experiences, Uluru / Yulara stands as one of the most  
-    remarkable destinations in Australia.
-    <br><br>
-    ShowcasingOz TV will be capturing the natural beauty, stories,  
-    culture and spirit that define this extraordinary region during  
-    our 2026 filming journey.
-  </p>
+    <h1>Uluru / Yulara (NT)</h1>
 
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Uluru and Yulara lie in Australia’s Red Centre, approximately 450 kilometres
+      south-west of Alice Springs. Uluru rises from the desert within
+      Uluru-Kata Tjuta National Park, while Yulara is the nearby resort township
+      providing accommodation, dining, tours and essential visitor services.
+    </p>
 
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p>
-    We’ll be showcasing Uluru, Kata Tjuta, cultural tours, walking  
-    trails, and more in June 2026 during Series 1.
-  </p>
+    <p>
+      Uluru and Kata Tjuta form part of a living cultural landscape of profound
+      importance to Aṉangu, the Traditional Owners. Tjukurpa, the foundation of
+      Aṉangu law, knowledge and culture, connects the land, its features and the
+      stories that have been passed between generations.
+    </p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon" />
-      <p>Attractions Coming Soon</p>
+    <p>
+      Uluru is internationally recognised for its immense scale, changing colour
+      and distinctive geological form. Visitors can experience designated walks,
+      waterholes, rock formations and viewing areas while observing cultural
+      protocols, remaining on marked paths and respecting restricted sacred sites.
+    </p>
+
+    <p>
+      West of Uluru, Kata Tjuta comprises 36 towering domes separated by valleys
+      and gorges. The Valley of the Winds and Walpa Gorge walks reveal another
+      striking part of the national park, with access sometimes restricted during
+      periods of extreme heat or for cultural and safety reasons.
+    </p>
+
+    <p>
+      Yulara was developed as a purpose-built visitor centre to reduce pressure
+      on the national park. Today, Ayers Rock Resort brings together hotels,
+      serviced apartments, restaurants, galleries, shops and organised cultural
+      and desert experiences within one compact township.
+    </p>
+
+    <p>
+      ShowcasingOz TV will approach filming in this culturally significant region
+      with care and respect for Aṉangu protocols and national park requirements.
+      Following our visit, this page will be expanded with approved original
+      photography, professionally produced video and information gathered on location.
+    </p>
+
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Uluru / Yulara Documentary Coming Soon
     </div>
-  </div>
 
-</section>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
+
+    <p class="accommodation-intro">
+      Bookable cultural, dining and desert experiences around Yulara allow
+      visitors to engage with the landscape through guided and carefully
+      managed activities.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+      <li>
+        <strong>Field of Light Uluru</strong>
+        Bruce Munro’s large-scale light installation fills the desert with
+        thousands of illuminated stems, creating an evening experience against
+        the silhouettes of Uluru and the surrounding dunes.
+      </li>
+
+      <li>
+        <strong>Maruku Arts Cultural Experiences</strong>
+        Aṉangu-owned cultural experiences and art activities sharing knowledge
+        through storytelling, demonstrations and workshops led by local artists
+        and interpreters.
+      </li>
+
+      <li>
+        <strong>Tali Wiru</strong>
+        An intimate open-air dining experience on a private desert dune,
+        combining contemporary Australian cuisine, Indigenous flavours and
+        views towards Uluru and Kata Tjuta.
+      </li>
+
+      <li>
+        <strong>Uluru Camel Tours</strong>
+        Guided camel experiences through the red desert surrounding Yulara,
+        including sunrise, sunset and daytime rides with views across the
+        landscape towards Uluru and Kata Tjuta.
+      </li>
+
+      <li>
+        <strong>Wintjiri Wiru</strong>
+        A choreographed evening experience using drones, light, sound and
+        projection to present an Aṉangu story in the desert near Yulara.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      The national park’s designated walks, viewing areas and cultural places
+      reveal a living landscape that should be visited with care and respect.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Kata Tjuta Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Kata Tjuta</h3>
+          <p>
+            A group of 36 immense rock domes west of Uluru. Kata Tjuta is deeply
+            significant to Aṉangu and forms the second great geological landmark
+            within the national park.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Kata Tjuta Dune Viewing Area Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Kata Tjuta Dune Viewing Area</h3>
+          <p>
+            An accessible viewing platform providing broad desert views towards
+            Kata Tjuta, with Uluru also visible on the distant horizon.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Kuniya Walk and Mutitjulu Waterhole Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Kuniya Walk and Mutitjulu Waterhole</h3>
+          <p>
+            A short walk at Uluru’s base leading through culturally significant
+            country to a permanent waterhole beneath towering rock walls.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Mala Walk and Kantju Gorge Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Mala Walk and Kantju Gorge</h3>
+          <p>
+            A marked route from the Mala car park past caves and important
+            Aṉangu sites to the sheer rock walls of Kantju Gorge.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Talinguru Nyakunytjaku Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Talinguru Nyakunytjaku</h3>
+          <p>
+            A purpose-built sunrise viewing area with walking tracks and elevated
+            platforms offering expansive views of Uluru and Kata Tjuta.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Uluru Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Uluru</h3>
+          <p>
+            The monumental sandstone formation at the centre of a living Aṉangu
+            cultural landscape, renowned for its scale, changing colour and
+            spiritual significance.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Uluru Base Walk Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Uluru Base Walk</h3>
+          <p>
+            A marked circuit around Uluru connecting waterholes, woodlands,
+            caves and several shorter walks while avoiding restricted sacred areas.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Uluru-Kata Tjuta Cultural Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Uluru-Kata Tjuta Cultural Centre</h3>
+          <p>
+            The principal place for visitors to learn about Aṉangu culture,
+            Tjukurpa, appropriate behaviour in the park and the natural environment.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Uluru Sunset Viewing Area Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Uluru Sunset Viewing Area</h3>
+          <p>
+            A designated viewing area positioned for visitors to observe Uluru’s
+            changing colours as the sun lowers across the desert.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Valley of the Winds Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Valley of the Winds</h3>
+          <p>
+            A challenging walking route through the domes of Kata Tjuta, with
+            steep and rocky sections and seasonal heat-related access restrictions.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Walpa Gorge Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Walpa Gorge</h3>
+          <p>
+            A shorter walking trail entering a narrow gorge between two towering
+            Kata Tjuta domes, revealing desert plants and dramatic rock faces.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Yulara Town Square Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Yulara Town Square</h3>
+          <p>
+            The resort township’s central precinct, bringing together shops,
+            galleries, dining, visitor information and practical services.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Uluru / Yulara</h2>
+
+    <p class="accommodation-intro">
+      Yulara provides the principal accommodation base for visiting Uluru-Kata
+      Tjuta National Park, with resort hotels, serviced apartments and a nearby
+      luxury lodge offering different levels of comfort and facilities.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DYulara%252C%2520Northern%2520Territory%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Uluru / Yulara Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Uluru / Yulara
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Uluru / Yulara Accommodation Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Uluru / Yulara
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Desert Gardens Hotel</span>
+          <small>Hotel · Yulara</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDesert%2520Gardens%2520Hotel%252C%2520Yulara%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Emu Walk Apartments</span>
+          <small>Resort-Operated Serviced Apartments · Yulara</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DEmu%2520Walk%2520Apartments%252C%2520Yulara%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Longitude 131°</span>
+          <small>Luxury Lodge · Near Yulara</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DLongitude%2520131%252C%2520Yulara%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Outback Hotel</span>
+          <small>Hotel · Yulara</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOutback%2520Hotel%252C%2520Yulara%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Sails in the Desert</span>
+          <small>Hotel · Yulara</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSails%2520in%2520the%2520Desert%252C%2520Yulara%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Lost Camel Hotel</span>
+          <small>Hotel · Yulara</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Lost%2520Camel%2520Hotel%252C%2520Yulara%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -242,10 +880,19 @@ footer p a:hover {
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
