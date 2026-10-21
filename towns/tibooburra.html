@@ -4,35 +4,50 @@
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RB6N742VZW');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tibooburra (NSW) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Tibooburra, NSW — a remote outback town at the edge of Sturt National Park, known for its rugged landscapes, historic pubs, and gateway to true outback adventure." />
-  <meta name="keywords" content="Tibooburra NSW, Tibooburra outback, Sturt National Park gateway, outback New South Wales, Corner Country NSW, Tibooburra attractions, Tibooburra accommodation, outback travel NSW, remote Australian towns, ShowcasingOz TV" />
 
+  <meta
+    name="description"
+    content="Discover Tibooburra and the surrounding Corner Country with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="keywords"
+    content="Tibooburra NSW, Tibooburra attractions, Tibooburra accommodation, Sturt National Park, Corner Country, outback New South Wales, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* ================= HEADER ================= */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -40,302 +55,330 @@
       z-index: 1000;
     }
 
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #E87722; }
+    nav a:hover {
+      color: #E87722;
+    }
 
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
 
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       nav {
-        display:none;
-        flex-direction:column;
-        background:#0E3557;
-        width:100%;
-        position:absolute;
-        top:70px;
-        right:0;
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
       nav a {
-        padding:15px;
-        border-top:1px solid rgba(255,255,255,0.15);
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    /* ================= HERO ================= */
     .hero {
       width: 100%;
       height: 320px;
-      background-color: #ddd;
+      background: #dddddd;
     }
 
-    /* ================= CONTENT ================= */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { text-align:center; margin-bottom:10px; }
-    h2 { text-align:center; color:#E87722; margin-top:50px; }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-    p { line-height:1.6; color:#333; }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-    /* ================= PLACEHOLDERS ================= */
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
     .video-placeholder,
     .accommodation-placeholder,
-    .attraction-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#666;
-      font-size:1.2rem;
-      font-weight:500;
-      margin-top:20px;
-      text-align:center;
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
     }
 
     .accommodation-placeholder,
-    .attraction-placeholder {
-      height:200px;
-      font-size:1.1rem;
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
     }
 
-    /* ================= SHARED GRID ================= */
     .accommodation-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      margin-top:25px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .accommodation-card {
-      background:#f9f9f9;
-      border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .accommodation-content {
-      padding:15px;
-    }
-
-    .featured-badge {
-      display:inline-block;
-      background:#E87722;
-      color:#fff;
-      font-size:0.75rem;
-      padding:5px 10px;
-      border-radius:4px;
-      margin:10px 0;
-    }
-
-    .accommodation-link {
-      display:inline-block;
-      margin-top:10px;
-      font-weight:600;
-      color:#0E3557;
-      text-decoration:none;
-    }
-
-    .accommodation-link:hover {
-      text-decoration:underline;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .accommodation-intro {
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
     }
 
     .other-accommodation-heading {
-      margin-top:50px;
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
     }
 
-    .other-accommodation-list {
-      list-style:none;
-      padding-left:0;
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .other-accommodation-list li {
-      margin-bottom:6px;
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
     }
 
     .accommodation-disclaimer {
-      font-size:0.8rem;
-      color:#777;
-      margin-top:15px;
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
     }
-    /* ================= POINTS OF INTEREST ================= */
 
-.poi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
 
-.poi-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.poi-placeholder {
-  height: 160px;
-  background: #e1e1e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
 
-.poi-content {
-  padding: 15px;
-}
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
 
-.poi-content h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  color: #0E3557;
-}
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
 
-.poi-content p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-    /* ================= CENTER ALIGN – TIBOOBURRA ================= */
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-/* Centre section headings like "Other Attractions" & "Other Accommodation" */
-.other-accommodation-heading {
-  text-align: center;
-}
-
-/* Centre list items (attractions & accommodation lists) */
-.other-accommodation-list {
-  text-align: center;
-}
-
-.other-accommodation-list li {
-  text-align: center;
-}
-
-/* Centre disclaimer text */
-.accommodation-disclaimer {
-  text-align: center;
-}
-
-/* Centre Points of Interest cards */
-.poi-content {
-  text-align: center;
-}
-
-.poi-content h3 {
-  text-align: center;
-}
-
-.poi-content p {
-  text-align: center;
-}
-
-  /* ================= FOOTER ================= */
-footer {
-  background: #0E3557;
-  color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-footer .footer-links {
-  margin-bottom: 15px;
-}
-
-footer .footer-links a {
-  color: #E87722;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 6px;
-}
-
-footer .footer-links a:hover {
-  color: #ffffff;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer p a {
-  color: #E87722;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #ffffff;
-}
-
-.gst-disclaimer {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-    /* FORCE footer colours to match homepage */
-footer,
-footer * {
-  color: #ffffff !important;
-}
-
-footer {
-  background-color: #0E3557 !important;
-}
-
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
-
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
-
-footer .gst-disclaimer {
-  color: #ffffff !important;
-}
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -344,10 +387,20 @@ footer .gst-disclaimer {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -359,283 +412,540 @@ footer .gst-disclaimer {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero">
-  <img src="../images/towns/tibooburra.jpg"
-       alt="Tibooburra New South Wales"
-       width="1600"
-       height="320"
-       fetchpriority="high"
-       decoding="async"
-       style="width:100%;height:100%;object-fit:cover;">
-</section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- MAIN CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/tibooburra.jpg"
+      alt="Tibooburra New South Wales"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Tibooburra (NSW)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-<p>
-Tibooburra is one of New South Wales’ most remote and distinctive outback towns, located in the far north-west corner of the state in the heart of Corner Country. Sitting just outside the rugged landscapes of <strong>Sturt National Park</strong>, Tibooburra is often regarded as the true gateway to Australia’s desert interior, where red earth, endless horizons, and deep history define the landscape.
-</p>
+    <h1>Tibooburra (NSW)</h1>
 
-<p>
-Originally established during the late 1800s gold rush, Tibooburra has retained much of its historic character, with heritage-listed stone buildings, wide dusty streets, and a strong sense of outback resilience. The town’s name is believed to be derived from an Aboriginal word meaning “heap of stones,” a reference to the granite tors that rise from the surrounding plains and give the area its unique visual identity.
-</p>
-
-<p>
-Today, Tibooburra serves as a vital hub for travellers exploring the remote regions of far-west New South Wales, south-west Queensland, and north-east South Australia. It is a popular stop for four-wheel-drive adventurers, campers, and long-distance road trippers seeking an authentic outback experience far removed from Australia’s populated corridors.
-</p>
-
-<p>
-The town is best known for its welcoming outback hospitality, most notably its historic pubs, roadhouse facilities, and locally operated accommodation options that cater to travellers passing through this isolated region. Tibooburra also provides essential services for station owners, tour operators, and visitors venturing into Sturt National Park, which offers dramatic desert scenery, wildflower displays after rain, and opportunities to experience the raw beauty of Australia’s inland.
-</p>
-
-<p>
-Rich in pastoral history and closely connected to the traditions of the land, Tibooburra represents the enduring spirit of Australia’s outback communities. For visitors, it offers not just a place to stop, but a chance to slow down, connect with the landscape, and experience one of the country’s most remote and culturally significant regions.
-</p>
-
-<p>
-ShowcasingOz TV will be capturing the stories, people, businesses, and landscapes that define Tibooburra as part of our national filming journey — highlighting its remote outback character, historic resilience, and the enduring spirit of life on the edge of Australia’s desert interior.
-</p>
-
-
-  <!-- DOCUMENTARY -->
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
-
-  <!-- ATTRACTIONS -->
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p class="attractions-intro">
-  Attractions featured on ShowcasingOz TV are captured through immersive 4K video storytelling and
-  professional photography — showcasing experiences, landscapes, culture, and visitor engagement
-  in a way that static listings simply cannot achieve.
-</p>
-
-<p style="text-align:center;">
-<a href="../attraction-partners.html" class="accommodation-link">
-  Explore attractions filming & feature options
-</a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="attraction-placeholder">Attractions Coming Soon</div>
-    </div>
-  </div>
-
-  <h3 class="other-accommodation-heading">Other Attractions in Tibooburra</h3>
-  <ul class="other-accommodation-list">
-    <li>Packsaddle Roadhouse</li>
-    <li>Milparinka Museum</li>
-    <li>Outdoor Pastoral Museum</li>
-    <li>Tibooburra Local Aboriginal Land Council Keeping Place</li>
-    <li>Courthouse Museum</li>
-  </ul>
-
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
-  <h2>🗺️ Points of Interest & Landmarks</h2>
-
-<p class="accommodation-intro">
-  These natural landmarks and local points of interest form an important part of Tibooburra's landscape,
-  history, and sense of place. ShowcasingOz TV will capture these locations during filming to help
-  tell the broader story of the region.
-</p>
-
-<div class="poi-grid">
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Tool Tree</h3>
-      <p>
-  A historic tree believed to have been marked by early European explorers, the Tool Tree is a quiet reminder of the expeditions that passed through the Tibooburra region during the 19th century.
-</p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>Eliza Kennedy Grave</h3>
-      <p>
-The grave of Eliza Kennedy is one of Tibooburra’s most poignant historic sites, telling a deeply human story of hardship, loss, and life in Australia’s remote frontier during the pastoral era.
-</p>
-    </div>
-  </div>
-
-    <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-     <h3>Captain Charles Sturt Sculpture</h3>
-<p>
-This sculpture commemorates Captain Charles Sturt, one of Australia’s most significant inland explorers, whose expeditions helped map vast areas of the country’s interior.
-</p>
-    </div>
-  </div>
-  
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-     <h3>Sturt's Cairn</h3>
-<p>
-Sturt’s Cairn marks a location associated with Captain Charles Sturt’s explorations, serving as a physical reminder of the challenges faced by early explorers navigating Australia’s harsh outback.
-</p>
-
-    </div>
-  </div>
-
-        <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Big Quoll</h3>
-<p>
-One of Tibooburra’s playful “big things,” The Big Quoll celebrates native wildlife and provides a fun photo opportunity for travellers passing through the town.
-</p>
-    </div>
-  </div>
-
-  <div class="poi-card">
-    <div class="poi-placeholder">Image Coming Soon</div>
-    <div class="poi-content">
-      <h3>The Big Bandicoot</h3>
-      <p>Another iconic outback attraction, The Big Bandicoot highlights native fauna and adds a light-hearted, family-friendly stop within the town.
-</p>
-    </div>
-  </div>
-
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Golden Gully Mining Site</h3>
     <p>
-      Golden Gully is a historic gold mining area that reflects Tibooburra’s gold rush origins, offering insight into the region’s boom-and-bust mining past.
+      Tibooburra is one of New South Wales’ most remote towns, situated in the
+      far north-west of the state approximately 330 kilometres north of Broken
+      Hill. Surrounded by granite outcrops, red earth and expansive plains, it
+      serves as the principal service centre for Corner Country and an
+      important base for travellers exploring Sturt National Park.
     </p>
-  </div>
-</div>
 
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Tibooburra Pioneer Park</h3>
     <p>
-      Pioneer Park showcases historic machinery, artefacts, and displays that tell the story of early settlement, mining, and pastoral life in the district.
+      The town emerged during the Albert Goldfields rush of the 1880s, when
+      prospectors travelled into the district in search of gold. Although the
+      mining boom was relatively brief, it contributed to the establishment of
+      government services, hotels, businesses and permanent buildings. Several
+      surviving structures and mining sites continue to reveal this early chapter.
     </p>
-  </div>
-</div>
 
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Sunset Hill Lookout</h3>
     <p>
-      As its name suggests, Sunset Hill Lookout is a prime location to watch the sun drop below the outback horizon, bathing the landscape in rich reds and golds.
+      Tibooburra’s name is commonly interpreted as meaning “heap of rocks” or
+      “place of stones”, reflecting the rounded granite formations surrounding
+      the town. These weathered outcrops give the landscape its distinctive
+      appearance and provide elevated places from which visitors can watch the
+      colours of the country change at sunrise and sunset.
     </p>
-  </div>
-</div>
 
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Jump-Up Loop Road</h3>
     <p>
-      This scenic driving loop winds through classic outback terrain, offering elevated views, rugged landscapes, and access to several lookouts and walking tracks.
+      Pastoralism became another defining part of the district, with large
+      stations operating across country affected by drought, extreme heat and
+      highly variable rainfall. Historic machinery, station buildings,
+      memorials and former transport routes illustrate the practical skills and
+      resilience required to live and work in this isolated environment.
     </p>
-  </div>
-</div>
 
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Mount Wood Summit Walking Track</h3>
     <p>
-      A rewarding walk leading to elevated views across Sturt National Park, the Mount Wood Summit track allows visitors to experience the scale and isolation of the outback landscape.
+      Today, Tibooburra supports residents, pastoral properties, National Parks
+      operations and long-distance travellers. Historic hotels, local museums,
+      visitor facilities and accommodation businesses provide a welcome stop
+      before journeys through Sturt National Park, towards Cameron Corner or
+      south through Milparinka and the wider Corner Country region.
     </p>
-  </div>
-</div>
 
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Middle Road Drive</h3>
     <p>
-      Middle Road Drive is a popular route through remote country, providing access to pastoral land, park areas, and expansive outback scenery.
+      ShowcasingOz TV will document Tibooburra’s mining and pastoral heritage,
+      rugged landscape, historic places, local businesses and surrounding
+      outback destinations as part of its national filming journey. Following
+      our visit, this page will be expanded with original photography,
+      professionally produced video and additional information gathered on
+      location.
     </p>
-  </div>
-</div>
 
-      <div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Warri Warri Gate</h3>
-    <p>
-      Warri Warri Gate marks a significant access point into remote station and park country, symbolising the transition from town life to true outback wilderness.
-    </p>
-  </div>
-</div>
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
 
-<div class="poi-card">
-  <div class="poi-placeholder">Image Coming Soon</div>
-  <div class="poi-content">
-    <h3>Cameron Corner Turnoff</h3>
-    <p>
-      The Cameron Corner Turnoff is the well-known junction leading travellers toward one of Australia’s most iconic geographic destinations, often marking the start of a memorable outback adventure.
-    </p>
-  </div>
-</div>
-  </div>
-
-  <!-- ACCOMMODATION -->
-  <h2>🏨 Featured Accommodation in Tibooburra</h2>
-
-<p class="accommodation-intro">
-  Stand out from the crowd by having your accommodation professionally featured on ShowcasingOz TV.
-  Selected partners receive cinematic 4K video coverage and professional photography that captures
-  the arrival experience, comfort, ambience, facilities, and genuine guest warmth of their property —
-  presented as part of a nationally filmed travel series.
-</p>
-
-<p style="text-align:center;">
-  <a href="../accommodation-partners.html" class="accommodation-link">
-    Explore accommodation filming & feature options
-  </a>
-</p>
-
-  <div class="accommodation-grid">
-    <div class="accommodation-card">
-      <div class="accommodation-placeholder">Accommodation Coming Soon</div>
+    <div class="video-placeholder">
+      Tibooburra Documentary Coming Soon
     </div>
-  </div>
 
-  <h3 class="other-accommodation-heading">Other Accommodation in Tibooburra</h3>
-  <ul class="other-accommodation-list">
-    <li>Granites Motel Caravan Park</li>
-    <li>The Family Hotel</li>
-    <li>Tibooburra Hotel</li>
-    <li>Tibooburra Beds & Camping</li>
-    <li>Albert Hotel Milparinka</li>
-    <li>Mount Wood Shearers Quarters & Homestead</li>
-  </ul>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
 
-  <p class="accommodation-disclaimer">
-    This list is provided for visitor awareness only. Inclusion does not imply partnership or endorsement.
-  </p>
+    <p class="accommodation-intro">
+      Tibooburra and the surrounding Corner Country offer museums, cultural
+      places, historic buildings and locally operated visitor stops that reveal
+      the region’s mining, pastoral and Aboriginal heritage.
+    </p>
 
-</section>
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+      <li>
+        <strong>Courthouse Museum</strong>
+        A historic courthouse presenting displays connected with Tibooburra’s
+        mining, pastoral, social and natural history.
+      </li>
+
+      <li>
+        <strong>Milparinka Museum</strong>
+        A museum within the historic Milparinka precinct preserving stories of
+        the Albert Goldfields, early settlement and life in Corner Country.
+      </li>
+
+      <li>
+        <strong>Outdoor Pastoral Museum</strong>
+        An open-air collection of machinery and equipment illustrating the
+        practical history of pastoral work in the surrounding district.
+      </li>
+
+      <li>
+        <strong>Packsaddle Roadhouse</strong>
+        A long-established roadside business providing fuel, food and a welcome
+        stopping point for people travelling through far-western New South Wales.
+      </li>
+
+      <li>
+        <strong>Tibooburra Local Aboriginal Land Council Keeping Place</strong>
+        A local cultural place supporting the preservation and sharing of
+        Aboriginal heritage, knowledge and community stories from the region.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore the mining sites, memorials, scenic drives, wildlife sculptures
+      and remote landscapes that connect Tibooburra with Sturt National Park
+      and the wider Corner Country.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Cameron Corner Turnoff Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Cameron Corner Turnoff</h3>
+
+          <p>
+            The well-known road junction directing travellers towards Cameron
+            Corner and the meeting point of New South Wales, Queensland and South Australia.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Captain Charles Sturt Sculpture Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Captain Charles Sturt Sculpture</h3>
+
+          <p>
+            A sculpture commemorating explorer Charles Sturt and his expeditions
+            through the difficult inland country surrounding the region.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Eliza Kennedy Grave Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Eliza Kennedy Grave</h3>
+
+          <p>
+            A poignant historic grave associated with the hardships faced by
+            families living in remote pastoral country during the nineteenth century.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Golden Gully Mining Site Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Golden Gully Mining Site</h3>
+
+          <p>
+            A former gold-mining area preserving visible evidence of the rush
+            that drove Tibooburra’s early European development.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Jump-Up Loop Road Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Jump-Up Loop Road</h3>
+
+          <p>
+            A scenic driving route through Sturt National Park featuring rugged
+            formations, open plains and elevated views across Corner Country.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Middle Road Drive Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Middle Road Drive</h3>
+
+          <p>
+            A remote driving route through the varied landscapes of Sturt
+            National Park, linking pastoral heritage with expansive outback scenery.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Mount Wood Summit Walking Track Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Mount Wood Summit Walking Track</h3>
+
+          <p>
+            A walking track leading to an elevated viewpoint over the ranges,
+            plains and former pastoral country of Sturt National Park.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Sturt’s Cairn Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Sturt’s Cairn</h3>
+
+          <p>
+            A memorial cairn associated with Charles Sturt’s inland expedition
+            and the difficult search for water across the surrounding country.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Sunset Hill Lookout Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Sunset Hill Lookout</h3>
+
+          <p>
+            A popular elevated viewpoint where visitors can watch changing
+            light and colour spread across Tibooburra’s granite-strewn landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Big Bandicoot Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Big Bandicoot</h3>
+
+          <p>
+            A large wildlife sculpture celebrating native fauna and providing
+            travellers with a distinctive local photo stop.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          The Big Quoll Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>The Big Quoll</h3>
+
+          <p>
+            A companion wildlife sculpture recognising one of the native
+            species associated with the surrounding arid landscape.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tibooburra Pioneer Park Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tibooburra Pioneer Park</h3>
+
+          <p>
+            A public heritage area containing machinery, artefacts and displays
+            connected with early settlement, mining and pastoral activity.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Tool Tree Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Tool Tree</h3>
+
+          <p>
+            A marked tree associated with early exploration and travel through
+            the remote country around Tibooburra.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Warri Warri Gate Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Warri Warri Gate</h3>
+
+          <p>
+            A remote access point marking the transition between town roads and
+            the station and national park landscapes beyond Tibooburra.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Tibooburra</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Tibooburra? Explore hotels, motels, caravan-park
+      accommodation and guest suites in the town and nearby Milparinka while
+      discovering Corner Country and Sturt National Park.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTibooburra%252C%2520New%2520South%2520Wales%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Tibooburra Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Tibooburra
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Tibooburra Accommodation Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Tibooburra
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Albert Hotel Milparinka</span>
+          <small>Hotel Rooms / Motel-Style Cabins · Milparinka</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAlbert%2520Hotel%2520Milparinka%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Family Hotel &amp; Family Lodge Motel</span>
+          <small>Hotel / Motel · Tibooburra</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Family%2520Hotel%2520and%2520Family%2520Lodge%2520Motel%252C%2520Tibooburra%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Granites Motel &amp; Caravan Park</span>
+          <small>Motel / Caravan Park / Cabins · Tibooburra</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGranites%2520Motel%2520and%2520Caravan%2520Park%252C%2520Tibooburra%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tibooburra Beds &amp; Camping</span>
+          <small>Guest Suites / Camping · Tibooburra</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTibooburra%2520Beds%2520and%2520Camping%252C%2520Tibooburra%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tibooburra Hotel</span>
+          <small>Hotel / Motel Rooms · Tibooburra</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTibooburra%2520Hotel%252C%2520Tibooburra%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Tibooburra War Memorial Motel</span>
+          <small>Motel · Tibooburra</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTibooburra%2520War%2520Memorial%2520Motel%252C%2520Tibooburra%252C%2520New%2520South%2520Wales"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -650,10 +960,19 @@ One of Tibooburra’s playful “big things,” The Big Quoll celebrates native 
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
