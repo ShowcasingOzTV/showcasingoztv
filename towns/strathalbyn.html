@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-AU">
-
+<html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
@@ -22,7 +18,12 @@
 
   <meta
     name="description"
-    content="Discover Strathalbyn and the surrounding Fleurieu Peninsula and Langhorne Creek district with ShowcasingOz TV. Explore local attractions, historic landmarks, natural places and accommodation."
+    content="Discover Strathalbyn and the surrounding eastern Fleurieu Peninsula with ShowcasingOz TV, including attractions, landmarks, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Strathalbyn SA, Strathalbyn attractions, Strathalbyn accommodation, Langhorne Creek wineries, Fleurieu Peninsula travel, South Australia travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -32,33 +33,23 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     crossorigin="anonymous"
-    referrerpolicy="no-referrer"
     media="print"
     onload="this.media='all'"
   >
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
       background: #ffffff;
-      color: #333333;
-      line-height: 1.6;
+      color: #0E3557;
     }
 
     header.navbar {
       background: #0E3557;
       color: #ffffff;
       padding: 10px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -76,12 +67,6 @@
     header.navbar img {
       height: 65px;
       width: auto;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
     }
 
     nav a {
@@ -91,8 +76,7 @@
       font-weight: 500;
     }
 
-    nav a:hover,
-    nav a:focus {
+    nav a:hover {
       color: #E87722;
     }
 
@@ -100,352 +84,311 @@
       display: none;
       cursor: pointer;
       font-size: 1.5rem;
-      color: #ffffff;
     }
 
-    .hero {
-      min-height: 320px;
-      background:
-        linear-gradient(rgba(14, 53, 87, 0.35), rgba(14, 53, 87, 0.55)),
-        url("../images/towns/strathalbyn.jpg") center center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    .hero-content {
-      max-width: 850px;
-      padding: 25px;
-      border-radius: 12px;
-      background: rgba(14, 53, 87, 0.58);
-    }
-
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      line-height: 1.1;
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-    }
-
-    .content {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 45px 20px;
-    }
-
-    .content h2 {
-      color: #E87722;
-      font-size: 1.9rem;
-      line-height: 1.25;
-      margin: 45px 0 18px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #f0f0f0;
-    }
-
-    .content h2:first-child {
-      margin-top: 0;
-    }
-
-    .content h3 {
-      color: #0E3557;
-    }
-
-    .content p {
-      font-size: 1.05rem;
-    }
-
-    .documentary-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 360px;
-      margin: 22px 0;
-      padding: 25px;
-      border-radius: 12px;
-      background: #e9edf1;
-      color: #0E3557;
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-align: center;
-      border: 2px dashed #aab4bd;
-    }
-
-    .attractions-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .attractions-list li {
-      background: #f7f8fa;
-      border-left: 5px solid #E87722;
-      border-radius: 8px;
-      padding: 18px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-    }
-
-    .attractions-list strong {
-      display: block;
-      color: #0E3557;
-      font-size: 1.08rem;
-      margin-bottom: 5px;
-    }
-
-    .poi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 25px;
-    }
-
-    .poi-card {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
-    }
-
-    .poi-placeholder {
-      min-height: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: #e9edf1;
-      color: #5c6873;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .poi-content {
-      padding: 18px;
-      flex-grow: 1;
-    }
-
-    .poi-content h3 {
-      margin: 0 0 8px;
-      color: #E87722;
-      font-size: 1.18rem;
-      line-height: 1.3;
-    }
-
-    .poi-content p {
-      margin: 0;
-      font-size: 0.98rem;
-    }
-
-    .accommodation-intro {
-      max-width: 920px;
-    }
-
-    .accommodation-link {
-      display: inline-block;
-      background: #0E3557;
-      color: #ffffff;
-      padding: 11px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .accommodation-link:hover,
-    .accommodation-link:focus {
-      background: #E87722;
-      color: #ffffff;
-    }
-
-    .other-accommodation-heading {
-      margin-top: 35px;
-      text-align: center;
-      font-size: 1.35rem;
-    }
-
-    .accommodation-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin: 25px 0 35px;
-    }
-
-    .accommodation-card {
-      overflow: hidden;
-      min-height: 190px;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
-    }
-
-    .accommodation-placeholder {
-      min-height: 190px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 25px;
-      background: #e9edf1;
-      color: #0E3557;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .other-accommodation-bookings {
-      display: grid;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .other-stay-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 16px 18px;
-      background: #f7f8fa;
-      border-left: 5px solid #E87722;
-      border-radius: 8px;
-    }
-
-    .stay-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .stay-details strong {
-      color: #0E3557;
-      font-size: 1.05rem;
-    }
-
-    .stay-details small {
-      color: #666666;
-      margin-top: 3px;
-    }
-
-    .accommodation-disclaimer {
-      margin-top: 25px;
-      padding: 18px;
-      background: #fff4eb;
-      border: 1px solid #E87722;
-      border-radius: 8px;
-      color: #555555;
-      font-size: 0.92rem !important;
-    }
-
-    footer {
-      background: #0E3557;
-      color: #ffffff;
-      padding: 30px 20px;
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    footer a {
-      color: #E87722;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-
-    footer a:hover,
-    footer a:focus {
-      text-decoration: underline;
-    }
-
-    .footer-links {
-      margin-bottom: 16px;
-      line-height: 2;
-    }
-
-    .gst-disclaimer {
-      display: inline-block;
-      margin: 7px 0;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       nav {
         display: none;
         flex-direction: column;
-        align-items: stretch;
-        position: absolute;
-        top: 85px;
-        left: 0;
-        width: 100%;
         background: #0E3557;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
       }
 
       nav.active {
         display: flex;
       }
 
-      nav a {
-        margin: 0;
-        padding: 14px 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
       .menu-btn {
         display: block;
       }
 
-      .poi-grid,
-      .accommodation-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
     }
 
-    @media (max-width: 650px) {
-      .hero {
-        min-height: 280px;
-      }
+    .hero {
+      width: 100%;
+      height: 320px;
+      background: #dddddd;
+    }
 
-      .hero-content {
-        padding: 20px 15px;
-      }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-      .content {
-        padding: 35px 16px;
-      }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-      .attractions-list,
-      .poi-grid,
-      .accommodation-grid {
-        grid-template-columns: 1fr;
-      }
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
 
-      .documentary-placeholder {
-        min-height: 250px;
-      }
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
 
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .video-placeholder {
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
       .other-stay-item {
-        flex-direction: column;
         align-items: flex-start;
+        flex-direction: column;
       }
+    }
 
-      .other-stay-item .accommodation-link {
-        width: 100%;
-      }
+    footer {
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVIGATION -->
+  <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-      <a href="/" aria-label="ShowcasingOz TV home">
+
+      <a href="/">
         <img
           src="/images/logo.jpg"
           alt="ShowcasingOz TV Logo"
@@ -454,19 +397,11 @@
         >
       </a>
 
-      <span
-        class="menu-btn"
-        id="menu-btn"
-        role="button"
-        tabindex="0"
-        aria-label="Open navigation menu"
-        aria-controls="menu"
-        aria-expanded="false"
-      >
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
       </span>
 
-      <nav id="menu" aria-label="Main navigation">
+      <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
         <a href="/towns/index.html">Towns</a>
@@ -477,6 +412,7 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
@@ -484,195 +420,177 @@
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
-    function toggleMenu() {
-      const isActive = menu.classList.toggle('active');
-      menuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
-    }
-
-    menuBtn.addEventListener('click', toggleMenu);
-
-    menuBtn.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        toggleMenu();
-      }
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
     });
   </script>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Strathalbyn, South Australia</h1>
-      <p>
-        Historic streets, riverside gardens, regional art, motoring heritage and
-        the celebrated vineyards of Langhorne Creek.
-      </p>
-    </div>
+    <img
+      src="../images/towns/strathalbyn.jpg"
+      alt="Strathalbyn South Australia"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
   </section>
 
   <!-- MAIN CONTENT -->
   <section class="content">
 
-    <!-- TOWN INTRODUCTION -->
-    <h2>Discover Strathalbyn</h2>
+    <h1>Strathalbyn (SA)</h1>
 
     <p>
-      Strathalbyn is a picturesque heritage town on the Angas River, situated on
-      the eastern side of South Australia's Fleurieu Peninsula. Surrounded by
-      rolling farmland, vineyards and historic rural settlements, the town
-      provides an inviting meeting point between the Adelaide Hills, the
-      Langhorne Creek wine region and the lower reaches of Lake Alexandrina.
+      Strathalbyn is a historic country town on the Angas River, approximately
+      55 kilometres south-east of central Adelaide. Positioned between the
+      Adelaide Hills, the Fleurieu Peninsula and Lake Alexandrina, the town is
+      surrounded by productive farmland, vineyards and smaller rural
+      communities including Finniss, Ashbourne and Langhorne Creek.
     </p>
 
     <p>
-      Established during the nineteenth century by Scottish settlers,
-      Strathalbyn retains a distinctive historic character. Its name combines
-      the Gaelic word for a broad river valley with an old name for Scotland,
-      reflecting both the landscape and the background of many of the town's
-      early European residents.
+      The town was established during the nineteenth century by Scottish
+      settlers and developed as an agricultural and commercial centre for the
+      surrounding district. Its name combines “strath”, referring to a broad
+      river valley, with “Albyn”, an old name for Scotland. This Scottish
+      influence can still be recognised through parts of Strathalbyn’s built
+      heritage and early community history.
     </p>
 
     <p>
-      The town is especially recognised for its attractive collection of
-      heritage buildings, churches, cottages and former commercial premises.
-      High Street has developed a strong reputation for antiques, collectables,
-      galleries and specialist shops, while the wider town centre contains
-      cafés, local businesses and community facilities serving the surrounding
-      agricultural district.
+      Strathalbyn is particularly known for its well-preserved historic
+      streetscape. High Street contains antique dealers, art spaces and
+      specialist businesses within a collection of heritage buildings, while
+      churches, former commercial premises and civic structures reveal the
+      town’s development across successive generations.
     </p>
 
     <p>
-      At the heart of Strathalbyn is the Angas River, where the Soldiers
-      Memorial Garden, mature trees, lawns and pedestrian bridges create one of
-      the town's most recognisable public spaces. These riverside areas provide
-      visitors with a peaceful place to walk, pause and appreciate the historic
-      townscape.
+      The Angas River Soldiers Memorial Garden forms one of the town’s most
+      recognisable public spaces. Mature trees, lawns, gardens and pedestrian
+      bridges create a peaceful riverside setting close to the town centre.
+      Strathalbyn also has strong connections with motoring culture, regional
+      art and local history through its museums, galleries and community
+      organisations.
     </p>
 
     <p>
-      Strathalbyn is also a convenient base for discovering Langhorne Creek,
-      one of South Australia's longstanding wine-producing districts. Local
-      cellar doors offer visitors opportunities to experience regional wines,
-      vineyard landscapes, historic buildings and locally inspired food
-      experiences.
+      Nearby Langhorne Creek is one of South Australia’s established
+      wine-producing districts. Its cellar doors, vineyards and historic rural
+      buildings broaden the visitor experience available from Strathalbyn,
+      while Cox Scrub Conservation Park protects an important area of native
+      vegetation within the eastern Fleurieu Peninsula.
     </p>
 
     <p>
-      Beyond the town are smaller communities and rural places including
-      Finniss, Ashbourne and Langhorne Creek, together with natural areas such
-      as Cox Scrub Conservation Park. Collectively, these destinations reveal
-      the agricultural heritage, natural environment and community identity of
-      the eastern Fleurieu Peninsula.
-    </p>
-
-    <p>
-      ShowcasingOz TV will explore Strathalbyn's history, local businesses,
-      creative community, nearby vineyards and surrounding landscapes,
-      introducing viewers to the people and places that give this regional
-      South Australian town its enduring appeal.
+      ShowcasingOz TV will document Strathalbyn’s heritage, riverside setting,
+      creative community, regional businesses, nearby wine country and
+      surrounding rural landscapes as part of its national filming journey.
+      Following our visit, this page will be expanded with original
+      photography, professionally produced video and additional information
+      gathered on location.
     </p>
 
     <!-- DOCUMENTARY -->
-    <h2>🎥 Watch Our Strathalbyn Documentary</h2>
+    <h2>🎥 Town Documentary</h2>
 
-    <p>
-      Our Strathalbyn documentary will feature the town's heritage streets,
-      riverside gardens, galleries, museums, regional businesses, nearby wine
-      country and surrounding rural communities.
-    </p>
-
-    <div class="documentary-placeholder">
-      Full Strathalbyn Documentary Coming Soon
+    <div class="video-placeholder">
+      Strathalbyn Documentary Coming Soon
     </div>
 
     <!-- ATTRACTIONS -->
-    <h2>🎟️ Attractions In and Around Strathalbyn</h2>
+    <h2>📍 Attractions</h2>
 
-    <p>
-      These visitor attractions, cultural organisations and regional
-      businesses form part of the ShowcasingOz TV filming schedule for
-      Strathalbyn and the surrounding district.
+    <p class="accommodation-intro">
+      Strathalbyn makes a convenient base for exploring regional art, motoring
+      history, historic buildings and the celebrated wineries of nearby
+      Langhorne Creek.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
     </p>
 
     <ul class="attractions-list">
-
       <li>
         <strong>Bleasdale Vineyards</strong>
-        Discover one of the longstanding wine producers of the Langhorne Creek
-        district, including the winery's historic Old Press and its connection
-        with generations of regional winemaking.
+        A longstanding Langhorne Creek winery where visitors can explore the
+        district’s winemaking history, including the historic Old Press.
       </li>
 
       <li>
         <strong>Bremerton Wines</strong>
-        Visit a family-owned Langhorne Creek winery offering regional wines,
-        cellar-door experiences and insight into the area's established
-        viticultural character.
+        A family-owned Langhorne Creek winery offering cellar-door experiences
+        and wines shaped by the surrounding region.
       </li>
 
       <li>
         <strong>Gilbert’s Motor Museum</strong>
-        Explore a collection celebrating motoring history, machinery,
-        transport heritage and the role vehicles have played in regional
-        Australian life.
+        A Strathalbyn museum displaying vehicles, motorcycles, memorabilia and
+        other material connected with motoring history.
       </li>
 
       <li>
         <strong>Kimbolton Wines</strong>
-        Experience contemporary Langhorne Creek wines, including Kimbolton's
-        signature Cheese and Wine Flight combining selected wines with
-        complementary regional flavours.
+        A contemporary Langhorne Creek cellar door offering regional wines and
+        experiences including its signature Cheese and Wine Flight.
       </li>
 
       <li>
         <strong>Lake Breeze Wines</strong>
-        Visit a family-operated Langhorne Creek winery and enjoy regional wine,
-        vineyard scenery and the winery's picnic lunch experience.
+        A family-operated Langhorne Creek winery where visitors can experience
+        regional wine, vineyard views and the winery’s picnic lunch offering.
       </li>
 
       <li>
-        <strong>St Andrew’s Uniting Church</strong>
-        Admire one of Strathalbyn's prominent historic churches and learn about
-        its architectural, spiritual and community significance.
+        <strong>St. Andrew’s Uniting Church</strong>
+        A prominent historic church contributing to Strathalbyn’s distinctive
+        architectural character and longstanding community heritage.
       </li>
 
       <li>
         <strong>Stationmaster’s Art Gallery</strong>
-        Discover exhibitions and creative works presented within
-        Strathalbyn's historic former railway station precinct, supporting
-        artists from the town and wider region.
+        A community art gallery located within Strathalbyn’s historic railway
+        precinct and presenting work by artists from the town and wider region.
       </li>
 
       <li>
         <strong>Strathalbyn Police Station and Courthouse Museum</strong>
-        Step inside a preserved historic justice precinct featuring displays
-        connected with local policing, court proceedings and the development
-        of Strathalbyn.
+        A preserved historic justice precinct featuring displays connected
+        with local policing, court proceedings and the development of the town.
       </li>
-
     </ul>
 
-    <!-- LANDMARKS / POIS -->
-    <h2>📍 Landmarks, Points of Interest and Hidden Gems</h2>
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
-    <p>
-      These historic places, natural areas, public spaces and surrounding
-      communities help tell the broader story of Strathalbyn and the eastern
-      Fleurieu Peninsula.
+    <p class="accommodation-intro">
+      Explore Strathalbyn’s town centre, riverside gardens, historic structures,
+      surrounding communities and natural areas that help tell the broader
+      story of the eastern Fleurieu Peninsula.
     </p>
 
     <div class="poi-grid">
 
       <article class="poi-card">
         <div class="poi-placeholder">
-          Angas River Soldiers Memorial Garden Image Coming Soon
+          Angas River Soldiers Memorial Garden &amp; Rotary Footbridge Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Angas River Soldiers Memorial Garden &amp; Rotary Footbridge</h3>
+
           <p>
-            Walk through Strathalbyn's landscaped riverside garden and cross
-            the Rotary Footbridge for peaceful views of the Angas River,
-            mature trees and surrounding heritage precinct.
+            A landscaped riverside garden with lawns, mature trees, memorial
+            features and a pedestrian footbridge crossing the Angas River.
           </p>
         </div>
       </article>
@@ -681,26 +599,28 @@
         <div class="poi-placeholder">
           Ashbourne Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Ashbourne</h3>
+
           <p>
-            Discover a small rural settlement south of Strathalbyn, including
-            its historic streetscape and the surviving facade associated with
-            the former Green Man Inn.
+            A small rural settlement south of Strathalbyn featuring a peaceful
+            country setting and the historic Green Man Inn facade.
           </p>
         </div>
       </article>
 
       <article class="poi-card">
         <div class="poi-placeholder">
-          Colman’s Grain Store and Angas Flour Mill Image Coming Soon
+          Colman’s Grain Store &amp; Angas Flour Mill Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Colman’s Grain Store &amp; Angas Flour Mill</h3>
+
           <p>
-            View important surviving reminders of Strathalbyn's agricultural
-            and industrial heritage, reflecting the processing and storage of
-            grain produced across the surrounding district.
+            Surviving reminders of Strathalbyn’s agricultural and industrial
+            development and the importance of grain production to the district.
           </p>
         </div>
       </article>
@@ -709,12 +629,13 @@
         <div class="poi-placeholder">
           Cox Scrub Conservation Park Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Cox Scrub Conservation Park</h3>
+
           <p>
-            Experience an important area of native vegetation protecting
-            Fleurieu Peninsula heathland, woodland habitats, walking trails
-            and opportunities to observe native plants and wildlife.
+            A protected area of native woodland and heath offering walking
+            opportunities and habitat for a variety of native plants and wildlife.
           </p>
         </div>
       </article>
@@ -723,12 +644,13 @@
         <div class="poi-placeholder">
           Finniss Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Finniss</h3>
+
           <p>
-            Explore a small rural community southwest of Strathalbyn,
-            surrounded by farming country and connected with the historic
-            railway corridor extending through the southern Fleurieu region.
+            A small rural community south-west of Strathalbyn, surrounded by
+            farming country and connected with the region’s railway history.
           </p>
         </div>
       </article>
@@ -737,12 +659,13 @@
         <div class="poi-placeholder">
           Gemmells Railway Station Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Gemmells Railway Station</h3>
+
           <p>
-            See a surviving element of the district's railway history and its
-            former role in connecting rural communities, agricultural
-            producers and regional centres.
+            A surviving part of the district’s railway heritage and its former
+            role in connecting rural communities and agricultural producers.
           </p>
         </div>
       </article>
@@ -751,12 +674,13 @@
         <div class="poi-placeholder">
           Kenny Blake Memorial Statue Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Kenny Blake Memorial Statue</h3>
+
           <p>
-            Visit the memorial honouring Strathalbyn-born motorcycle racer
-            Kenny Blake and his achievements in Australian and international
-            motorsport.
+            A memorial honouring Strathalbyn-born motorcycle racer Kenny Blake
+            and his achievements in Australian and international motorsport.
           </p>
         </div>
       </article>
@@ -765,12 +689,13 @@
         <div class="poi-placeholder">
           Langhorne Creek Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Langhorne Creek</h3>
+
           <p>
-            Explore a historic wine-growing community surrounded by vineyards
-            and agricultural land, including the town's central streetscape
-            and the historic Bridge Hotel facade.
+            A historic wine-growing community surrounded by vineyards and
+            agricultural land, including the heritage Bridge Hotel facade.
           </p>
         </div>
       </article>
@@ -779,13 +704,13 @@
         <div class="poi-placeholder">
           Strathalbyn Town Centre Image Coming Soon
         </div>
+
         <div class="poi-content">
           <h3>Strathalbyn Town Centre</h3>
+
           <p>
-            Wander through the historic town centre and High Street Antique and
-            Art Precinct, where heritage architecture, galleries, collectables,
-            cafés and specialist shops create a distinctive regional
-            atmosphere.
+            A heritage-rich town centre featuring historic architecture, local
+            businesses and the High Street Antique and Art Precinct.
           </p>
         </div>
       </article>
@@ -796,26 +721,19 @@
     <h2>🏨 Stay Where We Showcase — Strathalbyn</h2>
 
     <p class="accommodation-intro">
-      Planning a visit to Strathalbyn? Explore hotels, motels, caravan-park
-      accommodation and hosted bed-and-breakfast properties in Strathalbyn and
-      the nearby Langhorne Creek district.
+      Planning a stay in Strathalbyn? Explore available accommodation in and
+      around the town and nearby Langhorne Creek while discovering the heritage,
+      wineries and landscapes of the eastern Fleurieu Peninsula.
     </p>
 
     <p class="accommodation-intro">
-      The accommodation list has been restricted to properties that belong
-      naturally to the Strathalbyn and Langhorne Creek area. Accommodation
-      closer to Goolwa, Milang, Murray Bridge, Tailem Bend, Macclesfield or
-      Hahndorf has not been included.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
-    <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place
-      to stay — we help people discover where to go, what to experience and
-      where to base themselves while exploring Australia's towns, cities and
-      hidden gems.
-    </p>
-
-    <p style="text-align: center;">
+    <p style="text-align:center;">
       <a
         href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStrathalbyn%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
@@ -827,41 +745,47 @@
     </p>
 
     <h3 class="other-accommodation-heading">
-      Featured Accommodation Opportunities In and Around Strathalbyn
+      Featured Accommodation Opportunities In And Around Strathalbyn
     </h3>
 
     <p class="accommodation-intro">
       Accommodation partners featured on ShowcasingOz TV receive premium
       exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front of
-      travellers actively deciding where to stay.
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
-    <p style="text-align: center;">
-      <a href="../accommodation-partners.html" class="accommodation-link">
-        Explore Accommodation Filming &amp; Feature Options
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
+
         <div class="accommodation-placeholder">
-          Featured Accommodation Coming Soon
+          Featured Strathalbyn Accommodation Coming Soon
         </div>
+
       </div>
     </div>
 
     <h3 class="other-accommodation-heading">
-      Other Accommodation In and Around Strathalbyn
+      Other Accommodation In And Around Strathalbyn
     </h3>
 
     <div class="other-accommodation-bookings">
 
       <div class="other-stay-item">
         <div class="stay-details">
-          <strong>Angas Plains Wines Accommodation</strong>
-          <small>Hosted vineyard suites — Angas Plains / Langhorne Creek district</small>
+          <span>Angas Plains Wines Accommodation</span>
+          <small>Vineyard Suites · Angas Plains / Langhorne Creek district</small>
         </div>
+
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAngas%2520Plains%2520Wines%2520Accommodation%252C%2520Angas%2520Plains%252C%2520South%2520Australia"
           target="_blank"
@@ -874,9 +798,10 @@
 
       <div class="other-stay-item">
         <div class="stay-details">
-          <strong>Strath Motel</strong>
-          <small>Motel — Strathalbyn</small>
+          <span>Strath Motel</span>
+          <small>Motel · Strathalbyn</small>
         </div>
+
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStrath%2520Motel%252C%2520Strathalbyn%252C%2520South%2520Australia"
           target="_blank"
@@ -889,11 +814,12 @@
 
       <div class="other-stay-item">
         <div class="stay-details">
-          <strong>Strathalbyn Caravan Park</strong>
-          <small>Caravan park with cabin accommodation — Strathalbyn</small>
+          <span>Strathalbyn Caravan Park</span>
+          <small>Caravan Park / Cabins · Strathalbyn</small>
         </div>
+
         <a
-          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStrathalbyn%2520Caravan%2520Park%252C%2520South%2520Australia"
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DStrathalbyn%2520Caravan%2520Park%252C%2520Strathalbyn%252C%2520South%2520Australia"
           target="_blank"
           rel="noopener sponsored"
           class="accommodation-link"
@@ -904,9 +830,10 @@
 
       <div class="other-stay-item">
         <div class="stay-details">
-          <strong>The Creek Cottage</strong>
-          <small>Hosted bed and breakfast — Langhorne Creek</small>
+          <span>The Creek Cottage</span>
+          <small>B&amp;B · Langhorne Creek</small>
         </div>
+
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Creek%2520Cottage%252C%2520Langhorne%2520Creek%252C%2520South%2520Australia"
           target="_blank"
@@ -919,9 +846,10 @@
 
       <div class="other-stay-item">
         <div class="stay-details">
-          <strong>The Stables BnB</strong>
-          <small>Bed and breakfast / studio accommodation — Langhorne Creek</small>
+          <span>The Stables BnB</span>
+          <small>B&amp;B / Studio Suites · Langhorne Creek</small>
         </div>
+
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Stables%2520BnB%252C%2520Langhorne%2520Creek%252C%2520South%2520Australia"
           target="_blank"
@@ -934,9 +862,10 @@
 
       <div class="other-stay-item">
         <div class="stay-details">
-          <strong>Victoria Hotel Strathalbyn</strong>
-          <small>Hotel — Strathalbyn Town Centre</small>
+          <span>Victoria Hotel Strathalbyn</span>
+          <small>Hotel · Strathalbyn Town Centre</small>
         </div>
+
         <a
           href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVictoria%2520Hotel%2520Strathalbyn%252C%2520South%2520Australia"
           target="_blank"
@@ -950,20 +879,18 @@
     </div>
 
     <p class="accommodation-disclaimer">
-      This accommodation list is provided for visitor awareness only.
-      Inclusion does not imply a partnership, endorsement or personal
-      recommendation by ShowcasingOz TV. Availability, facilities, booking
-      conditions and property information may change, so travellers should
-      confirm all details directly with the accommodation provider before
-      booking. Some links on this page are affiliate links, which means
-      ShowcasingOz TV may earn a small commission if you make a qualifying
-      booking, at no additional cost to you.
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
     </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -981,19 +908,17 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
-
 </html>
