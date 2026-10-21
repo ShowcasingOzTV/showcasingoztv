@@ -3,6 +3,7 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -10,140 +11,374 @@
     gtag('config', 'G-RB6N742VZW');
   </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Top Springs (NT) | ShowcasingOz TV</title>
-  <meta name="description" content="Discover Top Springs (NT) — a remote outback stop at the junction of the Buntine and Buchanan Highways, offering classic Northern Territory hospitality. Featured in ShowcasingOz TV’s travel series." />
-  <meta name="keywords" content="Top Springs, Northern Territory, Buchanan Highway, Buntine Highway, outback roadhouse, NT travel, ShowcasingOz TV" />
 
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta
+    name="description"
+    content="Discover Top Springs in the Northern Territory with ShowcasingOz TV, including its remote highway junction, outback hotel, points of interest and accommodation."
+  >
+
+  <meta
+    name="keywords"
+    content="Top Springs NT, Top Springs Hotel, Top Springs accommodation, Buntine Highway, Buchanan Highway, Victoria River region, Northern Territory travel, ShowcasingOz TV"
+  >
+
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    media="print"
+    onload="this.media='all'"
+  >
 
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       background: #ffffff;
       color: #0E3557;
     }
 
-    /* Header */
     header.navbar {
       background: #0E3557;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    
-header.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
-header.navbar img {
-  height: 65px;
-  width: auto;
-}
-    
+    header.navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.navbar img {
+      height: 65px;
+      width: auto;
+    }
+
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-    nav a:hover { color: #E87722; }
-    .menu-btn { display:none; cursor:pointer; font-size:1.5rem; }
 
-    @media (max-width:768px){
-      nav { display:none; flex-direction:column; background:#0E3557; width:100%; position:absolute; top:70px; right:0; }
-      nav.active { display:flex; }
-      .menu-btn { display:block; }
-      nav a { padding:15px; border-top:1px solid rgba(255,255,255,0.15); }
+    nav a:hover {
+      color: #E87722;
     }
 
-    /* Hero Banner */
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0E3557;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav a {
+        padding: 15px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
+    }
+
     .hero {
       width: 100%;
       height: 320px;
-      background: url('../images/towns/top-springs.png') center center / cover no-repeat;
+      background: #dddddd;
     }
 
-    /* Content */
     .content {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    h1 { color:#0E3557; margin-bottom:10px; text-align:center; }
-    h2 { color:#E87722; margin-top:40px; }
-    p { line-height:1.6; color:#333; }
-
-    /* Attractions Grid */
-    .attraction-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:25px;
-      justify-content:center;
-      margin-top:20px;
-    }
-    .attraction-card {
-      width:260px;
-      background:#f9f9f9;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-    }
-    .attraction-card img {
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:10px;
-      background:#ddd;
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
     }
 
-    /* Video Placeholder */
+    h2 {
+      text-align: center;
+      color: #E87722;
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .page-update-notice {
+      max-width: 780px;
+      margin: 30px auto 10px;
+      padding: 24px 26px;
+      background: #FFF4EB;
+      border: 2px solid #E87722;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .page-update-notice h2 {
+      color: #0E3557;
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .page-update-notice p {
+      margin: 0;
+    }
+
+    .video-placeholder,
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      width: 100%;
+      background: #e1e1e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      font-weight: 500;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
     .video-placeholder {
-      width:100%;
-      height:350px;
-      background:#e1e1e1;
-      border-radius:12px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-size:1.3rem;
-      color:#666;
-      margin-top:20px;
+      height: 350px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .accommodation-placeholder,
+    .attraction-placeholder,
+    .poi-placeholder {
+      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .accommodation-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accommodation-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .accommodation-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #0E3557;
+      text-decoration: none;
+    }
+
+    .accommodation-link:hover {
+      text-decoration: underline;
+    }
+
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     footer {
-      background:#0E3557;
-      color:#fff;
-      padding:30px 20px;
-      margin-top:60px;
-      text-align:center;
+      background: #0E3557;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      text-align: center;
     }
-    footer a { color:#E87722; text-decoration:none; }
-    /* Force footer links + email to orange on town pages */
-footer .footer-links a,
-footer p a {
-  color: #E87722 !important;
-}
 
-footer .footer-links a:hover,
-footer p a:hover {
-  color: #ffffff !important;
-}
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+
+    footer .footer-links a,
+    footer p a {
+      color: #E87722;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    footer .footer-links a:hover,
+    footer p a:hover {
+      color: #ffffff;
+    }
+
+    footer p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gst-disclaimer {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -152,10 +387,20 @@ footer p a:hover {
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
-    <a href="/">
-    <img src="/images/logo.jpg" alt="ShowcasingOz TV Logo" width="170" height="65">
-    </a>
-      <span class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></span>
+
+      <a href="/">
+        <img
+          src="/images/logo.jpg"
+          alt="ShowcasingOz TV Logo"
+          width="170"
+          height="65"
+        >
+      </a>
+
+      <span class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </span>
+
       <nav id="menu">
         <a href="/">Home</a>
         <a href="/about.html">About Us</a>
@@ -167,63 +412,255 @@ footer p a:hover {
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-<!-- HERO -->
-<section class="hero"></section>
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
-<!-- CONTENT -->
-<section class="content">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="../images/towns/top-springs.jpg"
+      alt="Top Springs Northern Territory"
+      width="1600"
+      height="320"
+      fetchpriority="high"
+      decoding="async"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+  </section>
 
-  <h1>Top Springs (NT)</h1>
+  <!-- MAIN CONTENT -->
+  <section class="content">
 
-  <p>
-    Top Springs is a tiny yet iconic outback stop located at the  
-    junction of the **Buchanan Highway** and the **Buntine Highway**,  
-    deep in the Northern Territory’s Victoria River region.  
-    Surrounded by wide-open plains, cattle country and rugged NT  
-    landscapes, it serves as an important rest point for travellers  
-    navigating remote roads.
-    <br><br>
-    The Top Springs Hotel is the heart of this small locality, offering  
-    fuel, food, accommodation and classic Territory hospitality.  
-    Adventurers travelling through the Tanami, Gregory National Park  
-    region or heading toward Katherine often rely on Top Springs as a  
-    crucial break in their journey.
-    <br><br>
-    ShowcasingOz TV will be capturing the roadhouse atmosphere,  
-    desert landscapes and unique outback character that make Top  
-    Springs a memorable stop in remote NT.
-  </p>
+    <h1>Top Springs (NT)</h1>
 
-  <h2>🎥 Town Documentary</h2>
-  <div class="video-placeholder">Documentary Coming Soon</div>
+    <p>
+      Top Springs is a remote Northern Territory locality at the junction of the
+      Buntine and Buchanan Highways. Surrounded by extensive cattle stations and
+      vast tropical savanna, it is an important service and rest point for people
+      travelling through the Victoria River region and the Territory’s inland.
+    </p>
 
-  <h2>📍 Attractions & Points of Interest</h2>
-  <p>
-    While primarily a roadhouse stop, the area offers striking  
-    cattle-station scenery, vast NT plains and true remote Australian  
-    outback experiences. We will be there filming it for your viewing come June 2026.
-  </p>
+    <p>
+      The locality’s identity is closely tied to pastoralism. Large cattle
+      properties occupy the surrounding country, while the highways connect
+      stations and small communities with Katherine, the Victoria Highway and
+      other distant centres. Conditions can be demanding, particularly during
+      the wet season, making current road and weather advice essential.
+    </p>
 
-  <div class="attraction-grid">
-    <div class="attraction-card">
-      <img src="../images/coming-soon.png" alt="Coming Soon" />
-      <p>Attractions Coming Soon</p>
+    <p>
+      Top Springs Hotel is the focal point of the locality. The remote outback
+      pub provides fuel, meals, supplies and accommodation for travellers,
+      transport workers and people from nearby stations. Its collection of
+      memorabilia and unmistakable Territory atmosphere make it more than a
+      practical roadside stop.
+    </p>
+
+    <p>
+      The meeting of the Buntine and Buchanan Highways is itself significant.
+      These long-distance routes cross sparsely populated country and provide
+      access towards destinations including Kalkarindji, Timber Creek and the
+      Stuart Highway. Travellers should plan fuel, water and communications
+      carefully before continuing beyond Top Springs.
+    </p>
+
+    <p>
+      Rather than a conventional town centre, visitors encounter a compact
+      roadside hub framed by open grasslands, red earth, changing skies and
+      working cattle country. This sense of scale and isolation is central to
+      the experience of travelling through the region.
+    </p>
+
+    <p>
+      ShowcasingOz TV will document Top Springs Hotel, the highway junction,
+      surrounding pastoral landscapes and the realities of remote Territory
+      travel as part of its national filming journey. Following our visit, this
+      page will be expanded with original photography, professionally produced
+      video and additional information gathered on location.
+    </p>
+
+    <!-- DOCUMENTARY -->
+    <h2>🎥 Town Documentary</h2>
+
+    <div class="video-placeholder">
+      Top Springs Documentary Coming Soon
     </div>
-  </div>
 
-</section>
+    <!-- ATTRACTIONS -->
+    <h2>📍 Attractions</h2>
+
+    <p class="accommodation-intro">
+      Top Springs Hotel is the locality’s principal visitor business and an
+      essential stop for travellers crossing this remote part of the Territory.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
+        Explore attractions filming &amp; feature options
+      </a>
+    </p>
+
+    <ul class="attractions-list">
+      <li>
+        <strong>Top Springs Hotel</strong>
+        A classic remote outback hotel and roadhouse offering meals, refreshments,
+        fuel, supplies and Territory hospitality. Its memorabilia-filled interior
+        and role as a meeting place give travellers an insight into life in the
+        surrounding cattle country.
+      </li>
+    </ul>
+
+    <!-- POINTS OF INTEREST -->
+    <h2>🗺️ Points of Interest &amp; Landmarks</h2>
+
+    <p class="accommodation-intro">
+      Explore the remote road junction and pastoral landscapes that define
+      Top Springs and connect the locality with the wider Victoria River region.
+    </p>
+
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Buntine and Buchanan Highways Junction Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Buntine and Buchanan Highways Junction</h3>
+
+          <p>
+            The remote crossroads at the heart of Top Springs, linking long
+            routes through cattle country towards Kalkarindji, Timber Creek and
+            the Stuart Highway.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Top Springs Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Top Springs</h3>
+
+          <p>
+            A small outback locality surrounded by broad savanna plains and
+            working cattle stations, offering an authentic sense of the scale
+            and isolation of inland Northern Territory travel.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ACCOMMODATION -->
+    <h2>🏨 Stay Where We Showcase — Top Springs</h2>
+
+    <p class="accommodation-intro">
+      Planning a stay in Top Springs? The locality’s hotel provides rooms and
+      caravan facilities at this remote highway junction, allowing travellers
+      to rest, refuel and experience the surrounding cattle country.
+    </p>
+
+    <p class="accommodation-intro">
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTop%2520Springs%252C%2520Northern%2520Territory%252C%2520Australia"
+        target="_blank"
+        rel="noopener sponsored"
+        class="accommodation-link"
+      >
+        View All Top Springs Accommodation
+      </a>
+    </p>
+
+    <h3 class="other-accommodation-heading">
+      Featured Accommodation Opportunities In And Around Top Springs
+    </h3>
+
+    <p class="accommodation-intro">
+      Accommodation partners featured on ShowcasingOz TV receive premium
+      exposure through professionally produced video, photography and
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
+    </p>
+
+    <p style="text-align:center;">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
+        Explore accommodation filming &amp; feature options
+      </a>
+    </p>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+
+        <div class="accommodation-placeholder">
+          Featured Top Springs Accommodation Coming Soon
+        </div>
+
+      </div>
+    </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Top Springs
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Top Springs Hotel</span>
+          <small>Hotel / Motel Rooms / Caravan Facilities · Top Springs</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTop%2520Springs%2520Hotel%252C%2520Top%2520Springs%252C%2520Northern%2520Territory"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -238,10 +675,19 @@ footer p a:hover {
     </div>
 
     <p>
-      📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
-      <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
+      📧
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a><br>
+
+      <span class="gst-disclaimer">
+        All prices listed are exclusive of GST. GST will be applied once
+        ShowcasingOz TV becomes GST-registered.
+      </span><br>
+
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
