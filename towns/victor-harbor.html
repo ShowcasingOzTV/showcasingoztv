@@ -3,6 +3,7 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -17,12 +18,12 @@
 
   <meta
     name="description"
-    content="Discover Victor Harbor in South Australia with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Victor Harbor and the southern Fleurieu Peninsula with ShowcasingOz TV, including attractions, coastal landmarks, points of interest and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Victor Harbor SA, Encounter Bay, Granite Island, Victor Harbor attractions, Victor Harbor accommodation, Fleurieu Peninsula, South Australia travel, ShowcasingOz TV"
+    content="Victor Harbor SA, Victor Harbor attractions, Victor Harbor accommodation, Granite Island, Encounter Bay, Fleurieu Peninsula, South Australia travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -219,6 +220,128 @@
       text-decoration: underline;
     }
 
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -264,6 +387,7 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -288,6 +412,7 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
@@ -304,7 +429,7 @@
   <section class="hero">
     <img
       src="../images/towns/victor_harbor.jpg"
-      alt="Victor Harbor Encounter Bay South Australia"
+      alt="Victor Harbor South Australia"
       width="1600"
       height="320"
       fetchpriority="high"
@@ -319,31 +444,49 @@
     <h1>Victor Harbor (SA)</h1>
 
     <p>
-      Victor Harbor is a coastal city on Encounter Bay at the southern end of
-      South Australia’s Fleurieu Peninsula. Its beaches, ocean views and
-      long-standing holiday character have made it one of the state’s
-      best-known seaside destinations.
+      Victor Harbor is a major coastal destination on South Australia’s Fleurieu
+      Peninsula, approximately 80 kilometres south of Adelaide. Set beside
+      Encounter Bay, the city combines beaches, dramatic headlands, historic
+      streets and a working visitor economy shaped by the Southern Ocean.
     </p>
 
     <p>
-      The city’s identity is closely linked to Granite Island, its historic
-      horse-drawn tram and its maritime heritage. Coastal walks, heritage
-      precincts and access to surrounding towns and landscapes make Victor
-      Harbor a practical base for exploring the wider Fleurieu Peninsula.
+      The area is part of the traditional Country of the Ramindjeri and broader
+      Ngarrindjeri people, whose connection with the coast, sea and Kondoli whale
+      story remains central to the region’s identity. European settlement began
+      during the nineteenth century as whaling, farming and maritime trade
+      developed around Encounter Bay.
     </p>
 
-    <div class="page-update-notice">
-      <h2>🚧 Our Complete Victor Harbor Guide Is Coming Soon</h2>
+    <p>
+      Victor Harbor became an important port linked with the Murray River trade.
+      Goods travelled by rail from the river port of Goolwa before being moved
+      across the causeway to ships at Granite Island. The horse-drawn tramway,
+      railway heritage and foreshore precinct preserve important parts of that
+      transport history.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Victor Harbor. Following filming, it will
-        be expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        city and surrounding Fleurieu Peninsula.
-      </p>
-    </div>
+    <p>
+      Granite Island, Rosetta Head, Waitpinga and the rugged coastline west of
+      the city provide sweeping views, walking opportunities and places to observe
+      seabirds and seasonal whale activity. Sheltered Encounter Bay also supports
+      boating, swimming and wildlife tours.
+    </p>
+
+    <p>
+      The wider district includes vineyards, dairy producers, distilleries,
+      museums, galleries and family attractions. Victor Harbor’s substantial
+      accommodation and hospitality sector makes the city a practical base for
+      exploring the southern Fleurieu without shifting into neighbouring town areas.
+    </p>
+
+    <p>
+      ShowcasingOz TV will document Victor Harbor’s coastal landscapes, Indigenous
+      and maritime heritage, visitor experiences and local businesses as part of
+      its national filming journey. Following our visit, this page will be expanded
+      with original photography, professionally produced video and further
+      information gathered on location.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -356,97 +499,594 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Victor Harbor’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage is completed.
+      Victor Harbor and its surrounding district offer wildlife encounters,
+      museums, galleries, regional produce, guided coastal experiences and
+      family activities.
     </p>
 
     <p style="text-align:center;">
-      <a href="../attraction-partners.html" class="accommodation-link">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">
-          Featured Victor Harbor Attractions Coming Soon
-        </div>
-      </div>
-    </div>
+    <ul class="attractions-list">
+      <li>
+        <strong>Alexandrina Cheese Company</strong>
+        A family-operated dairy business at Mount Jagged producing artisan
+        cheeses from milk sourced from its own Jersey herd, with tastings and
+        regional produce available to visitors.
+      </li>
+
+      <li>
+        <strong>Belicious Cafe</strong>
+        A regional cafe near Inman Valley known for meals, sweet treats and a
+        relaxed rural setting within the countryside behind Victor Harbor.
+      </li>
+
+      <li>
+        <strong>Big Duck Boat Tours</strong>
+        Wildlife ocean expeditions departing from Victor Harbor to explore the
+        Encounter Bay coastline and search for seals, dolphins, seabirds and
+        other marine life.
+      </li>
+
+      <li>
+        <strong>Chop It Axe Throwing &amp; Escape It Rooms</strong>
+        An indoor entertainment venue offering supervised axe-throwing sessions
+        and themed escape-room challenges for groups and visitors.
+      </li>
+
+      <li>
+        <strong>Encounter Coast Discovery Centre &amp; Museum</strong>
+        A local history museum interpreting Victor Harbor’s whaling, maritime,
+        railway and community heritage through displays, objects and stories.
+      </li>
+
+      <li>
+        <strong>Encounter Coast Spirits</strong>
+        A local distillery producing small-batch spirits inspired by the Fleurieu
+        Peninsula and offering visitors an introduction to its products and craft.
+      </li>
+
+      <li>
+        <strong>Moos Distillery</strong>
+        A Fleurieu Peninsula distillery producing handcrafted spirits and
+        providing tastings in a relaxed regional setting.
+      </li>
+
+      <li>
+        <strong>SA Whale Centre</strong>
+        Located in the historic railway goods shed, the centre explores South
+        Australia’s whales, local whaling history, marine conservation and the
+        seasonal migration through Encounter Bay.
+      </li>
+
+      <li>
+        <strong>Softfoot Alpaca and Wildlife Park</strong>
+        A privately operated wildlife property offering guided experiences with
+        alpacas and native animals in the hills near Victor Harbor.
+      </li>
+
+      <li>
+        <strong>Southern Fleurieu Historical Museum</strong>
+        A community museum preserving machinery, vehicles, domestic objects and
+        historical material connected with life across the southern Fleurieu.
+      </li>
+
+      <li>
+        <strong>The Victor Harbor Horse-Drawn Tramway</strong>
+        A heritage tram service linking the Victor Harbor foreshore with Granite
+        Island across the causeway using traditional Clydesdale horse power.
+      </li>
+
+      <li>
+        <strong>Urrimbirra Wildlife Park</strong>
+        A wildlife park featuring Australian animals and interactive encounters,
+        including opportunities to see kangaroos, koalas, reptiles and farm animals.
+      </li>
+
+      <li>
+        <strong>Victor Harbor Regional Gallery</strong>
+        A regional gallery presenting changing exhibitions and works by local and
+        visiting artists across a range of visual-art practices.
+      </li>
+
+      <li>
+        <strong>Victor Harbor Visitor Centre</strong>
+        The city’s official visitor-information service, providing local advice,
+        maps, bookings and guidance for exploring Victor Harbor and the Fleurieu.
+      </li>
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Victor Harbor’s coastal landmarks, heritage precincts and other points
-      of interest will be documented and added to this page following our
-      visit.
+      Explore beaches, headlands, waterfalls, lookouts and heritage precincts
+      across Victor Harbor and the adjoining Encounter Bay coastline.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="poi-placeholder">
-          Victor Harbor Points of Interest Coming Soon
+    <div class="poi-grid">
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Boomer Beach Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Boomer Beach</h3>
+          <p>
+            An exposed surf beach between Victor Harbor and Port Elliot, known
+            for powerful Southern Ocean swells and broad coastal views.
+          </p>
         </div>
-      </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Dennis Hut Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Dennis Hut</h3>
+          <p>
+            A rustic shelter near Waitpinga Campground that reflects the farming
+            and recreational history of the coastal conservation area.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Glacier Rock Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Glacier Rock</h3>
+          <p>
+            Also known as Selwyn Rock, this exposed geological feature preserves
+            markings associated with ancient glacial movement across the region.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Granite Island Recreation Park Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Granite Island Recreation Park</h3>
+          <p>
+            A prominent island linked to Victor Harbor by causeway, featuring
+            coastal walking trails, Nature’s Eye, View Point, Screwpile Jetty,
+            the breakwater and extensive views across Encounter Bay.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Hindmarsh Falls Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Hindmarsh Falls</h3>
+          <p>
+            A seasonal waterfall reached through the rural hinterland north of
+            Victor Harbor, with a lookout above the forested valley.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Horseshoe Bay Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Horseshoe Bay</h3>
+          <p>
+            A sheltered crescent-shaped bay at Port Elliot, framed by rocky
+            headlands and recognised as one of the Encounter Coast’s best-known beaches.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Nakurami Kondoli Whale Lookout Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Nakurami Kondoli Whale Lookout</h3>
+          <p>
+            A coastal lookout near Kings Beach offering views across the Southern
+            Ocean and recognising the important Ngarrindjeri Kondoli whale story.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Parsons Beach and Muhan Viewpoint Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Parsons Beach &amp; Muhan Viewpoint</h3>
+          <p>
+            A rugged surf beach and elevated coastal viewpoint west of Victor
+            Harbor, overlooking cliffs, dunes and the open Southern Ocean.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">The Bluff Lookout Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>The Bluff Lookout</h3>
+          <p>
+            The summit of Rosetta Head provides panoramic views across Encounter
+            Bay, Victor Harbor, Granite Island and the southern coastline.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Torrens Vale Lookout Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Torrens Vale Lookout</h3>
+          <p>
+            A rural lookout presenting broad views across the rolling farmland
+            and valleys of the southern Fleurieu hinterland.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Victor Harbor Main Foreshore Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Victor Harbor Main Foreshore &amp; Soldiers Memorial Reserve</h3>
+          <p>
+            The city’s central waterfront precinct includes lawns, memorials,
+            walking areas and views towards the causeway and Granite Island.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Victor Harbor Town Centre Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Victor Harbor Town Centre</h3>
+          <p>
+            A busy coastal centre containing heritage buildings, shops, cafes,
+            galleries and visitor services close to the foreshore.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Waitpinga Beach Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Waitpinga Beach</h3>
+          <p>
+            A wild and exposed Southern Ocean beach backed by dunes and coastal
+            vegetation, valued for scenery and experienced surfing conditions.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">Waitpinga Hill Lookout Image Coming Soon</div>
+        <div class="poi-content">
+          <h3>Waitpinga Hill Lookout</h3>
+          <p>
+            Also known as George Fisher Lookout, this elevated stop provides
+            expansive views across Waitpinga’s coastline and surrounding country.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Victor Harbor</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Victor Harbor? Explore available accommodation in and
-      around the city while we continue developing our complete Victor Harbor
-      destination guide.
+      Planning a stay in Victor Harbor? Explore established hotels, motels,
+      caravan and holiday parks, bed-and-breakfast businesses and managed resort
+      apartments within Victor Harbor and its immediate coastal district.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place
-      to stay. We help people discover where to go, what to experience and
-      where to base themselves as they explore Australia’s cities, towns and
-      hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Victor+Harbor%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVictor%2520Harbor%252C%2520South%2520Australia%252C%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Victor Harbor Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Victor Harbor
     </h3>
 
     <p class="accommodation-intro">
       Accommodation partners featured on ShowcasingOz TV receive premium
       exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front of
-      travellers actively planning where to stay.
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a href="../accommodation-partners.html" class="accommodation-link">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
+
         <div class="accommodation-placeholder">
           Featured Victor Harbor Accommodation Coming Soon
         </div>
+
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Victor Harbor
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Anchorage Seafront Hotel</span>
+          <small>Hotel · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAnchorage%2520Seafront%2520Hotel%252C%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Austiny Bed and Breakfast</span>
+          <small>Bed &amp; Breakfast · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DAustiny%2520Bed%2520and%2520Breakfast%252C%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Close Encounters Bed &amp; Breakfast</span>
+          <small>Bed &amp; Breakfast · Encounter Bay</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DClose%2520Encounters%2520Bed%2520and%2520Breakfast%252C%2520Encounter%2520Bay%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Grosvenor Hotel</span>
+          <small>Hotel · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DGrosvenor%2520Hotel%252C%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>McCracken Country Club</span>
+          <small>Resort Hotel · McCracken</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMcCracken%2520Country%2520Club%252C%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Nightcap at Hotel Victor</span>
+          <small>Hotel · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNightcap%2520at%2520Hotel%2520Victor%252C%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>NRMA Victor Harbor Beachfront Holiday Park</span>
+          <small>Holiday / Caravan Park · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DNRMA%2520Victor%2520Harbor%2520Beachfront%2520Holiday%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Ocean Crest Motel</span>
+          <small>Motel · Hayborough</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOcean%2520Crest%2520Motel%252C%2520Hayborough%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>PanCo Victor Harbor</span>
+          <small>Motel · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DPanCo%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Seascape Retreat</span>
+          <small>Bed &amp; Breakfast · Hindmarsh Valley</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSeascape%2520Retreat%252C%2520Hindmarsh%2520Valley%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>The Bluff Resort Apartments</span>
+          <small>Managed Resort Apartments · Encounter Bay</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DThe%2520Bluff%2520Resort%2520Apartments%252C%2520Encounter%2520Bay%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Victor Harbor City Inn</span>
+          <small>Motel · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVictor%2520Harbor%2520City%2520Inn%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Victor Harbor Holiday Park</span>
+          <small>Holiday / Caravan Park · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVictor%2520Harbor%2520Holiday%2520Park%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Wintersun Motel</span>
+          <small>Motel · Victor Harbor</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DWintersun%2520Motel%252C%2520Victor%2520Harbor%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Yelki by the Sea B&amp;B</span>
+          <small>Bed &amp; Breakfast · Encounter Bay</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DYelki%2520by%2520the%2520Sea%2520B%2526B%252C%2520Encounter%2520Bay%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -464,17 +1104,16 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
