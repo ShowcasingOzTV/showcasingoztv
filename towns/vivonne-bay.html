@@ -3,6 +3,7 @@
 <head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB6N742VZW"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -17,12 +18,12 @@
 
   <meta
     name="description"
-    content="Discover Vivonne Bay on Kangaroo Island with ShowcasingOz TV. Our complete destination guide, documentary, attractions, landmarks and accommodation features are coming soon."
+    content="Discover Vivonne Bay on Kangaroo Island with ShowcasingOz TV, including wildlife attractions, beaches, landmarks, points of interest and accommodation."
   >
 
   <meta
     name="keywords"
-    content="Vivonne Bay SA, Vivonne Bay Kangaroo Island, Vivonne Bay attractions, Vivonne Bay accommodation, Kangaroo Island south coast, South Australia travel, ShowcasingOz TV"
+    content="Vivonne Bay SA, Vivonne Bay Kangaroo Island, Seal Bay, Little Sahara, Vivonne Bay attractions, Vivonne Bay accommodation, South Australia travel, ShowcasingOz TV"
   >
 
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -219,6 +220,128 @@
       text-decoration: underline;
     }
 
+    .attractions-list {
+      max-width: 780px;
+      margin: 25px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .attractions-list li {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      background: #f8fafc;
+      border-left: 5px solid #E87722;
+      border-radius: 8px;
+      color: #333333;
+      line-height: 1.55;
+    }
+
+    .attractions-list strong {
+      display: block;
+      color: #0E3557;
+      margin-bottom: 4px;
+    }
+
+    .poi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .poi-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .poi-card .poi-placeholder {
+      height: 160px;
+      border-radius: 0;
+      padding: 20px;
+    }
+
+    .poi-content {
+      padding: 20px;
+    }
+
+    .poi-content h3 {
+      color: #0E3557;
+      margin: 0 0 10px;
+    }
+
+    .poi-content p {
+      margin: 0;
+    }
+
+    .other-accommodation-heading {
+      text-align: center;
+      color: #0E3557;
+      margin-top: 50px;
+    }
+
+    .other-accommodation-bookings {
+      max-width: 780px;
+      margin: 25px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .other-stay-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border: 1px solid #dfe5ea;
+      border-radius: 10px;
+    }
+
+    .stay-details span {
+      display: block;
+      color: #0E3557;
+      font-weight: 700;
+    }
+
+    .stay-details small {
+      display: block;
+      margin-top: 4px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    .other-stay-item .accommodation-link {
+      flex: 0 0 auto;
+      margin-top: 0;
+      padding: 9px 14px;
+      background: #0E3557;
+      color: #ffffff;
+      border-radius: 7px;
+    }
+
+    .other-stay-item .accommodation-link:hover {
+      background: #E87722;
+      text-decoration: none;
+    }
+
+    .accommodation-disclaimer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #666666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .other-stay-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
     footer {
       background: #0E3557;
       color: #ffffff;
@@ -264,6 +387,7 @@
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="container">
+
       <a href="/">
         <img
           src="/images/logo.jpg"
@@ -288,6 +412,7 @@
         <a href="/press.html">Press</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
@@ -319,32 +444,45 @@
     <h1>Vivonne Bay (SA)</h1>
 
     <p>
-      Vivonne Bay is a small coastal locality on the southern side of
-      Kangaroo Island, known for its sweeping sandy beach, clear water and
-      rugged island scenery. Its quiet setting offers a very different
-      experience from the island’s larger townships.
+      Vivonne Bay is a small coastal settlement on the south coast of Kangaroo
+      Island, approximately 60 kilometres south-west of Kingscote. Set between
+      native bushland, the Harriet River and the Southern Ocean, the locality is
+      known for its long curving beach, clear water, fishing jetty and relaxed,
+      low-density character.
     </p>
 
     <p>
-      The bay, jetty, nearby river and surrounding bushland make the area
-      appealing for coastal sightseeing, fishing and outdoor exploration.
-      Vivonne Bay is also well positioned for visitors travelling between
-      Kangaroo Island’s central communities and the natural attractions of
-      its western and southern regions.
+      The bay’s sheltered eastern end is framed by Point Ellen, where the jetty
+      extends into deeper water and provides a popular location for fishing and
+      coastal views. The Harriet River reaches the sea near the settlement,
+      adding calm-water scenery and opportunities for kayaking alongside the
+      more exposed conditions found farther along the beach.
     </p>
 
-    <div class="page-update-notice">
-      <h2>🚧 Our Complete Vivonne Bay Guide Is Coming Soon</h2>
+    <p>
+      Vivonne Bay occupies a central position among several of Kangaroo Island’s
+      best-known south-coast experiences. The dunes of Little Sahara lie nearby,
+      while Seal Bay Conservation Park, Raptor Domain and Kangaroo Island
+      Wildlife Park introduce visitors to the island’s landscapes and wildlife.
+      Roads extending east and west also lead to quiet beaches, conservation
+      areas and less-developed sections of coastline.
+    </p>
 
-      <p>
-        This destination page is currently being developed ahead of
-        ShowcasingOz TV’s visit to Vivonne Bay. Following filming, it will be
-        expanded with our full town documentary, original photography,
-        featured attractions, local landmarks, accommodation options,
-        businesses and practical information to help visitors explore the
-        bay and surrounding areas of Kangaroo Island.
-      </p>
-    </div>
+    <p>
+      Despite its growing profile as a visitor destination, Vivonne Bay remains
+      a small community rather than a conventional resort town. Services are
+      limited, and the surrounding distances are substantial, making advance
+      planning important for travellers using the bay as a base for exploring
+      the island’s south coast.
+    </p>
+
+    <p>
+      ShowcasingOz TV will document Vivonne Bay’s coastal landscapes, outdoor
+      activities, wildlife experiences and local character as part of its
+      national filming journey. Following our visit, this page will be expanded
+      with original photography, professionally produced video and additional
+      information gathered on location.
+    </p>
 
     <!-- DOCUMENTARY -->
     <h2>🎥 Town Documentary</h2>
@@ -357,96 +495,274 @@
     <h2>📍 Attractions</h2>
 
     <p class="accommodation-intro">
-      Vivonne Bay’s featured attractions will be added as filming
-      arrangements are confirmed and our destination coverage is completed.
+      Vivonne Bay and the surrounding south-coast district offer wildlife
+      encounters, guided outdoor activities and access to Kangaroo Island’s
+      remarkable dune landscapes.
     </p>
 
     <p style="text-align:center;">
-      <a href="../attraction-partners.html" class="accommodation-link">
+      <a
+        href="../attraction-partners.html"
+        class="accommodation-link"
+      >
         Explore attractions filming &amp; feature options
       </a>
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
-        <div class="attraction-placeholder">
-          Featured Vivonne Bay Attractions Coming Soon
-        </div>
-      </div>
-    </div>
+    <ul class="attractions-list">
+      <li>
+        <strong>Kangaroo Island Outdoor Action (Kayak Tour)</strong>
+        A guided paddling experience exploring the calm waters and natural
+        surroundings of the Harriet River near Vivonne Bay.
+      </li>
+
+      <li>
+        <strong>Kangaroo Island Wildlife Park</strong>
+        A wildlife attraction near Parndana presenting Australian animals,
+        conservation programs and supervised visitor encounters with native species.
+      </li>
+
+      <li>
+        <strong>Little Sahara Adventure Centre &amp; Sand Dunes</strong>
+        An adventure operator providing equipment and guided experiences among
+        the extensive inland dunes, including sandboarding and tobogganing.
+      </li>
+
+      <li>
+        <strong>Raptor Domain</strong>
+        A specialist wildlife presentation centre featuring educational,
+        close-up demonstrations with birds of prey and other Australian animals.
+      </li>
+    </ul>
 
     <!-- POINTS OF INTEREST -->
     <h2>🗺️ Points of Interest &amp; Landmarks</h2>
 
     <p class="accommodation-intro">
-      Vivonne Bay’s coastline, jetty, river and other points of interest will
-      be documented and added to this page following our visit.
+      Explore the beaches, dunes, conservation areas and coastal landmarks that
+      define Vivonne Bay and the central section of Kangaroo Island’s south coast.
     </p>
 
-    <div class="accommodation-grid">
-      <div class="accommodation-card">
+    <div class="poi-grid">
+
+      <article class="poi-card">
         <div class="poi-placeholder">
-          Vivonne Bay Points of Interest Coming Soon
+          Bales Beach Image Coming Soon
         </div>
-      </div>
+
+        <div class="poi-content">
+          <h3>Bales Beach</h3>
+
+          <p>
+            A scenic south-coast beach near Seal Bay, backed by dunes and native
+            vegetation and exposed to the changing conditions of the Southern Ocean.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          D'Estrees Bay Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>D'Estrees Bay</h3>
+
+          <p>
+            A remote stretch of Kangaroo Island’s south-eastern coastline featuring
+            beaches, rocky shorelines, heritage sites and expansive ocean views.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Little Sahara Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Little Sahara</h3>
+
+          <p>
+            A striking inland dune system of pale wind-shaped sand rising above
+            the surrounding bushland a short drive from Vivonne Bay.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Seal Bay Conservation Park Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Seal Bay Conservation Park</h3>
+
+          <p>
+            A nationally significant protected area where visitors can observe
+            Australian sea lions resting and moving through their natural coastal habitat.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Vivonne Bay Jetty &amp; Point Ellen Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Vivonne Bay Jetty &amp; Point Ellen</h3>
+
+          <p>
+            The bay’s prominent eastern headland and working jetty provide
+            fishing access, sheltered coastal scenery and broad views across the beach.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Vivonne Bay Town Centre &amp; Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Vivonne Bay Town Centre &amp; Beach</h3>
+
+          <p>
+            A quiet coastal settlement beside a long, sweeping beach known for
+            its white sand, clear water and uncrowded Kangaroo Island setting.
+          </p>
+        </div>
+      </article>
+
+      <article class="poi-card">
+        <div class="poi-placeholder">
+          Wreckers Beach Image Coming Soon
+        </div>
+
+        <div class="poi-content">
+          <h3>Wreckers Beach</h3>
+
+          <p>
+            A secluded and rugged beach on the south coast, offering a quieter
+            view of Kangaroo Island’s exposed shoreline and natural coastal environment.
+          </p>
+        </div>
+      </article>
+
     </div>
 
     <!-- ACCOMMODATION -->
     <h2>🏨 Stay Where We Showcase — Vivonne Bay</h2>
 
     <p class="accommodation-intro">
-      Planning a stay in Vivonne Bay? Explore available accommodation in and
-      around the bay while we continue developing our complete Vivonne Bay
-      destination guide.
+      Planning a stay in Vivonne Bay? Local commercial accommodation is limited,
+      reflecting the settlement’s small size and remote south-coast location.
+      The listing below follows our accommodation criteria and excludes private
+      holiday houses, Airbnb-style rentals and campgrounds.
     </p>
 
     <p class="accommodation-intro">
-      ShowcasingOz TV is designed to do more than help travellers find a place
-      to stay. We help people discover where to go, what to experience and
-      where to base themselves as they explore Australia’s cities, towns and
-      hidden gems.
+      ShowcasingOz TV is designed to do more than help travellers find a
+      place to stay. We help people discover where to go, what to experience
+      and where to base themselves as they explore Australia’s cities,
+      towns and hidden gems.
     </p>
 
     <p style="text-align:center;">
       <a
-        href="https://www.booking.com/searchresults.html?ss=Vivonne+Bay%2C+Kangaroo+Island%2C+South+Australia%2C+Australia"
+        href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVivonne%2520Bay%252C%2520Kangaroo%2520Island%252C%2520South%2520Australia"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener sponsored"
         class="accommodation-link"
       >
         View All Vivonne Bay Accommodation
       </a>
     </p>
 
-    <h3 style="text-align:center; margin-top:50px;">
+    <h3 class="other-accommodation-heading">
       Featured Accommodation Opportunities In And Around Vivonne Bay
     </h3>
 
     <p class="accommodation-intro">
       Accommodation partners featured on ShowcasingOz TV receive premium
       exposure through professionally produced video, photography and
-      destination-led storytelling that places their property in front of
-      travellers actively planning where to stay.
+      destination-led storytelling that places their property in front
+      of travellers actively planning where to stay.
     </p>
 
     <p style="text-align:center;">
-      <a href="../accommodation-partners.html" class="accommodation-link">
+      <a
+        href="../accommodation-partners.html"
+        class="accommodation-link"
+      >
         Explore accommodation filming &amp; feature options
       </a>
     </p>
 
     <div class="accommodation-grid">
       <div class="accommodation-card">
+
         <div class="accommodation-placeholder">
           Featured Vivonne Bay Accommodation Coming Soon
         </div>
+
       </div>
     </div>
+
+    <h3 class="other-accommodation-heading">
+      Other Accommodation In And Around Vivonne Bay
+    </h3>
+
+    <div class="other-accommodation-bookings">
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Seal Bay Cottages</span>
+          <small>Commercial Cabin Accommodation · Seddon · About 15 minutes from Vivonne Bay</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DSeal%2520Bay%2520Cottages%252C%2520Seddon%252C%2520Kangaroo%2520Island%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+      <div class="other-stay-item">
+        <div class="stay-details">
+          <span>Vivonne Bay Lodge</span>
+          <small>Lodge Accommodation · Vivonne Bay</small>
+        </div>
+
+        <a
+          href="https://www.jdoqocy.com/click-101877738-17293136?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DVivonne%2520Bay%2520Lodge%252C%2520Kangaroo%2520Island%252C%2520South%2520Australia"
+          target="_blank"
+          rel="noopener sponsored"
+          class="accommodation-link"
+        >
+          View / Book
+        </a>
+      </div>
+
+    </div>
+
+    <p class="accommodation-disclaimer">
+      This list is provided for visitor awareness only. Inclusion does not
+      imply partnership or endorsement. Booking buttons open Booking.com
+      search results and availability may vary. Some links on this page are
+      affiliate links, which means we may earn a small commission if you make
+      a booking, at no extra cost to you.
+    </p>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
+
     <div class="footer-links">
       <a href="/">Home</a> |
       <a href="/about.html">About Us</a> |
@@ -464,17 +780,16 @@
       📧
       <a href="mailto:showcasingoztv@gmail.com">
         showcasingoztv@gmail.com
-      </a>
-      <br>
+      </a><br>
 
       <span class="gst-disclaimer">
         All prices listed are exclusive of GST. GST will be applied once
         ShowcasingOz TV becomes GST-registered.
-      </span>
-      <br>
+      </span><br>
 
       © 2026 ShowcasingOz TV · Discover. Capture. Share.
     </p>
+
   </footer>
 
 </body>
