@@ -20,9 +20,11 @@
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
 
   <style>
     body {
@@ -175,6 +177,10 @@
     .town-card-content {
       padding: 20px;
       text-align: center;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
     }
 
     .town-card h3 {
@@ -198,7 +204,12 @@
       text-decoration: none;
       font-weight: 600;
       text-align: center;
-      margin-top: 15px;
+      margin-top: auto;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: #E87722;
     }
 
     footer {
@@ -247,144 +258,179 @@
     </div>
   </header>
 
- <script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-  menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
-</script>
+    menuBtn.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
 
-<!-- AUSTRALIA-WIDE ACCOMMODATION BOOKING -->
-<section style="background:#f5f7fa; padding:60px 20px; text-align:center;">
-  <div style="max-width:1000px; margin:0 auto;">
+  <!-- AUSTRALIA-WIDE ACCOMMODATION BOOKING -->
+  <section style="background:#f5f7fa; padding:60px 20px; text-align:center;">
+    <div style="max-width:1000px; margin:0 auto;">
 
-    <h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
-      Stay Where We Showcase
-    </h2>
+      <h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
+        Stay Where We Showcase
+      </h2>
 
-    <p style="font-size:1.1rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 18px;">
-      Discover and book accommodation across Australia through the destinations,
-      towns, and regions featured in ShowcasingOz TV.
-    </p>
+      <p style="font-size:1.1rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 18px;">
+        Discover and book accommodation across Australia through the destinations,
+        towns, and regions featured in ShowcasingOz TV.
+      </p>
 
-    <p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
-      From iconic locations to hidden gems we uncover on the road, search for
-      accommodation wherever your next Australian journey takes you.
-    </p>
+      <p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
+        From iconic locations to hidden gems we uncover on the road, search for
+        accommodation wherever your next Australian journey takes you.
+      </p>
 
-    <form id="booking-search-form" style="max-width:900px; margin:0 auto;">
-      <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; align-items:end;">
+      <form id="booking-search-form" style="max-width:900px; margin:0 auto;">
+        <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; align-items:end;">
 
-        <div style="flex:1 1 260px; min-width:220px; text-align:left;">
-          <label
-            for="booking-destination"
-            style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
-          >
-            Destination
-          </label>
+          <div style="flex:1 1 260px; min-width:220px; text-align:left;">
+            <label
+              for="booking-destination"
+              style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
+            >
+              Destination
+            </label>
 
-          <input
-            type="text"
-            id="booking-destination"
-            placeholder="Enter a town, city, or region"
-            required
-            style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-          />
+            <input
+              type="text"
+              id="booking-destination"
+              placeholder="Enter a town, city, or region"
+              required
+              style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+            />
+          </div>
+
+          <div style="flex:1 1 180px; min-width:180px; text-align:left;">
+            <label
+              for="booking-checkin"
+              style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
+            >
+              Check-in
+            </label>
+
+            <input
+              type="date"
+              id="booking-checkin"
+              style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+            />
+          </div>
+
+          <div style="flex:1 1 180px; min-width:180px; text-align:left;">
+            <label
+              for="booking-checkout"
+              style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
+            >
+              Check-out
+            </label>
+
+            <input
+              type="date"
+              id="booking-checkout"
+              style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+            />
+          </div>
+
+          <div style="flex:0 1 220px; min-width:200px;">
+            <button
+              type="submit"
+              style="width:100%; background:#E87722; color:#ffffff; padding:14px 24px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;"
+            >
+              Check Availability
+            </button>
+          </div>
+
         </div>
+      </form>
 
-        <div style="flex:1 1 180px; min-width:180px; text-align:left;">
-          <label
-            for="booking-checkin"
-            style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
-          >
-            Check-in
-          </label>
+      <p style="font-size:0.9rem; line-height:1.5; color:#666; max-width:780px; margin:20px auto 0;">
+        Accommodation searches and bookings are provided through Booking.com.
+        ShowcasingOz TV may earn a commission from eligible bookings at no additional
+        cost to you.
+      </p>
 
-          <input
-            type="date"
-            id="booking-checkin"
-            style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-          />
-        </div>
+      <!-- CJ Booking.com impression tracking -->
+      <img
+        src="https://www.awltovhc.com/image-101877738-17293136"
+        width="1"
+        height="1"
+        alt=""
+        style="display:none;"
+      >
 
-        <div style="flex:1 1 180px; min-width:180px; text-align:left;">
-          <label
-            for="booking-checkout"
-            style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;"
-          >
-            Check-out
-          </label>
+      <script>
+        const checkinInput = document.getElementById('booking-checkin');
+        const checkoutInput = document.getElementById('booking-checkout');
+        const currentDate = new Date();
+        const localToday = new Date(
+          currentDate.getTime() - currentDate.getTimezoneOffset() * 60000
+        ).toISOString().split('T')[0];
 
-          <input
-            type="date"
-            id="booking-checkout"
-            style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-          />
-        </div>
+        checkinInput.min = localToday;
+        checkoutInput.min = localToday;
 
-        <div style="flex:0 1 220px; min-width:200px;">
-          <button
-            type="submit"
-            style="width:100%; background:#E87722; color:#ffffff; padding:14px 24px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;"
-          >
-            Check Availability
-          </button>
-        </div>
+        checkinInput.addEventListener('change', function () {
+          if (!checkinInput.value) {
+            checkoutInput.min = localToday;
+            return;
+          }
 
-      </div>
-    </form>
+          const minimumCheckout = new Date(checkinInput.value + 'T00:00:00');
+          minimumCheckout.setDate(minimumCheckout.getDate() + 1);
 
-    <p style="font-size:0.9rem; line-height:1.5; color:#666; max-width:780px; margin:20px auto 0;">
-      Accommodation searches and bookings are provided through Booking.com.
-      ShowcasingOz TV may earn a commission from eligible bookings at no additional
-      cost to you.
-    </p>
+          const minimumCheckoutValue = new Date(
+            minimumCheckout.getTime() - minimumCheckout.getTimezoneOffset() * 60000
+          ).toISOString().split('T')[0];
 
-    <!-- CJ Booking.com impression tracking -->
-    <img
-      src="https://www.awltovhc.com/image-101877738-17293136"
-      width="1"
-      height="1"
-      alt=""
-      style="display:none;"
-    />
+          checkoutInput.min = minimumCheckoutValue;
 
-    <script>
-      document.getElementById('booking-search-form').addEventListener('submit', function (e) {
-        e.preventDefault();
+          if (checkoutInput.value && checkoutInput.value < minimumCheckoutValue) {
+            checkoutInput.value = '';
+          }
+        });
 
-        const destination = document.getElementById('booking-destination').value.trim();
-        const checkin = document.getElementById('booking-checkin').value;
-        const checkout = document.getElementById('booking-checkout').value;
+        document.getElementById('booking-search-form').addEventListener('submit', function (e) {
+          e.preventDefault();
 
-        if (!destination) {
-          return;
-        }
+          const destination = document.getElementById('booking-destination').value.trim();
+          const checkin = document.getElementById('booking-checkin').value;
+          const checkout = document.getElementById('booking-checkout').value;
 
-        let bookingUrl =
-          'https://www.booking.com/searchresults.html?ss=' +
-          encodeURIComponent(destination);
+          if (!destination) {
+            return;
+          }
 
-        if (checkin) {
-          bookingUrl += '&checkin=' + encodeURIComponent(checkin);
-        }
+          if (checkin && checkout && checkout <= checkin) {
+            alert('Please select a check-out date after your check-in date.');
+            return;
+          }
 
-        if (checkout) {
-          bookingUrl += '&checkout=' + encodeURIComponent(checkout);
-        }
+          let bookingUrl =
+            'https://www.booking.com/searchresults.html?ss=' +
+            encodeURIComponent(destination);
 
-        bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
+          if (checkin) {
+            bookingUrl += '&checkin=' + encodeURIComponent(checkin);
+          }
 
-        const cjAffiliateUrl =
-          'https://www.dpbolvw.net/click-101877738-17293136?url=' +
-          encodeURIComponent(bookingUrl);
+          if (checkout) {
+            bookingUrl += '&checkout=' + encodeURIComponent(checkout);
+          }
 
-        window.open(cjAffiliateUrl, '_blank', 'noopener,noreferrer');
-      });
-    </script>
+          bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
 
-  </div>
-</section>
+          const cjAffiliateUrl =
+            'https://www.dpbolvw.net/click-101877738-17293136?url=' +
+            encodeURIComponent(bookingUrl);
+
+          window.open(cjAffiliateUrl, '_blank', 'noopener,noreferrer');
+        });
+      </script>
+
+    </div>
+  </section>
 
   <!-- PAGE HEADER -->
   <section class="page-header" style="padding:0 20px;">
@@ -396,85 +442,13 @@
     </p>
   </section>
 
-  <!-- DIRECTORY UPDATE NOTICE -->
-  <section style="padding:20px;">
-    <div style="
-      max-width:900px;
-      margin:0 auto;
-      padding:25px 25px 28px;
-      background:#FFF4EB;
-      border:2px solid #E87722;
-      border-radius:12px;
-      text-align:center;
-    ">
-
-      <h2 style="
-        color:#0E3557;
-        font-size:1.45rem;
-        margin:0 0 15px;
-      ">
-        🚧 Towns &amp; Destinations Directory Update
-      </h2>
-
-      <p style="
-        max-width:760px;
-        margin:0 auto 12px;
-        color:#333333;
-        font-size:1.05rem;
-        line-height:1.6;
-      ">
-        We are currently expanding and updating this directory to reflect our
-        complete Season 1 and Season 2 filming schedule.
-      </p>
-
-      <p style="
-        max-width:760px;
-        margin:0 auto 12px;
-        color:#333333;
-        font-size:1.05rem;
-        line-height:1.6;
-      ">
-        New destinations and town pages will be added progressively over the next
-        three to four months. In the meantime, you can continue exploring the
-        destinations already listed below.
-      </p>
-
-      <p style="
-        max-width:760px;
-        margin:0 auto 20px;
-        color:#333333;
-        font-size:1.05rem;
-        line-height:1.6;
-      ">
-        Want to see where ShowcasingOz TV is heading? View our Filming Map for the
-        complete planned route.
-      </p>
-
-      <a
-        href="/filming-map.html"
-        style="
-          display:inline-block;
-          background:#E87722;
-          color:#ffffff;
-          padding:12px 22px;
-          border-radius:8px;
-          text-decoration:none;
-          font-weight:600;
-        "
-      >
-        View the Filming Map
-      </a>
-
-    </div>
-  </section>
-
   <!-- TOWNS GRID -->
   <section class="towns-grid">
 
     <!-- === A === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/adavale.jpg" alt="Adavale">
+      <img src="../images/towns/adavale.jpg" alt="Adavale" fetchpriority="high" decoding="async">
       <div class="town-card-content">
         <h3>Adavale (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -483,18 +457,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/adelaide.jpg" alt="Adelaide">
-  <div class="town-card-content">
-    <h3>Adelaide (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="adelaide.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/adelaide.jpg" alt="Adelaide" fetchpriority="high" decoding="async">
+      <div class="town-card-content">
+        <h3>Adelaide (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="adelaide.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/alice-springs.jpg" alt="Alice Springs">
+      <img src="../images/towns/alice-springs.jpg" alt="Alice Springs" fetchpriority="high" decoding="async">
       <div class="town-card-content">
         <h3>Alice Springs (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -503,18 +477,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/american_river.jpg" alt="American River">
-  <div class="town-card-content">
-    <h3>American River (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="american-river.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/american_river.jpg" alt="American River" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>American River (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="american-river.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/andamooka.jpg" alt="Andamooka">
+      <img src="../images/towns/andamooka.jpg" alt="Andamooka" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Andamooka (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -525,7 +499,7 @@
     <!-- === B === -->
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/balranald.jpg" alt="Balranald">
+      <img src="../images/towns/balranald.jpg" alt="Balranald" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Balranald (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -535,7 +509,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/barkly-roadhouse.jpg" alt="Barkly Roadhouse">
+      <img src="../images/towns/barkly-roadhouse.jpg" alt="Barkly Roadhouse" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Barkly Roadhouse (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -544,18 +518,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/birdwood.jpg" alt="Birdwood">
-  <div class="town-card-content">
-    <h3>Birdwood (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="birdwood.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/birdwood.jpg" alt="Birdwood" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Birdwood (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="birdwood.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/borroloola.jpg" alt="Borroloola">
+      <img src="../images/towns/borroloola.jpg" alt="Borroloola" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Borroloola (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -565,7 +539,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/bourke.jpg" alt="Bourke">
+      <img src="../images/towns/bourke.jpg" alt="Bourke" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Bourke (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -574,18 +548,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-2">Season 2</span>
-  <img src="../images/towns/brewarrina.jpg" alt="Brewarrina">
-  <div class="town-card-content">
-    <h3>Brewarrina (NSW)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="brewarrina.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-2">Season 2</span>
+      <img src="../images/towns/brewarrina.jpg" alt="Brewarrina" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Brewarrina (NSW)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="brewarrina.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/broken-hill.jpg" alt="Broken Hill">
+      <img src="../images/towns/broken-hill.jpg" alt="Broken Hill" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Broken Hill (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -596,7 +570,7 @@
     <!-- === C === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/cameron-corner.jpg" alt="Cameron Corner">
+      <img src="../images/towns/cameron-corner.jpg" alt="Cameron Corner" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Cameron Corner (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -605,18 +579,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/cape_jervis.jpg" alt="Cape Jervis">
-  <div class="town-card-content">
-    <h3>Cape Jervis (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="cape-jervis.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/cape_jervis.jpg" alt="Cape Jervis" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Cape Jervis (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="cape-jervis.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/casterton.jpg" alt="Casterton">
+      <img src="../images/towns/casterton.jpg" alt="Casterton" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Casterton (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -626,7 +600,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/charleville.jpg" alt="Charleville">
+      <img src="../images/towns/charleville.jpg" alt="Charleville" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Charleville (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -636,7 +610,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/cobar.jpg" alt="Cobar">
+      <img src="../images/towns/cobar.jpg" alt="Cobar" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Cobar (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -646,7 +620,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/coober-pedy.jpg" alt="Coober Pedy">
+      <img src="../images/towns/coober-pedy.jpg" alt="Coober Pedy" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Coober Pedy (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -656,7 +630,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/cunnamulla.jpg" alt="Cunnamulla">
+      <img src="../images/towns/cunnamulla.jpg" alt="Cunnamulla" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Cunnamulla (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -666,7 +640,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/curtin-springs.jpg" alt="Curtin Springs">
+      <img src="../images/towns/curtin-springs.jpg" alt="Curtin Springs" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Curtin Springs (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -677,7 +651,7 @@
     <!-- === D === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/daly-waters.jpg" alt="Daly Waters">
+      <img src="../images/towns/daly-waters.jpg" alt="Daly Waters" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Daly Waters (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -687,7 +661,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/deniliquin.jpg" alt="Deniliquin">
+      <img src="../images/towns/deniliquin.jpg" alt="Deniliquin" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Deniliquin (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -697,7 +671,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/dimboola.jpg" alt="Dimboola">
+      <img src="../images/towns/dimboola.jpg" alt="Dimboola" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Dimboola (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -707,7 +681,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/dunkeld.jpg" alt="Dunkeld">
+      <img src="../images/towns/dunkeld.jpg" alt="Dunkeld" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Dunkeld (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -718,7 +692,7 @@
     <!-- === E === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/edenhope.jpg" alt="Edenhope">
+      <img src="../images/towns/edenhope.jpg" alt="Edenhope" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Edenhope (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -728,7 +702,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/erldunda.jpg" alt="Erldunda">
+      <img src="../images/towns/erldunda.jpg" alt="Erldunda" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Erldunda (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -738,7 +712,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/eromanga.jpg" alt="Eromanga">
+      <img src="../images/towns/eromanga.jpg" alt="Eromanga" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Eromanga (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -748,7 +722,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/euston.jpg" alt="Euston">
+      <img src="../images/towns/euston.jpg" alt="Euston" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Euston (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -759,7 +733,7 @@
     <!-- === F === -->
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/finley.jpg" alt="Finley">
+      <img src="../images/towns/finley.jpg" alt="Finley" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Finley (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -769,18 +743,18 @@
 
     <!-- === G === -->
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/goolwa.jpg" alt="Goolwa">
-  <div class="town-card-content">
-    <h3>Goolwa (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="goolwa.html">View Town</a>
-  </div>
-</div>
-    
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/goolwa.jpg" alt="Goolwa" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Goolwa (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="goolwa.html">View Town</a>
+      </div>
+    </div>
+
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/griffith.jpg" alt="Griffith">
+      <img src="../images/towns/griffith.jpg" alt="Griffith" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Griffith (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -790,18 +764,18 @@
 
     <!-- === H === -->
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/hahndorf.jpg" alt="Hahndorf">
-  <div class="town-card-content">
-    <h3>Hahndorf (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="hahndorf.html">View Town</a>
-  </div>
-</div>
-    
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/hahndorf.jpg" alt="Hahndorf" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Hahndorf (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="hahndorf.html">View Town</a>
+      </div>
+    </div>
+
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/halls-creek.jpg" alt="Halls Creek">
+      <img src="../images/towns/halls-creek.jpg" alt="Halls Creek" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Halls Creek (WA)</h3>
         <p>Full documentary coming soon!</p>
@@ -811,7 +785,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/halls-gap.jpg" alt="Halls Gap">
+      <img src="../images/towns/halls-gap.jpg" alt="Halls Gap" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Halls Gap (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -821,7 +795,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/hamilton.jpg" alt="Hamilton">
+      <img src="../images/towns/hamilton.jpg" alt="Hamilton" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Hamilton (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -831,7 +805,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/hay.jpg" alt="Hay">
+      <img src="../images/towns/hay.jpg" alt="Hay" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Hay (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -841,7 +815,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/hillston.jpg" alt="Hillston">
+      <img src="../images/towns/hillston.jpg" alt="Hillston" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Hillston (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -851,7 +825,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/hopetoun.jpg" alt="Hopetoun">
+      <img src="../images/towns/hopetoun.jpg" alt="Hopetoun" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Hopetoun (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -861,7 +835,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/horsham.jpg" alt="Horsham">
+      <img src="../images/towns/horsham.jpg" alt="Horsham" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Horsham (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -872,7 +846,7 @@
     <!-- === J === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/jamestown.jpg" alt="Jamestown">
+      <img src="../images/towns/jamestown.jpg" alt="Jamestown" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Jamestown (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -882,7 +856,17 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/jerilderie.jpg" alt="Jerilderie">
+      <img src="../images/towns/jeparit.jpg" alt="Jeparit" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Jeparit (VIC)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="jeparit.html">View Town</a>
+      </div>
+    </div>
+
+    <div class="town-card">
+      <span class="season-banner season-2">Season 2</span>
+      <img src="../images/towns/jerilderie.jpg" alt="Jerilderie" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Jerilderie (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -890,30 +874,20 @@
       </div>
     </div>
 
-    <div class="town-card">
-  <span class="season-banner season-2">Season 2</span>
-  <img src="../images/towns/jeparit.jpg" alt="Jeparit">
-  <div class="town-card-content">
-    <h3>Jeparit (VIC)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="jeparit.html">View Town</a>
-  </div>
-</div>
-
     <!-- === K === -->
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/karatta.jpg" alt="Karatta">
-  <div class="town-card-content">
-    <h3>Karatta (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="karatta.html">View Town</a>
-  </div>
-</div>
-    
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/karatta.jpg" alt="Karatta" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Karatta (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="karatta.html">View Town</a>
+      </div>
+    </div>
+
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/kings-canyon.jpg" alt="Kings Canyon">
+      <img src="../images/towns/kings-canyon.jpg" alt="Kings Canyon" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Kings Canyon (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -922,19 +896,19 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/kingscote.jpg" alt="Kingscote">
-  <div class="town-card-content">
-    <h3>Kingscote (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="kingscote.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/kingscote.jpg" alt="Kingscote" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Kingscote (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="kingscote.html">View Town</a>
+      </div>
+    </div>
 
     <!-- === L === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/laura.jpg" alt="Laura">
+      <img src="../images/towns/laura.jpg" alt="Laura" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Laura (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -943,39 +917,39 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-2">Season 2</span>
-  <img src="../images/towns/louth.jpg" alt="Louth">
-  <div class="town-card-content">
-    <h3>Louth (NSW)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="louth.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-2">Season 2</span>
+      <img src="../images/towns/louth.jpg" alt="Louth" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Louth (NSW)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="louth.html">View Town</a>
+      </div>
+    </div>
 
     <!-- === M === -->
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/macclesfield.jpg" alt="Macclesfield">
-  <div class="town-card-content">
-    <h3>Macclesfield (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="macclesfield.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/macclesfield.jpg" alt="Macclesfield" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Macclesfield (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="macclesfield.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/mclaren_vale.jpg" alt="McLaren Vale">
-  <div class="town-card-content">
-    <h3>McLaren Vale (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="mclaren-vale.html">View Town</a>
-  </div>
-</div>
-    
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/mclaren_vale.jpg" alt="McLaren Vale" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>McLaren Vale (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="mclaren-vale.html">View Town</a>
+      </div>
+    </div>
+
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/melrose.jpg" alt="Melrose">
+      <img src="../images/towns/melrose.jpg" alt="Melrose" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Melrose (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -985,7 +959,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/menindee.jpg" alt="Menindee">
+      <img src="../images/towns/menindee.jpg" alt="Menindee" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Menindee (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -994,18 +968,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/milang.jpg" alt="Milang">
-  <div class="town-card-content">
-    <h3>Milang (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="milang.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/milang.jpg" alt="Milang" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Milang (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="milang.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/moulamein.jpg" alt="Moulamein">
+      <img src="../images/towns/moulamein.jpg" alt="Moulamein" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Moulamein (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1015,7 +989,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/mungo.jpg" alt="Mungo">
+      <img src="../images/towns/mungo.jpg" alt="Mungo" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Mungo (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1024,19 +998,19 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/myponga.jpg" alt="Myponga">
-  <div class="town-card-content">
-    <h3>Myponga (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="myponga.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/myponga.jpg" alt="Myponga" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Myponga (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="myponga.html">View Town</a>
+      </div>
+    </div>
 
     <!-- === N === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/nhill.jpg" alt="Nhill">
+      <img src="../images/towns/nhill.jpg" alt="Nhill" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Nhill (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1046,7 +1020,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/noccundra.jpg" alt="Noccundra">
+      <img src="../images/towns/noccundra.jpg" alt="Noccundra" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Noccundra (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -1055,18 +1029,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/normanville.jpg" alt="Normanville">
-  <div class="town-card-content">
-    <h3>Normanville (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="normanville.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/normanville.jpg" alt="Normanville" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Normanville (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="normanville.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/nyngan.jpg" alt="Nyngan">
+      <img src="../images/towns/nyngan.jpg" alt="Nyngan" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Nyngan (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1076,28 +1050,28 @@
 
     <!-- === P === -->
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/parndana.jpg" alt="Parndana">
-  <div class="town-card-content">
-    <h3>Parndana (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="parndana.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/parndana.jpg" alt="Parndana" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Parndana (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="parndana.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/penneshaw.jpg" alt="Penneshaw">
-  <div class="town-card-content">
-    <h3>Penneshaw (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="penneshaw.html">View Town</a>
-  </div>
-</div>
-    
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/penneshaw.jpg" alt="Penneshaw" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Penneshaw (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="penneshaw.html">View Town</a>
+      </div>
+    </div>
+
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/peterborough.jpg" alt="Peterborough">
+      <img src="../images/towns/peterborough.jpg" alt="Peterborough" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Peterborough (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -1106,18 +1080,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/port_augusta.jpg" alt="Port Augusta">
-  <div class="town-card-content">
-    <h3>Port Augusta (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="port-augusta.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/port_augusta.jpg" alt="Port Augusta" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Port Augusta (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="port-augusta.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/port-fairy.jpg" alt="Port Fairy">
+      <img src="../images/towns/port-fairy.jpg" alt="Port Fairy" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Port Fairy (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1127,7 +1101,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/portland.jpg" alt="Portland">
+      <img src="../images/towns/portland.jpg" alt="Portland" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Portland (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1138,7 +1112,7 @@
     <!-- === Q === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/quilpie.jpg" alt="Quilpie">
+      <img src="../images/towns/quilpie.jpg" alt="Quilpie" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Quilpie (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -1148,7 +1122,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/quorn.jpg" alt="Quorn">
+      <img src="../images/towns/quorn.jpg" alt="Quorn" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Quorn (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -1159,7 +1133,7 @@
     <!-- === R === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/rabbit-flat.jpg" alt="Rabbit Flat">
+      <img src="../images/towns/rabbit-flat.jpg" alt="Rabbit Flat" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Rabbit Flat (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -1168,19 +1142,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-2">Season 2</span>
-  <img src="../images/towns/robinvale.jpg" alt="Robinvale">
-  <div class="town-card-content">
-    <h3>Robinvale (VIC)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="robinvale.html">View Town</a>
-  </div>
-</div>
-
+      <span class="season-banner season-2">Season 2</span>
+      <img src="../images/towns/robinvale.jpg" alt="Robinvale" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Robinvale (VIC)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="robinvale.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/roxby-downs.jpg" alt="Roxby Downs">
+      <img src="../images/towns/roxby-downs.jpg" alt="Roxby Downs" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Roxby Downs (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -1191,7 +1164,7 @@
     <!-- === S === -->
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/sea-lake.jpg" alt="Sea Lake">
+      <img src="../images/towns/sea-lake.jpg" alt="Sea Lake" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Sea Lake (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1201,7 +1174,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/silverton.jpg" alt="Silverton">
+      <img src="../images/towns/silverton.jpg" alt="Silverton" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Silverton (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1211,7 +1184,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/stawell.jpg" alt="Stawell">
+      <img src="../images/towns/stawell.jpg" alt="Stawell" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Stawell (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1220,18 +1193,18 @@
     </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/strathalbyn.jpg" alt="Strathalbyn">
-  <div class="town-card-content">
-    <h3>Strathalbyn (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="strathalbyn.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/strathalbyn.jpg" alt="Strathalbyn" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Strathalbyn (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="strathalbyn.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/swan-hill.jpg" alt="Swan Hill">
+      <img src="../images/towns/swan-hill.jpg" alt="Swan Hill" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Swan Hill (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1242,7 +1215,7 @@
     <!-- === T === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/tennant-creek.jpg" alt="Tennant Creek">
+      <img src="../images/towns/tennant-creek.jpg" alt="Tennant Creek" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Tennant Creek (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -1252,7 +1225,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/thargomindah.jpg" alt="Thargomindah">
+      <img src="../images/towns/thargomindah.jpg" alt="Thargomindah" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Thargomindah (QLD)</h3>
         <p>Full documentary coming soon!</p>
@@ -1262,7 +1235,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/tibooburra.jpg" alt="Tibooburra">
+      <img src="../images/towns/tibooburra.jpg" alt="Tibooburra" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Tibooburra (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1272,7 +1245,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/tilmouth-well.jpg" alt="Tilmouth Well">
+      <img src="../images/towns/tilmouth-well.jpg" alt="Tilmouth Well" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Tilmouth Well (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -1282,7 +1255,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/tooleybuc.jpg" alt="Tooleybuc">
+      <img src="../images/towns/tooleybuc.jpg" alt="Tooleybuc" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Tooleybuc (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1292,7 +1265,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/top-springs.jpg" alt="Top Springs">
+      <img src="../images/towns/top-springs.jpg" alt="Top Springs" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Top Springs (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -1303,7 +1276,7 @@
     <!-- === U === -->
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/uluru-yulara.jpg" alt="Uluru–Yulara">
+      <img src="../images/towns/uluru-yulara.jpg" alt="Uluru–Yulara" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Uluru–Yulara (NT)</h3>
         <p>Full documentary coming soon!</p>
@@ -1313,29 +1286,29 @@
 
     <!-- === V === -->
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/victor_harbor.jpg" alt="Victor Harbor">
-  <div class="town-card-content">
-    <h3>Victor Harbor (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="victor-harbor.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/victor_harbor.jpg" alt="Victor Harbor" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Victor Harbor (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="victor-harbor.html">View Town</a>
+      </div>
+    </div>
 
     <div class="town-card">
-  <span class="season-banner season-1">Season 1</span>
-  <img src="../images/towns/vivonne_bay.jpg" alt="Vivonne Bay">
-  <div class="town-card-content">
-    <h3>Vivonne Bay (SA)</h3>
-    <p>Full documentary coming soon!</p>
-    <a class="btn-primary" href="vivonne-bay.html">View Town</a>
-  </div>
-</div>
+      <span class="season-banner season-1">Season 1</span>
+      <img src="../images/towns/vivonne_bay.jpg" alt="Vivonne Bay" loading="lazy" decoding="async">
+      <div class="town-card-content">
+        <h3>Vivonne Bay (SA)</h3>
+        <p>Full documentary coming soon!</p>
+        <a class="btn-primary" href="vivonne-bay.html">View Town</a>
+      </div>
+    </div>
 
     <!-- === W === -->
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/warracknabeal.jpg" alt="Warracknabeal">
+      <img src="../images/towns/warracknabeal.jpg" alt="Warracknabeal" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Warracknabeal (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1345,7 +1318,7 @@
 
     <div class="town-card">
       <span class="season-banner future-season">Future Season</span>
-      <img src="../images/towns/warrnambool.jpg" alt="Warrnambool">
+      <img src="../images/towns/warrnambool.jpg" alt="Warrnambool" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Warrnambool (VIC)</h3>
         <p>Full documentary coming soon!</p>
@@ -1355,7 +1328,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/white-cliffs.jpg" alt="White Cliffs">
+      <img src="../images/towns/white-cliffs.jpg" alt="White Cliffs" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>White Cliffs (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1365,7 +1338,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/wilcannia.jpg" alt="Wilcannia">
+      <img src="../images/towns/wilcannia.jpg" alt="Wilcannia" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Wilcannia (NSW)</h3>
         <p>Full documentary coming soon!</p>
@@ -1375,7 +1348,7 @@
 
     <div class="town-card">
       <span class="season-banner season-2">Season 2</span>
-      <img src="../images/towns/woomera.jpg" alt="Woomera">
+      <img src="../images/towns/woomera.jpg" alt="Woomera" loading="lazy" decoding="async">
       <div class="town-card-content">
         <h3>Woomera (SA)</h3>
         <p>Full documentary coming soon!</p>
@@ -1386,30 +1359,30 @@
   </section>
 
   <!-- AI IMAGE DISCLAIMER -->
-<section style="padding:0 20px 20px;">
-  <div style="
-    max-width:900px;
-    margin:0 auto;
-    padding:18px 22px;
-    background:#f5f7fa;
-    border-left:4px solid #E87722;
-    border-radius:8px;
-    text-align:left;
-  ">
-    <p style="
-      margin:0;
-      color:#555555;
-      font-size:0.95rem;
-      line-height:1.6;
+  <section style="padding:0 20px 20px;">
+    <div style="
+      max-width:900px;
+      margin:0 auto;
+      padding:18px 22px;
+      background:#f5f7fa;
+      border-left:4px solid #E87722;
+      border-radius:8px;
+      text-align:left;
     ">
-      <strong style="color:#0E3557;">Image notice:</strong>
-      Some destination images displayed on this page have been created using
-      artificial intelligence and are intended as temporary visual representations.
-      These images will be replaced with authentic photography captured by
-      ShowcasingOz TV as we visit and film each destination.
-    </p>
-  </div>
-</section>
+      <p style="
+        margin:0;
+        color:#555555;
+        font-size:0.95rem;
+        line-height:1.6;
+      ">
+        <strong style="color:#0E3557;">Image notice:</strong>
+        Some destination images displayed on this page have been created using
+        artificial intelligence and are intended as temporary visual representations.
+        These images will be replaced with authentic photography captured by
+        ShowcasingOz TV as we visit and film each destination.
+      </p>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
