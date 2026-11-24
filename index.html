@@ -7,16 +7,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <!-- PAGE TITLE -->
-  <title>ShowcasingOz TV — Discover. Capture. Share.</title>
+  <title>Australian Tourism Sponsorship & Investment | ShowcasingOz TV</title>
 
-    <!-- SEO META TAGS -->
-  <meta name="description" content="ShowcasingOz TV is an Australian travel media platform created to showcase destinations, accommodation, attractions, small businesses, landmarks and hidden gems across Australia." />
-  <meta name="keywords" content="ShowcasingOz TV, Australian travel, Australian tourism, travel series Australia, Australian destinations, accommodation, attractions, hidden gems" />
+  <!-- SEO META TAGS -->
+  <meta name="description" content="Help launch ShowcasingOz TV. Explore Australian tourism sponsorship, strategic investment and supporter pledges to showcase regional communities and local businesses." />
   <meta name="author" content="ShowcasingOz TV" />
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="ShowcasingOz TV — Discover. Capture. Share." />
-  <meta property="og:description" content="Discover Australian destinations, accommodation, attractions, local businesses, landmarks and hidden gems through professional travel content." />
+  <meta property="og:title" content="Australian Tourism Sponsorship & Investment | ShowcasingOz TV" />
+  <meta property="og:description" content="Help bring Australian travel stories to life. Explore sponsorship, investment and supporter opportunities with ShowcasingOz TV." />
   <meta property="og:image" content="https://showcasingoztv.com.au/images/banner-cropped.jpg" />
   <meta property="og:url" content="https://showcasingoztv.com.au/" />
   <meta property="og:type" content="website" />
@@ -24,8 +23,8 @@
 
   <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ShowcasingOz TV — Discover. Capture. Share." />
-  <meta name="twitter:description" content="Showcasing Australian destinations, tourism businesses, local communities and hidden gems through professional travel content." />
+  <meta name="twitter:title" content="Australian Tourism Sponsorship & Investment | ShowcasingOz TV" />
+  <meta name="twitter:description" content="Help bring Australian travel stories to life. Explore sponsorship, investment and supporter opportunities with ShowcasingOz TV." />
   <meta name="twitter:image" content="https://showcasingoztv.com.au/images/banner-cropped.jpg" />
 
   <!-- CANONICAL -->
@@ -67,7 +66,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Styles -->
+  <!-- ORIGINAL STYLES: UNCHANGED -->
   <style>
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -301,6 +300,172 @@
       .about-cards, .careers-grid { flex-direction: column; align-items: center; }
     }
   </style>
+
+  <!-- ADDITIONAL STYLES: NEW SECTIONS AND PLEDGE MODAL ONLY -->
+  <style>
+    .funding-hero {
+      background:#0E3557;
+      color:#fff;
+      padding:40px 20px;
+      text-align:center;
+    }
+
+    .funding-hero .page-wrap,
+    .content-section .page-wrap {
+      max-width:850px;
+      margin:0 auto;
+    }
+
+    .funding-hero h1 {
+      font-size:2.2rem;
+      line-height:1.3;
+      margin:0 0 20px;
+    }
+
+    .funding-hero p {
+      line-height:1.6;
+    }
+
+    .funding-hero .lead {
+      font-size:1.1rem;
+    }
+
+    .funding-hero .eyebrow,
+    .content-section .eyebrow {
+      color:#E87722;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .funding-hero .actions,
+    .content-section .actions {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+      margin:25px 0;
+    }
+
+    .funding-hero button,
+    .content-section button {
+      font:inherit;
+      border:0;
+      cursor:pointer;
+    }
+
+    .funding-hero .btn-light {
+      display:inline-block;
+      background:#fff;
+      color:#0E3557;
+      padding:10px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .funding-hero .text-light {
+      color:#fff;
+    }
+
+    .funding-hero .small,
+    .content-section .small {
+      font-size:.9rem;
+      line-height:1.6;
+    }
+
+    .content-section {
+      padding:40px 20px;
+      text-align:center;
+    }
+
+    .content-section h2 {
+      color:#0E3557;
+      font-size:2rem;
+    }
+
+    .content-section p {
+      color:#444;
+      line-height:1.6;
+    }
+
+    .content-section.pale {
+      background:#f5f7fa;
+    }
+
+    .content-section .wide-wrap {
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    .content-section .pilot-note {
+      background:#f5f7fa;
+      padding:20px;
+      border-left:4px solid #E87722;
+      margin-top:25px;
+      text-align:left;
+    }
+
+    #pledge-dialog {
+      box-sizing:border-box;
+      width:94%;
+      max-width:560px;
+      max-height:90vh;
+      overflow:auto;
+      border:0;
+      border-radius:12px;
+      padding:25px;
+      color:#0E3557;
+      text-align:left;
+      font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    }
+
+    #pledge-dialog::backdrop {
+      background:rgba(0,0,0,.65);
+    }
+
+    #pledge-dialog p {
+      line-height:1.6;
+    }
+
+    #pledge-dialog label {
+      display:block;
+      margin:15px 0 6px;
+      font-weight:600;
+    }
+
+    #pledge-dialog input,
+    #pledge-dialog textarea {
+      box-sizing:border-box;
+      width:100%;
+      padding:11px;
+      border:1px solid #888;
+      border-radius:5px;
+      font:inherit;
+    }
+
+    #pledge-dialog input[type=checkbox] {
+      width:auto;
+    }
+
+    #pledge-dialog button {
+      font:inherit;
+      border:0;
+      cursor:pointer;
+    }
+
+    #pledge-dialog .small {
+      font-size:.9rem;
+      line-height:1.6;
+    }
+
+    #pledge-dialog .close-dialog {
+      float:right;
+      background:#f5f7fa;
+      color:#0E3557;
+      padding:8px 12px;
+      border-radius:5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -349,627 +514,676 @@
     </picture>
   </section>
 
-    <!-- IMPORTANT 2027 UPDATES -->
-<section style="background:#f5f7fa; padding:22px 20px 26px; text-align:center;">
-  <div style="max-width:1100px; margin:0 auto;">
+  <main>
 
-    <div style="
-      display:inline-block;
-      background:#0E3557;
-      color:#ffffff;
-      padding:7px 18px;
-      border-radius:20px;
-      font-size:0.9rem;
-      font-weight:700;
-      letter-spacing:0.5px;
-      margin-bottom:18px;
-    ">
-      IMPORTANT SHOWCASINGOZ TV UPDATE
-    </div>
+    <!-- FUNDING APPEAL -->
+    <section class="funding-hero" id="support">
+      <div class="page-wrap">
 
-    <div style="
-      display:flex;
-      flex-wrap:wrap;
-      gap:18px;
-      justify-content:center;
-      align-items:stretch;
-    ">
+        <p class="eyebrow">
+          AUSTRALIAN STORIES. LOCAL LIVELIHOODS. YOUR SUPPORT.
+        </p>
 
-      <!-- FILMING SCHEDULE UPDATE -->
-      <div style="
-        flex:1 1 450px;
-        background:#ffffff;
-        border-top:5px solid #0E3557;
-        border-radius:12px;
-        padding:25px 25px 27px;
-        box-shadow:0 4px 12px rgba(0,0,0,0.07);
-        box-sizing:border-box;
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-      ">
+        <h1>
+          Help put regional Australia<br>
+          in the picture.
+        </h1>
 
-        <div>
-          <div style="font-size:2rem; margin-bottom:8px;">📅</div>
+        <p class="lead">
+          Behind every country motel, family-run attraction and
+          small-town business is someone with a story worth sharing.
+          Help us take those stories to a wider audience.
+        </p>
 
-          <h1 style="
-            color:#0E3557;
-            font-size:1.7rem;
-            line-height:1.25;
-            margin:0 0 14px;
-          ">
-            Planned Filming Commencement<br>
-<span style="color:#E87722;">27 January 2027</span>
-          </h1>
+        <p>
+          ShowcasingOz TV is building an independent Australian travel
+          and lifestyle series for our website, YouTube and social
+          platforms. To bring it to life, we need the funding to put
+          a properly equipped, professional crew on the road.
+        </p>
 
-          <p style="
-            color:#444;
-            font-size:1rem;
-            line-height:1.6;
-            margin:0 auto 14px;
-            max-width:470px;
-          ">
-            If you previously saw ShowcasingOz TV announcing filming in destinations
-            during 2026, please note that our national production rollout has now
-            been rescheduled.
-          </p>
+        <div class="actions">
+          <button class="btn-accent" data-pledge>
+            Register a Pledge
+          </button>
 
-          <p style="
-            color:#444;
-            font-size:1rem;
-            line-height:1.6;
-            margin:0 auto 20px;
-            max-width:470px;
-          ">
-            We have now finalised our updated filming schedules for
-            Seasons 1 and 2. You can view the new route, destinations
-            and filming dates on our updated Filming Map.
-          </p>
-        </div>
+          <a class="btn-light" href="/investor.html">
+            Partnership &amp; Investment
+          </a>
 
-        <div>
-          <a href="/filming-map.html"
-             style="
-               display:inline-block;
-               background:#0E3557;
-               color:#ffffff;
-               padding:12px 25px;
-               border-radius:8px;
-               text-decoration:none;
-               font-weight:700;
-             ">
-            View Updated Filming Map
+          <a class="btn-light" href="/sponsorship.html">
+            Explore Sponsorship
           </a>
         </div>
 
+        <p class="small">
+          No payment now. A pledge registers your interest in
+          supporting the launch; it is not an investment or a
+          binding payment commitment.
+        </p>
+
+        <a class="text-light" href="#booking">
+          Planning a trip? Book accommodation through Booking.com
+        </a>
+
       </div>
+    </section>
 
+    <!-- PRODUCTION UPDATE -->
+    <section class="content-section" aria-labelledby="production-update">
+      <div class="page-wrap">
 
-<!-- FOUNDING SUPPORTERS / FUNDING -->
-<div style="
-  flex:1 1 450px;
-  background:#0E3557;
-  border-top:5px solid #E87722;
-  border-radius:12px;
-  padding:25px 25px 27px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.10);
-  box-sizing:border-box;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-">
+        <p class="eyebrow">PRODUCTION UPDATE</p>
 
-  <div>
-    <div style="font-size:2rem; margin-bottom:8px;">🤝</div>
+        <h2 id="production-update">
+          A further postponement. A clear reason.
+        </h2>
 
-    <h2 style="
-      color:#E87722;
-      font-size:1.7rem;
-      line-height:1.25;
-      margin:0 0 14px;
-    ">
-      Help Bring<br>
-      ShowcasingOz TV to Life
-    </h2>
+        <p>
+          Our national filming rollout has been postponed again
+          because we have not secured the funding required to
+          proceed responsibly. We know this is disappointing
+          for the businesses, communities and followers who
+          have been waiting, and we recognise that another
+          change affects confidence in our plans.
+        </p>
 
-    <p style="
-      color:#ffffff;
-      font-size:1rem;
-      line-height:1.6;
-      margin:0 auto 14px;
-      max-width:470px;
-    ">
-      Our filming schedules for Seasons 1 and 2 have been finalised.
-      We now need the financial backing required to put a professional
-      production crew on the road.
-    </p>
+        <p>
+          Professional production involves substantial costs:
+          crew, cameras and sound equipment, transport,
+          accommodation, insurance and editing. We cannot
+          commit to filming dates without the resources to
+          deliver what we promise, or begin a journey we
+          cannot afford to sustain.
+        </p>
 
-    <p style="
-      color:#ffffff;
-      font-size:1rem;
-      line-height:1.6;
-      margin:0 auto 20px;
-      max-width:470px;
-    ">
-      Our all-or-nothing <strong>Founding Supporters campaign is now live
-      on Pozible</strong>, with a target of $270,000 to help bring
-      ShowcasingOz TV to life.
-    </p>
+        <p>
+          <strong>
+            Public support and commercial backing are essential
+            to getting ShowcasingOz TV started.
+          </strong>
+          We continue to pursue investors, sponsors and other
+          funding sources alongside supporter pledges. We will
+          announce confirmed filming dates when adequate funding
+          and production arrangements are in place.
+        </p>
 
-    <p style="
-      color:#ffffff;
-      font-size:1rem;
-      line-height:1.6;
-      margin:0 auto 20px;
-      max-width:470px;
-    ">
-      Without sufficient public support, ShowcasingOz TV’s planned
-      national filming rollout will not proceed.
-    </p>
-  </div>
+        <div class="pilot-note">
+          <h3>A first look at what we are building</h3>
 
-  <div>
-<a href="/founding-supporters.html"
-   style="
-     display:inline-block;
-     background:#E87722;
-     color:#ffffff;
-     padding:14px 32px;
-     border-radius:8px;
-     text-decoration:none;
-     font-weight:700;
-     font-size:1.05rem;
-   ">
-  Learn About Becoming a Founding Supporter
-</a>
-  </div>
+          <p>
+            We are planning a pilot production focused on one
+            Australian town, giving viewers and prospective
+            partners a taste of ShowcasingOz TV. The location
+            and filming arrangements will be announced when
+            confirmed. The pilot and national rollout have
+            separate production requirements; planning a pilot
+            does not mean the national launch is funded.
+          </p>
+        </div>
 
-</div>
-</section>
+      </div>
+    </section>
 
- <!-- ABOUT -->
-<section class="about" style="padding-top:20px;">
-  <h2 style="color:#0E3557;">Showcasing Australia, One Destination at a Time</h2>
+    <!-- COMMUNITY SUPPORT -->
+    <section class="content-section pale">
+      <div class="page-wrap">
 
-  <p style="font-size:1.1rem; line-height:1.6;">
-    ShowcasingOz TV is an Australian travel and lifestyle media platform created
-    to showcase the destinations, people, businesses and experiences that make
-    this country worth exploring.
-  </p>
+        <h2>
+          Small businesses have stories. Help us tell them.
+        </h2>
 
-  <p style="font-size:1.1rem; line-height:1.6;">
-    Our planned filming journey includes major cities, regional towns, coastal
-    communities and outback destinations. We will capture accommodation,
-    attractions, small businesses, landmarks, experiences, hidden gems and the
-    people behind the places we visit.
-  </p>
+        <p>
+          A booking can mean another room filled at a family-run
+          motel. A visit can mean another customer through a
+          local attraction's gate. When travellers discover
+          somewhere new, the opportunity can extend to cafés,
+          shops, tour operators and the wider town.
+        </p>
 
-  <p style="font-size:1.1rem; line-height:1.6;">
-    Content will be shared through the ShowcasingOz TV website, YouTube and social
-    platforms, helping audiences discover more of Australia and the local tourism
-    businesses that bring its destinations to life.
-  </p>
+        <p>
+          Our aim is to help people discover these places through
+          engaging travel stories, and give them reasons to visit.
+          We cannot promise visitor numbers or sales, but we can
+          build a platform dedicated to bringing Australian
+          destinations and their people into view.
+        </p>
 
-  <p style="font-size:1.1rem; line-height:1.6;">
-    ShowcasingOz TV is being developed as a commercially structured tourism media
-    platform, with planned revenue generated through:
-  </p>
+        <p>
+          We understand that household budgets are stretched.
+          Please only pledge what you can comfortably afford.
+          Every dollar ultimately contributed helps fund the
+          work; sharing our website or introducing us to a
+          potential sponsor can help too.
+        </p>
 
-  <ul style="font-size:1.1rem; line-height:1.6; text-align:left; max-width:800px; margin:0 auto 20px;">
-    <li>Filming packages with accommodation providers, attractions and small businesses</li>
-    <li>Sponsorship placements across episodes and digital distribution</li>
-    <li>Destination partnerships with councils, tourism organisations and regional bodies</li>
-    <li>Travel-related affiliate and booking revenue</li>
-  </ul>
+        <h3>Turn support into a crew on the road</h3>
 
-  <p style="font-size:1.1rem; line-height:1.6;">
-    This model is intended to support the long-term growth of the platform while
-    creating valuable exposure opportunities for Australian tourism operators.
-  </p>
-</section>
+        <p>
+          The sooner we secure sufficient funding, the sooner
+          we can hire crew, purchase filming equipment, arrange
+          a suitable vehicle, confirm filming with operators and
+          book crew accommodation. Funding must cover a viable
+          launch, not just the first day of filming.
+        </p>
 
-<!-- ABOUT DETAILS -->
-<section class="about-section">
-  <h2 style="color:#0E3557;">About ShowcasingOz TV</h2>
+        <div class="actions">
+          <button class="btn-accent" data-pledge>
+            Register Your Support
+          </button>
 
-  <p style="font-size:1.1rem; line-height:1.6; margin-bottom:30px;">
-    We are building an independent Australian travel platform that goes beyond
-    the obvious and gives major destinations, local communities and lesser-known
-    places an opportunity to be discovered.
-  </p>
+          <a class="btn-primary" href="/sponsorship.html">
+            Become a Tourism Sponsor
+          </a>
+        </div>
 
-  <div class="about-cards">
+        <p class="small">
+          Pledges are expressions of intent, not funds received.
+          We will confirm the launch budget, payment arrangements
+          and contribution terms before asking supporters to
+          pay. No automatic charges and no card details
+          collected here.
+        </p>
 
-    <div class="about-card">
-      <h3 style="color:#E87722;">🎥 What We Plan to Do</h3>
-      <p>
-        Produce professional travel and lifestyle content showcasing Australian
-        destinations, accommodation, attractions, small businesses, landmarks,
-        experiences and hidden gems.
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" style="padding-top:20px;">
+      <h2 style="color:#0E3557;">
+        Showcasing Australia, One Destination at a Time
+      </h2>
+
+      <p style="font-size:1.1rem; line-height:1.6;">
+        ShowcasingOz TV is an Australian travel and lifestyle
+        media platform created to showcase the destinations,
+        people, businesses and experiences that make this
+        country worth exploring.
       </p>
-    </div>
 
-    <div class="about-card">
-      <h3 style="color:#E87722;">🌏 Who We Plan to Work With</h3>
-      <p>
-        Work with accommodation providers, attraction owners, local businesses,
-        councils, tourism organisations and other partners along our national
-        filming route.
+      <p style="font-size:1.1rem; line-height:1.6;">
+        Our planned filming journey includes major cities,
+        regional towns, coastal communities and outback
+        destinations. We will capture accommodation, attractions,
+        small businesses, landmarks, experiences, hidden gems
+        and the people behind the places we visit.
       </p>
-    </div>
 
-    <div class="about-card">
-      <h3 style="color:#E87722;">🚐 Why It Matters</h3>
-      <p>
-        Tourism supports real people and local livelihoods. Greater visibility
-        can help audiences discover places and businesses they may never otherwise
-        have known existed.
+      <p style="font-size:1.1rem; line-height:1.6;">
+        Content will be shared through the ShowcasingOz TV
+        website, YouTube and social platforms, helping audiences
+        discover more of Australia and the local tourism
+        businesses that bring its destinations to life.
       </p>
-    </div>
 
-  </div>
-</section>
+      <p style="font-size:1.1rem; line-height:1.6;">
+        ShowcasingOz TV is being developed as a commercially
+        structured tourism media platform, with planned revenue
+        generated through:
+      </p>
 
-    <!-- Australia-Wide Accommodation Booking -->
-  <section style="background:#f5f7fa; padding:60px 20px; text-align:center;">
-    <div style="max-width:1000px; margin:0 auto;">
+      <ul style="font-size:1.1rem; line-height:1.6; text-align:left; max-width:800px; margin:0 auto 20px;">
+        <li>
+          Filming packages with accommodation providers,
+          attractions and small businesses
+        </li>
+        <li>
+          Sponsorship placements across episodes and
+          digital distribution
+        </li>
+        <li>
+          Destination partnerships with councils, tourism
+          organisations and regional bodies
+        </li>
+        <li>
+          Travel-related affiliate and booking revenue
+        </li>
+      </ul>
 
-<h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
-  Stay Where We Showcase
-</h2>
+      <p style="font-size:1.1rem; line-height:1.6;">
+        This model is intended to support the long-term growth
+        of the platform while creating valuable exposure
+        opportunities for Australian tourism operators.
+      </p>
+    </section>
 
-<p style="font-size:1.1rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 18px;">
-  Discover and book accommodation across Australia through the destinations, towns, and regions featured in ShowcasingOz TV.
-</p>
+    <!-- ABOUT DETAILS -->
+    <section class="about-section">
+      <h2 style="color:#0E3557;">
+        About ShowcasingOz TV
+      </h2>
 
-<p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
-  From iconic locations to hidden gems we uncover on the road, this is your gateway to staying in the places we bring to life, all in one place.
-</p>
+      <p style="font-size:1.1rem; line-height:1.6; margin-bottom:30px;">
+        We are building an independent Australian travel platform
+        that goes beyond the obvious and gives major destinations,
+        local communities and lesser-known places an opportunity
+        to be discovered.
+      </p>
 
-<form id="booking-search-form" style="max-width:900px; margin:0 auto;">
-  <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; align-items:end;">
+      <div class="about-cards">
 
-    <div style="flex:1 1 260px; min-width:220px; text-align:left;">
-      <label for="booking-destination" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
-        Destination
-      </label>
+        <div class="about-card">
+          <h3 style="color:#E87722;">
+            🎥 What We Plan to Do
+          </h3>
 
-      <input
-        type="text"
-        id="booking-destination"
-        placeholder="Enter a town, city, or region"
-        required
-        style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-      />
-    </div>
+          <p>
+            Produce professional travel and lifestyle content
+            showcasing Australian destinations, accommodation,
+            attractions, small businesses, landmarks, experiences
+            and hidden gems.
+          </p>
+        </div>
 
-    <div style="flex:1 1 180px; min-width:180px; text-align:left;">
-      <label for="booking-checkin" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
-        Check-in
-      </label>
+        <div class="about-card">
+          <h3 style="color:#E87722;">
+            🌏 Who We Plan to Work With
+          </h3>
 
-      <input
-        type="date"
-        id="booking-checkin"
-        style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-      />
-    </div>
+          <p>
+            Work with accommodation providers, attraction owners,
+            local businesses, councils, tourism organisations and
+            other partners along our national filming route.
+          </p>
+        </div>
 
-    <div style="flex:1 1 180px; min-width:180px; text-align:left;">
-      <label for="booking-checkout" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
-        Check-out
-      </label>
+        <div class="about-card">
+          <h3 style="color:#E87722;">
+            🚐 Why It Matters
+          </h3>
 
-      <input
-        type="date"
-        id="booking-checkout"
-        style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
-      />
-    </div>
+          <p>
+            Tourism supports real people and local livelihoods.
+            Greater visibility can help audiences discover places
+            and businesses they may never otherwise have known
+            existed.
+          </p>
+        </div>
 
-    <div style="flex:0 1 220px; min-width:200px;">
-      <button
-        type="submit"
-        style="width:100%; background:#E87722; color:#ffffff; padding:14px 24px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;"
-      >
-        Check Availability
-      </button>
-    </div>
-
-  </div>
-</form>
-
-<p style="font-size:0.95rem; line-height:1.5; color:#666; margin-top:20px;">
-  Looking for a featured destination? You can also explore our
-  <a href="/towns/index.html" style="color:#E87722; text-decoration:none; font-weight:600;">
-    Towns pages
-  </a>
-  for location-specific accommodation, attractions, and travel inspiration.
-</p>
-
-<img
-  src="https://www.awltovhc.com/image-101877738-17293136"
-  width="1"
-  height="1"
-  alt=""
-  style="display:none;"
-/>
-
-<script>
-
-  document.getElementById('booking-search-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const destination = document.getElementById('booking-destination').value.trim();
-    const checkin = document.getElementById('booking-checkin').value;
-    const checkout = document.getElementById('booking-checkout').value;
-
-    if (!destination) {
-      return;
-    }
-
-    let bookingUrl =
-      'https://www.booking.com/searchresults.html?ss=' +
-      encodeURIComponent(destination);
-
-    if (checkin) {
-      bookingUrl += '&checkin=' + encodeURIComponent(checkin);
-    }
-
-    if (checkout) {
-      bookingUrl += '&checkout=' + encodeURIComponent(checkout);
-    }
-
-    bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
-
-    const cjAffiliateUrl =
-      'https://www.dpbolvw.net/click-101877738-17293136?url=' +
-      encodeURIComponent(bookingUrl);
-
-    window.open(cjAffiliateUrl, '_blank', 'noopener,noreferrer');
-  });
-</script>
-
-    </div>
-  </section>
-
-<!-- FILMING CALENDAR CALLOUT -->
-<section style="background:#0E3557; padding:60px 20px; text-align:center;">
-  <div style="max-width:900px; margin:0 auto;">
-
-    <h2 style="color:#ffffff; font-size:2rem; margin-bottom:15px;">
-      📅 Season 1 and Season 2 Filming Schedules
-    </h2>
-
-    <p style="color:#ffffff; font-size:1.1rem; line-height:1.6; margin-bottom:25px;">
-      Our updated filming schedules for Seasons 1 and 2 have now been finalised,
-      with Season 1 planned to commence on
-      <strong style="color:#E87722;">27 January 2027</strong>.
-    </p>
-
-    <p style="color:#ffffff; font-size:1.05rem; line-height:1.6; margin-bottom:30px;">
-      Explore the planned destinations, filming dates and national route through
-      our Filming Map and public filming calendar. Production remains subject to
-      ShowcasingOz TV securing sufficient funding to proceed.
-    </p>
-
-    <a href="/calendar.html"
-       style="display:inline-block; background:#E87722; color:#ffffff;
-              padding:14px 30px; border-radius:8px; text-decoration:none;
-              font-weight:600; font-size:1.05rem;">
-      View the Filming Calendar
-    </a>
-
-  </div>
-</section>
-
- <!-- SUPPORT SHOWCASINGOZ TV CALLOUT -->
-<section style="background:#f5f7fa; padding:60px 20px; text-align:center;">
-  <div style="max-width:900px; margin:0 auto;">
-
-    <h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
-      Help Us Showcase Australia and Support Local Communities
-    </h2>
-
-    <p style="font-size:1.1rem; line-height:1.6; color:#444; margin-bottom:25px;">
-      Behind every locally owned accommodation property, attraction, tour,
-      café and small business are people working hard to build a livelihood
-      and contribute to their community.
-    </p>
-
-    <p style="font-size:1.1rem; line-height:1.6; color:#444; margin-bottom:25px;">
-      ShowcasingOz TV has been created to bring Australian destinations,
-      tourism businesses and hidden gems to a wider audience through
-      professional filming and storytelling.
-    </p>
-
-    <p style="font-size:1.05rem; line-height:1.6; color:#444; margin-bottom:20px;">
-      Our all-or-nothing Pozible campaign is now live. Every pledge made
-      through Pozible will count towards the $270,000 target required to
-      help put our production crew on the road.
-    </p>
-
-    <p style="font-size:1.05rem; line-height:1.6; color:#444; margin-bottom:35px;">
-      Please pledge if you can and share the campaign to help it reach
-      more Australians.
-    </p>
-
-    <a href="https://www.pozible.com/profile/showcasingoz-tv"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="
-         display:inline-block;
-         background:#E87722;
-         color:#ffffff;
-         padding:14px 32px;
-         border-radius:8px;
-         text-decoration:none;
-         font-weight:700;
-         font-size:1.05rem;
-       ">
-      View and Support the Pozible Campaign
-    </a>
-
-  </div>
-</section>
-
-  <!-- Season 1 & 2 Crew Expressions of Interest -->
-<section class="careers-section" style="background:#f5f7fa; padding:60px 20px; text-align:center;">
-  <h2 style="color:#0E3557; font-size:2rem; margin-bottom:10px;">
-    Join ShowcasingOz TV on the road across Australia
-  </h2>
-    
-  <p style="font-size:1.1rem; color:#444; margin-bottom:40px;">
-    We are seeking two talented and adaptable videographers to join the ShowcasingOz TV production crew for Seasons 1 and 2, commencing 27 January 2027. These are paid contract positions offering the opportunity to travel across Australia while helping capture the destinations, people, businesses and experiences that make the country worth exploring.
-  </p>
-
-  <div class="careers-grid">
-
-    <div class="career-card">
-      <div>
-        <h3>🎥 Videographer / Editor (Contract)</h3>
-
-        <p><strong>Contract Rate: $1,500 gross per week</strong></p>
-
-        <p><strong>Contract:</strong> Seasons 1 & 2</p>
-
-        <p><strong>Commencement:</strong> 24 January 2027</p>
-
-        <p>
-          Travel across Australia as part of a small production crew, capturing regional cities, towns, landscapes, attractions, accommodation, businesses and travel experiences for ShowcasingOz TV.
-        </p>
-
-        <p>
-          This isn't a studio-based editing role. You'll be on the road, behind the camera and directly involved in building an Australian travel series from its first season onward, combining location videography with on-the-go editing, media management and production support.
-        </p>
-
-        <p>
-          <strong>Eligibility:</strong> Applicants MUST be an Australian Citizen or Permanent Resident, hold a valid TFN and ABN, and have the right to work in Australia.
-        </p>
-
-        <p>
-          <strong>Expressions of Interest Close:</strong> 30 November 2026
-        </p>
-
-        <p>
-          <strong>Think you have the skill, adaptability and appetite for months of filming across Australia? We want to hear from you.</strong>
-        </p>
-
-        <p style="font-size:0.9rem; color:#666;">
-          Appointment is subject to ShowcasingOz TV proceeding with its scheduled 2027 production commencement.
-        </p>
       </div>
+    </section>
 
-      <div class="career-cta">
-        <a class="btn-primary" href="videographer.html">Explore the Role</a>
+    <!-- AUSTRALIA-WIDE ACCOMMODATION BOOKING -->
+    <section id="booking" style="background:#f5f7fa; padding:60px 20px; text-align:center;">
+      <div style="max-width:1000px; margin:0 auto;">
+
+        <h2 style="color:#0E3557; font-size:2rem; margin-bottom:15px;">
+          Book Your Next Australian Stay
+        </h2>
+
+        <p style="font-size:1.1rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 18px;">
+          Search accommodation across Australia with Booking.com
+          through ShowcasingOz TV. Plan your next city escape,
+          regional road trip or coastal break.
+        </p>
+
+        <p style="font-size:1.05rem; line-height:1.6; color:#444; max-width:780px; margin:0 auto 35px;">
+          You do not need to wait for our filming to begin.
+          Explore accommodation for your next trip today.
+          As a Booking.com affiliate, we may earn a commission
+          from eligible bookings made through our links.
+        </p>
+
+        <form id="booking-search-form" style="max-width:900px; margin:0 auto;">
+          <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; align-items:end;">
+
+            <div style="flex:1 1 260px; min-width:220px; text-align:left;">
+              <label for="booking-destination" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
+                Destination
+              </label>
+
+              <input
+                type="text"
+                id="booking-destination"
+                placeholder="Enter a town, city, or region"
+                required
+                style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+              />
+            </div>
+
+            <div style="flex:1 1 180px; min-width:180px; text-align:left;">
+              <label for="booking-checkin" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
+                Check-in
+              </label>
+
+              <input
+                type="date"
+                id="booking-checkin"
+                style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+              />
+            </div>
+
+            <div style="flex:1 1 180px; min-width:180px; text-align:left;">
+              <label for="booking-checkout" style="display:block; font-weight:600; color:#0E3557; margin-bottom:8px;">
+                Check-out
+              </label>
+
+              <input
+                type="date"
+                id="booking-checkout"
+                style="width:100%; padding:14px 14px; border:1px solid #ccc; border-radius:8px; font-size:1rem; box-sizing:border-box;"
+              />
+            </div>
+
+            <div style="flex:0 1 220px; min-width:200px;">
+              <button
+                type="submit"
+                style="width:100%; background:#E87722; color:#ffffff; padding:14px 24px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;"
+              >
+                Check Availability
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+        <p style="font-size:0.95rem; line-height:1.5; color:#666; margin-top:20px;">
+          Looking for a featured destination? You can also explore our
+          <a href="/towns/index.html" style="color:#E87722; text-decoration:none; font-weight:600;">
+            Towns pages
+          </a>
+          for location-specific accommodation, attractions,
+          and travel inspiration.
+        </p>
+
+        <img
+          src="https://www.awltovhc.com/image-101877738-17293136"
+          width="1"
+          height="1"
+          alt=""
+          style="display:none;"
+        />
+
+        <script>
+          document.getElementById('booking-search-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const destination = document.getElementById('booking-destination').value.trim();
+            const checkin = document.getElementById('booking-checkin').value;
+            const checkout = document.getElementById('booking-checkout').value;
+
+            if (checkin && checkout && checkout <= checkin) {
+              document.getElementById('booking-checkout').setCustomValidity(
+                'Choose a check-out date after check-in.'
+              );
+              document.getElementById('booking-checkout').reportValidity();
+              return;
+            }
+
+            document.getElementById('booking-checkout').setCustomValidity('');
+
+            if (!destination) {
+              return;
+            }
+
+            let bookingUrl =
+              'https://www.booking.com/searchresults.html?ss=' +
+              encodeURIComponent(destination);
+
+            if (checkin) {
+              bookingUrl += '&checkin=' + encodeURIComponent(checkin);
+            }
+
+            if (checkout) {
+              bookingUrl += '&checkout=' + encodeURIComponent(checkout);
+            }
+
+            bookingUrl += '&lang=en-gb&sb=1&src_elem=sb&src=index';
+
+            const cjAffiliateUrl =
+              'https://www.dpbolvw.net/click-101877738-17293136?url=' +
+              encodeURIComponent(bookingUrl);
+
+            window.open(cjAffiliateUrl, '_blank', 'noopener,noreferrer');
+          });
+        </script>
+
       </div>
-    </div>
+    </section>
 
+    <!-- CREW EXPRESSIONS OF INTEREST -->
+    <section class="content-section pale" id="crew">
+      <div class="wide-wrap">
 
-    <div class="career-card">
-      <div>
-        <h3>🎥 Videographer / Editor / Co-Presenter (Contract)</h3>
+        <p class="eyebrow">
+          CREW EXPRESSIONS OF INTEREST
+        </p>
 
-        <p><strong>Contract Rate: $1,500 gross per week</strong></p>
-
-        <p><strong>Contract:</strong> Seasons 1 & 2</p>
-
-        <p><strong>Commencement:</strong> 24 January 2027</p>
+        <h2>
+          Be ready to help bring Australia to the screen
+        </h2>
 
         <p>
-          Join ShowcasingOz TV on the road as both a videographer and an occasional on-camera member of the production team, travelling across Australia and helping tell the stories of the destinations, people and experiences we encounter.
+          We are building our candidate shortlist now so we can
+          move promptly into interviews and appointments when
+          funding is secured. Please send your portfolio and
+          availability today. Production will follow recruitment,
+          equipment procurement and confirmed travel arrangements;
+          start dates will be agreed directly with successful
+          candidates.
         </p>
 
-        <p>
-          You'll work alongside the primary videographer and presenter, capturing high-quality location footage while also contributing to on-camera segments, destination storytelling and the personality of the series.
+        <div class="careers-grid">
+
+          <article class="career-card">
+            <div>
+              <h3>Videographer / Editor</h3>
+
+              <p>
+                <strong>AUD $1,500 gross per week</strong>
+              </p>
+
+              <p>
+                Travel with our production team, film destinations
+                and tourism businesses, manage footage and assist
+                with editing and production tasks.
+              </p>
+
+              <p>
+                Australian work rights, a valid ABN and ability
+                to undertake extensive travel are required.
+                Crew share motel rooms without separate bedrooms.
+                Please consider this requirement before
+                expressing interest.
+              </p>
+
+              <p>
+                <strong>Expressions of interest remain open.</strong>
+                Appointments and commencement depend on adequate
+                production funding.
+              </p>
+            </div>
+
+            <div class="career-cta">
+              <a class="btn-primary" href="/videographer.html">
+                View Role Details
+              </a>
+            </div>
+          </article>
+
+          <article class="career-card">
+            <div>
+              <h3>
+                Co-Videographer / Editor / Co-Presenter
+              </h3>
+
+              <p>
+                <strong>AUD $1,500 gross per week</strong>
+              </p>
+
+              <p>
+                Work alongside the primary videographer and
+                presenter, capturing location footage and
+                contributing occasional on-camera segments.
+              </p>
+
+              <p>
+                Australian work rights, a valid ABN and ability
+                to undertake extensive travel are required.
+                Crew share motel rooms without separate bedrooms.
+                Please consider this requirement before
+                expressing interest.
+              </p>
+
+              <p>
+                <strong>Expressions of interest remain open.</strong>
+                Appointments and commencement depend on adequate
+                production funding.
+              </p>
+            </div>
+
+            <div class="career-cta">
+              <a class="btn-primary" href="/videographer-2.html">
+                View Role Details
+              </a>
+            </div>
+          </article>
+
+          <article class="career-card">
+            <div>
+              <h3>Offsite Video Editor</h3>
+
+              <p>
+                <strong>
+                  Proposed budget: AUD $500 per week for 38 hours
+                </strong>
+              </p>
+
+              <p>
+                Edit travel episodes and social content remotely,
+                organise footage, balance audio, colour-correct
+                and deliver polished exports. Send a showreel,
+                software experience, country of residence,
+                internet capability and availability.
+              </p>
+
+              <p>
+                International expressions of interest welcome.
+                This role is performed remotely from your
+                country of residence. Final engagement, hours
+                and pay are subject to applicable requirements
+                and an agreed written contract.
+              </p>
+
+              <p>
+                <strong>Expressions of interest remain open.</strong>
+                Appointments and commencement depend on adequate
+                production funding.
+              </p>
+            </div>
+
+            <div class="career-cta">
+              <a
+                class="btn-primary"
+                href="mailto:showcasingoztv@gmail.com?subject=Offsite%20Editor%20Expression%20of%20Interest"
+              >
+                Express Interest by Email
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="small">
+          The role pages may still show earlier dates while
+          website updates continue. For these expressions of
+          interest, no closing date or filming commencement
+          date is confirmed.
         </p>
 
-        <p>
-          For the right person, this is an opportunity to build substantial production and presenting experience while playing a hands-on role in an Australian travel series from its earliest seasons.
-        </p>
-
-        <p>
-          <strong>Eligibility:</strong> Applicants MUST be an Australian Citizen or Permanent Resident, hold a valid TFN and ABN, and have the right to work in Australia.
-        </p>
-
-        <p>
-          <strong>Expressions of Interest Close:</strong> 30 November 2026
-        </p>
-
-        <p>
-          <strong>Comfortable both behind the camera and occasionally in front of it? We want to hear from you.</strong>
-        </p>
-
-        <p style="font-size:0.9rem; color:#666;">
-          Appointment is subject to ShowcasingOz TV proceeding with its scheduled 2027 production commencement.
-        </p>
       </div>
+    </section>
 
-      <div class="career-cta">
-        <a class="btn-primary" href="videographer-2.html">Explore the Role</a>
+    <!-- PARTNERSHIP AND SPONSORSHIP OPPORTUNITIES -->
+    <section class="careers-section" style="background:#f5f7fa; padding:60px 20px; text-align:center;">
+      <h2 style="color:#0E3557; font-size:2rem; margin-bottom:10px;">
+        Opportunities
+      </h2>
+
+      <p style="font-size:1.1rem; color:#444; margin-bottom:40px;">
+        Strategic partnership, sponsorship, investment and vehicle
+        partner opportunities remain open as ShowcasingOz TV
+        prepares for its national production.
+      </p>
+
+      <div class="careers-grid">
+
+        <div class="career-card">
+          <div>
+            <h3>🤝 Strategic Partnership & Investment</h3>
+
+            <p>
+              ShowcasingOz TV is seeking strategic partners and
+              investors to support the launch of its planned
+              national travel and tourism production across
+              Australia.
+            </p>
+
+            <p>
+              Opportunities may include commercial partnership
+              integration, strategic investment, or aligned
+              support from organisations and individuals who
+              see value in promoting Australian tourism,
+              regional destinations, and travel-based businesses.
+            </p>
+
+            <p>
+              We are currently seeking aligned investors,
+              sponsors, and strategic partners who have the
+              capacity to support the revised Season 1 rollout
+              and help build the commercial foundations required
+              for a professional national launch.
+            </p>
+          </div>
+
+          <div class="career-cta">
+            <a class="btn-primary" href="/investor.html">
+              View Partnership & Investment Opportunity
+            </a>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <div>
+            <h3>
+              🚙 Major Sponsor Opportunity – Season 1 Vehicle Partner (4WD)
+            </h3>
+
+            <p>
+              ShowcasingOz TV is seeking a new or demonstrator
+              4WD, or equivalent vehicle support through a rental
+              or dealership partnership, for the revised Season 1
+              national filming rollout.
+            </p>
+
+            <p>
+              In exchange, the vehicle partner becomes our
+              Major Sponsor for Season 1 (valued at $15,000),
+              with proposed branding throughout the season and
+              across our platforms, subject to an agreed
+              sponsorship package.
+            </p>
+
+            <p>
+              This partnership is suited to a dealership or
+              rental provider seeking ongoing visibility
+              through nationally accessible travel content
+              and association with Australian travel,
+              tourism and destination promotion.
+            </p>
+          </div>
+
+          <div class="career-cta">
+            <a class="btn-primary" href="/vehicle-partner.html">
+              Enquire Now
+            </a>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
-
-  <section class="careers-section" style="background:#f5f7fa; padding:60px 20px; text-align:center;">
-  <h2 style="color:#0E3557; font-size:2rem; margin-bottom:10px;">Opportunities</h2>
-  <p style="font-size:1.1rem; color:#444; margin-bottom:40px;">
-    Strategic partnership, sponsorship, investment and vehicle partner opportunities remain open as ShowcasingOz TV prepares for its planned 2027 national production.
-  </p>
-
-  <div class="careers-grid">
-
-<div class="career-card">
-  <div>
-    <h3>🤝 Strategic Partnership & Investment</h3>
-    
-    <p>
-ShowcasingOz TV is seeking strategic partners and investors to support the launch of
-its planned 2027 national travel and tourism production across Australia.
-    </p>
-
-    <p>
-      Opportunities may include commercial partnership integration, strategic investment, or aligned
-      support from organisations and individuals who see value in promoting Australian tourism,
-      regional destinations, and travel-based businesses.
-    </p>
-
-    <p>
-    We are currently seeking aligned investors, sponsors, and strategic partners who have the capacity
-    to support the revised Season 1 rollout and help build the commercial foundations required for
-    a professional national launch.
-    </p>
-  </div>
-
-  <div class="career-cta">
-    <a class="btn-primary" href="/investor.html">View Partnership & Investment Opportunity</a>
-  </div>
-</div>
-
-    <div class="career-card">
-      <div>
-        <h3>🚙 Major Sponsor Opportunity – Season 1 Vehicle Partner (4WD)</h3>
-        <p>
-          ShowcasingOz TV is seeking a new or demonstrator 4WD, or equivalent vehicle support through a rental
-          or dealership partnership, for the revised Season 1 national filming rollout.  
-        </p>
-        <p>
-          In exchange, the vehicle partner becomes our Major Sponsor for Season 1 (valued at $15,000),
-          including prominent branding throughout the season and across our platforms.
-        </p>
-        <p>
-          This partnership is suited to a dealership or rental provider seeking sustained national exposure and association with Australian travel, tourism and destination promotion.
-        </p>
-      </div>
-      <div class="career-cta">
-        <a class="btn-primary" href="/vehicle-partner.html">Enquire Now</a>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </main>
 
   <!-- Social Links -->
   <section class="socials">
@@ -997,16 +1211,169 @@ its planned 2027 national travel and tourism production across Australia.
     <p>
       📧 <a href="mailto:showcasingoztv@gmail.com">showcasingoztv@gmail.com</a><br>
       <span class="gst-disclaimer">All prices listed are exclusive of GST. GST will be applied once ShowcasingOz TV becomes GST-registered.</span><br>
-      © 2026 ShowcasingOz TV · Discover. Capture. Share.
-    </p>
+      © 2026 ShowcasingOz TV · Discover. Capture. Share.    </p>
   </footer>
 
-    <script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-RB6N742VZW');
   </script>
-  
+
+  <!-- SUPPORTER PLEDGE MODAL -->
+  <dialog id="pledge-dialog" aria-labelledby="pledge-title">
+
+    <button
+      type="button"
+      class="close-dialog"
+      id="close-pledge"
+      aria-label="Close pledge form"
+    >
+      Close
+    </button>
+
+    <h2 id="pledge-title">
+      Register a supporter pledge
+    </h2>
+
+    <p>
+      No payment now. Tell us what you would like to contribute
+      towards the launch. Your pledge is non-binding and does
+      not provide shares, financial returns or confirmed rewards.
+    </p>
+
+    <form id="pledge-form">
+
+      <label for="pledge-name">Name</label>
+      <input
+        id="pledge-name"
+        name="name"
+        autocomplete="name"
+        required
+        maxlength="100"
+      >
+
+      <label for="pledge-email">Email</label>
+      <input
+        id="pledge-email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        maxlength="200"
+      >
+
+      <label for="pledge-amount">
+        Desired pledge (AUD)
+      </label>
+      <input
+        id="pledge-amount"
+        name="amount"
+        type="number"
+        min="1"
+        max="1000000"
+        step="0.01"
+        required
+      >
+
+      <label for="pledge-message">
+        Message (optional)
+      </label>
+      <textarea
+        id="pledge-message"
+        name="message"
+        rows="3"
+        maxlength="600"
+      ></textarea>
+
+      <label>
+        <input type="checkbox" required>
+        I agree to be contacted about this pledge and understand
+        that no payment is taken now.
+      </label>
+
+      <p class="small">
+        Your details will be included in an email to ShowcasingOz TV
+        to discuss your pledge. Do not include payment details.
+        See our <a href="/legal.html">legal information</a>.
+      </p>
+
+      <button class="btn-accent" type="submit">
+        Prepare Pledge Email
+      </button>
+
+      <p id="pledge-status" role="status" class="small">
+        This opens your email application. You must send the email
+        to register your pledge. Nothing is submitted automatically.
+      </p>
+
+    </form>
+
+    <p class="small">
+      No email application? Send your name, desired amount and
+      contact details to
+      <a href="mailto:showcasingoztv@gmail.com">
+        showcasingoztv@gmail.com
+      </a>.
+      Once funding plans are confirmed, we will send contribution
+      terms and a secure payment link or invoice. You can decide
+      whether to proceed then.
+    </p>
+
+  </dialog>
+
+  <script>
+    const pledgeDialog = document.getElementById('pledge-dialog');
+
+    document.querySelectorAll('[data-pledge]').forEach(button => {
+      button.addEventListener('click', () => pledgeDialog.showModal());
+    });
+
+    document.getElementById('close-pledge').addEventListener('click', () => {
+      pledgeDialog.close();
+    });
+
+    document.getElementById('pledge-form').addEventListener('submit', event => {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const body = [
+        'Supporter pledge expression of interest',
+        'Name: ' + document.getElementById('pledge-name').value.trim(),
+        'Email: ' + form.elements.email.value.trim(),
+        'Desired pledge: AUD ' + Number(form.elements.amount.value).toFixed(2),
+        'Message: ' + form.elements.message.value.trim(),
+        '',
+        'I understand this pledge is non-binding, no payment is taken now, and it is not an investment.',
+        'I agree to be contacted about my pledge and to receive contribution terms before deciding whether to pay.'
+      ].join('\r\n');
+
+      window.location.href =
+        'mailto:showcasingoztv@gmail.com?subject=' +
+        encodeURIComponent('ShowcasingOz TV supporter pledge') +
+        '&body=' +
+        encodeURIComponent(body);
+
+      document.getElementById('pledge-status').textContent =
+        'Your pledge email has been prepared. Please send it in your ' +
+        'email application. Your pledge is only received once you send ' +
+        'that email. If nothing opened, use the email address below.';
+    });
+
+    document.getElementById('booking-checkout').addEventListener('input', event => {
+      event.target.setCustomValidity('');
+    });
+
+    document.getElementById('booking-checkin').addEventListener('input', () => {
+      document.getElementById('booking-checkout').setCustomValidity('');
+    });
+  </script>
+
 </body>
 </html>
